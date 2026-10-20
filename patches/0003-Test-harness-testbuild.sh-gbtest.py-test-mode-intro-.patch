@@ -1,0 +1,166 @@
+From 27820a9136535d1592ded779d9b9a1a399165eba Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sat, 17 Oct 2026 03:41:23 +0000
+Subject: [PATCH 3/3] Test harness: testbuild.sh, gbtest.py, test-mode intro
+ bypass
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01725Um4e2odPdkDFwv4XM8D
+---
+ engine/hardcore/test_mode.asm | 10 +++++
+ engine/menus/intro_menu.asm   |  4 ++
+ tools/hardcore/gbtest.py      | 74 +++++++++++++++++++++++++++++++++++
+ tools/hardcore/testbuild.sh   | 22 +++++++++++
+ 4 files changed, 110 insertions(+)
+ create mode 100644 tools/hardcore/gbtest.py
+ create mode 100755 tools/hardcore/testbuild.sh
+
+diff --git a/engine/hardcore/test_mode.asm b/engine/hardcore/test_mode.asm
+index ca6d0b9d4..8e0075105 100644
+--- a/engine/hardcore/test_mode.asm
++++ b/engine/hardcore/test_mode.asm
+@@ -16,6 +16,16 @@ MACRO test_giveitem
+ 	call ReceiveItem
+ ENDM
+ 
++HC_TestIntro::
++	call InitCrystalData
++	ld hl, wPlayerName
++	ld de, .name
++	call InitName
++	ret
++
++.name
++	db "TEST@"
++
+ HC_TestSetup::
+ 	ld a, TEST_MON
+ 	ld [wCurPartySpecies], a
+diff --git a/engine/menus/intro_menu.asm b/engine/menus/intro_menu.asm
+index dfb806fa5..d3fc97602 100644
+--- a/engine/menus/intro_menu.asm
++++ b/engine/menus/intro_menu.asm
+@@ -63,8 +63,12 @@ NewGame:
+ 	ld [wDebugFlags], a
+ 	call ResetWRAM
+ 	call NewGame_ClearTilemapEtc
++if DEF(_TESTMODE)
++	farcall HC_TestIntro
++else
+ 	call PlayerProfileSetup
+ 	call OakSpeech
++endc
+ 	call InitializeWorld
+ if DEF(_TESTMODE)
+ 	farcall HC_TestSetup
+diff --git a/tools/hardcore/gbtest.py b/tools/hardcore/gbtest.py
+new file mode 100644
+index 000000000..973e383a8
+--- /dev/null
++++ b/tools/hardcore/gbtest.py
+@@ -0,0 +1,74 @@
++"""PyBoy helpers for the Crystal hack. WRAMX bank switching is the classic pitfall:
++reading 0xD000-0xDFFF while the game has another SVBK bank mapped returns garbage, so
++memory reads go through pb.memory[bank, addr] with the bank taken from the symbol file."""
++import re, sys, faulthandler
++from pyboy import PyBoy
++
++class T:
++    def __init__(self, rom, sym=None, window="null", speed=0):
++        self.pb = PyBoy(rom, window=window, sound_emulated=False)
++        self.pb.set_emulation_speed(speed)
++        self.sym = {}
++        self.syms = {}
++        sym = sym or rom.replace(".gbc", ".sym")
++        for line in open(sym):
++            m = re.match(r"([0-9a-f]{2}):([0-9a-f]{4}) (\S+)", line)
++            if m:
++                b, a, n = int(m[1], 16), int(m[2], 16), m[3]
++                self.sym[n] = (b, a)
++                self.syms.setdefault((b, a), n)
++
++    def tick(self, n=1):
++        self.pb.tick(n, False)
++
++    def addr(self, name):
++        return self.sym[name][1]
++
++    def mem(self, name, off=0, n=1):
++        b, a = self.sym[name]
++        a += off
++        out = []
++        for i in range(n):
++            if 0xD000 <= a + i < 0xE000:
++                out.append(self.pb.memory[max(b, 1), a + i])
++            else:
++                out.append(self.pb.memory[a + i])
++        return out[0] if n == 1 else out
++
++    def poke(self, name, val, off=0):
++        b, a = self.sym[name]
++        a += off
++        if 0xD000 <= a < 0xE000:
++            self.pb.memory[max(b, 1), a] = val
++        else:
++            self.pb.memory[a] = val
++
++    def press(self, btn, hold=4, wait=12):
++        self.pb.button(btn, hold)
++        self.tick(hold + wait)
++
++    def where(self):
++        return self.mem("wMapGroup"), self.mem("wMapNumber"), self.mem("wXCoord"), self.mem("wYCoord")
++
++    def shot(self, path, scale=1):
++        im = self.pb.screen.image.convert("RGB")
++        if scale != 1:
++            im = im.resize((im.width * scale, im.height * scale))
++        im.save(path)
++
++    def hook(self, label, fn):
++        b, a = self.sym[label]
++        self.pb.hook_register(0 if a < 0x4000 else b, a, fn, None)
++
++    def stop(self):
++        self.pb.stop(save=False)
++
++def boot_to_overworld(t, max_frames=6000):
++    """Skip intro/new game screens until a map is loaded. Mash A/Start."""
++    faulthandler.dump_traceback_later(300, exit=True)
++    for i in range(max_frames // 20):
++        t.pb.button("a", 4)
++        t.tick(20)
++        if t.mem("wMapGroup") and t.mem("wMapNumber") and t.mem("wPlayerState") is not None and i > 20:
++            pass
++    return t.where()
+diff --git a/tools/hardcore/testbuild.sh b/tools/hardcore/testbuild.sh
+new file mode 100755
+index 000000000..00999c955
+--- /dev/null
++++ b/tools/hardcore/testbuild.sh
+@@ -0,0 +1,22 @@
++#!/bin/bash
++# Build a test ROM with _TESTMODE in a scratch copy so the real tree stays untouched.
++# usage: testbuild.sh NAME [TEST_MAP=NEW_BARK_TOWN] [TEST_X=6] [TEST_Y=8] [TEST_MON=QUILAVA] [TEST_LEVEL=30] [TEST_BEATEN=0] [TEST_REVEALED=0] [TEST_ITEMS=0]
++set -e
++NAME=${1:?name}; shift || true
++SRC=$(cd "$(dirname "$0")/../.." && pwd)
++OUT=${HC_SCRATCH:-/home/claude/scratch}
++WORK=$OUT/tb_$NAME
++export PATH=/home/claude/bin:$PATH
++mkdir -p "$WORK"
++tar -C "$SRC" --exclude=.git --exclude='*.gbc' --exclude='*.o' --exclude='*.sym' --exclude='*.map' -cf - . | tar -C "$WORK" -xf -
++find "$WORK" -name '*.o' -delete
++declare -A V=([TEST_MAP]=NEW_BARK_TOWN [TEST_X]=6 [TEST_Y]=8 [TEST_MON]=QUILAVA [TEST_LEVEL]=30 [TEST_BEATEN]=0 [TEST_REVEALED]=0 [TEST_ITEMS]=0)
++for kv in "$@"; do V[${kv%%=*}]=${kv#*=}; done
++: > "$WORK/test_config.asm"
++for k in TEST_MON TEST_LEVEL TEST_BEATEN TEST_REVEALED TEST_ITEMS; do echo "DEF $k EQU ${V[$k]}" >> "$WORK/test_config.asm"; done
++echo "DEF TEST_SPAWN EQU SPAWN_DEBUG" >> "$WORK/test_config.asm"
++printf 'MACRO TEST_SPAWN_ENTRY\n\tspawn %s, %s, %s\nENDM\n' "${V[TEST_MAP]}" "${V[TEST_X]}" "${V[TEST_Y]}" >> "$WORK/test_config.asm"
++cd "$WORK"
++RGBASMFLAGS="-Weverything -Wtruncation=1 -D _TESTMODE" make -j8 crystal11 > build.log 2>&1 || { tail -30 build.log; exit 1; }
++cp pokecrystal11.gbc "$OUT/$NAME.gbc"; cp pokecrystal11.sym "$OUT/$NAME.sym"
++echo "built $OUT/$NAME.gbc"
+-- 
+2.43.0
+

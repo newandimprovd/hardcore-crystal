@@ -1,0 +1,23 @@
+From 2a01e6ad7c222321dd0172ba2cf5b2f75bdef0de Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 16 Oct 2026 17:56:25 +0000
+Subject: [PATCH 2/3] Add test_config.asm stub so the real build has no missing
+ include
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01725Um4e2odPdkDFwv4XM8D
+---
+ test_config.asm | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test_config.asm
+
+diff --git a/test_config.asm b/test_config.asm
+new file mode 100644
+index 000000000..94c450e64
+--- /dev/null
++++ b/test_config.asm
+@@ -0,0 +1 @@
++; Stub so the real build has no missing include. tools/hardcore/testbuild.sh overwrites this for emulator test builds.
+-- 
+2.43.0
+
