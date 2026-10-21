@@ -1347,7 +1347,8 @@ AI_Smart_Counter:
 	and a
 	jr z, .skipmove
 
-	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	ld a, [wEnemyMoveStruct + MOVE_ANIM]
+	call GetMoveCategory
 	cp SPECIAL
 	jr nc, .skipmove
 
@@ -1375,7 +1376,8 @@ AI_Smart_Counter:
 	and a
 	jr z, .done
 
-	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	ld a, [wEnemyMoveStruct + MOVE_ANIM]
+	call GetMoveCategory
 	cp SPECIAL
 	jr nc, .done
 
@@ -2532,7 +2534,8 @@ AI_Smart_MirrorCoat:
 	and a
 	jr z, .skipmove
 
-	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	ld a, [wEnemyMoveStruct + MOVE_ANIM]
+	call GetMoveCategory
 	cp SPECIAL
 	jr c, .skipmove
 
@@ -2560,7 +2563,8 @@ AI_Smart_MirrorCoat:
 	and a
 	jr z, .done
 
-	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	ld a, [wEnemyMoveStruct + MOVE_ANIM]
+	call GetMoveCategory
 	cp SPECIAL
 	jr c, .done
 

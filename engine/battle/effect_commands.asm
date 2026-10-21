@@ -2540,7 +2540,8 @@ PlayerAttackDamage:
 	ld d, a
 	ret z
 
-	ld a, [hl]
+	ld a, [wPlayerMoveStructAnimation]
+	call GetMoveCategory
 	cp SPECIAL
 	jr nc, .special
 
@@ -2672,7 +2673,8 @@ CheckDamageStatsCritical:
 	ldh a, [hBattleTurn]
 	and a
 	jr nz, .enemy
-	ld a, [wPlayerMoveStructType]
+	ld a, [wPlayerMoveStructAnimation]
+	call GetMoveCategory
 	cp SPECIAL
 ; special
 	ld a, [wPlayerSAtkLevel]
@@ -2686,7 +2688,8 @@ CheckDamageStatsCritical:
 	jr .end
 
 .enemy
-	ld a, [wEnemyMoveStructType]
+	ld a, [wEnemyMoveStructAnimation]
+	call GetMoveCategory
 	cp SPECIAL
 ; special
 	ld a, [wEnemySAtkLevel]
@@ -2784,7 +2787,8 @@ EnemyAttackDamage:
 	and a
 	ret z
 
-	ld a, [hl]
+	ld a, [wEnemyMoveStructAnimation]
+	call GetMoveCategory
 	cp SPECIAL
 	jr nc, .special
 
