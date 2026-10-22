@@ -4,6 +4,7 @@
 	const CHERRYGROVECITY_TEACHER
 	const CHERRYGROVECITY_YOUNGSTER
 	const CHERRYGROVECITY_FISHER
+	const CHERRYGROVECITY_TIMMY
 
 CherrygroveCity_MapScripts:
 	def_scene_scripts
@@ -22,6 +23,41 @@ CherrygroveCityNoop2Scene:
 CherrygroveCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
 	endcallback
+
+TrainerYoungsterTimmy:
+	trainer YOUNGSTER, TIMMY, EVENT_BEAT_YOUNGSTER_TIMMY, YoungsterTimmySeenText, YoungsterTimmyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext YoungsterTimmyAfterText
+	waitbutton
+	closetext
+	end
+
+YoungsterTimmySeenText:
+	text "Hi! I'm TIMMY!"
+	line "Mom says I can't"
+
+	para "go home until I"
+	line "beat a trainer."
+
+	para "So... sorry in"
+	line "advance!"
+	done
+
+YoungsterTimmyBeatenText:
+	text "Oh. I lost."
+	line "Mom's gonna..."
+
+	para "Why are you"
+	line "smiling like that?"
+	done
+
+YoungsterTimmyAfterText:
+	text "I'm not allowed to"
+	line "go home yet."
+	done
 
 CherrygroveCityGuideGent:
 	faceplayer
@@ -570,3 +606,4 @@ CherrygroveCity_MapEvents:
 	object_event 27, 12, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event  7, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
+	object_event 14,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterTimmy, -1

@@ -51,6 +51,7 @@ class T:
         return self.mem("wMapGroup"), self.mem("wMapNumber"), self.mem("wXCoord"), self.mem("wYCoord")
 
     def shot(self, path, scale=1):
+        self.pb.tick(1, True)  # screen buffer is only filled on a rendered frame
         im = self.pb.screen.image.convert("RGB")
         if scale != 1:
             im = im.resize((im.width * scale, im.height * scale))

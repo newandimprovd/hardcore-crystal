@@ -21,6 +21,41 @@ TrainerDeathScript::
 	writetext HC_LootText
 	waitbutton
 	closetext
+	callasm HC_CountKill
+	checkevent EVENT_HC_REVEAL_PENDING
+	iftrue HC_RevealAftermath
+	end
+
+FirstKillRevealScript::
+	setevent EVENT_KILLER_REVEALED
+	setevent EVENT_HC_REVEAL_PENDING
+	special FadeOutMusic
+	sjump TrainerDeathScript
+
+HC_RevealAftermath:
+	clearevent EVENT_HC_REVEAL_PENDING
+	pause 30
+	opentext
+	writetext HC_RevealText1
+	waitbutton
+	writetext HC_RevealText2
+	waitbutton
+	writetext HC_RevealText3
+	waitbutton
+	writetext HC_RevealText4
+	waitbutton
+	closetext
+	pause 30
+	playsound SFX_ELEVATOR_END
+	earthquake 30
+	waitsfx
+	opentext
+	writetext HC_RevealText5
+	waitbutton
+	writetext HC_RevealText6
+	waitbutton
+	closetext
+	special RestartMapMusic
 	end
 
 DeadTrainerTalkScript::
@@ -93,6 +128,15 @@ HC_GetTableEntry:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
+	ret
+
+HC_CountKill:
+	ld hl, wHCKillCount
+	ld a, [hl]
+	inc a
+	ld [hli], a
+	ret nz
+	inc [hl]
 	ret
 
 HC_RandMod:
@@ -242,3 +286,4 @@ HC_ConvertDeadTrainers::
 	ret
 
 INCLUDE "data/hardcore/death_causes.asm"
+INCLUDE "data/hardcore/reveal_text.asm"

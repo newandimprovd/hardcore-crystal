@@ -3335,7 +3335,8 @@ wBugContestStartTime:: ds 4 ; day, hour, min, sec
 wUnusedTwoDayTimerOn:: db
 wUnusedTwoDayTimer:: db
 wUnusedTwoDayTimerStartDate:: db
-	ds 4
+wHCKillCount:: dw ; Hardcore Crystal: kills since the reveal (16 bit, little endian)
+	ds 2
 wMobileOrCable_LastSelection:: db
 wdc41:: ds 1
 wdc42:: ds 8

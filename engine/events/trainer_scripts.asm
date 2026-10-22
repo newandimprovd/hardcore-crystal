@@ -33,6 +33,8 @@ StartBattleWithMapTrainerScript:
 	loadmem wRunningTrainerBattleScript, -1
 	checkevent EVENT_KILLER_REVEALED
 	iftrue TrainerDeathScript
+	; Hardcore: the first trainer ever beaten is TIMMY in Cherrygrove, and that is the reveal.
+	sjump FirstKillRevealScript
 
 AlreadyBeatenTrainerScript:
 	scripttalkafter
