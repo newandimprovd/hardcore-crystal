@@ -17,12 +17,17 @@ fn = t.addr("GetMoveCategory")
 code = [0xF3, 0xCD, fn & 0xFF, fn >> 8, 0x18, 0xFE]   # di; call GetMoveCategory; jr $
 for i, b in enumerate(code):
     t.pb.memory[0xC000 + i] = b
+t.pb.memory[0xFFFF] = 0   # no interrupts while the routine runs
+t.pb.memory[0xFF0F] = 0
 bad = 0
 for mid in range(1, 252):
     rf = t.pb.register_file
     rf.A = mid; rf.B = 0x12; rf.C = 0x34; rf.D = 0x56; rf.E = 0x78; rf.HL = 0x9ABC
     rf.PC = 0xC000; rf.SP = 0xDFF0
-    t.pb.tick(3, False)
+    for _ in range(400):
+        t.pb.tick(1, False)
+        if t.pb.register_file.PC in (0xC004, 0xC005):
+            break
     rf = t.pb.register_file
     exp = 20 if want[mid] == "Special" else 0
     ok = rf.A == exp and (rf.B, rf.C, rf.D, rf.E, rf.HL) == (0x12, 0x34, 0x56, 0x78, 0x9ABC) and rf.PC in (0xC004, 0xC005)

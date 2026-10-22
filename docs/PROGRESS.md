@@ -16,7 +16,8 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
 ## Stage status
 - [x] 1  key items, trainer death, corpses (restored from the surviving patch)
 - [x] 1b test harness (testbuild.sh, gbtest.py, test-mode intro bypass)
-- [ ] 2  type chart with Fairy (tools/hardcore/gen_types.py written, not yet built/tested), move categories, Showdown moves
+- [x] 2  type chart with Fairy (typecheck.py PASS), 39 Showdown move replacements (gen_moves.py), per-move physical/special split
+         (home/hardcore.asm GetMoveCategory; tools/hardcore/test_split.py: 104 side/move pairs, 59 of 60 moves seen, 0 mismatches)
 - [ ] 3  first kill reveal, kill counters, trainer tips
 - [ ] 4  roster: 62 four-stage lines, 248 species, Fairy/Poison spread
 - [ ] 5  area generator (Area 1), forced fights, plazas, respawn
@@ -32,3 +33,10 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
   (effect_commands.asm x4, counter.asm, mirror_coat.asm, ai/scoring.asm) are redirected through a helper that returns
   0 (physical) or SPECIAL (special) so the existing carry logic is unchanged.
 - Normal/Bug immunity wording was ambiguous; reading used is in tools/hardcore/gen_types.py.
+
+## Stage 2 notes
+- Move IDs are unchanged; 39 vanilla slots were renamed in place. Retired moves in learnsets/trainers/eggs map to survivors (REMAP in gen_moves.py).
+- Category lookup: MoveCategoryBits (32 bytes, ROM0 gap at $0063) read by GetMoveCategory; call sites in effect_commands.asm,
+  counter.asm, mirror_coat.asm and ai/scoring.asm use the move ID in the move struct (animation byte == move ID).
+- Moonblast uses Showdown's 30% Special Attack drop (the earlier build used Special Defense).
+- PyBoy note: poking register_file to call routines is unreliable; test through real battles with hook_register instead.
