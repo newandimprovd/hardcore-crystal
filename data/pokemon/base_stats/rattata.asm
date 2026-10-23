@@ -1,11 +1,11 @@
 	db RATTATA ; 019
 
-	db  30,  56,  35,  72,  25,  35
+	db  31,  57,  36,  74,  26,  36
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
 	db 255 ; catch rate
-	db 57 ; base exp
+	db 99 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

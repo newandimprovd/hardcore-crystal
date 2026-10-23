@@ -1,11 +1,11 @@
 	db CLOYSTER ; 091
 
-	db  50,  95, 180,  70,  85,  45
+	db  38,  71, 135,  53,  64,  34
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, ICE ; type
 	db 60 ; catch rate
-	db 203 ; base exp
+	db 150 ; base exp
 	db PEARL, BIG_PEARL ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

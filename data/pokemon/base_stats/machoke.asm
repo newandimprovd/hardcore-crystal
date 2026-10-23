@@ -1,11 +1,11 @@
 	db MACHOKE ; 067
 
-	db  80, 100,  70,  45,  50,  60
+	db  78,  98,  68,  44,  49,  58
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIGHTING, FIGHTING ; type
 	db 90 ; catch rate
-	db 146 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F25 ; gender ratio
 	db 100 ; unknown 1

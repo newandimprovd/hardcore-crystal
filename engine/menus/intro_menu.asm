@@ -618,7 +618,7 @@ Continue_DisplayPokedexNumCaught:
 	ret z
 	push hl
 	ld hl, wPokedexCaught
-	ld b, (NUM_POKEMON + 7) / 8
+	ld b, (251 + 7) / 8 ; Hardcore: flag array size kept
 	call CountSetBits
 	pop hl
 	ld de, wNumSetBits

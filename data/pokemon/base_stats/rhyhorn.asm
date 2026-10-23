@@ -1,11 +1,11 @@
 	db RHYHORN ; 111
 
-	db  80,  85,  95,  25,  30,  30
+	db  69,  74,  83,  22,  26,  26
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, ROCK ; type
 	db 120 ; catch rate
-	db 135 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

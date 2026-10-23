@@ -1,11 +1,11 @@
 	db SPINARAK ; 167
 
-	db  40,  60,  40,  30,  40,  40
+	db  43,  65,  43,  33,  43,  43
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, POISON ; type
 	db 255 ; catch rate
-	db 54 ; base exp
+	db 103 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

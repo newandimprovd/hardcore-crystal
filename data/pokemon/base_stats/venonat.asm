@@ -1,11 +1,11 @@
 	db VENONAT ; 048
 
-	db  60,  55,  50,  45,  40,  55
+	db  59,  54,  49,  44,  40,  54
 	;   hp  atk  def  spd  sat  sdf
 
-	db BUG, POISON ; type
+	db BUG, BUG ; type
 	db 190 ; catch rate
-	db 75 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

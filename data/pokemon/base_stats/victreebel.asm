@@ -1,11 +1,11 @@
 	db VICTREEBEL ; 071
 
-	db  80, 105,  65,  70, 100,  60
+	db  81, 106,  66,  71, 101,  60
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, POISON ; type
+	db GRASS, GRASS ; type
 	db 45 ; catch rate
-	db 191 ; base exp
+	db 184 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

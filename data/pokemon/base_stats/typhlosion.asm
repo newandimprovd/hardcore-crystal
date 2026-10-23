@@ -1,11 +1,11 @@
 	db TYPHLOSION ; 157
 
-	db  78,  84,  78, 100, 109,  85
+	db  71,  76,  71,  91,  99,  77
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate
-	db 209 ; base exp
+	db 184 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F12_5 ; gender ratio
 	db 100 ; unknown 1

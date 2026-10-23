@@ -1,11 +1,11 @@
 	db CLEFABLE ; 036
 
-	db  95,  70,  73,  60,  85,  90
+	db  97,  72,  75,  62,  87,  92
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db FAIRY, FAIRY ; type
 	db 25 ; catch rate
-	db 129 ; base exp
+	db 184 ; base exp
 	db MYSTERYBERRY, MOON_STONE ; items
 	db GENDER_F75 ; gender ratio
 	db 100 ; unknown 1

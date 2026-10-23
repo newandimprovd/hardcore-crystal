@@ -1,11 +1,11 @@
 	db PICHU ; 172
 
-	db  20,  40,  15,  60,  35,  35
+	db  24,  49,  18,  73,  43,  43
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type
 	db 190 ; catch rate
-	db 42 ; base exp
+	db 95 ; base exp
 	db NO_ITEM, BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

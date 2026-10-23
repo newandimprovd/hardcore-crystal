@@ -1,11 +1,11 @@
 	db CHANSEY ; 113
 
-	db 250,  05,  05,  50,  35, 105
+	db 160,   5,   5,  32,  22,  67
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db FAIRY, FAIRY ; type
 	db 30 ; catch rate
-	db 255 ; base exp
+	db 111 ; base exp
 	db NO_ITEM, LUCKY_EGG ; items
 	db GENDER_F100 ; gender ratio
 	db 100 ; unknown 1

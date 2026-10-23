@@ -3436,7 +3436,7 @@ wPartyMonNicknamesEnd::
 
 	ds 22
 
-wPokedexCaught:: flag_array NUM_POKEMON
+wPokedexCaught:: flag_array 251 ; Hardcore: layout kept
 wEndPokedexCaught::
 
 wPokedexSeen:: flag_array NUM_POKEMON

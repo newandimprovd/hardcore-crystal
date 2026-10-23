@@ -1,11 +1,11 @@
 	db JUMPLUFF ; 189
 
-	db  75,  55,  70, 110,  55,  85
+	db  81,  59,  75, 119,  59,  92
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, FLYING ; type
 	db 45 ; catch rate
-	db 176 ; base exp
+	db 184 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

@@ -1,11 +1,11 @@
 	db PARASECT ; 047
 
-	db  60,  95,  80,  30,  60,  80
+	db  59,  93,  78,  29,  58,  78
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, GRASS ; type
 	db 75 ; catch rate
-	db 128 ; base exp
+	db 150 ; base exp
 	db TINYMUSHROOM, BIG_MUSHROOM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

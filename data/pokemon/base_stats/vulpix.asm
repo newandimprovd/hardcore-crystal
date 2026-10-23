@@ -1,11 +1,11 @@
 	db VULPIX ; 037
 
-	db  38,  41,  40,  65,  50,  65
+	db  38,  41,  40,  66,  50,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE ; type
 	db 190 ; catch rate
-	db 63 ; base exp
+	db 114 ; base exp
 	db BURNT_BERRY, BURNT_BERRY ; items
 	db GENDER_F75 ; gender ratio
 	db 100 ; unknown 1

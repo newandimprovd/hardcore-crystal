@@ -1,11 +1,11 @@
 	db GYARADOS ; 130
 
-	db  95, 125,  79,  81,  60, 100
+	db  70,  91,  58,  59,  44,  73
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, FLYING ; type
 	db 45 ; catch rate
-	db 214 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

@@ -1,11 +1,11 @@
 	db STEELIX ; 208
 
-	db  75,  85, 200,  30,  55,  65
+	db  56,  64, 150,  23,  41,  49
 	;   hp  atk  def  spd  sat  sdf
 
 	db STEEL, GROUND ; type
 	db 25 ; catch rate
-	db 196 ; base exp
+	db 146 ; base exp
 	db NO_ITEM, METAL_COAT ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

@@ -1,11 +1,11 @@
 	db MUK ; 089
 
-	db 105, 105,  75,  50,  65, 100
+	db  83,  83,  59,  40,  51,  79
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, POISON ; type
 	db 75 ; catch rate
-	db 157 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NUGGET ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

@@ -1,11 +1,11 @@
 	db MAREEP ; 179
 
-	db  55,  40,  40,  35,  65,  45
+	db  59,  43,  43,  37,  70,  48
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type
 	db 235 ; catch rate
-	db 59 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

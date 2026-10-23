@@ -1,11 +1,11 @@
 	db POLIWHIRL ; 061
 
-	db  65,  65,  65,  90,  50,  50
+	db  67,  67,  67,  92,  51,  51
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type
 	db 120 ; catch rate
-	db 131 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, KINGS_ROCK ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

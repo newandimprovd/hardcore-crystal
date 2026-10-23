@@ -1,11 +1,11 @@
 	db BAYLEEF ; 153
 
-	db  60,  62,  80,  60,  63,  80
+	db  59,  60,  78,  59,  61,  78
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type
 	db 45 ; catch rate
-	db 141 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F12_5 ; gender ratio
 	db 100 ; unknown 1

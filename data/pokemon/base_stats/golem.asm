@@ -5,7 +5,7 @@
 
 	db ROCK, GROUND ; type
 	db 45 ; catch rate
-	db 177 ; base exp
+	db 184 ; base exp
 	db NO_ITEM, EVERSTONE ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

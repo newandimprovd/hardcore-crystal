@@ -1,11 +1,11 @@
 	db SEADRA ; 117
 
-	db  55,  65,  95,  85,  95,  45
+	db  50,  58,  85,  76,  85,  41
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type
 	db 75 ; catch rate
-	db 155 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, DRAGON_SCALE ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

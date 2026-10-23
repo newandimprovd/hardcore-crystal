@@ -414,11 +414,6 @@ YoungsterGroup:
 	db 37, RATICATE,   HYPER_BEAM, QUICK_ATTACK, HYPER_FANG, PURSUIT
 	db -1 ; end
 
-	; YOUNGSTER (15)
-	db "TIMMY@", TRAINERTYPE_NORMAL
-	db  4, RATTATA
-	db -1 ; end
-
 SchoolboyGroup:
 	; SCHOOLBOY (1)
 	db "JACK@", TRAINERTYPE_NORMAL

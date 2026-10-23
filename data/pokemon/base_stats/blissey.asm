@@ -1,11 +1,11 @@
 	db BLISSEY ; 242
 
-	db 255,  10,  10,  55,  75, 135
+	db 181,   7,   7,  39,  53,  96
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db FAIRY, FAIRY ; type
 	db 30 ; catch rate
-	db 255 ; base exp
+	db 146 ; base exp
 	db NO_ITEM, LUCKY_EGG ; items
 	db GENDER_F100 ; gender ratio
 	db 100 ; unknown 1

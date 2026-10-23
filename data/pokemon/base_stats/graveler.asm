@@ -1,11 +1,11 @@
 	db GRAVELER ; 075
 
-	db  55,  95, 115,  35,  45,  45
+	db  56,  96, 116,  35,  46,  46
 	;   hp  atk  def  spd  sat  sdf
 
 	db ROCK, GROUND ; type
 	db 120 ; catch rate
-	db 134 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, EVERSTONE ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

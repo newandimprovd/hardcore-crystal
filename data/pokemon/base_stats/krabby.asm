@@ -1,11 +1,11 @@
 	db KRABBY ; 098
 
-	db  30, 105,  90,  50,  25,  25
+	db  28,  97,  83,  46,  23,  23
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type
 	db 225 ; catch rate
-	db 115 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

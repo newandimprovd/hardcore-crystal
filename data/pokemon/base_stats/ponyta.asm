@@ -1,11 +1,11 @@
 	db PONYTA ; 077
 
-	db  50,  85,  55,  90,  65,  65
+	db  37,  62,  40,  66,  48,  47
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE ; type
 	db 190 ; catch rate
-	db 152 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

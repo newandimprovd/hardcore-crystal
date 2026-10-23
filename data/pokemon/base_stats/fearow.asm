@@ -1,11 +1,11 @@
 	db FEAROW ; 022
 
-	db  65,  90,  65, 100,  61,  61
+	db  58,  80,  58,  89,  55,  55
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, FLYING ; type
+	db FLYING, DARK ; type
 	db 90 ; catch rate
-	db 162 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, SHARP_BEAK ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

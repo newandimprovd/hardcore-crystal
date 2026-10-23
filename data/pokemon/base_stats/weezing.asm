@@ -1,11 +1,11 @@
 	db WEEZING ; 110
 
-	db  65,  90, 120,  60,  85,  70
+	db  52,  73,  97,  48,  69,  56
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, POISON ; type
 	db 60 ; catch rate
-	db 173 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

@@ -1,11 +1,11 @@
 	db HOPPIP ; 187
 
-	db  35,  35,  40,  50,  35,  55
+	db  37,  36,  42,  52,  36,  57
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, FLYING ; type
 	db 255 ; catch rate
-	db 74 ; base exp
+	db 99 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

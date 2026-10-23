@@ -1,11 +1,11 @@
 	db NIDORINA ; 030
 
-	db  70,  62,  67,  56,  55,  55
+	db  76,  67,  72,  61,  60,  59
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, POISON ; type
 	db 120 ; catch rate
-	db 117 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F100 ; gender ratio
 	db 100 ; unknown 1

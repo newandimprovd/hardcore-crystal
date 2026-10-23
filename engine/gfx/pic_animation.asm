@@ -962,13 +962,19 @@ GetMonFramesPointer:
 	ld c, BANK(UnownsFrames)
 	ld hl, UnownFramesPointers
 	jr z, .got_frames
+	; Hardcore Crystal: the bank of each frame set comes from FramesBanks, so a species can
+	; reuse the animation frames of any other species.
 	ld a, [wPokeAnimSpecies]
-	cp JOHTO_POKEMON
+	dec a
+	ld e, a
+	ld d, 0
+	ld hl, FramesBanks
+	add hl, de
+	ld a, BANK(FramesBanks)
+	call GetFarByte
+	ld c, a
 	ld b, BANK(FramesPointers)
-	ld c, BANK(KantoFrames)
 	ld hl, FramesPointers
-	jr c, .got_frames
-	ld c, BANK(JohtoFrames)
 .got_frames
 	ld a, c
 	ld [wPokeAnimFramesBank], a

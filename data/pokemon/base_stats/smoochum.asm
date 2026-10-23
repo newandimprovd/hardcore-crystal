@@ -1,11 +1,11 @@
 	db SMOOCHUM ; 238
 
-	db  45,  30,  15,  65,  85,  65
+	db  44,  29,  15,  64,  84,  64
 	;   hp  atk  def  spd  sat  sdf
 
 	db ICE, PSYCHIC_TYPE ; type
 	db 45 ; catch rate
-	db 87 ; base exp
+	db 114 ; base exp
 	db ICE_BERRY, ICE_BERRY ; items
 	db GENDER_F100 ; gender ratio
 	db 100 ; unknown 1

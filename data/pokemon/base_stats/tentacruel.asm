@@ -1,11 +1,11 @@
 	db TENTACRUEL ; 073
 
-	db  80,  70,  65, 100,  80, 120
+	db  61,  54,  50,  77,  61,  92
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, POISON ; type
 	db 60 ; catch rate
-	db 205 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

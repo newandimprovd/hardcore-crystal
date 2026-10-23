@@ -26,8 +26,8 @@ FramesPointers:
 	dw ArbokFrames
 	dw PikachuFrames
 	dw RaichuFrames
-	dw SandshrewFrames
-	dw SandslashFrames
+	dw MeganiumFrames
+	dw TyphlosionFrames
 	dw NidoranFFrames
 	dw NidorinaFrames
 	dw NidoqueenFrames
@@ -44,13 +44,13 @@ FramesPointers:
 	dw GolbatFrames
 	dw OddishFrames
 	dw GloomFrames
-	dw VileplumeFrames
+	dw FeraligatrFrames
 	dw ParasFrames
 	dw ParasectFrames
 	dw VenonatFrames
 	dw VenomothFrames
-	dw DiglettFrames
-	dw DugtrioFrames
+	dw VenusaurFrames
+	dw CharizardFrames
 	dw MeowthFrames
 	dw PersianFrames
 	dw PsyduckFrames
@@ -82,9 +82,9 @@ FramesPointers:
 	dw SlowbroFrames
 	dw MagnemiteFrames
 	dw MagnetonFrames
-	dw FarfetchDFrames
-	dw DoduoFrames
-	dw DodrioFrames
+	dw BlastoiseFrames
+	dw FurretFrames
+	dw FurretFrames
 	dw SeelFrames
 	dw DewgongFrames
 	dw GrimerFrames
@@ -99,58 +99,58 @@ FramesPointers:
 	dw HypnoFrames
 	dw KrabbyFrames
 	dw KinglerFrames
-	dw VoltorbFrames
-	dw ElectrodeFrames
-	dw ExeggcuteFrames
-	dw ExeggutorFrames
+	dw NoctowlFrames
+	dw NoctowlFrames
+	dw RaticateFrames
+	dw RaticateFrames
 	dw CuboneFrames
 	dw MarowakFrames
-	dw HitmonleeFrames
-	dw HitmonchanFrames
-	dw LickitungFrames
+	dw PidgeotFrames
+	dw ButterfreeFrames
+	dw BeedrillFrames
 	dw KoffingFrames
 	dw WeezingFrames
 	dw RhyhornFrames
 	dw RhydonFrames
 	dw ChanseyFrames
-	dw TangelaFrames
-	dw KangaskhanFrames
+	dw JumpluffFrames
+	dw FearowFrames
 	dw HorseaFrames
 	dw SeadraFrames
-	dw GoldeenFrames
-	dw SeakingFrames
+	dw FearowFrames
+	dw ArbokFrames
 	dw StaryuFrames
 	dw StarmieFrames
-	dw MrMimeFrames
+	dw ArbokFrames
 	dw ScytherFrames
 	dw JynxFrames
-	dw ElectabuzzFrames
-	dw MagmarFrames
-	dw PinsirFrames
-	dw TaurosFrames
+	dw RaichuFrames
+	dw ClefableFrames
+	dw WigglytuffFrames
+	dw NidoqueenFrames
 	dw MagikarpFrames
 	dw GyaradosFrames
-	dw LaprasFrames
-	dw DittoFrames
-	dw EeveeFrames
-	dw VaporeonFrames
-	dw JolteonFrames
-	dw FlareonFrames
+	dw NidokingFrames
+	dw CrobatFrames
+	dw BellossomFrames
+	dw VictreebelFrames
+	dw ParasectFrames
+	dw ParasectFrames
 	dw PorygonFrames
-	dw OmanyteFrames
-	dw OmastarFrames
-	dw KabutoFrames
-	dw KabutopsFrames
-	dw AerodactylFrames
-	dw SnorlaxFrames
-	dw ArticunoFrames
-	dw ZapdosFrames
-	dw MoltresFrames
+	dw VenomothFrames
+	dw VenomothFrames
+	dw AriadosFrames
+	dw AriadosFrames
+	dw PersianFrames
+	dw PersianFrames
+	dw GolduckFrames
+	dw GolduckFrames
+	dw PrimeapeFrames
 	dw DratiniFrames
 	dw DragonairFrames
 	dw DragoniteFrames
-	dw MewtwoFrames
-	dw MewFrames
+	dw PrimeapeFrames
+	dw MachampFrames
 	dw ChikoritaFrames
 	dw BayleefFrames
 	dw MeganiumFrames
@@ -164,91 +164,342 @@ FramesPointers:
 	dw FurretFrames
 	dw HoothootFrames
 	dw NoctowlFrames
-	dw LedybaFrames
-	dw LedianFrames
+	dw AlakazamFrames
+	dw GolemFrames
 	dw SpinarakFrames
 	dw AriadosFrames
 	dw CrobatFrames
-	dw ChinchouFrames
-	dw LanturnFrames
+	dw SteelixFrames
+	dw SteelixFrames
 	dw PichuFrames
 	dw CleffaFrames
 	dw IgglybuffFrames
-	dw TogepiFrames
-	dw TogeticFrames
-	dw NatuFrames
-	dw XatuFrames
+	dw ArcanineFrames
+	dw ArcanineFrames
+	dw NinetalesFrames
+	dw NinetalesFrames
 	dw MareepFrames
 	dw FlaaffyFrames
 	dw AmpharosFrames
 	dw BellossomFrames
 	dw MarillFrames
 	dw AzumarillFrames
-	dw SudowoodoFrames
-	dw PolitoedFrames
+	dw RapidashFrames
+	dw RapidashFrames
 	dw HoppipFrames
 	dw SkiploomFrames
 	dw JumpluffFrames
-	dw AipomFrames
-	dw SunkernFrames
-	dw SunfloraFrames
-	dw YanmaFrames
-	dw WooperFrames
-	dw QuagsireFrames
-	dw EspeonFrames
-	dw UmbreonFrames
-	dw MurkrowFrames
-	dw SlowkingFrames
-	dw MisdreavusFrames
-	dw UnownFrames
-	dw WobbuffetFrames
-	dw GirafarigFrames
-	dw PinecoFrames
-	dw ForretressFrames
-	dw DunsparceFrames
-	dw GligarFrames
-	dw SteelixFrames
-	dw SnubbullFrames
-	dw GranbullFrames
-	dw QwilfishFrames
+	dw HoundoomFrames
+	dw HoundoomFrames
+	dw AmpharosFrames
+	dw MagnetonFrames
+	dw MagnetonFrames
+	dw Porygon2Frames
+	dw Porygon2Frames
+	dw GengarFrames
+	dw MarowakFrames
+	dw MarowakFrames
+	dw MukFrames
+	dw MukFrames
+	dw WeezingFrames
+	dw WeezingFrames
+	dw RhydonFrames
+	dw RhydonFrames
 	dw ScizorFrames
-	dw ShuckleFrames
-	dw HeracrossFrames
-	dw SneaselFrames
-	dw TeddiursaFrames
-	dw UrsaringFrames
-	dw SlugmaFrames
-	dw MagcargoFrames
+	dw ScizorFrames
+	dw SteelixFrames
+	dw TentacruelFrames
+	dw TentacruelFrames
+	dw PoliwrathFrames
+	dw ScizorFrames
+	dw SlowbroFrames
+	dw SlowbroFrames
+	dw DewgongFrames
+	dw DewgongFrames
+	dw CloysterFrames
+	dw CloysterFrames
+	dw KinglerFrames
 	dw SwinubFrames
 	dw PiloswineFrames
-	dw CorsolaFrames
-	dw RemoraidFrames
-	dw OctilleryFrames
-	dw DelibirdFrames
-	dw MantineFrames
-	dw SkarmoryFrames
+	dw KinglerFrames
+	dw StarmieFrames
+	dw StarmieFrames
+	dw KingdraFrames
+	dw GyaradosFrames
+	dw GyaradosFrames
 	dw HoundourFrames
 	dw HoundoomFrames
 	dw KingdraFrames
-	dw PhanpyFrames
-	dw DonphanFrames
+	dw AzumarillFrames
+	dw AzumarillFrames
 	dw Porygon2Frames
-	dw StantlerFrames
-	dw SmeargleFrames
-	dw TyrogueFrames
-	dw HitmontopFrames
-	dw SmoochumFrames
-	dw ElekidFrames
-	dw MagbyFrames
-	dw MiltankFrames
+	dw HypnoFrames
+	dw HypnoFrames
 	dw BlisseyFrames
-	dw RaikouFrames
-	dw EnteiFrames
-	dw SuicuneFrames
+	dw BlisseyFrames
+	dw SmoochumFrames
+	dw PiloswineFrames
+	dw PiloswineFrames
+	dw JynxFrames
+	dw BlisseyFrames
+	dw JynxFrames
+	dw DragoniteFrames
+	dw TyranitarFrames
 	dw LarvitarFrames
 	dw PupitarFrames
 	dw TyranitarFrames
-	dw LugiaFrames
-	dw HoOhFrames
-	dw CelebiFrames
+	assert_table_length NUM_POKEMON
+
+; Hardcore Crystal: the bank of each species' frame set (see GetMonFramesPointer), so any
+; species can reuse the frames of any other species.
+FramesBanks:
+	table_width 1
+	db BANK(BulbasaurFrames)
+	db BANK(IvysaurFrames)
+	db BANK(VenusaurFrames)
+	db BANK(CharmanderFrames)
+	db BANK(CharmeleonFrames)
+	db BANK(CharizardFrames)
+	db BANK(SquirtleFrames)
+	db BANK(WartortleFrames)
+	db BANK(BlastoiseFrames)
+	db BANK(CaterpieFrames)
+	db BANK(MetapodFrames)
+	db BANK(ButterfreeFrames)
+	db BANK(WeedleFrames)
+	db BANK(KakunaFrames)
+	db BANK(BeedrillFrames)
+	db BANK(PidgeyFrames)
+	db BANK(PidgeottoFrames)
+	db BANK(PidgeotFrames)
+	db BANK(RattataFrames)
+	db BANK(RaticateFrames)
+	db BANK(SpearowFrames)
+	db BANK(FearowFrames)
+	db BANK(EkansFrames)
+	db BANK(ArbokFrames)
+	db BANK(PikachuFrames)
+	db BANK(RaichuFrames)
+	db BANK(MeganiumFrames)
+	db BANK(TyphlosionFrames)
+	db BANK(NidoranFFrames)
+	db BANK(NidorinaFrames)
+	db BANK(NidoqueenFrames)
+	db BANK(NidoranMFrames)
+	db BANK(NidorinoFrames)
+	db BANK(NidokingFrames)
+	db BANK(ClefairyFrames)
+	db BANK(ClefableFrames)
+	db BANK(VulpixFrames)
+	db BANK(NinetalesFrames)
+	db BANK(JigglypuffFrames)
+	db BANK(WigglytuffFrames)
+	db BANK(ZubatFrames)
+	db BANK(GolbatFrames)
+	db BANK(OddishFrames)
+	db BANK(GloomFrames)
+	db BANK(FeraligatrFrames)
+	db BANK(ParasFrames)
+	db BANK(ParasectFrames)
+	db BANK(VenonatFrames)
+	db BANK(VenomothFrames)
+	db BANK(VenusaurFrames)
+	db BANK(CharizardFrames)
+	db BANK(MeowthFrames)
+	db BANK(PersianFrames)
+	db BANK(PsyduckFrames)
+	db BANK(GolduckFrames)
+	db BANK(MankeyFrames)
+	db BANK(PrimeapeFrames)
+	db BANK(GrowlitheFrames)
+	db BANK(ArcanineFrames)
+	db BANK(PoliwagFrames)
+	db BANK(PoliwhirlFrames)
+	db BANK(PoliwrathFrames)
+	db BANK(AbraFrames)
+	db BANK(KadabraFrames)
+	db BANK(AlakazamFrames)
+	db BANK(MachopFrames)
+	db BANK(MachokeFrames)
+	db BANK(MachampFrames)
+	db BANK(BellsproutFrames)
+	db BANK(WeepinbellFrames)
+	db BANK(VictreebelFrames)
+	db BANK(TentacoolFrames)
+	db BANK(TentacruelFrames)
+	db BANK(GeodudeFrames)
+	db BANK(GravelerFrames)
+	db BANK(GolemFrames)
+	db BANK(PonytaFrames)
+	db BANK(RapidashFrames)
+	db BANK(SlowpokeFrames)
+	db BANK(SlowbroFrames)
+	db BANK(MagnemiteFrames)
+	db BANK(MagnetonFrames)
+	db BANK(BlastoiseFrames)
+	db BANK(FurretFrames)
+	db BANK(FurretFrames)
+	db BANK(SeelFrames)
+	db BANK(DewgongFrames)
+	db BANK(GrimerFrames)
+	db BANK(MukFrames)
+	db BANK(ShellderFrames)
+	db BANK(CloysterFrames)
+	db BANK(GastlyFrames)
+	db BANK(HaunterFrames)
+	db BANK(GengarFrames)
+	db BANK(OnixFrames)
+	db BANK(DrowzeeFrames)
+	db BANK(HypnoFrames)
+	db BANK(KrabbyFrames)
+	db BANK(KinglerFrames)
+	db BANK(NoctowlFrames)
+	db BANK(NoctowlFrames)
+	db BANK(RaticateFrames)
+	db BANK(RaticateFrames)
+	db BANK(CuboneFrames)
+	db BANK(MarowakFrames)
+	db BANK(PidgeotFrames)
+	db BANK(ButterfreeFrames)
+	db BANK(BeedrillFrames)
+	db BANK(KoffingFrames)
+	db BANK(WeezingFrames)
+	db BANK(RhyhornFrames)
+	db BANK(RhydonFrames)
+	db BANK(ChanseyFrames)
+	db BANK(JumpluffFrames)
+	db BANK(FearowFrames)
+	db BANK(HorseaFrames)
+	db BANK(SeadraFrames)
+	db BANK(FearowFrames)
+	db BANK(ArbokFrames)
+	db BANK(StaryuFrames)
+	db BANK(StarmieFrames)
+	db BANK(ArbokFrames)
+	db BANK(ScytherFrames)
+	db BANK(JynxFrames)
+	db BANK(RaichuFrames)
+	db BANK(ClefableFrames)
+	db BANK(WigglytuffFrames)
+	db BANK(NidoqueenFrames)
+	db BANK(MagikarpFrames)
+	db BANK(GyaradosFrames)
+	db BANK(NidokingFrames)
+	db BANK(CrobatFrames)
+	db BANK(BellossomFrames)
+	db BANK(VictreebelFrames)
+	db BANK(ParasectFrames)
+	db BANK(ParasectFrames)
+	db BANK(PorygonFrames)
+	db BANK(VenomothFrames)
+	db BANK(VenomothFrames)
+	db BANK(AriadosFrames)
+	db BANK(AriadosFrames)
+	db BANK(PersianFrames)
+	db BANK(PersianFrames)
+	db BANK(GolduckFrames)
+	db BANK(GolduckFrames)
+	db BANK(PrimeapeFrames)
+	db BANK(DratiniFrames)
+	db BANK(DragonairFrames)
+	db BANK(DragoniteFrames)
+	db BANK(PrimeapeFrames)
+	db BANK(MachampFrames)
+	db BANK(ChikoritaFrames)
+	db BANK(BayleefFrames)
+	db BANK(MeganiumFrames)
+	db BANK(CyndaquilFrames)
+	db BANK(QuilavaFrames)
+	db BANK(TyphlosionFrames)
+	db BANK(TotodileFrames)
+	db BANK(CroconawFrames)
+	db BANK(FeraligatrFrames)
+	db BANK(SentretFrames)
+	db BANK(FurretFrames)
+	db BANK(HoothootFrames)
+	db BANK(NoctowlFrames)
+	db BANK(AlakazamFrames)
+	db BANK(GolemFrames)
+	db BANK(SpinarakFrames)
+	db BANK(AriadosFrames)
+	db BANK(CrobatFrames)
+	db BANK(SteelixFrames)
+	db BANK(SteelixFrames)
+	db BANK(PichuFrames)
+	db BANK(CleffaFrames)
+	db BANK(IgglybuffFrames)
+	db BANK(ArcanineFrames)
+	db BANK(ArcanineFrames)
+	db BANK(NinetalesFrames)
+	db BANK(NinetalesFrames)
+	db BANK(MareepFrames)
+	db BANK(FlaaffyFrames)
+	db BANK(AmpharosFrames)
+	db BANK(BellossomFrames)
+	db BANK(MarillFrames)
+	db BANK(AzumarillFrames)
+	db BANK(RapidashFrames)
+	db BANK(RapidashFrames)
+	db BANK(HoppipFrames)
+	db BANK(SkiploomFrames)
+	db BANK(JumpluffFrames)
+	db BANK(HoundoomFrames)
+	db BANK(HoundoomFrames)
+	db BANK(AmpharosFrames)
+	db BANK(MagnetonFrames)
+	db BANK(MagnetonFrames)
+	db BANK(Porygon2Frames)
+	db BANK(Porygon2Frames)
+	db BANK(GengarFrames)
+	db BANK(MarowakFrames)
+	db BANK(MarowakFrames)
+	db BANK(MukFrames)
+	db BANK(MukFrames)
+	db BANK(WeezingFrames)
+	db BANK(WeezingFrames)
+	db BANK(RhydonFrames)
+	db BANK(RhydonFrames)
+	db BANK(ScizorFrames)
+	db BANK(ScizorFrames)
+	db BANK(SteelixFrames)
+	db BANK(TentacruelFrames)
+	db BANK(TentacruelFrames)
+	db BANK(PoliwrathFrames)
+	db BANK(ScizorFrames)
+	db BANK(SlowbroFrames)
+	db BANK(SlowbroFrames)
+	db BANK(DewgongFrames)
+	db BANK(DewgongFrames)
+	db BANK(CloysterFrames)
+	db BANK(CloysterFrames)
+	db BANK(KinglerFrames)
+	db BANK(SwinubFrames)
+	db BANK(PiloswineFrames)
+	db BANK(KinglerFrames)
+	db BANK(StarmieFrames)
+	db BANK(StarmieFrames)
+	db BANK(KingdraFrames)
+	db BANK(GyaradosFrames)
+	db BANK(GyaradosFrames)
+	db BANK(HoundourFrames)
+	db BANK(HoundoomFrames)
+	db BANK(KingdraFrames)
+	db BANK(AzumarillFrames)
+	db BANK(AzumarillFrames)
+	db BANK(Porygon2Frames)
+	db BANK(HypnoFrames)
+	db BANK(HypnoFrames)
+	db BANK(BlisseyFrames)
+	db BANK(BlisseyFrames)
+	db BANK(SmoochumFrames)
+	db BANK(PiloswineFrames)
+	db BANK(PiloswineFrames)
+	db BANK(JynxFrames)
+	db BANK(BlisseyFrames)
+	db BANK(JynxFrames)
+	db BANK(DragoniteFrames)
+	db BANK(TyranitarFrames)
+	db BANK(LarvitarFrames)
+	db BANK(PupitarFrames)
+	db BANK(TyranitarFrames)
 	assert_table_length NUM_POKEMON

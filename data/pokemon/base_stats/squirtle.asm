@@ -1,11 +1,11 @@
 	db SQUIRTLE ; 007
 
-	db  44,  48,  65,  43,  50,  64
+	db  42,  46,  62,  41,  48,  61
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type
 	db 45 ; catch rate
-	db 66 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F12_5 ; gender ratio
 	db 100 ; unknown 1

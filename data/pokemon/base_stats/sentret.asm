@@ -1,11 +1,11 @@
 	db SENTRET ; 161
 
-	db  35,  46,  34,  20,  35,  45
+	db  41,  53,  40,  23,  41,  52
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
 	db 255 ; catch rate
-	db 57 ; base exp
+	db 95 ; base exp
 	db NO_ITEM, BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

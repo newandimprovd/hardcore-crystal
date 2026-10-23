@@ -1,11 +1,11 @@
 	db RHYDON ; 112
 
-	db 105, 130, 120,  40,  45,  45
+	db  85, 106,  98,  32,  37,  37
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, ROCK ; type
 	db 60 ; catch rate
-	db 204 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

@@ -1,11 +1,11 @@
 	db MANKEY ; 056
 
-	db  40,  80,  35,  70,  35,  45
+	db  39,  79,  35,  69,  34,  44
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIGHTING, FIGHTING ; type
 	db 190 ; catch rate
-	db 74 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

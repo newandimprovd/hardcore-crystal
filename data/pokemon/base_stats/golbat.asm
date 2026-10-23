@@ -1,11 +1,11 @@
 	db GOLBAT ; 042
 
-	db  75,  80,  70,  90,  65,  75
+	db  65,  70,  61,  78,  56,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, FLYING ; type
 	db 90 ; catch rate
-	db 171 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

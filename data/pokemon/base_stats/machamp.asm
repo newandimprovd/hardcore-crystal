@@ -1,11 +1,11 @@
 	db MACHAMP ; 068
 
-	db  90, 130,  80,  55,  65,  85
+	db  86, 125,  77,  53,  62,  82
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIGHTING, FIGHTING ; type
 	db 45 ; catch rate
-	db 193 ; base exp
+	db 184 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F25 ; gender ratio
 	db 100 ; unknown 1

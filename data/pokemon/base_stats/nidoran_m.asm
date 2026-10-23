@@ -1,11 +1,11 @@
 	db NIDORAN_M ; 032
 
-	db  46,  57,  40,  50,  40,  40
+	db  50,  63,  44,  55,  44,  44
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, POISON ; type
 	db 235 ; catch rate
-	db 60 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F0 ; gender ratio
 	db 100 ; unknown 1

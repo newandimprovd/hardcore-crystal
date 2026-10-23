@@ -1,11 +1,11 @@
 	db DEWGONG ; 087
 
-	db  90,  70,  80,  70,  70,  95
+	db  75,  58,  67,  58,  58,  79
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, ICE ; type
 	db 75 ; catch rate
-	db 176 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

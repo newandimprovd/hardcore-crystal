@@ -1,11 +1,11 @@
 	db GOLDUCK ; 055
 
-	db  80,  82,  78,  85,  95,  80
+	db  63,  65,  62,  67,  75,  63
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type
 	db 75 ; catch rate
-	db 174 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
