@@ -68,11 +68,17 @@ class Walker:
                 break
         t.tick(200)
         self.battle_seen = False
+        self.die = False  # tests set this to lose the next fight on purpose
         t.hook("BattleMenu", self.menu_hook)
 
     # ------------------------------------------------------------------ helpers
     def menu_hook(self, ctx):
         t = self.t
+        if self.die:
+            for off in (0, 1):
+                t.poke("wBattleMonHP", 0, off)
+                t.poke("wPartyMon1HP", 0, off)
+            return
         t.poke("wBattleMonMoves", 33, 0)
         t.poke("wBattleMonPP", 30, 0)
         t.poke("wCurMoveNum", 0)
@@ -83,10 +89,23 @@ class Walker:
                                     party=t.mem("wOTPartySpecies", 0, max(n, 1)), lvl=t.mem("wEnemyMonLevel"),
                                     at=self.state()))
 
-    def state(self):
+    def raw_state(self):
         t = self.t
         g, n, x, y = t.where()
         return (self.ids.get((g, n), f"?{g}:{n}"), x, y)
+
+    def state(self):
+        """Position once the player has stopped moving: map and coordinates change at different moments
+        while a step or a map connection is being crossed, so wait for three equal readings."""
+        last, same = None, 0
+        for _ in range(40):
+            cur = self.raw_state()
+            same = same + 1 if cur == last else 0
+            if same >= 2:
+                return cur
+            last = cur
+            self.t.tick(3)
+        return last
 
     def busy(self):
         t = self.t
@@ -125,9 +144,9 @@ class Walker:
     def press_dir(self, d):
         t = self.t
         before = self.state()
-        for attempt in range(2):
+        for attempt in range(4):
             t.pb.button(d, 9)
-            t.tick(9 + 12)
+            t.tick(9 + 8)
             self.settle_if_event()
             if self.state() != before:
                 return
@@ -159,14 +178,24 @@ class Walker:
                 self.note(f"no model route from {cur} to {goal_map}")
                 return False
             replans += 1
-            for (d, exp, kind) in path:
+            if os.environ.get("WALKDEBUG") and replans > 2:
+                print("   plan", cur, [(d, e[1:], kd) for d, e, kd in path[:6]])
+            for k, (d, exp, kind) in enumerate(path):
                 before = self.state()
                 self.press_dir(d)
                 self.seen_map()
                 actual = self.state()
                 if actual == exp:
                     continue
+                later = [j for j in range(k + 1, len(path)) if path[j][1] == actual]
+                if later:  # took more than one step, still on the planned route
+                    for _ in range(later[0] - k):
+                        pass
+                    path = path[:k + 1] + path[later[0] + 1:]
+                    break
                 if kind in ("warp", "conn") and actual[0] == exp[0]:
+                    if kind == "warp" and actual[1] == exp[1] and abs(actual[2] - exp[2]) <= 1:
+                        break  # arrival on a door tile steps down a moment later
                     if actual != exp:
                         self.note(f"{kind} {before}->{exp[0]} landed {actual[1:]} expected {exp[1:]}")
                     break

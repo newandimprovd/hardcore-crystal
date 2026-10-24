@@ -12,6 +12,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 DIRS = {"up": (0, -1), "down": (0, 1), "left": (-1, 0), "right": (1, 0)}
 DOORISH = {0x71, 0x75, 0x79, 0x7d, 0x7a, 0x7b, 0x73, 0x74}  # arrival here steps the player down
 WARPTILE = set(range(0x70, 0x80)) - {0x7c}
+CARPET = {0x70: "down", 0x76: "left", 0x78: "up", 0x7e: "right"}  # directional warp carpets
 WALKABLE = {0x00, 0x10, 0x14, 0x18, 0x48, 0x49, 0x4c}  # floor and grass
 
 
@@ -136,6 +137,18 @@ class World:
         mp = self.maps[name]
         dx, dy = DIRS[d]
         nx, ny = x + dx, y + dy
+        here = mp.cell(x, y)
+        if here in CARPET and CARPET[here] == d:
+            # standing on a warp carpet and walking in its direction warps (the Pokecenter door mat)
+            for (wx, wy, dest, dw) in mp.warps:
+                if (wx, wy) == (x, y):
+                    dm = self.consts.get(dest)
+                    if dm is None:
+                        return None
+                    ddx, ddy = dm.warps[dw - 1][0], dm.warps[dw - 1][1]
+                    if dm.cell(ddx, ddy) in DOORISH:
+                        ddy += 1
+                    return (dm.name, ddx, ddy), "warp"
         c = mp.cell(nx, ny)
         if c is None:
             # connection
@@ -162,6 +175,11 @@ class World:
             return ns, "conn"
         if (name, nx, ny) in self.blocked:
             return None
+        if c in CARPET:
+            # walking onto a carpet is just walking onto floor; the warp fires on the next step
+            if not self.walkable(mp, nx, ny, ignore_obj):
+                return None
+            return (name, nx, ny), "move"
         if c in WARPTILE:
             for (wx, wy, dest, dw) in mp.warps:
                 if (wx, wy) == (nx, ny):

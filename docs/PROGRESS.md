@@ -22,12 +22,16 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
 - [x] 4  roster: 62 four-stage lines, 248 species (97 new), Fairy 24 / Poison 31. Built and checked in the emulator
          (test_roster.py 0 failures, dex list and entries, party stats screen, wild battle with a new species). Placeholder art:
          new species reuse source sprites with tinted palettes; real sprites and cries are stage 10. Full table in docs/ROSTER.md
-- [ ] 5  area generator (Area 1), forced fights, plazas, respawn
+- [~] 5  area generator. DONE: engine support for generated trainers, 2848 event flags, generator package, Area 1 slice
+         (TITHE ROAD, gatehouse, 2 plazas, 3 street lanes, PC/Mart/House per plaza; 13 maps, 45 trainers), walker test
+         (test_walk.py: 46 kills, every map and door reached, 0 problems) and whiteout test (test_whiteout.py PASS).
+         TODO: scale to ~22 maps per area, bosses, rifts between tilesets, key-item dead ends and gates, Areas 2-5 kits and text.
 - [ ] 6  Areas 2-4
 - [ ] 7  milestones (200/800), rival crimelord, mansion bedroom ending, Area 5
 - [ ] 8  Purgatorio, Abyss, Nick's Landing, Steiner, Sabbah, Cioran, Crowley quest, Corkboard, true ending
 - [ ] 9  wild encounters (every base form catchable), key item placement, QOL, balance
-- [ ] 10 music loops, new sprites/cries, Pokedex text, credits, adults-only warning
+- [ ] 10 music loops, new sprites/cries, Pokedex text, credits, adults-only warning.
+         Own sprites so far: CTHUSPAWN and CTHULUDON (tools/hardcore/sprites/cthu.py); the other 95 new species still borrow art.
 - [ ] 11 final ROM
 
 ## Notes for the next session
@@ -54,3 +58,25 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
 - Pokedex text is 18 columns, two pages of three lines. Dex weights are 16-bit (max 6553.5 lb). Species names max 10 characters.
 - Tests: test_roster.py ROM (static table check), dexshots.py ROM OUTDIR NAME... (dex screenshots), typecheck.py, test_reveal.py, test_split.py.
 - Known polish items: dex "No." shows species ID not line order; unused gfx of removed species still in ROM (prune later if space is needed).
+
+## Stage 5 notes (area generator)
+- Pipeline order: gen_moves.py, gen_roster.py, gen_roster_doc.py, gen_areas.py (all deterministic from base commit 3bc8daa).
+- tools/hardcore/areas/: model.py (World, MapDef, warps), kits.py (tileset block kits), layout.py (lane, plaza, gatehouse, interiors),
+  populate.py + party.py (trainer parties from the roster by level and theme), text.py (dialogue pools), emit.py (writes every table),
+  a1.py (Area 1 spec and dialogue). gen_areas.py writes maps/gen/*, data/maps/area_*.asm, constants/area_*.asm and generated trainers.
+- One-time patches to vanilla tables are marked `; HC-AREAS` (map constants, map lists, roofs, spawn points, landmarks, marts, outdoor sprites).
+- Generated trainer IDs are >= 128 per class; HC_FindGenTrainer looks the record up in the "Gen Trainers N" banks. Event flags EVENT_GEN_* use the
+  free flags 2048..2847 plus the holes below 2048.
+- Lane design: a channel of trainers on both sides, each facing across the channel with a straight line of sight, so walking the lane forces every fight.
+  Corpses (after the first kill) lie where the trainer stopped, next to the player, and do not block the channel.
+- Warp rules the walker model relies on: door tiles (0x71 etc.) warp on arrival and step the player down; WARP_CARPET_* tiles warp when the player
+  stands on them and walks in the carpet's direction (Pokecenter door mats); plain floor warp cells are arrival points only.
+- Tests: test_walk.py ROM [goal,...] (ROM from testbuild.sh cg1 TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=8 TEST_MON=CTHULUDON TEST_LEVEL=60
+  TEST_REVEALED=1 TEST_ITEMS=1), test_whiteout.py ROM. areamodel.py is the static map model they plan on.
+
+## Sprite notes
+- Species with own art: roster_data.N(..., art="cthu", pal=(body, accent), shiny=(body, accent)). gen_roster.py runs tools/hardcore/sprites/<art>.py to
+  write gfx/pokemon/<slug>/front.png (4 stacked animation frames), back.png, shiny.pal and copies the anim scripts of TENTACRUEL, then emits
+  gfx/pokemon/hc_pics.asm (in "Pics 20", the first unused pic bank), hc_anims.asm and hc_frames.asm. Palettes come from the PNGs like a vanilla species.
+- GBC limit: four colours per sprite (white, body, accent, black). A 7x7 front pic may use at most about 98 tiles after animation (vanilla maximum);
+  keep animation frames to a few changed tiles (cthu.py animates only the tentacles and the gem glint).
