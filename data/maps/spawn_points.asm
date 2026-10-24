@@ -43,6 +43,8 @@ endc
 	spawn SILVER_CAVE_OUTSIDE,        23, 20
 	spawn FAST_SHIP_CABINS_SW_SSW_NW,  6,  2
 
+	INCLUDE "data/maps/area_spawn_points.asm" ; HC-AREAS
+
 	spawn N_A,                        -1, -1
 
 	assert_table_length NUM_SPAWNS + 1

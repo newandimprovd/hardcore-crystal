@@ -208,8 +208,8 @@ FramesPointers:
 	dw ScizorFrames
 	dw ScizorFrames
 	dw SteelixFrames
-	dw TentacruelFrames
-	dw TentacruelFrames
+	dw CthuspawnFrames
+	dw CthuludonFrames
 	dw PoliwrathFrames
 	dw ScizorFrames
 	dw SlowbroFrames
@@ -462,8 +462,8 @@ FramesBanks:
 	db BANK(ScizorFrames)
 	db BANK(ScizorFrames)
 	db BANK(SteelixFrames)
-	db BANK(TentacruelFrames)
-	db BANK(TentacruelFrames)
+	db BANK(CthuspawnFrames)
+	db BANK(CthuludonFrames)
 	db BANK(PoliwrathFrames)
 	db BANK(ScizorFrames)
 	db BANK(SlowbroFrames)

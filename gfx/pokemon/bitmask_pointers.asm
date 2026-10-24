@@ -208,8 +208,8 @@ BitmasksPointers:
 	dw ScizorBitmasks
 	dw ScizorBitmasks
 	dw SteelixBitmasks
-	dw TentacruelBitmasks
-	dw TentacruelBitmasks
+	dw CthuspawnBitmasks
+	dw CthuludonBitmasks
 	dw PoliwrathBitmasks
 	dw ScizorBitmasks
 	dw SlowbroBitmasks

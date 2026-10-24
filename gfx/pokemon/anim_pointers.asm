@@ -208,8 +208,8 @@ AnimationPointers:
 	dw ScizorAnimation
 	dw ScizorAnimation
 	dw SteelixAnimation
-	dw TentacruelAnimation
-	dw TentacruelAnimation
+	dw CthuspawnAnimation
+	dw CthuludonAnimation
 	dw PoliwrathAnimation
 	dw ScizorAnimation
 	dw SlowbroAnimation

@@ -211,8 +211,8 @@ PokemonPicPointers::
 	dba_pics ShuckleFrontpic, ShuckleBackpic
 	dba_pics ShuckleFrontpic, ShuckleBackpic
 	dba_pics SnubbullFrontpic, SnubbullBackpic
-	dba_pics TentacruelFrontpic, TentacruelBackpic
-	dba_pics TentacruelFrontpic, TentacruelBackpic
+	dba_pics CthuspawnFrontpic, CthuspawnBackpic
+	dba_pics CthuludonFrontpic, CthuludonBackpic
 	dba_pics PoliwrathFrontpic, PoliwrathBackpic
 	dba_pics ShuckleFrontpic, ShuckleBackpic
 	dba_pics SlowbroFrontpic, SlowbroBackpic

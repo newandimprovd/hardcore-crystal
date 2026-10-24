@@ -30,6 +30,7 @@ OutdoorSprites:
 	dw NewBarkGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
+	INCLUDE "data/maps/area_outdoor_sprite_pointers.asm" ; HC-AREAS
 	assert_table_length NUM_MAP_GROUPS
 
 PalletGroupSprites:
@@ -669,3 +670,5 @@ CableClubGroupSprites:
 	db SPRITE_FISHING_GURU
 	db SPRITE_POKE_BALL
 	db SPRITE_POKEDEX
+
+INCLUDE "data/maps/area_outdoor_sprites.asm" ; HC-AREAS

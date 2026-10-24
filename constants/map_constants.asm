@@ -501,4 +501,6 @@ ENDM
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
 	endgroup
 
+INCLUDE "constants/area_map_constants.asm" ; HC-AREAS
+
 DEF NUM_MAP_GROUPS EQU const_value ; 26

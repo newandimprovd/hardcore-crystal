@@ -35,6 +35,7 @@ Marts:
 	dw MartMtMoon
 	dw MartIndigoPlateau
 	dw MartUnderground
+	INCLUDE "data/items/area_mart_pointers.asm" ; HC-AREAS
 	assert_table_length NUM_MARTS
 
 MartCherrygrove:
@@ -405,3 +406,5 @@ DefaultMart:
 	db POKE_BALL
 	db POTION
 	db -1 ; end
+
+INCLUDE "data/items/area_marts.asm" ; HC-AREAS

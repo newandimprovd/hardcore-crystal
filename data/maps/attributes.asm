@@ -121,7 +121,7 @@ ENDM
 	connection east, Route27, ROUTE_27, 0
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35
-	connection north, Route30, ROUTE_30, 5
+	connection north, TitheRoad, TITHE_ROAD, 5 ; HC-AREAS
 	connection east, Route29, ROUTE_29, 0
 
 	map_attributes VioletCity, VIOLET_CITY, $05
@@ -175,8 +175,7 @@ ENDM
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -9
 
 	map_attributes Route29, ROUTE_29, $05
-	connection north, Route46, ROUTE_46, 10
-	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0
+	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0 ; HC-AREAS: no way north to Route 46
 	connection east, NewBarkTown, NEW_BARK_TOWN, 0
 
 	map_attributes Route30, ROUTE_30, $05

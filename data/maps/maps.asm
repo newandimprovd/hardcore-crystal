@@ -43,6 +43,7 @@ MapGroupPointers::
 	dw MapGroup_NewBark     ; 24
 	dw MapGroup_Saffron     ; 25
 	dw MapGroup_Cherrygrove ; 26
+	INCLUDE "data/maps/area_group_pointers.asm" ; HC-AREAS
 	assert_table_length NUM_MAP_GROUPS
 
 MapGroup_Olivine:
@@ -536,3 +537,5 @@ MapGroup_Cherrygrove:
 	map MrPokemonsHouse, TILESET_FACILITY, INDOOR, LANDMARK_ROUTE_30, MUSIC_CHERRYGROVE_CITY, FALSE, PALETTE_DAY, FISHGROUP_SHORE
 	map Route31VioletGate, TILESET_GATE, GATE, LANDMARK_ROUTE_31, MUSIC_ROUTE_30, FALSE, PALETTE_DAY, FISHGROUP_SHORE
 	assert_table_length NUM_CHERRYGROVE_MAPS
+
+INCLUDE "data/maps/area_map_lists.asm" ; HC-AREAS

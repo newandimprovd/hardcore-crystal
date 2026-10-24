@@ -409,6 +409,16 @@ INCLUDE "engine/hardcore/trainer_death.asm"
 INCLUDE "engine/hardcore/test_mode.asm"
 
 
+SECTION "Hardcore Trainers", ROMX
+
+INCLUDE "engine/hardcore/gen_trainers.asm"
+INCLUDE "data/hardcore/gen_trainer_table.asm"
+
+
+INCLUDE "data/hardcore/gen_trainer_data.asm"
+INCLUDE "data/hardcore/area_text.asm"
+
+
 SECTION "bank32", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"
@@ -440,6 +450,7 @@ INCLUDE "gfx/pokemon/bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/bitmasks.asm"
 INCLUDE "gfx/pokemon/unown_bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/unown_bitmasks.asm"
+INCLUDE "gfx/pokemon/hc_anims.asm"
 
 
 SECTION "Pic Animations 2", ROMX
@@ -451,6 +462,7 @@ INCLUDE "gfx/pokemon/kanto_frames.asm"
 SECTION "Pic Animations 3", ROMX
 
 INCLUDE "gfx/pokemon/johto_frames.asm"
+INCLUDE "gfx/pokemon/hc_frames.asm"
 INCLUDE "gfx/pokemon/unown_frame_pointers.asm"
 INCLUDE "gfx/pokemon/unown_frames.asm"
 

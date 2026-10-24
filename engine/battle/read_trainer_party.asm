@@ -39,6 +39,8 @@ ReadTrainerParty:
 
 	ld a, [wOtherTrainerID]
 	ld b, a
+	cp HC_GEN_ID_BASE
+	jr nc, .generated
 .skip_trainer
 	dec b
 	jr z, .got_trainer
@@ -70,6 +72,11 @@ ReadTrainerParty:
 	jp hl
 
 .done
+	jp ComputeTrainerReward
+
+.generated
+; Hardcore Crystal: generated trainers (id >= HC_GEN_ID_BASE) live in their own banks.
+	farcall HC_ReadGeneratedParty
 	jp ComputeTrainerReward
 
 .cal2
@@ -353,6 +360,13 @@ GetTrainerName::
 	jp CloseSRAM
 
 .not_cal2
+	ld a, b
+	cp HC_GEN_ID_BASE
+	jr c, .vanilla_name
+	farcall HC_GetGeneratedTrainerName
+	ret
+
+.vanilla_name
 	dec c
 	push bc
 	ld b, 0

@@ -1467,5 +1467,5 @@
 	const EVENT_HC_SPARE_5
 ; Unused: next 42 events
 
-	const_next 2048
-DEF NUM_EVENTS EQU const_value ; 800
+	const_next 2848 ; Hardcore Crystal: the array grew by 100 bytes (wram.asm), flags 2048-2847 are for generated areas
+DEF NUM_EVENTS EQU const_value

@@ -43,4 +43,5 @@ DEF NUM_MART_TYPES EQU const_value
 	const MART_MT_MOON
 	const MART_INDIGO_PLATEAU
 	const MART_UNDERGROUND
+INCLUDE "constants/area_mart_constants.asm" ; HC-AREAS
 DEF NUM_MARTS EQU const_value

@@ -707,18 +707,10 @@ INCLUDE "gfx/pokemon/jumpluff/shiny.pal"
 	RGB 12,  9,  8
 INCBIN "gfx/pokemon/steelix/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/steelix/shiny.pal"
-; CTHUSPAWN
-	RGB 12, 12, 19
-	RGB 12,  3,  6
-; CTHUSPAWN shiny
-	RGB 12, 19, 12
-	RGB  3,  6, 12
-; CTHULUDON
-	RGB 11, 11, 17
-	RGB 11,  2,  5
-; CTHULUDON shiny
-	RGB 11, 17, 11
-	RGB  2,  5, 11
+INCBIN "gfx/pokemon/cthuspawn/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/cthuspawn/shiny.pal"
+INCBIN "gfx/pokemon/cthuludon/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/cthuludon/shiny.pal"
 ; POLIWRAITH
 	RGB 11, 12, 20
 	RGB  4,  5, 14

@@ -145,9 +145,12 @@ TYPE_OVERRIDE = {
 NEW = {}
 
 
-def N(name, types, cat, ht, wt, text, src=None, arch="bal", pal=None, icon=None):
+def N(name, types, cat, ht, wt, text, src=None, arch="bal", pal=None, icon=None, art=None, shiny=None):
+    """art: name of a tools/hardcore/sprites module that draws this species (own front/back sprite).
+    pal and shiny are two 5-bit RGB colours each (body, accent); shiny defaults to a channel rotation."""
     assert name not in NEW, name
-    NEW[name] = dict(name=name, types=types, cat=cat, ht=ht, wt=wt, text=text, src=src, arch=arch, pal=pal, icon=icon)
+    NEW[name] = dict(name=name, types=types, cat=cat, ht=ht, wt=wt, text=text, src=src, arch=arch, pal=pal, icon=icon,
+                     art=art, shiny=shiny)
 
 
 # --- three-stage lines, one new final form each -------------------------------------------------
@@ -290,9 +293,11 @@ N("CLEAVER", "BUG/STEEL", "BLADE", "6'11", 260,
 N("HEADSMAN", "BUG/STEEL", "EXECUTOR", "8'02", 310,
   "It does not take sides. It takes heads, with a polite bow.", arch="phys")
 N("CTHUSPAWN", "DARK/POISON", "ABYSS", "8'02", 360,
-  "Dived too deep. The dark and the pressure gave it a familiar face.", arch="spec")
+  "Dived too deep. The dark and the pressure gave it a familiar face.", arch="spec",
+  art="cthu", pal=((11, 21, 16), (28, 3, 6)), shiny=((17, 12, 21), (30, 25, 5)))
 N("CTHULUDON", "DARK/POISON", "SLEEPER", "14'09", 1850,
-  "It dreams of dying cities. Two red gems glow where its thoughts leak out.", arch="spec")
+  "It dreams of dying cities. Two red gems glow where its thoughts leak out.", arch="spec",
+  art="cthu", pal=((9, 18, 17), (25, 3, 10)), shiny=((12, 8, 18), (31, 24, 4)))
 N("POLIWRAITH", "WATER/GHOST", "WHIRL", "6'03", 480,
   "The swirl on its belly is a drain. It leads somewhere cold.", arch="phys")
 N("AMNESIAC", "WATER/PSYCHIC", "FORGETFUL", "7'11", 460,

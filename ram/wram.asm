@@ -3258,8 +3258,7 @@ wKenjiFightCount::   db ; unreferenced
 wParryFightCount::   db
 wErinFightCount::    db
 
-	ds 100
-
+; Hardcore Crystal: the 100 unused bytes that were here are now part of wEventFlags (NUM_EVENTS = 2848)
 wEventFlags:: flag_array NUM_EVENTS
 
 wCurBox:: db
@@ -3759,3 +3758,8 @@ wWindowStack:: ds $1000 - 1
 wWindowStackBottom:: ds 1
 
 ENDSECTION
+
+
+SECTION "Hardcore WRAM", WRAM0
+
+wHCGenBank:: db ; bank of the generated trainer group being read

@@ -30,4 +30,5 @@ MapGroupRoofSGBPalInds:
 	db PREDEFPAL_NEW_BARK
 	db PREDEFPAL_SAFFRON
 	db PREDEFPAL_CHERRYGROVE
+	INCLUDE "data/maps/area_sgb_roof_pal_inds.asm" ; HC-AREAS
 	assert_table_length NUM_MAP_GROUPS + 1

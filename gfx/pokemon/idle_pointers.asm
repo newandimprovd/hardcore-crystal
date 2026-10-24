@@ -208,8 +208,8 @@ AnimationIdlePointers:
 	dw ScizorAnimationIdle
 	dw ScizorAnimationIdle
 	dw SteelixAnimationIdle
-	dw TentacruelAnimationIdle
-	dw TentacruelAnimationIdle
+	dw CthuspawnAnimationIdle
+	dw CthuludonAnimationIdle
 	dw PoliwrathAnimationIdle
 	dw ScizorAnimationIdle
 	dw SlowbroAnimationIdle

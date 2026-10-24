@@ -34,6 +34,7 @@ INCLUDE "constants/credits_constants.asm"
 INCLUDE "constants/cry_constants.asm"
 INCLUDE "constants/engine_flags.asm"
 INCLUDE "constants/event_flags.asm"
+INCLUDE "constants/area_event_flags.asm" ; HC-AREAS
 INCLUDE "constants/icon_constants.asm"
 INCLUDE "constants/landmark_constants.asm"
 INCLUDE "constants/map_constants.asm"
@@ -66,6 +67,7 @@ INCLUDE "constants/trainer_constants.asm"
 INCLUDE "constants/trainer_data_constants.asm"
 INCLUDE "constants/type_constants.asm"
 INCLUDE "constants/battle_tower_constants.asm"
+INCLUDE "constants/hardcore_constants.asm"
 
 if DEF(_CRYSTAL11_VC)
 INCLUDE "vc/pokecrystal11.constants.asm"
