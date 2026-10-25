@@ -18,9 +18,11 @@ TitheMart1Npc0Script:
 	jumptextfaceplayer TitheMart1Npc0Text
 
 TitheMart1Npc0Text:
-	text "Everything here is"
-	line "overpriced by"
-	para "divine right."
+	text "The clerk blessed"
+	line "my potion. It's"
+	para "still just a"
+	line "potion. But it's"
+	para "thirty bucks more."
 	done
 
 TitheMart1_MapEvents:

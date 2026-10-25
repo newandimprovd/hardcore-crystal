@@ -2,3 +2,8 @@
 
 	spawn TITHE_PLAZA1,  3,  4
 	spawn TITHE_PLAZA2,  3,  4
+	spawn TITHE_PLAZA3,  3,  4
+	spawn TITHE_PLAZA4,  3,  4
+	spawn TITHE_PLAZA5,  3,  4
+	spawn TITHE_PLAZA6,  3,  4
+	spawn TITHE_PLAZA7,  3,  4

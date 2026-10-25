@@ -2,3 +2,8 @@
 
 	const MART_TITHE_1
 	const MART_TITHE_2
+	const MART_TITHE_3
+	const MART_TITHE_4
+	const MART_TITHE_5
+	const MART_TITHE_6
+	const MART_TITHE_7

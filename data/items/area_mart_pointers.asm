@@ -2,3 +2,8 @@
 
 	dw MartTithe1
 	dw MartTithe2
+	dw MartTithe3
+	dw MartTithe4
+	dw MartTithe5
+	dw MartTithe6
+	dw MartTithe7

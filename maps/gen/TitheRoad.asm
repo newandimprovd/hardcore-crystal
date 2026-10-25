@@ -27,22 +27,22 @@ TitheRoadAfterScript:
 	end
 
 TitheRoadTrainer0:
-	trainer GENTLEMAN, 128, EVENT_GEN_TITHE_ROAD_0, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer OFFICER, 129, EVENT_GEN_TITHE_ROAD_0, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer1:
-	trainer SCHOOLBOY, 128, EVENT_GEN_TITHE_ROAD_1, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer GENTLEMAN, 128, EVENT_GEN_TITHE_ROAD_1, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer2:
-	trainer OFFICER, 128, EVENT_GEN_TITHE_ROAD_2, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer BIKER, 128, EVENT_GEN_TITHE_ROAD_2, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer3:
-	trainer LASS, 128, EVENT_GEN_TITHE_ROAD_3, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer OFFICER, 130, EVENT_GEN_TITHE_ROAD_3, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer4:
-	trainer COOLTRAINERM, 128, EVENT_GEN_TITHE_ROAD_4, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer SCIENTIST, 128, EVENT_GEN_TITHE_ROAD_4, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer5:
-	trainer BLACKBELT_T, 128, EVENT_GEN_TITHE_ROAD_5, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer SCIENTIST, 129, EVENT_GEN_TITHE_ROAD_5, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoad_MapEvents:
 	db 0, 0 ; filler
@@ -55,10 +55,10 @@ TitheRoad_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  4, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer0, -1
-	object_event  4,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer1, -1
-	object_event  9,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer2, -1
-	object_event  4,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer3, -1
-	object_event  9,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer4, -1
-	object_event  9,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer5, -1
+	object_event  4, 10, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer0, -1
+	object_event  4,  8, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer1, -1
+	object_event  9,  8, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer2, -1
+	object_event  4,  6, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer3, -1
+	object_event  9,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer4, -1
+	object_event  9,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer5, -1
 

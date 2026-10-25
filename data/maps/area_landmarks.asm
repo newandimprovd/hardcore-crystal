@@ -2,3 +2,5 @@
 
 	landmark  80,  70, TitheCityName
 	landmark  80,  84, TitheRoadName
+	landmark  80,  62, TitheMidtownName
+	landmark  80,  54, TitheParishName

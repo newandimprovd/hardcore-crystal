@@ -1,8 +1,10 @@
 """Area 1: TITHE CITY, a megacity of towers around a vast cathedral, run by corrupt priests and policemen."""
 import random
 
+from . import a1_text as T
 from . import kits
-from .layout import chain, gatehouse, house_interior, lane, mart_interior, plaza, pokecenter_interior
+from .builder import ActSpec, BossSpec, build_act, town
+from .layout import chain, gatehouse, lane, plaza
 from .populate import populate
 from .text import Text
 
@@ -32,7 +34,7 @@ class Spec:
     sprites = ["SPRITE_OFFICER", "SPRITE_GENTLEMAN", "SPRITE_COOLTRAINER_M", "SPRITE_COOLTRAINER_F", "SPRITE_BEAUTY",
                "SPRITE_BIKER", "SPRITE_ROCKET", "SPRITE_ROCKET_GIRL", "SPRITE_SUPER_NERD", "SPRITE_YOUNGSTER",
                "SPRITE_LASS", "SPRITE_TEACHER", "SPRITE_POKEFAN_M", "SPRITE_BLACK_BELT", "SPRITE_ROCKER",
-               "SPRITE_SCIENTIST", "SPRITE_POKE_BALL", "SPRITE_ROCK", "SPRITE_BOULDER"]
+               "SPRITE_SCIENTIST", "SPRITE_POKE_BALL", "SPRITE_ROCK", "SPRITE_BOULDER", "SPRITE_FRUIT_TREE"]
 
     def pick_class(self, rng):
         total = sum(c[3] for c in self.classes)
@@ -47,62 +49,27 @@ class Spec:
         return prog
 
 
-SEEN = [
-    "Tithe's due. I take cash, cards or teeth.",
-    "Move along, citizen. Or don't. I could use the overtime.",
-    "This street has a collection plate. You are the collection.",
-    "Do you know who my uncle is? Neither do I. Fight me.",
-    "The parish blesses this block. I just bill it.",
-    "You look unaccompanied. Let me fix that with a bruise.",
-    "I'm not corrupt. I'm just very good at accepting gifts. Hand it over.",
-    "Rent's up again. So is my temper.",
-    "Oh good. Another witness for the fight. Wait, you're the fight.",
-    "Nobody gets past without a donation. Your face counts as one.",
-    "I forgave myself for what I'm about to do. Saves time.",
-    "Hold it. The cathedral bell tolls for thee. I just paid it to.",
-    "Big city, small hospitality. Let's get on with it.",
-    "You have the right to remain broke. Everything you say may be billed.",
-    "My shift ended an hour ago. You owe me for that hour.",
-    "Heard a nutcase is walking around killing trainers. Lucky for me, that's a rumor.",
-]
-BEATEN = [
-    "Ow. That's coming out of my overtime.",
-    "Fine. You win. Please forget my face.",
-    "Tell the parish I tried. They'll still dock my pay.",
-    "My mom told me about people like you. She was too optimistic.",
-    "I should've taken the bribe.",
-    "Oof. I feel strangely forgiven.",
-    "I lost? The union is going to hear about this. Ow.",
-    "That was a hell of a lot more than a donation.",
-    "Rest in peace, my pension.",
-    "Please don't take my wallet. Wait, you already did.",
-    "You hit like landlords evict.",
-    "Okay, okay, okay. That's enough. Why are you smiling?",
-]
-AFTER = [
-    "Don't look at me. I'm on break.",
-    "Go ahead. Everyone else does.",
-    "I'm filing a complaint. To nobody.",
-    "The city is not what it seems. Mostly it's worse.",
-    "I used to believe in something. Now I believe in lunch.",
-    "Keep moving. The towers are watching.",
-    "Please stop making eye contact with the dead.",
-    "I'll pray for you. Priced separately.",
-]
-
-
 def build(w, roster, rng):
     spec = Spec()
     g = w.group("AREA1", spec.sprites)
-    w.pools[spec.pool] = dict(seen=SEEN, beaten=BEATEN, after=AFTER)
+    w.pools[spec.pool] = dict(seen=T.SEEN, beaten=T.BEATEN, after=T.AFTER)
     modern, johto = kits.modern(), kits.johto()
-    w.landmarks.append(("TITHE_CITY", 80, 70, "TITHE<BSP>CITY"))
+    w.landmarks.append(("TITHE_CITY", 80, 70, "TITHE<BSP>LOWTOWN"))
     w.landmarks.append(("TITHE_ROAD", 80, 84, "TITHE<BSP>ROAD"))
+    w.landmarks.append(("TITHE_MIDTOWN", 80, 62, "TITHE<BSP>MIDTOWN"))
+    w.landmarks.append(("TITHE_PARISH", 80, 54, "THE<BSP>PARISH"))
     LM_CITY, LM_ROAD = "LANDMARK_TITHE_CITY", "LANDMARK_TITHE_ROAD"
-    w.marts.append(("TITHE_1", "MartTithe1", ["POKE_BALL", "POTION", "ANTIDOTE", "PARLYZ_HEAL", "AWAKENING"]))
-    w.marts.append(("TITHE_2", "MartTithe2", ["POKE_BALL", "GREAT_BALL", "POTION", "SUPER_POTION", "ANTIDOTE",
-                                             "PARLYZ_HEAL", "AWAKENING", "BURN_HEAL", "REVIVE"]))
-    plan = []  # (map, slots)
+    LM_MID, LM_PARISH = "LANDMARK_TITHE_MIDTOWN", "LANDMARK_TITHE_PARISH"
+    texts = dict(center=T.CENTER + T.CENTER_B, mart=T.MART, house=T.HOUSE)
+    tiers = [
+        ["POKE_BALL", "POTION", "ANTIDOTE", "PARLYZ_HEAL", "AWAKENING"],
+        ["POKE_BALL", "GREAT_BALL", "POTION", "SUPER_POTION", "ANTIDOTE", "PARLYZ_HEAL", "AWAKENING", "BURN_HEAL", "REVIVE"],
+        ["POKE_BALL", "GREAT_BALL", "SUPER_POTION", "HYPER_POTION", "ANTIDOTE", "PARLYZ_HEAL", "AWAKENING", "BURN_HEAL",
+         "ICE_HEAL", "REVIVE", "REPEL"],
+        ["GREAT_BALL", "ULTRA_BALL", "HYPER_POTION", "FULL_HEAL", "REVIVE", "SUPER_REPEL", "ESCAPE_ROPE"],
+    ]
+    # one stock per plaza: P1, then (middle, boss door) for each of the three acts
+    items = [tiers[0]] + [tiers[t] for t in (1, 1, 2, 2, 3, 3)]
 
     # Segment 1: the road out of Cherrygrove (outdoor Johto tileset)
     road, s_road = lane(g, "TitheRoad", johto, rng, trainers=6, a=2, cw=3, right=3, landmark=LM_ROAD,
@@ -110,37 +77,36 @@ def build(w, roster, rng):
     # Segment 2: the city (modern tileset)
     p1, d1 = plaza(g, "TithePlaza1", modern, rng, landmark=LM_CITY, music="MUSIC_GOLDENROD_CITY", rift=True,
                    houses=1, south="closed")
-    gate = gatehouse(g, "TitheCheckpoint", road.door, d1["rift"], LM_CITY, "MUSIC_GOLDENROD_CITY",
-                     [Text("Papers? No? Great. That's a fine too. Pay at the end.")])
-    lanes = []
-    for i in range(3):
-        m, s = lane(g, f"TitheStreet{i + 1}", modern, rng, trainers=13, landmark=LM_CITY,
-                    music="MUSIC_GOLDENROD_CITY")
-        lanes.append((m, s))
-    p2, d2 = plaza(g, "TithePlaza2", modern, rng, landmark=LM_CITY, music="MUSIC_GOLDENROD_CITY", houses=1)
-    chain(p1, lanes[0][0])
-    chain(lanes[0][0], lanes[1][0])
-    chain(lanes[1][0], lanes[2][0])
-    chain(lanes[2][0], p2)
-    # interiors
-    pc1 = pokecenter_interior(g, "TithePokecenter1", d1["center"], LM_CITY,
-                              [Text("They say the nurse used to be a priest. Or a cop. Or both.")])
-    mt1 = mart_interior(g, "TitheMart1", d1["mart"], LM_CITY, "TITHE_1", [Text("Everything here is overpriced by divine right.")])
-    h1 = house_interior(g, "TitheHouse1", d1["houses"][0], LM_CITY,
-                        [Text("I own this whole apartment. The rest of the block is my closet. We don't talk about the closet.")])
-    pc2 = pokecenter_interior(g, "TithePokecenter2", d2["center"], LM_CITY, [])
-    mt2 = mart_interior(g, "TitheMart2", d2["mart"], LM_CITY, "TITHE_2", [])
-    h2 = house_interior(g, "TitheHouse2", d2["houses"][0], LM_CITY, [Text("The cathedral bell is a recording. Don't tell anyone.")])
-    w.spawns.append(("TITHE_1", p1, *p1.spawn_cell))
-    w.spawns.append(("TITHE_2", p2, *p2.spawn_cell))
+    gatehouse(g, "TitheCheckpoint", road.door, d1["rift"], LM_CITY, "MUSIC_GOLDENROD_CITY", [Text(T.GATE[0])])
+    town(w, g, "Tithe", 1, p1, d1, modern, LM_CITY, "TITHE_1", items[0], texts, "TITHE_1")
     # Cherrygrove link
     class Cherry:
         name, const = "CherrygroveCity", "CHERRYGROVE_CITY"
     road.connections["south"] = (Cherry, -5)
+
+    boss1 = BossSpec("TitheVestry", "DEACON", "SAGE", "SPRITE_SAGE", "PAL_NPC_RED", 15, 4, T.VESTRY_SEEN,
+                     T.VESTRY_BEATEN, T.VESTRY_AFTER, template="karen", item="CHAINSAW")
+    boss2 = BossSpec("TitheEvidenceRoom", "CHIEF BRAD", "OFFICER", "SPRITE_OFFICER", "PAL_NPC_RED", 21, 5,
+                     T.EVIDENCE_SEEN, T.EVIDENCE_BEATEN, T.EVIDENCE_AFTER, template="will", item="CROWBAR")
+    boss3 = BossSpec("TitheCathedral", "MONSIGNOR", "MYSTICALMAN", "SPRITE_GRAMPS", "PAL_NPC_BROWN", 27, 6,
+                     T.CATHEDRAL_SEEN, T.CATHEDRAL_BEATEN, T.CATHEDRAL_AFTER, template="bruno", landmark=LM_PARISH,
+                     music="MUSIC_ROCKET_HIDEOUT")
+    acts = [ActSpec("Tithe", 5, modern, LM_CITY, "MUSIC_GOLDENROD_CITY", boss=boss1, texts=texts, split=3),
+            ActSpec("Tithe", 5, modern, LM_MID, "MUSIC_GOLDENROD_CITY", gate="tree", boss=boss2, texts=texts, split=2),
+            ActSpec("Tithe", 5, modern, LM_PARISH, "MUSIC_GOLDENROD_CITY", gate="boulder", boss=boss3, texts=texts, split=3)]
+
+    all_lanes = [(road, s_road)]
+    prev, lane_no, plaza_no = p1, 1, 2
+    bosses = []
+    for k, act in enumerate(acts):
+        lanes, prev, doors, info, lane_no, plaza_no = build_act(
+            w, g, rng, roster, act, prev, plaza_no, lane_no, spec.theme, items[2 * k + 1:2 * k + 3])
+        all_lanes += lanes
+        bosses.append(info)
     # trainers
-    total = sum(len(s) for _, s in [(road, s_road)] + lanes)
+    total = sum(len(s) for _, s in all_lanes)
     done = 0
-    for m, s in [(road, s_road)] + lanes:
+    for m, s in all_lanes:
         n = len(s)
         populate(w, m, s, spec, rng, roster, done / total, (done + n) / total)
         done += n

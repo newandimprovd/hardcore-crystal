@@ -3,6 +3,7 @@ import os
 import random
 
 from .model import ROOT, MapDef, link
+from .text import emit_text
 
 FACE = {"UP": "SPRITEMOVEDATA_STANDING_UP", "DOWN": "SPRITEMOVEDATA_STANDING_DOWN",
         "LEFT": "SPRITEMOVEDATA_STANDING_LEFT", "RIGHT": "SPRITEMOVEDATA_STANDING_RIGHT"}
@@ -20,7 +21,7 @@ class Slot:
 
 
 def lane(g, name, kit, rng, *, trainers=13, a=3, cw=3, right=3, landmark, music, north="open",
-         neck=0, extra_top=0):
+         neck=0, extra_top=0, gate=None, w=None):
     """A vertical corridor. The player enters at the bottom (connection) and leaves at the top
     (connection, or a door block when north == 'door'). Trainers stand in pairs or alone on the channel
     edges so every row of the channel is watched."""
@@ -49,6 +50,9 @@ def lane(g, name, kit, rng, *, trainers=13, a=3, cw=3, right=3, landmark, music,
         m.set(dx, 0, kit.extra["rift"])
         dcell = kit.door_cell(dx, 0, kit.extra["rift"])
         door = m.warp(*dcell)
+    if gate:
+        assert neck >= 2, "a gate needs a neck"
+        gate_objects(m, gate, w, 2 * (a + cw // 2), 2 * (H - neck))
     ys = [2 * H - 6 - 2 * i for i in range(rows)]
     ys = [y for y in ys if y >= 4 + 2 * extra_top]
     assert len(ys) == rows, (name, len(ys), rows)
@@ -71,13 +75,39 @@ def lane(g, name, kit, rng, *, trainers=13, a=3, cw=3, right=3, landmark, music,
     return m, slots
 
 
+def gate_objects(m, kind, w, x, y):
+    """Two objects across the two cells of a one-block neck. 'tree' needs the CHAINSAW, 'boulder' the CROWBAR.
+    They are the first objects of the map, so their constants are TREE0/TREE1 or BOULDER0/BOULDER1."""
+    n = m.name
+    if kind == "tree":
+        flag = w.flag(f"EVENT_GEN_{m.const}_GATE")
+        m.object_consts = ["TREE0", "TREE1"]
+        for i in range(2):
+            m.obj(x + i, y, "SPRITE_FRUIT_TREE", "SPRITEMOVEDATA_STILL", f"{n}GateScript", pal="PAL_NPC_GREEN", flag=flag)
+        m.scripts.append(
+            f"{n}GateScript:\n\tcheckitem CHAINSAW\n\tiffalse .NoSaw\n\topentext\n\twritetext {n}GateUseText\n"
+            f"\twaitbutton\n\tclosetext\n\tplaysound SFX_STRENGTH\n\tearthquake 12\n\twaitsfx\n"
+            f"\tdisappear {m.const}_TREE0\n\tdisappear {m.const}_TREE1\n\tsetevent {flag}\n\tend\n\n"
+            f".NoSaw:\n\tjumptext {n}GateNoText\n")
+        m.scripts.append(emit_text(f"{n}GateNoText", "A hedge of city-owned trees fills the road. You would need something with a motor."))
+        m.scripts.append(emit_text(f"{n}GateUseText", "<PLAYER> fired up the CHAINSAW! The hedge never saw it coming."))
+    elif kind == "boulder":
+        m.object_consts = ["BOULDER0", "BOULDER1"]
+        for i in range(2):
+            m.obj(x + i, y, "SPRITE_BOULDER", "SPRITEMOVEDATA_STRENGTH_BOULDER", f"{n}BoulderScript", pal="PAL_NPC_BROWN")
+        m.scripts.append(f"{n}BoulderScript:\n\tjumpstd StrengthBoulderScript\n")
+    else:
+        raise ValueError(kind)
+
+
 def chain(lower, upper, offset=0):
     """Connect upper to the north of lower."""
     lower.connect("north", upper, offset)
     upper.connect("south", lower, -offset)
 
 
-def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11, rift=False, houses=1, south="open"):
+def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11, rift=False, houses=1, extra=0,
+          south="open"):
     """A hub: Pokecenter and Mart on the north wall, an optional rift house, an opening to the north lane
     and an opening to the south lane. Returns the map and a dict of door warps."""
     W, H = width, height
@@ -105,15 +135,20 @@ def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11,
     w_mt = m.warp(*kit.door_cell(a + cw, 1, mt[1][0]))
     doors = {"center": w_pc, "mart": w_mt}
     x = a + cw + 2
-    hs = []
-    for i in range(houses):
-        hx = x + 2 * i
-        m.set(hx, 1, kit.extra["house"][0])
-        m.set(hx + 1, 1, kit.extra["house"][1])
-        hs.append(m.warp(*kit.door_cell(hx, 1, kit.extra["house"][0])))
+    assert x + 2 * (houses + extra + (1 if rift else 0)) + 1 <= W, (name, "plaza too narrow for its doors")
+    hs, ex = [], []
+    n = 0
+    for lst, count in ((hs, houses), (ex, extra)):
+        for i in range(count):
+            hx = x + 2 * n
+            n += 1
+            m.set(hx, 1, kit.extra["house"][0])
+            m.set(hx + 1, 1, kit.extra["house"][1])
+            lst.append(m.warp(*kit.door_cell(hx, 1, kit.extra["house"][0])))
     doors["houses"] = hs
+    doors["extra"] = ex
     if rift:
-        hx = x + 2 * houses
+        hx = x + 2 * n
         m.set(hx, 1, kit.extra["house"][0])
         m.set(hx + 1, 1, kit.extra["house"][1])
         doors["rift"] = m.warp(*kit.door_cell(hx, 1, kit.extra["house"][0]))
@@ -205,3 +240,43 @@ def gatehouse(g, name, lane_door, plaza_door, landmark, music, texts=()):
         m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal="PAL_NPC_RED")
     g.add(m)
     return m
+
+
+# Boss rooms reuse the Elite Four room blocks of vanilla (same tileset), which already have the funnel shape,
+# the mat at the bottom and a door at the top. The boss stands at the left edge of the last wide row, so every
+# route from the funnel into the room crosses his line of sight.
+BOSS_TEMPLATES = {"karen": ("maps/KarensRoom.blk", 10), "will": ("maps/WillsRoom.blk", 9),
+                  "bruno": ("maps/BrunosRoom.blk", 9)}
+
+
+def boss_room(g, w, name, outer_warp, landmark, music, template, boss, item=None, open_exit=False):
+    """boss: dict(cls, sprite, pal, name, party, seen, beaten, after) with Text objects for the three texts.
+    item: key item constant placed on a ball in the room (event flag generated).
+    Returns (map, exit_warps); exit_warps is [] unless open_exit (then the two top warps, unlinked)."""
+    path, row = BOSS_TEMPLATES[template]
+    m = MapDef(g.key, name, 5, 9, "TILESET_ELITE_FOUR_ROOM", "INDOOR", landmark, music, pal="PALETTE_DAY")
+    m.blocks = bytearray(blk(path))
+    w1, w2 = m.warp(4, 17), m.warp(5, 17)
+    outer_warp.dest = w1
+    w1.dest = outer_warp
+    w2.dest = outer_warp
+    exits = []
+    if open_exit:
+        m.set(2, 1, 0x16)
+        exits = [m.warp(4, 2), m.warp(5, 2)]
+    tid = w.trainer(boss["cls"], boss["name"], boss["party"])
+    flag = w.flag(f"EVENT_GEN_{m.const}_BOSS")
+    n = name
+    m.scripts.append(
+        f"{n}BossScript:\n\ttrainer {boss['cls']}, {tid}, {flag}, {n}BossSeenText, {n}BossBeatenText, 0, {n}BossAfterScript\n\n"
+        f"{n}BossAfterScript:\n\tendifjustbattled\n\topentext\n\twritetext {n}BossAfterText\n\twaitbutton\n\tclosetext\n\tend\n")
+    m.scripts.append(boss["seen"].emit(f"{n}BossSeenText"))
+    m.scripts.append(boss["beaten"].emit(f"{n}BossBeatenText"))
+    m.scripts.append(boss["after"].emit(f"{n}BossAfterText"))
+    m.obj(2, row, boss["sprite"], FACE["RIGHT"], f"{n}BossScript", pal=boss["pal"], otype="OBJECTTYPE_TRAINER", sight=5)
+    if item:
+        iflag = w.flag(f"EVENT_GEN_{m.const}_ITEM")
+        m.scripts.append(f"{n}ItemBall:\n\titemball {item}\n")
+        m.obj(7, 7, "SPRITE_POKE_BALL", "SPRITEMOVEDATA_STILL", f"{n}ItemBall", otype="OBJECTTYPE_ITEMBALL", flag=iflag)
+    g.add(m)
+    return m, exits

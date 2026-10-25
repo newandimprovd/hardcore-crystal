@@ -10,6 +10,12 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheCheckpoint, TITHE_CHECKPOINT, $00
 
+	map_attributes TithePokecenter1, TITHE_POKECENTER1, $00
+
+	map_attributes TitheMart1, TITHE_MART1, $00
+
+	map_attributes TitheHouse1, TITHE_HOUSE1, $00
+
 	map_attributes TitheStreet1, TITHE_STREET1, $23
 	connection north, TitheStreet2, TITHE_STREET2, 0
 	connection south, TithePlaza1, TITHE_PLAZA1, 0
@@ -23,19 +29,117 @@ SECTION "Area Attributes", ROMX
 	connection south, TitheStreet2, TITHE_STREET2, 0
 
 	map_attributes TithePlaza2, TITHE_PLAZA2, $23
+	connection north, TitheStreet4, TITHE_STREET4, 0
 	connection south, TitheStreet3, TITHE_STREET3, 0
-
-	map_attributes TithePokecenter1, TITHE_POKECENTER1, $00
-
-	map_attributes TitheMart1, TITHE_MART1, $00
-
-	map_attributes TitheHouse1, TITHE_HOUSE1, $00
 
 	map_attributes TithePokecenter2, TITHE_POKECENTER2, $00
 
 	map_attributes TitheMart2, TITHE_MART2, $00
 
 	map_attributes TitheHouse2, TITHE_HOUSE2, $00
+
+	map_attributes TitheStreet4, TITHE_STREET4, $23
+	connection north, TitheStreet5, TITHE_STREET5, 0
+	connection south, TithePlaza2, TITHE_PLAZA2, 0
+
+	map_attributes TitheStreet5, TITHE_STREET5, $23
+	connection north, TithePlaza3, TITHE_PLAZA3, 0
+	connection south, TitheStreet4, TITHE_STREET4, 0
+
+	map_attributes TithePlaza3, TITHE_PLAZA3, $23
+	connection north, TitheStreet6, TITHE_STREET6, 0
+	connection south, TitheStreet5, TITHE_STREET5, 0
+
+	map_attributes TithePokecenter3, TITHE_POKECENTER3, $00
+
+	map_attributes TitheMart3, TITHE_MART3, $00
+
+	map_attributes TitheHouse3, TITHE_HOUSE3, $00
+
+	map_attributes TitheVestry, TITHE_VESTRY, $00
+
+	map_attributes TitheStreet6, TITHE_STREET6, $23
+	connection north, TitheStreet7, TITHE_STREET7, 0
+	connection south, TithePlaza3, TITHE_PLAZA3, 0
+
+	map_attributes TitheStreet7, TITHE_STREET7, $23
+	connection north, TithePlaza4, TITHE_PLAZA4, 0
+	connection south, TitheStreet6, TITHE_STREET6, 0
+
+	map_attributes TithePlaza4, TITHE_PLAZA4, $23
+	connection north, TitheStreet8, TITHE_STREET8, 0
+	connection south, TitheStreet7, TITHE_STREET7, 0
+
+	map_attributes TithePokecenter4, TITHE_POKECENTER4, $00
+
+	map_attributes TitheMart4, TITHE_MART4, $00
+
+	map_attributes TitheHouse4, TITHE_HOUSE4, $00
+
+	map_attributes TitheStreet8, TITHE_STREET8, $23
+	connection north, TitheStreet9, TITHE_STREET9, 0
+	connection south, TithePlaza4, TITHE_PLAZA4, 0
+
+	map_attributes TitheStreet9, TITHE_STREET9, $23
+	connection north, TitheStreet10, TITHE_STREET10, 0
+	connection south, TitheStreet8, TITHE_STREET8, 0
+
+	map_attributes TitheStreet10, TITHE_STREET10, $23
+	connection north, TithePlaza5, TITHE_PLAZA5, 0
+	connection south, TitheStreet9, TITHE_STREET9, 0
+
+	map_attributes TithePlaza5, TITHE_PLAZA5, $23
+	connection north, TitheStreet11, TITHE_STREET11, 0
+	connection south, TitheStreet10, TITHE_STREET10, 0
+
+	map_attributes TithePokecenter5, TITHE_POKECENTER5, $00
+
+	map_attributes TitheMart5, TITHE_MART5, $00
+
+	map_attributes TitheHouse5, TITHE_HOUSE5, $00
+
+	map_attributes TitheEvidenceRoom, TITHE_EVIDENCE_ROOM, $00
+
+	map_attributes TitheStreet11, TITHE_STREET11, $23
+	connection north, TitheStreet12, TITHE_STREET12, 0
+	connection south, TithePlaza5, TITHE_PLAZA5, 0
+
+	map_attributes TitheStreet12, TITHE_STREET12, $23
+	connection north, TitheStreet13, TITHE_STREET13, 0
+	connection south, TitheStreet11, TITHE_STREET11, 0
+
+	map_attributes TitheStreet13, TITHE_STREET13, $23
+	connection north, TithePlaza6, TITHE_PLAZA6, 0
+	connection south, TitheStreet12, TITHE_STREET12, 0
+
+	map_attributes TithePlaza6, TITHE_PLAZA6, $23
+	connection north, TitheStreet14, TITHE_STREET14, 0
+	connection south, TitheStreet13, TITHE_STREET13, 0
+
+	map_attributes TithePokecenter6, TITHE_POKECENTER6, $00
+
+	map_attributes TitheMart6, TITHE_MART6, $00
+
+	map_attributes TitheHouse6, TITHE_HOUSE6, $00
+
+	map_attributes TitheStreet14, TITHE_STREET14, $23
+	connection north, TitheStreet15, TITHE_STREET15, 0
+	connection south, TithePlaza6, TITHE_PLAZA6, 0
+
+	map_attributes TitheStreet15, TITHE_STREET15, $23
+	connection north, TithePlaza7, TITHE_PLAZA7, 0
+	connection south, TitheStreet14, TITHE_STREET14, 0
+
+	map_attributes TithePlaza7, TITHE_PLAZA7, $23
+	connection south, TitheStreet15, TITHE_STREET15, 0
+
+	map_attributes TithePokecenter7, TITHE_POKECENTER7, $00
+
+	map_attributes TitheMart7, TITHE_MART7, $00
+
+	map_attributes TitheHouse7, TITHE_HOUSE7, $00
+
+	map_attributes TitheCathedral, TITHE_CATHEDRAL, $00
 
 ENDSECTION
 
@@ -50,6 +154,15 @@ TithePlaza1_Blocks:
 TitheCheckpoint_Blocks:
 	INCBIN "maps/gen/TitheCheckpoint.blk"
 
+TithePokecenter1_Blocks:
+	INCBIN "maps/gen/TithePokecenter1.blk"
+
+TitheMart1_Blocks:
+	INCBIN "maps/gen/TitheMart1.blk"
+
+TitheHouse1_Blocks:
+	INCBIN "maps/gen/TitheHouse1.blk"
+
 TitheStreet1_Blocks:
 	INCBIN "maps/gen/TitheStreet1.blk"
 
@@ -62,15 +175,6 @@ TitheStreet3_Blocks:
 TithePlaza2_Blocks:
 	INCBIN "maps/gen/TithePlaza2.blk"
 
-TithePokecenter1_Blocks:
-	INCBIN "maps/gen/TithePokecenter1.blk"
-
-TitheMart1_Blocks:
-	INCBIN "maps/gen/TitheMart1.blk"
-
-TitheHouse1_Blocks:
-	INCBIN "maps/gen/TitheHouse1.blk"
-
 TithePokecenter2_Blocks:
 	INCBIN "maps/gen/TithePokecenter2.blk"
 
@@ -79,6 +183,111 @@ TitheMart2_Blocks:
 
 TitheHouse2_Blocks:
 	INCBIN "maps/gen/TitheHouse2.blk"
+
+TitheStreet4_Blocks:
+	INCBIN "maps/gen/TitheStreet4.blk"
+
+TitheStreet5_Blocks:
+	INCBIN "maps/gen/TitheStreet5.blk"
+
+TithePlaza3_Blocks:
+	INCBIN "maps/gen/TithePlaza3.blk"
+
+TithePokecenter3_Blocks:
+	INCBIN "maps/gen/TithePokecenter3.blk"
+
+TitheMart3_Blocks:
+	INCBIN "maps/gen/TitheMart3.blk"
+
+TitheHouse3_Blocks:
+	INCBIN "maps/gen/TitheHouse3.blk"
+
+TitheVestry_Blocks:
+	INCBIN "maps/gen/TitheVestry.blk"
+
+TitheStreet6_Blocks:
+	INCBIN "maps/gen/TitheStreet6.blk"
+
+TitheStreet7_Blocks:
+	INCBIN "maps/gen/TitheStreet7.blk"
+
+TithePlaza4_Blocks:
+	INCBIN "maps/gen/TithePlaza4.blk"
+
+TithePokecenter4_Blocks:
+	INCBIN "maps/gen/TithePokecenter4.blk"
+
+TitheMart4_Blocks:
+	INCBIN "maps/gen/TitheMart4.blk"
+
+TitheHouse4_Blocks:
+	INCBIN "maps/gen/TitheHouse4.blk"
+
+TitheStreet8_Blocks:
+	INCBIN "maps/gen/TitheStreet8.blk"
+
+TitheStreet9_Blocks:
+	INCBIN "maps/gen/TitheStreet9.blk"
+
+TitheStreet10_Blocks:
+	INCBIN "maps/gen/TitheStreet10.blk"
+
+TithePlaza5_Blocks:
+	INCBIN "maps/gen/TithePlaza5.blk"
+
+TithePokecenter5_Blocks:
+	INCBIN "maps/gen/TithePokecenter5.blk"
+
+TitheMart5_Blocks:
+	INCBIN "maps/gen/TitheMart5.blk"
+
+TitheHouse5_Blocks:
+	INCBIN "maps/gen/TitheHouse5.blk"
+
+TitheEvidenceRoom_Blocks:
+	INCBIN "maps/gen/TitheEvidenceRoom.blk"
+
+TitheStreet11_Blocks:
+	INCBIN "maps/gen/TitheStreet11.blk"
+
+TitheStreet12_Blocks:
+	INCBIN "maps/gen/TitheStreet12.blk"
+
+TitheStreet13_Blocks:
+	INCBIN "maps/gen/TitheStreet13.blk"
+
+TithePlaza6_Blocks:
+	INCBIN "maps/gen/TithePlaza6.blk"
+
+TithePokecenter6_Blocks:
+	INCBIN "maps/gen/TithePokecenter6.blk"
+
+TitheMart6_Blocks:
+	INCBIN "maps/gen/TitheMart6.blk"
+
+TitheHouse6_Blocks:
+	INCBIN "maps/gen/TitheHouse6.blk"
+
+TitheStreet14_Blocks:
+	INCBIN "maps/gen/TitheStreet14.blk"
+
+TitheStreet15_Blocks:
+	INCBIN "maps/gen/TitheStreet15.blk"
+
+TithePlaza7_Blocks:
+	INCBIN "maps/gen/TithePlaza7.blk"
+
+TithePokecenter7_Blocks:
+	INCBIN "maps/gen/TithePokecenter7.blk"
+
+TitheMart7_Blocks:
+	INCBIN "maps/gen/TitheMart7.blk"
+
+TitheHouse7_Blocks:
+	INCBIN "maps/gen/TitheHouse7.blk"
+
+TitheCathedral_Blocks:
+	INCBIN "maps/gen/TitheCathedral.blk"
 
 ENDSECTION
 
@@ -97,6 +306,24 @@ ENDSECTION
 SECTION "TitheCheckpoint Scripts", ROMX
 
 INCLUDE "maps/gen/TitheCheckpoint.asm"
+
+ENDSECTION
+
+SECTION "TithePokecenter1 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePokecenter1.asm"
+
+ENDSECTION
+
+SECTION "TitheMart1 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheMart1.asm"
+
+ENDSECTION
+
+SECTION "TitheHouse1 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheHouse1.asm"
 
 ENDSECTION
 
@@ -124,24 +351,6 @@ INCLUDE "maps/gen/TithePlaza2.asm"
 
 ENDSECTION
 
-SECTION "TithePokecenter1 Scripts", ROMX
-
-INCLUDE "maps/gen/TithePokecenter1.asm"
-
-ENDSECTION
-
-SECTION "TitheMart1 Scripts", ROMX
-
-INCLUDE "maps/gen/TitheMart1.asm"
-
-ENDSECTION
-
-SECTION "TitheHouse1 Scripts", ROMX
-
-INCLUDE "maps/gen/TitheHouse1.asm"
-
-ENDSECTION
-
 SECTION "TithePokecenter2 Scripts", ROMX
 
 INCLUDE "maps/gen/TithePokecenter2.asm"
@@ -157,6 +366,216 @@ ENDSECTION
 SECTION "TitheHouse2 Scripts", ROMX
 
 INCLUDE "maps/gen/TitheHouse2.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet4 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet4.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet5 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet5.asm"
+
+ENDSECTION
+
+SECTION "TithePlaza3 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePlaza3.asm"
+
+ENDSECTION
+
+SECTION "TithePokecenter3 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePokecenter3.asm"
+
+ENDSECTION
+
+SECTION "TitheMart3 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheMart3.asm"
+
+ENDSECTION
+
+SECTION "TitheHouse3 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheHouse3.asm"
+
+ENDSECTION
+
+SECTION "TitheVestry Scripts", ROMX
+
+INCLUDE "maps/gen/TitheVestry.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet6 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet6.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet7 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet7.asm"
+
+ENDSECTION
+
+SECTION "TithePlaza4 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePlaza4.asm"
+
+ENDSECTION
+
+SECTION "TithePokecenter4 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePokecenter4.asm"
+
+ENDSECTION
+
+SECTION "TitheMart4 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheMart4.asm"
+
+ENDSECTION
+
+SECTION "TitheHouse4 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheHouse4.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet8 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet8.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet9 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet9.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet10 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet10.asm"
+
+ENDSECTION
+
+SECTION "TithePlaza5 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePlaza5.asm"
+
+ENDSECTION
+
+SECTION "TithePokecenter5 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePokecenter5.asm"
+
+ENDSECTION
+
+SECTION "TitheMart5 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheMart5.asm"
+
+ENDSECTION
+
+SECTION "TitheHouse5 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheHouse5.asm"
+
+ENDSECTION
+
+SECTION "TitheEvidenceRoom Scripts", ROMX
+
+INCLUDE "maps/gen/TitheEvidenceRoom.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet11 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet11.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet12 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet12.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet13 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet13.asm"
+
+ENDSECTION
+
+SECTION "TithePlaza6 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePlaza6.asm"
+
+ENDSECTION
+
+SECTION "TithePokecenter6 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePokecenter6.asm"
+
+ENDSECTION
+
+SECTION "TitheMart6 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheMart6.asm"
+
+ENDSECTION
+
+SECTION "TitheHouse6 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheHouse6.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet14 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet14.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet15 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet15.asm"
+
+ENDSECTION
+
+SECTION "TithePlaza7 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePlaza7.asm"
+
+ENDSECTION
+
+SECTION "TithePokecenter7 Scripts", ROMX
+
+INCLUDE "maps/gen/TithePokecenter7.asm"
+
+ENDSECTION
+
+SECTION "TitheMart7 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheMart7.asm"
+
+ENDSECTION
+
+SECTION "TitheHouse7 Scripts", ROMX
+
+INCLUDE "maps/gen/TitheHouse7.asm"
+
+ENDSECTION
+
+SECTION "TitheCathedral Scripts", ROMX
+
+INCLUDE "maps/gen/TitheCathedral.asm"
 
 ENDSECTION
 

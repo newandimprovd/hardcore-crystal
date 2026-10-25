@@ -4,15 +4,50 @@
 	map_const TITHE_ROAD,                               8,  8 ;  1
 	map_const TITHE_PLAZA1,                            13, 11 ;  2
 	map_const TITHE_CHECKPOINT,                         5,  4 ;  3
-	map_const TITHE_STREET1,                            9, 13 ;  4
-	map_const TITHE_STREET2,                            9, 13 ;  5
-	map_const TITHE_STREET3,                            9, 13 ;  6
-	map_const TITHE_PLAZA2,                            13, 11 ;  7
-	map_const TITHE_POKECENTER1,                        5,  4 ;  8
-	map_const TITHE_MART1,                              6,  4 ;  9
-	map_const TITHE_HOUSE1,                             4,  4 ; 10
+	map_const TITHE_POKECENTER1,                        5,  4 ;  4
+	map_const TITHE_MART1,                              6,  4 ;  5
+	map_const TITHE_HOUSE1,                             4,  4 ;  6
+	map_const TITHE_STREET1,                            9, 13 ;  7
+	map_const TITHE_STREET2,                            9, 13 ;  8
+	map_const TITHE_STREET3,                            9, 13 ;  9
+	map_const TITHE_PLAZA2,                            13, 11 ; 10
 	map_const TITHE_POKECENTER2,                        5,  4 ; 11
 	map_const TITHE_MART2,                              6,  4 ; 12
 	map_const TITHE_HOUSE2,                             4,  4 ; 13
+	map_const TITHE_STREET4,                            9, 13 ; 14
+	map_const TITHE_STREET5,                            9, 13 ; 15
+	map_const TITHE_PLAZA3,                            13, 11 ; 16
+	map_const TITHE_POKECENTER3,                        5,  4 ; 17
+	map_const TITHE_MART3,                              6,  4 ; 18
+	map_const TITHE_HOUSE3,                             4,  4 ; 19
+	map_const TITHE_VESTRY,                             5,  9 ; 20
+	map_const TITHE_STREET6,                            9, 13 ; 21
+	map_const TITHE_STREET7,                            9, 13 ; 22
+	map_const TITHE_PLAZA4,                            13, 11 ; 23
+	map_const TITHE_POKECENTER4,                        5,  4 ; 24
+	map_const TITHE_MART4,                              6,  4 ; 25
+	map_const TITHE_HOUSE4,                             4,  4 ; 26
+	map_const TITHE_STREET8,                            9, 13 ; 27
+	map_const TITHE_STREET9,                            9, 13 ; 28
+	map_const TITHE_STREET10,                           9, 13 ; 29
+	map_const TITHE_PLAZA5,                            13, 11 ; 30
+	map_const TITHE_POKECENTER5,                        5,  4 ; 31
+	map_const TITHE_MART5,                              6,  4 ; 32
+	map_const TITHE_HOUSE5,                             4,  4 ; 33
+	map_const TITHE_EVIDENCE_ROOM,                      5,  9 ; 34
+	map_const TITHE_STREET11,                           9, 13 ; 35
+	map_const TITHE_STREET12,                           9, 13 ; 36
+	map_const TITHE_STREET13,                           9, 13 ; 37
+	map_const TITHE_PLAZA6,                            13, 11 ; 38
+	map_const TITHE_POKECENTER6,                        5,  4 ; 39
+	map_const TITHE_MART6,                              6,  4 ; 40
+	map_const TITHE_HOUSE6,                             4,  4 ; 41
+	map_const TITHE_STREET14,                           9, 13 ; 42
+	map_const TITHE_STREET15,                           9, 13 ; 43
+	map_const TITHE_PLAZA7,                            13, 11 ; 44
+	map_const TITHE_POKECENTER7,                        5,  4 ; 45
+	map_const TITHE_MART7,                              6,  4 ; 46
+	map_const TITHE_HOUSE7,                             4,  4 ; 47
+	map_const TITHE_CATHEDRAL,                          5,  9 ; 48
 	endgroup
 

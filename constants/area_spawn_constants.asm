@@ -2,3 +2,8 @@
 
 	const SPAWN_TITHE_1
 	const SPAWN_TITHE_2
+	const SPAWN_TITHE_3
+	const SPAWN_TITHE_4
+	const SPAWN_TITHE_5
+	const SPAWN_TITHE_6
+	const SPAWN_TITHE_7

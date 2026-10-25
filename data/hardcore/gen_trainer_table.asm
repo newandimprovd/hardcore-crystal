@@ -86,8 +86,8 @@ HC_GenGroupTable:
 	dw HC_GenGroup_SUPER_NERD ; 41 SUPER_NERD
 	db 0
 	dw 0 ; 42 RIVAL2
-	db 0
-	dw 0 ; 43 GUITARIST
+	db BANK(HC_GenGroup_GUITARIST)
+	dw HC_GenGroup_GUITARIST ; 43 GUITARIST
 	db 0
 	dw 0 ; 44 HIKER
 	db BANK(HC_GenGroup_BIKER)
@@ -112,8 +112,8 @@ HC_GenGroupTable:
 	dw 0 ; 54 CAMPER
 	db 0
 	dw 0 ; 55 EXECUTIVEF
-	db 0
-	dw 0 ; 56 SAGE
+	db BANK(HC_GenGroup_SAGE)
+	dw HC_GenGroup_SAGE ; 56 SAGE
 	db 0
 	dw 0 ; 57 MEDIUM
 	db 0
@@ -132,8 +132,8 @@ HC_GenGroupTable:
 	dw 0 ; 64 BLUE
 	db BANK(HC_GenGroup_OFFICER)
 	dw HC_GenGroup_OFFICER ; 65 OFFICER
-	db 0
-	dw 0 ; 66 GRUNTF
-	db 0
-	dw 0 ; 67 MYSTICALMAN
+	db BANK(HC_GenGroup_GRUNTF)
+	dw HC_GenGroup_GRUNTF ; 66 GRUNTF
+	db BANK(HC_GenGroup_MYSTICALMAN)
+	dw HC_GenGroup_MYSTICALMAN ; 67 MYSTICALMAN
 	assert_table_length NUM_TRAINER_CLASSES

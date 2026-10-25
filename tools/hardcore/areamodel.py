@@ -123,11 +123,15 @@ class World:
         self.maps = load()
         self.consts = by_const(self.maps)
         self.blocked = set()  # (map, x, y) discovered blocked in the emulator
+        self.removed = set()  # (map, object index): opened gates, picked-up items
+        self.moved = {}  # (map, object index) -> (x, y): pushed boulders
 
     def solid_objects(self, mp):
         s = set()
-        for o in mp.objects:
-            s.add((o["x"], o["y"]))
+        for i, o in enumerate(mp.objects):
+            if (mp.name, i) in self.removed:
+                continue
+            s.add(self.moved.get((mp.name, i), (o["x"], o["y"])))
         return s
 
     def step(self, st, d, ignore_obj=False):
@@ -226,6 +230,8 @@ class World:
     def ascii(self, name):
         mp = self.maps[name]
         objs = {(o["x"], o["y"]): o for o in mp.objects}
+        for g in ("Gate", "Boulder"):
+            pass
         wps = {(w[0], w[1]) for w in mp.warps}
         rows = []
         for y in range(2 * mp.h):

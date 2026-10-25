@@ -15,10 +15,9 @@ TithePokecenter1Npc0Script:
 	jumptextfaceplayer TithePokecenter1Npc0Text
 
 TithePokecenter1Npc0Text:
-	text "They say the nurse"
-	line "used to be a"
-	para "priest. Or a cop."
-	line "Or both."
+	text "The coffee here is"
+	line "free. It's also"
+	para "illegal."
 	done
 
 TithePokecenter1_MapEvents:

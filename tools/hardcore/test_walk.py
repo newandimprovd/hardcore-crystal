@@ -51,6 +51,62 @@ def find_ids(world):
     return ids
 
 
+def const_table(path):
+    """Name -> value for a constants file made of const_def / const / const_next / const_skip lines."""
+    out, v = {}, 0
+    for l in open(os.path.join(ROOT, path)):
+        l = l.split(";")[0].strip()
+        m = re.match(r"const_def\s*(\d*)", l)
+        if m:
+            v = int(m[1]) if m[1] else 0
+            continue
+        m = re.match(r"const_next\s+(\$?[0-9a-fA-F]+)", l)
+        if m:
+            v = int(m[1].replace("$", "0x"), 0)
+            continue
+        if l.startswith("const_skip"):
+            v += 1
+            continue
+        m = re.match(r"const (\w+)", l)
+        if m:
+            out[m[1]] = v
+            v += 1
+    return out
+
+
+def load_best_moves():
+    """One plain damaging move per type and the type chart, so the walker can always hurt the enemy: this ROM
+    gives Normal and Bug immunities (Dark cannot hit Normal, and so on), so a single move is not enough."""
+    types = const_table("constants/type_constants.asm")
+    moves = const_table("constants/move_constants.asm")
+    best = {}
+    for l in open(os.path.join(ROOT, "data/moves/moves.asm")):
+        m = re.match(r"\s*move (\w+),\s*(EFFECT_NORMAL_HIT),\s*(\d+),\s*(\w+),", l)
+        if m and int(m[3]) >= 40 and m[1] in moves and m[4] in types:
+            t = types[m[4]]
+            if t not in best or int(m[3]) > best[t][1]:
+                best[t] = (moves[m[1]], int(m[3]))
+    chart = {}
+    for l in open(os.path.join(ROOT, "data/types/type_matchups.asm")):
+        m = re.match(r"\s*db (\w+),\s*(\w+),\s*(NO_EFFECT|NOT_VERY_EFFECTIVE|SUPER_EFFECTIVE)", l)
+        if m and m[1] in types and m[2] in types:
+            chart[(types[m[1]], types[m[2]])] = {"NO_EFFECT": 0, "NOT_VERY_EFFECTIVE": 5, "SUPER_EFFECTIVE": 20}[m[3]]
+    return best, chart
+
+
+BEST, CHART = load_best_moves()
+
+
+def pick_move(t1, t2):
+    top = None
+    for ty, (mv, pw) in BEST.items():
+        mult = CHART.get((ty, t1), 10) * (CHART.get((ty, t2), 10) if t2 != t1 else 10)
+        key = (mult * pw, pw)
+        if top is None or key > top[0]:
+            top = (key, mv)
+    return top[1]
+
+
 class Walker:
     def __init__(self, rom):
         self.w = World()
@@ -79,7 +135,7 @@ class Walker:
                 t.poke("wBattleMonHP", 0, off)
                 t.poke("wPartyMon1HP", 0, off)
             return
-        t.poke("wBattleMonMoves", 33, 0)
+        t.poke("wBattleMonMoves", pick_move(t.mem("wEnemyMonType1"), t.mem("wEnemyMonType2")), 0)
         t.poke("wBattleMonPP", 30, 0)
         t.poke("wCurMoveNum", 0)
         if not self.battle_seen:
@@ -146,7 +202,7 @@ class Walker:
         before = self.state()
         for attempt in range(4):
             t.pb.button(d, 9)
-            t.tick(9 + 8)
+            t.tick(9 + 14)  # the coordinates only change when the 16 frame step ends
             self.settle_if_event()
             if self.state() != before:
                 return
@@ -161,19 +217,22 @@ class Walker:
                 print(f"  kill {kills1[0] + 256 * kills1[1]} at {self.state()}")
 
     def go(self, goal_map, max_replans=60):
+        return self.go_state(lambda s: s[0] == goal_map, goal_map, max_replans)
+
+    def go_state(self, pred, goal_map, max_replans=60):
         w = self.w
         print(f"-> {goal_map}")
         replans = 0
         while replans < max_replans:
             cur = self.state()
-            if cur[0] == goal_map:
+            if pred(cur):
                 return True
             if cur[0] not in w.maps:
                 self.note(f"unknown map {cur}")
                 return False
-            path = w.route(cur, lambda s: s[0] == goal_map)
+            path = w.route(cur, pred)
             if path is None:
-                path = w.route(cur, lambda s: s[0] == goal_map, ignore_obj=True)
+                path = w.route(cur, pred, ignore_obj=True)
             if path is None:
                 self.note(f"no model route from {cur} to {goal_map}")
                 return False
@@ -194,14 +253,16 @@ class Walker:
                     path = path[:k + 1] + path[later[0] + 1:]
                     break
                 if kind in ("warp", "conn") and actual[0] == exp[0]:
-                    if kind == "warp" and actual[1] == exp[1] and abs(actual[2] - exp[2]) <= 1:
-                        break  # arrival on a door tile steps down a moment later
+                    if kind in ("warp", "conn") and abs(actual[1] - exp[1]) + abs(actual[2] - exp[2]) <= 1:
+                        break  # a door arrival steps down, and a held key may take one more step across a connection
                     if actual != exp:
                         self.note(f"{kind} {before}->{exp[0]} landed {actual[1:]} expected {exp[1:]}")
                     break
                 if actual == before:
                     self.note(f"blocked: {before} {d} (expected {exp}, {kind}); marking")
                     w.blocked.add(exp)
+                elif actual[0] == exp[0] and abs(actual[1] - exp[1]) + abs(actual[2] - exp[2]) <= 1:
+                    print(f"  (drift: {actual} instead of {exp}, replanning)")  # a held key took one more step
                 elif actual[0] != before[0] or abs(actual[1] - before[1]) + abs(actual[2] - before[2]) > 1:
                     self.note(f"unexpected position {actual} after {d} from {before}, expected {exp}")
                 break
@@ -209,16 +270,171 @@ class Walker:
         return False
 
 
+def has_item(wk, const_value):
+    t = wk.t
+    n = t.mem("wNumKeyItems")
+    items = t.mem("wKeyItems", 0, max(n, 2))
+    return const_value in (items if isinstance(items, list) else [items])
+
+
+def item_value(name):
+    for l in open(os.path.join(ROOT, "constants/item_constants.asm")):
+        m = re.match(r"\s*const (\w+)\s*;\s*([0-9a-f]+)", l)
+        if m and m[1] == name:
+            return int(m[2], 16)
+    raise KeyError(name)
+
+
+def open_gate(wk, name):
+    """Open the gate of a lane: tree gates need the CHAINSAW, boulder gates the CROWBAR (pushed two cells)."""
+    w = wk.w
+    mp = w.maps[name]
+    gates = [(i, o) for i, o in enumerate(mp.objects)
+             if o["script"].endswith(("GateScript", "BoulderScript")) and (name, i) not in w.removed]
+    if not gates:
+        wk.note(f"{name}: no gate objects")
+        return False
+    i0, o0 = min(gates, key=lambda g: g[1]["x"])
+    print(f"gate {o0['script']} at {o0['x']},{o0['y']}")
+    gx, gy = o0["x"], o0["y"]
+    if not wk.go_state(lambda s: s == (name, gx, gy + 1), f"{name} below the gate"):
+        return False
+    wk.t.pb.button("up", 9)  # face the object
+    wk.t.tick(24)
+    wk.t.pb.button("a", 4)
+    wk.t.tick(20)
+    wk.settle()
+    if o0["script"].endswith("GateScript"):
+        for i, o in gates:
+            w.removed.add((name, i))
+        wk.t.tick(30)
+        return True
+    # boulder: the first A asks to use the CROWBAR; push it up twice to clear the neck
+    for _ in range(2):
+        wk.press_dir("up")
+    st = wk.state()
+    if st != (name, gx, gy - 1):
+        wk.note(f"{name}: boulder push left the player at {st}, expected {(name, gx, gy - 1)}")
+        return False
+    w.moved[(name, i0)] = (gx, gy - 2)
+    return True
+
+
+def heal(wk, name):
+    """Go into a Pokecenter, stand at the counter and talk to the nurse; checks the party is at full HP after."""
+    t = wk.t
+    if not wk.go_state(lambda s: s == (name, 3, 3), f"{name} counter"):
+        return False
+    t.pb.button("up", 9)
+    t.tick(24)
+    t.pb.button("a", 4)
+    t.tick(20)
+    wk.settle()
+    t.tick(60)
+    hp = t.mem("wPartyMon1HP", 0, 2)
+    mx = t.mem("wPartyMon1MaxHP", 0, 2)
+    if hp != mx:
+        wk.note(f"{name}: after healing HP {hp} != max {mx}")
+        return False
+    return True
+
+
+def pick_item(wk, name):
+    w = wk.w
+    mp = w.maps[name]
+    balls = [(i, o) for i, o in enumerate(mp.objects) if o["otype"] == "OBJECTTYPE_ITEMBALL" and (name, i) not in w.removed]
+    if not balls:
+        wk.note(f"{name}: no item ball")
+        return False
+    i0, o = balls[0]
+    bx, by = o["x"], o["y"]
+    if not wk.go_state(lambda s: s[0] == name and abs(s[1] - bx) + abs(s[2] - by) == 1, f"{name} next to the ball"):
+        return False
+    st = wk.state()
+    d = {(0, -1): "up", (0, 1): "down", (-1, 0): "left", (1, 0): "right"}[(bx - st[1], by - st[2])]
+    wk.t.pb.button(d, 9)
+    wk.t.tick(24)
+    wk.t.pb.button("a", 4)
+    wk.t.tick(20)
+    wk.settle()
+    wk.t.tick(30)
+    w.removed.add((name, i0))
+    return True
+
+
+def auto_plan(world, first):
+    """Goal list that visits everything of an area: the maps in route order, every plaza building (Pokecenter with
+    healing, Mart, houses), boss rooms with their item balls, and the gates of lanes."""
+    maps = world.maps
+    goals = []
+    seen = set()
+
+    def add(g):
+        if g not in seen or g.split(":")[0] in ("heal", "item", "gate"):
+            goals.append(g)
+        seen.add(g)
+
+    cur = first
+    guard = 0
+    gate_next = None
+    while cur and guard < 200:
+        guard += 1
+        gate_next = None
+        mp = maps[cur]
+        add(cur)
+        # gatehouses and doors to other generated maps from this one
+        for (x, y, dest, dw) in mp.warps:
+            dm = world.consts.get(dest)
+            if dm is None or dm.name in seen:
+                continue
+            n = dm.name
+            if "Pokecenter" in n:
+                add("heal:" + n)
+            elif "Mart" in n or "House" in n:
+                add(n)
+            elif "Checkpoint" in n:
+                add(n)
+                gate_next = next((world.consts[d].name for (_, _, d, _) in dm.warps if world.consts[d].name != cur), None)
+            else:  # a boss room
+                m_item = re.search(r"itemball (\w+)", open(os.path.join(ROOT, f"maps/gen/{n}.asm")).read())
+                if m_item:
+                    add(f"item:{n}={m_item[1]}")
+                else:
+                    add(n)
+                add(cur)
+        if any(o["script"].endswith(("GateScript", "BoulderScript")) for o in mp.objects):
+            add("gate:" + cur)
+        nxt = mp.conns.get("north")
+        cur = nxt[0] if nxt and nxt[0] in maps else gate_next
+    return goals
+
+
 def main():
     rom = sys.argv[1]
-    goals = sys.argv[2].split(",") if len(sys.argv) > 2 else [
+    goals = sys.argv[2].split(",") if len(sys.argv) > 2 and sys.argv[2] != "auto" else None
+    if goals is None and len(sys.argv) > 2:
+        goals = auto_plan(World(), "TitheRoad")
+        print("plan:", ",".join(goals))
+    goals = goals or [
         "TitheRoad", "TitheCheckpoint", "TithePlaza1", "TithePokecenter1", "TitheMart1", "TitheHouse1",
         "TitheStreet1", "TitheStreet2", "TitheStreet3", "TithePlaza2", "TithePokecenter2", "TitheMart2", "TitheHouse2"]
     wk = Walker(rom)
     wk.seen_map()
     ok = True
     for g in goals:
-        if not wk.go(g):
+        if g.startswith("gate:"):
+            res = open_gate(wk, g[5:])
+        elif g.startswith("heal:"):
+            res = heal(wk, g[5:])
+        elif g.startswith("item:"):
+            name, _, const = g[5:].partition("=")
+            res = wk.go(name) and pick_item(wk, name)
+            if res and const and not has_item(wk, item_value(const)):
+                wk.note(f"{const} is not in the key item pocket after the pickup")
+                res = False
+        else:
+            res = wk.go(g)
+        if not res:
             ok = False
             break
         wk.t.tick(30)

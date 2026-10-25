@@ -6,7 +6,7 @@ HC_SeenText_A1::
 	text_asm
 	push bc
 	ld hl, HC_SeenText_A1_Table
-	ld b, 16
+	ld b, 48
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -49,6 +49,38 @@ HC_SeenText_A1_Table:
 	dw HC_SeenText_A1_13
 	dw HC_SeenText_A1_14
 	dw HC_SeenText_A1_15
+	dw HC_SeenText_A1_16
+	dw HC_SeenText_A1_17
+	dw HC_SeenText_A1_18
+	dw HC_SeenText_A1_19
+	dw HC_SeenText_A1_20
+	dw HC_SeenText_A1_21
+	dw HC_SeenText_A1_22
+	dw HC_SeenText_A1_23
+	dw HC_SeenText_A1_24
+	dw HC_SeenText_A1_25
+	dw HC_SeenText_A1_26
+	dw HC_SeenText_A1_27
+	dw HC_SeenText_A1_28
+	dw HC_SeenText_A1_29
+	dw HC_SeenText_A1_30
+	dw HC_SeenText_A1_31
+	dw HC_SeenText_A1_32
+	dw HC_SeenText_A1_33
+	dw HC_SeenText_A1_34
+	dw HC_SeenText_A1_35
+	dw HC_SeenText_A1_36
+	dw HC_SeenText_A1_37
+	dw HC_SeenText_A1_38
+	dw HC_SeenText_A1_39
+	dw HC_SeenText_A1_40
+	dw HC_SeenText_A1_41
+	dw HC_SeenText_A1_42
+	dw HC_SeenText_A1_43
+	dw HC_SeenText_A1_44
+	dw HC_SeenText_A1_45
+	dw HC_SeenText_A1_46
+	dw HC_SeenText_A1_47
 
 HC_SeenText_A1_0:
 	text "Tithe's due. I"
@@ -157,12 +189,238 @@ HC_SeenText_A1_15:
 	para "that's a rumor."
 	done
 
+HC_SeenText_A1_16:
+	text "I confessed to"
+	line "everything this"
+	para "morning. I have a"
+	line "clean slate and a"
+	para "full tank."
+	done
+
+HC_SeenText_A1_17:
+	text "Is that a weapon"
+	line "in your pocket or"
+	para "are you just happy"
+	line "to be mugged?"
+	done
+
+HC_SeenText_A1_18:
+	text "Sir, this is a"
+	line "sidewalk."
+	para "Sidewalks cost"
+	line "extra."
+	done
+
+HC_SeenText_A1_19:
+	text "My therapist says"
+	line "to face my"
+	para "problems. You are"
+	line "a problem."
+	done
+
+HC_SeenText_A1_20:
+	text "I pay six thousand"
+	line "a month for a"
+	para "closet. I need"
+	line "this win."
+	done
+
+HC_SeenText_A1_21:
+	text "Brother, spare"
+	line "some change? No?"
+	para "Then spare some"
+	line "HP."
+	done
+
+HC_SeenText_A1_22:
+	text "Quiet, the tower"
+	line "next door is"
+	para "sleeping. Let me"
+	line "ruin that for you"
+	para "instead."
+	done
+
+HC_SeenText_A1_23:
+	text "I saw you stare at"
+	line "my Pokemon."
+	para "That'll be forty"
+	line "dollars."
+	done
+
+HC_SeenText_A1_24:
+	text "Every man in this"
+	line "city has a price."
+	para "Yours looks small."
+	done
+
+HC_SeenText_A1_25:
+	text "Your aura is bad."
+	line "I mean the smell."
+	para "Anyway, battle."
+	done
+
+HC_SeenText_A1_26:
+	text "I've been waiting"
+	line "here since the"
+	para "last rapture. Let"
+	line "me out of my"
+	para "misery."
+	done
+
+HC_SeenText_A1_27:
+	text "Look at this city."
+	line "Look at it! Now"
+	para "look at my team"
+	line "instead."
+	done
+
+HC_SeenText_A1_28:
+	text "I eat tourists."
+	line "Figuratively."
+	para "Mostly."
+	done
+
+HC_SeenText_A1_29:
+	text "That's a nice"
+	line "jacket. It'd look"
+	para "better on my side"
+	line "of the court."
+	done
+
+HC_SeenText_A1_30:
+	text "I wanted to be a"
+	line "priest, but the"
+	para "pay was in"
+	line "prayers."
+	done
+
+HC_SeenText_A1_31:
+	text "A cop told me to"
+	line "stand here and"
+	para "look scary. It's"
+	line "not working, is"
+	para "it."
+	done
+
+HC_SeenText_A1_32:
+	text "I would offer you"
+	line "a pamphlet, but"
+	para "I'd rather offer"
+	line "you a beating."
+	done
+
+HC_SeenText_A1_33:
+	text "God sees"
+	line "everything, they"
+	para "say. I hope He's"
+	line "looking away right"
+	para "now."
+	done
+
+HC_SeenText_A1_34:
+	text "No loitering."
+	line "Fighting is"
+	para "encouraged."
+	done
+
+HC_SeenText_A1_35:
+	text "I put my whole"
+	line "life savings into"
+	para "scaffolding. It's"
+	line "going great."
+	done
+
+HC_SeenText_A1_36:
+	text "The pigeons told"
+	line "me you were"
+	para "coming. They want"
+	line "a cut."
+	done
+
+HC_SeenText_A1_37:
+	text "I got into this"
+	line "city to make it"
+	para "big. I'm nine"
+	line "inches tall."
+	done
+
+HC_SeenText_A1_38:
+	text "Do not make eye"
+	line "contact. Too late."
+	para "Now it's personal."
+	done
+
+HC_SeenText_A1_39:
+	text "You smell like the"
+	line "suburbs. That's a"
+	para "hate crime here."
+	done
+
+HC_SeenText_A1_40:
+	text "I'm legally"
+	line "required to inform"
+	para "you I'm legally"
+	line "required to"
+	para "nothing."
+	done
+
+HC_SeenText_A1_41:
+	text "My ex took the"
+	line "apartment, the dog"
+	para "and my will. I"
+	line "kept the team."
+	done
+
+HC_SeenText_A1_42:
+	text "I've got a degree"
+	line "in theology and a"
+	para "debt of eighty"
+	line "grand. Hit me."
+	done
+
+HC_SeenText_A1_43:
+	text "Is it a sin to"
+	line "enjoy this? Asking"
+	para "for the whole"
+	line "block."
+	done
+
+HC_SeenText_A1_44:
+	text "The collection"
+	line "plate is empty and"
+	para "I'm holding the"
+	line "knife. I mean the"
+	para "Pokemon."
+	done
+
+HC_SeenText_A1_45:
+	text "Sign here. Not"
+	line "here. There."
+	para "That's a waiver."
+	line "And a will."
+	done
+
+HC_SeenText_A1_46:
+	text "I do this because"
+	line "I'm sad and it's"
+	para "cheaper than a"
+	line "bar."
+	done
+
+HC_SeenText_A1_47:
+	text "Your mother called"
+	line "me last night. I"
+	para "didn't pick up,"
+	line "but I'll tell her"
+	para "you lost."
+	done
+
 
 HC_BeatenText_A1::
 	text_asm
 	push bc
 	ld hl, HC_BeatenText_A1_Table
-	ld b, 12
+	ld b, 36
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -201,6 +459,30 @@ HC_BeatenText_A1_Table:
 	dw HC_BeatenText_A1_9
 	dw HC_BeatenText_A1_10
 	dw HC_BeatenText_A1_11
+	dw HC_BeatenText_A1_12
+	dw HC_BeatenText_A1_13
+	dw HC_BeatenText_A1_14
+	dw HC_BeatenText_A1_15
+	dw HC_BeatenText_A1_16
+	dw HC_BeatenText_A1_17
+	dw HC_BeatenText_A1_18
+	dw HC_BeatenText_A1_19
+	dw HC_BeatenText_A1_20
+	dw HC_BeatenText_A1_21
+	dw HC_BeatenText_A1_22
+	dw HC_BeatenText_A1_23
+	dw HC_BeatenText_A1_24
+	dw HC_BeatenText_A1_25
+	dw HC_BeatenText_A1_26
+	dw HC_BeatenText_A1_27
+	dw HC_BeatenText_A1_28
+	dw HC_BeatenText_A1_29
+	dw HC_BeatenText_A1_30
+	dw HC_BeatenText_A1_31
+	dw HC_BeatenText_A1_32
+	dw HC_BeatenText_A1_33
+	dw HC_BeatenText_A1_34
+	dw HC_BeatenText_A1_35
 
 HC_BeatenText_A1_0:
 	text "Ow. That's coming"
@@ -272,12 +554,171 @@ HC_BeatenText_A1_11:
 	para "are you smiling?"
 	done
 
+HC_BeatenText_A1_12:
+	text "Great. Now I have"
+	line "to explain this to"
+	para "my insurance. And"
+	line "my mistress."
+	done
+
+HC_BeatenText_A1_13:
+	text "I'll be in the"
+	line "confessional. Come"
+	para "find me. Actually"
+	line "don't."
+	done
+
+HC_BeatenText_A1_14:
+	text "Another day,"
+	line "another loss. At"
+	para "least the pay is"
+	line "the same."
+	done
+
+HC_BeatenText_A1_15:
+	text "That's the third"
+	line "time this week."
+	para "I'm quitting."
+	line "After lunch."
+	done
+
+HC_BeatenText_A1_16:
+	text "My team! My"
+	line "beautiful,"
+	para "overleveraged"
+	line "team!"
+	done
+
+HC_BeatenText_A1_17:
+	text "You are a menace."
+	line "I respect it."
+	done
+
+HC_BeatenText_A1_18:
+	text "I can't feel my"
+	line "legs. It's the"
+	para "first honest thing"
+	line "to happen to me"
+	para "all year."
+	done
+
+HC_BeatenText_A1_19:
+	text "Mercy! I have"
+	line "children! Okay,"
+	para "one child, and"
+	line "he's a lawyer."
+	done
+
+HC_BeatenText_A1_20:
+	text "I forgave you"
+	line "before you even"
+	para "won. It was in the"
+	line "contract."
+	done
+
+HC_BeatenText_A1_21:
+	text "So this is how it"
+	line "ends. In a puddle"
+	para "behind a tower."
+	done
+
+HC_BeatenText_A1_22:
+	text "Hit me again and"
+	line "I'll sue. Hit me"
+	para "again so I can"
+	line "sue."
+	done
+
+HC_BeatenText_A1_23:
+	text "I'm calling my"
+	line "uncle. He doesn't"
+	para "exist, but I'll"
+	line "feel better."
+	done
+
+HC_BeatenText_A1_24:
+	text "I bet you brag"
+	line "about this at"
+	para "parties. You don't"
+	line "go to parties."
+	done
+
+HC_BeatenText_A1_25:
+	text "Nobody told me"
+	line "they'd send a"
+	para "professional."
+	done
+
+HC_BeatenText_A1_26:
+	text "That's it. I'm"
+	line "going into the"
+	para "bell-ringing"
+	line "business."
+	done
+
+HC_BeatenText_A1_27:
+	text "Ha ha. You win."
+	line "I'm bleeding in"
+	para "the nicest"
+	line "possible way."
+	done
+
+HC_BeatenText_A1_28:
+	text "You're the first"
+	line "honest person I've"
+	para "met here. It was"
+	line "terrifying."
+	done
+
+HC_BeatenText_A1_29:
+	text "My knees. My"
+	line "dignity. My lease."
+	done
+
+HC_BeatenText_A1_30:
+	text "Take it all. The"
+	line "city will take it"
+	para "back."
+	done
+
+HC_BeatenText_A1_31:
+	text "I'll light a"
+	line "candle for you."
+	para "Maybe two. They're"
+	line "thirty bucks each."
+	done
+
+HC_BeatenText_A1_32:
+	text "Well. That was"
+	line "tithing in a way I"
+	para "never thought of."
+	done
+
+HC_BeatenText_A1_33:
+	text "Is it over? Can I"
+	line "go home to my"
+	para "crying?"
+	done
+
+HC_BeatenText_A1_34:
+	text "That was"
+	line "unprofessional. Of"
+	para "me. I'll write it"
+	line "up."
+	done
+
+HC_BeatenText_A1_35:
+	text "Right. I was never"
+	line "here. Neither were"
+	para "you. Go."
+	done
+
 
 HC_AfterText_A1::
 	text_asm
 	push bc
 	ld hl, HC_AfterText_A1_Table
-	ld b, 8
+	ld b, 30
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -312,6 +753,28 @@ HC_AfterText_A1_Table:
 	dw HC_AfterText_A1_5
 	dw HC_AfterText_A1_6
 	dw HC_AfterText_A1_7
+	dw HC_AfterText_A1_8
+	dw HC_AfterText_A1_9
+	dw HC_AfterText_A1_10
+	dw HC_AfterText_A1_11
+	dw HC_AfterText_A1_12
+	dw HC_AfterText_A1_13
+	dw HC_AfterText_A1_14
+	dw HC_AfterText_A1_15
+	dw HC_AfterText_A1_16
+	dw HC_AfterText_A1_17
+	dw HC_AfterText_A1_18
+	dw HC_AfterText_A1_19
+	dw HC_AfterText_A1_20
+	dw HC_AfterText_A1_21
+	dw HC_AfterText_A1_22
+	dw HC_AfterText_A1_23
+	dw HC_AfterText_A1_24
+	dw HC_AfterText_A1_25
+	dw HC_AfterText_A1_26
+	dw HC_AfterText_A1_27
+	dw HC_AfterText_A1_28
+	dw HC_AfterText_A1_29
 
 HC_AfterText_A1_0:
 	text "Don't look at me."
@@ -357,6 +820,164 @@ HC_AfterText_A1_6:
 HC_AfterText_A1_7:
 	text "I'll pray for you."
 	line "Priced separately."
+	done
+
+HC_AfterText_A1_8:
+	text "You didn't hear"
+	line "that from me."
+	para "Because I'm very"
+	line "nervous about my"
+	para "pension."
+	done
+
+HC_AfterText_A1_9:
+	text "If you see my"
+	line "wife, tell her I'm"
+	para "out of milk. And"
+	line "out of the"
+	para "marriage."
+	done
+
+HC_AfterText_A1_10:
+	text "I've got a bad"
+	line "feeling about the"
+	para "next block. It has"
+	line "a smell."
+	done
+
+HC_AfterText_A1_11:
+	text "Every night the"
+	line "bells ring and"
+	para "nobody knows why."
+	line "I stopped asking."
+	done
+
+HC_AfterText_A1_12:
+	text "They say the"
+	line "Cathedral keeps"
+	para "getting bigger. So"
+	line "does my rent."
+	done
+
+HC_AfterText_A1_13:
+	text "I sleep in the"
+	line "doorway. It's a"
+	para "good doorway. It's"
+	line "got a priest in"
+	para "it."
+	done
+
+HC_AfterText_A1_14:
+	text "A priest tried to"
+	line "bless my pocket."
+	para "It was already"
+	line "empty."
+	done
+
+HC_AfterText_A1_15:
+	text "A cop gave me a"
+	line "ticket for"
+	para "loitering with"
+	line "intent to die."
+	done
+
+HC_AfterText_A1_16:
+	text "You look tired."
+	line "Don't worry."
+	para "Everyone does"
+	line "here."
+	done
+
+HC_AfterText_A1_17:
+	text "Wash your hands."
+	line "Everything in this"
+	para "city is a"
+	line "handshake."
+	done
+
+HC_AfterText_A1_18:
+	text "I'm thinking of"
+	line "moving to the"
+	para "commune up north."
+	line "People there say"
+	para "it's nice."
+	done
+
+HC_AfterText_A1_19:
+	text "Don't take the"
+	line "subway. I don't"
+	para "mean it's"
+	line "dangerous. I mean"
+	para "it doesn't exist."
+	done
+
+HC_AfterText_A1_20:
+	text "It's quiet. Too"
+	line "quiet. Anyway, I'm"
+	para "going to nap."
+	done
+
+HC_AfterText_A1_21:
+	text "I wish I hadn't"
+	line "looked at that"
+	para "body. Now I have"
+	line "to look at it"
+	para "again."
+	done
+
+HC_AfterText_A1_22:
+	text "Life is a rented"
+	line "room. I'm behind"
+	para "on rent."
+	done
+
+HC_AfterText_A1_23:
+	text "Whoever's doing"
+	line "this: thank you."
+	para "Please tip well."
+	done
+
+HC_AfterText_A1_24:
+	text "The towers are"
+	line "hollow. Wave if"
+	para "you can hear me,"
+	line "tower."
+	done
+
+HC_AfterText_A1_25:
+	text "My cousin was a"
+	line "cop. Then he was a"
+	para "witness. Now he's"
+	line "a stain."
+	done
+
+HC_AfterText_A1_26:
+	text "There was a bakery"
+	line "here. Then a"
+	para "church. Then a tax"
+	line "office. Now it's"
+	para "me."
+	done
+
+HC_AfterText_A1_27:
+	text "It's not much, but"
+	line "it's the only"
+	para "thing between me"
+	line "and the abyss."
+	done
+
+HC_AfterText_A1_28:
+	text "Do not trust the"
+	line "vending machines."
+	para "They report to"
+	line "someone."
+	done
+
+HC_AfterText_A1_29:
+	text "Okay but who's"
+	line "going to clean"
+	para "this up? Nobody."
+	line "Okay."
 	done
 
 
