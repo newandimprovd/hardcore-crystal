@@ -7,3 +7,10 @@
 	spawn TITHE_PLAZA5,  3,  4
 	spawn TITHE_PLAZA6,  3,  4
 	spawn TITHE_PLAZA7,  3,  4
+	spawn GROVE_PLAZA1,  3,  4
+	spawn GROVE_PLAZA2,  3,  4
+	spawn GROVE_PLAZA3,  3,  4
+	spawn GROVE_PLAZA4,  3,  4
+	spawn GROVE_PLAZA5,  3,  4
+	spawn GROVE_PLAZA6,  3,  4
+	spawn GROVE_PLAZA7,  3,  4

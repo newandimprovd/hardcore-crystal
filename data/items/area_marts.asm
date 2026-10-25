@@ -87,3 +87,92 @@ MartTithe7:
 	db ESCAPE_ROPE
 	db -1 ; end
 
+MartGrove1:
+	db 9
+	db POKE_BALL
+	db GREAT_BALL
+	db POTION
+	db SUPER_POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db AWAKENING
+	db BURN_HEAL
+	db REVIVE
+	db -1 ; end
+
+MartGrove2:
+	db 9
+	db POKE_BALL
+	db GREAT_BALL
+	db POTION
+	db SUPER_POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db AWAKENING
+	db BURN_HEAL
+	db REVIVE
+	db -1 ; end
+
+MartGrove3:
+	db 11
+	db POKE_BALL
+	db GREAT_BALL
+	db SUPER_POTION
+	db HYPER_POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db AWAKENING
+	db BURN_HEAL
+	db ICE_HEAL
+	db REVIVE
+	db REPEL
+	db -1 ; end
+
+MartGrove4:
+	db 11
+	db POKE_BALL
+	db GREAT_BALL
+	db SUPER_POTION
+	db HYPER_POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db AWAKENING
+	db BURN_HEAL
+	db ICE_HEAL
+	db REVIVE
+	db REPEL
+	db -1 ; end
+
+MartGrove5:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartGrove6:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartGrove7:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+

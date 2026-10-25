@@ -4,3 +4,7 @@
 	RGB 21,21,21, 11,11,11 ; morn/day
 	RGB 21,21,21, 17,08,07 ; nite
 
+; group 28 (AREA2)
+	RGB 21,21,21, 11,11,11 ; morn/day
+	RGB 21,21,21, 17,08,07 ; nite
+

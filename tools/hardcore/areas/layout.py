@@ -21,7 +21,7 @@ class Slot:
 
 
 def lane(g, name, kit, rng, *, trainers=13, a=3, cw=3, right=3, landmark, music, north="open",
-         neck=0, extra_top=0, gate=None, w=None):
+         neck=0, extra_top=0, gate=None, w=None, pal="PALETTE_AUTO"):
     """A vertical corridor. The player enters at the bottom (connection) and leaves at the top
     (connection, or a door block when north == 'door'). Trainers stand in pairs or alone on the channel
     edges so every row of the channel is watched."""
@@ -29,7 +29,7 @@ def lane(g, name, kit, rng, *, trainers=13, a=3, cw=3, right=3, landmark, music,
     pairs = trainers - rows
     H = rows + 4 + extra_top
     W = a + cw + right
-    m = MapDef(g.key, name, W, H, kit.tileset, "ROUTE", landmark, music, border=kit.extra["border"])
+    m = MapDef(g.key, name, W, H, kit.tileset, "ROUTE", landmark, music, border=kit.extra["border"], pal=pal)
     for y in range(H):
         for x in range(W):
             m.set(x, y, rng.choice(kit.wall))
@@ -75,29 +75,57 @@ def lane(g, name, kit, rng, *, trainers=13, a=3, cw=3, right=3, landmark, music,
     return m, slots
 
 
+# Item gates. kind -> (item, sprite, how, sound, text when the item is missing, text when it is used)
+GATES = {
+    "tree": ("CHAINSAW", "SPRITE_FRUIT_TREE", "remove",
+             "A hedge of city-owned trees fills the road. You would need something with a motor.",
+             "<PLAYER> fired up the CHAINSAW! The hedge never saw it coming."),
+    "boulder": ("CROWBAR", "SPRITE_BOULDER", "push", "", ""),
+    "river": ("JET_SKI", "SPRITE_ROCK", "remove",
+              "A brown river cuts the trail. It is too wide to swim and too lively to wade. Something with a motor, maybe.",
+              "<PLAYER> dragged out the JET SKI. Nobody asked where it came from. The river parted anyway."),
+    "hive": ("BASEBALL_BAT", "SPRITE_FRUIT_TREE", "remove",
+             "A tree drips with angry hornets. A solid swing could settle it, if you owned one.",
+             "<PLAYER> swung the BASEBALL BAT! The tree came down. So did the hornets. Mostly on the tree."),
+    "dark": ("FLASHLIGHT", "SPRITE_ROCK", "remove",
+             "Pitch black ahead. Something in there is breathing. Slowly. On purpose.",
+             "<PLAYER> switched on the FLASHLIGHT. The breathing stopped. Probably fine."),
+    "slab": ("SLEDGEHAMMER", "SPRITE_ROCK", "remove",
+             "A slab of cracked rock blocks the way. It seems to want a hammer. It seems to want an argument.",
+             "<PLAYER> swung the SLEDGEHAMMER. The slab was in pieces. So was someone's property."),
+    "hook": ("GRAPPLE_HOOK", "SPRITE_ROCK", "remove",
+             "A sheer wall of sandstone, forty feet of it. A hook on a rope would do nicely.",
+             "<PLAYER> threw the GRAPPLE HOOK and hauled up. The cops would be proud, or at least nearby."),
+    "rubble": ("SHOVEL", "SPRITE_ROCK", "remove",
+               "A heap of fresh dirt fills the way. It looks suspiciously like a grave in a hurry.",
+               "<PLAYER> dug it out with the SHOVEL. Nothing in there. Mostly nothing."),
+}
+
+
 def gate_objects(m, kind, w, x, y):
-    """Two objects across the two cells of a one-block neck. 'tree' needs the CHAINSAW, 'boulder' the CROWBAR.
-    They are the first objects of the map, so their constants are TREE0/TREE1 or BOULDER0/BOULDER1."""
+    """Two objects across the two cells of a one-block neck, each needing a key item. The 'push' gate (boulders
+    and the CROWBAR) uses the engine's strength puzzle; the others vanish when the item is used. They are the
+    first objects of the map, so their constants are GATE0/GATE1 (BOULDER0/BOULDER1 for the push gate)."""
     n = m.name
-    if kind == "tree":
-        flag = w.flag(f"EVENT_GEN_{m.const}_GATE")
-        m.object_consts = ["TREE0", "TREE1"]
-        for i in range(2):
-            m.obj(x + i, y, "SPRITE_FRUIT_TREE", "SPRITEMOVEDATA_STILL", f"{n}GateScript", pal="PAL_NPC_GREEN", flag=flag)
-        m.scripts.append(
-            f"{n}GateScript:\n\tcheckitem CHAINSAW\n\tiffalse .NoSaw\n\topentext\n\twritetext {n}GateUseText\n"
-            f"\twaitbutton\n\tclosetext\n\tplaysound SFX_STRENGTH\n\tearthquake 12\n\twaitsfx\n"
-            f"\tdisappear {m.const}_TREE0\n\tdisappear {m.const}_TREE1\n\tsetevent {flag}\n\tend\n\n"
-            f".NoSaw:\n\tjumptext {n}GateNoText\n")
-        m.scripts.append(emit_text(f"{n}GateNoText", "A hedge of city-owned trees fills the road. You would need something with a motor."))
-        m.scripts.append(emit_text(f"{n}GateUseText", "<PLAYER> fired up the CHAINSAW! The hedge never saw it coming."))
-    elif kind == "boulder":
+    item, sprite, how, no_text, use_text = GATES[kind]
+    if how == "push":
         m.object_consts = ["BOULDER0", "BOULDER1"]
         for i in range(2):
-            m.obj(x + i, y, "SPRITE_BOULDER", "SPRITEMOVEDATA_STRENGTH_BOULDER", f"{n}BoulderScript", pal="PAL_NPC_BROWN")
+            m.obj(x + i, y, sprite, "SPRITEMOVEDATA_STRENGTH_BOULDER", f"{n}BoulderScript", pal="PAL_NPC_BROWN")
         m.scripts.append(f"{n}BoulderScript:\n\tjumpstd StrengthBoulderScript\n")
-    else:
-        raise ValueError(kind)
+        return
+    flag = w.flag(f"EVENT_GEN_{m.const}_GATE")
+    m.object_consts = ["GATE0", "GATE1"]
+    pal = "PAL_NPC_GREEN" if sprite == "SPRITE_FRUIT_TREE" else "PAL_NPC_BROWN"
+    for i in range(2):
+        m.obj(x + i, y, sprite, "SPRITEMOVEDATA_STILL", f"{n}GateScript", pal=pal, flag=flag)
+    m.scripts.append(
+        f"{n}GateScript:\n\tcheckitem {item}\n\tiffalse .Missing\n\topentext\n\twritetext {n}GateUseText\n"
+        f"\twaitbutton\n\tclosetext\n\tplaysound SFX_STRENGTH\n\tearthquake 12\n\twaitsfx\n"
+        f"\tdisappear {m.const}_GATE0\n\tdisappear {m.const}_GATE1\n\tsetevent {flag}\n\tend\n\n"
+        f".Missing:\n\tjumptext {n}GateNoText\n")
+    m.scripts.append(emit_text(f"{n}GateNoText", no_text))
+    m.scripts.append(emit_text(f"{n}GateUseText", use_text))
 
 
 def chain(lower, upper, offset=0):
@@ -107,11 +135,11 @@ def chain(lower, upper, offset=0):
 
 
 def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11, rift=False, houses=1, extra=0,
-          south="open"):
+          south="open", pal="PALETTE_AUTO"):
     """A hub: Pokecenter and Mart on the north wall, an optional rift house, an opening to the north lane
     and an opening to the south lane. Returns the map and a dict of door warps."""
     W, H = width, height
-    m = MapDef(g.key, name, W, H, kit.tileset, "TOWN", landmark, music, border=kit.extra["border"])
+    m = MapDef(g.key, name, W, H, kit.tileset, "TOWN", landmark, music, border=kit.extra["border"], pal=pal)
     for y in range(H):
         for x in range(W):
             m.set(x, y, rng.choice(kit.wall))
@@ -225,9 +253,11 @@ def gatehouse(g, name, lane_door, plaza_door, landmark, music, texts=()):
     m.blocks = bytearray(blk("maps/NorthSouthGate.blk"))
     t1, t2 = m.warp(4, 0), m.warp(5, 0)
     b1, b2 = m.warp(4, 7), m.warp(5, 7)
-    lane_door.dest = b1
-    b1.dest = lane_door
-    b2.dest = lane_door
+    lane_doors = lane_door if isinstance(lane_door, (list, tuple)) else [lane_door]
+    for d in lane_doors:
+        d.dest = b1
+    b1.dest = lane_doors[0]
+    b2.dest = lane_doors[0]
     plaza_door.dest = t1
     t1.dest = plaza_door
     t2.dest = plaza_door

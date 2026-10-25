@@ -51,3 +51,53 @@
 	map_const TITHE_CATHEDRAL,                          5,  9 ; 48
 	endgroup
 
+	newgroup AREA2                ; 28
+	map_const GROVE_PLAZA1,                            13, 11 ;  1
+	map_const GROVE_GATE,                               5,  4 ;  2
+	map_const GROVE_POKECENTER1,                        5,  4 ;  3
+	map_const GROVE_MART1,                              6,  4 ;  4
+	map_const GROVE_HOUSE1,                             4,  4 ;  5
+	map_const GROVE_STREET1,                            9, 13 ;  6
+	map_const GROVE_STREET2,                            9, 13 ;  7
+	map_const GROVE_STREET3,                            9, 13 ;  8
+	map_const GROVE_PLAZA2,                            13, 11 ;  9
+	map_const GROVE_POKECENTER2,                        5,  4 ; 10
+	map_const GROVE_MART2,                              6,  4 ; 11
+	map_const GROVE_HOUSE2,                             4,  4 ; 12
+	map_const GROVE_STREET4,                            9, 13 ; 13
+	map_const GROVE_STREET5,                            9, 13 ; 14
+	map_const GROVE_PLAZA3,                            13, 11 ; 15
+	map_const GROVE_POKECENTER3,                        5,  4 ; 16
+	map_const GROVE_MART3,                              6,  4 ; 17
+	map_const GROVE_HOUSE3,                             4,  4 ; 18
+	map_const GROVE_BOATHOUSE,                          5,  9 ; 19
+	map_const GROVE_STREET6,                            9, 13 ; 20
+	map_const GROVE_STREET7,                            9, 13 ; 21
+	map_const GROVE_PLAZA4,                            13, 11 ; 22
+	map_const GROVE_POKECENTER4,                        5,  4 ; 23
+	map_const GROVE_MART4,                              6,  4 ; 24
+	map_const GROVE_HOUSE4,                             4,  4 ; 25
+	map_const GROVE_STREET8,                            9, 13 ; 26
+	map_const GROVE_STREET9,                            9, 13 ; 27
+	map_const GROVE_STREET10,                           9, 13 ; 28
+	map_const GROVE_PLAZA5,                            13, 11 ; 29
+	map_const GROVE_POKECENTER5,                        5,  4 ; 30
+	map_const GROVE_MART5,                              6,  4 ; 31
+	map_const GROVE_HOUSE5,                             4,  4 ; 32
+	map_const GROVE_SMOKEHOUSE,                         5,  9 ; 33
+	map_const GROVE_STREET11,                           9, 13 ; 34
+	map_const GROVE_STREET12,                           9, 13 ; 35
+	map_const GROVE_STREET13,                           9, 13 ; 36
+	map_const GROVE_PLAZA6,                            13, 11 ; 37
+	map_const GROVE_POKECENTER6,                        5,  4 ; 38
+	map_const GROVE_MART6,                              6,  4 ; 39
+	map_const GROVE_HOUSE6,                             4,  4 ; 40
+	map_const GROVE_STREET14,                           9, 13 ; 41
+	map_const GROVE_STREET15,                           9, 13 ; 42
+	map_const GROVE_PLAZA7,                            13, 11 ; 43
+	map_const GROVE_POKECENTER7,                        5,  4 ; 44
+	map_const GROVE_MART7,                              6,  4 ; 45
+	map_const GROVE_HOUSE7,                             4,  4 ; 46
+	map_const GROVE_COUNCIL,                            5,  9 ; 47
+	endgroup
+

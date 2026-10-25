@@ -141,6 +141,142 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheCathedral, TITHE_CATHEDRAL, $00
 
+	map_attributes GrovePlaza1, GROVE_PLAZA1, $05
+	connection north, GroveStreet1, GROVE_STREET1, 0
+
+	map_attributes GroveGate, GROVE_GATE, $00
+
+	map_attributes GrovePokecenter1, GROVE_POKECENTER1, $00
+
+	map_attributes GroveMart1, GROVE_MART1, $00
+
+	map_attributes GroveHouse1, GROVE_HOUSE1, $00
+
+	map_attributes GroveStreet1, GROVE_STREET1, $05
+	connection north, GroveStreet2, GROVE_STREET2, 0
+	connection south, GrovePlaza1, GROVE_PLAZA1, 0
+
+	map_attributes GroveStreet2, GROVE_STREET2, $05
+	connection north, GroveStreet3, GROVE_STREET3, 0
+	connection south, GroveStreet1, GROVE_STREET1, 0
+
+	map_attributes GroveStreet3, GROVE_STREET3, $05
+	connection north, GrovePlaza2, GROVE_PLAZA2, 0
+	connection south, GroveStreet2, GROVE_STREET2, 0
+
+	map_attributes GrovePlaza2, GROVE_PLAZA2, $05
+	connection north, GroveStreet4, GROVE_STREET4, 0
+	connection south, GroveStreet3, GROVE_STREET3, 0
+
+	map_attributes GrovePokecenter2, GROVE_POKECENTER2, $00
+
+	map_attributes GroveMart2, GROVE_MART2, $00
+
+	map_attributes GroveHouse2, GROVE_HOUSE2, $00
+
+	map_attributes GroveStreet4, GROVE_STREET4, $05
+	connection north, GroveStreet5, GROVE_STREET5, 0
+	connection south, GrovePlaza2, GROVE_PLAZA2, 0
+
+	map_attributes GroveStreet5, GROVE_STREET5, $05
+	connection north, GrovePlaza3, GROVE_PLAZA3, 0
+	connection south, GroveStreet4, GROVE_STREET4, 0
+
+	map_attributes GrovePlaza3, GROVE_PLAZA3, $05
+	connection north, GroveStreet6, GROVE_STREET6, 0
+	connection south, GroveStreet5, GROVE_STREET5, 0
+
+	map_attributes GrovePokecenter3, GROVE_POKECENTER3, $00
+
+	map_attributes GroveMart3, GROVE_MART3, $00
+
+	map_attributes GroveHouse3, GROVE_HOUSE3, $00
+
+	map_attributes GroveBoathouse, GROVE_BOATHOUSE, $00
+
+	map_attributes GroveStreet6, GROVE_STREET6, $05
+	connection north, GroveStreet7, GROVE_STREET7, 0
+	connection south, GrovePlaza3, GROVE_PLAZA3, 0
+
+	map_attributes GroveStreet7, GROVE_STREET7, $05
+	connection north, GrovePlaza4, GROVE_PLAZA4, 0
+	connection south, GroveStreet6, GROVE_STREET6, 0
+
+	map_attributes GrovePlaza4, GROVE_PLAZA4, $05
+	connection north, GroveStreet8, GROVE_STREET8, 0
+	connection south, GroveStreet7, GROVE_STREET7, 0
+
+	map_attributes GrovePokecenter4, GROVE_POKECENTER4, $00
+
+	map_attributes GroveMart4, GROVE_MART4, $00
+
+	map_attributes GroveHouse4, GROVE_HOUSE4, $00
+
+	map_attributes GroveStreet8, GROVE_STREET8, $05
+	connection north, GroveStreet9, GROVE_STREET9, 0
+	connection south, GrovePlaza4, GROVE_PLAZA4, 0
+
+	map_attributes GroveStreet9, GROVE_STREET9, $05
+	connection north, GroveStreet10, GROVE_STREET10, 0
+	connection south, GroveStreet8, GROVE_STREET8, 0
+
+	map_attributes GroveStreet10, GROVE_STREET10, $05
+	connection north, GrovePlaza5, GROVE_PLAZA5, 0
+	connection south, GroveStreet9, GROVE_STREET9, 0
+
+	map_attributes GrovePlaza5, GROVE_PLAZA5, $05
+	connection north, GroveStreet11, GROVE_STREET11, 0
+	connection south, GroveStreet10, GROVE_STREET10, 0
+
+	map_attributes GrovePokecenter5, GROVE_POKECENTER5, $00
+
+	map_attributes GroveMart5, GROVE_MART5, $00
+
+	map_attributes GroveHouse5, GROVE_HOUSE5, $00
+
+	map_attributes GroveSmokehouse, GROVE_SMOKEHOUSE, $00
+
+	map_attributes GroveStreet11, GROVE_STREET11, $05
+	connection north, GroveStreet12, GROVE_STREET12, 0
+	connection south, GrovePlaza5, GROVE_PLAZA5, 0
+
+	map_attributes GroveStreet12, GROVE_STREET12, $05
+	connection north, GroveStreet13, GROVE_STREET13, 0
+	connection south, GroveStreet11, GROVE_STREET11, 0
+
+	map_attributes GroveStreet13, GROVE_STREET13, $05
+	connection north, GrovePlaza6, GROVE_PLAZA6, 0
+	connection south, GroveStreet12, GROVE_STREET12, 0
+
+	map_attributes GrovePlaza6, GROVE_PLAZA6, $05
+	connection north, GroveStreet14, GROVE_STREET14, 0
+	connection south, GroveStreet13, GROVE_STREET13, 0
+
+	map_attributes GrovePokecenter6, GROVE_POKECENTER6, $00
+
+	map_attributes GroveMart6, GROVE_MART6, $00
+
+	map_attributes GroveHouse6, GROVE_HOUSE6, $00
+
+	map_attributes GroveStreet14, GROVE_STREET14, $05
+	connection north, GroveStreet15, GROVE_STREET15, 0
+	connection south, GrovePlaza6, GROVE_PLAZA6, 0
+
+	map_attributes GroveStreet15, GROVE_STREET15, $05
+	connection north, GrovePlaza7, GROVE_PLAZA7, 0
+	connection south, GroveStreet14, GROVE_STREET14, 0
+
+	map_attributes GrovePlaza7, GROVE_PLAZA7, $05
+	connection south, GroveStreet15, GROVE_STREET15, 0
+
+	map_attributes GrovePokecenter7, GROVE_POKECENTER7, $00
+
+	map_attributes GroveMart7, GROVE_MART7, $00
+
+	map_attributes GroveHouse7, GROVE_HOUSE7, $00
+
+	map_attributes GroveCouncil, GROVE_COUNCIL, $00
+
 ENDSECTION
 
 SECTION "Area1 Blocks", ROMX
@@ -288,6 +424,151 @@ TitheHouse7_Blocks:
 
 TitheCathedral_Blocks:
 	INCBIN "maps/gen/TitheCathedral.blk"
+
+ENDSECTION
+
+SECTION "Area2 Blocks", ROMX
+
+GrovePlaza1_Blocks:
+	INCBIN "maps/gen/GrovePlaza1.blk"
+
+GroveGate_Blocks:
+	INCBIN "maps/gen/GroveGate.blk"
+
+GrovePokecenter1_Blocks:
+	INCBIN "maps/gen/GrovePokecenter1.blk"
+
+GroveMart1_Blocks:
+	INCBIN "maps/gen/GroveMart1.blk"
+
+GroveHouse1_Blocks:
+	INCBIN "maps/gen/GroveHouse1.blk"
+
+GroveStreet1_Blocks:
+	INCBIN "maps/gen/GroveStreet1.blk"
+
+GroveStreet2_Blocks:
+	INCBIN "maps/gen/GroveStreet2.blk"
+
+GroveStreet3_Blocks:
+	INCBIN "maps/gen/GroveStreet3.blk"
+
+GrovePlaza2_Blocks:
+	INCBIN "maps/gen/GrovePlaza2.blk"
+
+GrovePokecenter2_Blocks:
+	INCBIN "maps/gen/GrovePokecenter2.blk"
+
+GroveMart2_Blocks:
+	INCBIN "maps/gen/GroveMart2.blk"
+
+GroveHouse2_Blocks:
+	INCBIN "maps/gen/GroveHouse2.blk"
+
+GroveStreet4_Blocks:
+	INCBIN "maps/gen/GroveStreet4.blk"
+
+GroveStreet5_Blocks:
+	INCBIN "maps/gen/GroveStreet5.blk"
+
+GrovePlaza3_Blocks:
+	INCBIN "maps/gen/GrovePlaza3.blk"
+
+GrovePokecenter3_Blocks:
+	INCBIN "maps/gen/GrovePokecenter3.blk"
+
+GroveMart3_Blocks:
+	INCBIN "maps/gen/GroveMart3.blk"
+
+GroveHouse3_Blocks:
+	INCBIN "maps/gen/GroveHouse3.blk"
+
+GroveBoathouse_Blocks:
+	INCBIN "maps/gen/GroveBoathouse.blk"
+
+GroveStreet6_Blocks:
+	INCBIN "maps/gen/GroveStreet6.blk"
+
+GroveStreet7_Blocks:
+	INCBIN "maps/gen/GroveStreet7.blk"
+
+GrovePlaza4_Blocks:
+	INCBIN "maps/gen/GrovePlaza4.blk"
+
+GrovePokecenter4_Blocks:
+	INCBIN "maps/gen/GrovePokecenter4.blk"
+
+GroveMart4_Blocks:
+	INCBIN "maps/gen/GroveMart4.blk"
+
+GroveHouse4_Blocks:
+	INCBIN "maps/gen/GroveHouse4.blk"
+
+GroveStreet8_Blocks:
+	INCBIN "maps/gen/GroveStreet8.blk"
+
+GroveStreet9_Blocks:
+	INCBIN "maps/gen/GroveStreet9.blk"
+
+GroveStreet10_Blocks:
+	INCBIN "maps/gen/GroveStreet10.blk"
+
+GrovePlaza5_Blocks:
+	INCBIN "maps/gen/GrovePlaza5.blk"
+
+GrovePokecenter5_Blocks:
+	INCBIN "maps/gen/GrovePokecenter5.blk"
+
+GroveMart5_Blocks:
+	INCBIN "maps/gen/GroveMart5.blk"
+
+GroveHouse5_Blocks:
+	INCBIN "maps/gen/GroveHouse5.blk"
+
+GroveSmokehouse_Blocks:
+	INCBIN "maps/gen/GroveSmokehouse.blk"
+
+GroveStreet11_Blocks:
+	INCBIN "maps/gen/GroveStreet11.blk"
+
+GroveStreet12_Blocks:
+	INCBIN "maps/gen/GroveStreet12.blk"
+
+GroveStreet13_Blocks:
+	INCBIN "maps/gen/GroveStreet13.blk"
+
+GrovePlaza6_Blocks:
+	INCBIN "maps/gen/GrovePlaza6.blk"
+
+GrovePokecenter6_Blocks:
+	INCBIN "maps/gen/GrovePokecenter6.blk"
+
+GroveMart6_Blocks:
+	INCBIN "maps/gen/GroveMart6.blk"
+
+GroveHouse6_Blocks:
+	INCBIN "maps/gen/GroveHouse6.blk"
+
+GroveStreet14_Blocks:
+	INCBIN "maps/gen/GroveStreet14.blk"
+
+GroveStreet15_Blocks:
+	INCBIN "maps/gen/GroveStreet15.blk"
+
+GrovePlaza7_Blocks:
+	INCBIN "maps/gen/GrovePlaza7.blk"
+
+GrovePokecenter7_Blocks:
+	INCBIN "maps/gen/GrovePokecenter7.blk"
+
+GroveMart7_Blocks:
+	INCBIN "maps/gen/GroveMart7.blk"
+
+GroveHouse7_Blocks:
+	INCBIN "maps/gen/GroveHouse7.blk"
+
+GroveCouncil_Blocks:
+	INCBIN "maps/gen/GroveCouncil.blk"
 
 ENDSECTION
 
@@ -576,6 +857,288 @@ ENDSECTION
 SECTION "TitheCathedral Scripts", ROMX
 
 INCLUDE "maps/gen/TitheCathedral.asm"
+
+ENDSECTION
+
+SECTION "GrovePlaza1 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePlaza1.asm"
+
+ENDSECTION
+
+SECTION "GroveGate Scripts", ROMX
+
+INCLUDE "maps/gen/GroveGate.asm"
+
+ENDSECTION
+
+SECTION "GrovePokecenter1 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePokecenter1.asm"
+
+ENDSECTION
+
+SECTION "GroveMart1 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveMart1.asm"
+
+ENDSECTION
+
+SECTION "GroveHouse1 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveHouse1.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet1 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet1.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet2 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet2.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet3 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet3.asm"
+
+ENDSECTION
+
+SECTION "GrovePlaza2 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePlaza2.asm"
+
+ENDSECTION
+
+SECTION "GrovePokecenter2 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePokecenter2.asm"
+
+ENDSECTION
+
+SECTION "GroveMart2 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveMart2.asm"
+
+ENDSECTION
+
+SECTION "GroveHouse2 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveHouse2.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet4 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet4.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet5 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet5.asm"
+
+ENDSECTION
+
+SECTION "GrovePlaza3 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePlaza3.asm"
+
+ENDSECTION
+
+SECTION "GrovePokecenter3 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePokecenter3.asm"
+
+ENDSECTION
+
+SECTION "GroveMart3 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveMart3.asm"
+
+ENDSECTION
+
+SECTION "GroveHouse3 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveHouse3.asm"
+
+ENDSECTION
+
+SECTION "GroveBoathouse Scripts", ROMX
+
+INCLUDE "maps/gen/GroveBoathouse.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet6 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet6.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet7 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet7.asm"
+
+ENDSECTION
+
+SECTION "GrovePlaza4 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePlaza4.asm"
+
+ENDSECTION
+
+SECTION "GrovePokecenter4 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePokecenter4.asm"
+
+ENDSECTION
+
+SECTION "GroveMart4 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveMart4.asm"
+
+ENDSECTION
+
+SECTION "GroveHouse4 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveHouse4.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet8 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet8.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet9 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet9.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet10 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet10.asm"
+
+ENDSECTION
+
+SECTION "GrovePlaza5 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePlaza5.asm"
+
+ENDSECTION
+
+SECTION "GrovePokecenter5 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePokecenter5.asm"
+
+ENDSECTION
+
+SECTION "GroveMart5 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveMart5.asm"
+
+ENDSECTION
+
+SECTION "GroveHouse5 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveHouse5.asm"
+
+ENDSECTION
+
+SECTION "GroveSmokehouse Scripts", ROMX
+
+INCLUDE "maps/gen/GroveSmokehouse.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet11 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet11.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet12 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet12.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet13 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet13.asm"
+
+ENDSECTION
+
+SECTION "GrovePlaza6 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePlaza6.asm"
+
+ENDSECTION
+
+SECTION "GrovePokecenter6 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePokecenter6.asm"
+
+ENDSECTION
+
+SECTION "GroveMart6 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveMart6.asm"
+
+ENDSECTION
+
+SECTION "GroveHouse6 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveHouse6.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet14 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet14.asm"
+
+ENDSECTION
+
+SECTION "GroveStreet15 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet15.asm"
+
+ENDSECTION
+
+SECTION "GrovePlaza7 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePlaza7.asm"
+
+ENDSECTION
+
+SECTION "GrovePokecenter7 Scripts", ROMX
+
+INCLUDE "maps/gen/GrovePokecenter7.asm"
+
+ENDSECTION
+
+SECTION "GroveMart7 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveMart7.asm"
+
+ENDSECTION
+
+SECTION "GroveHouse7 Scripts", ROMX
+
+INCLUDE "maps/gen/GroveHouse7.asm"
+
+ENDSECTION
+
+SECTION "GroveCouncil Scripts", ROMX
+
+INCLUDE "maps/gen/GroveCouncil.asm"
 
 ENDSECTION
 

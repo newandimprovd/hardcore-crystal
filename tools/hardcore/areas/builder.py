@@ -1,5 +1,5 @@
 """Shared building blocks for the five areas: acts (a run of lanes ending in a plaza), town interiors, bosses."""
-from .layout import (boss_room, chain, house_interior, lane, mart_interior, plaza, pokecenter_interior)
+from .layout import (boss_room, chain, gatehouse, house_interior, lane, mart_interior, plaza, pokecenter_interior)
 from .party import make_party
 from .text import Text
 
@@ -8,19 +8,20 @@ class BossSpec:
     """A boss at the end of an act. level is the highest level of the party, size the party size."""
 
     def __init__(self, room, name, cls, sprite, pal, level, size, seen, beaten, after, template="karen",
-                 item=None, theme=None, landmark=None, music="MUSIC_GYM"):
+                 item=None, theme=None, landmark=None, music="MUSIC_GYM", open_exit=False):
         self.room, self.name, self.cls, self.sprite, self.pal = room, name, cls, sprite, pal
         self.level, self.size = level, size
         self.seen, self.beaten, self.after = seen, beaten, after
         self.template, self.item, self.theme = template, item, theme
-        self.landmark, self.music = landmark, music
+        self.landmark, self.music, self.open_exit = landmark, music, open_exit
 
 
 class ActSpec:
     """lanes lanes of `trainers` fighters each, then a plaza (Pokecenter, Mart, a house, the boss door)."""
 
     def __init__(self, tag, lanes, kit, landmark, music, trainers=13, gate=None, boss=None, houses=1,
-                 mart=None, texts=None, plaza_width=13, lane_names=None, split=None):
+                 mart=None, texts=None, plaza_width=13, lane_names=None, split=None, pal="PALETTE_AUTO"):
+        self.pal = pal
         self.tag, self.lanes, self.kit, self.landmark, self.music = tag, lanes, kit, landmark, music
         self.split = split  # a second, smaller plaza (Pokecenter, Mart, house) after this many lanes
         self.trainers, self.gate, self.boss, self.houses = trainers, gate, boss, houses
@@ -61,21 +62,21 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
         first = i == 0
         gate = act.gate if first else None
         m, s = lane(g, f"{tag}Street{lane_no}", kit, rng, trainers=act.trainers, landmark=act.landmark,
-                    music=act.music, neck=2 if gate else 0, gate=gate, w=w)
+                    music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal)
         chain(below, m)
         lanes.append((m, s))
         below = m
         lane_no += 1
         if act.split and i + 1 == act.split:
             pm, dm = plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
-                           houses=1, width=act.plaza_width)
+                           houses=1, width=act.plaza_width, pal=act.pal)
             chain(below, pm)
             town(w, g, tag, plaza_no, pm, dm, kit, act.landmark, f"{tag.upper()}_{plaza_no}", stocks.pop(0), act.texts,
                  f"{tag.upper()}_{plaza_no}")
             below = pm
             plaza_no += 1
     p, doors = plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
-                     houses=act.houses, extra=1 if act.boss else 0, width=act.plaza_width)
+                     houses=act.houses, extra=1 if act.boss else 0, width=act.plaza_width, pal=act.pal)
     chain(below, p)
     town(w, g, tag, plaza_no, p, doors, kit, act.landmark, f"{tag.upper()}_{plaza_no}", stocks.pop(0), act.texts,
          f"{tag.upper()}_{plaza_no}")
@@ -87,6 +88,16 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
         boss = dict(cls=b.cls, sprite=b.sprite, pal=b.pal, name=b.name, party=party, seen=Text(b.seen),
                     beaten=Text(b.beaten), after=Text(b.after))
         room, exits = boss_room(g, w, b.room, doors["extra"][0], b.landmark or act.landmark, b.music, b.template,
-                                boss, item=b.item, open_exit=False)
-        info = (room, boss)
+                                boss, item=b.item, open_exit=b.open_exit)
+        info = (room, boss, exits)
     return lanes, p, doors, info, lane_no, plaza_no
+
+
+def start_plaza(w, g, rng, kit, tag, landmark, music, texts, stock, entry_doors, gate_name, gate_text, pal="PALETTE_AUTO"):
+    """First plaza of an area (south side closed), reached through a gate house from the unlinked doors
+    `entry_doors` of the previous area's last boss room. Returns the plaza."""
+    p, d = plaza(g, f"{tag}Plaza1", kit, rng, landmark=landmark, music=music, rift=True, houses=1, south="closed",
+                 pal=pal)
+    gatehouse(g, gate_name, entry_doors, d["rift"], landmark, music, [Text(gate_text)])
+    town(w, g, tag, 1, p, d, kit, landmark, f"{tag.upper()}_1", stock, texts, f"{tag.upper()}_1")
+    return p

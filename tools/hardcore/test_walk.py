@@ -137,6 +137,10 @@ class Walker:
             return
         t.poke("wBattleMonMoves", pick_move(t.mem("wEnemyMonType1"), t.mem("wEnemyMonType2")), 0)
         t.poke("wBattleMonPP", 30, 0)
+        for sym in ("wBattleMonStatus", "wPlayerSubStatus1", "wPlayerSubStatus2", "wPlayerSubStatus3",
+                    "wPlayerSubStatus4", "wPlayerSubStatus5", "wPlayerConfuseCount", "wPlayerDisableCount",
+                    "wPlayerEncoreCount", "wDisabledMove"):
+            t.poke(sym, 0)  # the walker only tests maps: no sleep, confusion, Disable or Encore stalls
         t.poke("wCurMoveNum", 0)
         if not self.battle_seen:
             self.battle_seen = True
@@ -362,10 +366,11 @@ def pick_item(wk, name):
     return True
 
 
-def auto_plan(world, first):
+def auto_plan(world, first, prefix=None):
     """Goal list that visits everything of an area: the maps in route order, every plaza building (Pokecenter with
     healing, Mart, houses), boss rooms with their item balls, and the gates of lanes."""
     maps = world.maps
+    prefix = prefix or re.match(r"[A-Z][a-z]+", first)[0]
     goals = []
     seen = set()
 
@@ -388,13 +393,16 @@ def auto_plan(world, first):
             if dm is None or dm.name in seen:
                 continue
             n = dm.name
+            if not n.startswith(prefix):
+                continue
             if "Pokecenter" in n:
                 add("heal:" + n)
             elif "Mart" in n or "House" in n:
                 add(n)
-            elif "Checkpoint" in n:
+            elif "Checkpoint" in n or n.endswith("Gate"):
                 add(n)
-                gate_next = next((world.consts[d].name for (_, _, d, _) in dm.warps if world.consts[d].name != cur), None)
+                gate_next = next((world.consts[d].name for (_, _, d, _) in dm.warps
+                                  if world.consts[d].name != cur and world.consts[d].name.startswith(prefix)), None)
             else:  # a boss room
                 m_item = re.search(r"itemball (\w+)", open(os.path.join(ROOT, f"maps/gen/{n}.asm")).read())
                 if m_item:
@@ -411,9 +419,9 @@ def auto_plan(world, first):
 
 def main():
     rom = sys.argv[1]
-    goals = sys.argv[2].split(",") if len(sys.argv) > 2 and sys.argv[2] != "auto" else None
+    goals = sys.argv[2].split(",") if len(sys.argv) > 2 and not sys.argv[2].startswith("auto") else None
     if goals is None and len(sys.argv) > 2:
-        goals = auto_plan(World(), "TitheRoad")
+        goals = auto_plan(World(), sys.argv[2].partition(":")[2] or "TitheRoad")
         print("plan:", ",".join(goals))
     goals = goals or [
         "TitheRoad", "TitheCheckpoint", "TithePlaza1", "TithePokecenter1", "TitheMart1", "TitheHouse1",

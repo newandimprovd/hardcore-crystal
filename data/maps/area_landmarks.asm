@@ -4,3 +4,6 @@
 	landmark  80,  84, TitheRoadName
 	landmark  80,  62, TitheMidtownName
 	landmark  80,  54, TitheParishName
+	landmark  60,  66, GroveCommuneName
+	landmark  56,  62, GroveOrchardName
+	landmark  52,  58, GroveHearthName

@@ -49,7 +49,7 @@ class Spec:
         return prog
 
 
-def build(w, roster, rng):
+def build(w, roster, rng, open_exit=False):
     spec = Spec()
     g = w.group("AREA1", spec.sprites)
     w.pools[spec.pool] = dict(seen=T.SEEN, beaten=T.BEATEN, after=T.AFTER)
@@ -90,7 +90,7 @@ def build(w, roster, rng):
                      T.EVIDENCE_SEEN, T.EVIDENCE_BEATEN, T.EVIDENCE_AFTER, template="will", item="CROWBAR")
     boss3 = BossSpec("TitheCathedral", "MONSIGNOR", "MYSTICALMAN", "SPRITE_GRAMPS", "PAL_NPC_BROWN", 27, 6,
                      T.CATHEDRAL_SEEN, T.CATHEDRAL_BEATEN, T.CATHEDRAL_AFTER, template="bruno", landmark=LM_PARISH,
-                     music="MUSIC_ROCKET_HIDEOUT")
+                     music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)
     acts = [ActSpec("Tithe", 5, modern, LM_CITY, "MUSIC_GOLDENROD_CITY", boss=boss1, texts=texts, split=3),
             ActSpec("Tithe", 5, modern, LM_MID, "MUSIC_GOLDENROD_CITY", gate="tree", boss=boss2, texts=texts, split=2),
             ActSpec("Tithe", 5, modern, LM_PARISH, "MUSIC_GOLDENROD_CITY", gate="boulder", boss=boss3, texts=texts, split=3)]
@@ -110,4 +110,4 @@ def build(w, roster, rng):
         n = len(s)
         populate(w, m, s, spec, rng, roster, done / total, (done + n) / total)
         done += n
-    return g
+    return g, bosses[-1][2]

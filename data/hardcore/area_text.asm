@@ -983,3 +983,885 @@ HC_AfterText_A1_29:
 
 ENDSECTION
 
+SECTION "Area Text A2", ROMX
+
+HC_SeenText_A2::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_A2_Table
+	ld b, 46
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_A2
+	cp b
+	jr c, .got_HC_SeenText_A2
+	sub b
+	jr .mod_HC_SeenText_A2
+.got_HC_SeenText_A2
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_A2_Table:
+	dw HC_SeenText_A2_0
+	dw HC_SeenText_A2_1
+	dw HC_SeenText_A2_2
+	dw HC_SeenText_A2_3
+	dw HC_SeenText_A2_4
+	dw HC_SeenText_A2_5
+	dw HC_SeenText_A2_6
+	dw HC_SeenText_A2_7
+	dw HC_SeenText_A2_8
+	dw HC_SeenText_A2_9
+	dw HC_SeenText_A2_10
+	dw HC_SeenText_A2_11
+	dw HC_SeenText_A2_12
+	dw HC_SeenText_A2_13
+	dw HC_SeenText_A2_14
+	dw HC_SeenText_A2_15
+	dw HC_SeenText_A2_16
+	dw HC_SeenText_A2_17
+	dw HC_SeenText_A2_18
+	dw HC_SeenText_A2_19
+	dw HC_SeenText_A2_20
+	dw HC_SeenText_A2_21
+	dw HC_SeenText_A2_22
+	dw HC_SeenText_A2_23
+	dw HC_SeenText_A2_24
+	dw HC_SeenText_A2_25
+	dw HC_SeenText_A2_26
+	dw HC_SeenText_A2_27
+	dw HC_SeenText_A2_28
+	dw HC_SeenText_A2_29
+	dw HC_SeenText_A2_30
+	dw HC_SeenText_A2_31
+	dw HC_SeenText_A2_32
+	dw HC_SeenText_A2_33
+	dw HC_SeenText_A2_34
+	dw HC_SeenText_A2_35
+	dw HC_SeenText_A2_36
+	dw HC_SeenText_A2_37
+	dw HC_SeenText_A2_38
+	dw HC_SeenText_A2_39
+	dw HC_SeenText_A2_40
+	dw HC_SeenText_A2_41
+	dw HC_SeenText_A2_42
+	dw HC_SeenText_A2_43
+	dw HC_SeenText_A2_44
+	dw HC_SeenText_A2_45
+
+HC_SeenText_A2_0:
+	text "Welcome, friend!"
+	line "Everything here is"
+	para "free. Including"
+	line "this beating."
+	done
+
+HC_SeenText_A2_1:
+	text "We have no locks"
+	line "here. Nobody has"
+	para "ever needed one."
+	line "Please do not make"
+	para "me start."
+	done
+
+HC_SeenText_A2_2:
+	text "Sharing is caring."
+	line "I'd like to share"
+	para "my Pokemon with"
+	line "your face."
+	done
+
+HC_SeenText_A2_3:
+	text "I traded a basket"
+	line "of nuts for this"
+	para "team. Best deal I"
+	line "never made."
+	done
+
+HC_SeenText_A2_4:
+	text "Clothes are"
+	line "optional here. So"
+	para "is manners,"
+	line "apparently."
+	done
+
+HC_SeenText_A2_5:
+	text "We don't have"
+	line "money. We have"
+	para "vibes. And a"
+	line "hundred mushrooms"
+	para "I can't identify."
+	done
+
+HC_SeenText_A2_6:
+	text "I was a"
+	line "stockbroker once."
+	para "Then I found the"
+	line "berry. Now I fight"
+	para "strangers in a"
+	line "field."
+	done
+
+HC_SeenText_A2_7:
+	text "Ever think a"
+	line "cooked meal is"
+	para "just a raw meal"
+	line "that gave up?"
+	done
+
+HC_SeenText_A2_8:
+	text "The elders say a"
+	line "stranger brings"
+	para "change. You look"
+	line "like a lot of"
+	para "change."
+	done
+
+HC_SeenText_A2_9:
+	text "Join the commune!"
+	line "The initiation is"
+	para "a battle. And the"
+	line "other thing, but"
+	para "later."
+	done
+
+HC_SeenText_A2_10:
+	text "I forage. I"
+	line "gather. I punch."
+	para "It's a cycle."
+	done
+
+HC_SeenText_A2_11:
+	text "We have"
+	line "thirty-seven words"
+	para "for rain and one"
+	line "for fighting. Hit"
+	para "me."
+	done
+
+HC_SeenText_A2_12:
+	text "Don't mind the"
+	line "smell. It's the"
+	para "compost. Also me."
+	done
+
+HC_SeenText_A2_13:
+	text "My partners and I"
+	line "are in an open"
+	para "relationship with"
+	line "the whole forest."
+	para "Mostly the"
+	line "squirrels."
+	done
+
+HC_SeenText_A2_14:
+	text "No one owns"
+	line "anything here."
+	para "That bone you're"
+	line "holding is mine,"
+	para "by the way."
+	done
+
+HC_SeenText_A2_15:
+	text "I came here to"
+	line "find myself. Turns"
+	para "out I'm in a bush."
+	done
+
+HC_SeenText_A2_16:
+	text "Plenty of food and"
+	line "no landlords."
+	para "What's the catch?"
+	line "Me. I'm the catch."
+	done
+
+HC_SeenText_A2_17:
+	text "You're wearing so"
+	line "many layers. Let"
+	para "me help with"
+	line "those. By force."
+	done
+
+HC_SeenText_A2_18:
+	text "My guru says"
+	line "restrictive"
+	para "boundaries are"
+	line "Ahrimanic. I'm"
+	para "still working out"
+	line "what that means."
+	para "Fight me about it."
+	done
+
+HC_SeenText_A2_19:
+	text "Where's your"
+	line "tribe? No tribe?"
+	para "Then I adopt you."
+	line "After this."
+	done
+
+HC_SeenText_A2_20:
+	text "I haven't worn"
+	line "shoes in six"
+	para "years. My feet are"
+	line "armor. My Pokemon"
+	para "are armor."
+	done
+
+HC_SeenText_A2_21:
+	text "The river"
+	line "provides. The"
+	para "forest provides."
+	line "You provide a"
+	para "challenge."
+	done
+
+HC_SeenText_A2_22:
+	text "I'm a monogamy"
+	line "evangelist. They"
+	para "fed me berries and"
+	line "now I have six"
+	para "boyfriends. Pray"
+	line "for me."
+	done
+
+HC_SeenText_A2_23:
+	text "I audit"
+	line "relationships for"
+	para "a living. Yours is"
+	line "a disaster. Let me"
+	para "take that out on"
+	line "your team."
+	done
+
+HC_SeenText_A2_24:
+	text "We believe in"
+	line "total honesty."
+	para "Your team is"
+	line "mediocre. Your"
+	para "aura is mediocre."
+	line "Your shoes are"
+	para "mediocre."
+	done
+
+HC_SeenText_A2_25:
+	text "There is a"
+	line "sunscreen"
+	para "shortage. I am"
+	line "very upset. You"
+	para "will pay for it."
+	done
+
+HC_SeenText_A2_26:
+	text "I made this team"
+	line "from scratch. And"
+	para "by scratch I mean"
+	line "I found it in a"
+	para "ditch."
+	done
+
+HC_SeenText_A2_27:
+	text "Everyone here"
+	line "loves everyone."
+	para "Except you. You"
+	line "I'm still deciding"
+	para "about."
+	done
+
+HC_SeenText_A2_28:
+	text "Do you like sauna?"
+	line "No? Then you're"
+	para "going to love"
+	line "this."
+	done
+
+HC_SeenText_A2_29:
+	text "I once ate a"
+	line "mushroom and met"
+	para "my father. He's a"
+	line "tree now. Get out"
+	para "of his way."
+	done
+
+HC_SeenText_A2_30:
+	text "The commune has no"
+	line "police. The"
+	para "commune has me."
+	done
+
+HC_SeenText_A2_31:
+	text "We don't believe"
+	line "in sin. We believe"
+	para "in consequences."
+	line "You are about to"
+	para "meet them."
+	done
+
+HC_SeenText_A2_32:
+	text "I've been"
+	line "gathering my"
+	para "thoughts all"
+	line "morning. Here,"
+	para "take them. Take"
+	line "them all."
+	done
+
+HC_SeenText_A2_33:
+	text "Every night we sit"
+	line "in a circle and"
+	para "share our"
+	line "feelings. Tonight"
+	para "it's your turn,"
+	line "with my fists."
+	done
+
+HC_SeenText_A2_34:
+	text "We heal with herbs"
+	line "and fire. And with"
+	para "the occasional"
+	line "punch. Mostly the"
+	para "punch."
+	done
+
+HC_SeenText_A2_35:
+	text "I used to be a"
+	line "lawyer. Now I"
+	para "weave. I'm better"
+	line "at both than I"
+	para "was."
+	done
+
+HC_SeenText_A2_36:
+	text "You smell like"
+	line "money. We don't"
+	para "like that here."
+	line "Wash it off. In my"
+	para "fight."
+	done
+
+HC_SeenText_A2_37:
+	text "I'm told I"
+	line "overshare. I had"
+	para "no idea. Anyway,"
+	line "here's my team."
+	done
+
+HC_SeenText_A2_38:
+	text "A man tried to"
+	line "build a fence here"
+	para "once. We ate him."
+	line "Gently."
+	para "Spiritually."
+	done
+
+HC_SeenText_A2_39:
+	text "I'm very, very"
+	line "relaxed. Which is"
+	para "a lot of"
+	line "confidence for"
+	para "what's about to"
+	line "happen."
+	done
+
+HC_SeenText_A2_40:
+	text "We have a policy"
+	line "of radical"
+	para "acceptance. Which"
+	line "means I accept"
+	para "that you're going"
+	line "to lose."
+	done
+
+HC_SeenText_A2_41:
+	text "Everyone is"
+	line "welcome here, even"
+	para "rude people."
+	line "Especially rude"
+	para "people. We have a"
+	line "berry for that."
+	done
+
+HC_SeenText_A2_42:
+	text "Careful, the grass"
+	line "is damp and I'm"
+	para "not wearing much."
+	line "I'm still going to"
+	para "win."
+	done
+
+HC_SeenText_A2_43:
+	text "I like how you"
+	line "look at me. No,"
+	para "wait. That's fear."
+	done
+
+HC_SeenText_A2_44:
+	text "No time to talk,"
+	line "I'm on my second"
+	para "breakfast. Have a"
+	line "battle."
+	done
+
+HC_SeenText_A2_45:
+	text "Do you know what"
+	line "happens to people"
+	para "who don't gather?"
+	line "They hunt. Hello."
+	done
+
+
+HC_BeatenText_A2::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_A2_Table
+	ld b, 26
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_A2
+	cp b
+	jr c, .got_HC_BeatenText_A2
+	sub b
+	jr .mod_HC_BeatenText_A2
+.got_HC_BeatenText_A2
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_A2_Table:
+	dw HC_BeatenText_A2_0
+	dw HC_BeatenText_A2_1
+	dw HC_BeatenText_A2_2
+	dw HC_BeatenText_A2_3
+	dw HC_BeatenText_A2_4
+	dw HC_BeatenText_A2_5
+	dw HC_BeatenText_A2_6
+	dw HC_BeatenText_A2_7
+	dw HC_BeatenText_A2_8
+	dw HC_BeatenText_A2_9
+	dw HC_BeatenText_A2_10
+	dw HC_BeatenText_A2_11
+	dw HC_BeatenText_A2_12
+	dw HC_BeatenText_A2_13
+	dw HC_BeatenText_A2_14
+	dw HC_BeatenText_A2_15
+	dw HC_BeatenText_A2_16
+	dw HC_BeatenText_A2_17
+	dw HC_BeatenText_A2_18
+	dw HC_BeatenText_A2_19
+	dw HC_BeatenText_A2_20
+	dw HC_BeatenText_A2_21
+	dw HC_BeatenText_A2_22
+	dw HC_BeatenText_A2_23
+	dw HC_BeatenText_A2_24
+	dw HC_BeatenText_A2_25
+
+HC_BeatenText_A2_0:
+	text "Oh. Ow. That's a"
+	line "new feeling. I'll"
+	para "write a poem about"
+	line "it."
+	done
+
+HC_BeatenText_A2_1:
+	text "You win. Take a"
+	line "berry. Take all"
+	para "the berries."
+	done
+
+HC_BeatenText_A2_2:
+	text "I accept this"
+	line "defeat radically."
+	done
+
+HC_BeatenText_A2_3:
+	text "My feelings are"
+	line "hurt. And my ribs."
+	para "Mostly the ribs."
+	done
+
+HC_BeatenText_A2_4:
+	text "I have no hard"
+	line "feelings. I have a"
+	para "lot of soft ones."
+	done
+
+HC_BeatenText_A2_5:
+	text "Fine. You win. We"
+	line "share everything"
+	para "here, and now that"
+	line "includes the loss."
+	done
+
+HC_BeatenText_A2_6:
+	text "I'll go meditate."
+	line "Or cry. Possibly"
+	para "both. Possibly in"
+	line "a tree."
+	done
+
+HC_BeatenText_A2_7:
+	text "You hit like a"
+	line "landlord. I"
+	para "thought we'd"
+	line "escaped those."
+	done
+
+HC_BeatenText_A2_8:
+	text "Please be gentle"
+	line "with the bodies."
+	para "They've got"
+	line "feelings. Or at"
+	para "least pollen."
+	done
+
+HC_BeatenText_A2_9:
+	text "That was a very"
+	line "honest fight."
+	para "Honestly, I hated"
+	line "it."
+	done
+
+HC_BeatenText_A2_10:
+	text "The elders will"
+	line "hear about this."
+	para "They won't care."
+	line "They're asleep."
+	done
+
+HC_BeatenText_A2_11:
+	text "I lost? I lost!"
+	line "Wow. That doesn't"
+	para "feel like sharing"
+	line "at all."
+	done
+
+HC_BeatenText_A2_12:
+	text "Aaah! My aura! My"
+	line "other aura!"
+	done
+
+HC_BeatenText_A2_13:
+	text "I forgive you in"
+	line "advance. And also"
+	para "after. And during."
+	done
+
+HC_BeatenText_A2_14:
+	text "Take what you"
+	line "need. We never"
+	para "lock anything."
+	line "You'll understand"
+	para "soon."
+	done
+
+HC_BeatenText_A2_15:
+	text "Whoa. Heavy. Real"
+	line "heavy, man. Like,"
+	para "structurally"
+	line "heavy."
+	done
+
+HC_BeatenText_A2_16:
+	text "Is that how it's"
+	line "done out there?"
+	para "Out there is"
+	line "terrible."
+	done
+
+HC_BeatenText_A2_17:
+	text "I was a banker. I"
+	line "feel so much"
+	para "better being"
+	line "beaten."
+	done
+
+HC_BeatenText_A2_18:
+	text "The forest heard"
+	line "that. The forest"
+	para "is judging you,"
+	line "too."
+	done
+
+HC_BeatenText_A2_19:
+	text "I have wounded"
+	line "pride, a wounded"
+	para "team and a very"
+	line "exposed back. Be"
+	para "kind."
+	done
+
+HC_BeatenText_A2_20:
+	text "That's the third"
+	line "time I've been"
+	para "fainted this week."
+	line "Hey, it's honest"
+	para "work."
+	done
+
+HC_BeatenText_A2_21:
+	text "Well. That's one"
+	line "way to open a"
+	para "chakra."
+	done
+
+HC_BeatenText_A2_22:
+	text "Yes! Yes! More!"
+	line "Wait, no, I'm"
+	para "kidding. Stop."
+	line "Seriously."
+	done
+
+HC_BeatenText_A2_23:
+	text "That wasn't a fair"
+	line "fight. It was an"
+	para "honest one, which"
+	line "is worse."
+	done
+
+HC_BeatenText_A2_24:
+	text "This is the wrong"
+	line "kind of intimacy."
+	done
+
+HC_BeatenText_A2_25:
+	text "I think I learned"
+	line "something. Mostly"
+	para "about hospital"
+	line "food."
+	done
+
+
+HC_AfterText_A2::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_A2_Table
+	ld b, 20
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_A2
+	cp b
+	jr c, .got_HC_AfterText_A2
+	sub b
+	jr .mod_HC_AfterText_A2
+.got_HC_AfterText_A2
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_A2_Table:
+	dw HC_AfterText_A2_0
+	dw HC_AfterText_A2_1
+	dw HC_AfterText_A2_2
+	dw HC_AfterText_A2_3
+	dw HC_AfterText_A2_4
+	dw HC_AfterText_A2_5
+	dw HC_AfterText_A2_6
+	dw HC_AfterText_A2_7
+	dw HC_AfterText_A2_8
+	dw HC_AfterText_A2_9
+	dw HC_AfterText_A2_10
+	dw HC_AfterText_A2_11
+	dw HC_AfterText_A2_12
+	dw HC_AfterText_A2_13
+	dw HC_AfterText_A2_14
+	dw HC_AfterText_A2_15
+	dw HC_AfterText_A2_16
+	dw HC_AfterText_A2_17
+	dw HC_AfterText_A2_18
+	dw HC_AfterText_A2_19
+
+HC_AfterText_A2_0:
+	text "We don't have a"
+	line "word for what"
+	para "you're doing. We"
+	line "made one up. It's"
+	para "'rude'."
+	done
+
+HC_AfterText_A2_1:
+	text "Someone left a"
+	line "body in the"
+	para "lettuce. Nobody's"
+	line "saying who."
+	para "Probably the"
+	line "lettuce."
+	done
+
+HC_AfterText_A2_2:
+	text "No locks. No"
+	line "walls. No"
+	para "judgment. I'm"
+	line "starting to see a"
+	para "pattern, though."
+	done
+
+HC_AfterText_A2_3:
+	text "We found a body by"
+	line "the river. We're"
+	para "still deciding"
+	line "whether it's art."
+	done
+
+HC_AfterText_A2_4:
+	text "My partner went to"
+	line "look for the"
+	para "others. That was"
+	line "an hour ago. I'm"
+	para "worried and"
+	line "slightly aroused."
+	para "That's just how I"
+	line "get."
+	done
+
+HC_AfterText_A2_5:
+	text "Everything's fine."
+	line "The forest has"
+	para "seen worse. The"
+	line "forest is lying."
+	done
+
+HC_AfterText_A2_6:
+	text "If you see a man"
+	line "with a fence, kill"
+	para "him. No wait."
+	line "Don't. We don't do"
+	para "that."
+	done
+
+HC_AfterText_A2_7:
+	text "The elders say"
+	line "balance is key."
+	para "The elders are"
+	line "also the ones"
+	para "eating the keys."
+	done
+
+HC_AfterText_A2_8:
+	text "Take as many"
+	line "berries as you"
+	para "want. Take the"
+	line "dead guy's too."
+	para "He's not using"
+	line "them."
+	done
+
+HC_AfterText_A2_9:
+	text "I'm trying to stay"
+	line "in the moment. The"
+	para "moment is on fire."
+	done
+
+HC_AfterText_A2_10:
+	text "My guru says your"
+	line "kills are a pact."
+	para "Funny. Mine just"
+	line "says 'lol'."
+	done
+
+HC_AfterText_A2_11:
+	text "It's quiet here at"
+	line "night. Too quiet."
+	para "I miss the fence"
+	line "people."
+	done
+
+HC_AfterText_A2_12:
+	text "We used to feel"
+	line "safe. Then you"
+	para "showed up. Now we"
+	line "feel... dramatic."
+	done
+
+HC_AfterText_A2_13:
+	text "I'd leave this"
+	line "commune if I had"
+	para "anywhere to go. Or"
+	line "any fence."
+	done
+
+HC_AfterText_A2_14:
+	text "I'm not mad. I'm"
+	line "just really,"
+	para "really sad. In a"
+	line "communal way."
+	done
+
+HC_AfterText_A2_15:
+	text "My neighbors are"
+	line "all lying around."
+	para "I don't think"
+	line "they're napping."
+	done
+
+HC_AfterText_A2_16:
+	text "I wonder if it's"
+	line "worth it, living"
+	para "with no locks."
+	line "Anyway."
+	done
+
+HC_AfterText_A2_17:
+	text "Say hi to the tree"
+	line "for me. No, the"
+	para "other tree. The"
+	line "one with the dad"
+	para "in it."
+	done
+
+HC_AfterText_A2_18:
+	text "Today I'm going to"
+	line "forage for"
+	para "revenge. Wait,"
+	line "that's not a"
+	para "berry."
+	done
+
+HC_AfterText_A2_19:
+	text "I tried to share"
+	line "my fear with the"
+	para "group. The group"
+	line "is mostly bees."
+	done
+
+
+ENDSECTION
+

@@ -48,8 +48,8 @@ HC_GenGroupTable:
 	dw 0 ; 22 YOUNGSTER
 	db BANK(HC_GenGroup_SCHOOLBOY)
 	dw HC_GenGroup_SCHOOLBOY ; 23 SCHOOLBOY
-	db 0
-	dw 0 ; 24 BIRD_KEEPER
+	db BANK(HC_GenGroup_BIRD_KEEPER)
+	dw HC_GenGroup_BIRD_KEEPER ; 24 BIRD_KEEPER
 	db BANK(HC_GenGroup_LASS)
 	dw HC_GenGroup_LASS ; 25 LASS
 	db 0
@@ -72,14 +72,14 @@ HC_GenGroupTable:
 	dw HC_GenGroup_TEACHER ; 34 TEACHER
 	db 0
 	dw 0 ; 35 SABRINA
-	db 0
-	dw 0 ; 36 BUG_CATCHER
-	db 0
-	dw 0 ; 37 FISHER
-	db 0
-	dw 0 ; 38 SWIMMERM
-	db 0
-	dw 0 ; 39 SWIMMERF
+	db BANK(HC_GenGroup_BUG_CATCHER)
+	dw HC_GenGroup_BUG_CATCHER ; 36 BUG_CATCHER
+	db BANK(HC_GenGroup_FISHER)
+	dw HC_GenGroup_FISHER ; 37 FISHER
+	db BANK(HC_GenGroup_SWIMMERM)
+	dw HC_GenGroup_SWIMMERM ; 38 SWIMMERM
+	db BANK(HC_GenGroup_SWIMMERF)
+	dw HC_GenGroup_SWIMMERF ; 39 SWIMMERF
 	db 0
 	dw 0 ; 40 SAILOR
 	db BANK(HC_GenGroup_SUPER_NERD)
@@ -88,8 +88,8 @@ HC_GenGroupTable:
 	dw 0 ; 42 RIVAL2
 	db BANK(HC_GenGroup_GUITARIST)
 	dw HC_GenGroup_GUITARIST ; 43 GUITARIST
-	db 0
-	dw 0 ; 44 HIKER
+	db BANK(HC_GenGroup_HIKER)
+	dw HC_GenGroup_HIKER ; 44 HIKER
 	db BANK(HC_GenGroup_BIKER)
 	dw HC_GenGroup_BIKER ; 45 BIKER
 	db 0
@@ -106,26 +106,26 @@ HC_GenGroupTable:
 	dw 0 ; 51 EXECUTIVEM
 	db 0
 	dw 0 ; 52 PSYCHIC_T
-	db 0
-	dw 0 ; 53 PICNICKER
-	db 0
-	dw 0 ; 54 CAMPER
+	db BANK(HC_GenGroup_PICNICKER)
+	dw HC_GenGroup_PICNICKER ; 53 PICNICKER
+	db BANK(HC_GenGroup_CAMPER)
+	dw HC_GenGroup_CAMPER ; 54 CAMPER
 	db 0
 	dw 0 ; 55 EXECUTIVEF
 	db BANK(HC_GenGroup_SAGE)
 	dw HC_GenGroup_SAGE ; 56 SAGE
-	db 0
-	dw 0 ; 57 MEDIUM
+	db BANK(HC_GenGroup_MEDIUM)
+	dw HC_GenGroup_MEDIUM ; 57 MEDIUM
 	db 0
 	dw 0 ; 58 BOARDER
 	db BANK(HC_GenGroup_POKEFANM)
 	dw HC_GenGroup_POKEFANM ; 59 POKEFANM
-	db 0
-	dw 0 ; 60 KIMONO_GIRL
+	db BANK(HC_GenGroup_KIMONO_GIRL)
+	dw HC_GenGroup_KIMONO_GIRL ; 60 KIMONO_GIRL
 	db 0
 	dw 0 ; 61 TWINS
-	db 0
-	dw 0 ; 62 POKEFANF
+	db BANK(HC_GenGroup_POKEFANF)
+	dw HC_GenGroup_POKEFANF ; 62 POKEFANF
 	db 0
 	dw 0 ; 63 RED
 	db 0

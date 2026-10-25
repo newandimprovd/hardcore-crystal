@@ -7,3 +7,10 @@
 	const SPAWN_TITHE_5
 	const SPAWN_TITHE_6
 	const SPAWN_TITHE_7
+	const SPAWN_GROVE_1
+	const SPAWN_GROVE_2
+	const SPAWN_GROVE_3
+	const SPAWN_GROVE_4
+	const SPAWN_GROVE_5
+	const SPAWN_GROVE_6
+	const SPAWN_GROVE_7
