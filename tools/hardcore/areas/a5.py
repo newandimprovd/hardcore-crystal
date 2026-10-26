@@ -40,10 +40,10 @@ def build(w, roster, rng, entry_doors):
                  T.CAGE_BEATEN, T.CAGE_AFTER, template="will"),
         BossSpec("JudeccaCentre", "FINNEGAN", "MYSTICALMAN", "SPRITE_GRAMPS", "PAL_NPC_BLUE", 95, 6, T.SLEEPER_SEEN,
                  T.SLEEPER_BEATEN, T.SLEEPER_AFTER, template="bruno", landmark="LANDMARK_DIS_JUDECCA",
-                 music="MUSIC_ROCKET_HIDEOUT")]
+                 music="MUSIC_ROCKET_HIDEOUT", story=3)]
     cfg = AreaCfg("AREA5", "Dis", Spec(), kits.kanto(), "PALETTE_NITE",
                   [("DIS_CITY", 24, 50, "THE<BSP>CITY<BSP>OF<BSP>DIS"), ("DIS_COCYTUS", 20, 46, "LAKE<BSP>COCYTUS"),
                    ("DIS_JUDECCA", 16, 42, "JUDECCA")],
                   "MUSIC_ROCKET_HIDEOUT", texts, TIERS, bosses, [None, None, None], [3, 2, 3], "DisGate",
-                  T.GATE[0], stock_ix=(2, 2, 2, 2, 2, 2, 2))
+                  T.GATE[0], trainers=([14, 13, 14, 13, 13], [13, 14, 13, 13, 14], 13), stock_ix=(2, 2, 2, 2, 2, 2, 2))
     return build_area(w, roster, rng, cfg, entry_doors)

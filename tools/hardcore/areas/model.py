@@ -73,6 +73,23 @@ class Warp:
         return self.m.warps.index(self) + 1
 
 
+class ForeignWarp:
+    """A warp that lives in a vanilla map (hand-edited): only its map constant and warp number are needed."""
+
+    def __init__(self, const, index):
+        class _M:
+            pass
+        self.m = _M()
+        self.m.const = const
+        self.m.name = const
+        self._index = index
+        self.dest = None
+
+    @property
+    def index(self):
+        return self._index
+
+
 def link(a, b):
     """Make warps a and b lead to each other."""
     a.dest, b.dest = b, a
@@ -193,6 +210,7 @@ class World:
         self.marts = []  # (const, label, items)
         self.pools = OrderedDict()  # pool label -> list of text strings
         self.extra_asm = []
+        self.story = []  # (trainer class, id, kind) of bosses that run a story script after their death
 
     def group(self, key, sprites, **kw):
         g = Group(key, sprites, **kw)

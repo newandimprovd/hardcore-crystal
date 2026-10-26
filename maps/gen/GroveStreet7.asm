@@ -27,43 +27,43 @@ GroveStreet7AfterScript:
 	end
 
 GroveStreet7Trainer0:
-	trainer CAMPER, 133, EVENT_GEN_GROVE_STREET7_0, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer BEAUTY, 139, EVENT_GEN_GROVE_STREET7_0, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer1:
-	trainer SAGE, 136, EVENT_GEN_GROVE_STREET7_1, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer FISHER, 136, EVENT_GEN_GROVE_STREET7_1, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer2:
-	trainer POKEFANM, 144, EVENT_GEN_GROVE_STREET7_2, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer SAGE, 133, EVENT_GEN_GROVE_STREET7_2, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer3:
-	trainer HIKER, 133, EVENT_GEN_GROVE_STREET7_3, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer SAGE, 134, EVENT_GEN_GROVE_STREET7_3, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer4:
-	trainer BUG_CATCHER, 136, EVENT_GEN_GROVE_STREET7_4, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer KIMONO_GIRL, 134, EVENT_GEN_GROVE_STREET7_4, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer5:
-	trainer KIMONO_GIRL, 136, EVENT_GEN_GROVE_STREET7_5, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer SUPER_NERD, 143, EVENT_GEN_GROVE_STREET7_5, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer6:
-	trainer SAGE, 137, EVENT_GEN_GROVE_STREET7_6, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer HIKER, 139, EVENT_GEN_GROVE_STREET7_6, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer7:
 	trainer BUG_CATCHER, 137, EVENT_GEN_GROVE_STREET7_7, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer8:
-	trainer HIKER, 134, EVENT_GEN_GROVE_STREET7_8, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer FISHER, 137, EVENT_GEN_GROVE_STREET7_8, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer9:
-	trainer POKEFANF, 132, EVENT_GEN_GROVE_STREET7_9, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer SUPER_NERD, 144, EVENT_GEN_GROVE_STREET7_9, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer10:
-	trainer POKEFANF, 133, EVENT_GEN_GROVE_STREET7_10, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer SAGE, 135, EVENT_GEN_GROVE_STREET7_10, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer11:
 	trainer PICNICKER, 130, EVENT_GEN_GROVE_STREET7_11, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7Trainer12:
-	trainer PICNICKER, 131, EVENT_GEN_GROVE_STREET7_12, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer HIKER, 140, EVENT_GEN_GROVE_STREET7_12, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7_MapEvents:
 	db 0, 0 ; filler
@@ -75,17 +75,17 @@ GroveStreet7_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  6, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer0, -1
-	object_event 11, 20, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer1, -1
-	object_event  6, 18, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer2, -1
-	object_event 11, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer3, -1
-	object_event  6, 14, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer4, -1
-	object_event 11, 12, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer5, -1
-	object_event  6, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer6, -1
-	object_event  6,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer7, -1
-	object_event 11,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer8, -1
-	object_event  6,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer9, -1
-	object_event 11,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer10, -1
-	object_event  6,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer11, -1
-	object_event 11,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer12, -1
+	object_event  6, 20, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer0, -1
+	object_event 11, 20, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer1, -1
+	object_event  6, 18, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer2, -1
+	object_event 11, 18, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer3, -1
+	object_event  6, 16, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer4, -1
+	object_event  6, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer5, -1
+	object_event 11, 14, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer6, -1
+	object_event 11, 12, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer7, -1
+	object_event  6, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer8, -1
+	object_event 11, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer9, -1
+	object_event  6,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer10, -1
+	object_event 11,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer11, -1
+	object_event  6,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer12, -1
 

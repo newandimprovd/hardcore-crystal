@@ -25,8 +25,8 @@ DisGate_MapEvents:
 	def_warp_events
 	warp_event  4,  0, DIS_PLAZA1, 4
 	warp_event  5,  0, DIS_PLAZA1, 4
-	warp_event  4,  7, LOTUS_MANSION, 3
-	warp_event  5,  7, LOTUS_MANSION, 3
+	warp_event  4,  7, NEW_BARK_TOWN, 5
+	warp_event  5,  7, NEW_BARK_TOWN, 5
 
 	def_coord_events
 

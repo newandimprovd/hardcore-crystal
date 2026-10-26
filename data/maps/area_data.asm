@@ -549,6 +549,10 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes LotusMansion, LOTUS_MANSION, $00
 
+	map_attributes LotusHall, LOTUS_HALL, $00
+
+	map_attributes LotusBedroom, LOTUS_BEDROOM, $00
+
 	map_attributes DisPlaza1, DIS_PLAZA1, $0f
 	connection north, DisStreet1, DIS_STREET1, 0
 
@@ -1267,6 +1271,12 @@ LotusHouse7_Blocks:
 
 LotusMansion_Blocks:
 	INCBIN "maps/gen/LotusMansion.blk"
+
+LotusHall_Blocks:
+	INCBIN "maps/gen/LotusHall.blk"
+
+LotusBedroom_Blocks:
+	INCBIN "maps/gen/LotusBedroom.blk"
 
 ENDSECTION
 
@@ -2546,6 +2556,18 @@ ENDSECTION
 SECTION "LotusMansion Scripts", ROMX
 
 INCLUDE "maps/gen/LotusMansion.asm"
+
+ENDSECTION
+
+SECTION "LotusHall Scripts", ROMX
+
+INCLUDE "maps/gen/LotusHall.asm"
+
+ENDSECTION
+
+SECTION "LotusBedroom Scripts", ROMX
+
+INCLUDE "maps/gen/LotusBedroom.asm"
 
 ENDSECTION
 

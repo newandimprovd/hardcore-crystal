@@ -27,43 +27,43 @@ DisStreet8AfterScript:
 	end
 
 DisStreet8Trainer0:
-	trainer SAGE, 161, EVENT_GEN_DIS_STREET8_0, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer BEAUTY, 168, EVENT_GEN_DIS_STREET8_0, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer1:
-	trainer JUGGLER, 137, EVENT_GEN_DIS_STREET8_1, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer GRUNTF, 169, EVENT_GEN_DIS_STREET8_1, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer2:
-	trainer SAGE, 162, EVENT_GEN_DIS_STREET8_2, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer BLACKBELT_T, 163, EVENT_GEN_DIS_STREET8_2, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer3:
-	trainer GRUNTF, 171, EVENT_GEN_DIS_STREET8_3, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer SCIENTIST, 164, EVENT_GEN_DIS_STREET8_3, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer4:
-	trainer BURGLAR, 141, EVENT_GEN_DIS_STREET8_4, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer BURGLAR, 147, EVENT_GEN_DIS_STREET8_4, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer5:
-	trainer BEAUTY, 166, EVENT_GEN_DIS_STREET8_5, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer MEDIUM, 138, EVENT_GEN_DIS_STREET8_5, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer6:
-	trainer GRUNTF, 172, EVENT_GEN_DIS_STREET8_6, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer GRUNTF, 170, EVENT_GEN_DIS_STREET8_6, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer7:
-	trainer BLACKBELT_T, 161, EVENT_GEN_DIS_STREET8_7, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer PSYCHIC_T, 136, EVENT_GEN_DIS_STREET8_7, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer8:
-	trainer SCIENTIST, 170, EVENT_GEN_DIS_STREET8_8, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer GRUNTM, 189, EVENT_GEN_DIS_STREET8_8, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer9:
-	trainer BURGLAR, 142, EVENT_GEN_DIS_STREET8_9, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer SAGE, 168, EVENT_GEN_DIS_STREET8_9, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer10:
-	trainer MEDIUM, 136, EVENT_GEN_DIS_STREET8_10, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer BLACKBELT_T, 164, EVENT_GEN_DIS_STREET8_10, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer11:
-	trainer GRUNTF, 173, EVENT_GEN_DIS_STREET8_11, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer MEDIUM, 139, EVENT_GEN_DIS_STREET8_11, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8Trainer12:
-	trainer PSYCHIC_T, 137, EVENT_GEN_DIS_STREET8_12, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer BIKER, 153, EVENT_GEN_DIS_STREET8_12, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8_MapEvents:
 	db 0, 0 ; filler
@@ -75,17 +75,17 @@ DisStreet8_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  6, 20, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer0, -1
-	object_event 11, 20, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer1, -1
-	object_event  6, 18, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer2, -1
-	object_event  6, 16, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer3, -1
-	object_event 11, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer4, -1
-	object_event 11, 14, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer5, -1
-	object_event  6, 12, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer6, -1
-	object_event 11, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer7, -1
-	object_event  6,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer8, -1
-	object_event 11,  8, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer9, -1
-	object_event  6,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer10, -1
-	object_event  6,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer11, -1
-	object_event 11,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer12, -1
+	object_event  6, 20, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer0, -1
+	object_event 11, 18, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer1, -1
+	object_event  6, 16, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer2, -1
+	object_event  6, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer3, -1
+	object_event 11, 14, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer4, -1
+	object_event  6, 12, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer5, -1
+	object_event 11, 12, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer6, -1
+	object_event  6, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer7, -1
+	object_event 11, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer8, -1
+	object_event 11,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer9, -1
+	object_event  6,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer10, -1
+	object_event 11,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer11, -1
+	object_event  6,  4, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer12, -1
 

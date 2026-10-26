@@ -8,12 +8,13 @@ class BossSpec:
     """A boss at the end of an act. level is the highest level of the party, size the party size."""
 
     def __init__(self, room, name, cls, sprite, pal, level, size, seen, beaten, after, template="karen",
-                 item=None, theme=None, landmark=None, music="MUSIC_GYM", open_exit=False):
+                 item=None, theme=None, landmark=None, music="MUSIC_GYM", open_exit=False, story=0):
         self.room, self.name, self.cls, self.sprite, self.pal = room, name, cls, sprite, pal
         self.level, self.size = level, size
         self.seen, self.beaten, self.after = seen, beaten, after
         self.template, self.item, self.theme = template, item, theme
         self.landmark, self.music, self.open_exit = landmark, music, open_exit
+        self.story = story  # 2 = the rival (kill 800), 3 = the final boss: scripts in engine/hardcore/story.asm
 
 
 class ActSpec:
@@ -61,7 +62,8 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
     for i in range(act.lanes):
         first = i == 0
         gate = act.gate if first else None
-        m, s = lane(g, f"{tag}Street{lane_no}", kit, rng, trainers=act.trainers, landmark=act.landmark,
+        tr = act.trainers[i] if isinstance(act.trainers, (list, tuple)) else act.trainers
+        m, s = lane(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark,
                     music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal)
         chain(below, m)
         lanes.append((m, s))
@@ -88,7 +90,7 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
         boss = dict(cls=b.cls, sprite=b.sprite, pal=b.pal, name=b.name, party=party, seen=Text(b.seen),
                     beaten=Text(b.beaten), after=Text(b.after))
         room, exits = boss_room(g, w, b.room, doors["extra"][0], b.landmark or act.landmark, b.music, b.template,
-                                boss, item=b.item, open_exit=b.open_exit)
+                                boss, item=b.item, open_exit=b.open_exit, story=b.story)
         info = (room, boss, exits)
     return lanes, p, doors, info, lane_no, plaza_no
 
@@ -108,7 +110,8 @@ class AreaCfg:
     the gate of act 2, boss2 the one for the gate of act 3, boss3 ends the area."""
 
     def __init__(self, key, tag, spec, kit, pal, landmarks, music, texts, tiers, bosses, gates, splits,
-                 gate_name, gate_text, stock_ix=(0, 0, 1, 1, 2, 2, 2), lanes=(5, 5, 5)):
+                 gate_name, gate_text, stock_ix=(0, 0, 1, 1, 2, 2, 2), lanes=(5, 5, 5), trainers=(13, 13, 13)):
+        self.trainers = trainers  # per act: one number for every lane, or a list with one number per lane
         self.key, self.tag, self.spec, self.kit, self.pal = key, tag, spec, kit, pal
         self.landmarks, self.music, self.texts, self.tiers = landmarks, music, texts, tiers
         self.bosses, self.gates, self.splits = bosses, gates, splits
@@ -131,8 +134,8 @@ def build_area(w, roster, rng, cfg, entry_doors):
                      cfg.gate_name, cfg.gate_text, pal=cfg.pal)
     acts = []
     for k in range(3):
-        acts.append(ActSpec(cfg.tag, cfg.lanes[k], cfg.kit, lms[k], cfg.music, boss=cfg.bosses[k], texts=cfg.texts,
-                            split=cfg.splits[k], gate=cfg.gates[k], pal=cfg.pal))
+        acts.append(ActSpec(cfg.tag, cfg.lanes[k], cfg.kit, lms[k], cfg.music, trainers=cfg.trainers[k],
+                            boss=cfg.bosses[k], texts=cfg.texts, split=cfg.splits[k], gate=cfg.gates[k], pal=cfg.pal))
     all_lanes = []
     prev, lane_no, plaza_no = p1, 1, 2
     exits = []

@@ -419,6 +419,11 @@ INCLUDE "data/hardcore/gen_trainer_data.asm"
 INCLUDE "data/hardcore/area_text.asm"
 
 
+SECTION "Hardcore Story", ROMX
+
+INCLUDE "engine/hardcore/story.asm"
+
+
 SECTION "bank32", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"

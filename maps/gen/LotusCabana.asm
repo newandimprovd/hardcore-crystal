@@ -7,7 +7,7 @@ LotusCabana_MapScripts:
 	def_callbacks
 
 LotusCabanaBossScript:
-	trainer GENTLEMAN, 148, EVENT_GEN_LOTUS_CABANA_BOSS, LotusCabanaBossSeenText, LotusCabanaBossBeatenText, 0, LotusCabanaBossAfterScript
+	trainer GENTLEMAN, 140, EVENT_GEN_LOTUS_CABANA_BOSS, LotusCabanaBossSeenText, LotusCabanaBossBeatenText, 0, LotusCabanaBossAfterScript
 
 LotusCabanaBossAfterScript:
 	endifjustbattled

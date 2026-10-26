@@ -48,6 +48,17 @@ HC_TestSetup::
 	if TEST_REVEALED
 	test_setevent EVENT_KILLER_REVEALED
 	endc
+	if TEST_STORY >= 1
+	test_setevent EVENT_HC_TIDAL_WAVE
+	endc
+	if TEST_STORY >= 2
+	test_setevent EVENT_HC_CRATER
+	test_setevent EVENT_HC_ELM_AT_RIM
+	test_setevent EVENT_HC_RIVAL_FELL
+	endc
+	if TEST_STORY >= 3
+	test_setevent EVENT_HC_FINN_FELL
+	endc
 	if TEST_ITEMS
 	test_giveitem CHAINSAW, 1
 	test_giveitem JET_SKI, 1

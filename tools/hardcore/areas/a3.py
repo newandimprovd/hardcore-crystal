@@ -42,5 +42,5 @@ def build(w, roster, rng, entry_doors, open_exit=False):
                   [("AXIOM_OUTSKIRTS", 46, 54, "AXIOM<BSP>OUTSKIRTS"), ("AXIOM_CENTRAL", 42, 50, "AXIOM<BSP>CENTRAL"),
                    ("AXIOM_MAYORALTY", 38, 46, "THE<BSP>MAYORALTY")],
                   "MUSIC_GOLDENROD_CITY", texts, TIERS, bosses, [None, "dark", "slab"], [3, 2, 3], "AxiomGate",
-                  T.GATE[0], stock_ix=(1, 1, 1, 2, 2, 2, 2))
+                  T.GATE[0], trainers=([13, 14, 13, 13, 13], [13, 13, 13, 14, 13], 13), stock_ix=(1, 1, 1, 2, 2, 2, 2))
     return build_area(w, roster, rng, cfg, entry_doors)

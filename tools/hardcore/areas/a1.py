@@ -91,9 +91,13 @@ def build(w, roster, rng, open_exit=False):
     boss3 = BossSpec("TitheCathedral", "MONSIGNOR", "MYSTICALMAN", "SPRITE_GRAMPS", "PAL_NPC_BROWN", 27, 6,
                      T.CATHEDRAL_SEEN, T.CATHEDRAL_BEATEN, T.CATHEDRAL_AFTER, template="bruno", landmark=LM_PARISH,
                      music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)
-    acts = [ActSpec("Tithe", 5, modern, LM_CITY, "MUSIC_GOLDENROD_CITY", boss=boss1, texts=texts, split=3),
-            ActSpec("Tithe", 5, modern, LM_MID, "MUSIC_GOLDENROD_CITY", gate="tree", boss=boss2, texts=texts, split=2),
-            ActSpec("Tithe", 5, modern, LM_PARISH, "MUSIC_GOLDENROD_CITY", gate="boulder", boss=boss3, texts=texts, split=3)]
+    # Timmy is kill 1, so 199 more put the Monsignor on kill 200 (the tidal wave milestone)
+    acts = [ActSpec("Tithe", 5, modern, LM_CITY, "MUSIC_GOLDENROD_CITY", boss=boss1, texts=texts, split=3,
+                    trainers=[12, 12, 13, 13, 12]),
+            ActSpec("Tithe", 5, modern, LM_MID, "MUSIC_GOLDENROD_CITY", gate="tree", boss=boss2, texts=texts, split=2,
+                    trainers=[13, 12, 13, 13, 13]),
+            ActSpec("Tithe", 5, modern, LM_PARISH, "MUSIC_GOLDENROD_CITY", gate="boulder", boss=boss3, texts=texts, split=3,
+                    trainers=[13, 13, 12, 13, 13])]
 
     all_lanes = [(road, s_road)]
     prev, lane_no, plaza_no = p1, 1, 2

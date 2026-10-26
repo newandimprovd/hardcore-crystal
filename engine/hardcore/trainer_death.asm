@@ -24,6 +24,10 @@ TrainerDeathScript::
 	callasm HC_CountKill
 	checkevent EVENT_HC_REVEAL_PENDING
 	iftrue HC_RevealAftermath
+	callasm HC_CheckStory ; kill 200, the rival and the final boss run story scripts (engine/hardcore/story.asm)
+	iffalse .NoStory
+	farsjump HC_StoryDispatch
+.NoStory:
 	end
 
 FirstKillRevealScript::

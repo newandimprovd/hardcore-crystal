@@ -27,43 +27,43 @@ AxiomStreet12AfterScript:
 	end
 
 AxiomStreet12Trainer0:
-	trainer BIKER, 145, EVENT_GEN_AXIOM_STREET12_0, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer SUPER_NERD, 163, EVENT_GEN_AXIOM_STREET12_0, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer1:
-	trainer BLACKBELT_T, 149, EVENT_GEN_AXIOM_STREET12_1, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer SUPER_NERD, 164, EVENT_GEN_AXIOM_STREET12_1, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer2:
-	trainer GRUNTM, 170, EVENT_GEN_AXIOM_STREET12_2, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer GRUNTM, 167, EVENT_GEN_AXIOM_STREET12_2, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer3:
-	trainer COOLTRAINERF, 149, EVENT_GEN_AXIOM_STREET12_3, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer GRUNTM, 168, EVENT_GEN_AXIOM_STREET12_3, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer4:
-	trainer SUPER_NERD, 157, EVENT_GEN_AXIOM_STREET12_4, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer COOLTRAINERM, 149, EVENT_GEN_AXIOM_STREET12_4, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer5:
-	trainer SCIENTIST, 150, EVENT_GEN_AXIOM_STREET12_5, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer OFFICER, 175, EVENT_GEN_AXIOM_STREET12_5, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer6:
-	trainer OFFICER, 181, EVENT_GEN_AXIOM_STREET12_6, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer BLACKBELT_T, 151, EVENT_GEN_AXIOM_STREET12_6, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer7:
-	trainer TEACHER, 137, EVENT_GEN_AXIOM_STREET12_7, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer BIKER, 143, EVENT_GEN_AXIOM_STREET12_7, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer8:
-	trainer SUPER_NERD, 158, EVENT_GEN_AXIOM_STREET12_8, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer SCIENTIST, 149, EVENT_GEN_AXIOM_STREET12_8, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer9:
-	trainer COOLTRAINERF, 150, EVENT_GEN_AXIOM_STREET12_9, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer BLACKBELT_T, 152, EVENT_GEN_AXIOM_STREET12_9, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer10:
-	trainer SUPER_NERD, 159, EVENT_GEN_AXIOM_STREET12_10, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer EXECUTIVEM, 139, EVENT_GEN_AXIOM_STREET12_10, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer11:
-	trainer GUITARIST, 154, EVENT_GEN_AXIOM_STREET12_11, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer EXECUTIVEM, 140, EVENT_GEN_AXIOM_STREET12_11, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12Trainer12:
-	trainer COOLTRAINERF, 151, EVENT_GEN_AXIOM_STREET12_12, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer COOLTRAINERM, 150, EVENT_GEN_AXIOM_STREET12_12, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12_MapEvents:
 	db 0, 0 ; filler
@@ -75,17 +75,17 @@ AxiomStreet12_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  6, 20, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer0, -1
-	object_event 11, 20, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer1, -1
+	object_event  6, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer0, -1
+	object_event 11, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer1, -1
 	object_event  6, 18, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer2, -1
-	object_event 11, 18, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer3, -1
-	object_event  6, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer4, -1
-	object_event 11, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer5, -1
-	object_event  6, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer6, -1
-	object_event 11, 12, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer7, -1
-	object_event  6, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer8, -1
-	object_event 11,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer9, -1
-	object_event  6,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer10, -1
-	object_event  6,  4, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer11, -1
-	object_event 11,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer12, -1
+	object_event 11, 18, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer3, -1
+	object_event  6, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer4, -1
+	object_event 11, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer5, -1
+	object_event  6, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer6, -1
+	object_event 11, 10, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer7, -1
+	object_event  6,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer8, -1
+	object_event 11,  8, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer9, -1
+	object_event  6,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer10, -1
+	object_event 11,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer11, -1
+	object_event  6,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer12, -1
 

@@ -278,6 +278,42 @@ def gatehouse(g, name, lane_door, plaza_door, landmark, music, texts=()):
     return m
 
 
+HALL_BLOCKS = [
+    0x04, 0x04, 0x17, 0x04, 0x04, 0x04, 0x04, 0x04,
+    0x0f, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x0f,
+    0x03, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x03,
+    0x10, 0x02, 0x02, 0x12, 0x12, 0x02, 0x02, 0x10,
+    0x03, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x03,
+    0x08, 0x08, 0x08, 0x0e, 0x08, 0x08, 0x08, 0x08,
+]
+
+
+def mansion_hall(g, name, boss_exits, landmark, music):
+    """The rival's mansion hall (mansion tileset, 8x6 blocks): the exit mat leads back into the boss room, the
+    door in the top wall to the bedroom. Returns (map, door warp). NPCs are added by the caller."""
+    m = MapDef(g.key, name, 8, 6, "TILESET_MANSION", "INDOOR", landmark, music, pal="PALETTE_DAY")
+    m.blocks = bytearray(HALL_BLOCKS)
+    mat1, mat2 = m.warp(6, 11), m.warp(7, 11)
+    door = m.warp(5, 0)
+    boss_exits[0].dest = mat1
+    boss_exits[1].dest = mat1
+    mat1.dest = boss_exits[0]
+    mat2.dest = boss_exits[0]
+    g.add(m)
+    return m, door
+
+
+def mansion_bedroom(g, name, hall_door, landmark, music):
+    """The bedroom (the player's room blocks of vanilla): the stairs go down to the hall."""
+    m = MapDef(g.key, name, 4, 3, "TILESET_PLAYERS_ROOM", "INDOOR", landmark, music, pal="PALETTE_DAY")
+    m.blocks = bytearray(blk("maps/PlayersHouse2F.blk"))
+    stairs = m.warp(7, 0)
+    stairs.dest = hall_door
+    hall_door.dest = stairs
+    g.add(m)
+    return m
+
+
 # Boss rooms reuse the Elite Four room blocks of vanilla (same tileset), which already have the funnel shape,
 # the mat at the bottom and a door at the top. The boss stands at the left edge of the last wide row, so every
 # route from the funnel into the room crosses his line of sight.
@@ -285,7 +321,7 @@ BOSS_TEMPLATES = {"karen": ("maps/KarensRoom.blk", 10), "will": ("maps/WillsRoom
                   "bruno": ("maps/BrunosRoom.blk", 9)}
 
 
-def boss_room(g, w, name, outer_warp, landmark, music, template, boss, item=None, open_exit=False):
+def boss_room(g, w, name, outer_warp, landmark, music, template, boss, item=None, open_exit=False, story=0):
     """boss: dict(cls, sprite, pal, name, party, seen, beaten, after) with Text objects for the three texts.
     item: key item constant placed on a ball in the room (event flag generated).
     Returns (map, exit_warps); exit_warps is [] unless open_exit (then the two top warps, unlinked)."""
@@ -301,6 +337,8 @@ def boss_room(g, w, name, outer_warp, landmark, music, template, boss, item=None
         m.set(2, 1, 0x16)
         exits = [m.warp(4, 2), m.warp(5, 2)]
     tid = w.trainer(boss["cls"], boss["name"], boss["party"])
+    if story:
+        w.story.append((boss["cls"], tid, story))
     flag = w.flag(f"EVENT_GEN_{m.const}_BOSS")
     n = name
     m.scripts.append(

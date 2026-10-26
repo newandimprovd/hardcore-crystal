@@ -129,3 +129,20 @@ MANSION_SEEN = ("So you made it. You killed my henchmen, my chefs and my account
                 "The accountant was irreplaceable. You're going to pay for that. Slowly. Twice.")
 MANSION_BEATEN = "No. No, no, no. This was supposed to be my ending. Take the house. Take the maids. Take... take everything."
 MANSION_AFTER = "The mansion is yours now. The maids will see you upstairs. Don't forget to close the door when you die."
+
+# the mansion after the rival fell: the player owns it, the staff stays (humor stays at innuendo)
+HALL_MAIDS = [
+    "Welcome home, <PLAYER>. We changed the sheets. Twice. Please don't ask about the first time.",
+    "I was the previous owner's maid. Now I'm yours. The contract says it transfers with the owner. I read it once, quickly, standing up.",
+    "The old master kept a very specific collection of dusting tools. I've thrown most of it out. Keep the feather duster. Ask me nothing.",
+    "I'm here to serve. In the traditional sense. The legal sense. Mostly the cleaning sense.",
+    "There's a lot of blood on the carpet. We told the cleaners it was wine. They said, in this economy?",
+    "We have a staff meeting at nine. It's a short meeting. Everyone says 'yes, sir' or 'yes, ma'am' and then we stare at the floor.",
+    "The master bedroom has a mirror on the ceiling. We've told the cleaners to ignore it. They keep volunteering.",
+    "I'm told you're a murderer. I'm also told the pay is excellent. I'm choosing to be flexible.",
+]
+HALL_BUTLER = ("The house has forty-one rooms. Thirty-nine of them are bedrooms. The previous owner had unusually "
+               "large ambitions and a very small number of friends.")
+HALL_CHAUFFEUR = "The limousine is ready. Shall I drive you to what remains of NEW BARK TOWN?"
+HALL_CHAUFFEUR_GO = "Very good. It's a crater now, so please keep your arms and legs inside the car."
+HALL_CHAUFFEUR_NO = "As you wish. The engine is running. It is always running. The meter is also running. It's free."

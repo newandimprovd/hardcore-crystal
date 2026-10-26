@@ -182,6 +182,14 @@ def emit_trainers(w):
     return {cls: sum(r[1] for r in recs) for cls, recs in by_class.items()}
 
 
+def emit_story(w):
+    o = [HEADER, "HC_StoryBosses:"]
+    for cls, tid, kind in w.story:
+        o.append(f"\tdb {cls}, {tid}, {kind}")
+    o.append("\tdb -1")
+    write("data/hardcore/story_bosses.asm", "\n".join(o) + "\n")
+
+
 def emit_all(w):
     emit_constants(w)
     emit_lists(w)
@@ -192,6 +200,7 @@ def emit_all(w):
     emit_spawns(w)
     emit_landmarks(w)
     emit_marts(w)
+    emit_story(w)
     return emit_trainers(w)
 
 

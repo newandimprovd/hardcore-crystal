@@ -7,7 +7,7 @@ LotusClinic_MapScripts:
 	def_callbacks
 
 LotusClinicBossScript:
-	trainer SCIENTIST, 153, EVENT_GEN_LOTUS_CLINIC_BOSS, LotusClinicBossSeenText, LotusClinicBossBeatenText, 0, LotusClinicBossAfterScript
+	trainer SCIENTIST, 151, EVENT_GEN_LOTUS_CLINIC_BOSS, LotusClinicBossSeenText, LotusClinicBossBeatenText, 0, LotusClinicBossAfterScript
 
 LotusClinicBossAfterScript:
 	endifjustbattled

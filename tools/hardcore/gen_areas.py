@@ -11,6 +11,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from areas import a1, a2, a3, a4, a5, emit  # noqa: E402
+from areas.model import ForeignWarp  # noqa: E402
 from areas.model import World, read, write  # noqa: E402
 from areas.party import Roster  # noqa: E402
 from areas.text import pool_asm  # noqa: E402
@@ -49,8 +50,9 @@ def main():
     _, exits = a1.build(w, roster, rng, open_exit=True)
     _, exits = a2.build(w, roster, rng, exits, open_exit=True)
     _, exits = a3.build(w, roster, rng, exits, open_exit=True)
-    _, exits = a4.build(w, roster, rng, exits, open_exit=True)
-    a5.build(w, roster, rng, exits)
+    a4.build(w, roster, rng, exits, open_exit=True)  # its last boss room leads into the mansion
+    # Area 5 is entered through the portal in the New Bark Town crater (warp 5 of that map, see maps/NewBarkTown.asm)
+    a5.build(w, roster, rng, [ForeignWarp("NEW_BARK_TOWN", 5)])
     emit.patch_tree()
     sizes = emit.emit_all(w)
     emit_pools(w)

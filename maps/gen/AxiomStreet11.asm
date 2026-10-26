@@ -65,43 +65,43 @@ AxiomStreet11AfterScript:
 	end
 
 AxiomStreet11Trainer0:
-	trainer GRUNTM, 167, EVENT_GEN_AXIOM_STREET11_0, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer GRUNTF, 154, EVENT_GEN_AXIOM_STREET11_0, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer1:
-	trainer COOLTRAINERF, 147, EVENT_GEN_AXIOM_STREET11_1, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer COOLTRAINERM, 148, EVENT_GEN_AXIOM_STREET11_1, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer2:
-	trainer BLACKBELT_T, 148, EVENT_GEN_AXIOM_STREET11_2, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer GRUNTM, 165, EVENT_GEN_AXIOM_STREET11_2, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer3:
-	trainer COOLTRAINERF, 148, EVENT_GEN_AXIOM_STREET11_3, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer COOLTRAINERF, 153, EVENT_GEN_AXIOM_STREET11_3, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer4:
-	trainer GRUNTM, 168, EVENT_GEN_AXIOM_STREET11_4, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer BLACKBELT_T, 149, EVENT_GEN_AXIOM_STREET11_4, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer5:
-	trainer GUITARIST, 153, EVENT_GEN_AXIOM_STREET11_5, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer COOLTRAINERF, 154, EVENT_GEN_AXIOM_STREET11_5, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer6:
-	trainer COOLTRAINERM, 150, EVENT_GEN_AXIOM_STREET11_6, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer OFFICER, 174, EVENT_GEN_AXIOM_STREET11_6, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer7:
-	trainer SCIENTIST, 147, EVENT_GEN_AXIOM_STREET11_7, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer EXECUTIVEM, 137, EVENT_GEN_AXIOM_STREET11_7, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer8:
-	trainer SCIENTIST, 148, EVENT_GEN_AXIOM_STREET11_8, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer GRUNTM, 166, EVENT_GEN_AXIOM_STREET11_8, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer9:
-	trainer GRUNTF, 158, EVENT_GEN_AXIOM_STREET11_9, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer EXECUTIVEM, 138, EVENT_GEN_AXIOM_STREET11_9, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer10:
-	trainer SCIENTIST, 149, EVENT_GEN_AXIOM_STREET11_10, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer BLACKBELT_T, 150, EVENT_GEN_AXIOM_STREET11_10, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer11:
-	trainer GRUNTM, 169, EVENT_GEN_AXIOM_STREET11_11, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer COOLTRAINERF, 155, EVENT_GEN_AXIOM_STREET11_11, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer12:
-	trainer BIKER, 144, EVENT_GEN_AXIOM_STREET11_12, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer GUITARIST, 150, EVENT_GEN_AXIOM_STREET11_12, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11_MapEvents:
 	db 0, 0 ; filler
@@ -115,17 +115,17 @@ AxiomStreet11_MapEvents:
 	def_object_events
 	object_event  8, 22, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet11GateScript, EVENT_GEN_AXIOM_STREET11_GATE
 	object_event  9, 22, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet11GateScript, EVENT_GEN_AXIOM_STREET11_GATE
-	object_event  6, 20, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer0, -1
-	object_event 11, 20, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer1, -1
-	object_event  6, 18, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer2, -1
-	object_event  6, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer3, -1
-	object_event 11, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer4, -1
-	object_event  6, 14, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer5, -1
-	object_event 11, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer6, -1
-	object_event  6, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer7, -1
-	object_event 11, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer8, -1
-	object_event 11, 10, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer9, -1
-	object_event  6,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer10, -1
-	object_event 11,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer11, -1
-	object_event  6,  4, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer12, -1
+	object_event  6, 20, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer0, -1
+	object_event 11, 20, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer1, -1
+	object_event  6, 18, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer2, -1
+	object_event 11, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer3, -1
+	object_event  6, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer4, -1
+	object_event 11, 12, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer5, -1
+	object_event  6, 10, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer6, -1
+	object_event 11, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer7, -1
+	object_event  6,  8, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer8, -1
+	object_event 11,  8, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer9, -1
+	object_event  6,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer10, -1
+	object_event 11,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer11, -1
+	object_event  6,  4, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer12, -1
 

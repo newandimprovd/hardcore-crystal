@@ -1464,7 +1464,21 @@
 	const EVENT_HC_ROUTE29_DUDE_DEAD
 	const EVENT_BEAT_YOUNGSTER_TIMMY
 	const EVENT_HC_REVEAL_PENDING
-	const EVENT_HC_SPARE_5
+	const EVENT_HC_TIDAL_WAVE ; kill 200: New Bark Town is flooded
+	const EVENT_HC_CRATER ; the rival fell (kill 800): New Bark Town is a crater with a portal
+	const EVENT_HC_RIVAL_FELL
+	const EVENT_HC_FINN_FELL ; the Sleeper in Judecca fell
+	const EVENT_HC_ENDED ; the normal ending has played
+	const EVENT_HC_TRUE_ENDING ; the true ending has played
+	const EVENT_HC_BRUNO_DOWN ; Bruno at Nick's Landing
+	const EVENT_HC_GRAVE_SEEN ; the grave of Marcus Fischer
+	const EVENT_HC_TRUMPET ; the Trumpet was taken
+	const EVENT_HC_ELM_AT_RIM ; Elm waits at the crater rim (set with the crater)
+	const EVENT_HC_STOLEN_BACK ; the stolen Pokemon was recovered
+	const EVENT_HC_SPARE_A
+	const EVENT_HC_SPARE_B
+	const EVENT_HC_SPARE_C
+	const EVENT_HC_SPARE_D
 ; Unused: next 42 events
 
 	const_next 2848 ; Hardcore Crystal: the array grew by 100 bytes (wram.asm), flags 2048-2847 are for generated areas

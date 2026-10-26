@@ -7,7 +7,7 @@ CocytusIceHall_MapScripts:
 	def_callbacks
 
 CocytusIceHallBossScript:
-	trainer BURGLAR, 135, EVENT_GEN_COCYTUS_ICE_HALL_BOSS, CocytusIceHallBossSeenText, CocytusIceHallBossBeatenText, 0, CocytusIceHallBossAfterScript
+	trainer BURGLAR, 137, EVENT_GEN_COCYTUS_ICE_HALL_BOSS, CocytusIceHallBossSeenText, CocytusIceHallBossBeatenText, 0, CocytusIceHallBossAfterScript
 
 CocytusIceHallBossAfterScript:
 	endifjustbattled

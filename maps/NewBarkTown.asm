@@ -2,6 +2,7 @@
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
 	const NEWBARKTOWN_RIVAL
+	const NEWBARKTOWN_ELM ; HC: waits on the crater rim after the rival fell
 
 NewBarkTown_MapScripts:
 	def_scene_scripts
@@ -10,6 +11,8 @@ NewBarkTown_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, NewBarkTownFlypointCallback
+	callback MAPCALLBACK_TILES, NewBarkTownHCTilesCallback
+	callback MAPCALLBACK_OBJECTS, NewBarkTownHCObjectsCallback
 
 NewBarkTownNoop1Scene:
 	end
@@ -20,6 +23,61 @@ NewBarkTownNoop2Scene:
 NewBarkTownFlypointCallback:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
+	endcallback
+
+; Hardcore Crystal: kill 200 floods the south of the town, the rival's fall (kill 800) turns all of it into a crater
+; with a portal in the middle (the swirl block $07 at block (5, 4)).
+NewBarkTownHCTilesCallback:
+	checkevent EVENT_HC_CRATER
+	iftrue .Crater
+	checkevent EVENT_HC_TIDAL_WAVE
+	iftrue .Flooded
+	endcallback
+
+.Flooded:
+	for y, 6, 9
+		for x, 0, 10
+			changeblock x * 2, y * 2, $35 ; water
+		endr
+	endr
+	endcallback
+
+.Crater:
+	for y, 0, 9
+		for x, 0, 10
+			changeblock x * 2, y * 2, $71 ; scorched ground
+		endr
+	endr
+	for x, 0, 10
+		changeblock x * 2, 0, $7b ; rim
+		changeblock x * 2, 16, $7b
+	endr
+	for y, 1, 8
+		changeblock 18, y * 2, $7b
+	endr
+	for y, 0, 9
+		if y != 4
+			changeblock 0, y * 2, $7b ; the way in from ROUTE 29 stays open at row 4
+		endc
+	endr
+	changeblock 2, 2, $7b
+	changeblock 16, 2, $7b
+	changeblock 2, 14, $7b
+	changeblock 16, 14, $7b
+	changeblock 10, 8, $07 ; the swirl
+	endcallback
+
+NewBarkTownPortalScript:
+	farsjump HC_PortalScript
+
+NewBarkTownElmRimScript:
+	farsjump HC_ElmRimScript
+
+NewBarkTownHCObjectsCallback:
+	checkevent EVENT_HC_CRATER
+	iftrue .Done
+	disappear NEWBARKTOWN_ELM
+.Done:
 	endcallback
 
 NewBarkTown_TeacherStopsYouScene1:
@@ -287,6 +345,7 @@ NewBarkTown_MapEvents:
 	warp_event 13,  5, PLAYERS_HOUSE_1F, 1
 	warp_event  3, 11, PLAYERS_NEIGHBORS_HOUSE, 1
 	warp_event 11, 13, ELMS_HOUSE, 1
+	warp_event 10, 10, DIS_GATE, 3 ; HC: arrival from the portal gatehouse, just below the swirl
 
 	def_coord_events
 	coord_event  1,  8, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU, NewBarkTown_TeacherStopsYouScene1
@@ -297,8 +356,13 @@ NewBarkTown_MapEvents:
 	bg_event 11,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
 	bg_event  3,  3, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
+	bg_event 10,  8, BGEVENT_READ, NewBarkTownPortalScript ; HC: the four cells of the swirl block
+	bg_event 11,  8, BGEVENT_READ, NewBarkTownPortalScript
+	bg_event 10,  9, BGEVENT_READ, NewBarkTownPortalScript
+	bg_event 11,  9, BGEVENT_READ, NewBarkTownPortalScript
 
 	def_object_events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
+	object_event  4, 11, SPRITE_ELM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmRimScript, -1
