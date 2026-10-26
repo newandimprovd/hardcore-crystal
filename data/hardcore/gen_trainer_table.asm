@@ -80,12 +80,12 @@ HC_GenGroupTable:
 	dw HC_GenGroup_SWIMMERM ; 38 SWIMMERM
 	db BANK(HC_GenGroup_SWIMMERF)
 	dw HC_GenGroup_SWIMMERF ; 39 SWIMMERF
-	db 0
-	dw 0 ; 40 SAILOR
+	db BANK(HC_GenGroup_SAILOR)
+	dw HC_GenGroup_SAILOR ; 40 SAILOR
 	db BANK(HC_GenGroup_SUPER_NERD)
 	dw HC_GenGroup_SUPER_NERD ; 41 SUPER_NERD
-	db 0
-	dw 0 ; 42 RIVAL2
+	db BANK(HC_GenGroup_RIVAL2)
+	dw HC_GenGroup_RIVAL2 ; 42 RIVAL2
 	db BANK(HC_GenGroup_GUITARIST)
 	dw HC_GenGroup_GUITARIST ; 43 GUITARIST
 	db BANK(HC_GenGroup_HIKER)
@@ -94,24 +94,24 @@ HC_GenGroupTable:
 	dw HC_GenGroup_BIKER ; 45 BIKER
 	db 0
 	dw 0 ; 46 BLAINE
-	db 0
-	dw 0 ; 47 BURGLAR
-	db 0
-	dw 0 ; 48 FIREBREATHER
-	db 0
-	dw 0 ; 49 JUGGLER
+	db BANK(HC_GenGroup_BURGLAR)
+	dw HC_GenGroup_BURGLAR ; 47 BURGLAR
+	db BANK(HC_GenGroup_FIREBREATHER)
+	dw HC_GenGroup_FIREBREATHER ; 48 FIREBREATHER
+	db BANK(HC_GenGroup_JUGGLER)
+	dw HC_GenGroup_JUGGLER ; 49 JUGGLER
 	db BANK(HC_GenGroup_BLACKBELT_T)
 	dw HC_GenGroup_BLACKBELT_T ; 50 BLACKBELT_T
-	db 0
-	dw 0 ; 51 EXECUTIVEM
-	db 0
-	dw 0 ; 52 PSYCHIC_T
+	db BANK(HC_GenGroup_EXECUTIVEM)
+	dw HC_GenGroup_EXECUTIVEM ; 51 EXECUTIVEM
+	db BANK(HC_GenGroup_PSYCHIC_T)
+	dw HC_GenGroup_PSYCHIC_T ; 52 PSYCHIC_T
 	db BANK(HC_GenGroup_PICNICKER)
 	dw HC_GenGroup_PICNICKER ; 53 PICNICKER
 	db BANK(HC_GenGroup_CAMPER)
 	dw HC_GenGroup_CAMPER ; 54 CAMPER
-	db 0
-	dw 0 ; 55 EXECUTIVEF
+	db BANK(HC_GenGroup_EXECUTIVEF)
+	dw HC_GenGroup_EXECUTIVEF ; 55 EXECUTIVEF
 	db BANK(HC_GenGroup_SAGE)
 	dw HC_GenGroup_SAGE ; 56 SAGE
 	db BANK(HC_GenGroup_MEDIUM)

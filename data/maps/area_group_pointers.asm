@@ -2,3 +2,6 @@
 
 	dw MapGroup_Area1                ; AREA1
 	dw MapGroup_Area2                ; AREA2
+	dw MapGroup_Area3                ; AREA3
+	dw MapGroup_Area4                ; AREA4
+	dw MapGroup_Area5                ; AREA5

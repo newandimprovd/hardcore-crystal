@@ -2,3 +2,6 @@
 
 	db -1 ; AREA1
 	db -1 ; AREA2
+	db -1 ; AREA3
+	db -1 ; AREA4
+	db -1 ; AREA5

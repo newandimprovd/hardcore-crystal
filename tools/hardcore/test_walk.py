@@ -18,6 +18,7 @@ from areamodel import DIRS, World  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(HERE))
 SHOTS = os.environ.get("SHOTS", "/home/claude/scratch/walk")
 os.makedirs(SHOTS, exist_ok=True)
+GOD = os.environ.get("WALK_GOD") == "1"
 
 
 def find_ids(world):
@@ -135,12 +136,17 @@ class Walker:
                 t.poke("wBattleMonHP", 0, off)
                 t.poke("wPartyMon1HP", 0, off)
             return
+        if GOD:  # map tests only: one Pokemon cannot carry 13 fights of later areas, a real player has six and items
+            for off, b in enumerate((0x03, 0xE7)):  # 999 HP: later enemies one-shot a 358 HP level 100 mon
+                for sym in ("wBattleMonHP", "wBattleMonMaxHP", "wPartyMon1HP", "wPartyMon1MaxHP"):
+                    t.poke(sym, b, off)
         t.poke("wBattleMonMoves", pick_move(t.mem("wEnemyMonType1"), t.mem("wEnemyMonType2")), 0)
         t.poke("wBattleMonPP", 30, 0)
         for sym in ("wBattleMonStatus", "wPlayerSubStatus1", "wPlayerSubStatus2", "wPlayerSubStatus3",
                     "wPlayerSubStatus4", "wPlayerSubStatus5", "wPlayerConfuseCount", "wPlayerDisableCount",
                     "wPlayerEncoreCount", "wDisabledMove"):
             t.poke(sym, 0)  # the walker only tests maps: no sleep, confusion, Disable or Encore stalls
+        t.poke("wEnemySubStatus5", t.mem("wEnemySubStatus5") & ~0x40)  # Destiny Bond would take the lone test mon along
         t.poke("wCurMoveNum", 0)
         if not self.battle_seen:
             self.battle_seen = True

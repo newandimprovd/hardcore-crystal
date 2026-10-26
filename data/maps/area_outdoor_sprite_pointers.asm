@@ -2,3 +2,6 @@
 
 	dw Area1GroupSprites
 	dw Area2GroupSprites
+	dw Area3GroupSprites
+	dw Area4GroupSprites
+	dw Area5GroupSprites

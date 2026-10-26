@@ -14,3 +14,24 @@
 	const SPAWN_GROVE_5
 	const SPAWN_GROVE_6
 	const SPAWN_GROVE_7
+	const SPAWN_AXIOM_1
+	const SPAWN_AXIOM_2
+	const SPAWN_AXIOM_3
+	const SPAWN_AXIOM_4
+	const SPAWN_AXIOM_5
+	const SPAWN_AXIOM_6
+	const SPAWN_AXIOM_7
+	const SPAWN_LOTUS_1
+	const SPAWN_LOTUS_2
+	const SPAWN_LOTUS_3
+	const SPAWN_LOTUS_4
+	const SPAWN_LOTUS_5
+	const SPAWN_LOTUS_6
+	const SPAWN_LOTUS_7
+	const SPAWN_DIS_1
+	const SPAWN_DIS_2
+	const SPAWN_DIS_3
+	const SPAWN_DIS_4
+	const SPAWN_DIS_5
+	const SPAWN_DIS_6
+	const SPAWN_DIS_7

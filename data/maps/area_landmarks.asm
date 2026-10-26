@@ -7,3 +7,12 @@
 	landmark  60,  66, GroveCommuneName
 	landmark  56,  62, GroveOrchardName
 	landmark  52,  58, GroveHearthName
+	landmark  46,  54, AxiomOutskirtsName
+	landmark  42,  50, AxiomCentralName
+	landmark  38,  46, AxiomMayoraltyName
+	landmark  36,  62, LotusCoastName
+	landmark  32,  58, LotusBoardwalkName
+	landmark  28,  54, LotusMansionName
+	landmark  24,  50, DisCityName
+	landmark  20,  46, DisCocytusName
+	landmark  16,  42, DisJudeccaName

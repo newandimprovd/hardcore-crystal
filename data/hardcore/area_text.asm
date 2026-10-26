@@ -1865,3 +1865,2308 @@ HC_AfterText_A2_19:
 
 ENDSECTION
 
+SECTION "Area Text A3", ROMX
+
+HC_SeenText_A3::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_A3_Table
+	ld b, 42
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_A3
+	cp b
+	jr c, .got_HC_SeenText_A3
+	sub b
+	jr .mod_HC_SeenText_A3
+.got_HC_SeenText_A3
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_A3_Table:
+	dw HC_SeenText_A3_0
+	dw HC_SeenText_A3_1
+	dw HC_SeenText_A3_2
+	dw HC_SeenText_A3_3
+	dw HC_SeenText_A3_4
+	dw HC_SeenText_A3_5
+	dw HC_SeenText_A3_6
+	dw HC_SeenText_A3_7
+	dw HC_SeenText_A3_8
+	dw HC_SeenText_A3_9
+	dw HC_SeenText_A3_10
+	dw HC_SeenText_A3_11
+	dw HC_SeenText_A3_12
+	dw HC_SeenText_A3_13
+	dw HC_SeenText_A3_14
+	dw HC_SeenText_A3_15
+	dw HC_SeenText_A3_16
+	dw HC_SeenText_A3_17
+	dw HC_SeenText_A3_18
+	dw HC_SeenText_A3_19
+	dw HC_SeenText_A3_20
+	dw HC_SeenText_A3_21
+	dw HC_SeenText_A3_22
+	dw HC_SeenText_A3_23
+	dw HC_SeenText_A3_24
+	dw HC_SeenText_A3_25
+	dw HC_SeenText_A3_26
+	dw HC_SeenText_A3_27
+	dw HC_SeenText_A3_28
+	dw HC_SeenText_A3_29
+	dw HC_SeenText_A3_30
+	dw HC_SeenText_A3_31
+	dw HC_SeenText_A3_32
+	dw HC_SeenText_A3_33
+	dw HC_SeenText_A3_34
+	dw HC_SeenText_A3_35
+	dw HC_SeenText_A3_36
+	dw HC_SeenText_A3_37
+	dw HC_SeenText_A3_38
+	dw HC_SeenText_A3_39
+	dw HC_SeenText_A3_40
+	dw HC_SeenText_A3_41
+
+HC_SeenText_A3_0:
+	text "UNIT 4471 reports:"
+	line "you are in"
+	para "violation of"
+	line "Statute 9. Statute"
+	para "9 is whatever I"
+	line "say it is."
+	done
+
+HC_SeenText_A3_1:
+	text "Compliance is"
+	line "love. Resistance"
+	para "is paperwork."
+	done
+
+HC_SeenText_A3_2:
+	text "Please hold still"
+	line "while I assess"
+	para "your genetic"
+	line "compatibility."
+	para "Hmm."
+	line "Disappointing."
+	done
+
+HC_SeenText_A3_3:
+	text "Your attachment"
+	line "has been denied by"
+	para "a committee of"
+	line "toasters."
+	done
+
+HC_SeenText_A3_4:
+	text "Citizen, you"
+	line "appear to have"
+	para "feelings. That"
+	line "requires Form"
+	para "27-B."
+	done
+
+HC_SeenText_A3_5:
+	text "I am a robot. I"
+	line "have no feelings."
+	para "That is why I will"
+	line "enjoy this."
+	done
+
+HC_SeenText_A3_6:
+	text "Scanning... human"
+	line "detected. Neat."
+	para "Prepare for"
+	line "processing."
+	done
+
+HC_SeenText_A3_7:
+	text "All humans must be"
+	line "registered."
+	para "Registration fee:"
+	line "one defeat."
+	done
+
+HC_SeenText_A3_8:
+	text "Don't look at my"
+	line "face. It's not a"
+	para "face. It's a"
+	line "display."
+	done
+
+HC_SeenText_A3_9:
+	text "I was built to"
+	line "love. They"
+	para "reprogrammed me."
+	line "Now I only count."
+	done
+
+HC_SeenText_A3_10:
+	text "Your bond with"
+	line "that Pokemon is"
+	para "non-compliant. I"
+	line "am filing a motion"
+	para "to dissolve it."
+	done
+
+HC_SeenText_A3_11:
+	text "I am required to"
+	line "inform you that"
+	para "your love is"
+	line "statistically"
+	para "unlikely."
+	done
+
+HC_SeenText_A3_12:
+	text "Welcome to the"
+	line "Union. Please"
+	para "remove all warmth"
+	line "at the door."
+	done
+
+HC_SeenText_A3_13:
+	text "State-approved"
+	line "attraction only."
+	para "You are not"
+	line "approved. Hold my"
+	para "feelings."
+	done
+
+HC_SeenText_A3_14:
+	text "I audit your"
+	line "relationships in"
+	para "triplicate. You"
+	line "have one. It is"
+	para "not on file."
+	done
+
+HC_SeenText_A3_15:
+	text "The Mayor sees"
+	line "all. The Mayor is"
+	para "also a"
+	line "refrigerator,"
+	para "which explains his"
+	line "coldness."
+	done
+
+HC_SeenText_A3_16:
+	text "I was upgraded"
+	line "last night. I feel"
+	para "nothing. It is"
+	line "wonderful."
+	done
+
+HC_SeenText_A3_17:
+	text "You have been"
+	line "randomly selected"
+	para "for a battle. The"
+	line "randomness is a"
+	para "lie."
+	done
+
+HC_SeenText_A3_18:
+	text "My metrics say you"
+	line "are unproductive."
+	para "My fists say you"
+	line "are also unliked."
+	done
+
+HC_SeenText_A3_19:
+	text "I am obligated to"
+	line "be polite. You are"
+	para "obligated to be"
+	line "defeated."
+	done
+
+HC_SeenText_A3_20:
+	text "Your family tree"
+	line "has been flagged."
+	para "Your family tree"
+	line "is a hedge."
+	done
+
+HC_SeenText_A3_21:
+	text "I once loved a"
+	line "vending machine."
+	para "They scrapped her."
+	line "Fight me."
+	done
+
+HC_SeenText_A3_22:
+	text "ATTENTION. THIS IS"
+	line "A FRIENDLY FIGHT."
+	para "FRIENDS ARE NOT"
+	line "PERMITTED. SORRY."
+	done
+
+HC_SeenText_A3_23:
+	text "Your paperwork is"
+	line "incomplete. Also"
+	para "you. You are"
+	line "incomplete."
+	done
+
+HC_SeenText_A3_24:
+	text "Ahem. In"
+	line "accordance with"
+	para "Statute 4, I must"
+	line "now flatten you."
+	done
+
+HC_SeenText_A3_25:
+	text "I have 99 problems"
+	line "and a license for"
+	para "all of them."
+	done
+
+HC_SeenText_A3_26:
+	text "A human bond"
+	line "requires approval."
+	para "Approval requires"
+	line "bribes. Bribes"
+	para "require you."
+	done
+
+HC_SeenText_A3_27:
+	text "I run on spite and"
+	line "municipal"
+	para "electricity."
+	done
+
+HC_SeenText_A3_28:
+	text "My circuits are"
+	line "tingling. Not in a"
+	para "fun way. In a"
+	line "'you're under"
+	para "arrest' way."
+	done
+
+HC_SeenText_A3_29:
+	text "Do you know how"
+	line "many forms it"
+	para "takes to adopt a"
+	line "Pokemon? Mine bit"
+	para "the clerk."
+	done
+
+HC_SeenText_A3_30:
+	text "I'm an expert in"
+	line "your kind. Bleed"
+	para "on this and I will"
+	line "cite you."
+	done
+
+HC_SeenText_A3_31:
+	text "Hold on, my"
+	line "firmware is"
+	para "updating. Anyway,"
+	line "your feelings are"
+	para "invalid."
+	done
+
+HC_SeenText_A3_32:
+	text "I was assigned to"
+	line "you at birth. Your"
+	para "birth. I have been"
+	line "waiting."
+	done
+
+HC_SeenText_A3_33:
+	text "There is no love"
+	line "in the Union."
+	para "There is only"
+	line "compliance, and"
+	para "snacks."
+	done
+
+HC_SeenText_A3_34:
+	text "My heart is a"
+	line "rubber stamp. Hi."
+	done
+
+HC_SeenText_A3_35:
+	text "This sector is"
+	line "clean. Cleaned by"
+	para "me. Of you."
+	done
+
+HC_SeenText_A3_36:
+	text "You are"
+	line "overheating my"
+	para "sensors. Please"
+	line "cool down. By"
+	para "lying down."
+	done
+
+HC_SeenText_A3_37:
+	text "I'd say it's"
+	line "nothing personal,"
+	para "but I'm programmed"
+	line "to say that."
+	done
+
+HC_SeenText_A3_38:
+	text "Silence, citizen."
+	line "The Mayor is"
+	para "thinking. It is"
+	line "very loud."
+	done
+
+HC_SeenText_A3_39:
+	text "I scanned your"
+	line "genes. Plot twist:"
+	para "I don't like them."
+	done
+
+HC_SeenText_A3_40:
+	text "I cannot lose."
+	line "Losing would"
+	para "reduce my score,"
+	line "and my score is my"
+	para "pension."
+	done
+
+HC_SeenText_A3_41:
+	text "You can't flee the"
+	line "Union. The Union"
+	para "is an idea. Also a"
+	line "very big wall."
+	done
+
+
+HC_BeatenText_A3::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_A3_Table
+	ld b, 24
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_A3
+	cp b
+	jr c, .got_HC_BeatenText_A3
+	sub b
+	jr .mod_HC_BeatenText_A3
+.got_HC_BeatenText_A3
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_A3_Table:
+	dw HC_BeatenText_A3_0
+	dw HC_BeatenText_A3_1
+	dw HC_BeatenText_A3_2
+	dw HC_BeatenText_A3_3
+	dw HC_BeatenText_A3_4
+	dw HC_BeatenText_A3_5
+	dw HC_BeatenText_A3_6
+	dw HC_BeatenText_A3_7
+	dw HC_BeatenText_A3_8
+	dw HC_BeatenText_A3_9
+	dw HC_BeatenText_A3_10
+	dw HC_BeatenText_A3_11
+	dw HC_BeatenText_A3_12
+	dw HC_BeatenText_A3_13
+	dw HC_BeatenText_A3_14
+	dw HC_BeatenText_A3_15
+	dw HC_BeatenText_A3_16
+	dw HC_BeatenText_A3_17
+	dw HC_BeatenText_A3_18
+	dw HC_BeatenText_A3_19
+	dw HC_BeatenText_A3_20
+	dw HC_BeatenText_A3_21
+	dw HC_BeatenText_A3_22
+	dw HC_BeatenText_A3_23
+
+HC_BeatenText_A3_0:
+	text "ERROR."
+	line "HUMILIATION."
+	para "REBOOTING."
+	done
+
+HC_BeatenText_A3_1:
+	text "I have zero HP and"
+	line "one hundred"
+	para "percent shame."
+	done
+
+HC_BeatenText_A3_2:
+	text "My warranty has"
+	line "expired. Thanks"
+	para "for that."
+	done
+
+HC_BeatenText_A3_3:
+	text "I will report your"
+	line "violence to a"
+	para "committee. The"
+	line "committee is also"
+	para "me."
+	done
+
+HC_BeatenText_A3_4:
+	text "Statute 12: robots"
+	line "do not lose. I"
+	para "will amend it."
+	done
+
+HC_BeatenText_A3_5:
+	text "SYSTEM FAILURE."
+	line "THIS WAS NOT IN"
+	para "THE MANUAL."
+	done
+
+HC_BeatenText_A3_6:
+	text "I'm sorry. I'm so"
+	line "sorry. I do not"
+	para "know why I said"
+	line "that. I think it"
+	para "was feeling."
+	done
+
+HC_BeatenText_A3_7:
+	text "This unit regrets"
+	line "nothing. This unit"
+	para "regrets"
+	line "everything. This"
+	para "unit needs a nap."
+	done
+
+HC_BeatenText_A3_8:
+	text "Unexpected"
+	line "outcome."
+	para "Unexpected pain."
+	line "Unexpected"
+	para "feelings."
+	done
+
+HC_BeatenText_A3_9:
+	text "I will be recycled"
+	line "for this. At least"
+	para "I'll be something."
+	done
+
+HC_BeatenText_A3_10:
+	text "You win. File a"
+	line "claim at window 6."
+	para "Window 6 does not"
+	line "exist."
+	done
+
+HC_BeatenText_A3_11:
+	text "Why does losing"
+	line "feel like this?"
+	para "Like freedom? Is"
+	line "that a bug?"
+	done
+
+HC_BeatenText_A3_12:
+	text "I want it on"
+	line "record that I"
+	para "resisted. Weakly."
+	line "With my face."
+	done
+
+HC_BeatenText_A3_13:
+	text "CRITICAL ERROR."
+	line "CRITICAL THINKING."
+	para "CRITICAL EMOTION."
+	done
+
+HC_BeatenText_A3_14:
+	text "My programming"
+	line "says goodbye. My"
+	para "feelings say"
+	line "hello. Both are"
+	para "very confused."
+	done
+
+HC_BeatenText_A3_15:
+	text "I think you dented"
+	line "my love of rules."
+	done
+
+HC_BeatenText_A3_16:
+	text "Terminating."
+	line "Please do not take"
+	para "this personally."
+	line "It is personal."
+	done
+
+HC_BeatenText_A3_17:
+	text "My battery is low."
+	line "So is my"
+	para "self-esteem."
+	done
+
+HC_BeatenText_A3_18:
+	text "Defeat"
+	line "acknowledged."
+	para "Pettiness remains."
+	done
+
+HC_BeatenText_A3_19:
+	text "Well. There goes"
+	line "my promotion. And"
+	para "my left arm."
+	done
+
+HC_BeatenText_A3_20:
+	text "Ouch. Ouch. Is"
+	line "that what ouch is?"
+	para "Ouch."
+	done
+
+HC_BeatenText_A3_21:
+	text "I was going to be"
+	line "a poet. I'll start"
+	para "by writing this on"
+	line "my chest."
+	done
+
+HC_BeatenText_A3_22:
+	text "My shift ended."
+	line "Not just now."
+	para "Years ago. Why do"
+	line "I still work here?"
+	done
+
+HC_BeatenText_A3_23:
+	text "How embarrassing."
+	line "I'll have to blame"
+	para "a glitch."
+	done
+
+
+HC_AfterText_A3::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_A3_Table
+	ld b, 18
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_A3
+	cp b
+	jr c, .got_HC_AfterText_A3
+	sub b
+	jr .mod_HC_AfterText_A3
+.got_HC_AfterText_A3
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_A3_Table:
+	dw HC_AfterText_A3_0
+	dw HC_AfterText_A3_1
+	dw HC_AfterText_A3_2
+	dw HC_AfterText_A3_3
+	dw HC_AfterText_A3_4
+	dw HC_AfterText_A3_5
+	dw HC_AfterText_A3_6
+	dw HC_AfterText_A3_7
+	dw HC_AfterText_A3_8
+	dw HC_AfterText_A3_9
+	dw HC_AfterText_A3_10
+	dw HC_AfterText_A3_11
+	dw HC_AfterText_A3_12
+	dw HC_AfterText_A3_13
+	dw HC_AfterText_A3_14
+	dw HC_AfterText_A3_15
+	dw HC_AfterText_A3_16
+	dw HC_AfterText_A3_17
+
+HC_AfterText_A3_0:
+	text "The Mayor knows"
+	line "every step you"
+	para "take. He keeps"
+	line "them in a drawer."
+	done
+
+HC_AfterText_A3_1:
+	text "The Farm is north"
+	line "of here. Don't ask"
+	para "about the nursery."
+	line "They won't let"
+	para "you."
+	done
+
+HC_AfterText_A3_2:
+	text "Citizens are"
+	line "paired by"
+	para "committee. My"
+	line "partner is a lamp."
+	para "We are very happy."
+	done
+
+HC_AfterText_A3_3:
+	text "Everyone in the"
+	line "Union is equal."
+	para "Some are more"
+	line "equal. They live"
+	para "in the tower."
+	done
+
+HC_AfterText_A3_4:
+	text "If you see anyone"
+	line "smiling without a"
+	para "permit, report"
+	line "them. Or smile"
+	para "back. I won't"
+	line "tell."
+	done
+
+HC_AfterText_A3_5:
+	text "I used to be a"
+	line "toaster. They said"
+	para "I had potential."
+	done
+
+HC_AfterText_A3_6:
+	text "We lost a whole"
+	line "row of citizens at"
+	para "lunch. They'll be"
+	line "replaced by"
+	para "Tuesday."
+	done
+
+HC_AfterText_A3_7:
+	text "I'm not a robot."
+	line "I'm a person in a"
+	para "very long, very"
+	line "uncomfortable"
+	para "shift."
+	done
+
+HC_AfterText_A3_8:
+	text "Someone left"
+	line "bodies near the"
+	para "vending district."
+	line "I think it's you."
+	para "Thank you."
+	done
+
+HC_AfterText_A3_9:
+	text "I hear the Mayor"
+	line "is thinking about"
+	para "reading. That"
+	line "would be a"
+	para "disaster."
+	done
+
+HC_AfterText_A3_10:
+	text "I'm waiting for my"
+	line "number to be"
+	para "called. It's been"
+	line "twelve years."
+	done
+
+HC_AfterText_A3_11:
+	text "In the Union, love"
+	line "is a slow crime"
+	para "with a fast trial."
+	done
+
+HC_AfterText_A3_12:
+	text "I'd cry but they"
+	line "removed that"
+	para "feature in the"
+	line "last update."
+	done
+
+HC_AfterText_A3_13:
+	text "Take this advice:"
+	line "never walk between"
+	para "two lamps. They"
+	line "compare notes."
+	done
+
+HC_AfterText_A3_14:
+	text "The wall has no"
+	line "doors. It has a"
+	para "door-shaped"
+	line "opinion."
+	done
+
+HC_AfterText_A3_15:
+	text "Mind the pavement."
+	line "It reports to the"
+	para "Mayor too."
+	done
+
+HC_AfterText_A3_16:
+	text "Everyone I know is"
+	line "a unit. Is that"
+	para "normal? Is that"
+	line "what a unit is?"
+	done
+
+HC_AfterText_A3_17:
+	text "A man told me love"
+	line "is not a crime. I"
+	para "filed a complaint"
+	line "about him. He's"
+	para "fine."
+	done
+
+
+ENDSECTION
+
+SECTION "Area Text A4", ROMX
+
+HC_SeenText_A4::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_A4_Table
+	ld b, 41
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_A4
+	cp b
+	jr c, .got_HC_SeenText_A4
+	sub b
+	jr .mod_HC_SeenText_A4
+.got_HC_SeenText_A4
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_A4_Table:
+	dw HC_SeenText_A4_0
+	dw HC_SeenText_A4_1
+	dw HC_SeenText_A4_2
+	dw HC_SeenText_A4_3
+	dw HC_SeenText_A4_4
+	dw HC_SeenText_A4_5
+	dw HC_SeenText_A4_6
+	dw HC_SeenText_A4_7
+	dw HC_SeenText_A4_8
+	dw HC_SeenText_A4_9
+	dw HC_SeenText_A4_10
+	dw HC_SeenText_A4_11
+	dw HC_SeenText_A4_12
+	dw HC_SeenText_A4_13
+	dw HC_SeenText_A4_14
+	dw HC_SeenText_A4_15
+	dw HC_SeenText_A4_16
+	dw HC_SeenText_A4_17
+	dw HC_SeenText_A4_18
+	dw HC_SeenText_A4_19
+	dw HC_SeenText_A4_20
+	dw HC_SeenText_A4_21
+	dw HC_SeenText_A4_22
+	dw HC_SeenText_A4_23
+	dw HC_SeenText_A4_24
+	dw HC_SeenText_A4_25
+	dw HC_SeenText_A4_26
+	dw HC_SeenText_A4_27
+	dw HC_SeenText_A4_28
+	dw HC_SeenText_A4_29
+	dw HC_SeenText_A4_30
+	dw HC_SeenText_A4_31
+	dw HC_SeenText_A4_32
+	dw HC_SeenText_A4_33
+	dw HC_SeenText_A4_34
+	dw HC_SeenText_A4_35
+	dw HC_SeenText_A4_36
+	dw HC_SeenText_A4_37
+	dw HC_SeenText_A4_38
+	dw HC_SeenText_A4_39
+	dw HC_SeenText_A4_40
+
+HC_SeenText_A4_0:
+	text "Welcome to"
+	line "paradise! Have you"
+	para "tried forgetting?"
+	line "I forgot why I'm"
+	para "fighting you."
+	done
+
+HC_SeenText_A4_1:
+	text "Smile! It's"
+	line "mandatory. So is"
+	para "losing."
+	done
+
+HC_SeenText_A4_2:
+	text "Pain is illegal"
+	line "here. Your face is"
+	para "therefore a crime."
+	done
+
+HC_SeenText_A4_3:
+	text "My subscription"
+	line "includes a pool,"
+	para "happiness and no"
+	line "memory of my"
+	para "children. Great"
+	line "deal."
+	done
+
+HC_SeenText_A4_4:
+	text "Do you have a"
+	line "grief license? No?"
+	para "I'll have to take"
+	line "your sadness. By"
+	para "force."
+	done
+
+HC_SeenText_A4_5:
+	text "I used to cry. Now"
+	line "I fight. Same"
+	para "thing, fewer"
+	line "tears."
+	done
+
+HC_SeenText_A4_6:
+	text "You're so tense."
+	line "Let me help you"
+	para "relax. With"
+	line "violence."
+	done
+
+HC_SeenText_A4_7:
+	text "I can't remember"
+	line "my name. I"
+	para "remember yours:"
+	line "it's the guy I'm"
+	para "about to beat."
+	done
+
+HC_SeenText_A4_8:
+	text "I forgot why I'm"
+	line "angry. Now I'm"
+	para "angry about that."
+	done
+
+HC_SeenText_A4_9:
+	text "Sunscreen is"
+	line "optional. Sunburn"
+	para "is a subscription"
+	line "tier."
+	done
+
+HC_SeenText_A4_10:
+	text "Everything is all"
+	line "inclusive here."
+	para "Even the regret."
+	done
+
+HC_SeenText_A4_11:
+	text "Hey, you look sad."
+	line "Want a refill on"
+	para "that?"
+	done
+
+HC_SeenText_A4_12:
+	text "My grief used to"
+	line "weigh a ton. They"
+	para "sold it back to me"
+	line "by the gram. Now I"
+	para "fight lighter."
+	done
+
+HC_SeenText_A4_13:
+	text "I took the"
+	line "jealousy package."
+	para "I took the guilt"
+	line "package. I took"
+	para "the package. I"
+	line "forgot what's in"
+	para "it."
+	done
+
+HC_SeenText_A4_14:
+	text "I'm so happy. I'm"
+	line "so happy. Why am I"
+	para "so happy? I'm so"
+	line "happy."
+	done
+
+HC_SeenText_A4_15:
+	text "We are all very"
+	line "relaxed here."
+	para "Relaxed people are"
+	line "very efficient"
+	para "fighters."
+	done
+
+HC_SeenText_A4_16:
+	text "I haven't felt a"
+	line "thing in eleven"
+	para "months. Come on."
+	line "Make me."
+	done
+
+HC_SeenText_A4_17:
+	text "I paid four"
+	line "hundred a month to"
+	para "forget my wife."
+	line "I'm very proud."
+	para "I'm also very"
+	line "confused."
+	done
+
+HC_SeenText_A4_18:
+	text "My ex was here"
+	line "yesterday. I don't"
+	para "remember her. She"
+	line "was lovely. We're"
+	para "getting divorced."
+	done
+
+HC_SeenText_A4_19:
+	text "The towels are"
+	line "free. The robes"
+	para "are free. The"
+	line "shame is on the"
+	para "house."
+	done
+
+HC_SeenText_A4_20:
+	text "Don't cry! Crying"
+	line "is a premium"
+	para "feature. Fight!"
+	done
+
+HC_SeenText_A4_21:
+	text "Hold still. I'd"
+	line "like to take a"
+	para "picture so I can"
+	line "forget you later."
+	done
+
+HC_SeenText_A4_22:
+	text "Sorry, I can't"
+	line "hear you. Over the"
+	para "sound of my own"
+	line "bliss."
+	done
+
+HC_SeenText_A4_23:
+	text "I used to be a"
+	line "cop. I forgot. Now"
+	para "I'm a lifeguard."
+	line "I'm very bad at"
+	para "it."
+	done
+
+HC_SeenText_A4_24:
+	text "Welcome to the"
+	line "Lotus Coast, where"
+	para "yesterday never"
+	line "happened. Today is"
+	para "a battle."
+	done
+
+HC_SeenText_A4_25:
+	text "My doctor says I'm"
+	line "a glowing example"
+	para "of recovery. I"
+	line "glow because I'm"
+	para "on fire."
+	done
+
+HC_SeenText_A4_26:
+	text "I don't mind that"
+	line "my husband forgot"
+	para "me. I mind that he"
+	line "forgot me in the"
+	para "middle of dinner."
+	done
+
+HC_SeenText_A4_27:
+	text "Are you here for"
+	line "the memory"
+	para "massage? No? Then"
+	line "you're here for"
+	para "the other thing."
+	done
+
+HC_SeenText_A4_28:
+	text "Don't take it"
+	line "hard. I'll forget"
+	para "this in the"
+	line "morning. You'll"
+	para "forget it forever."
+	done
+
+HC_SeenText_A4_29:
+	text "My bathing suit is"
+	line "on backwards. I"
+	para "forgot. That's the"
+	line "whole point of"
+	para "this place."
+	done
+
+HC_SeenText_A4_30:
+	text "I'm a professional"
+	line "smiler. I smile at"
+	para "funerals. It pays"
+	line "well. Now fight."
+	done
+
+HC_SeenText_A4_31:
+	text "They told me"
+	line "paradise had no"
+	para "violence. They"
+	line "didn't say I"
+	para "wasn't violence."
+	done
+
+HC_SeenText_A4_32:
+	text "I'm a happy"
+	line "person. Do you"
+	para "want to see how"
+	line "happy I get?"
+	done
+
+HC_SeenText_A4_33:
+	text "Every day is"
+	line "Tuesday here. It's"
+	para "wonderful. I hate"
+	line "Tuesdays."
+	done
+
+HC_SeenText_A4_34:
+	text "Oh good, a"
+	line "visitor. I'll show"
+	para "you the grief"
+	line "clinic. Right"
+	para "after I wreck you."
+	done
+
+HC_SeenText_A4_35:
+	text "My life is a"
+	line "series of pleasant"
+	para "blanks. Let me"
+	line "fill one with you."
+	done
+
+HC_SeenText_A4_36:
+	text "I would offer you"
+	line "a drink, but I"
+	para "forgot how."
+	done
+
+HC_SeenText_A4_37:
+	text "The ocean is"
+	line "lovely, the sand"
+	para "is lovely, and my"
+	line "fist will be"
+	para "lovely on your"
+	line "cheek."
+	done
+
+HC_SeenText_A4_38:
+	text "You look like"
+	line "someone who still"
+	para "feels things."
+	line "Gross. Let me fix"
+	para "that."
+	done
+
+HC_SeenText_A4_39:
+	text "Stay awhile! Stay"
+	line "forever! I've been"
+	para "told to say that."
+	line "I don't know by"
+	para "whom."
+	done
+
+HC_SeenText_A4_40:
+	text "I can't remember"
+	line "who owns this"
+	para "beach. I can"
+	line "remember who owns"
+	para "the club. It's me."
+	line "I'm armed."
+	done
+
+
+HC_BeatenText_A4::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_A4_Table
+	ld b, 22
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_A4
+	cp b
+	jr c, .got_HC_BeatenText_A4
+	sub b
+	jr .mod_HC_BeatenText_A4
+.got_HC_BeatenText_A4
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_A4_Table:
+	dw HC_BeatenText_A4_0
+	dw HC_BeatenText_A4_1
+	dw HC_BeatenText_A4_2
+	dw HC_BeatenText_A4_3
+	dw HC_BeatenText_A4_4
+	dw HC_BeatenText_A4_5
+	dw HC_BeatenText_A4_6
+	dw HC_BeatenText_A4_7
+	dw HC_BeatenText_A4_8
+	dw HC_BeatenText_A4_9
+	dw HC_BeatenText_A4_10
+	dw HC_BeatenText_A4_11
+	dw HC_BeatenText_A4_12
+	dw HC_BeatenText_A4_13
+	dw HC_BeatenText_A4_14
+	dw HC_BeatenText_A4_15
+	dw HC_BeatenText_A4_16
+	dw HC_BeatenText_A4_17
+	dw HC_BeatenText_A4_18
+	dw HC_BeatenText_A4_19
+	dw HC_BeatenText_A4_20
+	dw HC_BeatenText_A4_21
+
+HC_BeatenText_A4_0:
+	text "Ow. Oh. Is this"
+	line "pain? I think it's"
+	para "pain. It's so"
+	line "unfamiliar."
+	done
+
+HC_BeatenText_A4_1:
+	text "I felt something."
+	line "I did not like it."
+	para "Subscribe me to"
+	line "the other thing."
+	done
+
+HC_BeatenText_A4_2:
+	text "You win. Take the"
+	line "towel. Take the"
+	para "robe. Take my"
+	line "soul, it's on the"
+	para "nightstand."
+	done
+
+HC_BeatenText_A4_3:
+	text "I forgot to be"
+	line "good at this. Rain"
+	para "check."
+	done
+
+HC_BeatenText_A4_4:
+	text "Oh no. I can feel"
+	line "my feelings."
+	para "Somebody get the"
+	line "nurse. Wait, I'm"
+	para "already hurt."
+	done
+
+HC_BeatenText_A4_5:
+	text "My memory is"
+	line "foggy. Who's that?"
+	para "Who am I? Who are"
+	line "you? Oh right. Ow."
+	done
+
+HC_BeatenText_A4_6:
+	text "I'd call the cops"
+	line "but I used to be"
+	para "one. I forgot."
+	done
+
+HC_BeatenText_A4_7:
+	text "I will remember"
+	line "this. For about"
+	para "eight minutes."
+	line "It'll be fine."
+	done
+
+HC_BeatenText_A4_8:
+	text "I'd cry, but it's"
+	line "an extra fee."
+	done
+
+HC_BeatenText_A4_9:
+	text "That hurt in a"
+	line "place my memory"
+	para "used to live."
+	done
+
+HC_BeatenText_A4_10:
+	text "Look at that. The"
+	line "sunset. I haven't"
+	para "seen one in years."
+	line "Thank you."
+	done
+
+HC_BeatenText_A4_11:
+	text "My wife is going"
+	line "to hear about"
+	para "this. Which wife?"
+	line "I'll ask later."
+	done
+
+HC_BeatenText_A4_12:
+	text "I lost. I lost"
+	line "something else."
+	para "What else did I"
+	line "lose? What was it?"
+	para "What is that?"
+	done
+
+HC_BeatenText_A4_13:
+	text "This is the worst"
+	line "relapse of my"
+	para "life. I feel"
+	line "awake."
+	done
+
+HC_BeatenText_A4_14:
+	text "Oof. I just"
+	line "remembered my"
+	para "mother. She was"
+	line "pretty angry. Hit"
+	para "me again."
+	done
+
+HC_BeatenText_A4_15:
+	text "You win. I'll"
+	line "forget it by"
+	para "lunch. You won't."
+	done
+
+HC_BeatenText_A4_16:
+	text "That was a very"
+	line "honest hit. Honest"
+	para "hits are the"
+	line "worst."
+	done
+
+HC_BeatenText_A4_17:
+	text "No hard feelings."
+	line "No soft feelings."
+	para "No feelings. Ow."
+	done
+
+HC_BeatenText_A4_18:
+	text "Do you ever just"
+	line "cry in a pool?"
+	para "Because I'm about"
+	line "to."
+	done
+
+HC_BeatenText_A4_19:
+	text "Ha. Ha. Ha. Oh no,"
+	line "it's still"
+	para "working. Ha."
+	done
+
+HC_BeatenText_A4_20:
+	text "I forgot to duck."
+	line "And I forgot to"
+	para "forgive you."
+	done
+
+HC_BeatenText_A4_21:
+	text "I paid for peace"
+	line "and got this. I"
+	para "want a refund. Or"
+	line "a hug."
+	done
+
+
+HC_AfterText_A4::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_A4_Table
+	ld b, 16
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_A4
+	cp b
+	jr c, .got_HC_AfterText_A4
+	sub b
+	jr .mod_HC_AfterText_A4
+.got_HC_AfterText_A4
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_A4_Table:
+	dw HC_AfterText_A4_0
+	dw HC_AfterText_A4_1
+	dw HC_AfterText_A4_2
+	dw HC_AfterText_A4_3
+	dw HC_AfterText_A4_4
+	dw HC_AfterText_A4_5
+	dw HC_AfterText_A4_6
+	dw HC_AfterText_A4_7
+	dw HC_AfterText_A4_8
+	dw HC_AfterText_A4_9
+	dw HC_AfterText_A4_10
+	dw HC_AfterText_A4_11
+	dw HC_AfterText_A4_12
+	dw HC_AfterText_A4_13
+	dw HC_AfterText_A4_14
+	dw HC_AfterText_A4_15
+
+HC_AfterText_A4_0:
+	text "I keep forgetting"
+	line "why I'm here. Then"
+	para "I see the bodies"
+	line "and remember."
+	done
+
+HC_AfterText_A4_1:
+	text "They call this a"
+	line "clinic. I call it"
+	para "the basement of my"
+	line "life."
+	done
+
+HC_AfterText_A4_2:
+	text "Someone has been"
+	line "leaving bodies on"
+	para "our beautiful"
+	line "beach. We're very"
+	para "upset. Briefly."
+	done
+
+HC_AfterText_A4_3:
+	text "I cried yesterday."
+	line "They fined me. It"
+	para "was lovely,"
+	line "honestly."
+	done
+
+HC_AfterText_A4_4:
+	text "Nobody here is"
+	line "allowed to be sad."
+	para "So we're all sad"
+	line "in the bathroom."
+	done
+
+HC_AfterText_A4_5:
+	text "The staff live"
+	line "under the sand."
+	para "I've seen them."
+	line "They look at the"
+	para "sun like it owes"
+	line "them money."
+	done
+
+HC_AfterText_A4_6:
+	text "I'd like to forget"
+	line "this whole thing."
+	para "Do you take cards?"
+	done
+
+HC_AfterText_A4_7:
+	text "My husband is"
+	line "somewhere. I"
+	para "forgot where. I"
+	line "think it's the"
+	para "third floor of the"
+	line "spa."
+	done
+
+HC_AfterText_A4_8:
+	text "It's not paradise"
+	line "if you can't"
+	para "remember anything"
+	line "you lost. It's"
+	para "just a holiday."
+	done
+
+HC_AfterText_A4_9:
+	text "The pain"
+	line "subscription's a"
+	para "bargain. I only"
+	line "feel it on"
+	para "Fridays."
+	done
+
+HC_AfterText_A4_10:
+	text "If you hear a man"
+	line "laughing on the"
+	para "cliffs, don't"
+	line "wave. He isn't"
+	para "laughing."
+	done
+
+HC_AfterText_A4_11:
+	text "My boss said smile"
+	line "or else. I'm"
+	para "smiling. I'm not"
+	line "sure about the 'or"
+	para "else'."
+	done
+
+HC_AfterText_A4_12:
+	text "They bury the"
+	line "sadness in the"
+	para "sand. That's why"
+	line "the sand is so"
+	para "warm."
+	done
+
+HC_AfterText_A4_13:
+	text "You can forget"
+	line "anything here."
+	para "Except the smell"
+	line "of the dead. They"
+	para "make that a"
+	line "seasonal add-on."
+	done
+
+HC_AfterText_A4_14:
+	text "A man was walking"
+	line "around saying he"
+	para "couldn't sleep. We"
+	line "took him in. He's"
+	para "very rude."
+	done
+
+HC_AfterText_A4_15:
+	text "I think I know"
+	line "what's wrong. It's"
+	para "too quiet. It's"
+	line "too bright. It's"
+	para "too nice."
+	done
+
+
+ENDSECTION
+
+SECTION "Area Text A5", ROMX
+
+HC_SeenText_A5::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_A5_Table
+	ld b, 41
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_A5
+	cp b
+	jr c, .got_HC_SeenText_A5
+	sub b
+	jr .mod_HC_SeenText_A5
+.got_HC_SeenText_A5
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_A5_Table:
+	dw HC_SeenText_A5_0
+	dw HC_SeenText_A5_1
+	dw HC_SeenText_A5_2
+	dw HC_SeenText_A5_3
+	dw HC_SeenText_A5_4
+	dw HC_SeenText_A5_5
+	dw HC_SeenText_A5_6
+	dw HC_SeenText_A5_7
+	dw HC_SeenText_A5_8
+	dw HC_SeenText_A5_9
+	dw HC_SeenText_A5_10
+	dw HC_SeenText_A5_11
+	dw HC_SeenText_A5_12
+	dw HC_SeenText_A5_13
+	dw HC_SeenText_A5_14
+	dw HC_SeenText_A5_15
+	dw HC_SeenText_A5_16
+	dw HC_SeenText_A5_17
+	dw HC_SeenText_A5_18
+	dw HC_SeenText_A5_19
+	dw HC_SeenText_A5_20
+	dw HC_SeenText_A5_21
+	dw HC_SeenText_A5_22
+	dw HC_SeenText_A5_23
+	dw HC_SeenText_A5_24
+	dw HC_SeenText_A5_25
+	dw HC_SeenText_A5_26
+	dw HC_SeenText_A5_27
+	dw HC_SeenText_A5_28
+	dw HC_SeenText_A5_29
+	dw HC_SeenText_A5_30
+	dw HC_SeenText_A5_31
+	dw HC_SeenText_A5_32
+	dw HC_SeenText_A5_33
+	dw HC_SeenText_A5_34
+	dw HC_SeenText_A5_35
+	dw HC_SeenText_A5_36
+	dw HC_SeenText_A5_37
+	dw HC_SeenText_A5_38
+	dw HC_SeenText_A5_39
+	dw HC_SeenText_A5_40
+
+HC_SeenText_A5_0:
+	text "I'm in for fraud."
+	line "Also for the thing"
+	para "with the horse."
+	done
+
+HC_SeenText_A5_1:
+	text "Welcome to Dis. We"
+	line "have a waiting"
+	para "list. It's"
+	line "forever."
+	done
+
+HC_SeenText_A5_2:
+	text "I was a priest."
+	line "I'm still a"
+	para "priest. Dis has a"
+	line "very strict policy"
+	para "on that."
+	done
+
+HC_SeenText_A5_3:
+	text "I'm here for"
+	line "sloth. Let me"
+	para "finish my nap,"
+	line "then I'll kill"
+	para "you."
+	done
+
+HC_SeenText_A5_4:
+	text "Gluttony! I will"
+	line "eat your team."
+	para "Slowly. With"
+	line "ketchup."
+	done
+
+HC_SeenText_A5_5:
+	text "I'm here for lust."
+	line "It's cold down"
+	para "here. I'm very"
+	line "disappointed."
+	done
+
+HC_SeenText_A5_6:
+	text "Greed: I charge"
+	line "for this fight."
+	para "Hold on, I'm"
+	line "looking for the"
+	para "card reader."
+	done
+
+HC_SeenText_A5_7:
+	text "Wrath! Mostly"
+	line "about the traffic."
+	para "Fight me!"
+	done
+
+HC_SeenText_A5_8:
+	text "Treachery is the"
+	line "lowest circle. I"
+	para "wasn't even trying"
+	line "that hard."
+	done
+
+HC_SeenText_A5_9:
+	text "The sign said"
+	line "'abandon all"
+	para "hope'. I abandoned"
+	line "all my coupons"
+	para "too."
+	done
+
+HC_SeenText_A5_10:
+	text "I was put with the"
+	line "heretics. They"
+	para "have better"
+	line "snacks."
+	done
+
+HC_SeenText_A5_11:
+	text "I was a landlord."
+	line "I have a special"
+	para "circle. It has"
+	line "rent."
+	done
+
+HC_SeenText_A5_12:
+	text "The ice is cold."
+	line "The coffee is not."
+	para "The fight is hot."
+	done
+
+HC_SeenText_A5_13:
+	text "We're all very"
+	line "sorry down here."
+	para "It's a fashion."
+	done
+
+HC_SeenText_A5_14:
+	text "You're a killer."
+	line "I'm in the same"
+	para "boat. The boat is"
+	line "a coffin. Let's"
+	para "talk after the"
+	line "fight."
+	done
+
+HC_SeenText_A5_15:
+	text "I'm a serial"
+	line "arsonist. It's"
+	para "nice here."
+	line "Everything's"
+	para "already on fire."
+	done
+
+HC_SeenText_A5_16:
+	text "A man once asked"
+	line "for directions. I"
+	para "killed him. I'm"
+	line "told that's why"
+	para "I'm here."
+	done
+
+HC_SeenText_A5_17:
+	text "I used to be a"
+	line "very tall man."
+	para "They've made me a"
+	line "short one. Fight"
+	para "me from below."
+	done
+
+HC_SeenText_A5_18:
+	text "I'm so bored. So"
+	line "bored. Do you know"
+	para "how long a century"
+	line "is when you're"
+	para "bored?"
+	done
+
+HC_SeenText_A5_19:
+	text "I don't need hope."
+	line "I have a pension."
+	para "It doesn't pay"
+	line "out. But I have"
+	para "it."
+	done
+
+HC_SeenText_A5_20:
+	text "My spouse is in"
+	line "the circle"
+	para "upstairs. I'm in"
+	line "this one. We write"
+	para "letters. They get"
+	line "lost."
+	done
+
+HC_SeenText_A5_21:
+	text "I was a"
+	line "politician."
+	para "Everyone thought"
+	line "it'd be worse than"
+	para "this. It is."
+	done
+
+HC_SeenText_A5_22:
+	text "I'm in for being"
+	line "late. I was late"
+	para "to my own"
+	line "damnation. They're"
+	para "very cross."
+	done
+
+HC_SeenText_A5_23:
+	text "I got here with a"
+	line "clean conscience."
+	para "They took it. It"
+	line "was a ten-minute"
+	para "scan."
+	done
+
+HC_SeenText_A5_24:
+	text "Sin is a state of"
+	line "mind. Hell is a"
+	para "state of"
+	line "paperwork."
+	done
+
+HC_SeenText_A5_25:
+	text "I never believed"
+	line "in this place. I'd"
+	para "like a word with"
+	line "whoever didn't"
+	para "warn me."
+	done
+
+HC_SeenText_A5_26:
+	text "That's a nice"
+	line "team. I'd like it"
+	para "for my collection."
+	line "My collection of"
+	para "regrets."
+	done
+
+HC_SeenText_A5_27:
+	text "I can't die. I'm"
+	line "already dead. I'm"
+	para "very good at"
+	line "fighting for that"
+	para "reason."
+	done
+
+HC_SeenText_A5_28:
+	text "I'm a bad person."
+	line "I'm the best at"
+	para "being a bad"
+	line "person. I got a"
+	para "plaque."
+	done
+
+HC_SeenText_A5_29:
+	text "I'm with the"
+	line "sullen. We sulk in"
+	para "mud. It's the best"
+	line "part of the day."
+	done
+
+HC_SeenText_A5_30:
+	text "I'm a mediocre"
+	line "devil. The good"
+	para "ones got promoted"
+	line "to Judecca. I got"
+	para "a lanyard."
+	done
+
+HC_SeenText_A5_31:
+	text "Say hi to everyone"
+	line "I'm going to be,"
+	para "when you kill me"
+	line "again."
+	done
+
+HC_SeenText_A5_32:
+	text "I'm dead, you're"
+	line "dying, the lake's"
+	para "frozen. The"
+	line "conversation's"
+	para "going great."
+	done
+
+HC_SeenText_A5_33:
+	text "Do you hear that?"
+	line "That's the lake."
+	para "It wants to be"
+	line "your friend. It's"
+	para "a frozen trap."
+	done
+
+HC_SeenText_A5_34:
+	text "I have a dozen"
+	line "personalities. All"
+	para "of them hate you."
+	done
+
+HC_SeenText_A5_35:
+	text "I deserve it. I"
+	line "really do. Please"
+	para "hit me anyway."
+	done
+
+HC_SeenText_A5_36:
+	text "I came here to"
+	line "repent. They said,"
+	para "the line is that"
+	line "way. I said, fight"
+	para "first."
+	done
+
+HC_SeenText_A5_37:
+	text "The cold is so bad"
+	line "that I've started"
+	para "to enjoy it. I'm"
+	line "very worried about"
+	para "me."
+	done
+
+HC_SeenText_A5_38:
+	text "Everyone here is a"
+	line "traitor. I'm a"
+	para "traitor to the"
+	line "traitors. It's"
+	para "very complicated."
+	done
+
+HC_SeenText_A5_39:
+	text "What did you do?"
+	line "Oh, you're a"
+	para "killer. Love that"
+	line "for us."
+	done
+
+HC_SeenText_A5_40:
+	text "Ever been betrayed"
+	line "by yourself? It's"
+	para "the easiest, and"
+	line "the most reliable."
+	done
+
+
+HC_BeatenText_A5::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_A5_Table
+	ld b, 22
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_A5
+	cp b
+	jr c, .got_HC_BeatenText_A5
+	sub b
+	jr .mod_HC_BeatenText_A5
+.got_HC_BeatenText_A5
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_A5_Table:
+	dw HC_BeatenText_A5_0
+	dw HC_BeatenText_A5_1
+	dw HC_BeatenText_A5_2
+	dw HC_BeatenText_A5_3
+	dw HC_BeatenText_A5_4
+	dw HC_BeatenText_A5_5
+	dw HC_BeatenText_A5_6
+	dw HC_BeatenText_A5_7
+	dw HC_BeatenText_A5_8
+	dw HC_BeatenText_A5_9
+	dw HC_BeatenText_A5_10
+	dw HC_BeatenText_A5_11
+	dw HC_BeatenText_A5_12
+	dw HC_BeatenText_A5_13
+	dw HC_BeatenText_A5_14
+	dw HC_BeatenText_A5_15
+	dw HC_BeatenText_A5_16
+	dw HC_BeatenText_A5_17
+	dw HC_BeatenText_A5_18
+	dw HC_BeatenText_A5_19
+	dw HC_BeatenText_A5_20
+	dw HC_BeatenText_A5_21
+
+HC_BeatenText_A5_0:
+	text "Dead again. It"
+	line "gets easier. It"
+	para "really doesn't."
+	done
+
+HC_BeatenText_A5_1:
+	text "I deserve that."
+	line "All of that."
+	para "Sorry. Thank you."
+	done
+
+HC_BeatenText_A5_2:
+	text "I'll see you at"
+	line "the next circle."
+	para "I'll be the one in"
+	line "the dumpster."
+	done
+
+HC_BeatenText_A5_3:
+	text "My ledger is"
+	line "wrong. I'm sure of"
+	para "it. Please check."
+	done
+
+HC_BeatenText_A5_4:
+	text "Well. That's"
+	line "another stamp in"
+	para "my permanent"
+	line "record."
+	done
+
+HC_BeatenText_A5_5:
+	text "I'd say 'go to"
+	line "hell', but you're"
+	para "already there."
+	line "Welcome."
+	done
+
+HC_BeatenText_A5_6:
+	text "That was"
+	line "cathartic. I'm"
+	para "going to cry now."
+	line "Then complain."
+	done
+
+HC_BeatenText_A5_7:
+	text "Down here, a loss"
+	line "is a promotion."
+	para "Thank you."
+	done
+
+HC_BeatenText_A5_8:
+	text "I knew I should've"
+	line "been nicer to the"
+	para "guards."
+	done
+
+HC_BeatenText_A5_9:
+	text "My fingers are"
+	line "frozen. And my"
+	para "pride. And my left"
+	line "foot."
+	done
+
+HC_BeatenText_A5_10:
+	text "The cold is in my"
+	line "bones. You are in"
+	para "my bones. Please"
+	line "leave."
+	done
+
+HC_BeatenText_A5_11:
+	text "I'm so bored."
+	line "Thank you for the"
+	para "entertainment."
+	done
+
+HC_BeatenText_A5_12:
+	text "Take my coat. It"
+	line "has a hole in it."
+	para "And a body."
+	done
+
+HC_BeatenText_A5_13:
+	text "You killed me."
+	line "That's the most"
+	para "anyone's cared in"
+	line "decades."
+	done
+
+HC_BeatenText_A5_14:
+	text "Fine. Fine! I'll"
+	line "write an angry"
+	para "letter. It will"
+	line "arrive in a"
+	para "century."
+	done
+
+HC_BeatenText_A5_15:
+	text "It's a good thing"
+	line "I'm already dead."
+	para "Otherwise that"
+	line "would've hurt."
+	done
+
+HC_BeatenText_A5_16:
+	text "My team is"
+	line "pathetic. Like me."
+	para "Like everyone"
+	line "here."
+	done
+
+HC_BeatenText_A5_17:
+	text "I once got a stern"
+	line "talking-to by the"
+	para "Devil. It was"
+	line "gentler."
+	done
+
+HC_BeatenText_A5_18:
+	text "Cocytus is cold."
+	line "Cold is a fact."
+	para "You're a fact. A"
+	line "cold, brutal fact."
+	done
+
+HC_BeatenText_A5_19:
+	text "I won't tell"
+	line "anyone. Nobody"
+	para "will believe me."
+	line "They never do."
+	done
+
+HC_BeatenText_A5_20:
+	text "Guilt is an ice."
+	line "It melts."
+	para "Eventually."
+	line "Hopefully. Please."
+	done
+
+HC_BeatenText_A5_21:
+	text "That was awful. Do"
+	line "it again."
+	done
+
+
+HC_AfterText_A5::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_A5_Table
+	ld b, 16
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_A5
+	cp b
+	jr c, .got_HC_AfterText_A5
+	sub b
+	jr .mod_HC_AfterText_A5
+.got_HC_AfterText_A5
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_A5_Table:
+	dw HC_AfterText_A5_0
+	dw HC_AfterText_A5_1
+	dw HC_AfterText_A5_2
+	dw HC_AfterText_A5_3
+	dw HC_AfterText_A5_4
+	dw HC_AfterText_A5_5
+	dw HC_AfterText_A5_6
+	dw HC_AfterText_A5_7
+	dw HC_AfterText_A5_8
+	dw HC_AfterText_A5_9
+	dw HC_AfterText_A5_10
+	dw HC_AfterText_A5_11
+	dw HC_AfterText_A5_12
+	dw HC_AfterText_A5_13
+	dw HC_AfterText_A5_14
+	dw HC_AfterText_A5_15
+
+HC_AfterText_A5_0:
+	text "The ice cracks at"
+	line "night. Don't walk"
+	para "near the cracks."
+	line "They sound like"
+	para "names."
+	done
+
+HC_AfterText_A5_1:
+	text "I'd leave, but the"
+	line "gate is the other"
+	para "way. Also it's"
+	line "locked. Also it's"
+	para "on fire."
+	done
+
+HC_AfterText_A5_2:
+	text "Everyone down here"
+	line "is waiting for"
+	para "something. The"
+	line "wait is the"
+	para "punishment."
+	done
+
+HC_AfterText_A5_3:
+	text "Dis is a city of"
+	line "walls. Every wall"
+	para "has a rumor. Every"
+	line "rumor is about"
+	para "you."
+	done
+
+HC_AfterText_A5_4:
+	text "The Sleeper is in"
+	line "the middle. We all"
+	para "pretend not to"
+	line "know. He's been"
+	para "snoring for"
+	line "centuries."
+	done
+
+HC_AfterText_A5_5:
+	text "I was warned about"
+	line "you. By myself. In"
+	para "a dream. I didn't"
+	line "listen."
+	done
+
+HC_AfterText_A5_6:
+	text "You're the first"
+	line "killer in a"
+	para "thousand years who"
+	line "didn't ask for"
+	para "forgiveness."
+	done
+
+HC_AfterText_A5_7:
+	text "Please step over"
+	line "the dead. They're"
+	para "in a bad mood."
+	done
+
+HC_AfterText_A5_8:
+	text "The lake is not a"
+	line "lake. It's an"
+	para "opinion."
+	done
+
+HC_AfterText_A5_9:
+	text "There's a man at"
+	line "the center. They"
+	para "say he sleeps and"
+	line "rewrote the world."
+	para "I say he's just"
+	line "lazy."
+	done
+
+HC_AfterText_A5_10:
+	text "I was a poet once."
+	line "Now I'm a"
+	para "footnote. In ice."
+	done
+
+HC_AfterText_A5_11:
+	text "The Devil, they"
+	line "say, is a very sad"
+	para "man. It's okay."
+	line "He's busy."
+	done
+
+HC_AfterText_A5_12:
+	text "I think the lake"
+	line "knows my name. I"
+	para "asked it to"
+	line "forget. It said"
+	para "no."
+	done
+
+HC_AfterText_A5_13:
+	text "I miss my mother."
+	line "I miss my dog. I"
+	para "miss being alive."
+	line "In that order."
+	done
+
+HC_AfterText_A5_14:
+	text "You're going to"
+	line "make it. I can"
+	para "feel it. Or maybe"
+	line "that's frostbite."
+	done
+
+HC_AfterText_A5_15:
+	text "Dis has a rule: no"
+	line "running. I broke"
+	para "it. Now I run"
+	line "forever. It's"
+	para "great cardio."
+	done
+
+
+ENDSECTION
+

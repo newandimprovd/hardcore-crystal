@@ -14,3 +14,24 @@
 	spawn GROVE_PLAZA5,  3,  4
 	spawn GROVE_PLAZA6,  3,  4
 	spawn GROVE_PLAZA7,  3,  4
+	spawn AXIOM_PLAZA1,  3,  4
+	spawn AXIOM_PLAZA2,  3,  4
+	spawn AXIOM_PLAZA3,  3,  4
+	spawn AXIOM_PLAZA4,  3,  4
+	spawn AXIOM_PLAZA5,  3,  4
+	spawn AXIOM_PLAZA6,  3,  4
+	spawn AXIOM_PLAZA7,  3,  4
+	spawn LOTUS_PLAZA1,  3,  4
+	spawn LOTUS_PLAZA2,  3,  4
+	spawn LOTUS_PLAZA3,  3,  4
+	spawn LOTUS_PLAZA4,  3,  4
+	spawn LOTUS_PLAZA5,  3,  4
+	spawn LOTUS_PLAZA6,  3,  4
+	spawn LOTUS_PLAZA7,  3,  4
+	spawn DIS_PLAZA1,  3,  4
+	spawn DIS_PLAZA2,  3,  4
+	spawn DIS_PLAZA3,  3,  4
+	spawn DIS_PLAZA4,  3,  4
+	spawn DIS_PLAZA5,  3,  4
+	spawn DIS_PLAZA6,  3,  4
+	spawn DIS_PLAZA7,  3,  4

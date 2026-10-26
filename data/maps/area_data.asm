@@ -277,6 +277,414 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes GroveCouncil, GROVE_COUNCIL, $00
 
+	map_attributes AxiomPlaza1, AXIOM_PLAZA1, $23
+	connection north, AxiomStreet1, AXIOM_STREET1, 0
+
+	map_attributes AxiomGate, AXIOM_GATE, $00
+
+	map_attributes AxiomPokecenter1, AXIOM_POKECENTER1, $00
+
+	map_attributes AxiomMart1, AXIOM_MART1, $00
+
+	map_attributes AxiomHouse1, AXIOM_HOUSE1, $00
+
+	map_attributes AxiomStreet1, AXIOM_STREET1, $23
+	connection north, AxiomStreet2, AXIOM_STREET2, 0
+	connection south, AxiomPlaza1, AXIOM_PLAZA1, 0
+
+	map_attributes AxiomStreet2, AXIOM_STREET2, $23
+	connection north, AxiomStreet3, AXIOM_STREET3, 0
+	connection south, AxiomStreet1, AXIOM_STREET1, 0
+
+	map_attributes AxiomStreet3, AXIOM_STREET3, $23
+	connection north, AxiomPlaza2, AXIOM_PLAZA2, 0
+	connection south, AxiomStreet2, AXIOM_STREET2, 0
+
+	map_attributes AxiomPlaza2, AXIOM_PLAZA2, $23
+	connection north, AxiomStreet4, AXIOM_STREET4, 0
+	connection south, AxiomStreet3, AXIOM_STREET3, 0
+
+	map_attributes AxiomPokecenter2, AXIOM_POKECENTER2, $00
+
+	map_attributes AxiomMart2, AXIOM_MART2, $00
+
+	map_attributes AxiomHouse2, AXIOM_HOUSE2, $00
+
+	map_attributes AxiomStreet4, AXIOM_STREET4, $23
+	connection north, AxiomStreet5, AXIOM_STREET5, 0
+	connection south, AxiomPlaza2, AXIOM_PLAZA2, 0
+
+	map_attributes AxiomStreet5, AXIOM_STREET5, $23
+	connection north, AxiomPlaza3, AXIOM_PLAZA3, 0
+	connection south, AxiomStreet4, AXIOM_STREET4, 0
+
+	map_attributes AxiomPlaza3, AXIOM_PLAZA3, $23
+	connection north, AxiomStreet6, AXIOM_STREET6, 0
+	connection south, AxiomStreet5, AXIOM_STREET5, 0
+
+	map_attributes AxiomPokecenter3, AXIOM_POKECENTER3, $00
+
+	map_attributes AxiomMart3, AXIOM_MART3, $00
+
+	map_attributes AxiomHouse3, AXIOM_HOUSE3, $00
+
+	map_attributes AxiomRegistry, AXIOM_REGISTRY, $00
+
+	map_attributes AxiomStreet6, AXIOM_STREET6, $23
+	connection north, AxiomStreet7, AXIOM_STREET7, 0
+	connection south, AxiomPlaza3, AXIOM_PLAZA3, 0
+
+	map_attributes AxiomStreet7, AXIOM_STREET7, $23
+	connection north, AxiomPlaza4, AXIOM_PLAZA4, 0
+	connection south, AxiomStreet6, AXIOM_STREET6, 0
+
+	map_attributes AxiomPlaza4, AXIOM_PLAZA4, $23
+	connection north, AxiomStreet8, AXIOM_STREET8, 0
+	connection south, AxiomStreet7, AXIOM_STREET7, 0
+
+	map_attributes AxiomPokecenter4, AXIOM_POKECENTER4, $00
+
+	map_attributes AxiomMart4, AXIOM_MART4, $00
+
+	map_attributes AxiomHouse4, AXIOM_HOUSE4, $00
+
+	map_attributes AxiomStreet8, AXIOM_STREET8, $23
+	connection north, AxiomStreet9, AXIOM_STREET9, 0
+	connection south, AxiomPlaza4, AXIOM_PLAZA4, 0
+
+	map_attributes AxiomStreet9, AXIOM_STREET9, $23
+	connection north, AxiomStreet10, AXIOM_STREET10, 0
+	connection south, AxiomStreet8, AXIOM_STREET8, 0
+
+	map_attributes AxiomStreet10, AXIOM_STREET10, $23
+	connection north, AxiomPlaza5, AXIOM_PLAZA5, 0
+	connection south, AxiomStreet9, AXIOM_STREET9, 0
+
+	map_attributes AxiomPlaza5, AXIOM_PLAZA5, $23
+	connection north, AxiomStreet11, AXIOM_STREET11, 0
+	connection south, AxiomStreet10, AXIOM_STREET10, 0
+
+	map_attributes AxiomPokecenter5, AXIOM_POKECENTER5, $00
+
+	map_attributes AxiomMart5, AXIOM_MART5, $00
+
+	map_attributes AxiomHouse5, AXIOM_HOUSE5, $00
+
+	map_attributes AxiomArmory, AXIOM_ARMORY, $00
+
+	map_attributes AxiomStreet11, AXIOM_STREET11, $23
+	connection north, AxiomStreet12, AXIOM_STREET12, 0
+	connection south, AxiomPlaza5, AXIOM_PLAZA5, 0
+
+	map_attributes AxiomStreet12, AXIOM_STREET12, $23
+	connection north, AxiomStreet13, AXIOM_STREET13, 0
+	connection south, AxiomStreet11, AXIOM_STREET11, 0
+
+	map_attributes AxiomStreet13, AXIOM_STREET13, $23
+	connection north, AxiomPlaza6, AXIOM_PLAZA6, 0
+	connection south, AxiomStreet12, AXIOM_STREET12, 0
+
+	map_attributes AxiomPlaza6, AXIOM_PLAZA6, $23
+	connection north, AxiomStreet14, AXIOM_STREET14, 0
+	connection south, AxiomStreet13, AXIOM_STREET13, 0
+
+	map_attributes AxiomPokecenter6, AXIOM_POKECENTER6, $00
+
+	map_attributes AxiomMart6, AXIOM_MART6, $00
+
+	map_attributes AxiomHouse6, AXIOM_HOUSE6, $00
+
+	map_attributes AxiomStreet14, AXIOM_STREET14, $23
+	connection north, AxiomStreet15, AXIOM_STREET15, 0
+	connection south, AxiomPlaza6, AXIOM_PLAZA6, 0
+
+	map_attributes AxiomStreet15, AXIOM_STREET15, $23
+	connection north, AxiomPlaza7, AXIOM_PLAZA7, 0
+	connection south, AxiomStreet14, AXIOM_STREET14, 0
+
+	map_attributes AxiomPlaza7, AXIOM_PLAZA7, $23
+	connection south, AxiomStreet15, AXIOM_STREET15, 0
+
+	map_attributes AxiomPokecenter7, AXIOM_POKECENTER7, $00
+
+	map_attributes AxiomMart7, AXIOM_MART7, $00
+
+	map_attributes AxiomHouse7, AXIOM_HOUSE7, $00
+
+	map_attributes AxiomMayoralty, AXIOM_MAYORALTY, $00
+
+	map_attributes LotusPlaza1, LOTUS_PLAZA1, $0f
+	connection north, LotusStreet1, LOTUS_STREET1, 0
+
+	map_attributes LotusGate, LOTUS_GATE, $00
+
+	map_attributes LotusPokecenter1, LOTUS_POKECENTER1, $00
+
+	map_attributes LotusMart1, LOTUS_MART1, $00
+
+	map_attributes LotusHouse1, LOTUS_HOUSE1, $00
+
+	map_attributes LotusStreet1, LOTUS_STREET1, $0f
+	connection north, LotusStreet2, LOTUS_STREET2, 0
+	connection south, LotusPlaza1, LOTUS_PLAZA1, 0
+
+	map_attributes LotusStreet2, LOTUS_STREET2, $0f
+	connection north, LotusStreet3, LOTUS_STREET3, 0
+	connection south, LotusStreet1, LOTUS_STREET1, 0
+
+	map_attributes LotusStreet3, LOTUS_STREET3, $0f
+	connection north, LotusPlaza2, LOTUS_PLAZA2, 0
+	connection south, LotusStreet2, LOTUS_STREET2, 0
+
+	map_attributes LotusPlaza2, LOTUS_PLAZA2, $0f
+	connection north, LotusStreet4, LOTUS_STREET4, 0
+	connection south, LotusStreet3, LOTUS_STREET3, 0
+
+	map_attributes LotusPokecenter2, LOTUS_POKECENTER2, $00
+
+	map_attributes LotusMart2, LOTUS_MART2, $00
+
+	map_attributes LotusHouse2, LOTUS_HOUSE2, $00
+
+	map_attributes LotusStreet4, LOTUS_STREET4, $0f
+	connection north, LotusStreet5, LOTUS_STREET5, 0
+	connection south, LotusPlaza2, LOTUS_PLAZA2, 0
+
+	map_attributes LotusStreet5, LOTUS_STREET5, $0f
+	connection north, LotusPlaza3, LOTUS_PLAZA3, 0
+	connection south, LotusStreet4, LOTUS_STREET4, 0
+
+	map_attributes LotusPlaza3, LOTUS_PLAZA3, $0f
+	connection north, LotusStreet6, LOTUS_STREET6, 0
+	connection south, LotusStreet5, LOTUS_STREET5, 0
+
+	map_attributes LotusPokecenter3, LOTUS_POKECENTER3, $00
+
+	map_attributes LotusMart3, LOTUS_MART3, $00
+
+	map_attributes LotusHouse3, LOTUS_HOUSE3, $00
+
+	map_attributes LotusClinic, LOTUS_CLINIC, $00
+
+	map_attributes LotusStreet6, LOTUS_STREET6, $0f
+	connection north, LotusStreet7, LOTUS_STREET7, 0
+	connection south, LotusPlaza3, LOTUS_PLAZA3, 0
+
+	map_attributes LotusStreet7, LOTUS_STREET7, $0f
+	connection north, LotusPlaza4, LOTUS_PLAZA4, 0
+	connection south, LotusStreet6, LOTUS_STREET6, 0
+
+	map_attributes LotusPlaza4, LOTUS_PLAZA4, $0f
+	connection north, LotusStreet8, LOTUS_STREET8, 0
+	connection south, LotusStreet7, LOTUS_STREET7, 0
+
+	map_attributes LotusPokecenter4, LOTUS_POKECENTER4, $00
+
+	map_attributes LotusMart4, LOTUS_MART4, $00
+
+	map_attributes LotusHouse4, LOTUS_HOUSE4, $00
+
+	map_attributes LotusStreet8, LOTUS_STREET8, $0f
+	connection north, LotusStreet9, LOTUS_STREET9, 0
+	connection south, LotusPlaza4, LOTUS_PLAZA4, 0
+
+	map_attributes LotusStreet9, LOTUS_STREET9, $0f
+	connection north, LotusStreet10, LOTUS_STREET10, 0
+	connection south, LotusStreet8, LOTUS_STREET8, 0
+
+	map_attributes LotusStreet10, LOTUS_STREET10, $0f
+	connection north, LotusPlaza5, LOTUS_PLAZA5, 0
+	connection south, LotusStreet9, LOTUS_STREET9, 0
+
+	map_attributes LotusPlaza5, LOTUS_PLAZA5, $0f
+	connection north, LotusStreet11, LOTUS_STREET11, 0
+	connection south, LotusStreet10, LOTUS_STREET10, 0
+
+	map_attributes LotusPokecenter5, LOTUS_POKECENTER5, $00
+
+	map_attributes LotusMart5, LOTUS_MART5, $00
+
+	map_attributes LotusHouse5, LOTUS_HOUSE5, $00
+
+	map_attributes LotusCabana, LOTUS_CABANA, $00
+
+	map_attributes LotusStreet11, LOTUS_STREET11, $0f
+	connection north, LotusStreet12, LOTUS_STREET12, 0
+	connection south, LotusPlaza5, LOTUS_PLAZA5, 0
+
+	map_attributes LotusStreet12, LOTUS_STREET12, $0f
+	connection north, LotusStreet13, LOTUS_STREET13, 0
+	connection south, LotusStreet11, LOTUS_STREET11, 0
+
+	map_attributes LotusStreet13, LOTUS_STREET13, $0f
+	connection north, LotusPlaza6, LOTUS_PLAZA6, 0
+	connection south, LotusStreet12, LOTUS_STREET12, 0
+
+	map_attributes LotusPlaza6, LOTUS_PLAZA6, $0f
+	connection north, LotusStreet14, LOTUS_STREET14, 0
+	connection south, LotusStreet13, LOTUS_STREET13, 0
+
+	map_attributes LotusPokecenter6, LOTUS_POKECENTER6, $00
+
+	map_attributes LotusMart6, LOTUS_MART6, $00
+
+	map_attributes LotusHouse6, LOTUS_HOUSE6, $00
+
+	map_attributes LotusStreet14, LOTUS_STREET14, $0f
+	connection north, LotusStreet15, LOTUS_STREET15, 0
+	connection south, LotusPlaza6, LOTUS_PLAZA6, 0
+
+	map_attributes LotusStreet15, LOTUS_STREET15, $0f
+	connection north, LotusPlaza7, LOTUS_PLAZA7, 0
+	connection south, LotusStreet14, LOTUS_STREET14, 0
+
+	map_attributes LotusPlaza7, LOTUS_PLAZA7, $0f
+	connection south, LotusStreet15, LOTUS_STREET15, 0
+
+	map_attributes LotusPokecenter7, LOTUS_POKECENTER7, $00
+
+	map_attributes LotusMart7, LOTUS_MART7, $00
+
+	map_attributes LotusHouse7, LOTUS_HOUSE7, $00
+
+	map_attributes LotusMansion, LOTUS_MANSION, $00
+
+	map_attributes DisPlaza1, DIS_PLAZA1, $0f
+	connection north, DisStreet1, DIS_STREET1, 0
+
+	map_attributes DisGate, DIS_GATE, $00
+
+	map_attributes DisPokecenter1, DIS_POKECENTER1, $00
+
+	map_attributes DisMart1, DIS_MART1, $00
+
+	map_attributes DisHouse1, DIS_HOUSE1, $00
+
+	map_attributes DisStreet1, DIS_STREET1, $0f
+	connection north, DisStreet2, DIS_STREET2, 0
+	connection south, DisPlaza1, DIS_PLAZA1, 0
+
+	map_attributes DisStreet2, DIS_STREET2, $0f
+	connection north, DisStreet3, DIS_STREET3, 0
+	connection south, DisStreet1, DIS_STREET1, 0
+
+	map_attributes DisStreet3, DIS_STREET3, $0f
+	connection north, DisPlaza2, DIS_PLAZA2, 0
+	connection south, DisStreet2, DIS_STREET2, 0
+
+	map_attributes DisPlaza2, DIS_PLAZA2, $0f
+	connection north, DisStreet4, DIS_STREET4, 0
+	connection south, DisStreet3, DIS_STREET3, 0
+
+	map_attributes DisPokecenter2, DIS_POKECENTER2, $00
+
+	map_attributes DisMart2, DIS_MART2, $00
+
+	map_attributes DisHouse2, DIS_HOUSE2, $00
+
+	map_attributes DisStreet4, DIS_STREET4, $0f
+	connection north, DisStreet5, DIS_STREET5, 0
+	connection south, DisPlaza2, DIS_PLAZA2, 0
+
+	map_attributes DisStreet5, DIS_STREET5, $0f
+	connection north, DisPlaza3, DIS_PLAZA3, 0
+	connection south, DisStreet4, DIS_STREET4, 0
+
+	map_attributes DisPlaza3, DIS_PLAZA3, $0f
+	connection north, DisStreet6, DIS_STREET6, 0
+	connection south, DisStreet5, DIS_STREET5, 0
+
+	map_attributes DisPokecenter3, DIS_POKECENTER3, $00
+
+	map_attributes DisMart3, DIS_MART3, $00
+
+	map_attributes DisHouse3, DIS_HOUSE3, $00
+
+	map_attributes DisGatehouse, DIS_GATEHOUSE, $00
+
+	map_attributes DisStreet6, DIS_STREET6, $0f
+	connection north, DisStreet7, DIS_STREET7, 0
+	connection south, DisPlaza3, DIS_PLAZA3, 0
+
+	map_attributes DisStreet7, DIS_STREET7, $0f
+	connection north, DisPlaza4, DIS_PLAZA4, 0
+	connection south, DisStreet6, DIS_STREET6, 0
+
+	map_attributes DisPlaza4, DIS_PLAZA4, $0f
+	connection north, DisStreet8, DIS_STREET8, 0
+	connection south, DisStreet7, DIS_STREET7, 0
+
+	map_attributes DisPokecenter4, DIS_POKECENTER4, $00
+
+	map_attributes DisMart4, DIS_MART4, $00
+
+	map_attributes DisHouse4, DIS_HOUSE4, $00
+
+	map_attributes DisStreet8, DIS_STREET8, $0f
+	connection north, DisStreet9, DIS_STREET9, 0
+	connection south, DisPlaza4, DIS_PLAZA4, 0
+
+	map_attributes DisStreet9, DIS_STREET9, $0f
+	connection north, DisStreet10, DIS_STREET10, 0
+	connection south, DisStreet8, DIS_STREET8, 0
+
+	map_attributes DisStreet10, DIS_STREET10, $0f
+	connection north, DisPlaza5, DIS_PLAZA5, 0
+	connection south, DisStreet9, DIS_STREET9, 0
+
+	map_attributes DisPlaza5, DIS_PLAZA5, $0f
+	connection north, DisStreet11, DIS_STREET11, 0
+	connection south, DisStreet10, DIS_STREET10, 0
+
+	map_attributes DisPokecenter5, DIS_POKECENTER5, $00
+
+	map_attributes DisMart5, DIS_MART5, $00
+
+	map_attributes DisHouse5, DIS_HOUSE5, $00
+
+	map_attributes CocytusIceHall, COCYTUS_ICE_HALL, $00
+
+	map_attributes DisStreet11, DIS_STREET11, $0f
+	connection north, DisStreet12, DIS_STREET12, 0
+	connection south, DisPlaza5, DIS_PLAZA5, 0
+
+	map_attributes DisStreet12, DIS_STREET12, $0f
+	connection north, DisStreet13, DIS_STREET13, 0
+	connection south, DisStreet11, DIS_STREET11, 0
+
+	map_attributes DisStreet13, DIS_STREET13, $0f
+	connection north, DisPlaza6, DIS_PLAZA6, 0
+	connection south, DisStreet12, DIS_STREET12, 0
+
+	map_attributes DisPlaza6, DIS_PLAZA6, $0f
+	connection north, DisStreet14, DIS_STREET14, 0
+	connection south, DisStreet13, DIS_STREET13, 0
+
+	map_attributes DisPokecenter6, DIS_POKECENTER6, $00
+
+	map_attributes DisMart6, DIS_MART6, $00
+
+	map_attributes DisHouse6, DIS_HOUSE6, $00
+
+	map_attributes DisStreet14, DIS_STREET14, $0f
+	connection north, DisStreet15, DIS_STREET15, 0
+	connection south, DisPlaza6, DIS_PLAZA6, 0
+
+	map_attributes DisStreet15, DIS_STREET15, $0f
+	connection north, DisPlaza7, DIS_PLAZA7, 0
+	connection south, DisStreet14, DIS_STREET14, 0
+
+	map_attributes DisPlaza7, DIS_PLAZA7, $0f
+	connection south, DisStreet15, DIS_STREET15, 0
+
+	map_attributes DisPokecenter7, DIS_POKECENTER7, $00
+
+	map_attributes DisMart7, DIS_MART7, $00
+
+	map_attributes DisHouse7, DIS_HOUSE7, $00
+
+	map_attributes JudeccaCentre, JUDECCA_CENTRE, $00
+
 ENDSECTION
 
 SECTION "Area1 Blocks", ROMX
@@ -569,6 +977,441 @@ GroveHouse7_Blocks:
 
 GroveCouncil_Blocks:
 	INCBIN "maps/gen/GroveCouncil.blk"
+
+ENDSECTION
+
+SECTION "Area3 Blocks", ROMX
+
+AxiomPlaza1_Blocks:
+	INCBIN "maps/gen/AxiomPlaza1.blk"
+
+AxiomGate_Blocks:
+	INCBIN "maps/gen/AxiomGate.blk"
+
+AxiomPokecenter1_Blocks:
+	INCBIN "maps/gen/AxiomPokecenter1.blk"
+
+AxiomMart1_Blocks:
+	INCBIN "maps/gen/AxiomMart1.blk"
+
+AxiomHouse1_Blocks:
+	INCBIN "maps/gen/AxiomHouse1.blk"
+
+AxiomStreet1_Blocks:
+	INCBIN "maps/gen/AxiomStreet1.blk"
+
+AxiomStreet2_Blocks:
+	INCBIN "maps/gen/AxiomStreet2.blk"
+
+AxiomStreet3_Blocks:
+	INCBIN "maps/gen/AxiomStreet3.blk"
+
+AxiomPlaza2_Blocks:
+	INCBIN "maps/gen/AxiomPlaza2.blk"
+
+AxiomPokecenter2_Blocks:
+	INCBIN "maps/gen/AxiomPokecenter2.blk"
+
+AxiomMart2_Blocks:
+	INCBIN "maps/gen/AxiomMart2.blk"
+
+AxiomHouse2_Blocks:
+	INCBIN "maps/gen/AxiomHouse2.blk"
+
+AxiomStreet4_Blocks:
+	INCBIN "maps/gen/AxiomStreet4.blk"
+
+AxiomStreet5_Blocks:
+	INCBIN "maps/gen/AxiomStreet5.blk"
+
+AxiomPlaza3_Blocks:
+	INCBIN "maps/gen/AxiomPlaza3.blk"
+
+AxiomPokecenter3_Blocks:
+	INCBIN "maps/gen/AxiomPokecenter3.blk"
+
+AxiomMart3_Blocks:
+	INCBIN "maps/gen/AxiomMart3.blk"
+
+AxiomHouse3_Blocks:
+	INCBIN "maps/gen/AxiomHouse3.blk"
+
+AxiomRegistry_Blocks:
+	INCBIN "maps/gen/AxiomRegistry.blk"
+
+AxiomStreet6_Blocks:
+	INCBIN "maps/gen/AxiomStreet6.blk"
+
+AxiomStreet7_Blocks:
+	INCBIN "maps/gen/AxiomStreet7.blk"
+
+AxiomPlaza4_Blocks:
+	INCBIN "maps/gen/AxiomPlaza4.blk"
+
+AxiomPokecenter4_Blocks:
+	INCBIN "maps/gen/AxiomPokecenter4.blk"
+
+AxiomMart4_Blocks:
+	INCBIN "maps/gen/AxiomMart4.blk"
+
+AxiomHouse4_Blocks:
+	INCBIN "maps/gen/AxiomHouse4.blk"
+
+AxiomStreet8_Blocks:
+	INCBIN "maps/gen/AxiomStreet8.blk"
+
+AxiomStreet9_Blocks:
+	INCBIN "maps/gen/AxiomStreet9.blk"
+
+AxiomStreet10_Blocks:
+	INCBIN "maps/gen/AxiomStreet10.blk"
+
+AxiomPlaza5_Blocks:
+	INCBIN "maps/gen/AxiomPlaza5.blk"
+
+AxiomPokecenter5_Blocks:
+	INCBIN "maps/gen/AxiomPokecenter5.blk"
+
+AxiomMart5_Blocks:
+	INCBIN "maps/gen/AxiomMart5.blk"
+
+AxiomHouse5_Blocks:
+	INCBIN "maps/gen/AxiomHouse5.blk"
+
+AxiomArmory_Blocks:
+	INCBIN "maps/gen/AxiomArmory.blk"
+
+AxiomStreet11_Blocks:
+	INCBIN "maps/gen/AxiomStreet11.blk"
+
+AxiomStreet12_Blocks:
+	INCBIN "maps/gen/AxiomStreet12.blk"
+
+AxiomStreet13_Blocks:
+	INCBIN "maps/gen/AxiomStreet13.blk"
+
+AxiomPlaza6_Blocks:
+	INCBIN "maps/gen/AxiomPlaza6.blk"
+
+AxiomPokecenter6_Blocks:
+	INCBIN "maps/gen/AxiomPokecenter6.blk"
+
+AxiomMart6_Blocks:
+	INCBIN "maps/gen/AxiomMart6.blk"
+
+AxiomHouse6_Blocks:
+	INCBIN "maps/gen/AxiomHouse6.blk"
+
+AxiomStreet14_Blocks:
+	INCBIN "maps/gen/AxiomStreet14.blk"
+
+AxiomStreet15_Blocks:
+	INCBIN "maps/gen/AxiomStreet15.blk"
+
+AxiomPlaza7_Blocks:
+	INCBIN "maps/gen/AxiomPlaza7.blk"
+
+AxiomPokecenter7_Blocks:
+	INCBIN "maps/gen/AxiomPokecenter7.blk"
+
+AxiomMart7_Blocks:
+	INCBIN "maps/gen/AxiomMart7.blk"
+
+AxiomHouse7_Blocks:
+	INCBIN "maps/gen/AxiomHouse7.blk"
+
+AxiomMayoralty_Blocks:
+	INCBIN "maps/gen/AxiomMayoralty.blk"
+
+ENDSECTION
+
+SECTION "Area4 Blocks", ROMX
+
+LotusPlaza1_Blocks:
+	INCBIN "maps/gen/LotusPlaza1.blk"
+
+LotusGate_Blocks:
+	INCBIN "maps/gen/LotusGate.blk"
+
+LotusPokecenter1_Blocks:
+	INCBIN "maps/gen/LotusPokecenter1.blk"
+
+LotusMart1_Blocks:
+	INCBIN "maps/gen/LotusMart1.blk"
+
+LotusHouse1_Blocks:
+	INCBIN "maps/gen/LotusHouse1.blk"
+
+LotusStreet1_Blocks:
+	INCBIN "maps/gen/LotusStreet1.blk"
+
+LotusStreet2_Blocks:
+	INCBIN "maps/gen/LotusStreet2.blk"
+
+LotusStreet3_Blocks:
+	INCBIN "maps/gen/LotusStreet3.blk"
+
+LotusPlaza2_Blocks:
+	INCBIN "maps/gen/LotusPlaza2.blk"
+
+LotusPokecenter2_Blocks:
+	INCBIN "maps/gen/LotusPokecenter2.blk"
+
+LotusMart2_Blocks:
+	INCBIN "maps/gen/LotusMart2.blk"
+
+LotusHouse2_Blocks:
+	INCBIN "maps/gen/LotusHouse2.blk"
+
+LotusStreet4_Blocks:
+	INCBIN "maps/gen/LotusStreet4.blk"
+
+LotusStreet5_Blocks:
+	INCBIN "maps/gen/LotusStreet5.blk"
+
+LotusPlaza3_Blocks:
+	INCBIN "maps/gen/LotusPlaza3.blk"
+
+LotusPokecenter3_Blocks:
+	INCBIN "maps/gen/LotusPokecenter3.blk"
+
+LotusMart3_Blocks:
+	INCBIN "maps/gen/LotusMart3.blk"
+
+LotusHouse3_Blocks:
+	INCBIN "maps/gen/LotusHouse3.blk"
+
+LotusClinic_Blocks:
+	INCBIN "maps/gen/LotusClinic.blk"
+
+LotusStreet6_Blocks:
+	INCBIN "maps/gen/LotusStreet6.blk"
+
+LotusStreet7_Blocks:
+	INCBIN "maps/gen/LotusStreet7.blk"
+
+LotusPlaza4_Blocks:
+	INCBIN "maps/gen/LotusPlaza4.blk"
+
+LotusPokecenter4_Blocks:
+	INCBIN "maps/gen/LotusPokecenter4.blk"
+
+LotusMart4_Blocks:
+	INCBIN "maps/gen/LotusMart4.blk"
+
+LotusHouse4_Blocks:
+	INCBIN "maps/gen/LotusHouse4.blk"
+
+LotusStreet8_Blocks:
+	INCBIN "maps/gen/LotusStreet8.blk"
+
+LotusStreet9_Blocks:
+	INCBIN "maps/gen/LotusStreet9.blk"
+
+LotusStreet10_Blocks:
+	INCBIN "maps/gen/LotusStreet10.blk"
+
+LotusPlaza5_Blocks:
+	INCBIN "maps/gen/LotusPlaza5.blk"
+
+LotusPokecenter5_Blocks:
+	INCBIN "maps/gen/LotusPokecenter5.blk"
+
+LotusMart5_Blocks:
+	INCBIN "maps/gen/LotusMart5.blk"
+
+LotusHouse5_Blocks:
+	INCBIN "maps/gen/LotusHouse5.blk"
+
+LotusCabana_Blocks:
+	INCBIN "maps/gen/LotusCabana.blk"
+
+LotusStreet11_Blocks:
+	INCBIN "maps/gen/LotusStreet11.blk"
+
+LotusStreet12_Blocks:
+	INCBIN "maps/gen/LotusStreet12.blk"
+
+LotusStreet13_Blocks:
+	INCBIN "maps/gen/LotusStreet13.blk"
+
+LotusPlaza6_Blocks:
+	INCBIN "maps/gen/LotusPlaza6.blk"
+
+LotusPokecenter6_Blocks:
+	INCBIN "maps/gen/LotusPokecenter6.blk"
+
+LotusMart6_Blocks:
+	INCBIN "maps/gen/LotusMart6.blk"
+
+LotusHouse6_Blocks:
+	INCBIN "maps/gen/LotusHouse6.blk"
+
+LotusStreet14_Blocks:
+	INCBIN "maps/gen/LotusStreet14.blk"
+
+LotusStreet15_Blocks:
+	INCBIN "maps/gen/LotusStreet15.blk"
+
+LotusPlaza7_Blocks:
+	INCBIN "maps/gen/LotusPlaza7.blk"
+
+LotusPokecenter7_Blocks:
+	INCBIN "maps/gen/LotusPokecenter7.blk"
+
+LotusMart7_Blocks:
+	INCBIN "maps/gen/LotusMart7.blk"
+
+LotusHouse7_Blocks:
+	INCBIN "maps/gen/LotusHouse7.blk"
+
+LotusMansion_Blocks:
+	INCBIN "maps/gen/LotusMansion.blk"
+
+ENDSECTION
+
+SECTION "Area5 Blocks", ROMX
+
+DisPlaza1_Blocks:
+	INCBIN "maps/gen/DisPlaza1.blk"
+
+DisGate_Blocks:
+	INCBIN "maps/gen/DisGate.blk"
+
+DisPokecenter1_Blocks:
+	INCBIN "maps/gen/DisPokecenter1.blk"
+
+DisMart1_Blocks:
+	INCBIN "maps/gen/DisMart1.blk"
+
+DisHouse1_Blocks:
+	INCBIN "maps/gen/DisHouse1.blk"
+
+DisStreet1_Blocks:
+	INCBIN "maps/gen/DisStreet1.blk"
+
+DisStreet2_Blocks:
+	INCBIN "maps/gen/DisStreet2.blk"
+
+DisStreet3_Blocks:
+	INCBIN "maps/gen/DisStreet3.blk"
+
+DisPlaza2_Blocks:
+	INCBIN "maps/gen/DisPlaza2.blk"
+
+DisPokecenter2_Blocks:
+	INCBIN "maps/gen/DisPokecenter2.blk"
+
+DisMart2_Blocks:
+	INCBIN "maps/gen/DisMart2.blk"
+
+DisHouse2_Blocks:
+	INCBIN "maps/gen/DisHouse2.blk"
+
+DisStreet4_Blocks:
+	INCBIN "maps/gen/DisStreet4.blk"
+
+DisStreet5_Blocks:
+	INCBIN "maps/gen/DisStreet5.blk"
+
+DisPlaza3_Blocks:
+	INCBIN "maps/gen/DisPlaza3.blk"
+
+DisPokecenter3_Blocks:
+	INCBIN "maps/gen/DisPokecenter3.blk"
+
+DisMart3_Blocks:
+	INCBIN "maps/gen/DisMart3.blk"
+
+DisHouse3_Blocks:
+	INCBIN "maps/gen/DisHouse3.blk"
+
+DisGatehouse_Blocks:
+	INCBIN "maps/gen/DisGatehouse.blk"
+
+DisStreet6_Blocks:
+	INCBIN "maps/gen/DisStreet6.blk"
+
+DisStreet7_Blocks:
+	INCBIN "maps/gen/DisStreet7.blk"
+
+DisPlaza4_Blocks:
+	INCBIN "maps/gen/DisPlaza4.blk"
+
+DisPokecenter4_Blocks:
+	INCBIN "maps/gen/DisPokecenter4.blk"
+
+DisMart4_Blocks:
+	INCBIN "maps/gen/DisMart4.blk"
+
+DisHouse4_Blocks:
+	INCBIN "maps/gen/DisHouse4.blk"
+
+DisStreet8_Blocks:
+	INCBIN "maps/gen/DisStreet8.blk"
+
+DisStreet9_Blocks:
+	INCBIN "maps/gen/DisStreet9.blk"
+
+DisStreet10_Blocks:
+	INCBIN "maps/gen/DisStreet10.blk"
+
+DisPlaza5_Blocks:
+	INCBIN "maps/gen/DisPlaza5.blk"
+
+DisPokecenter5_Blocks:
+	INCBIN "maps/gen/DisPokecenter5.blk"
+
+DisMart5_Blocks:
+	INCBIN "maps/gen/DisMart5.blk"
+
+DisHouse5_Blocks:
+	INCBIN "maps/gen/DisHouse5.blk"
+
+CocytusIceHall_Blocks:
+	INCBIN "maps/gen/CocytusIceHall.blk"
+
+DisStreet11_Blocks:
+	INCBIN "maps/gen/DisStreet11.blk"
+
+DisStreet12_Blocks:
+	INCBIN "maps/gen/DisStreet12.blk"
+
+DisStreet13_Blocks:
+	INCBIN "maps/gen/DisStreet13.blk"
+
+DisPlaza6_Blocks:
+	INCBIN "maps/gen/DisPlaza6.blk"
+
+DisPokecenter6_Blocks:
+	INCBIN "maps/gen/DisPokecenter6.blk"
+
+DisMart6_Blocks:
+	INCBIN "maps/gen/DisMart6.blk"
+
+DisHouse6_Blocks:
+	INCBIN "maps/gen/DisHouse6.blk"
+
+DisStreet14_Blocks:
+	INCBIN "maps/gen/DisStreet14.blk"
+
+DisStreet15_Blocks:
+	INCBIN "maps/gen/DisStreet15.blk"
+
+DisPlaza7_Blocks:
+	INCBIN "maps/gen/DisPlaza7.blk"
+
+DisPokecenter7_Blocks:
+	INCBIN "maps/gen/DisPokecenter7.blk"
+
+DisMart7_Blocks:
+	INCBIN "maps/gen/DisMart7.blk"
+
+DisHouse7_Blocks:
+	INCBIN "maps/gen/DisHouse7.blk"
+
+JudeccaCentre_Blocks:
+	INCBIN "maps/gen/JudeccaCentre.blk"
 
 ENDSECTION
 
@@ -1139,6 +1982,852 @@ ENDSECTION
 SECTION "GroveCouncil Scripts", ROMX
 
 INCLUDE "maps/gen/GroveCouncil.asm"
+
+ENDSECTION
+
+SECTION "AxiomPlaza1 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPlaza1.asm"
+
+ENDSECTION
+
+SECTION "AxiomGate Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomGate.asm"
+
+ENDSECTION
+
+SECTION "AxiomPokecenter1 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPokecenter1.asm"
+
+ENDSECTION
+
+SECTION "AxiomMart1 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomMart1.asm"
+
+ENDSECTION
+
+SECTION "AxiomHouse1 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomHouse1.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet1 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet1.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet2 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet2.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet3 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet3.asm"
+
+ENDSECTION
+
+SECTION "AxiomPlaza2 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPlaza2.asm"
+
+ENDSECTION
+
+SECTION "AxiomPokecenter2 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPokecenter2.asm"
+
+ENDSECTION
+
+SECTION "AxiomMart2 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomMart2.asm"
+
+ENDSECTION
+
+SECTION "AxiomHouse2 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomHouse2.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet4 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet4.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet5 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet5.asm"
+
+ENDSECTION
+
+SECTION "AxiomPlaza3 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPlaza3.asm"
+
+ENDSECTION
+
+SECTION "AxiomPokecenter3 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPokecenter3.asm"
+
+ENDSECTION
+
+SECTION "AxiomMart3 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomMart3.asm"
+
+ENDSECTION
+
+SECTION "AxiomHouse3 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomHouse3.asm"
+
+ENDSECTION
+
+SECTION "AxiomRegistry Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomRegistry.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet6 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet6.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet7 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet7.asm"
+
+ENDSECTION
+
+SECTION "AxiomPlaza4 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPlaza4.asm"
+
+ENDSECTION
+
+SECTION "AxiomPokecenter4 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPokecenter4.asm"
+
+ENDSECTION
+
+SECTION "AxiomMart4 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomMart4.asm"
+
+ENDSECTION
+
+SECTION "AxiomHouse4 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomHouse4.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet8 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet8.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet9 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet9.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet10 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet10.asm"
+
+ENDSECTION
+
+SECTION "AxiomPlaza5 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPlaza5.asm"
+
+ENDSECTION
+
+SECTION "AxiomPokecenter5 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPokecenter5.asm"
+
+ENDSECTION
+
+SECTION "AxiomMart5 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomMart5.asm"
+
+ENDSECTION
+
+SECTION "AxiomHouse5 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomHouse5.asm"
+
+ENDSECTION
+
+SECTION "AxiomArmory Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomArmory.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet11 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet11.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet12 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet12.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet13 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet13.asm"
+
+ENDSECTION
+
+SECTION "AxiomPlaza6 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPlaza6.asm"
+
+ENDSECTION
+
+SECTION "AxiomPokecenter6 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPokecenter6.asm"
+
+ENDSECTION
+
+SECTION "AxiomMart6 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomMart6.asm"
+
+ENDSECTION
+
+SECTION "AxiomHouse6 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomHouse6.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet14 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet14.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet15 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet15.asm"
+
+ENDSECTION
+
+SECTION "AxiomPlaza7 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPlaza7.asm"
+
+ENDSECTION
+
+SECTION "AxiomPokecenter7 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomPokecenter7.asm"
+
+ENDSECTION
+
+SECTION "AxiomMart7 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomMart7.asm"
+
+ENDSECTION
+
+SECTION "AxiomHouse7 Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomHouse7.asm"
+
+ENDSECTION
+
+SECTION "AxiomMayoralty Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomMayoralty.asm"
+
+ENDSECTION
+
+SECTION "LotusPlaza1 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPlaza1.asm"
+
+ENDSECTION
+
+SECTION "LotusGate Scripts", ROMX
+
+INCLUDE "maps/gen/LotusGate.asm"
+
+ENDSECTION
+
+SECTION "LotusPokecenter1 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPokecenter1.asm"
+
+ENDSECTION
+
+SECTION "LotusMart1 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusMart1.asm"
+
+ENDSECTION
+
+SECTION "LotusHouse1 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusHouse1.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet1 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet1.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet2 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet2.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet3 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet3.asm"
+
+ENDSECTION
+
+SECTION "LotusPlaza2 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPlaza2.asm"
+
+ENDSECTION
+
+SECTION "LotusPokecenter2 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPokecenter2.asm"
+
+ENDSECTION
+
+SECTION "LotusMart2 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusMart2.asm"
+
+ENDSECTION
+
+SECTION "LotusHouse2 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusHouse2.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet4 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet4.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet5 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet5.asm"
+
+ENDSECTION
+
+SECTION "LotusPlaza3 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPlaza3.asm"
+
+ENDSECTION
+
+SECTION "LotusPokecenter3 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPokecenter3.asm"
+
+ENDSECTION
+
+SECTION "LotusMart3 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusMart3.asm"
+
+ENDSECTION
+
+SECTION "LotusHouse3 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusHouse3.asm"
+
+ENDSECTION
+
+SECTION "LotusClinic Scripts", ROMX
+
+INCLUDE "maps/gen/LotusClinic.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet6 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet6.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet7 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet7.asm"
+
+ENDSECTION
+
+SECTION "LotusPlaza4 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPlaza4.asm"
+
+ENDSECTION
+
+SECTION "LotusPokecenter4 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPokecenter4.asm"
+
+ENDSECTION
+
+SECTION "LotusMart4 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusMart4.asm"
+
+ENDSECTION
+
+SECTION "LotusHouse4 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusHouse4.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet8 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet8.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet9 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet9.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet10 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet10.asm"
+
+ENDSECTION
+
+SECTION "LotusPlaza5 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPlaza5.asm"
+
+ENDSECTION
+
+SECTION "LotusPokecenter5 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPokecenter5.asm"
+
+ENDSECTION
+
+SECTION "LotusMart5 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusMart5.asm"
+
+ENDSECTION
+
+SECTION "LotusHouse5 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusHouse5.asm"
+
+ENDSECTION
+
+SECTION "LotusCabana Scripts", ROMX
+
+INCLUDE "maps/gen/LotusCabana.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet11 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet11.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet12 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet12.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet13 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet13.asm"
+
+ENDSECTION
+
+SECTION "LotusPlaza6 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPlaza6.asm"
+
+ENDSECTION
+
+SECTION "LotusPokecenter6 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPokecenter6.asm"
+
+ENDSECTION
+
+SECTION "LotusMart6 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusMart6.asm"
+
+ENDSECTION
+
+SECTION "LotusHouse6 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusHouse6.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet14 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet14.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet15 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet15.asm"
+
+ENDSECTION
+
+SECTION "LotusPlaza7 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPlaza7.asm"
+
+ENDSECTION
+
+SECTION "LotusPokecenter7 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusPokecenter7.asm"
+
+ENDSECTION
+
+SECTION "LotusMart7 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusMart7.asm"
+
+ENDSECTION
+
+SECTION "LotusHouse7 Scripts", ROMX
+
+INCLUDE "maps/gen/LotusHouse7.asm"
+
+ENDSECTION
+
+SECTION "LotusMansion Scripts", ROMX
+
+INCLUDE "maps/gen/LotusMansion.asm"
+
+ENDSECTION
+
+SECTION "DisPlaza1 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPlaza1.asm"
+
+ENDSECTION
+
+SECTION "DisGate Scripts", ROMX
+
+INCLUDE "maps/gen/DisGate.asm"
+
+ENDSECTION
+
+SECTION "DisPokecenter1 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPokecenter1.asm"
+
+ENDSECTION
+
+SECTION "DisMart1 Scripts", ROMX
+
+INCLUDE "maps/gen/DisMart1.asm"
+
+ENDSECTION
+
+SECTION "DisHouse1 Scripts", ROMX
+
+INCLUDE "maps/gen/DisHouse1.asm"
+
+ENDSECTION
+
+SECTION "DisStreet1 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet1.asm"
+
+ENDSECTION
+
+SECTION "DisStreet2 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet2.asm"
+
+ENDSECTION
+
+SECTION "DisStreet3 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet3.asm"
+
+ENDSECTION
+
+SECTION "DisPlaza2 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPlaza2.asm"
+
+ENDSECTION
+
+SECTION "DisPokecenter2 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPokecenter2.asm"
+
+ENDSECTION
+
+SECTION "DisMart2 Scripts", ROMX
+
+INCLUDE "maps/gen/DisMart2.asm"
+
+ENDSECTION
+
+SECTION "DisHouse2 Scripts", ROMX
+
+INCLUDE "maps/gen/DisHouse2.asm"
+
+ENDSECTION
+
+SECTION "DisStreet4 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet4.asm"
+
+ENDSECTION
+
+SECTION "DisStreet5 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet5.asm"
+
+ENDSECTION
+
+SECTION "DisPlaza3 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPlaza3.asm"
+
+ENDSECTION
+
+SECTION "DisPokecenter3 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPokecenter3.asm"
+
+ENDSECTION
+
+SECTION "DisMart3 Scripts", ROMX
+
+INCLUDE "maps/gen/DisMart3.asm"
+
+ENDSECTION
+
+SECTION "DisHouse3 Scripts", ROMX
+
+INCLUDE "maps/gen/DisHouse3.asm"
+
+ENDSECTION
+
+SECTION "DisGatehouse Scripts", ROMX
+
+INCLUDE "maps/gen/DisGatehouse.asm"
+
+ENDSECTION
+
+SECTION "DisStreet6 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet6.asm"
+
+ENDSECTION
+
+SECTION "DisStreet7 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet7.asm"
+
+ENDSECTION
+
+SECTION "DisPlaza4 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPlaza4.asm"
+
+ENDSECTION
+
+SECTION "DisPokecenter4 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPokecenter4.asm"
+
+ENDSECTION
+
+SECTION "DisMart4 Scripts", ROMX
+
+INCLUDE "maps/gen/DisMart4.asm"
+
+ENDSECTION
+
+SECTION "DisHouse4 Scripts", ROMX
+
+INCLUDE "maps/gen/DisHouse4.asm"
+
+ENDSECTION
+
+SECTION "DisStreet8 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet8.asm"
+
+ENDSECTION
+
+SECTION "DisStreet9 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet9.asm"
+
+ENDSECTION
+
+SECTION "DisStreet10 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet10.asm"
+
+ENDSECTION
+
+SECTION "DisPlaza5 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPlaza5.asm"
+
+ENDSECTION
+
+SECTION "DisPokecenter5 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPokecenter5.asm"
+
+ENDSECTION
+
+SECTION "DisMart5 Scripts", ROMX
+
+INCLUDE "maps/gen/DisMart5.asm"
+
+ENDSECTION
+
+SECTION "DisHouse5 Scripts", ROMX
+
+INCLUDE "maps/gen/DisHouse5.asm"
+
+ENDSECTION
+
+SECTION "CocytusIceHall Scripts", ROMX
+
+INCLUDE "maps/gen/CocytusIceHall.asm"
+
+ENDSECTION
+
+SECTION "DisStreet11 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet11.asm"
+
+ENDSECTION
+
+SECTION "DisStreet12 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet12.asm"
+
+ENDSECTION
+
+SECTION "DisStreet13 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet13.asm"
+
+ENDSECTION
+
+SECTION "DisPlaza6 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPlaza6.asm"
+
+ENDSECTION
+
+SECTION "DisPokecenter6 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPokecenter6.asm"
+
+ENDSECTION
+
+SECTION "DisMart6 Scripts", ROMX
+
+INCLUDE "maps/gen/DisMart6.asm"
+
+ENDSECTION
+
+SECTION "DisHouse6 Scripts", ROMX
+
+INCLUDE "maps/gen/DisHouse6.asm"
+
+ENDSECTION
+
+SECTION "DisStreet14 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet14.asm"
+
+ENDSECTION
+
+SECTION "DisStreet15 Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet15.asm"
+
+ENDSECTION
+
+SECTION "DisPlaza7 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPlaza7.asm"
+
+ENDSECTION
+
+SECTION "DisPokecenter7 Scripts", ROMX
+
+INCLUDE "maps/gen/DisPokecenter7.asm"
+
+ENDSECTION
+
+SECTION "DisMart7 Scripts", ROMX
+
+INCLUDE "maps/gen/DisMart7.asm"
+
+ENDSECTION
+
+SECTION "DisHouse7 Scripts", ROMX
+
+INCLUDE "maps/gen/DisHouse7.asm"
+
+ENDSECTION
+
+SECTION "JudeccaCentre Scripts", ROMX
+
+INCLUDE "maps/gen/JudeccaCentre.asm"
 
 ENDSECTION
 

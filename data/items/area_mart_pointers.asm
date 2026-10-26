@@ -14,3 +14,24 @@
 	dw MartGrove5
 	dw MartGrove6
 	dw MartGrove7
+	dw MartAxiom1
+	dw MartAxiom2
+	dw MartAxiom3
+	dw MartAxiom4
+	dw MartAxiom5
+	dw MartAxiom6
+	dw MartAxiom7
+	dw MartLotus1
+	dw MartLotus2
+	dw MartLotus3
+	dw MartLotus4
+	dw MartLotus5
+	dw MartLotus6
+	dw MartLotus7
+	dw MartDis1
+	dw MartDis2
+	dw MartDis3
+	dw MartDis4
+	dw MartDis5
+	dw MartDis6
+	dw MartDis7

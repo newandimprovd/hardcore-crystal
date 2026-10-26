@@ -176,3 +176,246 @@ MartGrove7:
 	db ESCAPE_ROPE
 	db -1 ; end
 
+MartAxiom1:
+	db 11
+	db POKE_BALL
+	db GREAT_BALL
+	db SUPER_POTION
+	db HYPER_POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db AWAKENING
+	db BURN_HEAL
+	db ICE_HEAL
+	db REVIVE
+	db REPEL
+	db -1 ; end
+
+MartAxiom2:
+	db 11
+	db POKE_BALL
+	db GREAT_BALL
+	db SUPER_POTION
+	db HYPER_POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db AWAKENING
+	db BURN_HEAL
+	db ICE_HEAL
+	db REVIVE
+	db REPEL
+	db -1 ; end
+
+MartAxiom3:
+	db 11
+	db POKE_BALL
+	db GREAT_BALL
+	db SUPER_POTION
+	db HYPER_POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db AWAKENING
+	db BURN_HEAL
+	db ICE_HEAL
+	db REVIVE
+	db REPEL
+	db -1 ; end
+
+MartAxiom4:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartAxiom5:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartAxiom6:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartAxiom7:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartLotus1:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartLotus2:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartLotus3:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartLotus4:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartLotus5:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartLotus6:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartLotus7:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartDis1:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartDis2:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartDis3:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartDis4:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartDis5:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartDis6:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+
+MartDis7:
+	db 7
+	db GREAT_BALL
+	db ULTRA_BALL
+	db HYPER_POTION
+	db FULL_HEAL
+	db REVIVE
+	db SUPER_REPEL
+	db ESCAPE_ROPE
+	db -1 ; end
+

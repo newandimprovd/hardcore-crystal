@@ -172,6 +172,9 @@ def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11,
             n += 1
             m.set(hx, 1, kit.extra["house"][0])
             m.set(hx + 1, 1, kit.extra["house"][1])
+            if "house_roof" in kit.extra:
+                m.set(hx, 0, kit.extra["house_roof"][0])
+                m.set(hx + 1, 0, kit.extra["house_roof"][1])
             lst.append(m.warp(*kit.door_cell(hx, 1, kit.extra["house"][0])))
     doors["houses"] = hs
     doors["extra"] = ex
@@ -179,6 +182,9 @@ def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11,
         hx = x + 2 * n
         m.set(hx, 1, kit.extra["house"][0])
         m.set(hx + 1, 1, kit.extra["house"][1])
+        if "house_roof" in kit.extra:
+            m.set(hx, 0, kit.extra["house_roof"][0])
+            m.set(hx + 1, 0, kit.extra["house_roof"][1])
         doors["rift"] = m.warp(*kit.door_cell(hx, 1, kit.extra["house"][0]))
     g.add(m)
     m.a, m.cw = a, cw

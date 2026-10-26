@@ -101,3 +101,50 @@ def start_plaza(w, g, rng, kit, tag, landmark, music, texts, stock, entry_doors,
     gatehouse(g, gate_name, entry_doors, d["rift"], landmark, music, [Text(gate_text)])
     town(w, g, tag, 1, p, d, kit, landmark, f"{tag.upper()}_1", stock, texts, f"{tag.upper()}_1")
     return p
+
+
+class AreaCfg:
+    """Everything that makes one area different. Acts are built three at a time: boss1 gives the key item for
+    the gate of act 2, boss2 the one for the gate of act 3, boss3 ends the area."""
+
+    def __init__(self, key, tag, spec, kit, pal, landmarks, music, texts, tiers, bosses, gates, splits,
+                 gate_name, gate_text, stock_ix=(0, 0, 1, 1, 2, 2, 2), lanes=(5, 5, 5)):
+        self.key, self.tag, self.spec, self.kit, self.pal = key, tag, spec, kit, pal
+        self.landmarks, self.music, self.texts, self.tiers = landmarks, music, texts, tiers
+        self.bosses, self.gates, self.splits = bosses, gates, splits
+        self.gate_name, self.gate_text, self.stock_ix, self.lanes = gate_name, gate_text, stock_ix, lanes
+
+
+def build_area(w, roster, rng, cfg, entry_doors):
+    """Builds a whole area behind entry_doors (unlinked exit warps of the previous area's last boss room).
+    Returns (group, exits of the last boss room, if it was built with open_exit)."""
+    from .populate import populate
+    spec = cfg.spec
+    g = w.group(cfg.key, spec.sprites)
+    w.pools[spec.pool] = dict(seen=spec.T.SEEN, beaten=spec.T.BEATEN, after=spec.T.AFTER)
+    lms = []
+    for const, x, y, name in cfg.landmarks:
+        w.landmarks.append((const, x, y, name))
+        lms.append("LANDMARK_" + const)
+    items = [cfg.tiers[i] for i in cfg.stock_ix]
+    p1 = start_plaza(w, g, rng, cfg.kit, cfg.tag, lms[0], cfg.music, cfg.texts, items[0], entry_doors,
+                     cfg.gate_name, cfg.gate_text, pal=cfg.pal)
+    acts = []
+    for k in range(3):
+        acts.append(ActSpec(cfg.tag, cfg.lanes[k], cfg.kit, lms[k], cfg.music, boss=cfg.bosses[k], texts=cfg.texts,
+                            split=cfg.splits[k], gate=cfg.gates[k], pal=cfg.pal))
+    all_lanes = []
+    prev, lane_no, plaza_no = p1, 1, 2
+    exits = []
+    for k, act in enumerate(acts):
+        lanes, prev, doors, info, lane_no, plaza_no = build_act(
+            w, g, rng, roster, act, prev, plaza_no, lane_no, spec.theme, items[2 * k + 1:2 * k + 3])
+        all_lanes += lanes
+        exits = info[2]
+    total = sum(len(s) for _, s in all_lanes)
+    done = 0
+    for m, s in all_lanes:
+        n = len(s)
+        populate(w, m, s, spec, rng, roster, done / total, (done + n) / total)
+        done += n
+    return g, exits
