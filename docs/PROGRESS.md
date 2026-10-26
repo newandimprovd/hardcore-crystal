@@ -22,11 +22,13 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
 - [x] 4  roster: 62 four-stage lines, 248 species (97 new), Fairy 24 / Poison 31. Built and checked in the emulator
          (test_roster.py 0 failures, dex list and entries, party stats screen, wild battle with a new species). Placeholder art:
          new species reuse source sprites with tinted palettes; real sprites and cries are stage 10. Full table in docs/ROSTER.md
-- [~] 5  area generator. DONE: engine support for generated trainers, 2848 event flags, generator package, Area 1 slice
-         (TITHE ROAD, gatehouse, 2 plazas, 3 street lanes, PC/Mart/House per plaza; 13 maps, 45 trainers), walker test
-         (test_walk.py: 46 kills, every map and door reached, 0 problems) and whiteout test (test_whiteout.py PASS).
-         TODO: scale to ~22 maps per area, bosses, rifts between tilesets, key-item dead ends and gates, Areas 2-5 kits and text.
-- [ ] 6  Areas 2-4
+- [x] 5  area generator: engine support for generated trainers, 2848 event flags, generator package, Area 1 at full size
+         (TITHE CITY: 204 trainers, 3 bosses, tree and boulder gates, Chainsaw and Crowbar pickups). Walk PASS, 0 problems.
+- [x] 6  Areas 2-5 from the same generator: A2 the Commune (197 fights), A3 the Union (197), A4 the Lotus Coast (197, ends at the rival's
+         mansion), A5 Dis/Cocytus/Judecca (196). 996 mandatory trainers, 236 maps, 5 map groups. Every area passes the full walk
+         (WALK_GOD=1 for A3-A5, see below) and every boss-room-to-next-gate transition passes. Key items: A1 Chainsaw+Crowbar, A2 Jet Ski+
+         Baseball Bat, A3 Flashlight+Sledgehammer, A4 Grapple Hook+Shovel, A5 Getaway Car; Outboard still TBD (plan: Purgatorio).
+         Final boss FINNEGAN text is a placeholder until the ending is designed. Art is kit-based (johto/modern/kanto kits), palettes per area.
 - [ ] 7  milestones (200/800), rival crimelord, mansion bedroom ending, Area 5
 - [ ] 8  Purgatorio, Abyss, Nick's Landing, Steiner, Sabbah, Cioran, Crowley quest, Corkboard, true ending
 - [ ] 9  wild encounters (every base form catchable), key item placement, QOL, balance
@@ -80,3 +82,19 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
   gfx/pokemon/hc_pics.asm (in "Pics 20", the first unused pic bank), hc_anims.asm and hc_frames.asm. Palettes come from the PNGs like a vanilla species.
 - GBC limit: four colours per sprite (white, body, accent, black). A 7x7 front pic may use at most about 98 tiles after animation (vanilla maximum);
   keep animation frames to a few changed tiles (cthu.py animates only the tentacles and the gem glint).
+
+## Stage 5c/6 notes (full areas)
+- Pipeline for an area: areas/aN.py (Spec = classes, sprites, type theme, level range; build() returns (group, last boss exits)) built on
+  areas/builder.py: BossSpec, ActSpec, build_act, start_plaza (rift plaza + gatehouse), AreaCfg + build_area (A3-A5 use this, A2 too).
+  areas/specbase.py holds the shared Spec base class. Text lives in areas/aN_text.py (SEEN/BEATEN/AFTER pools, CENTER/MART/HOUSE/GATE, boss text).
+  gen_areas.py chains the areas: each area's entry is the previous area's last boss room exits (open_exit=True on the last boss that has a next area).
+- Act layout: start plaza, then three acts of 5 street lanes (13 trainers each) with a split plaza 3/2/3, ending in a plaza with the boss door.
+  Act 2 and 3 begin with a key-item gate (areas/layout.py GATES: tree/CHAINSAW, boulder/CROWBAR, river/JET_SKI, hive/BASEBALL_BAT, dark/FLASHLIGHT,
+  slab/SLEDGEHAMMER, hook/GRAPPLE_HOOK, rubble/SHOVEL). The boss of the previous act holds the item ball.
+- Limits to keep: boss names at most 10 characters, at most 15 objects per map, trainer IDs under 128 per class, ROMX bank $75 holds Events.
+  ROM: ~330 KB ROMX free after five areas (per area ~22 KB).
+- Walker (tools/hardcore/test_walk.py): `auto:FirstMap` plans an area from its first plaza (heal at each Pokecenter, item pickups, gates).
+  Build with testbuild.sh NAME TEST_MAP=AXIOM_PLAZA1 TEST_X=3 TEST_Y=4 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_ITEMS=0.
+  WALK_GOD=1 gives the lone test mon 999 HP and clears enemy Destiny Bond (a level-100 Cthuludon has 358 HP and the later areas one-shot it
+  or take it down with Destiny Bond; those whiteouts are balance, not map bugs). Transition goals: `GroveCouncil,AxiomGate,AxiomPlaza1` etc.
+- Balance notes seen in the walk: enemies at L85-92 with 120-power STAB moves can one-shot a 358 HP mon; Destiny Bond exists on APPARITION and MIASMA lines.
