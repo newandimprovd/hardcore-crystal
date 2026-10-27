@@ -49,7 +49,7 @@ def build(w, roster, rng, entry_doors, open_exit=False):
         BossSpec("GroveCouncil", "MATRIARCH", "MEDIUM", "SPRITE_KIMONO_GIRL", "PAL_NPC_RED", 46, 6, T.COUNCIL_SEEN,
                  T.COUNCIL_BEATEN, T.COUNCIL_AFTER, template="bruno", landmark="LANDMARK_GROVE_HEARTH",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)]
-    cfg = AreaCfg("AREA2", "Grove", Spec(), kits.johto(), "PALETTE_AUTO",
+    cfg = AreaCfg("AREA2", "Grove", Spec(), kits.johto(), "PALETTE_DAY",
                   [("GROVE_COMMUNE", 60, 66, "THE<BSP>COMMUNE"), ("GROVE_ORCHARD", 56, 62, "THE<BSP>ORCHARD"),
                    ("GROVE_HEARTH", 52, 58, "THE<BSP>GREAT<BSP>HEARTH")],
                   "MUSIC_ROUTE_36", texts, TIERS, bosses, [None, "river", "hive"], [3, 2, 3], "GroveGate", T.GATE[0],

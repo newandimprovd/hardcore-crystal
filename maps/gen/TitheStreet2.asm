@@ -27,40 +27,40 @@ TitheStreet2AfterScript:
 	end
 
 TitheStreet2Trainer0:
-	trainer GUITARIST, 129, EVENT_GEN_TITHE_STREET2_0, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer GENTLEMAN, 130, EVENT_GEN_TITHE_STREET2_0, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer1:
-	trainer SCHOOLBOY, 129, EVENT_GEN_TITHE_STREET2_1, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer BIKER, 128, EVENT_GEN_TITHE_STREET2_1, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer2:
-	trainer OFFICER, 134, EVENT_GEN_TITHE_STREET2_2, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer OFFICER, 133, EVENT_GEN_TITHE_STREET2_2, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer3:
-	trainer GENTLEMAN, 130, EVENT_GEN_TITHE_STREET2_3, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer LASS, 130, EVENT_GEN_TITHE_STREET2_3, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer4:
-	trainer POKEFANM, 128, EVENT_GEN_TITHE_STREET2_4, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer OFFICER, 134, EVENT_GEN_TITHE_STREET2_4, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer5:
-	trainer GUITARIST, 130, EVENT_GEN_TITHE_STREET2_5, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer GENTLEMAN, 131, EVENT_GEN_TITHE_STREET2_5, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer6:
-	trainer SUPER_NERD, 131, EVENT_GEN_TITHE_STREET2_6, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer GRUNTF, 129, EVENT_GEN_TITHE_STREET2_6, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer7:
-	trainer BIKER, 129, EVENT_GEN_TITHE_STREET2_7, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer OFFICER, 135, EVENT_GEN_TITHE_STREET2_7, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer8:
-	trainer POKEFANM, 129, EVENT_GEN_TITHE_STREET2_8, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer SCIENTIST, 129, EVENT_GEN_TITHE_STREET2_8, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer9:
-	trainer SCHOOLBOY, 130, EVENT_GEN_TITHE_STREET2_9, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer GENTLEMAN, 132, EVENT_GEN_TITHE_STREET2_9, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer10:
-	trainer GENTLEMAN, 131, EVENT_GEN_TITHE_STREET2_10, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer GUITARIST, 128, EVENT_GEN_TITHE_STREET2_10, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2Trainer11:
-	trainer GUITARIST, 131, EVENT_GEN_TITHE_STREET2_11, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer GRUNTF, 130, EVENT_GEN_TITHE_STREET2_11, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2_MapEvents:
 	db 0, 0 ; filler
@@ -72,16 +72,16 @@ TitheStreet2_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  6, 18, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer0, -1
-	object_event 11, 16, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer1, -1
+	object_event  6, 18, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer0, -1
+	object_event 11, 16, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer1, -1
 	object_event  6, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer2, -1
-	object_event 11, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer3, -1
-	object_event  6, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer4, -1
-	object_event  6, 10, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer5, -1
-	object_event 11, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer6, -1
-	object_event  6,  8, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer7, -1
-	object_event 11,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer8, -1
-	object_event 11,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer9, -1
-	object_event  6,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer10, -1
-	object_event 11,  4, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer11, -1
+	object_event  6, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer3, -1
+	object_event 11, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer4, -1
+	object_event  6, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer5, -1
+	object_event 11, 10, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer6, -1
+	object_event  6,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer7, -1
+	object_event 11,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer8, -1
+	object_event 11,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer9, -1
+	object_event  6,  4, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer10, -1
+	object_event 11,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer11, -1
 

@@ -88,9 +88,11 @@ def emit_group_tables(w):
 
 
 def emit_roof_pals(w):
+    from art import areapal
+    areapal.emit(os.path.join(ROOT, "gfx/tilesets/area_bg.pal"))
     o = [HEADER]
     for gi, (key, g) in enumerate(w.groups.items()):
-        a, b = g.roofpal
+        a, b = areapal.roof_colors(key) if key in areapal.AREAS else g.roofpal
         o.append(f"; group {27 + gi} ({key})")
         o.append(f"\tRGB {a[0]:02d},{a[1]:02d},{a[2]:02d}, {a[3]:02d},{a[4]:02d},{a[5]:02d} ; morn/day")
         o.append(f"\tRGB {b[0]:02d},{b[1]:02d},{b[2]:02d}, {b[3]:02d},{b[4]:02d},{b[5]:02d} ; nite\n")

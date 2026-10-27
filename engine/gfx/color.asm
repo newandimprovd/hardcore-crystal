@@ -1195,6 +1195,8 @@ INCLUDE "data/pokemon/palettes.asm"
 INCLUDE "data/trainers/palettes.asm"
 
 LoadMapPals:
+	farcall HC_LoadAreaPalette ; HC-AREAS: palettes of the generated areas
+	jr c, .got_pals
 	farcall LoadSpecialMapPalette
 	jr c, .got_pals
 

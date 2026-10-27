@@ -7,7 +7,7 @@ DisGatehouse_MapScripts:
 	def_callbacks
 
 DisGatehouseBossScript:
-	trainer SAGE, 161, EVENT_GEN_DIS_GATEHOUSE_BOSS, DisGatehouseBossSeenText, DisGatehouseBossBeatenText, 0, DisGatehouseBossAfterScript
+	trainer SAGE, 149, EVENT_GEN_DIS_GATEHOUSE_BOSS, DisGatehouseBossSeenText, DisGatehouseBossBeatenText, 0, DisGatehouseBossAfterScript
 
 DisGatehouseBossAfterScript:
 	endifjustbattled

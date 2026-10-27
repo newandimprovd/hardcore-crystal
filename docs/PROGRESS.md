@@ -114,3 +114,19 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
   the starter the rival had (player took TOTODILE -> CHIKORITA line, CHIKORITA -> CYNDAQUIL line, CYNDAQUIL -> TOTODILE line), sets EVENT_HC_ENDED and
   runs `halloffame` (saves, hall of fame, vanilla credits, reset). `.SpawnAfterE4` in intro_menu.asm spawns at SPAWN_LOTUS_BEDROOM (generated in a4.py mansion()).
 - Test pitfall: after a script ends, another A press talks to the NPC again; stop mashing A when wScriptRunning is 0.
+
+## Stage 8 notes (art pass: original graphics) - IN PROGRESS
+Goal: stop reusing vanilla graphics that clash with the dark-comedy vibe. Pilot: Area 1 (Tithe City); the same kit goes to Areas 2-5.
+- Pipeline order is now: gen_moves, gen_roster, gen_roster_doc, **gen_tilesets**, gen_areas (gen_tilesets writes the tileset png/metatiles/collision/palette map
+  and gfx/area_tilesets.asm; gen_areas autotiles the maps with the new blocks).
+- tools/hardcore/art/: tilebuild.py (Canvas 32x32 block painter + Tileset.pack: dedups tiles, assigns ids 0x00-0x5f / 0x80-0xdf, writes png, metatiles, collision,
+  palette map), paint.py (brick, slabs, windows...), tithe.py (the Tithe tileset: gothic windows, neon POKE/MART signs, slate roofs, cobbles, plaza coins, rift portal),
+  areapal.py (3 palette sets per area: out / road / inn), register.py (one-time `; HC-ART` patches), render.py (static renderer), gameshots.py (in-game screenshots).
+- Palette hook: LoadMapPals -> HC_LoadAreaPalette (engine/hardcore/area_pals.asm) picks the set by wMapTileset >= TILESET_TITHE and wEnvironment. Custom outdoor
+  palettes share index 0 (base color) across slots; index 3 is the shared outline. A tile has one palette slot, so one 8x8 cell can use only one slot's colors.
+- **Engine quirk: LoadMetatiles draws block id 0 as the map's border block.** Block 0 of every custom tileset must therefore be the border itself (Tileset.pack asserts it)
+  and maps use border block 0. (Symptom was a dark brick rectangle wherever the generator placed block 0 as a plain floor.)
+- Tileset autotile roles (AUTO in tithe.py): facade/side_e/side_w/roof/mass (+ rare variants); layout.autotile runs in lane()/plaza() of areas/layout.py.
+- TitheRoad stays TILESET_JOHTO (it connects to vanilla Cherrygrove, connected maps must share the tileset) and gets the road palette.
+- Still to do in this stage: tilesets for Areas 2-5 (Grove, Axiom, Lotus, Dis/Cocytus), original NPC overworld sprites and area-specific trainer classes,
+  original sprites for the new Pokemon (tinted vanilla art for now), interior art, wild-grass patches.

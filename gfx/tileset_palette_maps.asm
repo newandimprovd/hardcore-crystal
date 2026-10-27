@@ -113,3 +113,8 @@ MapGroupPalettes: ; unreferenced
 rept NUM_MAP_GROUPS
 	db PAL_BG_ROOF
 endr
+
+; HC-ART begin
+TilesetTithePalMap:
+INCLUDE "gfx/tilesets/tithe_palette_map.asm"
+

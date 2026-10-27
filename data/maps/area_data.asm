@@ -5,7 +5,7 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheRoad, TITHE_ROAD, $05
 	connection south, CherrygroveCity, CHERRYGROVE_CITY, -5
 
-	map_attributes TithePlaza1, TITHE_PLAZA1, $23
+	map_attributes TithePlaza1, TITHE_PLAZA1, $00
 	connection north, TitheStreet1, TITHE_STREET1, 0
 
 	map_attributes TitheCheckpoint, TITHE_CHECKPOINT, $00
@@ -16,19 +16,19 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheHouse1, TITHE_HOUSE1, $00
 
-	map_attributes TitheStreet1, TITHE_STREET1, $23
+	map_attributes TitheStreet1, TITHE_STREET1, $00
 	connection north, TitheStreet2, TITHE_STREET2, 0
 	connection south, TithePlaza1, TITHE_PLAZA1, 0
 
-	map_attributes TitheStreet2, TITHE_STREET2, $23
+	map_attributes TitheStreet2, TITHE_STREET2, $00
 	connection north, TitheStreet3, TITHE_STREET3, 0
 	connection south, TitheStreet1, TITHE_STREET1, 0
 
-	map_attributes TitheStreet3, TITHE_STREET3, $23
+	map_attributes TitheStreet3, TITHE_STREET3, $00
 	connection north, TithePlaza2, TITHE_PLAZA2, 0
 	connection south, TitheStreet2, TITHE_STREET2, 0
 
-	map_attributes TithePlaza2, TITHE_PLAZA2, $23
+	map_attributes TithePlaza2, TITHE_PLAZA2, $00
 	connection north, TitheStreet4, TITHE_STREET4, 0
 	connection south, TitheStreet3, TITHE_STREET3, 0
 
@@ -38,15 +38,15 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheHouse2, TITHE_HOUSE2, $00
 
-	map_attributes TitheStreet4, TITHE_STREET4, $23
+	map_attributes TitheStreet4, TITHE_STREET4, $00
 	connection north, TitheStreet5, TITHE_STREET5, 0
 	connection south, TithePlaza2, TITHE_PLAZA2, 0
 
-	map_attributes TitheStreet5, TITHE_STREET5, $23
+	map_attributes TitheStreet5, TITHE_STREET5, $00
 	connection north, TithePlaza3, TITHE_PLAZA3, 0
 	connection south, TitheStreet4, TITHE_STREET4, 0
 
-	map_attributes TithePlaza3, TITHE_PLAZA3, $23
+	map_attributes TithePlaza3, TITHE_PLAZA3, $00
 	connection north, TitheStreet6, TITHE_STREET6, 0
 	connection south, TitheStreet5, TITHE_STREET5, 0
 
@@ -58,15 +58,15 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheVestry, TITHE_VESTRY, $00
 
-	map_attributes TitheStreet6, TITHE_STREET6, $23
+	map_attributes TitheStreet6, TITHE_STREET6, $00
 	connection north, TitheStreet7, TITHE_STREET7, 0
 	connection south, TithePlaza3, TITHE_PLAZA3, 0
 
-	map_attributes TitheStreet7, TITHE_STREET7, $23
+	map_attributes TitheStreet7, TITHE_STREET7, $00
 	connection north, TithePlaza4, TITHE_PLAZA4, 0
 	connection south, TitheStreet6, TITHE_STREET6, 0
 
-	map_attributes TithePlaza4, TITHE_PLAZA4, $23
+	map_attributes TithePlaza4, TITHE_PLAZA4, $00
 	connection north, TitheStreet8, TITHE_STREET8, 0
 	connection south, TitheStreet7, TITHE_STREET7, 0
 
@@ -76,19 +76,19 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheHouse4, TITHE_HOUSE4, $00
 
-	map_attributes TitheStreet8, TITHE_STREET8, $23
+	map_attributes TitheStreet8, TITHE_STREET8, $00
 	connection north, TitheStreet9, TITHE_STREET9, 0
 	connection south, TithePlaza4, TITHE_PLAZA4, 0
 
-	map_attributes TitheStreet9, TITHE_STREET9, $23
+	map_attributes TitheStreet9, TITHE_STREET9, $00
 	connection north, TitheStreet10, TITHE_STREET10, 0
 	connection south, TitheStreet8, TITHE_STREET8, 0
 
-	map_attributes TitheStreet10, TITHE_STREET10, $23
+	map_attributes TitheStreet10, TITHE_STREET10, $00
 	connection north, TithePlaza5, TITHE_PLAZA5, 0
 	connection south, TitheStreet9, TITHE_STREET9, 0
 
-	map_attributes TithePlaza5, TITHE_PLAZA5, $23
+	map_attributes TithePlaza5, TITHE_PLAZA5, $00
 	connection north, TitheStreet11, TITHE_STREET11, 0
 	connection south, TitheStreet10, TITHE_STREET10, 0
 
@@ -100,19 +100,19 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheEvidenceRoom, TITHE_EVIDENCE_ROOM, $00
 
-	map_attributes TitheStreet11, TITHE_STREET11, $23
+	map_attributes TitheStreet11, TITHE_STREET11, $00
 	connection north, TitheStreet12, TITHE_STREET12, 0
 	connection south, TithePlaza5, TITHE_PLAZA5, 0
 
-	map_attributes TitheStreet12, TITHE_STREET12, $23
+	map_attributes TitheStreet12, TITHE_STREET12, $00
 	connection north, TitheStreet13, TITHE_STREET13, 0
 	connection south, TitheStreet11, TITHE_STREET11, 0
 
-	map_attributes TitheStreet13, TITHE_STREET13, $23
+	map_attributes TitheStreet13, TITHE_STREET13, $00
 	connection north, TithePlaza6, TITHE_PLAZA6, 0
 	connection south, TitheStreet12, TITHE_STREET12, 0
 
-	map_attributes TithePlaza6, TITHE_PLAZA6, $23
+	map_attributes TithePlaza6, TITHE_PLAZA6, $00
 	connection north, TitheStreet14, TITHE_STREET14, 0
 	connection south, TitheStreet13, TITHE_STREET13, 0
 
@@ -122,15 +122,15 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheHouse6, TITHE_HOUSE6, $00
 
-	map_attributes TitheStreet14, TITHE_STREET14, $23
+	map_attributes TitheStreet14, TITHE_STREET14, $00
 	connection north, TitheStreet15, TITHE_STREET15, 0
 	connection south, TithePlaza6, TITHE_PLAZA6, 0
 
-	map_attributes TitheStreet15, TITHE_STREET15, $23
+	map_attributes TitheStreet15, TITHE_STREET15, $00
 	connection north, TithePlaza7, TITHE_PLAZA7, 0
 	connection south, TitheStreet14, TITHE_STREET14, 0
 
-	map_attributes TithePlaza7, TITHE_PLAZA7, $23
+	map_attributes TithePlaza7, TITHE_PLAZA7, $00
 	connection south, TitheStreet15, TITHE_STREET15, 0
 
 	map_attributes TithePokecenter7, TITHE_POKECENTER7, $00

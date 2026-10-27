@@ -96,7 +96,7 @@ def link(a, b):
 
 
 class MapDef:
-    def __init__(self, group, name, w, h, tileset, env, landmark, music, pal="PALETTE_AUTO",
+    def __init__(self, group, name, w, h, tileset, env, landmark, music, pal="PALETTE_DAY",
                  fish="FISHGROUP_NONE", border=0, const=None):
         self.group, self.name, self.w, self.h = group, name, w, h
         self.const = const or camel_to_const(name)

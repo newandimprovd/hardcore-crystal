@@ -10,9 +10,9 @@ TithePlaza4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  3, TITHE_POKECENTER4, 1
-	warp_event 13,  3, TITHE_MART4, 1
-	warp_event 17,  3, TITHE_HOUSE4, 1
+	warp_event  2,  3, TITHE_POKECENTER4, 1
+	warp_event 12,  3, TITHE_MART4, 1
+	warp_event 16,  3, TITHE_HOUSE4, 1
 
 	def_coord_events
 

@@ -7,7 +7,7 @@ AxiomArmory_MapScripts:
 	def_callbacks
 
 AxiomArmoryBossScript:
-	trainer OFFICER, 160, EVENT_GEN_AXIOM_ARMORY_BOSS, AxiomArmoryBossSeenText, AxiomArmoryBossBeatenText, 0, AxiomArmoryBossAfterScript
+	trainer OFFICER, 168, EVENT_GEN_AXIOM_ARMORY_BOSS, AxiomArmoryBossSeenText, AxiomArmoryBossBeatenText, 0, AxiomArmoryBossAfterScript
 
 AxiomArmoryBossAfterScript:
 	endifjustbattled

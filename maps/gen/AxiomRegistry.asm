@@ -7,7 +7,7 @@ AxiomRegistry_MapScripts:
 	def_callbacks
 
 AxiomRegistryBossScript:
-	trainer SCIENTIST, 135, EVENT_GEN_AXIOM_REGISTRY_BOSS, AxiomRegistryBossSeenText, AxiomRegistryBossBeatenText, 0, AxiomRegistryBossAfterScript
+	trainer SCIENTIST, 133, EVENT_GEN_AXIOM_REGISTRY_BOSS, AxiomRegistryBossSeenText, AxiomRegistryBossBeatenText, 0, AxiomRegistryBossAfterScript
 
 AxiomRegistryBossAfterScript:
 	endifjustbattled

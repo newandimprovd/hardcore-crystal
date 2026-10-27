@@ -9,6 +9,34 @@ FACE = {"UP": "SPRITEMOVEDATA_STANDING_UP", "DOWN": "SPRITEMOVEDATA_STANDING_DOW
         "LEFT": "SPRITEMOVEDATA_STANDING_LEFT", "RIGHT": "SPRITEMOVEDATA_STANDING_RIGHT"}
 
 
+def autotile(m, kit, rng):
+    """Replace the plain wall blocks of a map by the role that fits their neighbors: building fronts where the street is to
+    the south, parapets where it is to the north, side walls east and west, roof fill inside.  Only for area tilesets."""
+    auto = kit.extra.get("auto")
+    if not auto:
+        return
+    walls = set(kit.wall)
+
+    def open_(x, y):
+        if not (0 <= x < m.w and 0 <= y < m.h):
+            return False
+        return any(c in ("FLOOR", "TALL_GRASS") for c in kit.coll[m.get(x, y)])
+
+    cells = [(x, y) for y in range(m.h) for x in range(m.w) if m.get(x, y) in walls]
+    for x, y in cells:
+        if open_(x, y + 1):
+            role = "facade"
+        elif open_(x + 1, y):
+            role = "side_e"
+        elif open_(x - 1, y):
+            role = "side_w"
+        elif open_(x, y - 1):
+            role = "roof"
+        else:
+            role = "mass"
+        m.set(x, y, rng.choice(auto[role]))
+
+
 def blk(path):
     return open(os.path.join(ROOT, path), "rb").read()
 
@@ -21,7 +49,7 @@ class Slot:
 
 
 def lane(g, name, kit, rng, *, trainers=13, a=3, cw=3, right=3, landmark, music, north="open",
-         neck=0, extra_top=0, gate=None, w=None, pal="PALETTE_AUTO"):
+         neck=0, extra_top=0, gate=None, w=None, pal="PALETTE_DAY"):
     """A vertical corridor. The player enters at the bottom (connection) and leaves at the top
     (connection, or a door block when north == 'door'). Trainers stand in pairs or alone on the channel
     edges so every row of the channel is watched."""
@@ -69,6 +97,7 @@ def lane(g, name, kit, rng, *, trainers=13, a=3, cw=3, right=3, landmark, music,
             else:
                 slots.append(Slot(cx1, y, "LEFT", cx1 - cx0))
             side ^= 1
+    autotile(m, kit, rng)
     g.add(m)
     m.a, m.cw = a, cw
     m.door = door
@@ -135,7 +164,7 @@ def chain(lower, upper, offset=0):
 
 
 def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11, rift=False, houses=1, extra=0,
-          south="open", pal="PALETTE_AUTO"):
+          south="open", pal="PALETTE_DAY"):
     """A hub: Pokecenter and Mart on the north wall, an optional rift house, an opening to the north lane
     and an opening to the south lane. Returns the map and a dict of door warps."""
     W, H = width, height
@@ -186,6 +215,7 @@ def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11,
             m.set(hx, 0, kit.extra["house_roof"][0])
             m.set(hx + 1, 0, kit.extra["house_roof"][1])
         doors["rift"] = m.warp(*kit.door_cell(hx, 1, kit.extra["house"][0]))
+    autotile(m, kit, rng)
     g.add(m)
     m.a, m.cw = a, cw
     m.spawn_cell = (kit.door_cell(1, 1, pc[1][0])[0], kit.door_cell(1, 1, pc[1][0])[1] + 1)

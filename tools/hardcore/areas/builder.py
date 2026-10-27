@@ -21,7 +21,7 @@ class ActSpec:
     """lanes lanes of `trainers` fighters each, then a plaza (Pokecenter, Mart, a house, the boss door)."""
 
     def __init__(self, tag, lanes, kit, landmark, music, trainers=13, gate=None, boss=None, houses=1,
-                 mart=None, texts=None, plaza_width=13, lane_names=None, split=None, pal="PALETTE_AUTO"):
+                 mart=None, texts=None, plaza_width=13, lane_names=None, split=None, pal="PALETTE_DAY"):
         self.pal = pal
         self.tag, self.lanes, self.kit, self.landmark, self.music = tag, lanes, kit, landmark, music
         self.split = split  # a second, smaller plaza (Pokecenter, Mart, house) after this many lanes
@@ -95,7 +95,7 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
     return lanes, p, doors, info, lane_no, plaza_no
 
 
-def start_plaza(w, g, rng, kit, tag, landmark, music, texts, stock, entry_doors, gate_name, gate_text, pal="PALETTE_AUTO"):
+def start_plaza(w, g, rng, kit, tag, landmark, music, texts, stock, entry_doors, gate_name, gate_text, pal="PALETTE_DAY"):
     """First plaza of an area (south side closed), reached through a gate house from the unlinked doors
     `entry_doors` of the previous area's last boss room. Returns the plaza."""
     p, d = plaza(g, f"{tag}Plaza1", kit, rng, landmark=landmark, music=music, rift=True, houses=1, south="closed",

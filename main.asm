@@ -424,6 +424,11 @@ SECTION "Hardcore Story", ROMX
 INCLUDE "engine/hardcore/story.asm"
 
 
+SECTION "Hardcore Area Pals", ROMX
+
+INCLUDE "engine/hardcore/area_pals.asm"
+
+
 SECTION "bank32", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"

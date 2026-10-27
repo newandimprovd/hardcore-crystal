@@ -15,6 +15,7 @@ STEM = {
     "TILESET_POKECENTER": "pokecenter", "TILESET_MART": "mart", "TILESET_PORT": "port",
     "TILESET_LAB": "lab", "TILESET_TOWER": "tower", "TILESET_RUINS_OF_ALPH": "ruins_of_alph",
     "TILESET_BATTLE_TOWER_OUTSIDE": "battle_tower_outside", "TILESET_RADIO_TOWER": "radio_tower",
+    "TILESET_TITHE": "tithe", "TILESET_GROVE": "grove", "TILESET_AXIOM": "axiom", "TILESET_LOTUS": "lotus", "TILESET_DIS": "dis",
 }
 
 WALKABLE = {"FLOOR", "TALL_GRASS"}
@@ -85,3 +86,29 @@ def kanto():
                plaza=[0x55], grass=[0x0a], flowers=[0x0a],
                center=[[0x20, 0x21], [0x7c, 0x7e]], mart=[[0x20, 0x21], [0x7c, 0x73]],
                house=[0x7c, 0x7e], house_roof=[0x20, 0x21], rift=0x7c, border=0x0f)
+
+
+def _art_kit(tileset, mod, weights):
+    """Kit for a generated area tileset: ids come from art/<area>.py (roles), see gen_tilesets.py."""
+    t = mod.build()
+    r, ids = t.roles, t.ids
+    floor = []
+    for role, wt in weights["floor"]:
+        for b in r[role]:
+            floor += [b] * wt
+    auto = {k: [b for role, wt in v for b in r[role] for _ in range(wt)] for k, v in mod.AUTO.items()}
+    # weighted facades: repeat the entries listed in mod.FACADE_WEIGHTS (index into the facade role)
+    if hasattr(mod, "FACADE_WEIGHTS"):
+        fac = r["facade"]
+        auto["facade"] = [fac[i] for i, wt in enumerate(mod.FACADE_WEIGHTS) for _ in range(wt)]
+    plaza = [b for b in r["plaza"][:1] for _ in range(1)] + [b for b in r["plaza"][1:] for _ in range(3)]
+    return Kit(tileset, floor=floor, wall=auto["mass"] + auto["facade"],
+               plaza=plaza, center=[[ids["cr_l"], ids["cr_r"]], [ids["c_door"], ids["c_sign"]]],
+               mart=[[ids["cr_l"], ids["cr_r"]], [ids["m_door"], ids["m_sign"]]],
+               house=[ids["h_door"], ids["h_side"]], house_roof=[ids["hr_l"], ids["hr_r"]], rift=ids["rift"],
+               border=ids["border"], auto=auto)
+
+
+def tithe():
+    from art import tithe as mod
+    return _art_kit("TILESET_TITHE", mod, dict(floor=[("floor", 4), ("floor_rare", 1)]))

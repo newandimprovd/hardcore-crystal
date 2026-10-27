@@ -53,7 +53,7 @@ def build(w, roster, rng, open_exit=False):
     spec = Spec()
     g = w.group("AREA1", spec.sprites)
     w.pools[spec.pool] = dict(seen=T.SEEN, beaten=T.BEATEN, after=T.AFTER)
-    modern, johto = kits.modern(), kits.johto()
+    modern, johto = kits.tithe(), kits.johto()
     w.landmarks.append(("TITHE_CITY", 80, 70, "TITHE<BSP>LOWTOWN"))
     w.landmarks.append(("TITHE_ROAD", 80, 84, "TITHE<BSP>ROAD"))
     w.landmarks.append(("TITHE_MIDTOWN", 80, 62, "TITHE<BSP>MIDTOWN"))
