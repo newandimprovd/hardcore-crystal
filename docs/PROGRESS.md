@@ -29,7 +29,11 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
          (WALK_GOD=1 for A3-A5, see below) and every boss-room-to-next-gate transition passes. Key items: A1 Chainsaw+Crowbar, A2 Jet Ski+
          Baseball Bat, A3 Flashlight+Sledgehammer, A4 Grapple Hook+Shovel, A5 Getaway Car; Outboard still TBD (plan: Purgatorio).
          Final boss FINNEGAN text is a placeholder until the ending is designed. Art is kit-based (johto/modern/kanto kits), palettes per area.
-- [ ] 7  milestones (200/800), rival crimelord, mansion bedroom ending, Area 5
+- [x] 7  milestones (200/800), rival crimelord, mansion hall and bedroom, Area 5 entered through the New Bark crater portal, normal ending
+         (final boss falls -> crater rim -> Elm checks the fully evolved starter -> hall of fame + credits -> Continue in the bedroom).
+         Tests: tools/hardcore/test_story.py milestone | newbark | rival | ending | notyet (see the docstring for the testbuild line of each).
+         Still open from stage 7: credits text naming Claude, chauffeur trip and hall NPC checks, Getaway Car use, Elm hands the mon back
+         instead of keeping it (design says "return it"; keeping it avoids losing a party member without a safe removal routine).
 - [ ] 8  Purgatorio, Abyss, Nick's Landing, Steiner, Sabbah, Cioran, Crowley quest, Corkboard, true ending
 - [ ] 9  wild encounters (every base form catchable), key item placement, QOL, balance
 - [ ] 10 music loops, new sprites/cries, Pokedex text, credits, adults-only warning.
@@ -98,3 +102,15 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
   WALK_GOD=1 gives the lone test mon 999 HP and clears enemy Destiny Bond (a level-100 Cthuludon has 358 HP and the later areas one-shot it
   or take it down with Destiny Bond; those whiteouts are balance, not map bugs). Transition goals: `GroveCouncil,AxiomGate,AxiomPlaza1` etc.
 - Balance notes seen in the walk: enemies at L85-92 with 120-power STAB moves can one-shot a 358 HP mon; Destiny Bond exists on APPARITION and MIASMA lines.
+
+## Stage 7 notes (story and ending)
+- Story hook: TrainerDeathScript -> HC_CheckStory (engine/hardcore/story.asm, section "Hardcore Story") -> farsjump HC_StoryDispatch.
+  Kind 1 = kill 200 (tidal wave news), 2 = the rival (class RIVAL2, boss 3 of Area 4: stolen starter back at L75, EVENT_HC_CRATER),
+  3 = the final boss FINNEGAN (EVENT_HC_FINN_FELL, warp to NEW_BARK_TOWN 10,10, the crater rim). Story texts: tools/hardcore/gen_story.py STORY.
+- New Bark Town (maps/NewBarkTown.asm): tiles callback floods (kill 200) or craters (kill 800) the town, swirl block at block (5,4) leads to DIS_GATE;
+  object visibility goes through event flags: teacher/fisher carry EVENT_HC_CRATER, Elm carries EVENT_HC_ELM_HIDDEN (callback appears him with the crater).
+  A flagless `disappear` in a MAPCALLBACK_OBJECTS callback does NOT hide an object (the callback runs before the object structs exist).
+- Ending: Elm checks `special FindPartyMonThatSpecies` (wScriptVar = species in, TRUE/FALSE out) for ELDERWOOD / CALDERA / DEATHROLL depending on
+  the starter the rival had (player took TOTODILE -> CHIKORITA line, CHIKORITA -> CYNDAQUIL line, CYNDAQUIL -> TOTODILE line), sets EVENT_HC_ENDED and
+  runs `halloffame` (saves, hall of fame, vanilla credits, reset). `.SpawnAfterE4` in intro_menu.asm spawns at SPAWN_LOTUS_BEDROOM (generated in a4.py mansion()).
+- Test pitfall: after a script ends, another A press talks to the NPC again; stop mashing A when wScriptRunning is 0.

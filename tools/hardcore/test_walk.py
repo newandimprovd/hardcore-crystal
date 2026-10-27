@@ -408,7 +408,8 @@ def auto_plan(world, first, prefix=None):
             elif "Checkpoint" in n or n.endswith("Gate"):
                 add(n)
                 gate_next = next((world.consts[d].name for (_, _, d, _) in dm.warps
-                                  if world.consts[d].name != cur and world.consts[d].name.startswith(prefix)), None)
+                                  if d in world.consts and world.consts[d].name != cur
+                                  and world.consts[d].name.startswith(prefix)), None)
             else:  # a boss room
                 m_item = re.search(r"itemball (\w+)", open(os.path.join(ROOT, f"maps/gen/{n}.asm")).read())
                 if m_item:
