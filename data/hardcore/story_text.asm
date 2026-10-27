@@ -199,3 +199,114 @@ HC_ElmText4:
 	line "kind of 'why'. The"
 	para "old-man kind."
 	done
+
+HC_FinnText1:
+	text "FINNEGAN's dream"
+	line "ended in the"
+	para "middle of a"
+	line "sentence, as"
+	para "dreams about the"
+	line "end of the world"
+	para "are required to."
+	done
+
+HC_FinnText2:
+	text "The ice of JUDECCA"
+	line "let go of"
+	para "everything it was"
+	line "holding. For a"
+	para "moment that"
+	line "included <PLAYER>."
+	done
+
+HC_FinnText3:
+	text "Then it was wet"
+	line "ground, crater air"
+	para "and a very large"
+	line "sky. NEW BARK"
+	para "TOWN. Behind"
+	line "<PLAYER> the swirl"
+	para "had stopped"
+	line "humming."
+	done
+
+HC_FinnText4:
+	text "PROF. ELM was"
+	line "waiting on the rim"
+	para "of the crater. He"
+	line "was holding a hat."
+	para "It was not the"
+	line "same hat."
+	done
+
+HC_ElmEnd1:
+	text "ELM: <PLAYER>. The"
+	line "swirl stopped"
+	para "humming. Whatever"
+	line "was on the other"
+	para "side has finished"
+	line "its sentence."
+	done
+
+HC_ElmEndNot:
+	text "ELM: Where is my"
+	line "POKéMON? The"
+	para "stolen one. It has"
+	line "to be fully grown"
+	para "and it has to be"
+	line "with you. Come"
+	para "back when it is."
+	line "I'll be here. I"
+	para "have a crater to"
+	line "sit on."
+	done
+
+HC_ElmEnd2:
+	text "ELM: There it is."
+	line "Fully grown. It"
+	para "looks at me the"
+	line "way it did when it"
+	para "was small. With"
+	line "suspicion and"
+	para "forgiveness, in"
+	line "that order."
+	done
+
+HC_ElmEnd3:
+	text "ELM: I used to"
+	line "hand these out to"
+	para "hopeful kids. You"
+	line "were one of them,"
+	para "once. I think. The"
+	line "records are wet."
+	done
+
+HC_ElmEnd4:
+	text "ELM: Keep it. A"
+	line "lab is only a"
+	para "crater with"
+	line "paperwork. Go"
+	para "home, <PLAYER>. The"
+	line "house on the hill"
+	para "is yours. The"
+	line "maids will have"
+	para "made the bed."
+	done
+
+HC_ElmEnd5:
+	text "<PLAYER> walked"
+	line "home. It was a"
+	para "long walk."
+	line "Somewhere behind,"
+	para "a hat was lowered,"
+	line "and a town did not"
+	para "applaud."
+	done
+
+HC_ElmDone:
+	text "ELM: The lab will"
+	line "be rebuilt. With a"
+	para "moat. Come by any"
+	line "time, if there is"
+	para "a time."
+	done

@@ -125,7 +125,23 @@ HC_RivalGotText:
 	done
 
 HC_FinnFalls:
+; The final boss is dead: the player wakes on the rim of the New Bark Town crater where PROF. ELM waits.
 	setevent EVENT_HC_FINN_FELL
+	pause 20
+	opentext
+	writetext HC_FinnText1
+	waitbutton
+	writetext HC_FinnText2
+	waitbutton
+	writetext HC_FinnText3
+	waitbutton
+	writetext HC_FinnText4
+	waitbutton
+	closetext
+	special FadeOutToWhite
+	playsound SFX_WARP_TO
+	waitsfx
+	warp NEW_BARK_TOWN, 10, 10
 	end
 
 ; New Bark Town after the rival fell -----------------------------------------------------------
@@ -160,6 +176,10 @@ HC_PortalScript::
 HC_ElmRimScript::
 	faceplayer
 	opentext
+	checkevent EVENT_HC_ENDED
+	iftrue .Ended
+	checkevent EVENT_HC_FINN_FELL
+	iftrue .AfterFinn
 	writetext HC_ElmText1
 	waitbutton
 	writetext HC_ElmText2
@@ -169,6 +189,51 @@ HC_ElmRimScript::
 	writetext HC_ElmText4
 	waitbutton
 	closetext
+	end
+
+.Ended:
+	writetext HC_ElmDone
+	waitbutton
+	closetext
+	end
+
+.AfterFinn:
+	writetext HC_ElmEnd1
+	waitbutton
+	; the stolen POKéMON was the rival's starter: its fully evolved form has to be in the party
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .WantElderwood ; the player took TOTODILE, the rival had CHIKORITA
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .WantCaldera ; the player took CHIKORITA, the rival had CYNDAQUIL
+	setval DEATHROLL ; the player took CYNDAQUIL, the rival had TOTODILE
+	sjump .Check
+
+.WantElderwood:
+	setval ELDERWOOD
+	sjump .Check
+
+.WantCaldera:
+	setval CALDERA
+.Check:
+	special FindPartyMonThatSpecies
+	iftrue .TheEnd
+	writetext HC_ElmEndNot
+	waitbutton
+	closetext
+	end
+
+.TheEnd:
+	writetext HC_ElmEnd2
+	waitbutton
+	writetext HC_ElmEnd3
+	waitbutton
+	writetext HC_ElmEnd4
+	waitbutton
+	writetext HC_ElmEnd5
+	waitbutton
+	closetext
+	setevent EVENT_HC_ENDED
+	halloffame ; saves, hall of fame, credits; Continue then spawns in the mansion bedroom (intro_menu.asm)
 	end
 
 INCLUDE "data/hardcore/story_bosses.asm"

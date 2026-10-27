@@ -75,9 +75,13 @@ NewBarkTownElmRimScript:
 
 NewBarkTownHCObjectsCallback:
 	checkevent EVENT_HC_CRATER
-	iftrue .Done
+	iftrue .Crater
 	disappear NEWBARKTOWN_ELM
-.Done:
+	endcallback
+
+.Crater:
+	appear NEWBARKTOWN_ELM ; nobody of the old town stands in the crater but ELM (teacher and fisher carry EVENT_HC_CRATER)
+	disappear NEWBARKTOWN_RIVAL
 	endcallback
 
 NewBarkTown_TeacherStopsYouScene1:
@@ -362,7 +366,7 @@ NewBarkTown_MapEvents:
 	bg_event 11,  9, BGEVENT_READ, NewBarkTownPortalScript
 
 	def_object_events
-	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
-	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
+	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, EVENT_HC_CRATER
+	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, EVENT_HC_CRATER
 	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event  4, 11, SPRITE_ELM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmRimScript, -1
+	object_event  4, 11, SPRITE_ELM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmRimScript, EVENT_HC_ELM_HIDDEN

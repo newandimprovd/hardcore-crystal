@@ -51,6 +51,19 @@ STORY = {
     "ElmText2": "ELM: That swirl opened the night the town went. Things walk out of it. Things walk into it. Nobody comes back the same, except the hat.",
     "ElmText3": "ELM: You carry my stolen POKéMON? Fully grown, it would return the lab to me in spirit. Bring it back once it has finished evolving.",
     "ElmText4": "ELM: Whatever is on the other side of that swirl, it is why this happened. The nice kind of 'why'. The old-man kind.",
+    # the final boss falls (Area 5): the player wakes on the crater rim
+    "FinnText1": "FINNEGAN's dream ended in the middle of a sentence, as dreams about the end of the world are required to.",
+    "FinnText2": "The ice of JUDECCA let go of everything it was holding. For a moment that included <PLAYER>.",
+    "FinnText3": "Then it was wet ground, crater air and a very large sky. NEW BARK TOWN. Behind <PLAYER> the swirl had stopped humming.",
+    "FinnText4": "PROF. ELM was waiting on the rim of the crater. He was holding a hat. It was not the same hat.",
+    # Elm after the final boss: the starter has to be fully evolved and in the party
+    "ElmEnd1": "ELM: <PLAYER>. The swirl stopped humming. Whatever was on the other side has finished its sentence.",
+    "ElmEndNot": "ELM: Where is my POKéMON? The stolen one. It has to be fully grown and it has to be with you. Come back when it is. I'll be here. I have a crater to sit on.",
+    "ElmEnd2": "ELM: There it is. Fully grown. It looks at me the way it did when it was small. With suspicion and forgiveness, in that order.",
+    "ElmEnd3": "ELM: I used to hand these out to hopeful kids. You were one of them, once. I think. The records are wet.",
+    "ElmEnd4": "ELM: Keep it. A lab is only a crater with paperwork. Go home, <PLAYER>. The house on the hill is yours. The maids will have made the bed.",
+    "ElmEnd5": "<PLAYER> walked home. It was a long walk. Somewhere behind, a hat was lowered, and a town did not applaud.",
+    "ElmDone": "ELM: The lab will be rebuilt. With a moat. Come by any time, if there is a time.",
 }
 
 

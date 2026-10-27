@@ -28,6 +28,7 @@
 	const SPAWN_LOTUS_5
 	const SPAWN_LOTUS_6
 	const SPAWN_LOTUS_7
+	const SPAWN_LOTUS_BEDROOM
 	const SPAWN_DIS_1
 	const SPAWN_DIS_2
 	const SPAWN_DIS_3

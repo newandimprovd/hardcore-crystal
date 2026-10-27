@@ -28,6 +28,7 @@
 	spawn LOTUS_PLAZA5,  3,  4
 	spawn LOTUS_PLAZA6,  3,  4
 	spawn LOTUS_PLAZA7,  3,  4
+	spawn LOTUS_BEDROOM,  3,  3
 	spawn DIS_PLAZA1,  3,  4
 	spawn DIS_PLAZA2,  3,  4
 	spawn DIS_PLAZA3,  3,  4

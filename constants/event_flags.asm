@@ -1475,7 +1475,7 @@
 	const EVENT_HC_TRUMPET ; the Trumpet was taken
 	const EVENT_HC_ELM_AT_RIM ; Elm waits at the crater rim (set with the crater)
 	const EVENT_HC_STOLEN_BACK ; the stolen Pokemon was recovered
-	const EVENT_HC_SPARE_A
+	const EVENT_HC_ELM_HIDDEN ; set = PROF. ELM is not on the map (New Bark Town callback clears it with the crater)
 	const EVENT_HC_SPARE_B
 	const EVENT_HC_SPARE_C
 	const EVENT_HC_SPARE_D
