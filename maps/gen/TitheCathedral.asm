@@ -7,7 +7,7 @@ TitheCathedral_MapScripts:
 	def_callbacks
 
 TitheCathedralBossScript:
-	trainer MYSTICALMAN, 128, EVENT_GEN_TITHE_CATHEDRAL_BOSS, TitheCathedralBossSeenText, TitheCathedralBossBeatenText, 0, TitheCathedralBossAfterScript
+	trainer T_MONSIGNOR, 128, EVENT_GEN_TITHE_CATHEDRAL_BOSS, TitheCathedralBossSeenText, TitheCathedralBossBeatenText, 0, TitheCathedralBossAfterScript
 
 TitheCathedralBossAfterScript:
 	endifjustbattled
@@ -64,5 +64,5 @@ TitheCathedral_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheCathedralBossScript, -1
+	object_event  2,  9, SPRITE_HC_MONSIGNOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheCathedralBossScript, -1
 

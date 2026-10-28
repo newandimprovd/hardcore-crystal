@@ -7,7 +7,7 @@ GroveSmokehouse_MapScripts:
 	def_callbacks
 
 GroveSmokehouseBossScript:
-	trainer SAGE, 129, EVENT_GEN_GROVE_SMOKEHOUSE_BOSS, GroveSmokehouseBossSeenText, GroveSmokehouseBossBeatenText, 0, GroveSmokehouseBossAfterScript
+	trainer G_ELDRESS, 128, EVENT_GEN_GROVE_SMOKEHOUSE_BOSS, GroveSmokehouseBossSeenText, GroveSmokehouseBossBeatenText, 0, GroveSmokehouseBossAfterScript
 
 GroveSmokehouseBossAfterScript:
 	endifjustbattled
@@ -62,6 +62,6 @@ GroveSmokehouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveSmokehouseBossScript, -1
+	object_event  2,  9, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveSmokehouseBossScript, -1
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveSmokehouseItemBall, EVENT_GEN_GROVE_SMOKEHOUSE_ITEM
 

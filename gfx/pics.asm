@@ -781,6 +781,7 @@ INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 SECTION "Pics 20", ROMX
 
 INCLUDE "gfx/pokemon/hc_pics.asm"
+INCLUDE "gfx/trainers/hc_pics.asm" ; HC-ART
 
 SECTION "Pics 21", ROMX
 

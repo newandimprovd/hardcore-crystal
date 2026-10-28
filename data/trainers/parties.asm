@@ -3495,3 +3495,6 @@ MysticalmanGroup:
 	db 23, HAUNTER,    SCRATCH, HYPNOSIS, MEAN_LOOK, CURSE
 	db 25, ELECTRODE,  SCREECH, SWIFT, THUNDER, ROLLOUT
 	db -1 ; end
+
+HC_EmptyGroup: ; HC-ART: the generated trainers (id >= HC_GEN_ID_BASE) live in data/hardcore/gen_trainer_data.asm
+	db -1 ; end

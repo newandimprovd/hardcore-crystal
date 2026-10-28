@@ -7,7 +7,7 @@ TitheEvidenceRoom_MapScripts:
 	def_callbacks
 
 TitheEvidenceRoomBossScript:
-	trainer OFFICER, 128, EVENT_GEN_TITHE_EVIDENCE_ROOM_BOSS, TitheEvidenceRoomBossSeenText, TitheEvidenceRoomBossBeatenText, 0, TitheEvidenceRoomBossAfterScript
+	trainer T_COPCHIEF, 128, EVENT_GEN_TITHE_EVIDENCE_ROOM_BOSS, TitheEvidenceRoomBossSeenText, TitheEvidenceRoomBossBeatenText, 0, TitheEvidenceRoomBossAfterScript
 
 TitheEvidenceRoomBossAfterScript:
 	endifjustbattled
@@ -63,6 +63,6 @@ TitheEvidenceRoom_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheEvidenceRoomBossScript, -1
+	object_event  2,  9, SPRITE_HC_COP_CHIEF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheEvidenceRoomBossScript, -1
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheEvidenceRoomItemBall, EVENT_GEN_TITHE_EVIDENCE_ROOM_ITEM
 

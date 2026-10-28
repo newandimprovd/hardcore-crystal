@@ -7,7 +7,7 @@ CocytusIceHall_MapScripts:
 	def_callbacks
 
 CocytusIceHallBossScript:
-	trainer BURGLAR, 139, EVENT_GEN_COCYTUS_ICE_HALL_BOSS, CocytusIceHallBossSeenText, CocytusIceHallBossBeatenText, 0, CocytusIceHallBossAfterScript
+	trainer D_DEMON, 128, EVENT_GEN_COCYTUS_ICE_HALL_BOSS, CocytusIceHallBossSeenText, CocytusIceHallBossBeatenText, 0, CocytusIceHallBossAfterScript
 
 CocytusIceHallBossAfterScript:
 	endifjustbattled
@@ -58,5 +58,5 @@ CocytusIceHall_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, CocytusIceHallBossScript, -1
+	object_event  2,  9, SPRITE_HC_DEMON_LORD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, CocytusIceHallBossScript, -1
 

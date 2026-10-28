@@ -7,7 +7,7 @@ JudeccaCentre_MapScripts:
 	def_callbacks
 
 JudeccaCentreBossScript:
-	trainer MYSTICALMAN, 129, EVENT_GEN_JUDECCA_CENTRE_BOSS, JudeccaCentreBossSeenText, JudeccaCentreBossBeatenText, 0, JudeccaCentreBossAfterScript
+	trainer D_FINNEGAN, 128, EVENT_GEN_JUDECCA_CENTRE_BOSS, JudeccaCentreBossSeenText, JudeccaCentreBossBeatenText, 0, JudeccaCentreBossAfterScript
 
 JudeccaCentreBossAfterScript:
 	endifjustbattled
@@ -63,5 +63,5 @@ JudeccaCentre_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, JudeccaCentreBossScript, -1
+	object_event  2,  9, SPRITE_HC_FINNEGAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, JudeccaCentreBossScript, -1
 

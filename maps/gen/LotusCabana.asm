@@ -7,7 +7,7 @@ LotusCabana_MapScripts:
 	def_callbacks
 
 LotusCabanaBossScript:
-	trainer GENTLEMAN, 149, EVENT_GEN_LOTUS_CABANA_BOSS, LotusCabanaBossSeenText, LotusCabanaBossBeatenText, 0, LotusCabanaBossAfterScript
+	trainer L_MANAGER, 128, EVENT_GEN_LOTUS_CABANA_BOSS, LotusCabanaBossSeenText, LotusCabanaBossBeatenText, 0, LotusCabanaBossAfterScript
 
 LotusCabanaBossAfterScript:
 	endifjustbattled
@@ -61,6 +61,6 @@ LotusCabana_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusCabanaBossScript, -1
+	object_event  2,  9, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusCabanaBossScript, -1
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusCabanaItemBall, EVENT_GEN_LOTUS_CABANA_ITEM
 

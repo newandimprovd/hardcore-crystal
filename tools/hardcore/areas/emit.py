@@ -90,6 +90,7 @@ def emit_group_tables(w):
 def emit_roof_pals(w):
     from art import areapal
     areapal.emit(os.path.join(ROOT, "gfx/tilesets/area_bg.pal"))
+    areapal.emit_npc(os.path.join(ROOT, "gfx/overworld/area_npc.pal"))
     o = [HEADER]
     for gi, (key, g) in enumerate(w.groups.items()):
         a, b = areapal.roof_colors(key) if key in areapal.AREAS else g.roofpal

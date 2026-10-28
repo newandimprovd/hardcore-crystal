@@ -7,7 +7,7 @@ AxiomArmory_MapScripts:
 	def_callbacks
 
 AxiomArmoryBossScript:
-	trainer OFFICER, 168, EVENT_GEN_AXIOM_ARMORY_BOSS, AxiomArmoryBossSeenText, AxiomArmoryBossBeatenText, 0, AxiomArmoryBossAfterScript
+	trainer U_WARDBOT, 128, EVENT_GEN_AXIOM_ARMORY_BOSS, AxiomArmoryBossSeenText, AxiomArmoryBossBeatenText, 0, AxiomArmoryBossAfterScript
 
 AxiomArmoryBossAfterScript:
 	endifjustbattled
@@ -62,6 +62,6 @@ AxiomArmory_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomArmoryBossScript, -1
+	object_event  2,  9, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomArmoryBossScript, -1
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomArmoryItemBall, EVENT_GEN_AXIOM_ARMORY_ITEM
 

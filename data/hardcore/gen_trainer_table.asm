@@ -40,100 +40,270 @@ HC_GenGroupTable:
 	dw 0 ; 18 MISTY
 	db 0
 	dw 0 ; 19 LT_SURGE
-	db BANK(HC_GenGroup_SCIENTIST)
-	dw HC_GenGroup_SCIENTIST ; 20 SCIENTIST
+	db 0
+	dw 0 ; 20 SCIENTIST
 	db 0
 	dw 0 ; 21 ERIKA
 	db 0
 	dw 0 ; 22 YOUNGSTER
-	db BANK(HC_GenGroup_SCHOOLBOY)
-	dw HC_GenGroup_SCHOOLBOY ; 23 SCHOOLBOY
-	db BANK(HC_GenGroup_BIRD_KEEPER)
-	dw HC_GenGroup_BIRD_KEEPER ; 24 BIRD_KEEPER
-	db BANK(HC_GenGroup_LASS)
-	dw HC_GenGroup_LASS ; 25 LASS
+	db 0
+	dw 0 ; 23 SCHOOLBOY
+	db 0
+	dw 0 ; 24 BIRD_KEEPER
+	db 0
+	dw 0 ; 25 LASS
 	db 0
 	dw 0 ; 26 JANINE
-	db BANK(HC_GenGroup_COOLTRAINERM)
-	dw HC_GenGroup_COOLTRAINERM ; 27 COOLTRAINERM
-	db BANK(HC_GenGroup_COOLTRAINERF)
-	dw HC_GenGroup_COOLTRAINERF ; 28 COOLTRAINERF
-	db BANK(HC_GenGroup_BEAUTY)
-	dw HC_GenGroup_BEAUTY ; 29 BEAUTY
+	db 0
+	dw 0 ; 27 COOLTRAINERM
+	db 0
+	dw 0 ; 28 COOLTRAINERF
+	db 0
+	dw 0 ; 29 BEAUTY
 	db 0
 	dw 0 ; 30 POKEMANIAC
-	db BANK(HC_GenGroup_GRUNTM)
-	dw HC_GenGroup_GRUNTM ; 31 GRUNTM
-	db BANK(HC_GenGroup_GENTLEMAN)
-	dw HC_GenGroup_GENTLEMAN ; 32 GENTLEMAN
+	db 0
+	dw 0 ; 31 GRUNTM
+	db 0
+	dw 0 ; 32 GENTLEMAN
 	db 0
 	dw 0 ; 33 SKIER
-	db BANK(HC_GenGroup_TEACHER)
-	dw HC_GenGroup_TEACHER ; 34 TEACHER
+	db 0
+	dw 0 ; 34 TEACHER
 	db 0
 	dw 0 ; 35 SABRINA
-	db BANK(HC_GenGroup_BUG_CATCHER)
-	dw HC_GenGroup_BUG_CATCHER ; 36 BUG_CATCHER
-	db BANK(HC_GenGroup_FISHER)
-	dw HC_GenGroup_FISHER ; 37 FISHER
-	db BANK(HC_GenGroup_SWIMMERM)
-	dw HC_GenGroup_SWIMMERM ; 38 SWIMMERM
-	db BANK(HC_GenGroup_SWIMMERF)
-	dw HC_GenGroup_SWIMMERF ; 39 SWIMMERF
-	db BANK(HC_GenGroup_SAILOR)
-	dw HC_GenGroup_SAILOR ; 40 SAILOR
-	db BANK(HC_GenGroup_SUPER_NERD)
-	dw HC_GenGroup_SUPER_NERD ; 41 SUPER_NERD
+	db 0
+	dw 0 ; 36 BUG_CATCHER
+	db 0
+	dw 0 ; 37 FISHER
+	db 0
+	dw 0 ; 38 SWIMMERM
+	db 0
+	dw 0 ; 39 SWIMMERF
+	db 0
+	dw 0 ; 40 SAILOR
+	db 0
+	dw 0 ; 41 SUPER_NERD
 	db BANK(HC_GenGroup_RIVAL2)
 	dw HC_GenGroup_RIVAL2 ; 42 RIVAL2
-	db BANK(HC_GenGroup_GUITARIST)
-	dw HC_GenGroup_GUITARIST ; 43 GUITARIST
-	db BANK(HC_GenGroup_HIKER)
-	dw HC_GenGroup_HIKER ; 44 HIKER
-	db BANK(HC_GenGroup_BIKER)
-	dw HC_GenGroup_BIKER ; 45 BIKER
+	db 0
+	dw 0 ; 43 GUITARIST
+	db 0
+	dw 0 ; 44 HIKER
+	db 0
+	dw 0 ; 45 BIKER
 	db 0
 	dw 0 ; 46 BLAINE
-	db BANK(HC_GenGroup_BURGLAR)
-	dw HC_GenGroup_BURGLAR ; 47 BURGLAR
-	db BANK(HC_GenGroup_FIREBREATHER)
-	dw HC_GenGroup_FIREBREATHER ; 48 FIREBREATHER
-	db BANK(HC_GenGroup_JUGGLER)
-	dw HC_GenGroup_JUGGLER ; 49 JUGGLER
-	db BANK(HC_GenGroup_BLACKBELT_T)
-	dw HC_GenGroup_BLACKBELT_T ; 50 BLACKBELT_T
-	db BANK(HC_GenGroup_EXECUTIVEM)
-	dw HC_GenGroup_EXECUTIVEM ; 51 EXECUTIVEM
-	db BANK(HC_GenGroup_PSYCHIC_T)
-	dw HC_GenGroup_PSYCHIC_T ; 52 PSYCHIC_T
-	db BANK(HC_GenGroup_PICNICKER)
-	dw HC_GenGroup_PICNICKER ; 53 PICNICKER
-	db BANK(HC_GenGroup_CAMPER)
-	dw HC_GenGroup_CAMPER ; 54 CAMPER
-	db BANK(HC_GenGroup_EXECUTIVEF)
-	dw HC_GenGroup_EXECUTIVEF ; 55 EXECUTIVEF
-	db BANK(HC_GenGroup_SAGE)
-	dw HC_GenGroup_SAGE ; 56 SAGE
-	db BANK(HC_GenGroup_MEDIUM)
-	dw HC_GenGroup_MEDIUM ; 57 MEDIUM
+	db 0
+	dw 0 ; 47 BURGLAR
+	db 0
+	dw 0 ; 48 FIREBREATHER
+	db 0
+	dw 0 ; 49 JUGGLER
+	db 0
+	dw 0 ; 50 BLACKBELT_T
+	db 0
+	dw 0 ; 51 EXECUTIVEM
+	db 0
+	dw 0 ; 52 PSYCHIC_T
+	db 0
+	dw 0 ; 53 PICNICKER
+	db 0
+	dw 0 ; 54 CAMPER
+	db 0
+	dw 0 ; 55 EXECUTIVEF
+	db 0
+	dw 0 ; 56 SAGE
+	db 0
+	dw 0 ; 57 MEDIUM
 	db 0
 	dw 0 ; 58 BOARDER
-	db BANK(HC_GenGroup_POKEFANM)
-	dw HC_GenGroup_POKEFANM ; 59 POKEFANM
-	db BANK(HC_GenGroup_KIMONO_GIRL)
-	dw HC_GenGroup_KIMONO_GIRL ; 60 KIMONO_GIRL
+	db 0
+	dw 0 ; 59 POKEFANM
+	db 0
+	dw 0 ; 60 KIMONO_GIRL
 	db 0
 	dw 0 ; 61 TWINS
-	db BANK(HC_GenGroup_POKEFANF)
-	dw HC_GenGroup_POKEFANF ; 62 POKEFANF
+	db 0
+	dw 0 ; 62 POKEFANF
 	db 0
 	dw 0 ; 63 RED
 	db 0
 	dw 0 ; 64 BLUE
-	db BANK(HC_GenGroup_OFFICER)
-	dw HC_GenGroup_OFFICER ; 65 OFFICER
-	db BANK(HC_GenGroup_GRUNTF)
-	dw HC_GenGroup_GRUNTF ; 66 GRUNTF
-	db BANK(HC_GenGroup_MYSTICALMAN)
-	dw HC_GenGroup_MYSTICALMAN ; 67 MYSTICALMAN
+	db 0
+	dw 0 ; 65 OFFICER
+	db 0
+	dw 0 ; 66 GRUNTF
+	db 0
+	dw 0 ; 67 MYSTICALMAN
+	db BANK(HC_GenGroup_T_COP)
+	dw HC_GenGroup_T_COP ; 68 T_COP
+	db BANK(HC_GenGroup_T_SUIT)
+	dw HC_GenGroup_T_SUIT ; 69 T_SUIT
+	db BANK(HC_GenGroup_T_HOODIE)
+	dw HC_GenGroup_T_HOODIE ; 70 T_HOODIE
+	db BANK(HC_GenGroup_T_BANKER)
+	dw HC_GenGroup_T_BANKER ; 71 T_BANKER
+	db BANK(HC_GenGroup_T_CHOIR)
+	dw HC_GenGroup_T_CHOIR ; 72 T_CHOIR
+	db BANK(HC_GenGroup_T_THUG)
+	dw HC_GenGroup_T_THUG ; 73 T_THUG
+	db BANK(HC_GenGroup_T_PRIEST)
+	dw HC_GenGroup_T_PRIEST ; 74 T_PRIEST
+	db BANK(HC_GenGroup_T_NUN)
+	dw HC_GenGroup_T_NUN ; 75 T_NUN
+	db BANK(HC_GenGroup_T_BEGGAR)
+	dw HC_GenGroup_T_BEGGAR ; 76 T_BEGGAR
+	db BANK(HC_GenGroup_T_ALTARBOY)
+	dw HC_GenGroup_T_ALTARBOY ; 77 T_ALTARBOY
+	db BANK(HC_GenGroup_T_PUNK)
+	dw HC_GenGroup_T_PUNK ; 78 T_PUNK
+	db BANK(HC_GenGroup_T_SISTER)
+	dw HC_GenGroup_T_SISTER ; 79 T_SISTER
+	db BANK(HC_GenGroup_T_DRIFTER)
+	dw HC_GenGroup_T_DRIFTER ; 80 T_DRIFTER
+	db BANK(HC_GenGroup_T_ENFORCER)
+	dw HC_GenGroup_T_ENFORCER ; 81 T_ENFORCER
+	db BANK(HC_GenGroup_T_BUSKER)
+	dw HC_GenGroup_T_BUSKER ; 82 T_BUSKER
+	db BANK(HC_GenGroup_T_ACCOUNTANT)
+	dw HC_GenGroup_T_ACCOUNTANT ; 83 T_ACCOUNTANT
+	db BANK(HC_GenGroup_T_DEACON)
+	dw HC_GenGroup_T_DEACON ; 84 T_DEACON
+	db BANK(HC_GenGroup_T_COPCHIEF)
+	dw HC_GenGroup_T_COPCHIEF ; 85 T_COPCHIEF
+	db BANK(HC_GenGroup_T_MONSIGNOR)
+	dw HC_GenGroup_T_MONSIGNOR ; 86 T_MONSIGNOR
+	db BANK(HC_GenGroup_G_HIKER)
+	dw HC_GenGroup_G_HIKER ; 87 G_HIKER
+	db BANK(HC_GenGroup_G_SCOUT)
+	dw HC_GenGroup_G_SCOUT ; 88 G_SCOUT
+	db BANK(HC_GenGroup_G_SPROUT)
+	dw HC_GenGroup_G_SPROUT ; 89 G_SPROUT
+	db BANK(HC_GenGroup_G_URCHIN)
+	dw HC_GenGroup_G_URCHIN ; 90 G_URCHIN
+	db BANK(HC_GenGroup_G_ANGLER)
+	dw HC_GenGroup_G_ANGLER ; 91 G_ANGLER
+	db BANK(HC_GenGroup_G_FLOWERKID)
+	dw HC_GenGroup_G_FLOWERKID ; 92 G_FLOWERKID
+	db BANK(HC_GenGroup_G_ELDER)
+	dw HC_GenGroup_G_ELDER ; 93 G_ELDER
+	db BANK(HC_GenGroup_G_GRANNY)
+	dw HC_GenGroup_G_GRANNY ; 94 G_GRANNY
+	db BANK(HC_GenGroup_G_SHAMAN)
+	dw HC_GenGroup_G_SHAMAN ; 95 G_SHAMAN
+	db BANK(HC_GenGroup_G_DRUIDESS)
+	dw HC_GenGroup_G_DRUIDESS ; 96 G_DRUIDESS
+	db BANK(HC_GenGroup_G_NATURISTM)
+	dw HC_GenGroup_G_NATURISTM ; 97 G_NATURISTM
+	db BANK(HC_GenGroup_G_NATURISTF)
+	dw HC_GenGroup_G_NATURISTF ; 98 G_NATURISTF
+	db BANK(HC_GenGroup_G_DRUMMER)
+	dw HC_GenGroup_G_DRUMMER ; 99 G_DRUMMER
+	db BANK(HC_GenGroup_G_BARD)
+	dw HC_GenGroup_G_BARD ; 100 G_BARD
+	db BANK(HC_GenGroup_G_FORAGER)
+	dw HC_GenGroup_G_FORAGER ; 101 G_FORAGER
+	db BANK(HC_GenGroup_G_BIRDER)
+	dw HC_GenGroup_G_BIRDER ; 102 G_BIRDER
+	db BANK(HC_GenGroup_G_REEVE)
+	dw HC_GenGroup_G_REEVE ; 103 G_REEVE
+	db BANK(HC_GenGroup_G_ELDRESS)
+	dw HC_GenGroup_G_ELDRESS ; 104 G_ELDRESS
+	db BANK(HC_GenGroup_G_MATRIARCH)
+	dw HC_GenGroup_G_MATRIARCH ; 105 G_MATRIARCH
+	db BANK(HC_GenGroup_U_DOCTOR)
+	dw HC_GenGroup_U_DOCTOR ; 106 U_DOCTOR
+	db BANK(HC_GenGroup_U_BOT)
+	dw HC_GenGroup_U_BOT ; 107 U_BOT
+	db BANK(HC_GenGroup_U_DRONE)
+	dw HC_GenGroup_U_DRONE ; 108 U_DRONE
+	db BANK(HC_GenGroup_U_BOTCOP)
+	dw HC_GenGroup_U_BOTCOP ; 109 U_BOTCOP
+	db BANK(HC_GenGroup_U_EXEC)
+	dw HC_GenGroup_U_EXEC ; 110 U_EXEC
+	db BANK(HC_GenGroup_U_MATCHMAKER)
+	dw HC_GenGroup_U_MATCHMAKER ; 111 U_MATCHMAKER
+	db BANK(HC_GenGroup_U_SERF)
+	dw HC_GenGroup_U_SERF ; 112 U_SERF
+	db BANK(HC_GenGroup_U_GUARD)
+	dw HC_GenGroup_U_GUARD ; 113 U_GUARD
+	db BANK(HC_GenGroup_U_SERFF)
+	dw HC_GenGroup_U_SERFF ; 114 U_SERFF
+	db BANK(HC_GenGroup_U_CASEWORKER)
+	dw HC_GenGroup_U_CASEWORKER ; 115 U_CASEWORKER
+	db BANK(HC_GenGroup_U_WARDBOT)
+	dw HC_GenGroup_U_WARDBOT ; 116 U_WARDBOT
+	db BANK(HC_GenGroup_U_MADDOC)
+	dw HC_GenGroup_U_MADDOC ; 117 U_MADDOC
+	db BANK(HC_GenGroup_U_COURIER)
+	dw HC_GenGroup_U_COURIER ; 118 U_COURIER
+	db BANK(HC_GenGroup_U_MAYOR)
+	dw HC_GenGroup_U_MAYOR ; 119 U_MAYOR
+	db BANK(HC_GenGroup_L_SUNBATHER)
+	dw HC_GenGroup_L_SUNBATHER ; 120 L_SUNBATHER
+	db BANK(HC_GenGroup_L_SWIMMERM)
+	dw HC_GenGroup_L_SWIMMERM ; 121 L_SWIMMERM
+	db BANK(HC_GenGroup_L_SWIMMERF)
+	dw HC_GenGroup_L_SWIMMERF ; 122 L_SWIMMERF
+	db BANK(HC_GenGroup_L_SAILOR)
+	dw HC_GenGroup_L_SAILOR ; 123 L_SAILOR
+	db BANK(HC_GenGroup_L_MANAGER)
+	dw HC_GenGroup_L_MANAGER ; 124 L_MANAGER
+	db BANK(HC_GenGroup_L_TOURISTF)
+	dw HC_GenGroup_L_TOURISTF ; 125 L_TOURISTF
+	db BANK(HC_GenGroup_L_BEACHBUM)
+	dw HC_GenGroup_L_BEACHBUM ; 126 L_BEACHBUM
+	db BANK(HC_GenGroup_L_LIFEGUARD)
+	dw HC_GenGroup_L_LIFEGUARD ; 127 L_LIFEGUARD
+	db BANK(HC_GenGroup_L_FORGOTTEN)
+	dw HC_GenGroup_L_FORGOTTEN ; 128 L_FORGOTTEN
+	db BANK(HC_GenGroup_L_CLINICIAN)
+	dw HC_GenGroup_L_CLINICIAN ; 129 L_CLINICIAN
+	db BANK(HC_GenGroup_L_WAITER)
+	dw HC_GenGroup_L_WAITER ; 130 L_WAITER
+	db BANK(HC_GenGroup_L_TOURISTG)
+	dw HC_GenGroup_L_TOURISTG ; 131 L_TOURISTG
+	db BANK(HC_GenGroup_L_TOURISTM)
+	dw HC_GenGroup_L_TOURISTM ; 132 L_TOURISTM
+	db BANK(HC_GenGroup_L_BELLHOP)
+	dw HC_GenGroup_L_BELLHOP ; 133 L_BELLHOP
+	db BANK(HC_GenGroup_L_LOUNGER)
+	dw HC_GenGroup_L_LOUNGER ; 134 L_LOUNGER
+	db BANK(HC_GenGroup_D_BRUTE)
+	dw HC_GenGroup_D_BRUTE ; 135 D_BRUTE
+	db BANK(HC_GenGroup_D_SHADE)
+	dw HC_GenGroup_D_SHADE ; 136 D_SHADE
+	db BANK(HC_GenGroup_D_HAG)
+	dw HC_GenGroup_D_HAG ; 137 D_HAG
+	db BANK(HC_GenGroup_D_JUDGE)
+	dw HC_GenGroup_D_JUDGE ; 138 D_JUDGE
+	db BANK(HC_GenGroup_D_IMP)
+	dw HC_GenGroup_D_IMP ; 139 D_IMP
+	db BANK(HC_GenGroup_D_FIREEATER)
+	dw HC_GenGroup_D_FIREEATER ; 140 D_FIREEATER
+	db BANK(HC_GenGroup_D_JESTER)
+	dw HC_GenGroup_D_JESTER ; 141 D_JESTER
+	db BANK(HC_GenGroup_D_WARDEN)
+	dw HC_GenGroup_D_WARDEN ; 142 D_WARDEN
+	db BANK(HC_GenGroup_D_IMPF)
+	dw HC_GenGroup_D_IMPF ; 143 D_IMPF
+	db BANK(HC_GenGroup_D_DAMNED)
+	dw HC_GenGroup_D_DAMNED ; 144 D_DAMNED
+	db BANK(HC_GenGroup_D_MAGISTRATE)
+	dw HC_GenGroup_D_MAGISTRATE ; 145 D_MAGISTRATE
+	db BANK(HC_GenGroup_D_CRONE)
+	dw HC_GenGroup_D_CRONE ; 146 D_CRONE
+	db BANK(HC_GenGroup_D_SINNER)
+	dw HC_GenGroup_D_SINNER ; 147 D_SINNER
+	db BANK(HC_GenGroup_D_BRAWLER)
+	dw HC_GenGroup_D_BRAWLER ; 148 D_BRAWLER
+	db BANK(HC_GenGroup_D_IMPB)
+	dw HC_GenGroup_D_IMPB ; 149 D_IMPB
+	db BANK(HC_GenGroup_D_SPECTRE)
+	dw HC_GenGroup_D_SPECTRE ; 150 D_SPECTRE
+	db BANK(HC_GenGroup_D_DEMON)
+	dw HC_GenGroup_D_DEMON ; 151 D_DEMON
+	db BANK(HC_GenGroup_D_FINNEGAN)
+	dw HC_GenGroup_D_FINNEGAN ; 152 D_FINNEGAN
 	assert_table_length NUM_TRAINER_CLASSES

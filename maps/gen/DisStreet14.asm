@@ -27,43 +27,43 @@ DisStreet14AfterScript:
 	end
 
 DisStreet14Trainer0:
-	trainer BURGLAR, 153, EVENT_GEN_DIS_STREET14_0, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_IMP, 141, EVENT_GEN_DIS_STREET14_0, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer1:
-	trainer JUGGLER, 141, EVENT_GEN_DIS_STREET14_1, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_JESTER, 141, EVENT_GEN_DIS_STREET14_1, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer2:
-	trainer SAGE, 166, EVENT_GEN_DIS_STREET14_2, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_JUDGE, 140, EVENT_GEN_DIS_STREET14_2, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer3:
-	trainer PSYCHIC_T, 153, EVENT_GEN_DIS_STREET14_3, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_SHADE, 153, EVENT_GEN_DIS_STREET14_3, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer4:
-	trainer JUGGLER, 142, EVENT_GEN_DIS_STREET14_4, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_JESTER, 142, EVENT_GEN_DIS_STREET14_4, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer5:
-	trainer PSYCHIC_T, 154, EVENT_GEN_DIS_STREET14_5, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_SHADE, 154, EVENT_GEN_DIS_STREET14_5, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer6:
-	trainer GRUNTF, 171, EVENT_GEN_DIS_STREET14_6, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_IMPF, 138, EVENT_GEN_DIS_STREET14_6, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer7:
-	trainer JUGGLER, 143, EVENT_GEN_DIS_STREET14_7, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_JESTER, 143, EVENT_GEN_DIS_STREET14_7, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer8:
-	trainer POKEFANM, 160, EVENT_GEN_DIS_STREET14_8, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_SINNER, 141, EVENT_GEN_DIS_STREET14_8, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer9:
-	trainer BLACKBELT_T, 173, EVENT_GEN_DIS_STREET14_9, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_BRUTE, 145, EVENT_GEN_DIS_STREET14_9, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer10:
-	trainer GRUNTF, 172, EVENT_GEN_DIS_STREET14_10, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_IMPF, 139, EVENT_GEN_DIS_STREET14_10, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer11:
-	trainer SAGE, 167, EVENT_GEN_DIS_STREET14_11, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_JUDGE, 141, EVENT_GEN_DIS_STREET14_11, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14Trainer12:
-	trainer BEAUTY, 175, EVENT_GEN_DIS_STREET14_12, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_CRONE, 130, EVENT_GEN_DIS_STREET14_12, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14_MapEvents:
 	db 0, 0 ; filler
@@ -75,17 +75,17 @@ DisStreet14_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  6, 20, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer0, -1
-	object_event 11, 20, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer1, -1
-	object_event  6, 18, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer2, -1
-	object_event  6, 16, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer3, -1
-	object_event 11, 16, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer4, -1
-	object_event 11, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer5, -1
-	object_event  6, 12, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer6, -1
-	object_event 11, 12, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer7, -1
-	object_event  6, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer8, -1
-	object_event 11,  8, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer9, -1
-	object_event  6,  6, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer10, -1
-	object_event  6,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer11, -1
-	object_event 11,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer12, -1
+	object_event  6, 20, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer0, -1
+	object_event 11, 20, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer1, -1
+	object_event  6, 18, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer2, -1
+	object_event  6, 16, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer3, -1
+	object_event 11, 16, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer4, -1
+	object_event 11, 14, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer5, -1
+	object_event  6, 12, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer6, -1
+	object_event 11, 12, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer7, -1
+	object_event  6, 10, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer8, -1
+	object_event 11,  8, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer9, -1
+	object_event  6,  6, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer10, -1
+	object_event  6,  4, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer11, -1
+	object_event 11,  4, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer12, -1
 

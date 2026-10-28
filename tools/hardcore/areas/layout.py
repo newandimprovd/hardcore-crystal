@@ -224,6 +224,15 @@ def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11,
 
 # ------------------------------------------------------------------ interiors
 
+def hub(g, key, i, default_sprite, default_pal="0"):
+    """(sprite, palette) of an interior NPC: the area's own cast (g.hub, set by the area) or the vanilla default."""
+    h = getattr(g, "hub", {}).get(key)
+    if not h:
+        return default_sprite, default_pal
+    e = h[i] if isinstance(h, list) else h
+    return e
+
+
 def pokecenter_interior(g, name, outer_warp, landmark, texts):
     m = MapDef(g.key, name, 5, 4, "TILESET_POKECENTER", "INDOOR", landmark, "MUSIC_POKEMON_CENTER", pal="PALETTE_DAY")
     m.blocks = bytearray(blk("maps/Pokecenter1F.blk"))
@@ -233,13 +242,15 @@ def pokecenter_interior(g, name, outer_warp, landmark, texts):
     w2.dest = outer_warp
     m.object_consts = ["NURSE"] + [f"NPC{i}" for i in range(len(texts))]
     m.scripts.append(f"{name}NurseScript:\n\tjumpstd PokecenterNurseScript\n")
-    m.obj(3, 1, "SPRITE_NURSE", FACE["DOWN"], f"{name}NurseScript")
+    ns, npal = hub(g, "nurse", 0, "SPRITE_NURSE")
+    m.obj(3, 1, ns, FACE["DOWN"], f"{name}NurseScript", pal=npal)
     spots = [(2, 3, "SPRITE_FISHER", "UP"), (8, 6, "SPRITE_GENTLEMAN", "UP"), (1, 6, "SPRITE_TEACHER", "RIGHT")]
     for i, t in enumerate(texts):
         x, y, sp, f = spots[i]
+        sp, pal = hub(g, "pc", i, sp, "PAL_NPC_RED" if i != 1 else "0")
         m.scripts.append(f"{name}Npc{i}Script:\n\tjumptextfaceplayer {name}Npc{i}Text\n")
         m.scripts.append(t.emit(f"{name}Npc{i}Text"))
-        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal="PAL_NPC_RED" if i != 1 else "0")
+        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal=pal)
     g.add(m)
     return m
 
@@ -253,13 +264,15 @@ def mart_interior(g, name, outer_warp, landmark, mart_const, texts):
     w2.dest = outer_warp
     m.object_consts = ["CLERK"] + [f"NPC{i}" for i in range(len(texts))]
     m.scripts.append(f"{name}ClerkScript:\n\topentext\n\tpokemart MARTTYPE_STANDARD, MART_{mart_const}\n\tclosetext\n\tend\n")
-    m.obj(1, 3, "SPRITE_CLERK", FACE["RIGHT"], f"{name}ClerkScript")
+    cs, cpal = hub(g, "clerk", 0, "SPRITE_CLERK")
+    m.obj(1, 3, cs, FACE["RIGHT"], f"{name}ClerkScript", pal=cpal)
     spots = [(7, 6, "SPRITE_COOLTRAINER_M", "LEFT"), (2, 5, "SPRITE_YOUNGSTER", "DOWN")]
     for i, t in enumerate(texts):
         x, y, sp, f = spots[i]
+        sp, pal = hub(g, "mart", i, sp, "PAL_NPC_RED" if i else "0")
         m.scripts.append(f"{name}Npc{i}Script:\n\tjumptextfaceplayer {name}Npc{i}Text\n")
         m.scripts.append(t.emit(f"{name}Npc{i}Text"))
-        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal="PAL_NPC_RED" if i else "0")
+        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal=pal)
     g.add(m)
     return m
 
@@ -275,9 +288,10 @@ def house_interior(g, name, outer_warp, landmark, texts, music="MUSIC_VIOLET_CIT
     m.object_consts = [f"NPC{i}" for i in range(len(texts))]
     for i, t in enumerate(texts):
         x, y, sp, f = spots[i]
+        sp, pal = hub(g, "house", i, sp, "PAL_NPC_GREEN" if i else "0")
         m.scripts.append(f"{name}Npc{i}Script:\n\tjumptextfaceplayer {name}Npc{i}Text\n")
         m.scripts.append(t.emit(f"{name}Npc{i}Text"))
-        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal="PAL_NPC_GREEN" if i else "0")
+        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal=pal)
     g.add(m)
     return m
 
@@ -301,9 +315,10 @@ def gatehouse(g, name, lane_door, plaza_door, landmark, music, texts=()):
     spots = [(0, 4, "SPRITE_OFFICER", "RIGHT"), (6, 4, "SPRITE_YOUNGSTER", "LEFT")]
     for i, t in enumerate(texts):
         x, y, sp, f = spots[i]
+        sp, pal = hub(g, "gate", i, sp, "PAL_NPC_RED")
         m.scripts.append(f"{name}Npc{i}Script:\n\tjumptextfaceplayer {name}Npc{i}Text\n")
         m.scripts.append(t.emit(f"{name}Npc{i}Text"))
-        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal="PAL_NPC_RED")
+        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal=pal)
     g.add(m)
     return m
 

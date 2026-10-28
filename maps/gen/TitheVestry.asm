@@ -7,7 +7,7 @@ TitheVestry_MapScripts:
 	def_callbacks
 
 TitheVestryBossScript:
-	trainer SAGE, 128, EVENT_GEN_TITHE_VESTRY_BOSS, TitheVestryBossSeenText, TitheVestryBossBeatenText, 0, TitheVestryBossAfterScript
+	trainer T_DEACON, 128, EVENT_GEN_TITHE_VESTRY_BOSS, TitheVestryBossSeenText, TitheVestryBossBeatenText, 0, TitheVestryBossAfterScript
 
 TitheVestryBossAfterScript:
 	endifjustbattled
@@ -63,6 +63,6 @@ TitheVestry_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheVestryBossScript, -1
+	object_event  2, 10, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheVestryBossScript, -1
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheVestryItemBall, EVENT_GEN_TITHE_VESTRY_ITEM
 

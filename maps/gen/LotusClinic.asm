@@ -7,7 +7,7 @@ LotusClinic_MapScripts:
 	def_callbacks
 
 LotusClinicBossScript:
-	trainer SCIENTIST, 155, EVENT_GEN_LOTUS_CLINIC_BOSS, LotusClinicBossSeenText, LotusClinicBossBeatenText, 0, LotusClinicBossAfterScript
+	trainer L_CLINICIAN, 128, EVENT_GEN_LOTUS_CLINIC_BOSS, LotusClinicBossSeenText, LotusClinicBossBeatenText, 0, LotusClinicBossAfterScript
 
 LotusClinicBossAfterScript:
 	endifjustbattled
@@ -60,6 +60,6 @@ LotusClinic_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2, 10, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusClinicBossScript, -1
+	object_event  2, 10, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusClinicBossScript, -1
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusClinicItemBall, EVENT_GEN_LOTUS_CLINIC_ITEM
 

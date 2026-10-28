@@ -27,43 +27,43 @@ LotusStreet10AfterScript:
 	end
 
 LotusStreet10Trainer0:
-	trainer SWIMMERF, 150, EVENT_GEN_LOTUS_STREET10_0, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SWIMMERF, 143, EVENT_GEN_LOTUS_STREET10_0, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer1:
-	trainer SAGE, 149, EVENT_GEN_LOTUS_STREET10_1, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_FORGOTTEN, 131, EVENT_GEN_LOTUS_STREET10_1, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer2:
-	trainer SWIMMERM, 147, EVENT_GEN_LOTUS_STREET10_2, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SWIMMERM, 138, EVENT_GEN_LOTUS_STREET10_2, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer3:
-	trainer COOLTRAINERM, 158, EVENT_GEN_LOTUS_STREET10_3, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_TOURISTM, 134, EVENT_GEN_LOTUS_STREET10_3, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer4:
-	trainer SAGE, 150, EVENT_GEN_LOTUS_STREET10_4, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_FORGOTTEN, 132, EVENT_GEN_LOTUS_STREET10_4, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer5:
-	trainer FISHER, 147, EVENT_GEN_LOTUS_STREET10_5, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_LIFEGUARD, 135, EVENT_GEN_LOTUS_STREET10_5, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer6:
-	trainer GRUNTM, 180, EVENT_GEN_LOTUS_STREET10_6, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_LOUNGER, 138, EVENT_GEN_LOTUS_STREET10_6, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer7:
-	trainer COOLTRAINERM, 159, EVENT_GEN_LOTUS_STREET10_7, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_TOURISTM, 135, EVENT_GEN_LOTUS_STREET10_7, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer8:
-	trainer LASS, 145, EVENT_GEN_LOTUS_STREET10_8, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_TOURISTF, 133, EVENT_GEN_LOTUS_STREET10_8, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer9:
-	trainer GRUNTM, 181, EVENT_GEN_LOTUS_STREET10_9, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_LOUNGER, 139, EVENT_GEN_LOTUS_STREET10_9, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer10:
-	trainer GRUNTM, 182, EVENT_GEN_LOTUS_STREET10_10, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_LOUNGER, 140, EVENT_GEN_LOTUS_STREET10_10, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer11:
-	trainer COOLTRAINERM, 160, EVENT_GEN_LOTUS_STREET10_11, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_TOURISTM, 136, EVENT_GEN_LOTUS_STREET10_11, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer12:
-	trainer BEAUTY, 165, EVENT_GEN_LOTUS_STREET10_12, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SUNBATHER, 145, EVENT_GEN_LOTUS_STREET10_12, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10_MapEvents:
 	db 0, 0 ; filler
@@ -75,17 +75,17 @@ LotusStreet10_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  6, 20, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer0, -1
-	object_event 11, 20, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer1, -1
-	object_event  6, 18, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer2, -1
-	object_event 11, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer3, -1
-	object_event  6, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer4, -1
-	object_event  6, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer5, -1
-	object_event 11, 12, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer6, -1
-	object_event  6, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer7, -1
-	object_event 11, 10, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer8, -1
-	object_event 11,  8, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer9, -1
-	object_event  6,  6, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer10, -1
-	object_event  6,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer11, -1
-	object_event 11,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer12, -1
+	object_event  6, 20, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer0, -1
+	object_event 11, 20, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer1, -1
+	object_event  6, 18, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer2, -1
+	object_event 11, 16, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer3, -1
+	object_event  6, 14, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer4, -1
+	object_event  6, 12, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer5, -1
+	object_event 11, 12, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer6, -1
+	object_event  6, 10, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer7, -1
+	object_event 11, 10, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer8, -1
+	object_event 11,  8, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer9, -1
+	object_event  6,  6, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer10, -1
+	object_event  6,  4, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer11, -1
+	object_event 11,  4, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer12, -1
 

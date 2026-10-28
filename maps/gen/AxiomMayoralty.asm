@@ -7,7 +7,7 @@ AxiomMayoralty_MapScripts:
 	def_callbacks
 
 AxiomMayoraltyBossScript:
-	trainer EXECUTIVEM, 128, EVENT_GEN_AXIOM_MAYORALTY_BOSS, AxiomMayoraltyBossSeenText, AxiomMayoraltyBossBeatenText, 0, AxiomMayoraltyBossAfterScript
+	trainer U_MAYOR, 128, EVENT_GEN_AXIOM_MAYORALTY_BOSS, AxiomMayoraltyBossSeenText, AxiomMayoraltyBossBeatenText, 0, AxiomMayoraltyBossAfterScript
 
 AxiomMayoraltyBossAfterScript:
 	endifjustbattled
@@ -63,5 +63,5 @@ AxiomMayoralty_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomMayoraltyBossScript, -1
+	object_event  2,  9, SPRITE_HC_BOT_MAYOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomMayoraltyBossScript, -1
 

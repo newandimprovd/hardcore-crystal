@@ -43,6 +43,6 @@ GroveHouse5_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GroveHouse5Npc0Script, -1
-	object_event  5,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse5Npc1Script, -1
+	object_event  2,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse5Npc0Script, -1
+	object_event  5,  5, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse5Npc1Script, -1
 

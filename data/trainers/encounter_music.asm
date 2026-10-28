@@ -71,7 +71,7 @@ TrainerEncounterMusic::
 	db MUSIC_HIKER_ENCOUNTER       ; officer
 	db MUSIC_ROCKET_ENCOUNTER      ; gruntf
 	db MUSIC_HIKER_ENCOUNTER       ; mysticalman
-	assert_table_length NUM_TRAINER_CLASSES + 1
+	assert_table_length T_COP ; HC-ART: only the vanilla classes have a row
 	db MUSIC_HIKER_ENCOUNTER       ; unused
 	db MUSIC_HIKER_ENCOUNTER       ; unused
 	db MUSIC_HIKER_ENCOUNTER       ; unused

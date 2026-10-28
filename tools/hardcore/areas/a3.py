@@ -1,4 +1,5 @@
 """Area 3: THE UNION, a robot state with a robot mayor where humans are filed, ranked and paired by committee."""
+from art.classes import area_mix
 from . import a3_text as T
 from . import kits
 from .builder import AreaCfg, BossSpec, build_area
@@ -13,29 +14,23 @@ class Spec(SpecBase):
     theme = {"ELECTRIC": 3, "STEEL": 3, "PSYCHIC_TYPE": 2, "NORMAL": 2, "POISON": 1.5, "FIGHTING": 1.5, "FIRE": 1,
              "DARK": 1, "GROUND": 1, "FLYING": 1, "ROCK": 0.8, "ICE": 0.7, "BUG": 0.7, "WATER": 0.5, "GHOST": 0.5,
              "DRAGON": 0.4, "GRASS": 0.3, "FAIRY": 0.3}
-    classes = [("SCIENTIST", "SPRITE_SCIENTIST", "PAL_NPC_GREEN", 3),
-               ("GRUNTM", "SPRITE_ROCKET", "PAL_NPC_BLUE", 3),
-               ("GRUNTF", "SPRITE_ROCKET_GIRL", "PAL_NPC_BLUE", 2),
-               ("OFFICER", "SPRITE_OFFICER", "PAL_NPC_BLUE", 3),
-               ("EXECUTIVEM", "SPRITE_GENTLEMAN", "PAL_NPC_RED", 1),
-               ("EXECUTIVEF", "SPRITE_RECEPTIONIST", "PAL_NPC_RED", 1),
-               ("SUPER_NERD", "SPRITE_SUPER_NERD", "PAL_NPC_BLUE", 2),
-               ("COOLTRAINERM", "SPRITE_COOLTRAINER_M", "PAL_NPC_BLUE", 2),
-               ("COOLTRAINERF", "SPRITE_COOLTRAINER_F", "PAL_NPC_BLUE", 2),
-               ("TEACHER", "SPRITE_TEACHER", "PAL_NPC_GREEN", 1),
-               ("BLACKBELT_T", "SPRITE_BLACK_BELT", "PAL_NPC_BROWN", 2),
-               ("GUITARIST", "SPRITE_ROCKER", "PAL_NPC_RED", 1),
-               ("BIKER", "SPRITE_BIKER", "PAL_NPC_GREEN", 1)]
+    hub = dict(nurse=("SPRITE_HC_DOC", "PAL_NPC_PINK"),
+               clerk=("SPRITE_HC_BOT_DRONE", "PAL_NPC_BLUE"),
+               pc=[("SPRITE_HC_SERF", "PAL_NPC_GREEN"), ("SPRITE_HC_BOT_EXEC", "PAL_NPC_BROWN"), ("SPRITE_HC_SERF_F", "PAL_NPC_GREEN")],
+               mart=[("SPRITE_HC_GUARD", "PAL_NPC_BROWN"), ("SPRITE_HC_SERF", "PAL_NPC_GREEN")],
+               house=[("SPRITE_HC_SERF", "PAL_NPC_GREEN"), ("SPRITE_HC_MATCHMAKER", "PAL_NPC_PINK")],
+               gate=[("SPRITE_HC_BOT_COP", "PAL_NPC_BLUE"), ("SPRITE_HC_SERF_F", "PAL_NPC_GREEN")])
+    classes = area_mix("AREA3")
 
 
 def build(w, roster, rng, entry_doors, open_exit=False):
     texts = dict(center=T.CENTER, mart=T.MART, house=T.HOUSE)
     bosses = [
-        BossSpec("AxiomRegistry", "DR AXIOM", "SCIENTIST", "SPRITE_SCIENTIST", "PAL_NPC_GREEN", 51, 5, T.LAB_SEEN,
+        BossSpec("AxiomRegistry", "DR AXIOM", "U_MADDOC", "SPRITE_HC_DOC_MAD", "PAL_NPC_PINK", 51, 5, T.LAB_SEEN,
                  T.LAB_BEATEN, T.LAB_AFTER, template="karen", item="FLASHLIGHT"),
-        BossSpec("AxiomArmory", "IRONWARDEN", "OFFICER", "SPRITE_OFFICER", "PAL_NPC_RED", 57, 5, T.ARMORY_SEEN,
+        BossSpec("AxiomArmory", "IRONWARDEN", "U_WARDBOT", "SPRITE_HC_BOT_WARDEN", "PAL_NPC_BROWN", 57, 5, T.ARMORY_SEEN,
                  T.ARMORY_BEATEN, T.ARMORY_AFTER, template="will", item="SLEDGEHAMMER"),
-        BossSpec("AxiomMayoralty", "THE MAYOR", "EXECUTIVEM", "SPRITE_ROCKET", "PAL_NPC_BLUE", 64, 6, T.MAYORALTY_SEEN,
+        BossSpec("AxiomMayoralty", "THE MAYOR", "U_MAYOR", "SPRITE_HC_BOT_MAYOR", "PAL_NPC_BROWN", 64, 6, T.MAYORALTY_SEEN,
                  T.MAYORALTY_BEATEN, T.MAYORALTY_AFTER, template="bruno", landmark="LANDMARK_AXIOM_MAYORALTY",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)]
     cfg = AreaCfg("AREA3", "Axiom", Spec(), kits.axiom(), "PALETTE_DAY",

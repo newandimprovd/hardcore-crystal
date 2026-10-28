@@ -1266,6 +1266,7 @@ LoadMapPals:
 	ld bc, 8 palettes
 	ld a, BANK(wOBPals1)
 	call FarCopyWRAM
+	farcall HC_LoadAreaObjPalette ; HC-ART: NPC colorways of the generated areas
 
 	ld a, [wEnvironment]
 	cp TOWN

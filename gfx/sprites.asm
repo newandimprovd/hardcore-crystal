@@ -107,3 +107,5 @@ EnteiSpriteGFX::               INCBIN "gfx/sprites/entei.2bpp"
 RaikouSpriteGFX::              INCBIN "gfx/sprites/raikou.2bpp"
 StandingYoungsterSpriteGFX::   INCBIN "gfx/sprites/standing_youngster.2bpp"
 CorpseSpriteGFX::              INCBIN "gfx/sprites/corpse.2bpp"
+
+INCLUDE "gfx/hc_sprites.asm" ; HC-ART

@@ -105,10 +105,11 @@
 	const SPRITE_RAIKOU ; 65
 	const SPRITE_STANDING_YOUNGSTER ; 66
 	const SPRITE_CORPSE ; 67
+INCLUDE "constants/hc_sprite_constants.asm" ; HC-ART
 DEF NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
-	const_next $80
+	const_next $b0 ; HC-ART
 DEF SPRITE_POKEMON EQU const_value
 	const SPRITE_UNOWN ; 80
 	const SPRITE_GEODUDE ; 81

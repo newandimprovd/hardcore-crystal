@@ -2836,6 +2836,11 @@ PlayTrainerEncounterMusic::
 	; play new song
 	call MaxVolume
 	pop de
+	ld a, e ; HC-ART: the generated trainer classes share one encounter jingle (the table is not extended)
+	cp T_COP ; HC-ART
+	jr c, .vanilla_class ; HC-ART
+	ld e, OFFICER ; HC-ART
+.vanilla_class ; HC-ART
 	ld d, $00
 	ld hl, TrainerEncounterMusic
 	add hl, de

@@ -7,7 +7,7 @@ DisGatehouse_MapScripts:
 	def_callbacks
 
 DisGatehouseBossScript:
-	trainer SAGE, 153, EVENT_GEN_DIS_GATEHOUSE_BOSS, DisGatehouseBossSeenText, DisGatehouseBossBeatenText, 0, DisGatehouseBossAfterScript
+	trainer D_WARDEN, 128, EVENT_GEN_DIS_GATEHOUSE_BOSS, DisGatehouseBossSeenText, DisGatehouseBossBeatenText, 0, DisGatehouseBossAfterScript
 
 DisGatehouseBossAfterScript:
 	endifjustbattled
@@ -64,6 +64,6 @@ DisGatehouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisGatehouseBossScript, -1
+	object_event  2, 10, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisGatehouseBossScript, -1
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisGatehouseItemBall, EVENT_GEN_DIS_GATEHOUSE_ITEM
 

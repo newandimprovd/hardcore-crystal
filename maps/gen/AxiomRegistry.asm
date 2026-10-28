@@ -7,7 +7,7 @@ AxiomRegistry_MapScripts:
 	def_callbacks
 
 AxiomRegistryBossScript:
-	trainer SCIENTIST, 133, EVENT_GEN_AXIOM_REGISTRY_BOSS, AxiomRegistryBossSeenText, AxiomRegistryBossBeatenText, 0, AxiomRegistryBossAfterScript
+	trainer U_MADDOC, 128, EVENT_GEN_AXIOM_REGISTRY_BOSS, AxiomRegistryBossSeenText, AxiomRegistryBossBeatenText, 0, AxiomRegistryBossAfterScript
 
 AxiomRegistryBossAfterScript:
 	endifjustbattled
@@ -65,6 +65,6 @@ AxiomRegistry_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomRegistryBossScript, -1
+	object_event  2, 10, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomRegistryBossScript, -1
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomRegistryItemBall, EVENT_GEN_AXIOM_REGISTRY_ITEM
 

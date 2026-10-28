@@ -36,6 +36,6 @@ LotusMart1_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LotusMart1ClerkScript, -1
-	object_event  7,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LotusMart1Npc0Script, -1
+	object_event  1,  3, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusMart1ClerkScript, -1
+	object_event  7,  6, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusMart1Npc0Script, -1
 

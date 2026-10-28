@@ -50,5 +50,30 @@ HC_LoadAreaPalette::
 	and a
 	ret
 
+HC_LoadAreaObjPalette::
+; Overwrites the 8 object palettes of the map with the area's NPC colorways (always the day set, like the background).
+	ld a, [wMapGroup]
+	sub MAPGROUP_AREA1
+	ret c
+	cp NUM_AREAS
+	ret nc
+	ld l, a
+	ld h, 0
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl ; * 64 bytes (8 palettes)
+	ld de, HC_AreaOBPals
+	add hl, de
+	ld a, BANK(wOBPals1)
+	ld de, wOBPals1
+	ld bc, 8 palettes
+	jp FarCopyWRAM
+
 HC_AreaBGPals:
 INCLUDE "gfx/tilesets/area_bg.pal"
+
+HC_AreaOBPals:
+INCLUDE "gfx/overworld/area_npc.pal"

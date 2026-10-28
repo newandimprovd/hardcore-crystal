@@ -124,6 +124,7 @@ def build_area(w, roster, rng, cfg, entry_doors):
     from .populate import populate
     spec = cfg.spec
     g = w.group(cfg.key, spec.sprites)
+    g.hub = getattr(spec, "hub", {})
     w.pools[spec.pool] = dict(seen=spec.T.SEEN, beaten=spec.T.BEATEN, after=spec.T.AFTER)
     lms = []
     for const, x, y, name in cfg.landmarks:

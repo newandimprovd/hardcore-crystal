@@ -2,5 +2,5 @@
 
 HC_StoryBosses:
 	db RIVAL2, 128, 2
-	db MYSTICALMAN, 129, 3
+	db D_FINNEGAN, 128, 3
 	db -1

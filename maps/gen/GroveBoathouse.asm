@@ -7,7 +7,7 @@ GroveBoathouse_MapScripts:
 	def_callbacks
 
 GroveBoathouseBossScript:
-	trainer FISHER, 128, EVENT_GEN_GROVE_BOATHOUSE_BOSS, GroveBoathouseBossSeenText, GroveBoathouseBossBeatenText, 0, GroveBoathouseBossAfterScript
+	trainer G_REEVE, 128, EVENT_GEN_GROVE_BOATHOUSE_BOSS, GroveBoathouseBossSeenText, GroveBoathouseBossBeatenText, 0, GroveBoathouseBossAfterScript
 
 GroveBoathouseBossAfterScript:
 	endifjustbattled
@@ -61,6 +61,6 @@ GroveBoathouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveBoathouseBossScript, -1
+	object_event  2, 10, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveBoathouseBossScript, -1
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveBoathouseItemBall, EVENT_GEN_GROVE_BOATHOUSE_ITEM
 

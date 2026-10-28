@@ -34,6 +34,6 @@ DisPokecenter1_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DisPokecenter1NurseScript, -1
-	object_event  2,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPokecenter1Npc0Script, -1
+	object_event  3,  1, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPokecenter1NurseScript, -1
+	object_event  2,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPokecenter1Npc0Script, -1
 
