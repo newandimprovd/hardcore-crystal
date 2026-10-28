@@ -37,6 +37,10 @@
 	const TILESET_OMANYTE_WORD_ROOM    ; 23
 	const TILESET_AERODACTYL_WORD_ROOM ; 24
 	const TILESET_TITHE ; HC-ART
+	const TILESET_GROVE ; HC-ART
+	const TILESET_AXIOM ; HC-ART
+	const TILESET_LOTUS ; HC-ART
+	const TILESET_DIS ; HC-ART
 DEF NUM_TILESETS EQU const_value - 1
 
 ; wTileset struct size

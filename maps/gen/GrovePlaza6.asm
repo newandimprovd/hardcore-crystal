@@ -10,9 +10,9 @@ GrovePlaza6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  3, GROVE_POKECENTER6, 1
-	warp_event 13,  3, GROVE_MART6, 1
-	warp_event 17,  3, GROVE_HOUSE6, 1
+	warp_event  2,  3, GROVE_POKECENTER6, 1
+	warp_event 12,  3, GROVE_MART6, 1
+	warp_event 16,  3, GROVE_HOUSE6, 1
 
 	def_coord_events
 

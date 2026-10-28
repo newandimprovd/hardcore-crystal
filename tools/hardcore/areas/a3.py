@@ -38,7 +38,7 @@ def build(w, roster, rng, entry_doors, open_exit=False):
         BossSpec("AxiomMayoralty", "THE MAYOR", "EXECUTIVEM", "SPRITE_ROCKET", "PAL_NPC_BLUE", 64, 6, T.MAYORALTY_SEEN,
                  T.MAYORALTY_BEATEN, T.MAYORALTY_AFTER, template="bruno", landmark="LANDMARK_AXIOM_MAYORALTY",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)]
-    cfg = AreaCfg("AREA3", "Axiom", Spec(), kits.modern(), "PALETTE_DAY",
+    cfg = AreaCfg("AREA3", "Axiom", Spec(), kits.axiom(), "PALETTE_DAY",
                   [("AXIOM_OUTSKIRTS", 46, 54, "AXIOM<BSP>OUTSKIRTS"), ("AXIOM_CENTRAL", 42, 50, "AXIOM<BSP>CENTRAL"),
                    ("AXIOM_MAYORALTY", 38, 46, "THE<BSP>MAYORALTY")],
                   "MUSIC_GOLDENROD_CITY", texts, TIERS, bosses, [None, "dark", "slab"], [3, 2, 3], "AxiomGate",

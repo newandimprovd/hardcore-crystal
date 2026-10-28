@@ -10,10 +10,10 @@ LotusPlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  3, LOTUS_POKECENTER1, 1
-	warp_event 13,  3, LOTUS_MART1, 1
-	warp_event 17,  3, LOTUS_HOUSE1, 1
-	warp_event 21,  3, LOTUS_GATE, 1
+	warp_event  2,  3, LOTUS_POKECENTER1, 1
+	warp_event 12,  3, LOTUS_MART1, 1
+	warp_event 16,  3, LOTUS_HOUSE1, 1
+	warp_event 20,  3, LOTUS_GATE, 1
 
 	def_coord_events
 

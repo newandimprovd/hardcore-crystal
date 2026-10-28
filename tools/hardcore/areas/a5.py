@@ -41,7 +41,7 @@ def build(w, roster, rng, entry_doors):
         BossSpec("JudeccaCentre", "FINNEGAN", "MYSTICALMAN", "SPRITE_GRAMPS", "PAL_NPC_BLUE", 95, 6, T.SLEEPER_SEEN,
                  T.SLEEPER_BEATEN, T.SLEEPER_AFTER, template="bruno", landmark="LANDMARK_DIS_JUDECCA",
                  music="MUSIC_ROCKET_HIDEOUT", story=3)]
-    cfg = AreaCfg("AREA5", "Dis", Spec(), kits.kanto(), "PALETTE_DAY",
+    cfg = AreaCfg("AREA5", "Dis", Spec(), kits.dis(), "PALETTE_DAY",
                   [("DIS_CITY", 24, 50, "THE<BSP>CITY<BSP>OF<BSP>DIS"), ("DIS_COCYTUS", 20, 46, "LAKE<BSP>COCYTUS"),
                    ("DIS_JUDECCA", 16, 42, "JUDECCA")],
                   "MUSIC_ROCKET_HIDEOUT", texts, TIERS, bosses, [None, None, None], [3, 2, 3], "DisGate",

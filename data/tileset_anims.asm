@@ -229,6 +229,10 @@ UnusedTilesetRocketHouseAnim: ; unreferenced
 
 TilesetBattleTowerOutsideAnim:
 TilesetTitheAnim: ; HC-ART
+TilesetGroveAnim: ; HC-ART
+TilesetAxiomAnim: ; HC-ART
+TilesetLotusAnim: ; HC-ART
+TilesetDisAnim: ; HC-ART
 TilesetHouseAnim:
 TilesetPlayersHouseAnim:
 TilesetPokecenterAnim:

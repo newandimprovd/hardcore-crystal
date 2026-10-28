@@ -51,4 +51,8 @@ Tilesets::
 	tileset TilesetOmanyteWordRoom
 	tileset TilesetAerodactylWordRoom
 	tileset TilesetTithe ; HC-ART
+	tileset TilesetGrove ; HC-ART
+	tileset TilesetAxiom ; HC-ART
+	tileset TilesetLotus ; HC-ART
+	tileset TilesetDis ; HC-ART
 	assert_table_length NUM_TILESETS + 1

@@ -43,7 +43,7 @@ def build(w, roster, rng, entry_doors, open_exit=False):
         BossSpec("LotusMansion", "RIVAL", "RIVAL2", "SPRITE_RIVAL", "PAL_NPC_RED", 80, 6, T.MANSION_SEEN,
                  T.MANSION_BEATEN, T.MANSION_AFTER, template="bruno", landmark="LANDMARK_LOTUS_MANSION",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit, story=2)]
-    cfg = AreaCfg("AREA4", "Lotus", Spec(), kits.kanto(), "PALETTE_DAY",
+    cfg = AreaCfg("AREA4", "Lotus", Spec(), kits.lotus(), "PALETTE_DAY",
                   [("LOTUS_COAST", 36, 62, "LOTUS<BSP>COAST"), ("LOTUS_BOARDWALK", 32, 58, "THE<BSP>BOARDWALK"),
                    ("LOTUS_MANSION", 28, 54, "THE<BSP>HILLTOP")],
                   "MUSIC_VERMILION_CITY", texts, TIERS, bosses, [None, "hook", "rubble"], [3, 2, 3], "LotusGate",

@@ -27,46 +27,46 @@ AxiomStreet2AfterScript:
 	end
 
 AxiomStreet2Trainer0:
-	trainer OFFICER, 171, EVENT_GEN_AXIOM_STREET2_0, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer EXECUTIVEM, 129, EVENT_GEN_AXIOM_STREET2_0, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer1:
-	trainer GRUNTM, 147, EVENT_GEN_AXIOM_STREET2_1, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer GRUNTF, 139, EVENT_GEN_AXIOM_STREET2_1, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer2:
-	trainer BLACKBELT_T, 142, EVENT_GEN_AXIOM_STREET2_2, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer EXECUTIVEM, 130, EVENT_GEN_AXIOM_STREET2_2, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer3:
-	trainer GRUNTF, 138, EVENT_GEN_AXIOM_STREET2_3, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer OFFICER, 169, EVENT_GEN_AXIOM_STREET2_3, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer4:
-	trainer SUPER_NERD, 143, EVENT_GEN_AXIOM_STREET2_4, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer GRUNTF, 140, EVENT_GEN_AXIOM_STREET2_4, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer5:
-	trainer GUITARIST, 145, EVENT_GEN_AXIOM_STREET2_5, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer GUITARIST, 146, EVENT_GEN_AXIOM_STREET2_5, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer6:
-	trainer BIKER, 138, EVENT_GEN_AXIOM_STREET2_6, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer SCIENTIST, 135, EVENT_GEN_AXIOM_STREET2_6, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer7:
-	trainer EXECUTIVEF, 128, EVENT_GEN_AXIOM_STREET2_7, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer GRUNTF, 141, EVENT_GEN_AXIOM_STREET2_7, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer8:
-	trainer GRUNTM, 148, EVENT_GEN_AXIOM_STREET2_8, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer EXECUTIVEF, 129, EVENT_GEN_AXIOM_STREET2_8, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer9:
-	trainer EXECUTIVEF, 129, EVENT_GEN_AXIOM_STREET2_9, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer OFFICER, 170, EVENT_GEN_AXIOM_STREET2_9, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer10:
-	trainer BIKER, 139, EVENT_GEN_AXIOM_STREET2_10, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer COOLTRAINERF, 148, EVENT_GEN_AXIOM_STREET2_10, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer11:
-	trainer COOLTRAINERF, 147, EVENT_GEN_AXIOM_STREET2_11, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer GRUNTM, 147, EVENT_GEN_AXIOM_STREET2_11, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer12:
-	trainer SCIENTIST, 136, EVENT_GEN_AXIOM_STREET2_12, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer COOLTRAINERF, 149, EVENT_GEN_AXIOM_STREET2_12, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2Trainer13:
-	trainer SUPER_NERD, 144, EVENT_GEN_AXIOM_STREET2_13, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer COOLTRAINERF, 150, EVENT_GEN_AXIOM_STREET2_13, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2_MapEvents:
 	db 0, 0 ; filler
@@ -78,18 +78,18 @@ AxiomStreet2_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  6, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer0, -1
-	object_event 11, 22, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer1, -1
-	object_event  6, 20, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer2, -1
-	object_event 11, 20, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer3, -1
-	object_event  6, 18, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer4, -1
-	object_event  6, 16, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer5, -1
-	object_event 11, 16, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer6, -1
-	object_event 11, 14, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer7, -1
-	object_event  6, 12, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer8, -1
-	object_event 11, 10, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer9, -1
-	object_event  6,  8, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer10, -1
-	object_event 11,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer11, -1
-	object_event  6,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer12, -1
-	object_event 11,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer13, -1
+	object_event  6, 22, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer0, -1
+	object_event  6, 20, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer1, -1
+	object_event 11, 20, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer2, -1
+	object_event 11, 18, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer3, -1
+	object_event  6, 16, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer4, -1
+	object_event 11, 16, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer5, -1
+	object_event  6, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer6, -1
+	object_event 11, 12, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer7, -1
+	object_event  6, 10, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer8, -1
+	object_event  6,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer9, -1
+	object_event 11,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer10, -1
+	object_event 11,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer11, -1
+	object_event  6,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer12, -1
+	object_event 11,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer13, -1
 

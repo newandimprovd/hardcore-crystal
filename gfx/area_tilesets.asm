@@ -10,3 +10,39 @@ INCBIN "data/tilesets/tithe_metatiles.bin"
 
 TilesetTitheColl::
 INCLUDE "data/tilesets/tithe_collision.asm"
+
+TilesetGroveGFX::
+INCBIN "gfx/tilesets/grove.2bpp.lz"
+
+TilesetGroveMeta::
+INCBIN "data/tilesets/grove_metatiles.bin"
+
+TilesetGroveColl::
+INCLUDE "data/tilesets/grove_collision.asm"
+
+TilesetAxiomGFX::
+INCBIN "gfx/tilesets/axiom.2bpp.lz"
+
+TilesetAxiomMeta::
+INCBIN "data/tilesets/axiom_metatiles.bin"
+
+TilesetAxiomColl::
+INCLUDE "data/tilesets/axiom_collision.asm"
+
+TilesetLotusGFX::
+INCBIN "gfx/tilesets/lotus.2bpp.lz"
+
+TilesetLotusMeta::
+INCBIN "data/tilesets/lotus_metatiles.bin"
+
+TilesetLotusColl::
+INCLUDE "data/tilesets/lotus_collision.asm"
+
+TilesetDisGFX::
+INCBIN "gfx/tilesets/dis.2bpp.lz"
+
+TilesetDisMeta::
+INCBIN "data/tilesets/dis_metatiles.bin"
+
+TilesetDisColl::
+INCLUDE "data/tilesets/dis_collision.asm"

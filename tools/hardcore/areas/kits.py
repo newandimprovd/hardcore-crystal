@@ -112,3 +112,23 @@ def _art_kit(tileset, mod, weights):
 def tithe():
     from art import tithe as mod
     return _art_kit("TILESET_TITHE", mod, dict(floor=[("floor", 4), ("floor_rare", 1)]))
+
+
+def grove():
+    from art import grove as mod
+    return _art_kit("TILESET_GROVE", mod, dict(floor=[("floor", 8), ("floor_rare", 1)]))
+
+
+def axiom():
+    from art import axiom as mod
+    return _art_kit("TILESET_AXIOM", mod, dict(floor=[("floor", 8), ("floor_rare", 1)]))
+
+
+def lotus():
+    from art import lotus as mod
+    return _art_kit("TILESET_LOTUS", mod, dict(floor=[("floor", 8), ("floor_rare", 1)]))
+
+
+def dis():
+    from art import disart as mod
+    return _art_kit("TILESET_DIS", mod, dict(floor=[("floor", 8), ("floor_rare", 1)]))

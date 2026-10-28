@@ -118,3 +118,15 @@ endr
 TilesetTithePalMap:
 INCLUDE "gfx/tilesets/tithe_palette_map.asm"
 
+TilesetGrovePalMap:
+INCLUDE "gfx/tilesets/grove_palette_map.asm"
+
+TilesetAxiomPalMap:
+INCLUDE "gfx/tilesets/axiom_palette_map.asm"
+
+TilesetLotusPalMap:
+INCLUDE "gfx/tilesets/lotus_palette_map.asm"
+
+TilesetDisPalMap:
+INCLUDE "gfx/tilesets/dis_palette_map.asm"
+
