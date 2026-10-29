@@ -463,6 +463,7 @@ class P:
     house_door = staticmethod(lambda: door_block(BROWN))
     house_side = staticmethod(house_side)
     rift = staticmethod(rift)
+    grass = staticmethod(lambda: __import__("grass").grass_pair("dis"))
 
 
 def build():

@@ -507,6 +507,7 @@ class P:
     house_door = staticmethod(house_door)
     house_side = staticmethod(house_side)
     rift = staticmethod(rift)
+    grass = staticmethod(lambda: __import__("grass").grass_pair("grove"))
 
 
 def build():

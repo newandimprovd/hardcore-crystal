@@ -10,7 +10,7 @@ import random
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from areas import a1, a2, a3, a4, a5, emit  # noqa: E402
+from areas import a1, a2, a3, a4, a5, emit, wild  # noqa: E402
 from areas.model import ForeignWarp  # noqa: E402
 from areas.model import World, read, write  # noqa: E402
 from areas.party import Roster  # noqa: E402
@@ -54,6 +54,7 @@ def main():
     # Area 5 is entered through the portal in the New Bark Town crater (warp 5 of that map, see maps/NewBarkTown.asm)
     a5.build(w, roster, rng, [ForeignWarp("NEW_BARK_TOWN", 5)])
     emit.patch_tree()
+    wild.build(w, roster)
     sizes = emit.emit_all(w)
     emit_pools(w)
     patch_extra()

@@ -263,3 +263,11 @@ def patch_tree():
     _patch("data/items/marts.asm", "\tassert_table_length NUM_MARTS",
            f'\tINCLUDE "data/items/area_mart_pointers.asm" {MARK}\n')
     _append("data/items/marts.asm", f'INCLUDE "data/items/area_marts.asm" {MARK}\n')
+    # The areas' landmarks lie above KANTO_LANDMARK, so wild data is looked up in KantoGrassWildMons.  Vanilla Kanto is
+    # unreachable here and its table would not leave room in the bank: the table is generated instead (areas/wild.py).
+    p = "engine/overworld/wildmons.asm"
+    s = read(p)
+    if "gen_wild_grass" not in s:
+        old = 'INCLUDE "data/wild/kanto_grass.asm"'
+        assert old in s
+        write(p, s.replace(old, f'INCLUDE "data/hardcore/gen_wild_grass.asm" {MARK}'))

@@ -14,6 +14,7 @@ DOORISH = {0x71, 0x75, 0x79, 0x7d, 0x7a, 0x7b, 0x73, 0x74}  # arrival here steps
 WARPTILE = set(range(0x70, 0x80)) - {0x7c}
 CARPET = {0x70: "down", 0x76: "left", 0x78: "up", 0x7e: "right"}  # directional warp carpets
 WALKABLE = {0x00, 0x10, 0x14, 0x18, 0x48, 0x49, 0x4c}  # floor and grass
+GRASS = {0x10, 0x14, 0x18}
 
 
 def camel_to_const(name):
@@ -199,15 +200,28 @@ class World:
             return None
         return (name, nx, ny), "move"
 
+    avoid_grass = False
+
     def walkable(self, mp, x, y, ignore_obj=False):
         c = mp.cell(x, y)
         if c not in WALKABLE and c not in WARPTILE:
             return False
+        if self.avoid_grass and c in GRASS:
+            return False  # wild encounters: the walker only tests maps and trainers, so it goes around the grass
         if not ignore_obj and (x, y) in self.solid_objects(mp):
             return False
         return True
 
     def route(self, start, goal_fn, ignore_obj=False):
+        """BFS from start to the first state for which goal_fn(state) is true, around tall grass if there is a way."""
+        try:
+            self.avoid_grass = True
+            r = self._route(start, goal_fn, ignore_obj)
+        finally:
+            self.avoid_grass = False
+        return r if r is not None else self._route(start, goal_fn, ignore_obj)
+
+    def _route(self, start, goal_fn, ignore_obj=False):
         """BFS from start to the first state for which goal_fn(state) is true. Returns list of (dir, expected_state, kind)."""
         prev = {start: None}
         q = deque([start])

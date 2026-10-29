@@ -34,8 +34,10 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
          Tests: tools/hardcore/test_story.py milestone | newbark | rival | ending | notyet (see the docstring for the testbuild line of each).
          Still open from stage 7: credits text naming Claude, chauffeur trip and hall NPC checks, Getaway Car use, Elm hands the mon back
          instead of keeping it (design says "return it"; keeping it avoids losing a party member without a safe removal routine).
-- [ ] 8  Purgatorio, Abyss, Nick's Landing, Steiner, Sabbah, Cioran, Crowley quest, Corkboard, true ending
-- [ ] 9  wild encounters (every base form catchable), key item placement, QOL, balance
+- [~] 8  art pass DONE (original tilesets for all 5 areas, 62 original NPC sprites with per-area colorways, 85 original trainer classes with
+         portraits, see Stage 8 notes). Still open: Purgatorio, Abyss, Nick's Landing, Steiner, Sabbah, Cioran, Crowley quest, Corkboard, true ending
+- [~] 9  wild encounters DONE (tall grass in all 35 plazas, every base form catchable, checker + in-game test, see Stage 9 notes);
+         still open: key item placement (Outboard), QOL, balance
 - [ ] 10 music loops, new sprites/cries, Pokedex text, credits, adults-only warning.
          Own sprites so far: CTHUSPAWN and CTHULUDON (tools/hardcore/sprites/cthu.py); the other 95 new species still borrow art.
 - [ ] 11 final ROM
@@ -115,18 +117,39 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
   runs `halloffame` (saves, hall of fame, vanilla credits, reset). `.SpawnAfterE4` in intro_menu.asm spawns at SPAWN_LOTUS_BEDROOM (generated in a4.py mansion()).
 - Test pitfall: after a script ends, another A press talks to the NPC again; stop mashing A when wScriptRunning is 0.
 
-## Stage 8 notes (art pass: original graphics) - IN PROGRESS
-Goal: stop reusing vanilla graphics that clash with the dark-comedy vibe. Pilot: Area 1 (Tithe City); the same kit goes to Areas 2-5.
-- Pipeline order is now: gen_moves, gen_roster, gen_roster_doc, **gen_tilesets**, gen_areas (gen_tilesets writes the tileset png/metatiles/collision/palette map
-  and gfx/area_tilesets.asm; gen_areas autotiles the maps with the new blocks).
-- tools/hardcore/art/: tilebuild.py (Canvas 32x32 block painter + Tileset.pack: dedups tiles, assigns ids 0x00-0x5f / 0x80-0xdf, writes png, metatiles, collision,
-  palette map), paint.py (brick, slabs, windows...), tithe.py (the Tithe tileset: gothic windows, neon POKE/MART signs, slate roofs, cobbles, plaza coins, rift portal),
-  areapal.py (3 palette sets per area: out / road / inn), register.py (one-time `; HC-ART` patches), render.py (static renderer), gameshots.py (in-game screenshots).
-- Palette hook: LoadMapPals -> HC_LoadAreaPalette (engine/hardcore/area_pals.asm) picks the set by wMapTileset >= TILESET_TITHE and wEnvironment. Custom outdoor
-  palettes share index 0 (base color) across slots; index 3 is the shared outline. A tile has one palette slot, so one 8x8 cell can use only one slot's colors.
-- **Engine quirk: LoadMetatiles draws block id 0 as the map's border block.** Block 0 of every custom tileset must therefore be the border itself (Tileset.pack asserts it)
-  and maps use border block 0. (Symptom was a dark brick rectangle wherever the generator placed block 0 as a plain floor.)
-- Tileset autotile roles (AUTO in tithe.py): facade/side_e/side_w/roof/mass (+ rare variants); layout.autotile runs in lane()/plaza() of areas/layout.py.
-- TitheRoad stays TILESET_JOHTO (it connects to vanilla Cherrygrove, connected maps must share the tileset) and gets the road palette.
-- Still to do in this stage: tilesets for Areas 2-5 (Grove, Axiom, Lotus, Dis/Cocytus), original NPC overworld sprites and area-specific trainer classes,
-  original sprites for the new Pokemon (tinted vanilla art for now), interior art, wild-grass patches.
+## Stage 8 notes (art pass: original graphics) - DONE except interiors and Pokemon sprites
+Goal: stop reusing vanilla graphics that clash with the dark-comedy vibe.
+- Pipeline order (rerun in this order, each step is idempotent): gen_moves, gen_roster, gen_roster_doc, **gen_tilesets**, **gen_sprites**, **gen_classes**,
+  gen_areas. gen_tilesets writes tileset png/metatiles/collision/palette map; gen_sprites the NPC sheets; gen_classes the trainer classes; gen_areas the maps.
+- tools/hardcore/art/: tilebuild.py (Canvas 32x32 block painter + Tileset.pack: dedups tiles, assigns ids 0x00-0x5f bank 0 / 0x80-0xdf bank 1, writes png, metatiles,
+  collision, palette map), paint.py, common.py (build_set: the block order shared by Grove/Axiom/Lotus/Dis), tithe.py grove.py axiom.py lotus.py disart.py (one
+  tileset per area), grass.py (tall grass), areapal.py (palette sets per area: out / road / inn, plus the NPC colorways), npcs.py + cast.py (62 characters, recipe based),
+  classes.py (85 trainer classes), portraits.py (56x56 battle portrait made from the front sprite), register.py, render.py, gameshots.py.
+- Palette hooks (engine/hardcore/area_pals.asm): LoadMapPals -> HC_LoadAreaPalette (BG, 3 sets per area by wEnvironment) and HC_LoadAreaObjPalette (OBJ: slot 0 red is
+  the player and stays vanilla; the other slots are per-area BLUE/GREEN/BROWN/PINK, always day colors). Custom outdoor palettes share index 0 (base) across slots,
+  index 3 is the outline. A tile has one palette slot, so one 8x8 cell can use only one slot's colors.
+- **Engine quirk: LoadMetatiles draws block id 0 as the map's border block.** Block 0 of every custom tileset is the border (Tileset.pack asserts it).
+- Autotile roles: facade/side_e/side_w/roof/mass (+ rare variants); layout.autotile runs in lane() and plaza().
+- TitheRoad stays TILESET_JOHTO (connects to vanilla Cherrygrove, connected maps must share the tileset) and gets the road palette.
+- NPC sprites: 16x96 png (6 frames), STANDING_SPRITE, 12 tiles; human ids $68..$a5 (SPRITE_HC_*), SPRITE_POKEMON moved to $b0. Outdoor maps load all sprites of
+  their group (<= 23) plus object sprites; only 8 OBJ palettes.
+- Trainer classes: ids 68..152 (85 new, 17 per area incl. bosses). Generated trainers use ids >= 128 and HC_FindGenTrainer (**class*3 must be 16-bit**: the 8-bit
+  version overflowed from class 87 and gave areas 2-5 garbage parties; fixed). Encounter music of classes >= T_COP is capped to OFFICER (audio/engine.asm).
+- ROM space: the Audio bank is full; "Trainer Pic Pointers" moved to ROMX $7c in layout.link; portraits live in "Pics 20" (65 B each). Pic bank byte = BANK - $36 and the
+  FixPicBank table only covers Pics 1..24 (extend with identity entries up to bank $7f before adding pics elsewhere). Free ROM is about 250 KB, scattered.
+- Still open in this stage: real bust art for the portraits (4x scaled sprites for now), interior art, original Pokemon sprites for the 95 new species (stage 10).
+- Testing: tools/hardcore/walk_all.sh [1..5] builds a god-mode test ROM per area and runs the full walker (all five areas PASS).
+
+## Stage 9 notes (wild encounters)
+- Every plaza (7 per area, 35 in all) has two tall-grass patches (east x=7..11, west x=1..2, rows 4..8 in blocks; own RNG in layout.grass_patches so the rest of the
+  layout does not change). Each tileset has two grass blocks (role "grass", collision TALL_GRASS; art/grass.py: weedy lot, wild grass, bio-turf, resort lawn, ash weed).
+- The areas' landmarks lie above KANTO_LANDMARK, so the engine reads wild data from **KantoGrassWildMons**. data/hardcore/gen_wild_grass.asm (areas/wild.py) is
+  included in place of data/wild/kanto_grass.asm (vanilla Kanto is unreachable, and the extra table did not fit into bank $0A otherwise).
+- areas/wild.py: the 62 base forms are split over the areas by type theme with capacities 16/16/12/10/8 (early areas are played first); inside an area a round robin
+  gives each plaza six main slots (30/30/20/10/5/4 percent; every form gets at least one slot of 10+ percent and shows up in 2+ plazas) plus a 1 percent visitor from the
+  next area. Level = plaza position inside the area's level range. At night dark/ghost/poison forms move up. Rate 20 percent per step. Output: docs/WILD.md,
+  tools/hardcore/wild_out.json.
+- tools/hardcore/check_wild.py [ROM]: static proof from the built ROM (table equals generator, grass reachable, every base form catchable, levels in range). PASS.
+- tools/hardcore/test_wild.py ROM MAP [N] + wild_all.sh: in-game test (encounters match the table for the time of day, run, fight, catch a mon with a ball,
+  kill counter unchanged by wild battles). The walker avoids grass (areamodel.route).
+- Open: wild water encounters on the Lotus Coast, Outboard placement, balance of wild levels vs trainers, a few evolved forms in rare slots.

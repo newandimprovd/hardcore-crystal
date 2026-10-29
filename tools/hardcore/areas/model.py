@@ -108,6 +108,7 @@ class MapDef:
         self.scripts = []  # extra asm chunks
         self.object_consts = []
         self.callbacks = []  # (type, label)
+        self.grass = 0  # number of tall-grass blocks (wild encounters)
 
     def set(self, bx, by, b):
         assert 0 <= bx < self.w and 0 <= by < self.h, (self.name, bx, by)

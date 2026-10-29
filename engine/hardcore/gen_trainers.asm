@@ -13,11 +13,10 @@ HC_FindGenTrainer:
 	ld a, c
 	dec a
 	ld e, a
-	add a
-	add e ; a = 3 * (class - 1)
-	ld e, a
 	ld d, 0
 	add hl, de
+	add hl, de
+	add hl, de ; 3 * (class - 1) in 16 bits: 8 bits overflow from class 87 on
 	ld a, [hli]
 	ld [wHCGenBank], a
 	and a

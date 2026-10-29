@@ -163,6 +163,27 @@ def chain(lower, upper, offset=0):
     upper.connect("south", lower, -offset)
 
 
+def grass_patches(m, kit):
+    """Wild encounters happen in tall grass: an east and a west patch in the lower half of a plaza, clear of the door row, the
+    corridor columns and the south exit.  Uses a random source of its own so the rest of the layout does not change.
+    Returns the number of grass blocks (0 for tilesets without grass)."""
+    grass = kit.extra.get("grass")
+    if not grass:
+        return 0
+    r = random.Random("grass:" + m.name)
+    dense, detail = grass[0], grass[1]
+    n = 0
+    for (x0, x1) in ((7, m.w - 2), (1, 2)):
+        for y in range(4, min(9, m.h - 2)):
+            for x in range(x0, x1 + 1):
+                corner = x in (x0, x1) and y in (4, 8)
+                if corner and r.random() < 0.6:
+                    continue
+                m.set(x, y, detail if r.random() < 0.08 else dense)
+                n += 1
+    return n
+
+
 def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11, rift=False, houses=1, extra=0,
           south="open", pal="PALETTE_DAY"):
     """A hub: Pokecenter and Mart on the north wall, an optional rift house, an opening to the north lane
@@ -215,6 +236,7 @@ def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11,
             m.set(hx, 0, kit.extra["house_roof"][0])
             m.set(hx + 1, 0, kit.extra["house_roof"][1])
         doors["rift"] = m.warp(*kit.door_cell(hx, 1, kit.extra["house"][0]))
+    m.grass = grass_patches(m, kit)
     autotile(m, kit, rng)
     g.add(m)
     m.a, m.cw = a, cw

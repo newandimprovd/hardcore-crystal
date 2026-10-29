@@ -106,7 +106,7 @@ def _art_kit(tileset, mod, weights):
                plaza=plaza, center=[[ids["cr_l"], ids["cr_r"]], [ids["c_door"], ids["c_sign"]]],
                mart=[[ids["cr_l"], ids["cr_r"]], [ids["m_door"], ids["m_sign"]]],
                house=[ids["h_door"], ids["h_side"]], house_roof=[ids["hr_l"], ids["hr_r"]], rift=ids["rift"],
-               border=ids["border"], auto=auto)
+               border=ids["border"], auto=auto, grass=r["grass"])
 
 
 def tithe():

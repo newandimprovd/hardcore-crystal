@@ -4,6 +4,7 @@ Roles (see kits.tithe): floor, plaza, facade (floor to the south of the wall), r
 east), side_w (floor to the west), mass (deep inside), center/mart/house blocks, rift (cathedral portal), border."""
 from tilebuild import Tileset, Canvas, GRAY, RED, GREEN, WATER, YELLOW, BROWN, ROOF
 import paint
+import grass
 
 
 def cornice(cv):
@@ -436,6 +437,8 @@ def build():
     ids["h_door"] = t.add(door_facade(WATER), ("WALL", "WALL", "DOOR", "WALL"), "house_door")
     ids["h_side"] = t.add(facade([y_, None]), "WALL", "house_side")
     ids["rift"] = t.add(portal(), ("WALL", "WALL", "DOOR", "WALL"), "rift")
+    for cv in grass.grass_pair("tithe"):  # wild encounters (stage 9)
+        t.add(cv, "TALL_GRASS", "grass")
     t.ids = ids
     return t
 

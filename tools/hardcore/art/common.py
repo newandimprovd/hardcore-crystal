@@ -44,6 +44,8 @@ def build_set(name, const, stem, P):
     ids["h_door"] = t.add(P.house_door(), ("WALL", "WALL", "DOOR", "WALL"), "house_door")
     ids["h_side"] = t.add(P.house_side(), "WALL", "house_side")
     ids["rift"] = t.add(P.rift(), ("WALL", "WALL", "DOOR", "WALL"), "rift")
+    for cv in P.grass():  # two blocks: wild encounters (stage 9)
+        t.add(cv, "TALL_GRASS", "grass")
     t.ids = ids
     return t
 

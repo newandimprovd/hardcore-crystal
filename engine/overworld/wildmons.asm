@@ -964,7 +964,7 @@ RandomPhoneMon:
 
 INCLUDE "data/wild/johto_grass.asm"
 INCLUDE "data/wild/johto_water.asm"
-INCLUDE "data/wild/kanto_grass.asm"
+INCLUDE "data/hardcore/gen_wild_grass.asm" ; HC-AREAS
 INCLUDE "data/wild/kanto_water.asm"
 INCLUDE "data/wild/swarm_grass.asm"
 INCLUDE "data/wild/swarm_water.asm"
