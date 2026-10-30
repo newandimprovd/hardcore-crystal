@@ -879,10 +879,10 @@ INCLUDE "gfx/pokemon/blissey/shiny.pal"
 ; WYRMKING shiny
 	RGB 15, 18, 20
 	RGB  8, 18, 10
-; CATACLYSM
+; TYPHONEUS
 	RGB 13, 16,  6
 	RGB  9,  7, 11
-; CATACLYSM shiny
+; TYPHONEUS shiny
 	RGB 16,  6, 13
 	RGB  7, 11,  9
 INCBIN "gfx/pokemon/larvitar/normal.gbcpal", middle_colors

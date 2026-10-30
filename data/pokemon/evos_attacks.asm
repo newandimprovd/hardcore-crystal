@@ -3367,7 +3367,7 @@ WyrmkingEvosAttacks:
 	db 90, HURRICANE
 	db 0 ; no more level-up moves
 
-CataclysmEvosAttacks:
+TyphoneusEvosAttacks:
 	db 0 ; no more evolutions
 	db 22, ROCK_SLIDE
 	db 29, THRASH
@@ -3412,7 +3412,7 @@ PupitarEvosAttacks:
 	db 0 ; no more level-up moves
 
 TyranitarEvosAttacks:
-	db EVOLVE_LEVEL, 75, CATACLYSM
+	db EVOLVE_LEVEL, 75, TYPHONEUS
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER

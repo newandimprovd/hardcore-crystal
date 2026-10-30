@@ -25,7 +25,7 @@ Goal: every fourth stage is competitively viable. There are no abilities in Crys
 | DOOMTALON* | FLYING/DARK | 600 | 162 | 15 | physical | BRAVE_BIRD 120 | 1 | REST, AGILITY, CURSE | coverage 1 type(s) |
 | MEGAWATT* | ELECTRIC | 600 | 154 | 14 | physical | WILD_CHARGE 90 | 1 | REST, CURSE | coverage 1 type(s) |
 | NOSFERATU* | DARK/FLYING | 600 | 177 | 17 | physical | BRAVE_BIRD 120 | 1 | REST, CURSE | coverage 1 type(s) |
-| BELLADONNA* | GRASS/POISON | 600 | 58 | 26 | special | SLUDGE_BOMB 90 | 0 | REST, CURSE | coverage 0 type(s) |
+| BELLADONNA* | GRASS/POISON | 600 | 58 | 26 | special | ENERGY_BALL 90 | 0 | REST, CURSE | coverage 0 type(s) |
 | MAWBLOOM* | GRASS/DARK | 600 | 81 | 19 | physical | WOOD_HAMMER 120 | 0 | REST, CURSE | coverage 0 type(s) |
 | SPOREKING* | BUG/GHOST | 600 | 27 | 31 | physical | MEGAHORN 102 | 2 | REST, CURSE, GROWTH | coverage 2 type(s) |
 | KINGPIN* | NORMAL/DARK | 600 | 234 | 11 | physical | BODY_SLAM 85 | 0 | REST, CURSE | coverage 0 type(s) |
@@ -40,7 +40,7 @@ Goal: every fourth stage is competitively viable. There are no abilities in Crys
 | FROSTSIREN* | ICE/FAIRY | 600 | 55 | 36 | special | MOONBLAST 95 | 1 | REST, CURSE | coverage 1 type(s) |
 | ABYSSHELL* | ICE/DARK | 600 | 30 | 29 | special | ICE_BEAM 95 | 2 | REST, CURSE | coverage 2 type(s) |
 | MAELDRA* | WATER/DRAGON | 600 | 88 | 22 | special | HYDRO_PUMP 96 | 2 | REST, AGILITY, CURSE | coverage 2 type(s) |
-| BEACHBALL* | WATER/FAIRY | 600 | 45 | 45 | physical | AQUA_TAIL 81 | 2 | REST, CURSE | coverage 2 type(s) |
+| BEACHBALL* | WATER/FAIRY | 600 | 45 | 45 | physical | PLAY_ROUGH 81 | 2 | REST, CURSE | coverage 2 type(s) |
 | SANDMAN* | PSYCHIC_TYPE/DARK | 600 | 76 | 28 | special | PSYCHIC_M 90 | 1 | REST, CURSE | coverage 1 type(s) |
 | ICEAGE* | ICE/GROUND | 600 | 40 | 33 | physical | EARTHQUAKE 100 | 1 | REST, AMNESIA, CURSE | coverage 1 type(s) |
 | RIMEQUEEN* | ICE/FAIRY | 600 | 107 | 16 | special | MOONBLAST 95 | 2 | REST, CURSE | coverage 2 type(s) |
@@ -54,9 +54,9 @@ Goal: every fourth stage is competitively viable. There are no abilities in Crys
 | TYRANT* | GROUND/DARK | 600 | 96 | 22 | physical | EARTHQUAKE 100 | 4 | REST, CURSE | ok |
 | PYREMOTH* | BUG/FIRE | 600 | 107 | 19 | special | FIRE_BLAST 102 | 4 | REST, CURSE | ok |
 | ANEURYSM* | PSYCHIC_TYPE | 600 | 92 | 21 | special | PSYCHIC_M 90 | 3 | REST, CURSE | ok |
-| ANGERILLA* | FIGHTING/DARK | 600 | 109 | 16 | physical | CRUNCH 80 | 5 | REST, CURSE | ok |
+| ANGERILLA* | FIGHTING/DARK | 600 | 109 | 16 | physical | CROSS_CHOP 80 | 5 | REST, CURSE | ok |
 | PERDITION* | DARK/FIRE | 600 | 101 | 16 | special | FIRE_BLAST 102 | 3 | REST, CURSE | ok |
-| APPARITION* | GHOST/DARK | 600 | 120 | 15 | special | DARK_PULSE 80 | 3 | REST, CURSE | ok |
+| APPARITION* | GHOST/DARK | 600 | 120 | 15 | special | SHADOW_BALL 80 | 3 | REST, CURSE | ok |
 | OSSUARY* | GROUND/GHOST | 600 | 56 | 26 | physical | EARTHQUAKE 100 | 3 | REST, CURSE | ok |
 | SUPERFUND* | POISON | 600 | 24 | 42 | physical | GUNK_SHOT 96 | 4 | REST, ACID_ARMOR, CURSE | ok |
 | PANDEMIC* | POISON/DARK | 600 | 67 | 23 | special | SLUDGE_BOMB 90 | 3 | REST, CURSE | ok |
@@ -67,4 +67,4 @@ Goal: every fourth stage is competitively viable. There are no abilities in Crys
 | SUPERNOVA* | PSYCHIC_TYPE/FIRE | 600 | 118 | 17 | special | FIRE_BLAST 102 | 4 | REST, CURSE | ok |
 | WORLDEATER* | WATER/DRAGON | 600 | 78 | 22 | physical | OUTRAGE 90 | 3 | REST, CURSE | ok |
 | WYRMKING* | DRAGON/FLYING | 700 | 89 | 29 | physical | BRAVE_BIRD 120 | 6 | REST, AGILITY, CURSE | ok |
-| CATACLYSM* | ROCK/DARK | 700 | 66 | 32 | physical | CRUNCH 80 | 3 | REST, CURSE | ok |
+| TYPHONEUS* | ROCK/DARK | 700 | 66 | 32 | physical | CRUNCH 80 | 3 | REST, CURSE | ok |

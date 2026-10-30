@@ -14633,8 +14633,8 @@
  },
  {
   "id": 245,
-  "const": "CATACLYSM",
-  "name": "CATACLYSM",
+  "const": "TYPHONEUS",
+  "name": "TYPHONEUS",
   "line": "LARVITAR",
   "stage": 4,
   "types": [
@@ -14885,6 +14885,6 @@
     "HYPER_BEAM"
    ]
   ],
-  "next": "CATACLYSM"
+  "next": "TYPHONEUS"
  }
 ]

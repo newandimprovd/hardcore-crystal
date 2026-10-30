@@ -77,7 +77,7 @@ LINES = [
     ("SWINUB", ["SWINUB", "PILOSWINE", "*MAMMOTH", "*ICEAGE"]),
     ("SMOOCHUM", ["SMOOCHUM", "JYNX", "*FROSTBITE", "*RIMEQUEEN"]),
     ("DRATINI", ["DRATINI", "DRAGONAIR", "DRAGONITE", "*WYRMKING"]),
-    ("LARVITAR", ["LARVITAR", "PUPITAR", "TYRANITAR", "*CATACLYSM"]),
+    ("LARVITAR", ["LARVITAR", "PUPITAR", "TYRANITAR", "*TYPHONEUS"]),
 ]
 
 # Dragonite and Tyranitar lines stay the strongest by stats.
@@ -348,7 +348,7 @@ N("RIMEQUEEN", "ICE/FAIRY", "WINTER", "6'03", 160,
   "Rules a kingdom of frost with perfect posture. Her subjects are statues now.", arch="spec")
 N("WYRMKING", "DRAGON/FLYING", "SOVEREIGN", "13'01", 850,
   "DRAGONITE once delivered mail. This one delivers verdicts. The weather agrees.", arch="bal")
-N("CATACLYSM", "ROCK/DARK", "COLLAPSE", "11'02", 2800,
+N("TYPHONEUS", "ROCK/DARK", "COLLAPSE", "11'02", 2800,
   "An earthquake with a pulse. Maps are redrawn after it naps.", arch="phys")
 
 assert len(NEW) == 97, len(NEW)

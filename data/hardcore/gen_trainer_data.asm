@@ -4027,7 +4027,7 @@ HC_GenGroup_L_TOURISTG:
 	db 75, CALDERA
 	db 76, ELDERWOOD
 	db 76, ANEURYSM
-	db 79, CATACLYSM
+	db 79, TYPHONEUS
 	db -1
 	db "CASEY@"
 	db 77, OBLIVION
@@ -4252,7 +4252,7 @@ HC_GenGroup_L_LOUNGER:
 	db "FRED@"
 	db 77, RAGECARP
 	db 78, ANEURYSM
-	db 79, CATACLYSM
+	db 79, TYPHONEUS
 	db 79, PLACEBO
 	db 81, SUPERNOVA
 	db -1
@@ -4475,7 +4475,7 @@ HC_GenGroup_D_SHADE:
 	db "CURT@"
 	db 88, RIMEQUEEN
 	db 90, WORLDEATER
-	db 90, CATACLYSM
+	db 90, TYPHONEUS
 	db 91, PERDITION
 	db 91, RIMEQUEEN
 	db -1
@@ -4496,7 +4496,7 @@ HC_GenGroup_D_HAG:
 	db 83, WEBWEAVER
 	db -1
 	db "ANN@"
-	db 84, CATACLYSM
+	db 84, TYPHONEUS
 	db -1
 	db "ESTHER@"
 	db 83, KINGPIN
@@ -4635,7 +4635,7 @@ HC_GenGroup_D_JUDGE:
 	db 91, HOSPICE
 	db 92, ABYSSHELL
 	db 92, PYREMOTH
-	db 92, CATACLYSM
+	db 92, TYPHONEUS
 	db -1
 	db "DAVE@"
 	db 90, POLIWRAITH
@@ -4856,7 +4856,7 @@ HC_GenGroup_D_JESTER:
 	db "RITA@"
 	db 89, RATKING
 	db 89, KINGPIN
-	db 90, CATACLYSM
+	db 90, TYPHONEUS
 	db 90, CARCINIZE
 	db 93, PANOPTICON
 	db -1
@@ -4878,7 +4878,7 @@ HC_GenGroup_D_WARDEN:
 	db "GATEKEEPER@"
 	db 81, BEEHEMOTH
 	db 81, NIDOKING
-	db 83, CATACLYSM
+	db 83, TYPHONEUS
 	db 84, TIDEBELLY
 	db 86, DOOMTALON
 	db -1
@@ -4938,7 +4938,7 @@ HC_GenGroup_D_IMPF:
 	db 81, HOSPICE
 	db -1
 	db "REX@"
-	db 83, CATACLYSM
+	db 83, TYPHONEUS
 	db 85, PANDEMIC
 	db 87, PANOPTICON
 	db -1
@@ -5021,7 +5021,7 @@ HC_GenGroup_D_DAMNED:
 	db -1
 	db "VAL@"
 	db 90, AMNESIAC
-	db 91, CATACLYSM
+	db 91, TYPHONEUS
 	db 92, OVERGROWN
 	db 94, FROSTSIREN
 	db -1
@@ -5101,7 +5101,7 @@ HC_GenGroup_D_SINNER:
 	db -1
 	db "IRA@"
 	db 81, OVERGROWN
-	db 83, CATACLYSM
+	db 83, TYPHONEUS
 	db 84, SANDMAN
 	db -1
 	db "BONNIE@"

@@ -1,4 +1,4 @@
-	db CATACLYSM ; 245
+	db TYPHONEUS ; 245
 
 	db 143, 182, 119,  66,  82, 108
 	;   hp  atk  def  spd  sat  sdf

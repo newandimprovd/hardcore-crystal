@@ -245,7 +245,7 @@ PokedexDataPointerTable:
 	dw BlisseyPokedexEntry
 	dw RimequeenPokedexEntry
 	dw WyrmkingPokedexEntry
-	dw CataclysmPokedexEntry
+	dw TyphoneusPokedexEntry
 	dw LarvitarPokedexEntry
 	dw PupitarPokedexEntry
 	dw TyranitarPokedexEntry

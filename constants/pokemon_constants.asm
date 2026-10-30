@@ -264,7 +264,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const BLISSEY    ; f2
 	const RIMEQUEEN  ; f3
 	const WYRMKING   ; f4
-	const CATACLYSM  ; f5
+	const TYPHONEUS  ; f5
 	const LARVITAR   ; f6
 	const PUPITAR    ; f7
 	const TYRANITAR  ; f8

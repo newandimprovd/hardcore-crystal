@@ -37,7 +37,6 @@ AlphabeticalPokedexOrder:
 	db CANDLEMOTH
 	db CARAPACE
 	db CARCINIZE
-	db CATACLYSM
 	db CATERPIE
 	db CHANSEY
 	db CHARIZARD
@@ -232,6 +231,7 @@ AlphabeticalPokedexOrder:
 	db TOTODILE
 	db TUSKDRIFT
 	db TYPHLOSION
+	db TYPHONEUS
 	db TYRANITAR
 	db TYRANT
 	db UNICORN

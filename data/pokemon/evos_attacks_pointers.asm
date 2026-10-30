@@ -246,7 +246,7 @@ EvosAttacksPointers::
 	dw BlisseyEvosAttacks
 	dw RimequeenEvosAttacks
 	dw WyrmkingEvosAttacks
-	dw CataclysmEvosAttacks
+	dw TyphoneusEvosAttacks
 	dw LarvitarEvosAttacks
 	dw PupitarEvosAttacks
 	dw TyranitarEvosAttacks

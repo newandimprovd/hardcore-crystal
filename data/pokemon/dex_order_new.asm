@@ -249,5 +249,5 @@ NewPokedexOrder:
 	db LARVITAR
 	db PUPITAR
 	db TYRANITAR
-	db CATACLYSM
+	db TYPHONEUS
 	assert_table_length NUM_POKEMON

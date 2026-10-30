@@ -244,7 +244,7 @@ PokemonNames::
 	dname "BLISSEY"
 	dname "RIMEQUEEN"
 	dname "WYRMKING"
-	dname "CATACLYSM"
+	dname "TYPHONEUS"
 	dname "LARVITAR"
 	dname "PUPITAR"
 	dname "TYRANITAR"

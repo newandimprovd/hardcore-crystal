@@ -314,4 +314,4 @@ No branching, no single-stage species, no legendaries. Dratini and Larvitar line
 | 246 | LARVITAR (stage 1) | ROCK/GROUND | 50 | 64 | 50 | 41 | 45 | 50 | 300 |
 | 247 | PUPITAR (stage 2) | ROCK/GROUND | 72 | 86 | 72 | 52 | 66 | 72 | 420 |
 | 248 | TYRANITAR (stage 3) | ROCK/DARK | 100 | 134 | 110 | 61 | 95 | 100 | 600 |
-| 245 | CATACLYSM* (stage 4) | ROCK/DARK | 143 | 182 | 119 | 66 | 82 | 108 | 700 |
+| 245 | TYPHONEUS* (stage 4) | ROCK/DARK | 143 | 182 | 119 | 66 | 82 | 108 | 700 |
