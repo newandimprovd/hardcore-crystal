@@ -298,7 +298,12 @@ DoPlayerMovement::
 	ret
 
 .walk
+	ldh a, [hJoyDown]
+	and PAD_B
 	ld a, STEP_WALK
+	jr z, .walk_step
+	ld a, STEP_BIKE ; HC: hold B to run (a 1000 fight game needs it)
+.walk_step
 	call .DoStep
 	scf
 	ret

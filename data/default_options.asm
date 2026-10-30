@@ -1,6 +1,6 @@
 DefaultOptions:
-; wOptions: med text speed
-	db TEXT_DELAY_MED
+; wOptions: fast text speed, battle scene off, set battle style (HC: a thousand fights)
+	db TEXT_DELAY_FAST | (1 << BATTLE_SCENE) | (1 << BATTLE_SHIFT)
 ; wSaveFileExists: no
 	db FALSE
 ; wTextboxFrame: frame 1

@@ -66,6 +66,7 @@ NewGame:
 if DEF(_TESTMODE)
 	farcall HC_TestIntro
 else
+	farcall HC_AdultWarning ; HC
 	call PlayerProfileSetup
 	call OakSpeech
 endc

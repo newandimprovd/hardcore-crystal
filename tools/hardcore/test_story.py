@@ -3,7 +3,7 @@
 
 usage:
   test_story.py milestone ROM   ROM = testbuild.sh stA TEST_MAP=TITHE_PLAZA1 TEST_X=3 TEST_Y=4 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
-  test_story.py newbark ROM     ROM = testbuild.sh stB TEST_MAP=NEW_BARK_TOWN TEST_X=2 TEST_Y=8 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
+  test_story.py newbark ROM     ROM = testbuild.sh stB TEST_MAP=NEW_BARK_TOWN TEST_X=10 TEST_Y=10 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2
   test_story.py ending ROM      ROM = testbuild.sh stF TEST_MAP=JUDECCA_CENTRE TEST_X=4 TEST_Y=17 TEST_MON=DEATHROLL TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2
                                 (beats the last boss, talks to Elm on the crater rim, plays the credits and Continues in the bedroom;
                                  EXPECT_MON=CALDERA etc. is for builds where the party holds another species)
