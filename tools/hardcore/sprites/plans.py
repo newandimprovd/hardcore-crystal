@@ -1,203 +1,96 @@
-"""Body plans for the creature sprites (see creature.py).  A plan draws a whole creature into a Scene from a parameter dict and optional hooks:
-hooks["pre"](sc, a)    behind everything (wings, back plumes)
-hooks["body"](sc, a)   after the body and legs, before the head
-hooks["post"](sc, a)   after the head (crests, flames, extra eyes)
-`a` is the anchor dict of the plan (body centre, head centre, back line...) so a hook can attach things to the creature."""
+"""Body plans for the SDF creatures.  A plan is a function plan(M, pose, p) that builds a creature into Model M from the parameter dict p
+and the pose dict (animation: jaw, glow, head_dy, arm, tail, breath).  Plans return nothing; they set M.face and register anchors.
+
+Common parameters (all plans):  tex  texture tuple for the body, mat/accent  palette roles are fixed (BODY, ACCENT), hook  a function
+hook(M, pose, A) called at the end with the anchor dict, for the extras that make one species itself.
+"""
 import math
-import os
-import sys
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, HERE)
-from creature import GROUND, Scene, clamp, spline  # noqa: E402
+import numpy as np
 
-
-def _hook(hooks, name, sc, a):
-    f = (hooks or {}).get(name)
-    if f:
-        f(sc, a)
+import parts
+from parts import V
+from sdf import ACCENT, BODY, BONE, DARK, EYE, Model
 
 
-# =============================================================================================
-# QUADRUPED, seen from the side facing left (front view) or from behind (back view)
-# =============================================================================================
-def quad(sc, p, hooks=None):
-    if sc.back:
-        return quad_back(sc, p, hooks)
-    m = sc.m
-    rx, ry = p.get("body", (17, 10))
-    leg = p.get("leg", 11)
-    lw = p.get("legw", 6.5)
-    cx = p.get("cx", 31)
-    cy = GROUND - leg - ry + 3
-    rot = p.get("rot", 0)
-    hdx, hdy = p.get("head_off", (-17, -8))
-    hrx, hry = p.get("head", (8, 7))
-    sn = p.get("snout", (6, 3.5))  # rx, ry of the snout
-    sdx = p.get("snout_dx", 0.8)
-    dx, dy = sc.head()
-    hc = (cx + hdx + dx, cy + hdy + dy)
-    a = dict(cx=cx, cy=cy, rx=rx, ry=ry, hc=hc, ground=GROUND, rump=(cx + rx * 0.92, cy - ry * 0.1),
-             back=lambda t: (cx + rx * (0.9 - 1.8 * t), cy - ry * (0.78 + 0.1 * math.sin(math.pi * t))), lw=lw)
-    _hook(hooks, "pre", sc, a)
-
-    # far legs, drawn first and darker
-    for x, d in ((cx - rx * 0.55 + 4.5, -1), (cx + rx * 0.5 + 4, -1)):
-        lm = sc.mask()
-        sc.tube(lm, [(x, cy + ry * 0.2), (x - 0.3, GROUND - 3)], lw * 0.9, lw * 0.75)
-        sc.ell(lm, x - 1.5, GROUND - 1.6, lw * 0.75, 2.0)
-        sc.paint(lm, base=0.35, gain=0.55)
-    # tail
-    tail_style = p.get("tail", "plain")
-    tl = p.get("tail_len", 14)
-    sw = sc.sway()
-    ra = a["rump"]
-    tpts = [ra, (ra[0] + tl * 0.4, ra[1] + 1 + sw), (ra[0] + tl * 0.8, ra[1] - 3 + sw * 2), (ra[0] + tl, ra[1] - 6 + sw * 3)]
-    tm = sc.mask()
-    sc.tube(tm, tpts, p.get("tail_w", 6), 2.2 if tail_style != "club" else 5)
-    if tail_style == "club":
-        sc.ell(tm, tpts[-1][0] + 1, tpts[-1][1] - 1, 5, 5)
-    sc.paint(tm)
-    if tail_style in ("spike", "club") and m > 0.3:
-        for i in range(3):
-            t = 0.45 + 0.17 * i
-            tx, ty = spline(tpts, t)
-            sm = sc.mask()
-            sc.spike(sm, tx, ty - 1, tx + 0.5, ty - 5 - 2 * m, 3.2)
-            sc.paint(sm, fill=2, shade=None)
-    if tail_style == "flame":
-        fx, fy = tpts[-1]
-        for i, (ox, oy, h) in enumerate(((0, 0, 9), (-3, 2, 6), (3, 2, 5))):
-            fm = sc.mask()
-            sc.poly(fm, [(fx + ox - 3, fy + oy + 2), (fx + ox, fy + oy - h), (fx + ox + 3, fy + oy + 2)])
-            sc.paint(fm, fill=2 if i == 0 else 0, shade=None)
-    # body
-    bm = sc.mask()
-    sc.ell(bm, cx, cy, rx, ry, rot)
-    # hips and shoulders thicken the silhouette
-    sc.ell(bm, cx + rx * 0.5, cy + ry * 0.15, rx * 0.55, ry * 0.95)
-    sc.ell(bm, cx - rx * 0.5, cy + ry * 0.1, rx * 0.5, ry * 0.95)
-    bb = sc.paint(bm, rim=p.get("rim", True))
-    belly = p.get("belly")
-    if belly:
-        bl = sc.mask()
-        sc.ell(bl, cx - 1, cy + ry * 0.55, rx * 0.75, ry * 0.5)
-        belly_bits = bl.bits()
-        inner = [[bb[y][x] and belly_bits[y][x] for x in range(sc.n)] for y in range(sc.n)]
-        sc.over(bb, belly, lambda x, y: inner[y][x] and (x + y) % 3 != 0)
-    # near legs
-    for x in (cx - rx * 0.55, cx + rx * 0.5):
-        lm = sc.mask()
-        sc.tube(lm, [(x, cy + ry * 0.2), (x - 0.5, GROUND - 3)], lw, lw * 0.85)
-        sc.ell(lm, x - 2, GROUND - 1.8, lw * 0.85, 2.3)
-        sc.paint(lm, rim=True)
-        sc.claws(x - lw * 0.8 - 1, GROUND - 1, -1, 3, 2.2, 2.5 + m)
-    _hook(hooks, "body", sc, a)
-
-    # neck and head
-    nm = sc.mask()
-    sc.tube(nm, [(cx - rx * 0.6, cy - ry * 0.1), ((cx - rx * 0.6 + hc[0]) / 2, (cy + hc[1]) / 2 + 1), hc], p.get("neck_w", 9), p.get("neck_w", 9) * 0.9)
-    sc.paint(nm, rim=True)
-    hm = sc.mask()
-    sc.ell(hm, hc[0], hc[1], hrx, hry)
-    sn_c = (hc[0] - hrx * sdx, hc[1] + hry * 0.25)
-    sc.ell(hm, sn_c[0], sn_c[1], sn[0], sn[1])
-    sc.paint(hm, rim=True)
-    # jaw
-    jaw = p.get("jaw", 0)
-    if jaw:
-        jm = sc.mask()
-        o = 1.0 + 2.5 * sc.mouth() + 1.5 * m
-        sc.ell(jm, sn_c[0] + 1, sn_c[1] + sn[1] * 0.8 + o, sn[0] * 0.85, sn[1] * 0.6)
-        sc.paint(jm, shade=None, fill=1)
-        # mouth gap
-        sc.line(sn_c[0] - sn[0] * 0.8, sn_c[1] + sn[1] * 0.55 + 0.5, sn_c[0] + sn[0] * 0.5, sn_c[1] + sn[1] * 0.5 + 0.5, 3)
-        if m > 0.2:
-            sc.fangs(sn_c[0] - sn[0] * 0.5, sn_c[1] + sn[1] * 0.55 + 1, sn[0] * 0.9, 3, 2 + m)
-    # eye
-    sc.eye(hc[0] - hrx * 0.1, hc[1] - hry * 0.2, p.get("eye", "angry"), 3.2, -1)
-    # ears and horns
-    ears = p.get("ears", "none")
-    if ears != "none":
-        for ex, h in ((hc[0] + hrx * 0.1, 7), (hc[0] + hrx * 0.7, 6)):
-            em = sc.mask()
-            if ears == "long":
-                sc.tube(em, [(ex, hc[1] - hry * 0.6), (ex + 3, hc[1] - hry - 6), (ex + 7, hc[1] - hry - 8)], 4.5, 2)
-            else:
-                sc.spike(em, ex, hc[1] - hry * 0.7, ex + 1, hc[1] - hry - h, 5)
-            sc.paint(em, shade=None, rim=False)
-    nh = p.get("horns", 0)
-    for i in range(nh):
-        hx0 = hc[0] + hrx * (0.0 + 0.55 * i)
-        hm2 = sc.mask()
-        L = p.get("horn_len", 8) * (0.6 + 0.7 * m)
-        sc.tube(hm2, [(hx0, hc[1] - hry * 0.75), (hx0 + 2, hc[1] - hry - L * 0.6), (hx0 + 5 + i, hc[1] - hry - L)], 4, 1.2)
-        sc.paint(hm2, fill=2, shade=None)
-    _hook(hooks, "post", sc, a)
-    return sc.result()
+def _pose(pose, key, default=0.0):
+    return pose.get(key, default)
 
 
-def quad_back(sc, p, hooks=None):
-    """Seen from behind: a broad rump, two legs, the head peeking over the shoulders, the tail hanging down the middle."""
-    m = sc.m
-    rx, ry = p.get("body", (17, 10))
-    leg = p.get("leg", 11)
-    lw = p.get("legw", 6.5)
-    bw = min(rx * 0.95, 17)
-    cx = 28
-    cy = GROUND - leg - ry + 3
-    a = dict(cx=cx, cy=cy, rx=bw, ry=ry, hc=(cx, cy - ry - 3), ground=GROUND, lw=lw)
-    _hook(hooks, "pre", sc, a)
-    for x in (cx - bw * 0.5, cx + bw * 0.5):
-        lm = sc.mask()
-        sc.tube(lm, [(x, cy + ry * 0.2), (x, GROUND - 3)], lw, lw * 0.85)
-        sc.ell(lm, x, GROUND - 1.8, lw * 0.9, 2.3)
-        sc.paint(lm, rim=True)
-        sc.claws(x, GROUND - 1, 0, 3, 2.2, 2.5 + m)
-    hrx, hry = p.get("head", (8, 7))
-    hm = sc.mask()
-    sc.ell(hm, cx, cy - ry * 0.9 - 2, hrx * 0.95, hry * 0.9)
-    sc.paint(hm, rim=True)
-    ears = p.get("ears", "none")
-    if ears != "none":
-        for sx in (-1, 1):
-            em = sc.mask()
-            ex = cx + sx * hrx * 0.7
-            if ears == "long":
-                sc.tube(em, [(ex, cy - ry - 6), (ex + sx * 2, cy - ry - 12), (ex + sx * 4, cy - ry - 16)], 4.5, 2)
-            else:
-                sc.spike(em, ex, cy - ry - 5, ex + sx * 1, cy - ry - 11, 5)
-            sc.paint(em, shade=None)
-    for i in range(p.get("horns", 0)):
-        sx = (-1, 1)[i % 2] if p.get("horns", 0) > 1 else 0
-        hm2 = sc.mask()
-        L = p.get("horn_len", 8) * (0.6 + 0.7 * m)
-        sc.tube(hm2, [(cx + sx * hrx * 0.5, cy - ry - 5), (cx + sx * (hrx * 0.7 + 2), cy - ry - 5 - L * 0.6), (cx + sx * (hrx + 3), cy - ry - 5 - L)], 4, 1.2)
-        sc.paint(hm2, fill=2, shade=None)
-    bm = sc.mask()
-    sc.ell(bm, cx, cy, bw, ry)
-    sc.ell(bm, cx, cy + ry * 0.4, bw * 0.95, ry * 0.8)
-    sc.paint(bm, rim=True)
-    # tail
-    tail_style = p.get("tail", "plain")
-    tm = sc.mask()
-    ty0 = cy + ry * 0.5
-    sw = sc.sway()
-    sc.tube(tm, [(cx, ty0), (cx + 2 + sw, ty0 + 6), (cx + 6 + sw * 2, ty0 + 9)], p.get("tail_w", 6) * 0.9, 2.2)
-    sc.paint(tm)
-    _hook(hooks, "body", sc, a)
-    _hook(hooks, "post", sc, a)
-    return sc.result()
+# ============================================================================================ biped
+def biped(M, pose, p):
+    d = dict(leg=0.95, thigh_r=0.26, shin_r=0.19, hip_w=0.32, bulk=1.0, torso_h=0.62, hunch=10.0, shoulder_w=0.66, arm_r=0.19,
+             arm_len=1.0, arms=1, hand="fist", hand_size=1.0, foot="plant", foot_size=1.0, head="beast", head_s=1.15, head_kw={}, neck=0.2,
+             tail={"kind": "plain", "length": 1.3, "thick": 0.26}, back=None, belly=True, tex=None, pelvis=1.0, hook=None, legs_kind="plain",
+             arm_spread=0.0, shoulder_ball=True)
+    d.update(p)
+    tex = d["tex"]
+    L = d["leg"]
+    bulk = d["bulk"]
+    th = d["torso_h"]
+    sw = d["shoulder_w"]
+    breath = _pose(pose, "breath")
+    A = {}
+    # ---- legs
+    hw = d["hip_w"]
+    if d["legs_kind"] != "none":
+        M.cone((hw, L, 0), (hw * 1.15, L * 0.52, 0.12), d["thigh_r"], d["thigh_r"] * 0.76, BODY, 0.12, True, tex=tex)
+        M.cone((hw * 1.15, L * 0.52, 0.12), (hw * 1.1, 0.14, 0.02), d["thigh_r"] * 0.76, d["shin_r"] * 0.85, BODY, 0.1, True, tex=tex)
+        parts.foot(M, (hw * 1.1, 0.1, 0.0), d["foot"], d["foot_size"], True)
+    M.ell((0, L + 0.04, 0), (hw * 1.25 * d["pelvis"], 0.28, 0.32), BODY, 0.2, tex=tex)
+    # ---- torso, arms, head in the hunched frame
+    with M.frame((0, L + 0.1, 0), (d["hunch"], 0, 0)):
+        M.ell((0, 0.52 * th + breath * 0.03, 0.04), (0.58 * bulk * sw / 0.66, 0.62 * th + 0.02 * breath, 0.44 * bulk), BODY, 0.25, tex=tex)
+        if d["belly"]:
+            M.ell((0, 0.45 * th, 0.31 * bulk), (0.32 * bulk, 0.4 * th, 0.15 * bulk), ACCENT, 0.05)
+        sx, sy = sw * bulk, 0.98 * th
+        if d["shoulder_ball"]:
+            M.ell((sx, sy, 0.0), (0.3 * bulk, 0.27 * bulk, 0.28 * bulk), BODY, 0.15, True, tex=tex)
+        raise_ = _pose(pose, "arm")
+        for pair in range(d["arms"]):
+            oy = -pair * 0.42 * th
+            ox = pair * 0.06 * bulk
+            ar = d["arm_r"] * (1.0 - 0.1 * pair)
+            ln = d["arm_len"] * (1.0 - 0.15 * pair)
+            sh = V(sx + ox, sy + oy, 0.0)
+            el = sh + V(0.16 + d["arm_spread"], -0.52 * ln + raise_ * 0.15, 0.08 + raise_ * 0.3)
+            wr = el + V(0.02 + d["arm_spread"] * 0.4, -0.42 * ln + raise_ * 0.2, 0.32 + raise_ * 0.42)
+            M.cone(sh, el, ar * 1.1, ar * 0.9, BODY, 0.1, True, tex=tex)
+            M.cone(el, wr, ar * 0.95, ar * 1.12, BODY, 0.1, True, tex=tex)
+            parts.hand(M, wr, d["hand"], d["hand_size"] * (1.0 - 0.12 * pair), True)
+            if pair == 0:
+                A["hand"] = wr
+        # neck and head
+        hc = V(0, th + 0.42 + d["neck"] + _pose(pose, "head_dy") * 0.5, 0.26 + _pose(pose, "head_dz") * 0.4)
+        M.cone((0, th * 0.85, 0.05), hc - V(0, 0.1, 0.0), 0.28 * bulk, 0.24 * d["head_s"], BODY, 0.15, tex=tex)
+        face = parts.head(M, d["head"], hc, d["head_s"], jaw=_pose(pose, "jaw"), tex=tex, **d["head_kw"])
+        A["head"] = hc
+        # back decorations
+        back = d["back"]
+        if back:
+            kind = back[0]
+            if kind == "spikes":
+                n, size = back[1], back[2]
+                pts = [(0, th * (1.0 - 0.55 * i / max(n - 1, 1)), -0.36 * bulk - 0.05 * i) for i in range(n)]
+                parts.row_spikes(M, pts, size, 0.11 * bulk, (0, 1.0, -0.8), BONE, 0.3)
+            elif kind == "plates":
+                n, size = back[1], back[2]
+                for i in range(n):
+                    y = th * (1.0 - 0.6 * i / max(n - 1, 1))
+                    M.ell((0, y, -0.38 * bulk), (0.1 * size, 0.2 * size, 0.4 * size), BONE, 0.04)
+            elif kind == "shell":
+                M.ell((0, 0.5 * th, -0.32 * bulk), (0.62 * bulk, 0.64 * th, 0.36 * bulk), ACCENT, 0.15, tex=back[1] if len(back) > 1 else None)
+    # ---- tail
+    t = d["tail"]
+    if t:
+        tt = dict(t)
+        kind = tt.pop("kind", "plain")
+        tt["sway"] = tt.get("sway", 0.0) + _pose(pose, "tail")
+        parts.tail(M, (0, L + 0.05, -0.2), kind, tex=tex, **tt)
+    M.face = face
+    if d["hook"]:
+        d["hook"](M, pose, A)
+    M.A = A
 
 
-# =============================================================================================
-# spine and back decorations shared by the plans
-# =============================================================================================
-def spikes_along(sc, a, count, size, t0=0.05, t1=0.95, fill=2, back_only=False):
-    """Triangular spikes standing up from the back line of the quad anchor dict."""
-    for i in range(count):
-        t = t0 + (t1 - t0) * (i + 0.5) / count
-        x, y = a["back"](t)
-        sm = sc.mask()
-        sc.spike(sm, x, y + 1.5, x + 1.2, y - size * (0.8 + 0.4 * math.sin(math.pi * t)), 3.6 + size * 0.15)
-        sc.paint(sm, fill=fill, shade=None)
+PLANS = {"biped": biped}

@@ -4,6 +4,8 @@ Structure: start area (New Bark Town to Cherrygrove, vanilla looking) then Areas
 
 Premise: Finnegan overdosed and, in his dying slumber, rewrote physical reality. He invited Ahriman to corrupt Johto into a mismatched world with stretched time zones and clashing cultures. That is why each area follows a different philosophy.
 
+Fourth evolutions (author lore): the fourth stage of every line exists only because Finnegan has properly manifested into the world. Reality used to allow three stages, and the stretched, corrupted world is what makes the fourth possible. Design consequence: fourth stages are drawn bigger and more menacing than earlier stages, as if reality itself has been bent to grow them.
+
 Area 1, the cathedral megacity. A New York style city of towers and a vast cathedral. Corrupt priests and policemen. Theme, power, hypocrisy and poverty under glamour.
 Area 2, the commune. Hunter-gatherers with no large cities, no body shame, plenty of food and little class struggle. Theme, abundance and honesty, and what a killer does to a place with no locks.
 Area 3, the robot state. A totalitarian city whose mayor is a robot and where humans are the oppressed. People are shamed for bonds with the genetically incompatible, there is no place for love, and it runs as a gene farm that executes the wrong couples' children. Theme, control and love denied.
