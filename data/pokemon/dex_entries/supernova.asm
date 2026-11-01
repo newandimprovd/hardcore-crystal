@@ -3,4 +3,6 @@
 
 	db   "It outshines its"
 	next "own funeral and"
-	next "will outlive it.@"
+	next "will outlive it."
+
+	page "@"

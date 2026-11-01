@@ -3,4 +3,6 @@
 
 	db   "A loud pack of"
 	next "one. Where it"
-	next "walks, ash obeys.@"
+	next "walks, ash obeys."
+
+	page "@"

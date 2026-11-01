@@ -49,6 +49,10 @@ for nm in names:
     print(nm, "selected", species_at(cur_index()), "want", want)
     t.press("a", hold=4, wait=120)
     t.shot(f"{outdir}/{nm}_1.png", 3)
+    if os.environ.get("DEX_ANIM"):
+        for k in range(int(os.environ["DEX_ANIM"])):
+            t.tick(9)
+            t.shot(f"{outdir}/{nm}_a{k}.png", 3)
     t.press("a", hold=4, wait=60)   # next page of text
     t.tick(60)
     t.shot(f"{outdir}/{nm}_2.png", 3)

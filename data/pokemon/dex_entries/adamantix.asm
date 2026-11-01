@@ -2,4 +2,6 @@
 	dw 2906, 26000 ; height, weight
 
 	db   "A mining accident"
-	next "that kept growing.@"
+	next "that kept growing."
+
+	page "@"

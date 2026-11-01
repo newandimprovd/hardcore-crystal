@@ -428,9 +428,11 @@ def dex_text(rec):
     p1, p2 = lines[:3], lines[3:]
     out = [f'\tdb "{nd["cat"]}@" ; species name', f"\tdw {height}, {weight} ; height, weight", ""]
     for i, ln in enumerate(p1):
-        end = "@" if (not p2 and i == len(p1) - 1) else ""
-        out.append(f'\tdb   "{ln}{end}"' if i == 0 else f'\tnext "{ln}{end}"')
-    if p2:
+        out.append(f'\tdb   "{ln}"' if i == 0 else f'\tnext "{ln}"')
+    if not p2:
+        # the Pokedex always shows a second page, so a short entry gets an empty one (otherwise it would print the next entry's bytes)
+        out += ["", '\tpage "@"']
+    else:
         out.append("")
         for i, ln in enumerate(p2):
             end = "@" if i == len(p2) - 1 else ""
@@ -648,11 +650,15 @@ def gen_gen1_order():
 # ---------------------------------------------------------------------------------------------
 # own art (species drawn by tools/hardcore/sprites/*.py)
 # ---------------------------------------------------------------------------------------------
+GEN_PICS_PER_SECTION = 3
+
+
 def gen_art(L, vsp):
     sys.path.insert(0, str(HERE))
     import importlib
     arts = [r for r in L if r["new"] and r["nd"].get("art")]
     pics, anims, idles, bitmasks, frames = [], [], [], [], []
+    gpics = []
     for r in arts:
         mod = importlib.import_module("sprites." + r["nd"]["art"])
         d = f"gfx/pokemon/{r['slug']}"
@@ -664,8 +670,11 @@ def gen_art(L, vsp):
         sh = r["nd"]["shiny"]
         write(f"{d}/shiny.pal", "".join(f"\tRGB {c[0]:02d}, {c[1]:02d}, {c[2]:02d}\n" for c in sh))
         L_ = r["label"]
-        pics.append(f'{L_}Frontpic:  INCBIN "{d}/front.animated.2bpp.lz"')
-        pics.append(f'{L_}Backpic:   INCBIN "{d}/back.2bpp.lz"')
+        pair = [f'{L_}Frontpic:  INCBIN "{d}/front.animated.2bpp.lz"', f'{L_}Backpic:   INCBIN "{d}/back.2bpp.lz"']
+        if r["nd"]["art"] == "gen":
+            gpics.append(pair)
+        else:
+            pics += pair
         anims.append(f'{L_}Animation: INCLUDE "{d}/anim.asm"')
         idles.append(f'{L_}AnimationIdle: INCLUDE "{d}/anim_idle.asm"')
         bitmasks.append(f'{L_}Bitmasks: INCLUDE "{d}/bitmask.asm"')
@@ -675,6 +684,12 @@ def gen_art(L, vsp):
     write("gfx/pokemon/hc_anims.asm", hdr + "\n".join(anims + [""] + idles + [""] + bitmasks) + "\n")
     write("gfx/pokemon/hc_frames.asm", hdr + "\n".join(frames) + "\n")
     patch("gfx/pics.asm", 'SECTION "Pics 20", ROMX\n', 'SECTION "Pics 20", ROMX\n\nINCLUDE "gfx/pokemon/hc_pics.asm"\n', "hc_pics")
+    # generated creature pictures: small floating sections (three species each) that the linker packs into the free space of any bank
+    secs = []
+    for k in range(0, len(gpics), GEN_PICS_PER_SECTION):
+        secs.append(f'SECTION "HC Pics {k // GEN_PICS_PER_SECTION + 1}", ROMX\n' + "\n".join(l for pr in gpics[k:k + GEN_PICS_PER_SECTION] for l in pr) + "\n")
+    write("gfx/pokemon/hc_pic_sections.asm", hdr + "\n".join(secs))
+    patch("gfx/pics.asm", 'SECTION "Pics 21", ROMX\n', 'INCLUDE "gfx/pokemon/hc_pic_sections.asm"\n\nSECTION "Pics 21", ROMX\n', "hc_pic_sections")
     patch("main.asm", 'INCLUDE "gfx/pokemon/unown_bitmasks.asm"\n',
           'INCLUDE "gfx/pokemon/unown_bitmasks.asm"\nINCLUDE "gfx/pokemon/hc_anims.asm"\n', "hc_anims")
     patch("main.asm", 'INCLUDE "gfx/pokemon/johto_frames.asm"\n',
@@ -693,7 +708,21 @@ def patch(path, old, new, marker):
     p.write_text(t.replace(old, new, 1))
 
 
+def patch_fixpicbank():
+    """Pictures may live in any bank: the bank byte of a pic pointer is BANK - PICS_FIX, so FixPicBank just adds PICS_FIX back."""
+    p = ROOT / "engine/gfx/load_pics.asm"
+    t = p.read_text()
+    if "HC: any bank" in t:
+        return
+    a = t.index("FixPicBank:\n")
+    b = t.index("GSIntro_GetMonFrontpic:")
+    new = ("FixPicBank:\n; HC: any bank. The pointer tables store BANK - PICS_FIX, so the bank is the byte plus PICS_FIX.\n\n"
+           "EXPORT DEF PICS_FIX EQU $36\n\n\tadd PICS_FIX\n\tret\n\n")
+    p.write_text(t[:a] + new + t[b:])
+
+
 def engine_patches():
+    patch_fixpicbank()
     patch("engine/gfx/pic_animation.asm",
           """	ld a, [wPokeAnimSpecies]
 	cp JOHTO_POKEMON

@@ -50,7 +50,7 @@ AnimationPointers:
 	dw VenonatAnimation
 	dw VenomothAnimation
 	dw VenusaurAnimation
-	dw CharizardAnimation
+	dw EmberwyrmAnimation
 	dw MeowthAnimation
 	dw PersianAnimation
 	dw PsyduckAnimation
@@ -105,9 +105,9 @@ AnimationPointers:
 	dw RaticateAnimation
 	dw CuboneAnimation
 	dw MarowakAnimation
-	dw PidgeotAnimation
+	dw RavenousAnimation
 	dw ButterfreeAnimation
-	dw BeedrillAnimation
+	dw BeehemothAnimation
 	dw KoffingAnimation
 	dw WeezingAnimation
 	dw RhyhornAnimation
@@ -118,7 +118,7 @@ AnimationPointers:
 	dw HorseaAnimation
 	dw SeadraAnimation
 	dw FearowAnimation
-	dw ArbokAnimation
+	dw KingcobraAnimation
 	dw StaryuAnimation
 	dw StarmieAnimation
 	dw ArbokAnimation
@@ -150,7 +150,7 @@ AnimationPointers:
 	dw DragonairAnimation
 	dw DragoniteAnimation
 	dw PrimeapeAnimation
-	dw MachampAnimation
+	dw TitanfistAnimation
 	dw ChikoritaAnimation
 	dw BayleefAnimation
 	dw MeganiumAnimation
@@ -165,17 +165,17 @@ AnimationPointers:
 	dw HoothootAnimation
 	dw NoctowlAnimation
 	dw AlakazamAnimation
-	dw GolemAnimation
+	dw MonolithAnimation
 	dw SpinarakAnimation
 	dw AriadosAnimation
 	dw CrobatAnimation
 	dw SteelixAnimation
-	dw SteelixAnimation
+	dw SkyscraperAnimation
 	dw PichuAnimation
 	dw CleffaAnimation
 	dw IgglybuffAnimation
-	dw ArcanineAnimation
-	dw ArcanineAnimation
+	dw HellhoundAnimation
+	dw GatehoundAnimation
 	dw NinetalesAnimation
 	dw NinetalesAnimation
 	dw MareepAnimation
@@ -185,7 +185,7 @@ AnimationPointers:
 	dw MarillAnimation
 	dw AzumarillAnimation
 	dw RapidashAnimation
-	dw RapidashAnimation
+	dw DreadsteedAnimation
 	dw HoppipAnimation
 	dw SkiploomAnimation
 	dw JumpluffAnimation
@@ -196,7 +196,7 @@ AnimationPointers:
 	dw MagnetonAnimation
 	dw Porygon2Animation
 	dw Porygon2Animation
-	dw GengarAnimation
+	dw ApparitionAnimation
 	dw MarowakAnimation
 	dw MarowakAnimation
 	dw MukAnimation
@@ -221,7 +221,7 @@ AnimationPointers:
 	dw KinglerAnimation
 	dw SwinubAnimation
 	dw PiloswineAnimation
-	dw KinglerAnimation
+	dw CarcinizeAnimation
 	dw StarmieAnimation
 	dw StarmieAnimation
 	dw KingdraAnimation
@@ -243,8 +243,8 @@ AnimationPointers:
 	dw JynxAnimation
 	dw BlisseyAnimation
 	dw JynxAnimation
-	dw DragoniteAnimation
-	dw TyranitarAnimation
+	dw WyrmkingAnimation
+	dw TyphoneusAnimation
 	dw LarvitarAnimation
 	dw PupitarAnimation
 	dw TyranitarAnimation

@@ -3,4 +3,6 @@
 
 	db   "A good dog. Sad"
 	next "that the good dog"
-	next "got set on fire.@"
+	next "got set on fire."
+
+	page "@"

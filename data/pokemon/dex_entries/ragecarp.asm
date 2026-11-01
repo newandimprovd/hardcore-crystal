@@ -3,4 +3,6 @@
 
 	db   "It is still a fish"
 	next "and it is furious"
-	next "about it.@"
+	next "about it."
+
+	page "@"

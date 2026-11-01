@@ -8,7 +8,7 @@ import math
 import numpy as np
 
 import sdf
-from sdf import ACCENT, BODY, BONE, DARK, EYE, Model
+from sdf import ACCENT, BODY, BONE, DARK, EYE, MEMB, Model
 
 
 def V(*a):
@@ -127,6 +127,9 @@ def tail(M, base, kind="plain", length=1.2, thick=0.22, curl=0.3, up=0.0, sway=0
             M.spike(p + V(0, 0.05, 0), p + V(0, 0.35, -0.15), 0.07, BONE)
     elif kind == "flame":
         flame(M, tip, 0.45, mat=tip_mat)
+    elif kind == "head":
+        with M.frame(tip, (-10, 180, 0)):
+            M.faces.append(head(M, "dragon", (0, 0, 0), 1.0, mat=mat, tex=tex, tag="tail_", fangs=1.0))
 
 
 def spline_pt(pts, s):
@@ -144,36 +147,63 @@ def flame(M, base, size, mat=ACCENT, up=(0, 1, -0.3), k=0.12):
 
 
 # ============================================================================================ wings
-def wing_bat(M, shoulder, span=1.6, height=1.0, back=0.5, mat=ACCENT, bone_mat=BODY, mirror=True, fold=0.0, tex=None):
-    """Bat or dragon wing: arm bone, three finger bones fanning out, membrane triangles between them."""
+def wing_bat(M, shoulder, span=1.6, height=1.1, back=0.5, mat=MEMB, bone_mat=BODY, mirror=True, fingers=4, flap=0.0, tex=None, scallop=0.14,
+             thick=0.03):
+    """Bat or dragon wing: arm bone up and out, `fingers` finger bones fanning from the wrist, scalloped membrane between them.  flap -1..1."""
     s = V(*shoulder)
-    elbow = s + V(span * 0.38, height * 0.35, -back * 0.2)
-    tip0 = s + V(span * 0.9 * (1 - 0.5 * fold), height * 1.05, -back * 0.6)
-    fingers = [tip0,
-               s + V(span * 1.0 * (1 - 0.5 * fold), height * 0.45, -back * 1.0),
-               s + V(span * 0.82 * (1 - 0.5 * fold), -height * 0.1, -back * 1.2),
-               s + V(span * 0.5, -height * 0.35, -back * 0.9)]
-    wrist = elbow + (tip0 - elbow) * 0.25
-    M.cone(s, elbow, 0.1, 0.07, bone_mat, 0.05, mirror)
-    M.cone(elbow, wrist, 0.07, 0.05, bone_mat, 0.04, mirror)
-    prev = None
-    for f in fingers:
-        M.cone(wrist, f, 0.045, 0.012, bone_mat, 0.02, mirror)
-        if prev is not None:
-            M.tri(wrist, prev, f, 0.03, mat, 0.0, mirror, tex=tex)
-        prev = f
-    M.tri(s + V(0, -0.05, -0.1), wrist, fingers[-1], 0.03, mat, 0.0, mirror, tex=tex)
-    M.spike(wrist, wrist + V(0.05, 0.22, 0.1), 0.045, BONE, 0.02, mirror)
+    elbow = s + V(span * 0.30, height * (0.55 + 0.2 * flap), -back * 0.25)
+    wrist = elbow + V(span * 0.32, height * (0.18 + 0.2 * flap), -back * 0.2)
+    M.cone(s, elbow, 0.13, 0.1, bone_mat, 0.04, mirror)
+    M.cone(elbow, wrist, 0.1, 0.07, bone_mat, 0.03, mirror)
+    tips = []
+    for i in range(fingers):
+        u = i / max(fingers - 1, 1)
+        ang = math.radians(70 - 150 * u + 35 * flap)  # from up-and-out to down-and-out
+        ln = span * (0.62 + 0.28 * math.sin(math.pi * (0.25 + 0.6 * u))) * (1.0 - 0.18 * u)
+        tips.append(wrist + V(math.cos(ang) * ln, math.sin(ang) * ln, -back * (0.3 + 0.5 * u)))
+    for tp in tips:
+        M.cone(wrist, tp, 0.06, 0.012, bone_mat, 0.02, mirror)
+    for i in range(len(tips) - 1):
+        a, b = tips[i], tips[i + 1]
+        mid = (a + b) / 2
+        mid = mid + (wrist - mid) * scallop * 1.6
+        M.tri(wrist, a, mid, thick, mat, 0.0, mirror, tex=tex)
+        M.tri(wrist, mid, b, thick, mat, 0.0, mirror, tex=tex)
+    # inner membrane down to the body
+    last = tips[-1]
+    low = s + V(0.05, -height * 0.9, -back * 0.2)
+    M.tri(wrist, last, low, thick, mat, 0.0, mirror, tex=tex)
+    M.tri(s + V(0, -0.1, -0.05), wrist, low, thick, mat, 0.0, mirror, tex=tex)
+    M.spike(wrist, wrist + V(0.06, 0.34, 0.12), 0.06, BONE, 0.02, mirror)
+
+
+def wing_feather(M, shoulder, span=1.6, height=1.0, back=0.5, rows=2, n=6, mat=BODY, alt=MEMB, mirror=True, flap=0.0, droop=0.9, tex=None):
+    """A feathered wing: an arm bone and rows of long blade-like feathers fanning down and out."""
+    s = V(*shoulder)
+    elbow = s + V(span * 0.32, height * (0.5 + 0.2 * flap), -back * 0.25)
+    wrist = elbow + V(span * 0.34, height * (0.22 + 0.25 * flap), -back * 0.2)
+    M.cone(s, elbow, 0.15, 0.12, mat, 0.05, mirror)
+    M.cone(elbow, wrist, 0.12, 0.08, mat, 0.04, mirror)
+    for row in range(rows):
+        for i in range(n):
+            u = i / max(n - 1, 1)
+            base = s + (wrist - s) * (0.15 + 0.85 * u)
+            ang = math.radians(10 - 85 * (1 - u) * droop - 30 * row * 0.3 + 25 * flap)
+            ln = span * (0.55 + 0.35 * u) * (1.0 - 0.28 * row)
+            tip = base + V(math.cos(ang) * ln * 0.55, math.sin(ang) * ln, -back * (0.4 + 0.3 * row) - 0.05 * i)
+            wdt = 0.27 * (1.0 - 0.25 * row)
+            M.tri(base + V(-wdt, 0, -0.04 * row), base + V(wdt, 0, -0.04 * row), tip, 0.04, mat if (i + row) % 2 == 0 else alt, 0.0, mirror, tex=tex)
 
 
 # ============================================================================================ heads
-def head(M, kind, c, s=1.0, jaw=0.0, brow=1.0, ears=None, horns_=None, eye="angry", teeth=3, mat=BODY, accent=ACCENT, tex=None, snout=1.0):
+def head(M, kind, c, s=1.0, jaw=0.0, brow=1.0, ears=None, horns_=None, eye="angry", teeth=3, mat=BODY, accent=ACCENT, tex=None, snout=1.0, fangs=0.0,
+         cheek=0.0, eye_col=0, crest=None, tag=""):
     """A head centred at c (cranium centre), scale s.  Registers the anchors eye_l, eye_r, mouth_a, mouth_b and returns the face dict."""
     c = V(*c)
 
     def at(x, y, z):
         return c + V(x, y, z) * s
-    face = dict(eye=eye, teeth=teeth, size=1.0 + 0.3 * (s > 1.2))
+    face = dict(eye=eye, teeth=teeth, size=1.0 + 0.3 * (s > 1.2), fwd=[float(x) for x in (M.R @ V(0, 0, 1))])
     if kind == "beast":
         M.ell(c, (0.38 * s, 0.34 * s, 0.38 * s), mat, 0.15, tex=tex)
         M.ell(at(0, -0.10, 0.34), (0.23 * s, 0.15 * s, 0.26 * s * snout), mat, 0.1, tex=tex)
@@ -266,16 +296,24 @@ def head(M, kind, c, s=1.0, jaw=0.0, brow=1.0, ears=None, horns_=None, eye="angr
         mouth = ((0.2, -0.16, 0.36),)
     else:
         raise ValueError(kind)
+    if fangs:
+        mz = mouth[0][2] if mouth else 0.4
+        M.spike(at(0.14, -0.26 - 0.1 * jaw, mz * 0.8), at(0.2, -0.26 + 0.34 * fangs, mz * 0.86), 0.07 * s, BONE, 0.01, True)
+    if cheek:
+        M.spike(at(0.3, -0.12, 0.05), at(0.62 * cheek, -0.1, -0.18), 0.09 * s, BONE, 0.02, True)
+    if crest:
+        row_spikes(M, [at(0, 0.3 - 0.05 * i, 0.1 - 0.16 * i) for i in range(4)], 0.42 * crest * s, 0.07 * s, (0, 1, -0.7), BONE, 0.2)
+    face['eye_col'] = eye_col
     if eyes:
         ex, ey, ez = eyes[0]
-        M.anchor("eye_l", at(ex, ey, ez))
-        M.anchor("eye_r", at(-ex, ey, ez))
-        face["eyes"] = ["eye_l", "eye_r"]
+        M.anchor(tag + "eye_l", at(ex, ey, ez))
+        M.anchor(tag + "eye_r", at(-ex, ey, ez))
+        face["eyes"] = [tag + "eye_l", tag + "eye_r"]
     if mouth:
         mx, my, mz = mouth[0]
-        M.anchor("mouth_a", at(-mx, my, mz))
-        M.anchor("mouth_b", at(mx, my, mz))
-        face["mouth"] = ["mouth_a", "mouth_b"]
+        M.anchor(tag + "mouth_a", at(-mx, my, mz))
+        M.anchor(tag + "mouth_b", at(mx, my, mz))
+        face["mouth"] = [tag + "mouth_a", tag + "mouth_b"]
     # ears
     if ears == "point":
         M.cone(at(0.2, 0.22, 0.0), at(0.34, 0.62, -0.12), 0.1 * s, 0.015 * s, mat, 0.05, True, tex=tex)

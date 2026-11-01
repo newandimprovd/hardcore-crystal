@@ -11,7 +11,7 @@ BAYER = np.array([[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]])
 LIGHT = np.array([-0.5, 0.62, 0.6])
 LIGHT = LIGHT / np.linalg.norm(LIGHT)
 
-STYLE = dict(term=0.40, core=0.08, hi=0.92, hi_soft=0.06, outline_depth=0.18)
+STYLE = dict(term=0.40, band=0.06, core=0.07, hi=0.93, hi_soft=0.05, outline_depth=0.18, part_depth=0.05)
 
 
 def reduce(buf, model):
@@ -43,9 +43,11 @@ def reduce(buf, model):
     pos_n = pos[ii, jj, near]
     pm = np.array([p.mat for p in model.prims] + [0], np.int8)
     pt = np.array([p.tex for p in model.prims] + [-1], np.int16)
+    pg = np.array([p.grp for p in model.prims] + [0], np.int32)
     mat = pm[pid_n]
     tex = pt[pid_n]
-    return dict(cover=cover, depth=dmin, normal=normal, pos=pos_n, mat=mat, tex=tex, n=n)
+    grp = pg[pid_n]
+    return dict(cover=cover, depth=dmin, normal=normal, pos=pos_n, mat=mat, tex=tex, grp=grp, n=n)
 
 
 def vnoise(p):
@@ -86,12 +88,23 @@ def tex_mask(spec, pos):
     raise ValueError(kind)
 
 
+RAMPS = {
+    # material: (highlight, lit, shade, core).  Palette indices: 0 white (glow, highlights, bone), 1 main colour, 2 shade/second colour, 3 black.
+    0: (0, 1, 2, 3),   # BODY
+    1: (0, 0, 1, 2),   # ACCENT: pale belly and plates, main colour in their shade
+    4: (0, 0, 1, 2),   # BONE
+    5: (1, 2, 2, 3),   # MEMB: wing membrane and thin skin, the second colour
+}
+
+
 def shade(red, model, style=None):
-    """Palette-index image (n x n) from the reduced buffers: cel shading (flat light side, hatched terminator, black core shadow, small
-    highlights), material colours, textures and a black outline."""
+    """Palette-index image (n x n) from the reduced buffers.  Cel shading in the style of the vanilla sprites: a flat lit colour, a flat shade
+    colour behind a narrow dithered terminator, a few white highlight pixels, black only for the outline, creases and the deepest shadow."""
     st = dict(STYLE)
     if style:
         st.update(style)
+    ramps = dict(RAMPS)
+    ramps.update(getattr(model, "ramps", {}) or {})
     n = red["n"]
     cover = red["cover"]
     solid = cover >= 0.5
@@ -101,25 +114,23 @@ def shade(red, model, style=None):
     bay = np.tile(BAYER, (reps, reps))[:n, :n]
     yy, xx = np.mgrid[0:n, 0:n]
     checker = ((xx + yy) % 2 == 0)
-    body = np.ones((n, n), np.int8)
-    body = np.where(t < st["term"], np.where(checker, 3, 1), body)
-    body = np.where(t < st["core"] * 2.5, np.where(bay < 0.75, 3, 1), body)
-    body = np.where(t < st["core"], 3, body)
-    hl = np.clip((t - st["hi"]) / st["hi_soft"], 0, 1)
-    body = np.where((t >= st["hi"]) & (hl > bay), 0, body)
-    accent = np.where(body == 1, 2, body)
-    bone = np.where(t < st["term"], np.where(checker, 1, 0), 0)
-    bone = np.where(t < st["core"], 1, bone)
+    band = st["band"]
+    # tone level per pixel: 3 highlight, 2 lit, 1 shade, 0 core
+    u = np.clip((t - (st["term"] - band)) / (2 * band), 0.0, 1.0)
+    lit = u > bay
+    level = np.where(lit, 2, 1)
+    level = np.where(t < st["core"], np.where(checker & (t > st["core"] * 0.5), 1, 0), level)
+    level = np.where((t >= st["hi"]) & (np.clip((t - st["hi"]) / st["hi_soft"], 0, 1) > bay), 3, level)
     mat = red["mat"]
     img = np.zeros((n, n), np.int8)
-    img = np.where(mat == sdf.BODY, body, img)
-    img = np.where(mat == sdf.ACCENT, accent, img)
+    for m, (h, l, s_, c) in ramps.items():
+        tone = np.choose(level, [c, s_, l, h])
+        img = np.where(mat == m, tone, img)
     img = np.where(mat == sdf.DARK, 3, img)
-    img = np.where(mat == sdf.EYE, 2, img)
-    img = np.where(mat == sdf.BONE, bone, img)
+    img = np.where(mat == sdf.EYE, 0, img)
     # textures
     for tid, spec in enumerate(model.texs):
-        sel = solid & (red["tex"] == tid) & (t >= st["core"] * 2.5)
+        sel = solid & (red["tex"] == tid) & (t >= st["core"] * 1.5)
         if sel.any():
             m, colour = tex_mask(spec, red["pos"])
             img = np.where(sel & m, np.int8(colour), img)
@@ -134,6 +145,8 @@ def shade(red, model, style=None):
         nd = dpad[1 + dy:1 + dy + n, 1 + dx:1 + dx + n]
         line |= solid & ~nb
         line |= solid & nb & (nd < d - st["outline_depth"])
+        gp = np.pad(red["grp"], 1, constant_values=-1)[1 + dy:1 + dy + n, 1 + dx:1 + dx + n]
+        line |= solid & nb & (gp != red["grp"]) & (nd < d - st["part_depth"])
     img = np.where(line, 3, img).astype(np.int8)
     return img
 

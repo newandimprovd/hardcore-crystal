@@ -50,7 +50,7 @@ BitmasksPointers:
 	dw VenonatBitmasks
 	dw VenomothBitmasks
 	dw VenusaurBitmasks
-	dw CharizardBitmasks
+	dw EmberwyrmBitmasks
 	dw MeowthBitmasks
 	dw PersianBitmasks
 	dw PsyduckBitmasks
@@ -105,9 +105,9 @@ BitmasksPointers:
 	dw RaticateBitmasks
 	dw CuboneBitmasks
 	dw MarowakBitmasks
-	dw PidgeotBitmasks
+	dw RavenousBitmasks
 	dw ButterfreeBitmasks
-	dw BeedrillBitmasks
+	dw BeehemothBitmasks
 	dw KoffingBitmasks
 	dw WeezingBitmasks
 	dw RhyhornBitmasks
@@ -118,7 +118,7 @@ BitmasksPointers:
 	dw HorseaBitmasks
 	dw SeadraBitmasks
 	dw FearowBitmasks
-	dw ArbokBitmasks
+	dw KingcobraBitmasks
 	dw StaryuBitmasks
 	dw StarmieBitmasks
 	dw ArbokBitmasks
@@ -150,7 +150,7 @@ BitmasksPointers:
 	dw DragonairBitmasks
 	dw DragoniteBitmasks
 	dw PrimeapeBitmasks
-	dw MachampBitmasks
+	dw TitanfistBitmasks
 	dw ChikoritaBitmasks
 	dw BayleefBitmasks
 	dw MeganiumBitmasks
@@ -165,17 +165,17 @@ BitmasksPointers:
 	dw HoothootBitmasks
 	dw NoctowlBitmasks
 	dw AlakazamBitmasks
-	dw GolemBitmasks
+	dw MonolithBitmasks
 	dw SpinarakBitmasks
 	dw AriadosBitmasks
 	dw CrobatBitmasks
 	dw SteelixBitmasks
-	dw SteelixBitmasks
+	dw SkyscraperBitmasks
 	dw PichuBitmasks
 	dw CleffaBitmasks
 	dw IgglybuffBitmasks
-	dw ArcanineBitmasks
-	dw ArcanineBitmasks
+	dw HellhoundBitmasks
+	dw GatehoundBitmasks
 	dw NinetalesBitmasks
 	dw NinetalesBitmasks
 	dw MareepBitmasks
@@ -185,7 +185,7 @@ BitmasksPointers:
 	dw MarillBitmasks
 	dw AzumarillBitmasks
 	dw RapidashBitmasks
-	dw RapidashBitmasks
+	dw DreadsteedBitmasks
 	dw HoppipBitmasks
 	dw SkiploomBitmasks
 	dw JumpluffBitmasks
@@ -196,7 +196,7 @@ BitmasksPointers:
 	dw MagnetonBitmasks
 	dw Porygon2Bitmasks
 	dw Porygon2Bitmasks
-	dw GengarBitmasks
+	dw ApparitionBitmasks
 	dw MarowakBitmasks
 	dw MarowakBitmasks
 	dw MukBitmasks
@@ -221,7 +221,7 @@ BitmasksPointers:
 	dw KinglerBitmasks
 	dw SwinubBitmasks
 	dw PiloswineBitmasks
-	dw KinglerBitmasks
+	dw CarcinizeBitmasks
 	dw StarmieBitmasks
 	dw StarmieBitmasks
 	dw KingdraBitmasks
@@ -243,8 +243,8 @@ BitmasksPointers:
 	dw JynxBitmasks
 	dw BlisseyBitmasks
 	dw JynxBitmasks
-	dw DragoniteBitmasks
-	dw TyranitarBitmasks
+	dw WyrmkingBitmasks
+	dw TyphoneusBitmasks
 	dw LarvitarBitmasks
 	dw PupitarBitmasks
 	dw TyranitarBitmasks

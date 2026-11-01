@@ -12,7 +12,7 @@ import math
 import numpy as np
 
 # material ids
-BODY, ACCENT, DARK, EYE, BONE = 0, 1, 2, 3, 4
+BODY, ACCENT, DARK, EYE, BONE, MEMB = 0, 1, 2, 3, 4, 5
 
 
 def _len(v):
@@ -41,10 +41,10 @@ def smin(a, b, k):
 
 
 class Prim:
-    __slots__ = ("kind", "a", "b", "r", "mat", "k", "rot", "extra", "name", "tex")
+    __slots__ = ("kind", "a", "b", "r", "mat", "k", "rot", "extra", "name", "tex", "grp")
 
-    def __init__(self, kind, a, b, r, mat, k, rot=None, extra=None, name="", tex=-1):
-        self.kind, self.mat, self.k, self.rot, self.extra, self.name, self.tex = kind, mat, k, rot, extra, name, tex
+    def __init__(self, kind, a, b, r, mat, k, rot=None, extra=None, name="", tex=-1, grp=0):
+        self.kind, self.mat, self.k, self.rot, self.extra, self.name, self.tex, self.grp = kind, mat, k, rot, extra, name, tex, grp
         self.a = np.asarray(a, float)
         self.b = None if b is None else np.asarray(b, float)
         self.r = r
@@ -65,6 +65,9 @@ class Model:
         self.texs = []
         self.anchors = {}
         self.face = None
+        self.grp = 0
+        self.ramps = {}
+        self.faces = []
 
     # ---- frames
     def frame(self, origin=(0, 0, 0), rot=None):
@@ -76,6 +79,11 @@ class Model:
     def anchor(self, name, p):
         """Remember a point (local coordinates) under a name; used by the face decals and by plans that attach things."""
         self.anchors[name] = self.tp(p)
+
+    def part(self):
+        """Start a new part: primitives added from now on share a group id; the shader inks a line where two different parts overlap."""
+        self.grp += 1
+        return self
 
     def texture(self, *spec):
         if spec not in self.texs:
@@ -99,7 +107,7 @@ class Model:
                 rr = self.R @ local
                 if rot is None and not m and np.allclose(rr, np.eye(3)):
                     rr = None
-            self.prims.append(Prim(kind, P(a), None if b is None else P(b), r, mat, k, rr, None if extra is None else P(extra), name, tid))
+            self.prims.append(Prim(kind, P(a), None if b is None else P(b), r, mat, k, rr, None if extra is None else P(extra), name, tid, self.grp + (1000 if m else 0)))
         return self
 
     def ell(self, c, r, mat=BODY, k=0.12, mirror=False, rot=None, name="", tex=None):

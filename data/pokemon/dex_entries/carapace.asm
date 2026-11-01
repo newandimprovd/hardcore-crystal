@@ -3,4 +3,6 @@
 
 	db   "It added rocks to"
 	next "its shell. Rocks"
-	next "do not mind.@"
+	next "do not mind."
+
+	page "@"

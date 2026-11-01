@@ -3,4 +3,6 @@
 
 	db   "It runs on punch"
 	next "cards and old"
-	next "grudges.@"
+	next "grudges."
+
+	page "@"

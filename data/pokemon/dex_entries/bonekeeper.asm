@@ -3,4 +3,6 @@
 
 	db   "It wears two"
 	next "skulls now. Both"
-	next "were fond of it.@"
+	next "were fond of it."
+
+	page "@"

@@ -3,4 +3,6 @@
 
 	db   "Its web has a"
 	next "login page. Flies"
-	next "keep signing up.@"
+	next "keep signing up."
+
+	page "@"

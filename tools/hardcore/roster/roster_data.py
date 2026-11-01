@@ -389,3 +389,21 @@ ALIAS = {
     "ELEKID": "PICHU", "MAGBY": "CHARMANDER", "MILTANK": "RHYDON", "RAIKOU": "PIKACHU",
     "ENTEI": "ARCANINE", "SUICUNE": "DEWGONG",
 }
+
+
+# --- species drawn by the generator in tools/hardcore/sprites (recipes.py holds plan, palette and shiny palette) -------------
+def _attach_generated():
+    import os
+    import sys
+    here = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sprites")
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    from recipes import RECIPES
+    for name, rec in RECIPES.items():
+        assert name in NEW, name
+        NEW[name]["art"] = "gen"
+        NEW[name]["pal"] = rec["pal"]
+        NEW[name]["shiny"] = rec["shiny"]
+
+
+_attach_generated()

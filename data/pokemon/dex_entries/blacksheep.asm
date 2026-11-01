@@ -3,4 +3,6 @@
 
 	db   "The flock shuns"
 	next "it. It shocks the"
-	next "flock anyway.@"
+	next "flock anyway."
+
+	page "@"

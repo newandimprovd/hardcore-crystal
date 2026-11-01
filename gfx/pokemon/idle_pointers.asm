@@ -50,7 +50,7 @@ AnimationIdlePointers:
 	dw VenonatAnimationIdle
 	dw VenomothAnimationIdle
 	dw VenusaurAnimationIdle
-	dw CharizardAnimationIdle
+	dw EmberwyrmAnimationIdle
 	dw MeowthAnimationIdle
 	dw PersianAnimationIdle
 	dw PsyduckAnimationIdle
@@ -105,9 +105,9 @@ AnimationIdlePointers:
 	dw RaticateAnimationIdle
 	dw CuboneAnimationIdle
 	dw MarowakAnimationIdle
-	dw PidgeotAnimationIdle
+	dw RavenousAnimationIdle
 	dw ButterfreeAnimationIdle
-	dw BeedrillAnimationIdle
+	dw BeehemothAnimationIdle
 	dw KoffingAnimationIdle
 	dw WeezingAnimationIdle
 	dw RhyhornAnimationIdle
@@ -118,7 +118,7 @@ AnimationIdlePointers:
 	dw HorseaAnimationIdle
 	dw SeadraAnimationIdle
 	dw FearowAnimationIdle
-	dw ArbokAnimationIdle
+	dw KingcobraAnimationIdle
 	dw StaryuAnimationIdle
 	dw StarmieAnimationIdle
 	dw ArbokAnimationIdle
@@ -150,7 +150,7 @@ AnimationIdlePointers:
 	dw DragonairAnimationIdle
 	dw DragoniteAnimationIdle
 	dw PrimeapeAnimationIdle
-	dw MachampAnimationIdle
+	dw TitanfistAnimationIdle
 	dw ChikoritaAnimationIdle
 	dw BayleefAnimationIdle
 	dw MeganiumAnimationIdle
@@ -165,17 +165,17 @@ AnimationIdlePointers:
 	dw HoothootAnimationIdle
 	dw NoctowlAnimationIdle
 	dw AlakazamAnimationIdle
-	dw GolemAnimationIdle
+	dw MonolithAnimationIdle
 	dw SpinarakAnimationIdle
 	dw AriadosAnimationIdle
 	dw CrobatAnimationIdle
 	dw SteelixAnimationIdle
-	dw SteelixAnimationIdle
+	dw SkyscraperAnimationIdle
 	dw PichuAnimationIdle
 	dw CleffaAnimationIdle
 	dw IgglybuffAnimationIdle
-	dw ArcanineAnimationIdle
-	dw ArcanineAnimationIdle
+	dw HellhoundAnimationIdle
+	dw GatehoundAnimationIdle
 	dw NinetalesAnimationIdle
 	dw NinetalesAnimationIdle
 	dw MareepAnimationIdle
@@ -185,7 +185,7 @@ AnimationIdlePointers:
 	dw MarillAnimationIdle
 	dw AzumarillAnimationIdle
 	dw RapidashAnimationIdle
-	dw RapidashAnimationIdle
+	dw DreadsteedAnimationIdle
 	dw HoppipAnimationIdle
 	dw SkiploomAnimationIdle
 	dw JumpluffAnimationIdle
@@ -196,7 +196,7 @@ AnimationIdlePointers:
 	dw MagnetonAnimationIdle
 	dw Porygon2AnimationIdle
 	dw Porygon2AnimationIdle
-	dw GengarAnimationIdle
+	dw ApparitionAnimationIdle
 	dw MarowakAnimationIdle
 	dw MarowakAnimationIdle
 	dw MukAnimationIdle
@@ -221,7 +221,7 @@ AnimationIdlePointers:
 	dw KinglerAnimationIdle
 	dw SwinubAnimationIdle
 	dw PiloswineAnimationIdle
-	dw KinglerAnimationIdle
+	dw CarcinizeAnimationIdle
 	dw StarmieAnimationIdle
 	dw StarmieAnimationIdle
 	dw KingdraAnimationIdle
@@ -243,8 +243,8 @@ AnimationIdlePointers:
 	dw JynxAnimationIdle
 	dw BlisseyAnimationIdle
 	dw JynxAnimationIdle
-	dw DragoniteAnimationIdle
-	dw TyranitarAnimationIdle
+	dw WyrmkingAnimationIdle
+	dw TyphoneusAnimationIdle
 	dw LarvitarAnimationIdle
 	dw PupitarAnimationIdle
 	dw TyranitarAnimationIdle

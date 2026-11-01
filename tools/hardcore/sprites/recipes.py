@@ -1,53 +1,73 @@
-"""Recipes of the generated creatures.  Every recipe is a dict: stage (3 or 4), plan (a function of plans.py), params, hooks, pal (body, accent as 5-bit
-RGB) and shiny.  Palettes come from THEMES unless a recipe gives its own."""
-import os
-import sys
+"""Species recipes for the generated creature sprites: plan + parameters + the two palette colours (5-bit RGB, body then shade/accent) and the
+shiny pair.  The key is the species name; gen.py renders them and roster_data.py reads pal and shiny from here (art = "gen").
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, HERE)
-import plans as P  # noqa: E402
-
-# (body, accent) in 5-bit RGB (0..31).  Index 1 and 2 of every sprite.
-THEMES = {
-    "swamp": ((10, 20, 12), (26, 8, 6)),
-    "ember": ((26, 14, 5), (30, 26, 6)),
-    "blood": ((22, 6, 8), (30, 24, 8)),
-    "bone": ((26, 24, 18), (22, 6, 6)),
-    "moss": ((12, 22, 9), (28, 28, 8)),
-    "abyss": ((8, 16, 20), (28, 4, 10)),
-    "steel": ((17, 19, 23), (28, 24, 6)),
-    "violet": ((17, 10, 24), (30, 22, 8)),
-    "ice": ((16, 24, 30), (30, 10, 20)),
-    "toxic": ((16, 10, 22), (22, 30, 6)),
-    "rust": ((22, 12, 8), (28, 22, 10)),
-    "ash": ((17, 17, 19), (28, 10, 6)),
-    "sun": ((30, 24, 8), (24, 8, 6)),
-    "rose": ((30, 16, 22), (22, 24, 30)),
-}
-
-
-def shiny_of(pal):
-    (r, g, b), (r2, g2, b2) = pal
-    return ((g, b, r), (min(31, b2 + 4), min(31, r2 + 2), g2))
-
-
+Palette slots of every picture: white (glow, highlights, bone), colour 1 (lit body), colour 2 (shade and second colour), black (outline).
+View overrides: front / back dicts with yaw, pitch, dist.
+"""
 RECIPES = {}
 
 
-def R(name, stage, plan, params=None, hooks=None, theme=None, pal=None, shiny=None, seed=1):
-    pal = pal or THEMES[theme]
-    RECIPES[name] = dict(name=name, stage=stage, plan=plan, params=params or {}, hooks=hooks, pal=pal, shiny=shiny or shiny_of(pal), seed=seed)
+def R(name, plan, params, pal, shiny, front=None, back=None, poses=None, fill=0.97):
+    assert name not in RECIPES, name
+    RECIPES[name] = dict(plan=plan, params=params, pal=pal, shiny=shiny, front=front or {}, back=back or {}, poses=poses, fill=fill)
 
 
-def get(name):
-    return RECIPES[name]
+# ---------------------------------------------------------------------------------------------- stage 4, checkpoint set
+R("TYPHONEUS", "biped",
+  dict(bulk=1.3, hunch=18, head="beast", head_s=1.7, head_kw=dict(horns_=("curved", 1.3), fangs=1.0, cheek=1.0), back=("spikes", 6, 0.65),
+       tail={"kind": "spike", "length": 1.8, "thick": 0.34}, hand="claw", hand_size=1.4, arms=1, tex=("cracks", 1.6, 0.045, 0)),
+  ((11, 14, 18), (4, 5, 10)), ((22, 11, 8), (9, 3, 3)))
+R("EMBERWYRM", "biped",
+  dict(bulk=1.0, hunch=8, head="dragon", head_s=1.75, head_kw=dict(horns_=("back", 1.3), fangs=1.0, cheek=1.0), hand="claw", hand_size=1.2,
+       wings=dict(kind="bat", span=1.8, height=1.3), tail={"kind": "flame", "length": 1.7, "thick": 0.32}, back=("spikes", 4, 0.4)),
+  ((30, 17, 5), (21, 4, 5)), ((24, 24, 30), (10, 10, 20)))
+R("HELLHOUND", "quad",
+  dict(bulk=1.15, head="beast", head_s=1.65, head_kw=dict(fangs=1.0, cheek=1.0, ears="point"), mane=1.2, back=("spikes", 7, 0.55),
+       tail={"kind": "flame", "length": 1.5, "thick": 0.28}),
+  ((9, 9, 12), (24, 4, 3)), ((26, 26, 28), (8, 12, 26)), front=dict(yaw=48), back=dict(yaw=-140))
+R("KINGCOBRA", "serpent",
+  dict(head="dragon", head_s=1.8, hood=1.1, head_kw=dict(fangs=1.0, horns_=("back", 1.0))),
+  ((17, 8, 22), (6, 3, 12)), ((28, 24, 6), (14, 8, 3)), front=dict(yaw=20), back=dict(yaw=-160))
+R("BEEHEMOTH", "insect",
+  dict(kind="bee", wings_kind="insect", fur=True, abdomen=1.2, head_s=1.45, tex=("stripes", 2, 0.45, 0.5, 2), abd_tex=("stripes", 2, 0.42, 0.5, 2),
+       horn=0.5),
+  ((30, 26, 5), (12, 6, 4)), ((26, 30, 8), (8, 12, 4)))
+R("CARCINIZE", "arthro",
+  dict(kind="crab", claws=True, claw_size=1.7, legs=3, shell=1.0, fangs=False, body=1.1, leg_len=0.85, leg_r=0.2, head_s=1.5, h=0.6),
+  ((16, 19, 24), (6, 9, 16)), ((26, 20, 8), (14, 8, 3)), front=dict(pitch=10), back=dict(pitch=10))
+R("APPARITION", "orb",
+  dict(kind="ghost", r=1.25, arms=2, spikes=9, spike_size=0.6, face_s=1.1, mouth_big=True),
+  ((15, 8, 20), (6, 3, 11)), ((8, 20, 22), (3, 9, 12)), front=dict(yaw=12), back=dict(yaw=-168))
+R("RAVENOUS", "biped",
+  dict(arms=0, head="bird", head_s=1.7, wings=dict(kind="feather", span=1.9, height=1.2), foot="talon", foot_size=1.4, bulk=0.9, spikes=False,
+       tail={"kind": "plain", "length": 1.3, "thick": 0.22}, hunch=22, belly=False, back=None),
+  ((9, 10, 15), (3, 3, 7)), ((26, 8, 8), (12, 3, 3)))
+R("WYRMKING", "biped",
+  dict(bulk=1.1, hunch=10, head="dragon", head_s=1.8, head_kw=dict(horns_=("crown", 1.4), fangs=1.0, cheek=1.0), hand="claw", arms=2,
+       wings=dict(kind="bat", span=2.0, height=1.4), tail={"kind": "spike", "length": 1.8, "thick": 0.34}, back=("spikes", 5, 0.5)),
+  ((28, 22, 6), (14, 7, 3)), ((8, 22, 26), (3, 8, 14)))
+R("MONOLITH", "biped",
+  dict(bulk=1.45, hunch=12, head="ape", head_s=1.4, arms=2, hand="fist", hand_size=1.6, shoulder_w=0.95, back=("plates", 5, 1.2), tail=None,
+       tex=("dots", 0.36, 0.17, 2), arm_r=0.27, foot_size=1.5),
+  ((22, 18, 11), (10, 7, 5)), ((18, 22, 12), (7, 10, 5)))
 
-
-# ---- test recipes (quadruped plan)
-R("DEATHROLL", 4, P.quad, dict(body=(19, 8), leg=8, legw=7, head_off=(-20, -3), head=(9, 6), snout=(9, 4), snout_dx=0.6, jaw=1,
-                              tail="spike", tail_len=18, tail_w=9, neck_w=10), theme="moss")
-R("HELLHOUND", 3, P.quad, dict(body=(15, 9), leg=14, head_off=(-15, -9), head=(7.5, 7), snout=(6, 3.2), jaw=1, ears="pointed", tail="flame",
-                              tail_len=12), theme="ember")
-R("BEHEMOTH", 4, P.quad, dict(body=(21, 13), leg=10, legw=9, head_off=(-19, -4), head=(9, 8), snout=(7, 5), horns=2, horn_len=10, tail_len=8),
-  theme="steel")
-R("MAMMOTH", 3, P.quad, dict(body=(18, 12), leg=12, legw=8, head_off=(-17, -6), head=(9, 9), snout=(5, 5), ears="long", tail_len=7), theme="ice")
+# ---------------------------------------------------------------------------------------------- centipedal and chimeric designs
+R("TITANFIST", "biped",
+  dict(bulk=1.45, hunch=14, head="ape", head_s=1.35, arms=4, hand="fist", hand_size=1.35, shoulder_w=0.95, arm_r=0.24, arm_len=1.0,
+       head_kw=dict(horns_=("bull", 1.0), fangs=0.8), back=("plates", 4, 1.0), tail=None, tex=("dots", 0.36, 0.15, 2), foot_size=1.5),
+  ((18, 19, 24), (21, 4, 6)), ((26, 22, 6), (14, 8, 3)))
+R("SKYSCRAPER", "serpent",
+  dict(path=[(1.9, 0.3, -0.9), (1.5, 0.38, -0.05), (0.8, 0.45, 0.45), (0.0, 0.5, 0.25), (-0.8, 0.55, -0.15), (-1.25, 0.7, 0.5),
+             (-1.0, 1.2, 1.0), (-0.55, 1.8, 1.05)], girth=0.4, neck_r=0.36, head="dragon", head_s=1.7, head_turn=-65, plates=True, spines=0,
+       leg_pairs=8, leg_range=(0.1, 0.72), leg_len=0.85, leg_r=0.1, head_kw=dict(horns_=("crown", 1.3), fangs=1.0)),
+  ((16, 18, 23), (6, 8, 15)), ((27, 22, 8), (13, 8, 3)), front=dict(yaw=14, pitch=14), back=dict(yaw=-166, pitch=14))
+R("GATEHOUND", "quad",
+  dict(bulk=1.2, head="beast", head_s=1.5, head_kw=dict(fangs=1.0, cheek=1.0, ears="point"), mane=0.8, back=("spikes", 7, 0.55),
+       extra_heads=[dict(pos=(1.0, -0.3, -0.15), turn=45), dict(pos=(-1.0, -0.3, -0.15), turn=0)],
+       tail={"kind": "flame", "length": 1.5, "thick": 0.28}),
+  ((20, 20, 23), (6, 11, 26)), ((26, 14, 8), (14, 5, 4)), front=dict(yaw=42), back=dict(yaw=-140))
+R("DREADSTEED", "quad",
+  dict(bulk=1.1, h=1.15, length=2.0, upper=dict(arms=2, hand="claw", head="skull", head_s=1.35, head_kw=dict(horns_=("crown", 1.2)), torso_h=0.75,
+                                                  bulk=0.95, hunch=8, back=("spikes", 3, 0.4), arm_len=1.0),
+       back=("plates", 5, 0.9), tail={"kind": "flame", "length": 1.8, "thick": 0.3}, spikes=True),
+  ((12, 10, 14), (26, 9, 21)), ((26, 26, 28), (8, 12, 26)), front=dict(yaw=40), back=dict(yaw=-140))

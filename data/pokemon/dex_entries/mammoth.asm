@@ -3,4 +3,6 @@
 
 	db   "Frozen for ten"
 	next "thousand years and"
-	next "still unemployed.@"
+	next "still unemployed."
+
+	page "@"
