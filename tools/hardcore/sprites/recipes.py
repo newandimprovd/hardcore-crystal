@@ -7,16 +7,19 @@ View overrides: front / back dicts with yaw, pitch, dist.
 RECIPES = {}
 
 
-def R(name, plan, params, pal, shiny, front=None, back=None, poses=None, fill=0.97):
+def R(name, plan, params, pal, shiny, front=None, back=None, poses=None, fill=0.97, import_front=None, ramps=None, bob=None, import_back=None, back_mirror=None):
+    """import_front: path (under sprites/) of a finished sprite supplied by the author, used as the front picture instead of a render.
+    ramps: material shading override for the rendered views (see toon.RAMPS)."""
     assert name not in RECIPES, name
-    RECIPES[name] = dict(plan=plan, params=params, pal=pal, shiny=shiny, front=front or {}, back=back or {}, poses=poses, fill=fill)
+    RECIPES[name] = dict(plan=plan, params=params, pal=pal, shiny=shiny, front=front or {}, back=back or {}, poses=poses, fill=fill,
+                         import_front=import_front, import_back=import_back, back_mirror=back_mirror, ramps=ramps, bob=bob or {})
 
 
 # ---------------------------------------------------------------------------------------------- stage 4, checkpoint set
 R("TYPHONEUS", "biped",
   dict(bulk=1.3, hunch=18, head="beast", head_s=1.7, head_kw=dict(horns_=("curved", 1.3), fangs=1.0, cheek=1.0), back=("spikes", 6, 0.65),
        tail={"kind": "spike", "length": 1.8, "thick": 0.34}, hand="claw", hand_size=1.4, arms=1, tex=("cracks", 1.6, 0.045, 0)),
-  ((11, 14, 18), (4, 5, 10)), ((22, 11, 8), (9, 3, 3)))
+  ((15, 19, 14), (24, 5, 5)), ((14, 16, 24), (26, 20, 6)), import_front="imports/typhoneus.png", back_mirror="drop")
 R("EMBERWYRM", "biped",
   dict(bulk=1.0, hunch=8, head="dragon", head_s=1.75, head_kw=dict(horns_=("back", 1.3), fangs=1.0, cheek=1.0), hand="claw", hand_size=1.2,
        wings=dict(kind="bat", span=1.8, height=1.3), tail={"kind": "flame", "length": 1.7, "thick": 0.32}, back=("spikes", 4, 0.4)),
@@ -24,7 +27,7 @@ R("EMBERWYRM", "biped",
 R("HELLHOUND", "quad",
   dict(bulk=1.15, head="beast", head_s=1.65, head_kw=dict(fangs=1.0, cheek=1.0, ears="point"), mane=1.2, back=("spikes", 7, 0.55),
        tail={"kind": "flame", "length": 1.5, "thick": 0.28}),
-  ((9, 9, 12), (24, 4, 3)), ((26, 26, 28), (8, 12, 26)), front=dict(yaw=48), back=dict(yaw=-140))
+  ((21, 18, 19), (11, 9, 10)), ((14, 18, 24), (6, 8, 14)), front=dict(yaw=48), back=dict(yaw=-140), import_front="imports/hellhound.png", back_mirror="keep")
 R("KINGCOBRA", "serpent",
   dict(head="dragon", head_s=1.8, hood=1.1, head_kw=dict(fangs=1.0, horns_=("back", 1.0))),
   ((17, 8, 22), (6, 3, 12)), ((28, 24, 6), (14, 8, 3)), front=dict(yaw=20), back=dict(yaw=-160))
@@ -71,3 +74,33 @@ R("DREADSTEED", "quad",
                                                   bulk=0.95, hunch=8, back=("spikes", 3, 0.4), arm_len=1.0),
        back=("plates", 5, 0.9), tail={"kind": "flame", "length": 1.8, "thick": 0.3}, spikes=True),
   ((12, 10, 14), (26, 9, 21)), ((26, 26, 28), (8, 12, 26)), front=dict(yaw=40), back=dict(yaw=-140))
+
+
+# ---------------------------------------------------------------------------------------------- author-supplied sprites (drop-in)
+def _register_imports():
+    """imports/<species>.png is a finished front sprite for that species (imports/<species>_back.png its back sprite).  A species without a
+    recipe gets one made here: palette suggested from the image, shiny by a channel rotation, a mirrored front as the back until a back arrives."""
+    import os
+    import sys
+    here = os.path.dirname(os.path.abspath(__file__))
+    d = os.path.join(here, "imports")
+    if not os.path.isdir(d):
+        return
+    sys.path.insert(0, here)
+    import importer
+    for fn in sorted(os.listdir(d)):
+        stem, ext = os.path.splitext(fn)
+        if ext != ".png" or stem.endswith("_back"):
+            continue
+        name = stem.upper()
+        if name in RECIPES:
+            continue
+        pal8 = importer.suggest_palette(os.path.join(d, fn))
+        pal = tuple(tuple(v * 31 // 255 for v in c) for c in pal8)
+        shiny = tuple((c[2], c[0], c[1]) for c in pal)
+        back = f"imports/{stem}_back.png"
+        has_back = os.path.exists(os.path.join(d, f"{stem}_back.png"))
+        R(name, None, {}, pal, shiny, import_front=f"imports/{fn}", import_back=back if has_back else None, back_mirror=None if has_back else "keep")
+
+
+_register_imports()

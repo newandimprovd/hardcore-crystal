@@ -11,6 +11,7 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import importer  # noqa: E402
 import plans  # noqa: E402
 import rig  # noqa: E402
 from recipes import RECIPES  # noqa: E402
@@ -35,6 +36,8 @@ def make_rig(rec):
     def builder(pose):
         M = Model()
         plans.PLANS[rec["plan"]](M, pose, params)
+        if rec.get("ramps"):
+            M.ramps = dict(rec["ramps"])
         return M
     f, b = rec["front"], rec["back"]
     views = {k: dict(v) for k, v in rig.VIEWS.items()}
@@ -75,11 +78,24 @@ def enforce_budget(frames):
 
 def render(name):
     rec = RECIPES[name]
-    r = make_rig(rec)
-    base = r.render("front")
-    frames = [base] + [r.render("front", dict(p)) for p in (rec["poses"] or POSES)]
+    pal = palette(rec)
+    pal8 = [pal[1], pal[2]]
+    need_rig = not rec.get("import_front") or not (rec.get("import_back") or rec.get("back_mirror"))
+    r = make_rig(rec) if need_rig else None
+    if rec.get("import_front"):
+        # a finished sprite supplied by the author is the front picture
+        base, mask = importer.convert(os.path.join(HERE, rec["import_front"]), pal8)
+        frames = [base] + importer.bob_frames(base, mask, **rec.get("bob", {}))
+    else:
+        base = r.render("front")
+        frames = [base] + [r.render("front", dict(p)) for p in (rec["poses"] or POSES)]
     frames, used = enforce_budget(frames)
-    back = r.render("back")
+    if rec.get("import_back"):
+        back, _ = importer.convert(os.path.join(HERE, rec["import_back"]), pal8, size=48)
+    elif rec.get("back_mirror") and rec.get("import_front"):
+        back = importer.convert_mirror(os.path.join(HERE, rec["import_front"]), pal8, 48, drop_c2=rec["back_mirror"] == "drop")
+    else:
+        back = r.render("back")
     return frames, back, used
 
 
@@ -99,8 +115,11 @@ def write_png(imgs, pal, path):
 def source_hash(name):
     import hashlib
     h = hashlib.sha1(repr(sorted(RECIPES[name].items(), key=lambda kv: kv[0])).encode())
-    for f in ("sdf.py", "toon.py", "rig.py", "parts.py", "plans.py", "gen.py"):
+    for f in ("sdf.py", "toon.py", "rig.py", "parts.py", "plans.py", "gen.py", "importer.py"):
         h.update(open(os.path.join(HERE, f), "rb").read())
+    for key in ("import_front", "import_back"):
+        if RECIPES[name].get(key):
+            h.update(open(os.path.join(HERE, RECIPES[name][key]), "rb").read())
     return h.hexdigest()
 
 
