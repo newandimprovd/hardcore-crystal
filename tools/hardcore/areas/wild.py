@@ -17,7 +17,7 @@ from .model import ROOT, write
 
 SLOT_PERCENT = [30, 30, 20, 10, 5, 4, 1]  # engine's GrassMonProbTable (data/wild/probabilities.asm)
 CAPACITY = [16, 16, 12, 10, 8]  # base forms per area (62 in all): the early areas are where the player builds a team
-RATE = 20  # percent per step in tall grass
+RATE = 10  # percent per step in tall grass (alpha 1 feedback: half of the first value)
 NOCTURNAL = {"DARK", "GHOST", "POISON"}
 LEVEL_OFFSETS = [0, 1, -1, 2, 0, 1, 3]
 

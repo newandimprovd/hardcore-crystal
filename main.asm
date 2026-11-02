@@ -423,6 +423,10 @@ SECTION "Hardcore Story", ROMX
 
 INCLUDE "engine/hardcore/story.asm"
 INCLUDE "engine/hardcore/warning.asm"
+INCLUDE "engine/hardcore/nurse.asm"
+
+
+INCLUDE "data/hardcore/death_unique.asm"
 
 
 SECTION "Hardcore Area Pals", ROMX

@@ -3763,3 +3763,7 @@ ENDSECTION
 SECTION "Hardcore WRAM", WRAM0
 
 wHCGenBank:: db ; bank of the generated trainer group being read
+wHCShareBase:: db ; universal exp share: base exp used for the party member being paid
+wHCShareOther:: db ; universal exp share: 1 while paying a party member that did not fight
+wHCOtherCount:: db ; universal exp share: living party members that did not fight
+wHCOrigBaseExp:: db ; universal exp share: base exp of the defeated mon before any division

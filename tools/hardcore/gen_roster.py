@@ -197,10 +197,15 @@ def exp_yield(rec):
     return max(36, min(255, int(round(bst * 0.38))))
 
 
+CATCH_MULT = 2  # alpha 1 feedback: capture rates twice as high
+
+
 def catch_rate(rec):
     if not rec["new"]:
-        return rec["v"]["catch"]
-    return 45 if rec["stage"] == 3 else 25
+        base = rec["v"]["catch"]
+    else:
+        base = 45 if rec["stage"] == 3 else 25
+    return min(255, base * CATCH_MULT)
 
 
 def gen_base_stats(L):

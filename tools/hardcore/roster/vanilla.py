@@ -62,9 +62,10 @@ def load():
     for c, v in zip(consts, cr[:n]):
         sp[c]["cry"] = (v[0], int(v[1]), int(v[2]))
     table("data/pokemon/menu_icons.asm", r"^\tdb (ICON_\w+)", "icon")
-    pics = re.findall(r"^\tdba_pics (\w+), (\w+)", git("data/pokemon/pic_pointers.asm"), flags=re.M)
+    # Unown has an empty "dba_pics ; ..." line (own table), which must still occupy its slot or every later species shifts by one
+    pics = re.findall(r"^\tdba_pics(?: (\w+), (\w+))?", git("data/pokemon/pic_pointers.asm"), flags=re.M)
     for c, v in zip(consts, pics[:n]):
-        sp[c]["pics"] = v
+        sp[c]["pics"] = v if v[0] else (None, None)
     table("data/pokemon/dex_entry_pointers.asm", r"^\tdw (\w+)", "dexlabel")
     table("data/pokemon/evos_attacks_pointers.asm", r"^\tdw (\w+)", "evoslabel")
     table("data/pokemon/egg_move_pointers.asm", r"^\tdw (\w+)", "egglabel")

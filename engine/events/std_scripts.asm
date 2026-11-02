@@ -106,10 +106,28 @@ PokecenterNurseScript:
 	; only do this once
 	clearevent EVENT_WELCOMED_TO_POKECOM_CENTER
 
+	; HC: healing is free only in the Cherrygrove POKéCENTER (engine/hardcore/nurse.asm)
+	callasm HC_NurseCost
+	ifequal 1, .hc_paid
+	ifequal 2, .hc_no_money
+	ifequal 3, .hc_charity
 	farwritetext NurseAskHealText
 	yesorno
 	iffalse .done
+	sjump .hc_heal
 
+.hc_paid
+	farwritetext HC_NurseAskPaidText
+	yesorno
+	iffalse .done
+	callasm HC_NurseTakeMoney
+	sjump .hc_heal
+
+.hc_charity
+	farwritetext HC_NurseCharityText
+	promptbutton
+
+.hc_heal
 	farwritetext NurseTakePokemonText
 	pause 20
 	special StubbedTrainerRankings_Healings
@@ -134,6 +152,12 @@ PokecenterNurseScript:
 
 	farwritetext NurseReturnPokemonText
 	pause 20
+
+.hc_no_money
+	farwritetext HC_NurseNoMoneyText
+	waitbutton
+	closetext
+	end
 
 .done
 	farwritetext NurseGoodbyeText

@@ -12,11 +12,20 @@ TrainerDeathScript::
 	reloadmap
 	callasm HC_RespawnCorpse
 	callasm HC_PrepareDeath
+	; Most people die quietly. Bosses get their own last words, about one in seven of the rest a line of dry commentary.
+	callasm HC_DeathMode
+	ifequal 0, .Loot
+	ifequal 1, .Random
+	scall HC_UniqueDeathScript
+	pause 10
+	sjump .Loot
+.Random:
 	opentext
 	writetext HC_DeathText
 	waitbutton
 	closetext
 	pause 10
+.Loot:
 	opentext
 	writetext HC_LootText
 	waitbutton
@@ -70,13 +79,8 @@ DeadTrainerTalkScript::
 	end
 
 HC_DeathText:
-	text_ram wStringBuffer3
-	text_start
-	line "@"
 	text_ram wStringBuffer1
-	text " is dead."
-
-	para "Cause of death:"
+	text_start
 	line "@"
 	text_asm
 	push bc
@@ -95,9 +99,8 @@ HC_BodyText:
 	ret
 
 HC_LootText:
-	text "<PLAYER> searched"
-	line "the body and found"
-	cont "¥@"
+	text "<PLAYER> took"
+	line "¥@"
 	text_asm
 	push bc
 	call HC_RollLoot
@@ -107,14 +110,58 @@ HC_LootText:
 
 .Amount:
 	text_decimal hMoneyTemp, 3, 6
-	text ".@"
+	text " off the body.@"
 	text_asm
 	push bc
+	ld b, 5
+	call HC_RandMod
+	and a
+	jr nz, .no_flavor
 	ld b, HC_NUM_FLAVORS
 	call HC_RandMod
 	ld hl, HC_FlavorTable
 	call HC_GetTableEntry
 	pop bc
+	ret
+
+.no_flavor
+	pop bc
+	ld hl, .End
+	ret
+
+.End:
+	done
+
+HC_DeathMode:
+; wScriptVar: 0 = the trainer dies quietly, 1 = a random line, 2 + n = the unique last words of row n of HC_UniqueDeathTable
+	ld a, [wTempTrainerClass]
+	ld b, a
+	ld hl, HC_UniqueDeathTable
+	ld c, 2
+.loop
+	ld a, BANK(HC_UniqueDeathTable)
+	call GetFarByte
+	inc hl
+	cp -1
+	jr z, .random
+	cp b
+	jr z, .unique
+	inc c
+	jr .loop
+
+.unique
+	ld a, c
+	ld [wScriptVar], a
+	ret
+
+.random
+	call Random
+	cp 36 ; about one in seven
+	ld a, 1
+	jr c, .store
+	xor a
+.store
+	ld [wScriptVar], a
 	ret
 
 HC_PickCause:

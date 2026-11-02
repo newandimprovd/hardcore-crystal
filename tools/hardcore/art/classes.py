@@ -37,7 +37,7 @@ AREA_CLASSES["AREA2"] = [
     ("G_SPROUT", "SPROUT", "kid_f", "PINK", 3, "PICNICKER", F),
     ("G_URCHIN", "URCHIN", "kid_m", "BROWN", 2, "BUG_CATCHER", M),
     ("G_ANGLER", "ANGLER", "fisher", "BLUE", 2, "FISHER", M),
-    ("G_FLOWERKID", "FLOWER CHILD", "hippie_f", "PINK", 2, "BEAUTY", F),
+    ("G_FLOWERKID", "FLOWERKID", "hippie_f", "PINK", 2, "BEAUTY", F),
     ("G_ELDER", "ELDER", "elder_m", "BROWN", 2, "POKEFANM", M),
     ("G_GRANNY", "GRANNY", "elder_f", "RED", 2, "POKEFANF", F),
     ("G_SHAMAN", "SHAMAN", "shaman", "BROWN", 2, "SAGE", M),
@@ -108,6 +108,25 @@ AREA_CLASSES["AREA5"] = [
     ("D_DEMON", "DEMON LORD", "demon_lord", "BLUE", 0, "BURGLAR", M),
     ("D_FINNEGAN", "FINNEGAN", "finnegan", "BLUE", 0, "MYSTICALMAN", M),
 ]
+
+
+# Battle pictures: the vanilla trainer battle pics (real battle sprites, 56x56, drawn as a pose) closest to each cast character, recoloured
+# with the colorway of the class' area.  Replace an entry by a drawn picture later (gfx/trainers/hc/<const>.png) when battle art arrives.
+PIC_FROM = {
+    "cop": "officer", "suit": "gentleman", "hoodie": "boarder", "suit_f": "executive_f", "choir": "jasmine", "thug": "biker",
+    "priest": "sage", "nun": "medium", "beggar": "super_nerd", "punk": "guitarist", "cop_chief": "brock", "monsignor": "mysticalman",
+    "hiker": "hiker", "kid_m": "youngster", "kid_f": "picnicker", "fisher": "fisher", "hippie_f": "whitney", "elder_m": "pryce",
+    "elder_f": "pokefan_f", "shaman": "bruno", "bather_m": "swimmer_m", "bather_f": "swimmer_f", "hippie_m": "camper",
+    "forager": "bug_catcher", "birder": "bird_keeper", "matriarch": "karen",
+    "doc": "scientist", "bot": "burglar", "bot_drone": "psychic_t", "bot_cop": "officer", "bot_exec": "executive_m",
+    "matchmaker": "sabrina", "serf": "schoolboy", "guard": "cooltrainer_m", "serf_f": "lass", "bot_warden": "lt_surge",
+    "doc_mad": "oak", "bot_mayor": "champion",
+    "sunbather": "beauty", "swimmer_m": "swimmer_m", "swimmer_f": "swimmer_f", "sailor": "sailor", "resort_boss": "blue",
+    "tourist_f": "pokefan_f", "tourist_m": "pokefan_m", "beach_bum": "cal", "lifeguard": "chuck", "forgotten": "pokemaniac",
+    "clinician": "scientist", "waiter": "morty", "warden": "lt_surge",
+    "brute": "blackbelt_t", "shade": "will", "witch": "clair", "judge": "koga", "imp": "janine", "firebreather": "firebreather",
+    "jester": "juggler", "demon_lord": "falkner", "damned": "super_nerd", "finnegan": "champion",
+}
 
 ALL = [(a, c) for a, lst in AREA_CLASSES.items() for c in lst]
 

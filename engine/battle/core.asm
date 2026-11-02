@@ -5695,14 +5695,24 @@ MoveInfoBox:
 	ld [wStringBuffer1], a
 	call .PrintPP
 
-	hlcoord 1, 9
-	ld de, .Type
-	call PlaceString
-
 	hlcoord 7, 11
 	ld [hl], '/'
 
 	callfar UpdateMoveData
+	; HC: the first row shows the move category (the physical/special split exists per move)
+	ld a, [wPlayerMoveStruct + MOVE_POWER]
+	and a
+	ld de, .Status
+	jr z, .got_category
+	ld a, [wPlayerMoveStruct + MOVE_ANIM]
+	call GetMoveCategory
+	cp SPECIAL
+	ld de, .Physical
+	jr c, .got_category
+	ld de, .Special
+.got_category
+	hlcoord 1, 9
+	call PlaceString
 	ld a, [wPlayerMoveStruct + MOVE_ANIM]
 	ld b, a
 	hlcoord 2, 10
@@ -5713,8 +5723,12 @@ MoveInfoBox:
 
 .Disabled:
 	db "Disabled!@"
-.Type:
-	db "TYPE/@"
+.Physical:
+	db "PHYSICAL@"
+.Special:
+	db "SPECIAL@"
+.Status:
+	db "STATUS@"
 
 .PrintPP:
 	hlcoord 5, 11
@@ -7013,8 +7027,19 @@ GiveExperiencePoints:
 	ld a, c
 	and a
 	pop bc
-	jp z, .next_mon
+	jr nz, .hc_participant
+; HC: universal exp share. A living party member that did not fight is paid 30% of the exp, divided among them.
+	push bc
+	call HC_ShareBaseOther
+	ld a, 1
+	ld [wHCShareOther], a
+	jp .hc_exp_calc
 
+.hc_participant
+	xor a
+	ld [wHCShareOther], a
+	ld a, [wEnemyMonBaseExp]
+	ld [wHCShareBase], a
 ; give stat exp
 	ld hl, MON_STAT_EXP + 1
 	add hl, bc
@@ -7069,10 +7094,11 @@ GiveExperiencePoints:
 	inc de
 	dec c
 	jr nz, .stat_exp_loop
+.hc_exp_calc
 	xor a
 	ldh [hMultiplicand + 0], a
 	ldh [hMultiplicand + 1], a
-	ld a, [wEnemyMonBaseExp]
+	ld a, [wHCShareBase]
 	ldh [hMultiplicand + 2], a
 	ld a, [wEnemyMonLevel]
 	ldh [hMultiplier], a
@@ -7111,6 +7137,12 @@ GiveExperiencePoints:
 	ld a, [hl]
 	cp LUCKY_EGG
 	call z, BoostExp
+	ld a, [wHCShareOther]
+	and a
+	jr z, .hc_loud
+	pop bc ; HC: benched party members are paid silently
+	jr .hc_award
+.hc_loud
 	ldh a, [hQuotient + 3]
 	ld [wStringBuffer2 + 1], a
 	ldh a, [hQuotient + 2]
@@ -7129,6 +7161,7 @@ GiveExperiencePoints:
 	push bc
 	call LoadTilemapToTempTilemap
 	pop bc
+.hc_award
 	ld hl, MON_EXP + 2
 	add hl, bc
 	ld d, [hl]
@@ -7361,6 +7394,17 @@ GiveExperiencePoints:
 	jp ResetBattleParticipants
 
 .EvenlyDivideExpAmongParticipants:
+; HC: universal exp share. The fighters share 70% of the exp when somebody on the bench is alive to receive the other 30%.
+	call HC_CountBenchedMons
+	ld a, [wEnemyMonBaseExp]
+	ld [wHCOrigBaseExp], a
+	ld a, [wHCOtherCount]
+	and a
+	jr z, .hc_no_bench
+	ld a, [wEnemyMonBaseExp]
+	call HC_Percent70
+	ld [wEnemyMonBaseExp], a
+.hc_no_bench
 ; count number of battle participants
 	ld a, [wBattleParticipantsNotFainted]
 	ld b, a
@@ -7392,6 +7436,102 @@ GiveExperiencePoints:
 	ld [hli], a
 	dec c
 	jr nz, .base_stat_division_loop
+	ret
+
+HC_Percent70:
+; a = a * 7 / 10 (at least 1)
+	ldh [hMultiplicand + 2], a
+	xor a
+	ldh [hMultiplicand + 0], a
+	ldh [hMultiplicand + 1], a
+	ld a, 7
+	ldh [hMultiplier], a
+	call Multiply
+	ld a, 10
+	jr HC_DivideProduct
+
+HC_Percent30OverN:
+; a = base exp * 3 / 10 / b (b >= 1, at least 1)
+	push bc
+	ldh [hMultiplicand + 2], a
+	xor a
+	ldh [hMultiplicand + 0], a
+	ldh [hMultiplicand + 1], a
+	ld a, 3
+	ldh [hMultiplier], a
+	call Multiply
+	ld a, 10
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+	pop bc
+	ldh a, [hQuotient + 3]
+	ldh [hMultiplicand + 2], a
+	xor a
+	ldh [hMultiplicand + 0], a
+	ldh [hMultiplicand + 1], a
+	ld a, b
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+	ldh a, [hQuotient + 3]
+	and a
+	ret nz
+	ld a, 1
+	ret
+
+HC_DivideProduct:
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+	ldh a, [hQuotient + 3]
+	and a
+	ret nz
+	ld a, 1
+	ret
+
+HC_CountBenchedMons:
+; wHCOtherCount = number of living party members that are not battle participants
+	xor a
+	ld [wHCOtherCount], a
+	ld a, [wPartyCount]
+	ld b, a
+	ld c, 0
+	ld hl, wPartyMon1HP
+.loop
+	ld a, [hli]
+	or [hl]
+	jr z, .next ; fainted
+	push hl
+	push bc
+	ld hl, wBattleParticipantsNotFainted
+	ld b, CHECK_FLAG
+	ld d, 0
+	predef SmallFarFlagAction
+	ld a, c
+	and a
+	pop bc
+	pop hl
+	jr nz, .next ; fought
+	ld a, [wHCOtherCount]
+	inc a
+	ld [wHCOtherCount], a
+.next
+	inc c
+	dec hl
+	ld de, PARTYMON_STRUCT_LENGTH
+	add hl, de
+	dec b
+	jr nz, .loop
+	ret
+
+HC_ShareBaseOther:
+; wHCShareBase = share of a benched party member
+	ld a, [wHCOrigBaseExp]
+	ld hl, wHCOtherCount
+	ld b, [hl]
+	call HC_Percent30OverN
+	ld [wHCShareBase], a
 	ret
 
 BoostExp:

@@ -974,10 +974,7 @@ Intro_PlacePlayerSprite:
 DEF NUM_TITLESCREENOPTIONS EQU const_value
 
 IntroSequence:
-	callfar SplashScreen
-	jr c, StartTitleScreen
-	farcall CrystalIntro
-
+	; HC: no copyright screen, GAME FREAK logo or intro movie (alpha 1 feedback); straight to the title screen.
 	; fallthrough
 
 StartTitleScreen:

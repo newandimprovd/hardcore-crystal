@@ -351,8 +351,8 @@ _HugeWaterfallText::
 	done
 
 _AskWaterfallText::
-	text "Climb this with the"
-	line "GRAPPLE HOOK?"
+	text "Climb this with"
+	line "the GRAPPLE HOOK?"
 	done
 
 _UseDigText::
@@ -399,7 +399,7 @@ _MoveBoulderText::
 
 _AskStrengthText::
 	text "A CROWBAR could"
-	line "shift this boulder."
+	line "shift this rock."
 
 	para "Use the CROWBAR?"
 	done

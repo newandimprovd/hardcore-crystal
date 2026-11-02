@@ -357,15 +357,29 @@ PlaceEnemysName::
 	cp RIVAL2
 	jr z, .rival
 
+	; HC: "CLASS NAME" must fit one text line (18 columns, the "!" or "." after it needs one more), or the name runs out of the box.
+	; When it does not fit only the trainer name is printed.
+	push hl
+	callfar Battle_GetTrainerName
+	ld hl, wOTClassName
+	call HC_StringLength
+	ld b, a
+	ld hl, wStringBuffer1
+	call HC_StringLength
+	add b
+	inc a
+	pop hl
+	cp SCREEN_WIDTH - 2
+	jr nc, .name_only
 	ld de, wOTClassName
 	call PlaceString
 	ld h, b
 	ld l, c
 	ld de, String_Space
 	call PlaceString
-	push bc
-	callfar Battle_GetTrainerName
-	pop hl
+	ld h, b
+	ld l, c
+.name_only
 	ld de, wStringBuffer1
 	jr PlaceCommandCharacter
 
@@ -376,6 +390,19 @@ PlaceEnemysName::
 .linkbattle
 	ld de, wOTClassName
 	jr PlaceCommandCharacter
+
+HC_StringLength:
+; hl = string ending in "@"; returns its length in a (clobbers hl and c)
+	ld c, 0
+.loop
+	ld a, [hli]
+	cp CHARVAL("@")
+	jr z, .done
+	inc c
+	jr .loop
+.done
+	ld a, c
+	ret
 
 PlaceGenderedPlayerName::
 	push de

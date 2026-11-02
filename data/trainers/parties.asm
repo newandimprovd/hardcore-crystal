@@ -414,6 +414,11 @@ YoungsterGroup:
 	db 37, RATICATE,   HYPER_BEAM, QUICK_ATTACK, HYPER_FANG, PURSUIT
 	db -1 ; end
 
+	; YOUNGSTER (15) - HC: TIMMY, the first kill (Cherrygrove); a level 6 Oddish and nothing else
+	db "TIMMY@", TRAINERTYPE_NORMAL
+	db  6, ODDISH
+	db -1 ; end
+
 SchoolboyGroup:
 	; SCHOOLBOY (1)
 	db "JACK@", TRAINERTYPE_NORMAL

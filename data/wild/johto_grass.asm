@@ -1235,7 +1235,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_29
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite (HC: halved)
 	; morn
 	db 2, PIDGEY
 	db 2, SENTRET
