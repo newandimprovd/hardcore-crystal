@@ -72,14 +72,16 @@ def upper_body(M, pose, d, A):
         hk = d["hand"] if not d["arm_hands"] else d["arm_hands"][min(pair, len(d["arm_hands"]) - 1)]
         parts.hand(M, wr, hk, d["hand_size"] * (1.0 - 0.1 * pair) * bulk ** 0.5, True)
         if pair == 0:
-            A["hand"] = wr
+            A["hand"] = M.tp(wr)
     # neck and head, thrust forward and low between the shoulders
     hc = V(0, th + 0.36 + d["neck"] + _pose(pose, "head_dy") * 0.5, 0.42 + _pose(pose, "head_dz") * 0.4)
     M.part()
     M.cone((0, th * 0.9, 0.05), hc - V(0, 0.1, 0.0), 0.34 * bulk, 0.28 * d["head_s"], BODY, 0.1, tex=tex)
     M.part()
     face = parts.head(M, d["head"], hc, d["head_s"], jaw=_pose(pose, "jaw"), tex=tex, **d["head_kw"])
-    A["head"] = hc
+    A["head"] = M.tp(hc)
+    A["back"] = M.tp(V(0, th * 0.9, -0.5 * bulk))
+    A["chest"] = M.tp(V(0, th * 0.7, 0.5 * bulk))
     for i, eh in enumerate(d["extra_heads"]):
         eh = dict(eh)
         off = V(*eh.pop("pos", (0.7, 0.2, -0.1)))
@@ -236,6 +238,9 @@ def quad(M, pose, p):
             with M.frame(c2, (0, turn, 0)):
                 M.faces.append(parts.head(M, kind, (0, 0, 0), s_, jaw=_pose(pose, "jaw"), tex=tex, tag=f"x{i}_", **eh))
     A["head"] = hc
+    A["back"] = V(0, h + 0.15 + ch * 0.9, 0.0)
+    A["chest"] = V(0, h + 0.1, zc)
+    A["hip"] = V(0, h, zh)
     # back
     back = d["back"]
     if back:
