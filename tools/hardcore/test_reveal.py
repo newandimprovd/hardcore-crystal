@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Stage 3 test: walk into TIMMY in Cherrygrove, win, and check the reveal, kill counter and corpse.
-usage: test_reveal.py ROM   (ROM built with: testbuild.sh rv TEST_MAP=CHERRYGROVE_CITY TEST_X=15 TEST_Y=6 ; TIMMY stands at 14,4 and sees 15..18,4)"""
+usage: test_reveal.py ROM   (ROM built with: testbuild.sh rv TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=5 ; TIMMY stands at 16,1 facing east and sees 17..20,1)"""
 import sys, os
 sys.path.insert(0, __file__.rsplit("/", 1)[0])
 from gbtest import T

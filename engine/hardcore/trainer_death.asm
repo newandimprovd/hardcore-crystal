@@ -130,7 +130,7 @@ HC_LootText:
 	ret
 
 .End:
-	done
+	text_end ; a text_asm block hands back a text *command*, so this is TX_END, not the in-string <DONE>
 
 HC_DeathMode:
 ; wScriptVar: 0 = the trainer dies quietly, 1 = a random line, 2 + n = the unique last words of row n of HC_UniqueDeathTable

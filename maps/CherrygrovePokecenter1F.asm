@@ -19,20 +19,7 @@ CherrygrovePokecenter1FGentlemanScript:
 	jumptextfaceplayer CherrygrovePokecenter1FGentlemanText
 
 CherrygrovePokecenter1FTeacherScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .CommCenterOpen
-	writetext CherrygrovePokecenter1FTeacherText
-	waitbutton
-	closetext
-	end
-
-.CommCenterOpen:
-	writetext CherrygrovePokecenter1FTeacherText_CommCenterOpen
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CherrygrovePokecenter1FTeacherText
 
 CherrygrovePokecenter1FFisherText:
 	text "It's great. I can"
@@ -49,21 +36,12 @@ CherrygrovePokecenter1FGentlemanText:
 	done
 
 CherrygrovePokecenter1FTeacherText:
-	text "The COMMUNICATION"
-	line "CENTER upstairs"
-	cont "was just built."
+	text "Healing is free"
+	line "here. Enjoy it."
 
-	para "But they're still"
-	line "finishing it up."
-	done
-
-CherrygrovePokecenter1FTeacherText_CommCenterOpen:
-	text "The COMMUNICATION"
-	line "CENTER upstairs"
-	cont "was just built."
-
-	para "I traded #MON"
-	line "there already!"
+	para "Out there it costs"
+	line "money. Everything"
+	cont "does, eventually."
 	done
 
 CherrygrovePokecenter1F_MapEvents:
@@ -72,7 +50,6 @@ CherrygrovePokecenter1F_MapEvents:
 	def_warp_events
 	warp_event  3,  7, CHERRYGROVE_CITY, 2
 	warp_event  4,  7, CHERRYGROVE_CITY, 2
-	warp_event  0,  7, POKECENTER_2F, 1
 
 	def_coord_events
 

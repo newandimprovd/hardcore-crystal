@@ -102,13 +102,6 @@ CherrygroveCityGuideGent:
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext GuideGentGiftText
-	promptbutton
-	getstring STRING_BUFFER_4, .mapcardname
-	scall .JumpstdReceiveItem
-	setflag ENGINE_MAP_CARD
-	writetext GotMapCardText
-	promptbutton
-	writetext GuideGentPokegearText
 	waitbutton
 	closetext
 	stopfollow
@@ -211,20 +204,7 @@ CherrygroveRivalSceneNorth:
 	end
 
 CherrygroveTeacherScript:
-	faceplayer
-	opentext
-	checkflag ENGINE_MAP_CARD
-	iftrue .HaveMapCard
-	writetext CherrygroveTeacherText_NoMapCard
-	waitbutton
-	closetext
-	end
-
-.HaveMapCard:
-	writetext CherrygroveTeacherText_HaveMapCard
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CherrygroveTeacherText_HaveMapCard
 
 CherrygroveYoungsterScript:
 	faceplayer
@@ -440,22 +420,9 @@ GuideGentGiftText:
 	line "Thanks for your"
 	cont "company."
 
-	para "Let me give you a"
-	line "small gift."
-	done
-
-GotMapCardText:
-	text "<PLAYER>'s #GEAR"
-	line "now has a MAP!"
-	done
-
-GuideGentPokegearText:
-	text "#GEAR becomes"
-	line "more useful as you"
-	cont "add CARDS."
-
-	para "I wish you luck on"
-	line "your journey!"
+	para "Be careful out"
+	line "there. The roads"
+	cont "are not so kind."
 	done
 
 GuideGentNoText:
@@ -517,16 +484,6 @@ CherrygroveRivalText_YouWon:
 	line "the world's great-"
 	cont "est #MON"
 	cont "trainer."
-	done
-
-CherrygroveTeacherText_NoMapCard:
-	text "Did you talk to"
-	line "the old man by the"
-	cont "#MON CENTER?"
-
-	para "He'll put a MAP of"
-	line "JOHTO on your"
-	cont "#GEAR."
 	done
 
 CherrygroveTeacherText_HaveMapCard:
