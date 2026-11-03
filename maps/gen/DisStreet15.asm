@@ -6,6 +6,9 @@ DisStreet15_MapScripts:
 
 	def_callbacks
 
+DisStreet15Pickup:
+	itemball ELIXER
+
 DisStreet15SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -75,6 +78,7 @@ DisStreet15_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  9,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet15Pickup, EVENT_GEN_DIS_STREET15_PICKUP
 	object_event  6, 20, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet15Trainer0, -1
 	object_event 11, 20, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet15Trainer1, -1
 	object_event  6, 18, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet15Trainer2, -1

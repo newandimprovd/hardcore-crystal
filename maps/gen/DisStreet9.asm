@@ -6,6 +6,9 @@ DisStreet9_MapScripts:
 
 	def_callbacks
 
+DisStreet9Pickup:
+	itemball TM_FRUSTRATION
+
 DisStreet9SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -75,6 +78,7 @@ DisStreet9_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  8,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet9Pickup, EVENT_GEN_DIS_STREET9_PICKUP
 	object_event  6, 20, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet9Trainer0, -1
 	object_event 11, 20, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet9Trainer1, -1
 	object_event  6, 18, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet9Trainer2, -1

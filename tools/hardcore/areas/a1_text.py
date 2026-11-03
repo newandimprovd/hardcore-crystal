@@ -169,3 +169,30 @@ CATHEDRAL_SEEN = ("My child. I have heard the confessions of every tower in this
                   "You have not confessed yet. Neither have I. Let us begin with the beating.")
 CATHEDRAL_BEATEN = "The bell... it was never mine to ring. Go, then. I have already been forgiven in advance. Bulk rate."
 CATHEDRAL_AFTER = "The way north is open. Go find someone who still believes in something. It won't be me."
+
+
+# Trainer tips: the sign on Tithe Road and the two people who repeat it (Pokecenter and Mart of the first plaza).
+TIPS_SIGN = (
+    "TRAINER TIPS. The rules changed while you slept. Read them, or die confused. "
+    "NORMAL hits BUG and PSYCHIC hard, and DARK cannot touch NORMAL. "
+    "BUG ignores GHOST, DARK, PSYCHIC, GRASS and GROUND. "
+    "GRASS and FLYING hit each other hard. GRASS also beats ELECTRIC and STEEL. "
+    "WATER beats STEEL, and ICE beats WATER. "
+    "FAIRY is a new type. It beats FIGHTING, DRAGON and DARK. POISON and STEEL beat it, and DRAGON cannot touch it. "
+    "Every move is PHYSICAL or SPECIAL now. Physical moves use ATTACK and DEFENSE. Special moves use SP.ATK and SP.DEF. The move menu says which. "
+    "Healing costs money everywhere but CHERRYGROVE. Your bench earns 30% of the EXP. Everything evolves at 25, 50 and 75."
+)
+TIP_A = (
+    "Did you read the sign on the road? No? The rules will teach you, and they bill by the lesson. "
+    "NORMAL hits BUG and PSYCHIC hard. BUG ignores GHOST, DARK, PSYCHIC, GRASS and GROUND. "
+    "GRASS and FLYING hit each other hard. WATER beats STEEL, and ICE beats WATER. "
+    "FAIRY is new. It beats FIGHTING, DRAGON and DARK. "
+    "Moves are PHYSICAL or SPECIAL now."
+)
+TIP_B = (
+    "You skipped the sign. Respect. Here is the short version, free of charge, like nothing else here. "
+    "Healing costs money outside CHERRYGROVE. Your bench earns 30% of the EXP, so rotate. "
+    "Moves are PHYSICAL or SPECIAL, and the move menu says which. "
+    "FAIRY is the new type. DRAGON cannot touch it, POISON and STEEL can. "
+    "Everything evolves at 25, 50 and 75."
+)

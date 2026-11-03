@@ -6,6 +6,9 @@ AxiomStreet3_MapScripts:
 
 	def_callbacks
 
+AxiomStreet3Pickup:
+	itemball TM_SUNNY_DAY
+
 AxiomStreet3SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -75,6 +78,7 @@ AxiomStreet3_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet3Pickup, EVENT_GEN_AXIOM_STREET3_PICKUP
 	object_event  6, 20, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet3Trainer0, -1
 	object_event 11, 20, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet3Trainer1, -1
 	object_event  6, 18, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet3Trainer2, -1

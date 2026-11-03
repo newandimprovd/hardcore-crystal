@@ -15,9 +15,27 @@ TithePokecenter1Npc0Script:
 	jumptextfaceplayer TithePokecenter1Npc0Text
 
 TithePokecenter1Npc0Text:
-	text "The coffee here is"
-	line "free. It's also"
-	para "illegal."
+	text "Did you read the"
+	line "sign on the road?"
+	para "No? The rules will"
+	line "teach you, and"
+	para "they bill by the"
+	line "lesson. NORMAL"
+	para "hits BUG and"
+	line "PSYCHIC hard. BUG"
+	para "ignores GHOST,"
+	line "DARK, PSYCHIC,"
+	para "GRASS and GROUND."
+	line "GRASS and FLYING"
+	para "hit each other"
+	line "hard. WATER beats"
+	para "STEEL, and ICE"
+	line "beats WATER. FAIRY"
+	para "is new. It beats"
+	line "FIGHTING, DRAGON"
+	para "and DARK. Moves"
+	line "are PHYSICAL or"
+	para "SPECIAL now."
 	done
 
 TithePokecenter1_MapEvents:

@@ -4,7 +4,7 @@
 KantoGrassWildMons:
 
 	def_grass_wildmons TITHE_PLAZA1
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 5, MEOWTH
 	db 6, PORYGON
@@ -32,7 +32,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TITHE_PLAZA2
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 8, MANKEY
 	db 9, IGGLYBUFF
@@ -60,7 +60,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TITHE_PLAZA3
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 11, NIDORAN_M
 	db 12, SPINARAK
@@ -88,7 +88,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TITHE_PLAZA4
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 14, KOFFING
 	db 15, NIDORAN_F
@@ -116,7 +116,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TITHE_PLAZA5
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 17, GRIMER
 	db 18, NIDORAN_M
@@ -144,7 +144,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TITHE_PLAZA6
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, PORYGON
 	db 21, RATTATA
@@ -172,7 +172,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TITHE_PLAZA7
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 23, TENTACOOL
 	db 24, MEOWTH
@@ -200,7 +200,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons GROVE_PLAZA1
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 24, BELLSPROUT
 	db 25, BULBASAUR
@@ -228,7 +228,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons GROVE_PLAZA2
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 27, VENONAT
 	db 28, HOPPIP
@@ -256,7 +256,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons GROVE_PLAZA3
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 30, TOTODILE
 	db 31, GEODUDE
@@ -284,7 +284,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons GROVE_PLAZA4
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 34, SQUIRTLE
 	db 35, STARYU
@@ -312,7 +312,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons GROVE_PLAZA5
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 37, CUBONE
 	db 38, TOTODILE
@@ -340,7 +340,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons GROVE_PLAZA6
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 40, BULBASAUR
 	db 41, CATERPIE
@@ -368,7 +368,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons GROVE_PLAZA7
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 43, SWINUB
 	db 44, BELLSPROUT
@@ -396,7 +396,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons AXIOM_PLAZA1
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 44, MAGNEMITE
 	db 45, MAREEP
@@ -424,7 +424,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons AXIOM_PLAZA2
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 47, SPEAROW
 	db 48, SMOOCHUM
@@ -452,7 +452,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons AXIOM_PLAZA3
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 50, DROWZEE
 	db 51, PIDGEY
@@ -480,7 +480,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons AXIOM_PLAZA4
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 52, SMOOCHUM
 	db 53, ZUBAT
@@ -508,7 +508,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons AXIOM_PLAZA5
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 55, ONIX
 	db 56, RHYHORN
@@ -536,7 +536,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons AXIOM_PLAZA6
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 58, ABRA
 	db 59, DROWZEE
@@ -564,7 +564,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons AXIOM_PLAZA7
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 61, ONIX
 	db 62, RHYHORN
@@ -592,7 +592,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons LOTUS_PLAZA1
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 62, HORSEA
 	db 63, KRABBY
@@ -620,7 +620,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons LOTUS_PLAZA2
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 64, SHELLDER
 	db 65, MARILL
@@ -648,7 +648,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons LOTUS_PLAZA3
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 67, PSYDUCK
 	db 68, SEEL
@@ -676,7 +676,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons LOTUS_PLAZA4
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 70, CLEFFA
 	db 71, HORSEA
@@ -704,7 +704,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons LOTUS_PLAZA5
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 72, CHANSEY
 	db 73, KRABBY
@@ -732,7 +732,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons LOTUS_PLAZA6
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 74, POLIWAG
 	db 75, CHANSEY
@@ -760,7 +760,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons LOTUS_PLAZA7
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 77, PSYDUCK
 	db 78, SEEL
@@ -788,7 +788,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DIS_PLAZA1
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 78, GASTLY
 	db 79, HOUNDOUR
@@ -816,7 +816,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DIS_PLAZA2
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 80, VULPIX
 	db 81, DRATINI
@@ -844,7 +844,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DIS_PLAZA3
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 82, CYNDAQUIL
 	db 83, VULPIX
@@ -872,7 +872,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DIS_PLAZA4
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 84, PONYTA
 	db 85, HOUNDOUR
@@ -900,7 +900,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DIS_PLAZA5
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 87, DRATINI
 	db 88, GASTLY
@@ -928,7 +928,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DIS_PLAZA6
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 89, HOUNDOUR
 	db 90, CHARMANDER
@@ -956,7 +956,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DIS_PLAZA7
-	db 20 percent, 20 percent, 20 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 91, DRATINI
 	db 92, GASTLY

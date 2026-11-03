@@ -6,6 +6,9 @@ LotusStreet4_MapScripts:
 
 	def_callbacks
 
+LotusStreet4Pickup:
+	itemball ETHER
+
 LotusStreet4SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -75,6 +78,7 @@ LotusStreet4_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  7, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet4Pickup, EVENT_GEN_LOTUS_STREET4_PICKUP
 	object_event  6, 20, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer0, -1
 	object_event 11, 20, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer1, -1
 	object_event  6, 18, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer2, -1

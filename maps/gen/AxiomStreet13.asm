@@ -6,6 +6,9 @@ AxiomStreet13_MapScripts:
 
 	def_callbacks
 
+AxiomStreet13Pickup:
+	itemball TM_GIGA_DRAIN
+
 AxiomStreet13SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -75,6 +78,7 @@ AxiomStreet13_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  8,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet13Pickup, EVENT_GEN_AXIOM_STREET13_PICKUP
 	object_event  6, 20, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet13Trainer0, -1
 	object_event 11, 20, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet13Trainer1, -1
 	object_event  6, 18, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet13Trainer2, -1

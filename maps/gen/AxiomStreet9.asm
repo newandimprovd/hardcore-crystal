@@ -6,6 +6,9 @@ AxiomStreet9_MapScripts:
 
 	def_callbacks
 
+AxiomStreet9Pickup:
+	itemball TM_STEEL_WING
+
 AxiomStreet9SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -78,6 +81,7 @@ AxiomStreet9_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet9Pickup, EVENT_GEN_AXIOM_STREET9_PICKUP
 	object_event  6, 22, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer0, -1
 	object_event  6, 20, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer1, -1
 	object_event 11, 20, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer2, -1

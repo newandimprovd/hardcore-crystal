@@ -44,10 +44,10 @@ DEF NO_LIMITS EQU 0
 	const TM_HM_POCKET    ; 3
 DEF NUM_POCKETS EQU const_value
 
-DEF MAX_ITEMS     EQU 20
-DEF MAX_BALLS     EQU 12
+DEF MAX_ITEMS     EQU 45 ; hardcore: bigger bag (vanilla 20)
+DEF MAX_BALLS     EQU 16 ; hardcore: bigger ball pocket (vanilla 12)
 DEF MAX_KEY_ITEMS EQU 25
-DEF MAX_PC_ITEMS  EQU 50
+DEF MAX_PC_ITEMS  EQU 20 ; hardcore: the bag is big now, so the PC shelf shrinks to pay for it in WRAM (vanilla 50)
 
 DEF MAX_ITEM_STACK EQU 99
 

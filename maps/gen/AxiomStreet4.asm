@@ -6,6 +6,9 @@ AxiomStreet4_MapScripts:
 
 	def_callbacks
 
+AxiomStreet4Pickup:
+	itemball TM_RAIN_DANCE
+
 AxiomStreet4SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -75,6 +78,7 @@ AxiomStreet4_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  7, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet4Pickup, EVENT_GEN_AXIOM_STREET4_PICKUP
 	object_event  6, 20, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet4Trainer0, -1
 	object_event  6, 18, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet4Trainer1, -1
 	object_event 11, 18, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet4Trainer2, -1

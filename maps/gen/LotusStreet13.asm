@@ -6,6 +6,9 @@ LotusStreet13_MapScripts:
 
 	def_callbacks
 
+LotusStreet13Pickup:
+	itemball TM_SHADOW_BALL
+
 LotusStreet13SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -75,6 +78,7 @@ LotusStreet13_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  8,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet13Pickup, EVENT_GEN_LOTUS_STREET13_PICKUP
 	object_event  6, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer0, -1
 	object_event 11, 20, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer1, -1
 	object_event  6, 18, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer2, -1

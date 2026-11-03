@@ -6,6 +6,9 @@ GroveStreet15_MapScripts:
 
 	def_callbacks
 
+GroveStreet15Pickup:
+	itemball TM_ICY_WIND
+
 GroveStreet15SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -75,6 +78,7 @@ GroveStreet15_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet15Pickup, EVENT_GEN_GROVE_STREET15_PICKUP
 	object_event  6, 20, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet15Trainer0, -1
 	object_event 11, 18, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet15Trainer1, -1
 	object_event  6, 16, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet15Trainer2, -1

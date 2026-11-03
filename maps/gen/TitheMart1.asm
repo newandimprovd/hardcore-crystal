@@ -18,11 +18,28 @@ TitheMart1Npc0Script:
 	jumptextfaceplayer TitheMart1Npc0Text
 
 TitheMart1Npc0Text:
-	text "The clerk blessed"
-	line "my potion. It's"
-	para "still just a"
-	line "potion. But it's"
-	para "thirty bucks more."
+	text "You skipped the"
+	line "sign. Respect."
+	para "Here is the short"
+	line "version, free of"
+	para "charge, like"
+	line "nothing else here."
+	para "Healing costs"
+	line "money outside"
+	para "CHERRYGROVE. Your"
+	line "bench earns 30% of"
+	para "the EXP, so"
+	line "rotate. Moves are"
+	para "PHYSICAL or"
+	line "SPECIAL, and the"
+	para "move menu says"
+	line "which. FAIRY is"
+	para "the new type."
+	line "DRAGON cannot"
+	para "touch it, POISON"
+	line "and STEEL can."
+	para "Everything evolves"
+	line "at 25, 50 and 75."
 	done
 
 TitheMart1_MapEvents:

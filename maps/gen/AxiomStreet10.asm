@@ -6,6 +6,9 @@ AxiomStreet10_MapScripts:
 
 	def_callbacks
 
+AxiomStreet10Pickup:
+	itemball REVIVE
+
 AxiomStreet10SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -75,6 +78,7 @@ AxiomStreet10_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet10Pickup, EVENT_GEN_AXIOM_STREET10_PICKUP
 	object_event  6, 20, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet10Trainer0, -1
 	object_event 11, 18, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet10Trainer1, -1
 	object_event  6, 16, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet10Trainer2, -1

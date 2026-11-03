@@ -6,6 +6,9 @@ DisStreet1_MapScripts:
 
 	def_callbacks
 
+DisStreet1Pickup:
+	itemball TM_THUNDER
+
 DisStreet1SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -78,6 +81,7 @@ DisStreet1_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet1Pickup, EVENT_GEN_DIS_STREET1_PICKUP
 	object_event  6, 22, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet1Trainer0, -1
 	object_event 11, 22, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet1Trainer1, -1
 	object_event  6, 20, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet1Trainer2, -1

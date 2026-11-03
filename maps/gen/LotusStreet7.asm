@@ -6,6 +6,9 @@ LotusStreet7_MapScripts:
 
 	def_callbacks
 
+LotusStreet7Pickup:
+	itemball TM_PSYCH_UP
+
 LotusStreet7SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -75,6 +78,7 @@ LotusStreet7_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  8,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet7Pickup, EVENT_GEN_LOTUS_STREET7_PICKUP
 	object_event  6, 20, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet7Trainer0, -1
 	object_event 11, 18, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet7Trainer1, -1
 	object_event  6, 16, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet7Trainer2, -1

@@ -1215,6 +1215,26 @@ PlaceMoveData:
 	call PlaceString
 
 .description
+	; HC: the physical/special split exists per move, so say which one this move is (row 13, under the type)
+	ld a, [wCurSpecies]
+	dec a
+	ld hl, Moves + MOVE_POWER
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	and a
+	ld de, String_MoveStatus
+	jr z, .got_category
+	ld a, [wCurSpecies]
+	call GetMoveCategory
+	cp SPECIAL
+	ld de, String_MovePhysical
+	jr c, .got_category
+	ld de, String_MoveSpecial
+.got_category
+	hlcoord 2, 13
+	call PlaceString
 	hlcoord 1, 14
 	predef PrintMoveDescription
 	ld a, $1
@@ -1229,6 +1249,12 @@ String_MoveAtk:
 	db "ATK/@"
 String_MoveNoPower:
 	db "---@"
+String_MovePhysical:
+	db "PHYSICAL@"
+String_MoveSpecial:
+	db "SPECIAL @"
+String_MoveStatus:
+	db "STATUS  @"
 
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow

@@ -4,7 +4,7 @@ import random
 
 from . import a1_text as T
 from . import kits
-from .builder import ActSpec, BossSpec, build_act, town
+from .builder import ActSpec, BossSpec, build_act, pickup, town
 from .layout import chain, gatehouse, lane, plaza
 from .populate import populate
 from .text import Text
@@ -65,12 +65,19 @@ def build(w, roster, rng, open_exit=False):
 
     # Segment 1: the road out of Cherrygrove (outdoor Johto tileset)
     road, s_road = lane(g, "TitheRoad", johto, rng, trainers=6, a=2, cw=3, right=3, landmark=LM_ROAD,
-                        music="MUSIC_ROUTE_30", north="door", neck=2)
+                        music="MUSIC_ROUTE_30", north="open", neck=2)
+    pickup(w, road, reserve=len(s_road))
     # Segment 2: the city (modern tileset)
-    p1, d1 = plaza(g, "TithePlaza1", modern, rng, landmark=LM_CITY, music="MUSIC_GOLDENROD_CITY", rift=True,
-                   houses=1, south="closed")
-    gatehouse(g, "TitheCheckpoint", road.door, d1["rift"], LM_CITY, "MUSIC_GOLDENROD_CITY", [Text(T.GATE[0])])
-    town(w, g, "Tithe", 1, p1, d1, modern, LM_CITY, "TITHE_1", items[0], texts, "TITHE_1")
+    # The road runs straight into the city: no gatehouse, no loading door, just a map connection.
+    p1, d1 = plaza(g, "TithePlaza1", modern, rng, landmark=LM_CITY, music="MUSIC_GOLDENROD_CITY", houses=1)
+    chain(road, p1, -1)  # the road channel starts one block left of the plaza channel
+    town(w, g, "Tithe", 1, p1, d1, modern, LM_CITY, "TITHE_1", items[0], texts, "TITHE_1", reminders=(T.TIP_A, T.TIP_B))
+    # Trainer tips sign: a Johto signpost block just left of the road, above the neck. Read it from the road side.
+    sx, sy = road.a - 1, road.h - 3
+    road.set(sx, sy, 0x47)
+    road.bg(2 * sx + 1, 2 * sy + 1, "BGEVENT_READ", "TitheRoadTipsSign")
+    road.scripts.append("TitheRoadTipsSign:\n\tjumptext TitheRoadTipsSignText\n")
+    road.scripts.append(Text(T.TIPS_SIGN).emit("TitheRoadTipsSignText"))
     # Cherrygrove link
     class Cherry:
         name, const = "CherrygroveCity", "CHERRYGROVE_CITY"

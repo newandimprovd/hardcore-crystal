@@ -30,17 +30,65 @@ class ActSpec:
         self.lane_names = lane_names
 
 
+# TMs come in a fixed order, weak and handy ones first, so the player keeps finding better ones as the world opens up.
+TM_ORDER = [
+    "HEADBUTT", "ROCK_SMASH", "DOUBLE_TEAM", "SWAGGER", "SNORE", "SLEEP_TALK", "REST", "DEFENSE_CURL", "MUD_SLAP",
+    "DETECT", "ENDURE", "PROTECT", "FURY_CUTTER", "ATTRACT", "THIEF", "ROLLOUT", "SWIFT", "FIRE_PUNCH", "ICE_PUNCH",
+    "THUNDERPUNCH", "ICY_WIND", "SWEET_SCENT", "SUNNY_DAY", "RAIN_DANCE", "SANDSTORM", "IRON_TAIL", "STEEL_WING",
+    "DRAGONBREATH", "GIGA_DRAIN", "CURSE", "TOXIC", "NIGHTMARE", "DREAM_EATER", "ROAR", "PSYCH_UP", "DIG",
+    "SLUDGE_BOMB", "SOLARBEAM", "SHADOW_BALL", "PSYCHIC_M", "THUNDER", "FIRE_BLAST", "BLIZZARD", "EARTHQUAKE",
+    "ZAP_CANNON", "HIDDEN_POWER", "FRUSTRATION", "RETURN", "DYNAMICPUNCH", "HYPER_BEAM",
+]
+# What the other pickups are, by how far through the game the lane is (global lane counter).
+PICKUPS = [
+    ["POTION", "ANTIDOTE", "POKE_BALL", "PARLYZ_HEAL", "AWAKENING", "ETHER"],
+    ["SUPER_POTION", "GREAT_BALL", "BURN_HEAL", "ICE_HEAL", "REVIVE", "ETHER", "REPEL"],
+    ["HYPER_POTION", "ULTRA_BALL", "FULL_HEAL", "REVIVE", "MAX_REPEL", "ELIXER", "MAX_ETHER"],
+]
+
+
+def pickup(w, m, reserve=0, total_lanes=75):
+    """Put one item ball in lane m: a TM on three lanes out of four (in TM_ORDER), else a consumable by progress.
+    Uses its own random generator so the existing layout stays exactly as it was."""
+    import random
+    if len(m.objects) + reserve + 1 > 15:  # no room: trainers are added after this call, so they are counted in `reserve`
+        return None
+    rnd = random.Random("pickup:" + m.name)
+    n = getattr(w, "pickups", 0)
+    w.pickups = n + 1
+    idx = n // 4 * 3 + n % 4
+    if n % 4 != 3 and idx < len(TM_ORDER):
+        item = "TM_" + TM_ORDER[idx]
+    else:
+        tier = min(2, n * 3 // total_lanes)
+        item = rnd.choice(PICKUPS[tier])
+    a, cw = m.a, m.cw
+    taken = {(o["x"], o["y"]) for o in m.objects}
+    cells = [(x, y) for y in range(5, 2 * m.h - 8, 2) for x in range(2 * a + 1, 2 * (a + cw) - 1)
+             if (x, y) not in taken]
+    x, y = rnd.choice(cells)
+    flag = w.flag(f"EVENT_GEN_{m.const}_PICKUP")
+    m.scripts.append(f"{m.name}Pickup:\n\titemball {item}\n")
+    m.obj(x, y, "SPRITE_POKE_BALL", "SPRITEMOVEDATA_STILL", f"{m.name}Pickup", otype="OBJECTTYPE_ITEMBALL", flag=flag)
+    return item
+
+
 def pick(lst, i):
     return Text(lst[i % len(lst)]) if lst else None
 
 
-def town(w, g, tag, n, p, doors, kit, landmark, spawn_const, mart_items, texts, martconst):
-    """Pokecenter, Mart and house interiors for plaza p (doors from layout.plaza). texts: dict of lists."""
+def town(w, g, tag, n, p, doors, kit, landmark, spawn_const, mart_items, texts, martconst, reminders=None):
+    """Pokecenter, Mart and house interiors for plaza p (doors from layout.plaza). texts: dict of lists.
+    reminders: optional (pokecenter text, mart text) that replace the random picks, used for the rules reminders."""
     w.spawns.append((spawn_const, p, *p.spawn_cell))
     w.marts.append((martconst, f"Mart{tag}{n}", mart_items))
     center = [pick(texts.get("center", []), n * 3 + i) for i in range(1)]
+    if reminders:
+        center = [Text(reminders[0])]
     pokecenter_interior(g, f"{tag}Pokecenter{n}", doors["center"], landmark, [t for t in center if t])
     mart = [pick(texts.get("mart", []), n * 2)]
+    if reminders:
+        mart = [Text(reminders[1])]
     mart_interior(g, f"{tag}Mart{n}", doors["mart"], landmark, martconst, [t for t in mart if t])
     for i, hd in enumerate(doors["houses"]):
         h = [pick(texts.get("house", []), n * 2 + i), pick(texts.get("house", []), n * 2 + i + 5)]
@@ -65,6 +113,7 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
         tr = act.trainers[i] if isinstance(act.trainers, (list, tuple)) else act.trainers
         m, s = lane(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark,
                     music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal)
+        pickup(w, m, reserve=len(s))
         chain(below, m)
         lanes.append((m, s))
         below = m

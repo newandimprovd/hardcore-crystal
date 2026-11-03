@@ -6,6 +6,9 @@ LotusStreet10_MapScripts:
 
 	def_callbacks
 
+LotusStreet10Pickup:
+	itemball TM_SLUDGE_BOMB
+
 LotusStreet10SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -75,6 +78,7 @@ LotusStreet10_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  8,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet10Pickup, EVENT_GEN_LOTUS_STREET10_PICKUP
 	object_event  6, 20, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer0, -1
 	object_event 11, 20, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer1, -1
 	object_event  6, 18, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer2, -1

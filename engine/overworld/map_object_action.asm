@@ -49,10 +49,23 @@ SetFacingStepAction:
 	bit SLIDING_F, [hl]
 	jp nz, SetFacingCurrent
 
+	; HC: running animation. Fast steps (hold B) swing the two stepping frames twice per tile and skip the
+	; standing frame, so the legs never rest. Slower steps keep the normal four-frame cycle.
+	ld hl, OBJECT_WALKING
+	add hl, bc
+	ld a, [hl]
+	and %00001100
+	cp STEP_BIKE << 2
 	ld hl, OBJECT_STEP_FRAME
 	add hl, bc
 	ld a, [hl]
+	jr z, .run
 	inc a
+	jr .got_frame
+.run
+	add 2
+	or %00000100
+.got_frame
 	and %00001111
 	ld [hl], a
 

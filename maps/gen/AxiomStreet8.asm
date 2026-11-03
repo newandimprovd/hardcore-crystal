@@ -6,6 +6,9 @@ AxiomStreet8_MapScripts:
 
 	def_callbacks
 
+AxiomStreet8Pickup:
+	itemball TM_IRON_TAIL
+
 AxiomStreet8SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -75,6 +78,7 @@ AxiomStreet8_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  9, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet8Pickup, EVENT_GEN_AXIOM_STREET8_PICKUP
 	object_event  6, 20, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer0, -1
 	object_event 11, 18, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer1, -1
 	object_event  6, 16, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer2, -1

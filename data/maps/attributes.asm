@@ -118,7 +118,7 @@ ENDM
 
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $05
 	connection west, Route29, ROUTE_29, 0
-	connection east, Route27, ROUTE_27, 0
+	; HC: no way east to Route 27 (the vanilla world is cut off)
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35
 	connection north, TitheRoad, TITHE_ROAD, 5 ; HC-AREAS

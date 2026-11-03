@@ -6,6 +6,9 @@ AxiomStreet2_MapScripts:
 
 	def_callbacks
 
+AxiomStreet2Pickup:
+	itemball TM_SWEET_SCENT
+
 AxiomStreet2SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -78,6 +81,7 @@ AxiomStreet2_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  9,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet2Pickup, EVENT_GEN_AXIOM_STREET2_PICKUP
 	object_event  6, 22, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer0, -1
 	object_event  6, 20, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer1, -1
 	object_event 11, 20, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet2Trainer2, -1

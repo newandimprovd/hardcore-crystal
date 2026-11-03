@@ -30,6 +30,17 @@ TrainerDeathScript::
 	writetext HC_LootText
 	waitbutton
 	closetext
+	; About one body in four also carries something useful. What it carries gets better the higher the count climbs.
+	callasm HC_RollItemDrop
+	ifequal 0, .NoDrop
+	getitemname STRING_BUFFER_3, USE_SCRIPT_VAR
+	giveitem ITEM_FROM_MEM
+	iffalse .NoDrop ; bag full: the item stays on the body
+	opentext
+	writetext HC_ItemDropText
+	waitbutton
+	closetext
+.NoDrop:
 	callasm HC_CountKill
 	checkevent EVENT_HC_REVEAL_PENDING
 	iftrue HC_RevealAftermath
@@ -131,6 +142,76 @@ HC_LootText:
 
 .End:
 	text_end ; a text_asm block hands back a text *command*, so this is TX_END, not the in-string <DONE>
+
+HC_ItemDropText:
+	text "Pockets held:"
+	line "@"
+	text_ram wStringBuffer3
+	text_end
+
+HC_RollItemDrop:
+; wScriptVar = an expendable item for the kill count reached so far, or 0 for nothing (about 1 body in 4).
+; The kill counter is already past this kill's predecessor, so tiers are 0-99, 100-199, 200-349 and 350+ kills.
+	call Random
+	cp 64
+	jr c, .drop
+	xor a
+	ld [wScriptVar], a
+	ret
+
+.drop
+	ld hl, wHCKillCount
+	ld a, [hli]
+	ld c, a
+	ld b, [hl] ; bc = kills
+	ld d, 0 ; tier
+	ld a, c
+	sub LOW(100)
+	ld a, b
+	sbc HIGH(100)
+	jr c, .tier_done
+	inc d
+	ld a, c
+	sub LOW(200)
+	ld a, b
+	sbc HIGH(200)
+	jr c, .tier_done
+	inc d
+	ld a, c
+	sub LOW(350)
+	ld a, b
+	sbc HIGH(350)
+	jr c, .tier_done
+	inc d
+.tier_done
+	ld a, d
+	add a
+	add a
+	add a ; 8 items per tier
+	ld e, a
+	ld d, 0
+	ld hl, HC_ItemDropTable
+	add hl, de
+	push hl
+	ld b, 8
+	call HC_RandMod
+	pop hl
+	ld e, a
+	ld d, 0
+	add hl, de
+	ld a, [hl]
+	ld [wScriptVar], a
+	ret
+
+HC_ItemDropTable:
+; tier 0: the first hundred
+	db POTION, POTION, ANTIDOTE, POKE_BALL, POKE_BALL, PARLYZ_HEAL, REPEL, AWAKENING
+; tier 1
+	db SUPER_POTION, POTION, GREAT_BALL, POKE_BALL, BURN_HEAL, ICE_HEAL, SUPER_REPEL, REVIVE
+; tier 2
+	db SUPER_POTION, HYPER_POTION, GREAT_BALL, ULTRA_BALL, FULL_HEAL, REVIVE, ETHER, MAX_REPEL
+; tier 3
+	db HYPER_POTION, MAX_POTION, ULTRA_BALL, FULL_HEAL, MAX_REVIVE, ELIXER, DIRE_HIT, X_ATTACK
 
 HC_DeathMode:
 ; wScriptVar: 0 = the trainer dies quietly, 1 = a random line, 2 + n = the unique last words of row n of HC_UniqueDeathTable

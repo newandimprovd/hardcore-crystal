@@ -6,6 +6,9 @@ GroveStreet1_MapScripts:
 
 	def_callbacks
 
+GroveStreet1Pickup:
+	itemball TM_PROTECT
+
 GroveStreet1SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -75,6 +78,7 @@ GroveStreet1_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet1Pickup, EVENT_GEN_GROVE_STREET1_PICKUP
 	object_event  6, 20, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet1Trainer0, -1
 	object_event 11, 20, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet1Trainer1, -1
 	object_event  6, 18, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet1Trainer2, -1

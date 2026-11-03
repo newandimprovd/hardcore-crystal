@@ -416,7 +416,7 @@ Route29_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 27,  1, ROUTE_29_ROUTE_46_GATE, 3
+	; HC: the gate to Route 46 is just a building now
 
 	def_coord_events
 	coord_event 53,  8, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1

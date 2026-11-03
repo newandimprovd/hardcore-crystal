@@ -6,6 +6,9 @@ DisStreet7_MapScripts:
 
 	def_callbacks
 
+DisStreet7Pickup:
+	itemball REVIVE
+
 DisStreet7SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -78,6 +81,7 @@ DisStreet7_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet7Pickup, EVENT_GEN_DIS_STREET7_PICKUP
 	object_event  6, 22, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet7Trainer0, -1
 	object_event 11, 20, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet7Trainer1, -1
 	object_event  6, 18, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet7Trainer2, -1

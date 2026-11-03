@@ -6,6 +6,9 @@ LotusStreet15_MapScripts:
 
 	def_callbacks
 
+LotusStreet15Pickup:
+	itemball TM_PSYCHIC_M
+
 LotusStreet15SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -75,6 +78,7 @@ LotusStreet15_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet15Pickup, EVENT_GEN_LOTUS_STREET15_PICKUP
 	object_event  6, 20, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet15Trainer0, -1
 	object_event 11, 20, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet15Trainer1, -1
 	object_event  6, 18, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet15Trainer2, -1

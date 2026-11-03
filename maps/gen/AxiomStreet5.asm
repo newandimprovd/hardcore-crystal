@@ -6,6 +6,9 @@ AxiomStreet5_MapScripts:
 
 	def_callbacks
 
+AxiomStreet5Pickup:
+	itemball SUPER_POTION
+
 AxiomStreet5SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -75,6 +78,7 @@ AxiomStreet5_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  8, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet5Pickup, EVENT_GEN_AXIOM_STREET5_PICKUP
 	object_event  6, 20, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer0, -1
 	object_event  6, 18, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer1, -1
 	object_event 11, 18, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer2, -1

@@ -6,6 +6,9 @@ GroveStreet3_MapScripts:
 
 	def_callbacks
 
+GroveStreet3Pickup:
+	itemball TM_FURY_CUTTER
+
 GroveStreet3SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -75,6 +78,7 @@ GroveStreet3_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  7, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet3Pickup, EVENT_GEN_GROVE_STREET3_PICKUP
 	object_event  6, 20, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer0, -1
 	object_event  6, 18, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer1, -1
 	object_event 11, 18, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer2, -1

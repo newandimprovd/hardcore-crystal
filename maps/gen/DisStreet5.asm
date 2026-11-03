@@ -6,6 +6,9 @@ DisStreet5_MapScripts:
 
 	def_callbacks
 
+DisStreet5Pickup:
+	itemball TM_EARTHQUAKE
+
 DisStreet5SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -75,6 +78,7 @@ DisStreet5_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  8, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet5Pickup, EVENT_GEN_DIS_STREET5_PICKUP
 	object_event  6, 20, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet5Trainer0, -1
 	object_event 11, 20, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet5Trainer1, -1
 	object_event  6, 18, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet5Trainer2, -1

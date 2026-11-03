@@ -6,6 +6,9 @@ GroveStreet8_MapScripts:
 
 	def_callbacks
 
+GroveStreet8Pickup:
+	itemball TM_ROLLOUT
+
 GroveStreet8SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -75,6 +78,7 @@ GroveStreet8_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  8, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet8Pickup, EVENT_GEN_GROVE_STREET8_PICKUP
 	object_event  6, 20, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer0, -1
 	object_event  6, 18, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer1, -1
 	object_event 11, 18, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer2, -1
