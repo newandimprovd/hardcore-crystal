@@ -3,12 +3,12 @@
 SECTION "Area Attributes", ROMX
 
 	map_attributes TitheRoad, TITHE_ROAD, $05
-	connection north, TithePlaza1, TITHE_PLAZA1, -1
 	connection south, CherrygroveCity, CHERRYGROVE_CITY, -5
 
 	map_attributes TithePlaza1, TITHE_PLAZA1, $00
 	connection north, TitheStreet1, TITHE_STREET1, 0
-	connection south, TitheRoad, TITHE_ROAD, 1
+
+	map_attributes TitheCheckpoint, TITHE_CHECKPOINT, $00
 
 	map_attributes TithePokecenter1, TITHE_POKECENTER1, $00
 
@@ -698,6 +698,9 @@ TitheRoad_Blocks:
 
 TithePlaza1_Blocks:
 	INCBIN "maps/gen/TithePlaza1.blk"
+
+TitheCheckpoint_Blocks:
+	INCBIN "maps/gen/TitheCheckpoint.blk"
 
 TithePokecenter1_Blocks:
 	INCBIN "maps/gen/TithePokecenter1.blk"
@@ -1431,6 +1434,12 @@ ENDSECTION
 SECTION "TithePlaza1 Scripts", ROMX
 
 INCLUDE "maps/gen/TithePlaza1.asm"
+
+ENDSECTION
+
+SECTION "TitheCheckpoint Scripts", ROMX
+
+INCLUDE "maps/gen/TitheCheckpoint.asm"
 
 ENDSECTION
 

@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, GHOST ; type
-	db 25 ; catch rate
+	db 50 ; catch rate
 	db 228 ; base exp
 	db NO_ITEM, KINGS_ROCK ; items
 	db GENDER_F50 ; gender ratio

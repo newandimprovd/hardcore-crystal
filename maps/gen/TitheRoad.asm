@@ -78,27 +78,28 @@ TitheRoadAfterScript:
 	end
 
 TitheRoadTrainer0:
-	trainer T_COP, 128, EVENT_GEN_TITHE_ROAD_0, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_PUNK, 128, EVENT_GEN_TITHE_ROAD_0, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer1:
-	trainer T_BANKER, 128, EVENT_GEN_TITHE_ROAD_1, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_BEGGAR, 128, EVENT_GEN_TITHE_ROAD_1, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer2:
-	trainer T_THUG, 128, EVENT_GEN_TITHE_ROAD_2, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_COP, 128, EVENT_GEN_TITHE_ROAD_2, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer3:
 	trainer T_COP, 129, EVENT_GEN_TITHE_ROAD_3, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer4:
-	trainer T_NUN, 128, EVENT_GEN_TITHE_ROAD_4, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_SUIT, 128, EVENT_GEN_TITHE_ROAD_4, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer5:
-	trainer T_COP, 130, EVENT_GEN_TITHE_ROAD_5, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_ENFORCER, 128, EVENT_GEN_TITHE_ROAD_5, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoad_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  7,  1, TITHE_CHECKPOINT, 3
 
 	def_coord_events
 
@@ -107,10 +108,10 @@ TitheRoad_MapEvents:
 
 	def_object_events
 	object_event  5,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheRoadPickup, EVENT_GEN_TITHE_ROAD_PICKUP
-	object_event  4, 10, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer0, -1
-	object_event  9,  8, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer1, -1
-	object_event  4,  6, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer2, -1
-	object_event  9,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer3, -1
-	object_event  4,  4, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer4, -1
-	object_event  9,  4, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer5, -1
+	object_event  4, 10, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer0, -1
+	object_event  4,  8, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer1, -1
+	object_event  9,  8, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer2, -1
+	object_event  4,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer3, -1
+	object_event  9,  6, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer4, -1
+	object_event  9,  4, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer5, -1
 

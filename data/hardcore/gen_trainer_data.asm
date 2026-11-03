@@ -13,15 +13,11 @@ HC_GenGroup_RIVAL2:
 	db -1
 
 HC_GenGroup_T_COP:
-	db "HANNAH@"
-	db 5, SMOOCHUM
+	db "DUANE@"
+	db 6, NIDORAN_F
 	db -1
-	db "MINA@"
-	db 5, HOUNDOUR
-	db 6, NIDORAN_M
-	db -1
-	db "TONY@"
-	db 6, MAGNEMITE
+	db "GINA@"
+	db 7, HOUNDOUR
 	db -1
 	db "LUCY@"
 	db 7, RATTATA
@@ -219,6 +215,9 @@ HC_GenGroup_T_COP:
 	db -1
 
 HC_GenGroup_T_SUIT:
+	db "CARLA@"
+	db 7, RATTATA
+	db -1
 	db "VERA@"
 	db 9, RATTATA
 	db -1
@@ -397,9 +396,6 @@ HC_GenGroup_T_HOODIE:
 	db -1
 
 HC_GenGroup_T_BANKER:
-	db "JAY@"
-	db 6, ABRA
-	db -1
 	db "LEN@"
 	db 7, HOUNDOUR
 	db -1
@@ -543,9 +539,6 @@ HC_GenGroup_T_CHOIR:
 	db -1
 
 HC_GenGroup_T_THUG:
-	db "CHUCK@"
-	db 8, NIDORAN_M
-	db -1
 	db "DELIA@"
 	db 10, NIDORAN_F
 	db -1
@@ -686,9 +679,6 @@ HC_GenGroup_T_PRIEST:
 	db -1
 
 HC_GenGroup_T_NUN:
-	db "BLANCHE@"
-	db 8, SENTRET
-	db -1
 	db "NORA@"
 	db 6, PORYGON
 	db 7, TENTACOOL
@@ -735,6 +725,10 @@ HC_GenGroup_T_NUN:
 	db -1
 
 HC_GenGroup_T_BEGGAR:
+	db "EVAN@"
+	db 4, ABRA
+	db 7, SLOWPOKE
+	db -1
 	db "BELLA@"
 	db 12, KOFFING
 	db -1
@@ -837,6 +831,10 @@ HC_GenGroup_T_ALTARBOY:
 	db -1
 
 HC_GenGroup_T_PUNK:
+	db "PAM@"
+	db 5, HOUNDOUR
+	db 8, GRIMER
+	db -1
 	db "CLARA@"
 	db 7, DROWZEE
 	db -1
@@ -968,6 +966,10 @@ HC_GenGroup_T_DRIFTER:
 	db -1
 
 HC_GenGroup_T_ENFORCER:
+	db "TONY@"
+	db 4, MANKEY
+	db 6, MAGNEMITE
+	db -1
 	db "EARL@"
 	db 8, LARVITAR
 	db 8, HOUNDOUR
@@ -1046,29 +1048,29 @@ HC_GenGroup_T_ACCOUNTANT:
 
 HC_GenGroup_T_DEACON:
 	db "DEACON@"
-	db 15, SENTRET
-	db 16, SPINARAK
+	db 15, PORYGON
+	db 15, SLOWPOKE
 	db 16, NIDORAN_F
-	db 17, PORYGON
+	db 18, PONYTA
 	db -1
 
 HC_GenGroup_T_COPCHIEF:
 	db "CHIEF BRAD@"
-	db 19, POLIWAG
 	db 19, SMOOCHUM
 	db 19, VENONAT
-	db 21, HOOTHOOT
+	db 19, HOOTHOOT
 	db 22, HOUNDOUR
+	db 23, KOFFING
 	db -1
 
 HC_GenGroup_T_MONSIGNOR:
 	db "MONSIGNOR@"
-	db 26, HOUNDOOM
-	db 26, HOOTHOOT
+	db 25, PERSIAN
+	db 26, TENTACOOL
 	db 26, PIDGEOTTO
-	db 27, JIGGLYPUFF
-	db 28, RATICATE
-	db 28, PORYGON2
+	db 26, PORYGON2
+	db 27, FURRET
+	db 28, SLOWBRO
 	db -1
 
 HC_GenGroup_G_HIKER:

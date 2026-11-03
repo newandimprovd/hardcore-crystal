@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db FAIRY, GHOST ; type
-	db 25 ; catch rate
+	db 50 ; catch rate
 	db 217 ; base exp
 	db NO_ITEM, LUCKY_EGG ; items
 	db GENDER_F100 ; gender ratio

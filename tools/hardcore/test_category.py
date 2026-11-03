@@ -12,7 +12,7 @@ g = importlib.util.module_from_spec(spec); spec.loader.exec_module(g)
 want = g.category_table()
 
 t = T(rom)
-t.tick(60)
+t.tick(120)   # the boot is shorter now (no intro movie): wait until the CPU is in ordinary code, not halted
 fn = t.addr("GetMoveCategory")
 code = [0xF3, 0xCD, fn & 0xFF, fn >> 8, 0x18, 0xFE]   # di; call GetMoveCategory; jr $
 for i, b in enumerate(code):

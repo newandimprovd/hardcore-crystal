@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type
-	db 225 ; catch rate
+	db 255 ; catch rate
 	db 114 ; base exp
 	db STARDUST, STAR_PIECE ; items
 	db GENDER_UNKNOWN ; gender ratio

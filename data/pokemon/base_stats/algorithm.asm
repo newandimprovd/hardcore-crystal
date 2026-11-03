@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db PSYCHIC_TYPE, STEEL ; type
-	db 25 ; catch rate
+	db 50 ; catch rate
 	db 219 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio

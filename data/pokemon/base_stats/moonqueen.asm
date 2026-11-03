@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db FAIRY, PSYCHIC_TYPE ; type
-	db 25 ; catch rate
+	db 50 ; catch rate
 	db 228 ; base exp
 	db MYSTERYBERRY, MOON_STONE ; items
 	db GENDER_F75 ; gender ratio

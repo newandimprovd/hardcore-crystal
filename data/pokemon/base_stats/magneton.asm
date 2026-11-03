@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, STEEL ; type
-	db 60 ; catch rate
+	db 120 ; catch rate
 	db 150 ; base exp
 	db NO_ITEM, METAL_COAT ; items
 	db GENDER_UNKNOWN ; gender ratio

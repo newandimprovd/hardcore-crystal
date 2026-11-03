@@ -250,8 +250,8 @@ def cherrygrove(r):
 
 def timmy(r):
     # the rival scene and the Guide Gent hold the player at the east gate; walk on to the trainer's line of sight
-    # TIMMY stands at (14, 4) facing east and sees (15..18, 4)
-    if not r.goto(lambda s: s[0] == "CherrygroveCity" and s[2] == 4 and 15 <= s[1] <= 18, "toward Timmy"):
+    # TIMMY stands on the north exit at (16, 1) facing east and sees (17..20, 1)
+    if not r.goto(lambda s: s[0] == "CherrygroveCity" and s[2] == 1 and 17 <= s[1] <= 20, "toward Timmy"):
         return False
     r.mash(4000)
     r.say("after the first fight:", r.where(), "timmy", r.flag("EVENT_BEAT_YOUNGSTER_TIMMY"), "revealed",

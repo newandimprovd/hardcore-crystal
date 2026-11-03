@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ROCK, DARK ; type
-	db 25 ; catch rate
+	db 50 ; catch rate
 	db 255 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio

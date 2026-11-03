@@ -153,3 +153,20 @@ Goal: stop reusing vanilla graphics that clash with the dark-comedy vibe.
 - tools/hardcore/test_wild.py ROM MAP [N] + wild_all.sh: in-game test (encounters match the table for the time of day, run, fight, catch a mon with a ball,
   kill counter unchanged by wild battles). The walker avoids grass (areamodel.route).
 - Open: wild water encounters on the Lotus Coast, Outboard placement, balance of wild levels vs trainers, a few evolved forms in rare slots.
+
+## Alpha 2, pass 1 (bugs and rules from the alpha-1 list) - state
+- Done in code: Unown-slot pic table fix, vanilla trainer battle pics, Timmy party/position, paid healing, 70/30 EXP share, half encounter rate, double catch rates
+  (gen_roster CATCH_MULT, baked into data/pokemon/base_stats/*.asm), rare mature death texts, intro movie skipped, text overflow guard, Pokecenter 2F and the map card
+  removed, loot text terminator fix, trainer tips sign + trainer-reminder NPCs, TMs and consumables as item balls in the lanes (68 pickups, all 50 TMs), bag 45 slots /
+  16 balls / 20 PC items, trainer item drops (HC_RollItemDrop), run animation (stride cadence), PHYSICAL/SPECIAL/STATUS label in the summary, wider Cthuludon back sprite,
+  unreachable vanilla maps stubbed (tools/hardcore/stub_maps.py; +275 KB free).
+- **Tithe Road must end in the checkpoint gate hall.** A plain map connection from the Johto-tileset road into the Tithe plaza (different tileset) crashed the game (reset or
+  hang ~10 frames after the crossing, Quilava and Cthuludon alike); same rule as "connected maps must share the tileset". Route -> gate hall -> town is the classic Pokemon
+  transition, so the gatehouse is back (areas/a1.py: lane north="door", plaza rift + south="closed", gatehouse "TitheCheckpoint").
+- Combined verification (tools/hardcore/verify_all.sh builds the real ROM and every test ROM, then runs): check_wild, test_roster (248 species), test_category (251 moves),
+  test_intro (new game to Timmy), test_cross (Cherrygrove <-> Tithe Road connection), test_road (road -> gate hall -> plaza and back), test_features (sign, ball, TM count),
+  test_pack (45 items scroll), walk_all 1-5 (192..200 kills each), test_whiteout, test_wild, test_split (0 mismatches), test_story milestone/newbark/ending: all PASS.
+- Test notes: test_category needs a 120 frame warm-up since the boot got shorter; the walker's "soft block" lines are detours around item balls and dead trainers (a dead
+  trainer stays where he walked up to the player); check_text reports 44 vanilla "<USER>'s" lines at the worst-case name width, not defects.
+- Not done in pass 1 (pass 2 / later): bicycle, multiplayer, mobile, phone and Battle Tower code removal beyond the map stubs (about 200 KB more possible), real run sprite
+  art, sprite polish, first-kill reveal rewrite, story/world rework (see the alpha-1 triage).

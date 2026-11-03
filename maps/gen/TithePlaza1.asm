@@ -13,6 +13,7 @@ TithePlaza1_MapEvents:
 	warp_event  2,  3, TITHE_POKECENTER1, 1
 	warp_event 12,  3, TITHE_MART1, 1
 	warp_event 16,  3, TITHE_HOUSE1, 1
+	warp_event 20,  3, TITHE_CHECKPOINT, 1
 
 	def_coord_events
 

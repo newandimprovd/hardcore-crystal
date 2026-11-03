@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db STEEL, DRAGON ; type
-	db 25 ; catch rate
+	db 50 ; catch rate
 	db 222 ; base exp
 	db NO_ITEM, METAL_COAT ; items
 	db GENDER_F50 ; gender ratio

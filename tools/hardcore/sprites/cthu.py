@@ -226,6 +226,7 @@ def front_cthuludon(ph=0.0, glow=0, open_=0):
 
 
 def back_cthuludon():
+    """Seen from behind the player-side Cthuludon is a broad wall of shoulders, wings and side tentacles: wide, low, menacing."""
     n = B
     cv = Canvas(n)
     for sx in (0, 1):
@@ -237,20 +238,32 @@ def back_cthuludon():
         for tip in X([(3, 2), (1, 17), (2, 28), (8, 35)]):
             cv.line(round(X([(19, 24)])[0][0]), 24, round(tip[0]), round(tip[1]), 3)
     for sx in (0, 1):
-        fx = 33 if sx else 14
-        cv.paint(Mask(n).ell(fx, 44, 7, 3.4), shade=lambda x, y: 0.5)
-        claws(cv, fx + (3 if sx else -3), 45, -1 if sx else 1, 4, 3, 2)
-    cv.paint(Mask(n).ell(23.5, 34, 13, 15), shade=radial(23.5, 32, 15, base=0.5, gain=0.8))
+        fx = 38 if sx else 9
+        cv.paint(Mask(n).ell(fx, 44, 8.5, 3.6), shade=lambda x, y: 0.5)
+        claws(cv, fx + (4 if sx else -4), 45, -1 if sx else 1, 4, 3, 2)
+    # broad torso with heavy shoulders
+    cv.paint(Mask(n).ell(23.5, 34, 18.5, 14.5), shade=radial(23.5, 32, 17, base=0.5, gain=0.8))
+    for sx in (0, 1):
+        sh = [(11, 27), (3, 22), (9, 20)]
+        sh = mirror(sh, n) if sx else sh
+        cv.paint(Mask(n).poly(sh), shade=lambda x, y: 0.2)  # shoulder spikes
     for k in range(5):  # spine ridge
         y = 20 + k * 5
         sp = [(23.5, y - 3), (20.5, y + 1), (26.5, y + 1)]
         cv.paint(Mask(n).poly(sp), shade=lambda x, y_: 0.2)
-    cv.paint(Mask(n).ell(23.5, 16, 10.5, 9.5), shade=radial(23.5, 15, 10, base=0.35, gain=0.95))
+    # wide head with crest horns
+    for sx in (0, 1):
+        hn = [(14, 14), (6, 4), (18, 9)]
+        hn = mirror(hn, n) if sx else hn
+        cv.paint(Mask(n).poly(hn), shade=lambda x, y: 0.4)
+    cv.paint(Mask(n).ell(23.5, 16, 12.5, 9.5), shade=radial(23.5, 15, 12, base=0.35, gain=0.95))
     for sx in (-1, 1):
-        pts = [(23.5 + sx * 9, 20), (23.5 + sx * 11, 26), (23.5 + sx * 10, 32)]
-        tentacle(cv, pts, 4.5, 1.6)
-    gem(cv, 17.5, 8, 4.4)
-    gem(cv, 29.5, 8, 4.4)
+        pts = [(23.5 + sx * 11, 20), (23.5 + sx * 14, 27), (23.5 + sx * 15, 34), (23.5 + sx * 13, 40)]
+        tentacle(cv, pts, 4.8, 1.6)
+        pts = [(23.5 + sx * 5, 36), (23.5 + sx * 7, 42), (23.5 + sx * 5, 47)]
+        tentacle(cv, pts, 3.8, 1.4)
+    gem(cv, 16.5, 8, 4.4)
+    gem(cv, 30.5, 8, 4.4)
     return cv
 
 

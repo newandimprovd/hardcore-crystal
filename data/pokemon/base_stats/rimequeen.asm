@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ICE, FAIRY ; type
-	db 25 ; catch rate
+	db 50 ; catch rate
 	db 228 ; base exp
 	db ICE_BERRY, ICE_BERRY ; items
 	db GENDER_F100 ; gender ratio

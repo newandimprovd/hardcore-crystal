@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db PSYCHIC_TYPE, FIRE ; type
-	db 25 ; catch rate
+	db 50 ; catch rate
 	db 228 ; base exp
 	db STARDUST, STAR_PIECE ; items
 	db GENDER_UNKNOWN ; gender ratio

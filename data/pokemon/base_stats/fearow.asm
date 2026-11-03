@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db FLYING, DARK ; type
-	db 90 ; catch rate
+	db 180 ; catch rate
 	db 150 ; base exp
 	db NO_ITEM, SHARP_BEAK ; items
 	db GENDER_F50 ; gender ratio
