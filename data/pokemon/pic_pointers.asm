@@ -29,8 +29,8 @@ PokemonPicPointers::
 	dba_pics ArbokFrontpic, ArbokBackpic
 	dba_pics PikachuFrontpic, PikachuBackpic
 	dba_pics RaichuFrontpic, RaichuBackpic
-	dba_pics MeganiumFrontpic, MeganiumBackpic
-	dba_pics TyphlosionFrontpic, TyphlosionBackpic
+	dba_pics ElderwoodFrontpic, ElderwoodBackpic
+	dba_pics CalderaFrontpic, CalderaBackpic
 	dba_pics NidoranFFrontpic, NidoranFBackpic
 	dba_pics NidorinaFrontpic, NidorinaBackpic
 	dba_pics NidoqueenFrontpic, NidoqueenBackpic
@@ -47,12 +47,12 @@ PokemonPicPointers::
 	dba_pics GolbatFrontpic, GolbatBackpic
 	dba_pics OddishFrontpic, OddishBackpic
 	dba_pics GloomFrontpic, GloomBackpic
-	dba_pics FeraligatrFrontpic, FeraligatrBackpic
+	dba_pics DeathrollFrontpic, DeathrollBackpic
 	dba_pics ParasFrontpic, ParasBackpic
 	dba_pics ParasectFrontpic, ParasectBackpic
 	dba_pics VenonatFrontpic, VenonatBackpic
 	dba_pics VenomothFrontpic, VenomothBackpic
-	dba_pics VenusaurFrontpic, VenusaurBackpic
+	dba_pics OvergrownFrontpic, OvergrownBackpic
 	dba_pics EmberwyrmFrontpic, EmberwyrmBackpic
 	dba_pics MeowthFrontpic, MeowthBackpic
 	dba_pics PersianFrontpic, PersianBackpic
@@ -85,9 +85,9 @@ PokemonPicPointers::
 	dba_pics SlowbroFrontpic, SlowbroBackpic
 	dba_pics MagnemiteFrontpic, MagnemiteBackpic
 	dba_pics MagnetonFrontpic, MagnetonBackpic
-	dba_pics BlastoiseFrontpic, BlastoiseBackpic
-	dba_pics FurretFrontpic, FurretBackpic
-	dba_pics FurretFrontpic, FurretBackpic
+	dba_pics IroncladFrontpic, IroncladBackpic
+	dba_pics SentinelFrontpic, SentinelBackpic
+	dba_pics PanopticonFrontpic, PanopticonBackpic
 	dba_pics SeelFrontpic, SeelBackpic
 	dba_pics DewgongFrontpic, DewgongBackpic
 	dba_pics GrimerFrontpic, GrimerBackpic
@@ -102,57 +102,57 @@ PokemonPicPointers::
 	dba_pics HypnoFrontpic, HypnoBackpic
 	dba_pics KrabbyFrontpic, KrabbyBackpic
 	dba_pics KinglerFrontpic, KinglerBackpic
-	dba_pics NoctowlFrontpic, NoctowlBackpic
-	dba_pics NoctowlFrontpic, NoctowlBackpic
-	dba_pics RaticateFrontpic, RaticateBackpic
-	dba_pics RaticateFrontpic, RaticateBackpic
+	dba_pics ProfessowlFrontpic, ProfessowlBackpic
+	dba_pics EmeritusFrontpic, EmeritusBackpic
+	dba_pics PlagueratFrontpic, PlagueratBackpic
+	dba_pics RatkingFrontpic, RatkingBackpic
 	dba_pics CuboneFrontpic, CuboneBackpic
 	dba_pics MarowakFrontpic, MarowakBackpic
 	dba_pics RavenousFrontpic, RavenousBackpic
-	dba_pics ButterfreeFrontpic, ButterfreeBackpic
+	dba_pics CinderwingFrontpic, CinderwingBackpic
 	dba_pics BeehemothFrontpic, BeehemothBackpic
 	dba_pics KoffingFrontpic, KoffingBackpic
 	dba_pics WeezingFrontpic, WeezingBackpic
 	dba_pics RhyhornFrontpic, RhyhornBackpic
 	dba_pics RhydonFrontpic, RhydonBackpic
 	dba_pics ChanseyFrontpic, ChanseyBackpic
-	dba_pics JumpluffFrontpic, JumpluffBackpic
-	dba_pics FearowFrontpic, FearowBackpic
+	dba_pics DandelionFrontpic, DandelionBackpic
+	dba_pics DreadbeakFrontpic, DreadbeakBackpic
 	dba_pics HorseaFrontpic, HorseaBackpic
 	dba_pics SeadraFrontpic, SeadraBackpic
-	dba_pics FearowFrontpic, FearowBackpic
+	dba_pics DoomtalonFrontpic, DoomtalonBackpic
 	dba_pics KingcobraFrontpic, KingcobraBackpic
 	dba_pics StaryuFrontpic, StaryuBackpic
 	dba_pics StarmieFrontpic, StarmieBackpic
-	dba_pics ArbokFrontpic, ArbokBackpic
+	dba_pics BasiliskFrontpic, BasiliskBackpic
 	dba_pics ScytherFrontpic, ScytherBackpic
 	dba_pics JynxFrontpic, JynxBackpic
-	dba_pics RaichuFrontpic, RaichuBackpic
-	dba_pics ClefableFrontpic, ClefableBackpic
-	dba_pics WigglytuffFrontpic, WigglytuffBackpic
-	dba_pics NidoqueenFrontpic, NidoqueenBackpic
+	dba_pics MegawattFrontpic, MegawattBackpic
+	dba_pics MoonqueenFrontpic, MoonqueenBackpic
+	dba_pics SoporificFrontpic, SoporificBackpic
+	dba_pics MatriarchFrontpic, MatriarchBackpic
 	dba_pics MagikarpFrontpic, MagikarpBackpic
 	dba_pics GyaradosFrontpic, GyaradosBackpic
-	dba_pics NidokingFrontpic, NidokingBackpic
-	dba_pics CrobatFrontpic, CrobatBackpic
-	dba_pics BellossomFrontpic, BellossomBackpic
-	dba_pics VictreebelFrontpic, VictreebelBackpic
-	dba_pics ParasectFrontpic, ParasectBackpic
-	dba_pics ParasectFrontpic, ParasectBackpic
+	dba_pics TyrantFrontpic, TyrantBackpic
+	dba_pics NosferatuFrontpic, NosferatuBackpic
+	dba_pics BelladonnaFrontpic, BelladonnaBackpic
+	dba_pics MawbloomFrontpic, MawbloomBackpic
+	dba_pics CordycepsFrontpic, CordycepsBackpic
+	dba_pics SporekingFrontpic, SporekingBackpic
 	dba_pics PorygonFrontpic, PorygonBackpic
-	dba_pics VenomothFrontpic, VenomothBackpic
-	dba_pics VenomothFrontpic, VenomothBackpic
-	dba_pics AriadosFrontpic, AriadosBackpic
-	dba_pics AriadosFrontpic, AriadosBackpic
-	dba_pics PersianFrontpic, PersianBackpic
-	dba_pics PersianFrontpic, PersianBackpic
-	dba_pics GolduckFrontpic, GolduckBackpic
-	dba_pics GolduckFrontpic, GolduckBackpic
-	dba_pics PrimeapeFrontpic, PrimeapeBackpic
+	dba_pics CandlemothFrontpic, CandlemothBackpic
+	dba_pics PyremothFrontpic, PyremothBackpic
+	dba_pics SilkfangFrontpic, SilkfangBackpic
+	dba_pics WebweaverFrontpic, WebweaverBackpic
+	dba_pics AlleycatFrontpic, AlleycatBackpic
+	dba_pics KingpinFrontpic, KingpinBackpic
+	dba_pics MigraineFrontpic, MigraineBackpic
+	dba_pics AneurysmFrontpic, AneurysmBackpic
+	dba_pics BerserkerFrontpic, BerserkerBackpic
 	dba_pics DratiniFrontpic, DratiniBackpic
 	dba_pics DragonairFrontpic, DragonairBackpic
 	dba_pics DragoniteFrontpic, DragoniteBackpic
-	dba_pics PrimeapeFrontpic, PrimeapeBackpic
+	dba_pics AngerillaFrontpic, AngerillaBackpic
 	dba_pics TitanfistFrontpic, TitanfistBackpic
 	dba_pics ChikoritaFrontpic, ChikoritaBackpic
 	dba_pics BayleefFrontpic, BayleefBackpic
@@ -167,85 +167,85 @@ PokemonPicPointers::
 	dba_pics FurretFrontpic, FurretBackpic
 	dba_pics HoothootFrontpic, HoothootBackpic
 	dba_pics NoctowlFrontpic, NoctowlBackpic
-	dba_pics AlakazamFrontpic, AlakazamBackpic
+	dba_pics OmniscientFrontpic, OmniscientBackpic
 	dba_pics MonolithFrontpic, MonolithBackpic
 	dba_pics SpinarakFrontpic, SpinarakBackpic
 	dba_pics AriadosFrontpic, AriadosBackpic
 	dba_pics CrobatFrontpic, CrobatBackpic
-	dba_pics SteelixFrontpic, SteelixBackpic
+	dba_pics AdamantixFrontpic, AdamantixBackpic
 	dba_pics SkyscraperFrontpic, SkyscraperBackpic
 	dba_pics PichuFrontpic, PichuBackpic
 	dba_pics CleffaFrontpic, CleffaBackpic
 	dba_pics IgglybuffFrontpic, IgglybuffBackpic
 	dba_pics HellhoundFrontpic, HellhoundBackpic
 	dba_pics GatehoundFrontpic, GatehoundBackpic
-	dba_pics NinetalesFrontpic, NinetalesBackpic
-	dba_pics NinetalesFrontpic, NinetalesBackpic
+	dba_pics KitsuneFrontpic, KitsuneBackpic
+	dba_pics FoxfireFrontpic, FoxfireBackpic
 	dba_pics MareepFrontpic, MareepBackpic
 	dba_pics FlaaffyFrontpic, FlaaffyBackpic
 	dba_pics AmpharosFrontpic, AmpharosBackpic
 	dba_pics BellossomFrontpic, BellossomBackpic
 	dba_pics MarillFrontpic, MarillBackpic
 	dba_pics AzumarillFrontpic, AzumarillBackpic
-	dba_pics RapidashFrontpic, RapidashBackpic
+	dba_pics UnicornFrontpic, UnicornBackpic
 	dba_pics DreadsteedFrontpic, DreadsteedBackpic
 	dba_pics HoppipFrontpic, HoppipBackpic
 	dba_pics SkiploomFrontpic, SkiploomBackpic
 	dba_pics JumpluffFrontpic, JumpluffBackpic
-	dba_pics HoundoomFrontpic, HoundoomBackpic
-	dba_pics HoundoomFrontpic, HoundoomBackpic
-	dba_pics AmpharosFrontpic, AmpharosBackpic
-	dba_pics MagnetonFrontpic, MagnetonBackpic
-	dba_pics MagnetonFrontpic, MagnetonBackpic
-	dba_pics Porygon2Frontpic, Porygon2Backpic
-	dba_pics Porygon2Frontpic, Porygon2Backpic
+	dba_pics HellboundFrontpic, HellboundBackpic
+	dba_pics PerditionFrontpic, PerditionBackpic
+	dba_pics BlacksheepFrontpic, BlacksheepBackpic
+	dba_pics MagnetronFrontpic, MagnetronBackpic
+	dba_pics SolenoidFrontpic, SolenoidBackpic
+	dba_pics MainframeFrontpic, MainframeBackpic
+	dba_pics AlgorithmFrontpic, AlgorithmBackpic
 	dba_pics ApparitionFrontpic, ApparitionBackpic
-	dba_pics MarowakFrontpic, MarowakBackpic
-	dba_pics MarowakFrontpic, MarowakBackpic
-	dba_pics MukFrontpic, MukBackpic
-	dba_pics MukFrontpic, MukBackpic
-	dba_pics WeezingFrontpic, WeezingBackpic
-	dba_pics WeezingFrontpic, WeezingBackpic
-	dba_pics RhydonFrontpic, RhydonBackpic
-	dba_pics RhydonFrontpic, RhydonBackpic
-	dba_pics ScizorFrontpic, ScizorBackpic
-	dba_pics ScizorFrontpic, ScizorBackpic
+	dba_pics BonekeeperFrontpic, BonekeeperBackpic
+	dba_pics OssuaryFrontpic, OssuaryBackpic
+	dba_pics SludgelordFrontpic, SludgelordBackpic
+	dba_pics SuperfundFrontpic, SuperfundBackpic
+	dba_pics MiasmaFrontpic, MiasmaBackpic
+	dba_pics PandemicFrontpic, PandemicBackpic
+	dba_pics WarhornFrontpic, WarhornBackpic
+	dba_pics BehemothFrontpic, BehemothBackpic
+	dba_pics CleaverFrontpic, CleaverBackpic
+	dba_pics HeadsmanFrontpic, HeadsmanBackpic
 	dba_pics SteelixFrontpic, SteelixBackpic
 	dba_pics CthuspawnFrontpic, CthuspawnBackpic
 	dba_pics CthuludonFrontpic, CthuludonBackpic
-	dba_pics PoliwrathFrontpic, PoliwrathBackpic
+	dba_pics PoliwraithFrontpic, PoliwraithBackpic
 	dba_pics ScizorFrontpic, ScizorBackpic
-	dba_pics SlowbroFrontpic, SlowbroBackpic
-	dba_pics SlowbroFrontpic, SlowbroBackpic
-	dba_pics DewgongFrontpic, DewgongBackpic
-	dba_pics DewgongFrontpic, DewgongBackpic
-	dba_pics CloysterFrontpic, CloysterBackpic
-	dba_pics CloysterFrontpic, CloysterBackpic
-	dba_pics KinglerFrontpic, KinglerBackpic
+	dba_pics AmnesiacFrontpic, AmnesiacBackpic
+	dba_pics OblivionFrontpic, OblivionBackpic
+	dba_pics TuskdriftFrontpic, TuskdriftBackpic
+	dba_pics FrostsirenFrontpic, FrostsirenBackpic
+	dba_pics CryoclamFrontpic, CryoclamBackpic
+	dba_pics AbysshellFrontpic, AbysshellBackpic
+	dba_pics CarapaceFrontpic, CarapaceBackpic
 	dba_pics SwinubFrontpic, SwinubBackpic
 	dba_pics PiloswineFrontpic, PiloswineBackpic
 	dba_pics CarcinizeFrontpic, CarcinizeBackpic
-	dba_pics StarmieFrontpic, StarmieBackpic
-	dba_pics StarmieFrontpic, StarmieBackpic
-	dba_pics KingdraFrontpic, KingdraBackpic
-	dba_pics GyaradosFrontpic, GyaradosBackpic
-	dba_pics GyaradosFrontpic, GyaradosBackpic
+	dba_pics NebulonFrontpic, NebulonBackpic
+	dba_pics SupernovaFrontpic, SupernovaBackpic
+	dba_pics MaeldraFrontpic, MaeldraBackpic
+	dba_pics RagecarpFrontpic, RagecarpBackpic
+	dba_pics WorldeaterFrontpic, WorldeaterBackpic
 	dba_pics HoundourFrontpic, HoundourBackpic
 	dba_pics HoundoomFrontpic, HoundoomBackpic
 	dba_pics KingdraFrontpic, KingdraBackpic
-	dba_pics AzumarillFrontpic, AzumarillBackpic
-	dba_pics AzumarillFrontpic, AzumarillBackpic
+	dba_pics TidebellyFrontpic, TidebellyBackpic
+	dba_pics BeachballFrontpic, BeachballBackpic
 	dba_pics Porygon2Frontpic, Porygon2Backpic
-	dba_pics HypnoFrontpic, HypnoBackpic
-	dba_pics HypnoFrontpic, HypnoBackpic
-	dba_pics BlisseyFrontpic, BlisseyBackpic
-	dba_pics BlisseyFrontpic, BlisseyBackpic
+	dba_pics NarcoleptFrontpic, NarcoleptBackpic
+	dba_pics SandmanFrontpic, SandmanBackpic
+	dba_pics PlaceboFrontpic, PlaceboBackpic
+	dba_pics HospiceFrontpic, HospiceBackpic
 	dba_pics SmoochumFrontpic, SmoochumBackpic
-	dba_pics PiloswineFrontpic, PiloswineBackpic
-	dba_pics PiloswineFrontpic, PiloswineBackpic
-	dba_pics JynxFrontpic, JynxBackpic
+	dba_pics MammothFrontpic, MammothBackpic
+	dba_pics IceageFrontpic, IceageBackpic
+	dba_pics FrostbiteFrontpic, FrostbiteBackpic
 	dba_pics BlisseyFrontpic, BlisseyBackpic
-	dba_pics JynxFrontpic, JynxBackpic
+	dba_pics RimequeenFrontpic, RimequeenBackpic
 	dba_pics WyrmkingFrontpic, WyrmkingBackpic
 	dba_pics TyphoneusFrontpic, TyphoneusBackpic
 	dba_pics LarvitarFrontpic, LarvitarBackpic

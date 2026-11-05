@@ -28,6 +28,8 @@ step b_stA $TB stA TEST_MAP=TITHE_PLAZA1 TEST_X=3 TEST_Y=4 TEST_MON=CTHULUDON TE
 step milestone python3 tools/hardcore/test_story.py milestone /home/claude/scratch/stA.gbc
 step b_stB $TB stB TEST_MAP=NEW_BARK_TOWN TEST_X=10 TEST_Y=10 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2
 step newbark python3 tools/hardcore/test_story.py newbark /home/claude/scratch/stB.gbc
+step b_pg $TB pg TEST_MAP=TITHE_JUNCTION TEST_X=19 TEST_Y=20 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_ITEMS=1
+step purg python3 tools/hardcore/test_purg.py /home/claude/scratch/pg.gbc
 step b_stF $TB stF TEST_MAP=JUDECCA_CENTRE TEST_X=4 TEST_Y=17 TEST_MON=DEATHROLL TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2
 step ending python3 tools/hardcore/test_story.py ending /home/claude/scratch/stF.gbc
 echo "done" >> $V/summary.txt

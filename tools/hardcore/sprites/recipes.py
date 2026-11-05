@@ -76,6 +76,9 @@ R("DREADSTEED", "quad",
   ((12, 10, 14), (26, 9, 21)), ((26, 26, 28), (8, 12, 26)), front=dict(yaw=40), back=dict(yaw=-140))
 
 
+import recipes2  # noqa: E402,F401  (stage 3 and 4 species of the evolution lines)
+
+
 # ---------------------------------------------------------------------------------------------- author-supplied sprites (drop-in)
 def _register_imports():
     """imports/<species>.png is a finished front sprite for that species (imports/<species>_back.png its back sprite).  A species without a

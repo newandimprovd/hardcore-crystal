@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cherrygrove -> Tithe Road map connection, both ways (the vanilla town joining a generated route).
+"""Cherrygrove -> junction map connection, both ways (the vanilla town joining the generated crossroads).
 usage: test_cross.py ROM   ROM = testbuild.sh vc TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=3 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1"""
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))

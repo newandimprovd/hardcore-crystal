@@ -111,7 +111,7 @@ def load():
     # Cherrygrove (vanilla) with its north connection
     cg = Map("CherrygroveCity", "TILESET_JOHTO", 20, "maps/CherrygroveCity.blk", "maps/CherrygroveCity.asm")
     maps["CherrygroveCity"] = cg
-    cg.conns["north"] = ("TitheRoad", 5)
+    cg.conns["north"] = ("TitheJunction", -1)  # the road out of town meets the junction stem (areas/opening.py)
     return maps
 
 

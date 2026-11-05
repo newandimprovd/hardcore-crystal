@@ -26,8 +26,8 @@ FramesPointers:
 	dw ArbokFrames
 	dw PikachuFrames
 	dw RaichuFrames
-	dw MeganiumFrames
-	dw TyphlosionFrames
+	dw ElderwoodFrames
+	dw CalderaFrames
 	dw NidoranFFrames
 	dw NidorinaFrames
 	dw NidoqueenFrames
@@ -44,12 +44,12 @@ FramesPointers:
 	dw GolbatFrames
 	dw OddishFrames
 	dw GloomFrames
-	dw FeraligatrFrames
+	dw DeathrollFrames
 	dw ParasFrames
 	dw ParasectFrames
 	dw VenonatFrames
 	dw VenomothFrames
-	dw VenusaurFrames
+	dw OvergrownFrames
 	dw EmberwyrmFrames
 	dw MeowthFrames
 	dw PersianFrames
@@ -82,9 +82,9 @@ FramesPointers:
 	dw SlowbroFrames
 	dw MagnemiteFrames
 	dw MagnetonFrames
-	dw BlastoiseFrames
-	dw FurretFrames
-	dw FurretFrames
+	dw IroncladFrames
+	dw SentinelFrames
+	dw PanopticonFrames
 	dw SeelFrames
 	dw DewgongFrames
 	dw GrimerFrames
@@ -99,57 +99,57 @@ FramesPointers:
 	dw HypnoFrames
 	dw KrabbyFrames
 	dw KinglerFrames
-	dw NoctowlFrames
-	dw NoctowlFrames
-	dw RaticateFrames
-	dw RaticateFrames
+	dw ProfessowlFrames
+	dw EmeritusFrames
+	dw PlagueratFrames
+	dw RatkingFrames
 	dw CuboneFrames
 	dw MarowakFrames
 	dw RavenousFrames
-	dw ButterfreeFrames
+	dw CinderwingFrames
 	dw BeehemothFrames
 	dw KoffingFrames
 	dw WeezingFrames
 	dw RhyhornFrames
 	dw RhydonFrames
 	dw ChanseyFrames
-	dw JumpluffFrames
-	dw FearowFrames
+	dw DandelionFrames
+	dw DreadbeakFrames
 	dw HorseaFrames
 	dw SeadraFrames
-	dw FearowFrames
+	dw DoomtalonFrames
 	dw KingcobraFrames
 	dw StaryuFrames
 	dw StarmieFrames
-	dw ArbokFrames
+	dw BasiliskFrames
 	dw ScytherFrames
 	dw JynxFrames
-	dw RaichuFrames
-	dw ClefableFrames
-	dw WigglytuffFrames
-	dw NidoqueenFrames
+	dw MegawattFrames
+	dw MoonqueenFrames
+	dw SoporificFrames
+	dw MatriarchFrames
 	dw MagikarpFrames
 	dw GyaradosFrames
-	dw NidokingFrames
-	dw CrobatFrames
-	dw BellossomFrames
-	dw VictreebelFrames
-	dw ParasectFrames
-	dw ParasectFrames
+	dw TyrantFrames
+	dw NosferatuFrames
+	dw BelladonnaFrames
+	dw MawbloomFrames
+	dw CordycepsFrames
+	dw SporekingFrames
 	dw PorygonFrames
-	dw VenomothFrames
-	dw VenomothFrames
-	dw AriadosFrames
-	dw AriadosFrames
-	dw PersianFrames
-	dw PersianFrames
-	dw GolduckFrames
-	dw GolduckFrames
-	dw PrimeapeFrames
+	dw CandlemothFrames
+	dw PyremothFrames
+	dw SilkfangFrames
+	dw WebweaverFrames
+	dw AlleycatFrames
+	dw KingpinFrames
+	dw MigraineFrames
+	dw AneurysmFrames
+	dw BerserkerFrames
 	dw DratiniFrames
 	dw DragonairFrames
 	dw DragoniteFrames
-	dw PrimeapeFrames
+	dw AngerillaFrames
 	dw TitanfistFrames
 	dw ChikoritaFrames
 	dw BayleefFrames
@@ -164,85 +164,85 @@ FramesPointers:
 	dw FurretFrames
 	dw HoothootFrames
 	dw NoctowlFrames
-	dw AlakazamFrames
+	dw OmniscientFrames
 	dw MonolithFrames
 	dw SpinarakFrames
 	dw AriadosFrames
 	dw CrobatFrames
-	dw SteelixFrames
+	dw AdamantixFrames
 	dw SkyscraperFrames
 	dw PichuFrames
 	dw CleffaFrames
 	dw IgglybuffFrames
 	dw HellhoundFrames
 	dw GatehoundFrames
-	dw NinetalesFrames
-	dw NinetalesFrames
+	dw KitsuneFrames
+	dw FoxfireFrames
 	dw MareepFrames
 	dw FlaaffyFrames
 	dw AmpharosFrames
 	dw BellossomFrames
 	dw MarillFrames
 	dw AzumarillFrames
-	dw RapidashFrames
+	dw UnicornFrames
 	dw DreadsteedFrames
 	dw HoppipFrames
 	dw SkiploomFrames
 	dw JumpluffFrames
-	dw HoundoomFrames
-	dw HoundoomFrames
-	dw AmpharosFrames
-	dw MagnetonFrames
-	dw MagnetonFrames
-	dw Porygon2Frames
-	dw Porygon2Frames
+	dw HellboundFrames
+	dw PerditionFrames
+	dw BlacksheepFrames
+	dw MagnetronFrames
+	dw SolenoidFrames
+	dw MainframeFrames
+	dw AlgorithmFrames
 	dw ApparitionFrames
-	dw MarowakFrames
-	dw MarowakFrames
-	dw MukFrames
-	dw MukFrames
-	dw WeezingFrames
-	dw WeezingFrames
-	dw RhydonFrames
-	dw RhydonFrames
-	dw ScizorFrames
-	dw ScizorFrames
+	dw BonekeeperFrames
+	dw OssuaryFrames
+	dw SludgelordFrames
+	dw SuperfundFrames
+	dw MiasmaFrames
+	dw PandemicFrames
+	dw WarhornFrames
+	dw BehemothFrames
+	dw CleaverFrames
+	dw HeadsmanFrames
 	dw SteelixFrames
 	dw CthuspawnFrames
 	dw CthuludonFrames
-	dw PoliwrathFrames
+	dw PoliwraithFrames
 	dw ScizorFrames
-	dw SlowbroFrames
-	dw SlowbroFrames
-	dw DewgongFrames
-	dw DewgongFrames
-	dw CloysterFrames
-	dw CloysterFrames
-	dw KinglerFrames
+	dw AmnesiacFrames
+	dw OblivionFrames
+	dw TuskdriftFrames
+	dw FrostsirenFrames
+	dw CryoclamFrames
+	dw AbysshellFrames
+	dw CarapaceFrames
 	dw SwinubFrames
 	dw PiloswineFrames
 	dw CarcinizeFrames
-	dw StarmieFrames
-	dw StarmieFrames
-	dw KingdraFrames
-	dw GyaradosFrames
-	dw GyaradosFrames
+	dw NebulonFrames
+	dw SupernovaFrames
+	dw MaeldraFrames
+	dw RagecarpFrames
+	dw WorldeaterFrames
 	dw HoundourFrames
 	dw HoundoomFrames
 	dw KingdraFrames
-	dw AzumarillFrames
-	dw AzumarillFrames
+	dw TidebellyFrames
+	dw BeachballFrames
 	dw Porygon2Frames
-	dw HypnoFrames
-	dw HypnoFrames
-	dw BlisseyFrames
-	dw BlisseyFrames
+	dw NarcoleptFrames
+	dw SandmanFrames
+	dw PlaceboFrames
+	dw HospiceFrames
 	dw SmoochumFrames
-	dw PiloswineFrames
-	dw PiloswineFrames
-	dw JynxFrames
+	dw MammothFrames
+	dw IceageFrames
+	dw FrostbiteFrames
 	dw BlisseyFrames
-	dw JynxFrames
+	dw RimequeenFrames
 	dw WyrmkingFrames
 	dw TyphoneusFrames
 	dw LarvitarFrames
@@ -280,8 +280,8 @@ FramesBanks:
 	db BANK(ArbokFrames)
 	db BANK(PikachuFrames)
 	db BANK(RaichuFrames)
-	db BANK(MeganiumFrames)
-	db BANK(TyphlosionFrames)
+	db BANK(ElderwoodFrames)
+	db BANK(CalderaFrames)
 	db BANK(NidoranFFrames)
 	db BANK(NidorinaFrames)
 	db BANK(NidoqueenFrames)
@@ -298,12 +298,12 @@ FramesBanks:
 	db BANK(GolbatFrames)
 	db BANK(OddishFrames)
 	db BANK(GloomFrames)
-	db BANK(FeraligatrFrames)
+	db BANK(DeathrollFrames)
 	db BANK(ParasFrames)
 	db BANK(ParasectFrames)
 	db BANK(VenonatFrames)
 	db BANK(VenomothFrames)
-	db BANK(VenusaurFrames)
+	db BANK(OvergrownFrames)
 	db BANK(EmberwyrmFrames)
 	db BANK(MeowthFrames)
 	db BANK(PersianFrames)
@@ -336,9 +336,9 @@ FramesBanks:
 	db BANK(SlowbroFrames)
 	db BANK(MagnemiteFrames)
 	db BANK(MagnetonFrames)
-	db BANK(BlastoiseFrames)
-	db BANK(FurretFrames)
-	db BANK(FurretFrames)
+	db BANK(IroncladFrames)
+	db BANK(SentinelFrames)
+	db BANK(PanopticonFrames)
 	db BANK(SeelFrames)
 	db BANK(DewgongFrames)
 	db BANK(GrimerFrames)
@@ -353,57 +353,57 @@ FramesBanks:
 	db BANK(HypnoFrames)
 	db BANK(KrabbyFrames)
 	db BANK(KinglerFrames)
-	db BANK(NoctowlFrames)
-	db BANK(NoctowlFrames)
-	db BANK(RaticateFrames)
-	db BANK(RaticateFrames)
+	db BANK(ProfessowlFrames)
+	db BANK(EmeritusFrames)
+	db BANK(PlagueratFrames)
+	db BANK(RatkingFrames)
 	db BANK(CuboneFrames)
 	db BANK(MarowakFrames)
 	db BANK(RavenousFrames)
-	db BANK(ButterfreeFrames)
+	db BANK(CinderwingFrames)
 	db BANK(BeehemothFrames)
 	db BANK(KoffingFrames)
 	db BANK(WeezingFrames)
 	db BANK(RhyhornFrames)
 	db BANK(RhydonFrames)
 	db BANK(ChanseyFrames)
-	db BANK(JumpluffFrames)
-	db BANK(FearowFrames)
+	db BANK(DandelionFrames)
+	db BANK(DreadbeakFrames)
 	db BANK(HorseaFrames)
 	db BANK(SeadraFrames)
-	db BANK(FearowFrames)
+	db BANK(DoomtalonFrames)
 	db BANK(KingcobraFrames)
 	db BANK(StaryuFrames)
 	db BANK(StarmieFrames)
-	db BANK(ArbokFrames)
+	db BANK(BasiliskFrames)
 	db BANK(ScytherFrames)
 	db BANK(JynxFrames)
-	db BANK(RaichuFrames)
-	db BANK(ClefableFrames)
-	db BANK(WigglytuffFrames)
-	db BANK(NidoqueenFrames)
+	db BANK(MegawattFrames)
+	db BANK(MoonqueenFrames)
+	db BANK(SoporificFrames)
+	db BANK(MatriarchFrames)
 	db BANK(MagikarpFrames)
 	db BANK(GyaradosFrames)
-	db BANK(NidokingFrames)
-	db BANK(CrobatFrames)
-	db BANK(BellossomFrames)
-	db BANK(VictreebelFrames)
-	db BANK(ParasectFrames)
-	db BANK(ParasectFrames)
+	db BANK(TyrantFrames)
+	db BANK(NosferatuFrames)
+	db BANK(BelladonnaFrames)
+	db BANK(MawbloomFrames)
+	db BANK(CordycepsFrames)
+	db BANK(SporekingFrames)
 	db BANK(PorygonFrames)
-	db BANK(VenomothFrames)
-	db BANK(VenomothFrames)
-	db BANK(AriadosFrames)
-	db BANK(AriadosFrames)
-	db BANK(PersianFrames)
-	db BANK(PersianFrames)
-	db BANK(GolduckFrames)
-	db BANK(GolduckFrames)
-	db BANK(PrimeapeFrames)
+	db BANK(CandlemothFrames)
+	db BANK(PyremothFrames)
+	db BANK(SilkfangFrames)
+	db BANK(WebweaverFrames)
+	db BANK(AlleycatFrames)
+	db BANK(KingpinFrames)
+	db BANK(MigraineFrames)
+	db BANK(AneurysmFrames)
+	db BANK(BerserkerFrames)
 	db BANK(DratiniFrames)
 	db BANK(DragonairFrames)
 	db BANK(DragoniteFrames)
-	db BANK(PrimeapeFrames)
+	db BANK(AngerillaFrames)
 	db BANK(TitanfistFrames)
 	db BANK(ChikoritaFrames)
 	db BANK(BayleefFrames)
@@ -418,85 +418,85 @@ FramesBanks:
 	db BANK(FurretFrames)
 	db BANK(HoothootFrames)
 	db BANK(NoctowlFrames)
-	db BANK(AlakazamFrames)
+	db BANK(OmniscientFrames)
 	db BANK(MonolithFrames)
 	db BANK(SpinarakFrames)
 	db BANK(AriadosFrames)
 	db BANK(CrobatFrames)
-	db BANK(SteelixFrames)
+	db BANK(AdamantixFrames)
 	db BANK(SkyscraperFrames)
 	db BANK(PichuFrames)
 	db BANK(CleffaFrames)
 	db BANK(IgglybuffFrames)
 	db BANK(HellhoundFrames)
 	db BANK(GatehoundFrames)
-	db BANK(NinetalesFrames)
-	db BANK(NinetalesFrames)
+	db BANK(KitsuneFrames)
+	db BANK(FoxfireFrames)
 	db BANK(MareepFrames)
 	db BANK(FlaaffyFrames)
 	db BANK(AmpharosFrames)
 	db BANK(BellossomFrames)
 	db BANK(MarillFrames)
 	db BANK(AzumarillFrames)
-	db BANK(RapidashFrames)
+	db BANK(UnicornFrames)
 	db BANK(DreadsteedFrames)
 	db BANK(HoppipFrames)
 	db BANK(SkiploomFrames)
 	db BANK(JumpluffFrames)
-	db BANK(HoundoomFrames)
-	db BANK(HoundoomFrames)
-	db BANK(AmpharosFrames)
-	db BANK(MagnetonFrames)
-	db BANK(MagnetonFrames)
-	db BANK(Porygon2Frames)
-	db BANK(Porygon2Frames)
+	db BANK(HellboundFrames)
+	db BANK(PerditionFrames)
+	db BANK(BlacksheepFrames)
+	db BANK(MagnetronFrames)
+	db BANK(SolenoidFrames)
+	db BANK(MainframeFrames)
+	db BANK(AlgorithmFrames)
 	db BANK(ApparitionFrames)
-	db BANK(MarowakFrames)
-	db BANK(MarowakFrames)
-	db BANK(MukFrames)
-	db BANK(MukFrames)
-	db BANK(WeezingFrames)
-	db BANK(WeezingFrames)
-	db BANK(RhydonFrames)
-	db BANK(RhydonFrames)
-	db BANK(ScizorFrames)
-	db BANK(ScizorFrames)
+	db BANK(BonekeeperFrames)
+	db BANK(OssuaryFrames)
+	db BANK(SludgelordFrames)
+	db BANK(SuperfundFrames)
+	db BANK(MiasmaFrames)
+	db BANK(PandemicFrames)
+	db BANK(WarhornFrames)
+	db BANK(BehemothFrames)
+	db BANK(CleaverFrames)
+	db BANK(HeadsmanFrames)
 	db BANK(SteelixFrames)
 	db BANK(CthuspawnFrames)
 	db BANK(CthuludonFrames)
-	db BANK(PoliwrathFrames)
+	db BANK(PoliwraithFrames)
 	db BANK(ScizorFrames)
-	db BANK(SlowbroFrames)
-	db BANK(SlowbroFrames)
-	db BANK(DewgongFrames)
-	db BANK(DewgongFrames)
-	db BANK(CloysterFrames)
-	db BANK(CloysterFrames)
-	db BANK(KinglerFrames)
+	db BANK(AmnesiacFrames)
+	db BANK(OblivionFrames)
+	db BANK(TuskdriftFrames)
+	db BANK(FrostsirenFrames)
+	db BANK(CryoclamFrames)
+	db BANK(AbysshellFrames)
+	db BANK(CarapaceFrames)
 	db BANK(SwinubFrames)
 	db BANK(PiloswineFrames)
 	db BANK(CarcinizeFrames)
-	db BANK(StarmieFrames)
-	db BANK(StarmieFrames)
-	db BANK(KingdraFrames)
-	db BANK(GyaradosFrames)
-	db BANK(GyaradosFrames)
+	db BANK(NebulonFrames)
+	db BANK(SupernovaFrames)
+	db BANK(MaeldraFrames)
+	db BANK(RagecarpFrames)
+	db BANK(WorldeaterFrames)
 	db BANK(HoundourFrames)
 	db BANK(HoundoomFrames)
 	db BANK(KingdraFrames)
-	db BANK(AzumarillFrames)
-	db BANK(AzumarillFrames)
+	db BANK(TidebellyFrames)
+	db BANK(BeachballFrames)
 	db BANK(Porygon2Frames)
-	db BANK(HypnoFrames)
-	db BANK(HypnoFrames)
-	db BANK(BlisseyFrames)
-	db BANK(BlisseyFrames)
+	db BANK(NarcoleptFrames)
+	db BANK(SandmanFrames)
+	db BANK(PlaceboFrames)
+	db BANK(HospiceFrames)
 	db BANK(SmoochumFrames)
-	db BANK(PiloswineFrames)
-	db BANK(PiloswineFrames)
-	db BANK(JynxFrames)
+	db BANK(MammothFrames)
+	db BANK(IceageFrames)
+	db BANK(FrostbiteFrames)
 	db BANK(BlisseyFrames)
-	db BANK(JynxFrames)
+	db BANK(RimequeenFrames)
 	db BANK(WyrmkingFrames)
 	db BANK(TyphoneusFrames)
 	db BANK(LarvitarFrames)

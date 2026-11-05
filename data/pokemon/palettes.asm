@@ -67,18 +67,10 @@ INCBIN "gfx/pokemon/pikachu/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/pikachu/shiny.pal"
 INCBIN "gfx/pokemon/raichu/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/raichu/shiny.pal"
-; ELDERWOOD
-	RGB 10, 17,  7
-	RGB  9,  6,  6
-; ELDERWOOD shiny
-	RGB 17,  7, 10
-	RGB  6,  6,  9
-; CALDERA
-	RGB 20, 15,  7
-	RGB 16,  4,  3
-; CALDERA shiny
-	RGB 15,  7, 20
-	RGB  4,  3, 16
+INCBIN "gfx/pokemon/elderwood/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/elderwood/shiny.pal"
+INCBIN "gfx/pokemon/caldera/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/caldera/shiny.pal"
 INCBIN "gfx/pokemon/nidoran_f/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/nidoran_f/shiny.pal"
 INCBIN "gfx/pokemon/nidorina/normal.gbcpal", middle_colors
@@ -111,12 +103,8 @@ INCBIN "gfx/pokemon/oddish/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/oddish/shiny.pal"
 INCBIN "gfx/pokemon/gloom/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/gloom/shiny.pal"
-; DEATHROLL
-	RGB  9, 12, 19
-	RGB  8,  5,  8
-; DEATHROLL shiny
-	RGB 12, 19,  9
-	RGB  5,  8,  8
+INCBIN "gfx/pokemon/deathroll/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/deathroll/shiny.pal"
 INCBIN "gfx/pokemon/paras/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/paras/shiny.pal"
 INCBIN "gfx/pokemon/parasect/normal.gbcpal", middle_colors
@@ -125,12 +113,8 @@ INCBIN "gfx/pokemon/venonat/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/venonat/shiny.pal"
 INCBIN "gfx/pokemon/venomoth/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/venomoth/shiny.pal"
-; OVERGROWN
-	RGB  8, 17,  8
-	RGB 11,  7,  6
-; OVERGROWN shiny
-	RGB 17,  8,  8
-	RGB  7,  6, 11
+INCBIN "gfx/pokemon/overgrown/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/overgrown/shiny.pal"
 INCBIN "gfx/pokemon/emberwyrm/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/emberwyrm/shiny.pal"
 INCBIN "gfx/pokemon/meowth/normal.gbcpal", middle_colors
@@ -195,24 +179,12 @@ INCBIN "gfx/pokemon/magnemite/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/magnemite/shiny.pal"
 INCBIN "gfx/pokemon/magneton/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/magneton/shiny.pal"
-; IRONCLAD
-	RGB 17, 19, 17
-	RGB  7, 10, 23
-; IRONCLAD shiny
-	RGB 19, 17, 17
-	RGB 10, 23,  7
-; SENTINEL
-	RGB 24, 22, 11
-	RGB 14, 10,  6
-; SENTINEL shiny
-	RGB 22, 11, 24
-	RGB 10,  6, 14
-; PANOPTICON
-	RGB 16, 14,  8
-	RGB  9,  7,  4
-; PANOPTICON shiny
-	RGB 14,  8, 16
-	RGB  7,  4,  9
+INCBIN "gfx/pokemon/ironclad/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/ironclad/shiny.pal"
+INCBIN "gfx/pokemon/sentinel/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/sentinel/shiny.pal"
+INCBIN "gfx/pokemon/panopticon/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/panopticon/shiny.pal"
 INCBIN "gfx/pokemon/seel/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/seel/shiny.pal"
 INCBIN "gfx/pokemon/dewgong/normal.gbcpal", middle_colors
@@ -241,42 +213,22 @@ INCBIN "gfx/pokemon/krabby/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/krabby/shiny.pal"
 INCBIN "gfx/pokemon/kingler/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/kingler/shiny.pal"
-; PROFESSOWL
-	RGB 22, 18, 18
-	RGB 14,  9, 15
-; PROFESSOWL shiny
-	RGB 18, 18, 22
-	RGB  9, 15, 14
-; EMERITUS
-	RGB 20, 16, 17
-	RGB 12,  8, 13
-; EMERITUS shiny
-	RGB 16, 17, 20
-	RGB  8, 13, 12
-; PLAGUERAT
-	RGB 19, 16, 11
-	RGB 11,  8,  4
-; PLAGUERAT shiny
-	RGB 16, 11, 19
-	RGB  8,  4, 11
-; RATKING
-	RGB 15, 13,  9
-	RGB  8,  5,  3
-; RATKING shiny
-	RGB 13,  9, 15
-	RGB  5,  3,  8
+INCBIN "gfx/pokemon/professowl/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/professowl/shiny.pal"
+INCBIN "gfx/pokemon/emeritus/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/emeritus/shiny.pal"
+INCBIN "gfx/pokemon/plaguerat/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/plaguerat/shiny.pal"
+INCBIN "gfx/pokemon/ratking/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/ratking/shiny.pal"
 INCBIN "gfx/pokemon/cubone/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/cubone/shiny.pal"
 INCBIN "gfx/pokemon/marowak/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/marowak/shiny.pal"
 INCBIN "gfx/pokemon/ravenous/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/ravenous/shiny.pal"
-; CINDERWING
-	RGB 19, 22, 15
-	RGB 18,  9,  6
-; CINDERWING shiny
-	RGB 22, 15, 19
-	RGB  9,  6, 18
+INCBIN "gfx/pokemon/cinderwing/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/cinderwing/shiny.pal"
 INCBIN "gfx/pokemon/beehemoth/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/beehemoth/shiny.pal"
 INCBIN "gfx/pokemon/koffing/normal.gbcpal", middle_colors
@@ -289,176 +241,80 @@ INCBIN "gfx/pokemon/rhydon/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/rhydon/shiny.pal"
 INCBIN "gfx/pokemon/chansey/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/chansey/shiny.pal"
-; DANDELION
-	RGB 21, 22, 13
-	RGB 10, 11, 13
-; DANDELION shiny
-	RGB 22, 13, 21
-	RGB 11, 13, 10
-; DREADBEAK
-	RGB 16, 13, 13
-	RGB 15,  7, 14
-; DREADBEAK shiny
-	RGB 13, 13, 16
-	RGB  7, 14, 15
+INCBIN "gfx/pokemon/dandelion/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/dandelion/shiny.pal"
+INCBIN "gfx/pokemon/dreadbeak/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/dreadbeak/shiny.pal"
 INCBIN "gfx/pokemon/horsea/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/horsea/shiny.pal"
 INCBIN "gfx/pokemon/seadra/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/seadra/shiny.pal"
-; DOOMTALON
-	RGB 15, 12, 12
-	RGB 13,  6, 13
-; DOOMTALON shiny
-	RGB 12, 12, 15
-	RGB  6, 13, 13
+INCBIN "gfx/pokemon/doomtalon/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/doomtalon/shiny.pal"
 INCBIN "gfx/pokemon/kingcobra/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/kingcobra/shiny.pal"
 INCBIN "gfx/pokemon/staryu/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/staryu/shiny.pal"
 INCBIN "gfx/pokemon/starmie/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/starmie/shiny.pal"
-; BASILISK
-	RGB 19,  9, 22
-	RGB 15,  4, 13
-; BASILISK shiny
-	RGB  9, 22, 19
-	RGB  4, 13, 15
+INCBIN "gfx/pokemon/basilisk/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/basilisk/shiny.pal"
 INCBIN "gfx/pokemon/scyther/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/scyther/shiny.pal"
 INCBIN "gfx/pokemon/jynx/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/jynx/shiny.pal"
-; MEGAWATT
-	RGB 28, 24,  6
-	RGB 25, 14,  0
-; MEGAWATT shiny
-	RGB 24,  6, 28
-	RGB 14,  0, 25
-; MOONQUEEN
-	RGB 28, 15, 20
-	RGB 18,  7,  9
-; MOONQUEEN shiny
-	RGB 15, 20, 28
-	RGB  7,  9, 18
-; SOPORIFIC
-	RGB 27, 16, 20
-	RGB 14, 12, 19
-; SOPORIFIC shiny
-	RGB 16, 20, 27
-	RGB 12, 19, 14
-; MATRIARCH
-	RGB 25, 18, 12
-	RGB 14, 12, 15
-; MATRIARCH shiny
-	RGB 18, 12, 25
-	RGB 12, 15, 14
+INCBIN "gfx/pokemon/megawatt/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/megawatt/shiny.pal"
+INCBIN "gfx/pokemon/moonqueen/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/moonqueen/shiny.pal"
+INCBIN "gfx/pokemon/soporific/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/soporific/shiny.pal"
+INCBIN "gfx/pokemon/matriarch/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/matriarch/shiny.pal"
 INCBIN "gfx/pokemon/magikarp/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/magikarp/shiny.pal"
 INCBIN "gfx/pokemon/gyarados/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/gyarados/shiny.pal"
-; TYRANT
-	RGB 15, 10, 11
-	RGB  9,  5,  6
-; TYRANT shiny
-	RGB 10, 11, 15
-	RGB  5,  6,  9
-; NOSFERATU
-	RGB 12,  9, 15
-	RGB  5,  6, 10
-; NOSFERATU shiny
-	RGB  9, 15, 12
-	RGB  6, 10,  5
-; BELLADONNA
-	RGB 19, 15, 10
-	RGB  6, 13,  7
-; BELLADONNA shiny
-	RGB 15, 10, 19
-	RGB 13,  7,  6
-; MAWBLOOM
-	RGB 10, 17,  6
-	RGB 11,  8,  6
-; MAWBLOOM shiny
-	RGB 17,  6, 10
-	RGB  8,  6, 11
-; CORDYCEPS
-	RGB 19, 13,  8
-	RGB  9,  8,  4
-; CORDYCEPS shiny
-	RGB 13,  8, 19
-	RGB  8,  4,  9
-; SPOREKING
-	RGB 17, 12,  7
-	RGB  8,  7,  3
-; SPOREKING shiny
-	RGB 12,  7, 17
-	RGB  7,  3,  8
+INCBIN "gfx/pokemon/tyrant/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/tyrant/shiny.pal"
+INCBIN "gfx/pokemon/nosferatu/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/nosferatu/shiny.pal"
+INCBIN "gfx/pokemon/belladonna/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/belladonna/shiny.pal"
+INCBIN "gfx/pokemon/mawbloom/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/mawbloom/shiny.pal"
+INCBIN "gfx/pokemon/cordyceps/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/cordyceps/shiny.pal"
+INCBIN "gfx/pokemon/sporeking/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/sporeking/shiny.pal"
 INCBIN "gfx/pokemon/porygon/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/porygon/shiny.pal"
-; CANDLEMOTH
-	RGB 25, 18, 14
-	RGB 14, 10,  7
-; CANDLEMOTH shiny
-	RGB 18, 14, 25
-	RGB 10,  7, 14
-; PYREMOTH
-	RGB 22, 17, 13
-	RGB 13,  9,  6
-; PYREMOTH shiny
-	RGB 17, 13, 22
-	RGB  9,  6, 13
-; SILKFANG
-	RGB 17, 14,  7
-	RGB  9,  8,  9
-; SILKFANG shiny
-	RGB 14,  7, 17
-	RGB  8,  9,  9
-; WEBWEAVER
-	RGB 16, 12,  7
-	RGB  8,  7,  8
-; WEBWEAVER shiny
-	RGB 12,  7, 16
-	RGB  7,  8,  8
-; ALLEYCAT
-	RGB 18, 16, 10
-	RGB  7,  5,  5
-; ALLEYCAT shiny
-	RGB 16, 10, 18
-	RGB  5,  5,  7
-; KINGPIN
-	RGB 18, 16, 10
-	RGB  8,  7,  5
-; KINGPIN shiny
-	RGB 16, 10, 18
-	RGB  7,  5,  8
-; MIGRAINE
-	RGB 20, 20, 27
-	RGB 10, 10, 22
-; MIGRAINE shiny
-	RGB 20, 27, 20
-	RGB 10, 22, 10
-; ANEURYSM
-	RGB 24, 17, 22
-	RGB 14,  8, 17
-; ANEURYSM shiny
-	RGB 17, 22, 24
-	RGB  8, 17, 14
-; BERSERKER
-	RGB 28, 16, 11
-	RGB 16,  7,  4
-; BERSERKER shiny
-	RGB 16, 11, 28
-	RGB  7,  4, 16
+INCBIN "gfx/pokemon/candlemoth/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/candlemoth/shiny.pal"
+INCBIN "gfx/pokemon/pyremoth/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/pyremoth/shiny.pal"
+INCBIN "gfx/pokemon/silkfang/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/silkfang/shiny.pal"
+INCBIN "gfx/pokemon/webweaver/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/webweaver/shiny.pal"
+INCBIN "gfx/pokemon/alleycat/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/alleycat/shiny.pal"
+INCBIN "gfx/pokemon/kingpin/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/kingpin/shiny.pal"
+INCBIN "gfx/pokemon/migraine/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/migraine/shiny.pal"
+INCBIN "gfx/pokemon/aneurysm/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/aneurysm/shiny.pal"
+INCBIN "gfx/pokemon/berserker/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/berserker/shiny.pal"
 INCBIN "gfx/pokemon/dratini/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/dratini/shiny.pal"
 INCBIN "gfx/pokemon/dragonair/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/dragonair/shiny.pal"
 INCBIN "gfx/pokemon/dragonite/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/dragonite/shiny.pal"
-; ANGERILLA
-	RGB 18, 11,  8
-	RGB 10,  5,  4
-; ANGERILLA shiny
-	RGB 11,  8, 18
-	RGB  5,  4, 10
+INCBIN "gfx/pokemon/angerilla/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/angerilla/shiny.pal"
 INCBIN "gfx/pokemon/titanfist/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/titanfist/shiny.pal"
 INCBIN "gfx/pokemon/chikorita/normal.gbcpal", middle_colors
@@ -487,12 +343,8 @@ INCBIN "gfx/pokemon/hoothoot/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/hoothoot/shiny.pal"
 INCBIN "gfx/pokemon/noctowl/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/noctowl/shiny.pal"
-; OMNISCIENT
-	RGB 27, 16, 11
-	RGB 15,  6, 11
-; OMNISCIENT shiny
-	RGB 16, 11, 27
-	RGB  6, 11, 15
+INCBIN "gfx/pokemon/omniscient/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/omniscient/shiny.pal"
 INCBIN "gfx/pokemon/monolith/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/monolith/shiny.pal"
 INCBIN "gfx/pokemon/spinarak/normal.gbcpal", middle_colors
@@ -501,12 +353,8 @@ INCBIN "gfx/pokemon/ariados/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/ariados/shiny.pal"
 INCBIN "gfx/pokemon/crobat/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/crobat/shiny.pal"
-; ADAMANTIX
-	RGB 21, 20, 23
-	RGB 13, 11, 13
-; ADAMANTIX shiny
-	RGB 20, 23, 21
-	RGB 11, 13, 13
+INCBIN "gfx/pokemon/adamantix/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/adamantix/shiny.pal"
 INCBIN "gfx/pokemon/skyscraper/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/skyscraper/shiny.pal"
 INCBIN "gfx/pokemon/pichu/normal.gbcpal", middle_colors
@@ -519,18 +367,10 @@ INCBIN "gfx/pokemon/hellhound/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/hellhound/shiny.pal"
 INCBIN "gfx/pokemon/gatehound/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/gatehound/shiny.pal"
-; KITSUNE
-	RGB 31, 24, 11
-	RGB 23, 10,  4
-; KITSUNE shiny
-	RGB 24, 11, 31
-	RGB 10,  4, 23
-; FOXFIRE
-	RGB 28, 21, 10
-	RGB 21,  9,  4
-; FOXFIRE shiny
-	RGB 21, 10, 28
-	RGB  9,  4, 21
+INCBIN "gfx/pokemon/kitsune/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/kitsune/shiny.pal"
+INCBIN "gfx/pokemon/foxfire/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/foxfire/shiny.pal"
 INCBIN "gfx/pokemon/mareep/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/mareep/shiny.pal"
 INCBIN "gfx/pokemon/flaaffy/normal.gbcpal", middle_colors
@@ -543,12 +383,8 @@ INCBIN "gfx/pokemon/marill/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/marill/shiny.pal"
 INCBIN "gfx/pokemon/azumarill/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/azumarill/shiny.pal"
-; UNICORN
-	RGB 29, 22, 10
-	RGB 28,  6,  6
-; UNICORN shiny
-	RGB 22, 10, 29
-	RGB  6,  6, 28
+INCBIN "gfx/pokemon/unicorn/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/unicorn/shiny.pal"
 INCBIN "gfx/pokemon/dreadsteed/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/dreadsteed/shiny.pal"
 INCBIN "gfx/pokemon/hoppip/normal.gbcpal", middle_colors
@@ -557,274 +393,114 @@ INCBIN "gfx/pokemon/skiploom/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/skiploom/shiny.pal"
 INCBIN "gfx/pokemon/jumpluff/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/jumpluff/shiny.pal"
-; HELLBOUND
-	RGB 19, 11,  6
-	RGB  9,  4,  8
-; HELLBOUND shiny
-	RGB 11,  6, 19
-	RGB  4,  8,  9
-; PERDITION
-	RGB 17, 10,  5
-	RGB  8,  3,  7
-; PERDITION shiny
-	RGB 10,  5, 17
-	RGB  3,  7,  8
-; BLACKSHEEP
-	RGB 20, 19,  4
-	RGB 14,  9,  1
-; BLACKSHEEP shiny
-	RGB 19,  4, 20
-	RGB  9,  1, 14
-; MAGNETRON
-	RGB 23, 23, 17
-	RGB 24, 12,  4
-; MAGNETRON shiny
-	RGB 23, 17, 23
-	RGB 12,  4, 24
-; SOLENOID
-	RGB 21, 21, 15
-	RGB 22, 11,  4
-; SOLENOID shiny
-	RGB 21, 15, 21
-	RGB 11,  4, 22
-; MAINFRAME
-	RGB 18, 18, 22
-	RGB 18, 11, 11
-; MAINFRAME shiny
-	RGB 18, 22, 18
-	RGB 11, 11, 18
-; ALGORITHM
-	RGB 19, 14, 21
-	RGB 19,  8, 12
-; ALGORITHM shiny
-	RGB 14, 21, 19
-	RGB  8, 12, 19
+INCBIN "gfx/pokemon/hellbound/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/hellbound/shiny.pal"
+INCBIN "gfx/pokemon/perdition/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/perdition/shiny.pal"
+INCBIN "gfx/pokemon/blacksheep/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/blacksheep/shiny.pal"
+INCBIN "gfx/pokemon/magnetron/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/magnetron/shiny.pal"
+INCBIN "gfx/pokemon/solenoid/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/solenoid/shiny.pal"
+INCBIN "gfx/pokemon/mainframe/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/mainframe/shiny.pal"
+INCBIN "gfx/pokemon/algorithm/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/algorithm/shiny.pal"
 INCBIN "gfx/pokemon/apparition/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/apparition/shiny.pal"
-; BONEKEEPER
-	RGB 18, 15, 12
-	RGB 12,  8,  5
-; BONEKEEPER shiny
-	RGB 15, 12, 18
-	RGB  8,  5, 12
-; OSSUARY
-	RGB 16, 14, 11
-	RGB 11,  7,  5
-; OSSUARY shiny
-	RGB 14, 11, 16
-	RGB  7,  5, 11
-; SLUDGELORD
-	RGB 19,  6, 17
-	RGB  9,  2, 11
-; SLUDGELORD shiny
-	RGB  6, 17, 19
-	RGB  2, 11,  9
-; SUPERFUND
-	RGB 24,  5, 21
-	RGB 12,  2, 13
-; SUPERFUND shiny
-	RGB  5, 21, 24
-	RGB  2, 13, 12
-; MIASMA
-	RGB 19,  8, 20
-	RGB  9,  4, 12
-; MIASMA shiny
-	RGB  8, 20, 19
-	RGB  4, 12,  9
-; PANDEMIC
-	RGB 16,  7, 17
-	RGB  8,  3, 10
-; PANDEMIC shiny
-	RGB  7, 17, 16
-	RGB  3, 10,  8
-; WARHORN
-	RGB 21, 17, 14
-	RGB 12, 11,  5
-; WARHORN shiny
-	RGB 17, 14, 21
-	RGB 11,  5, 12
-; BEHEMOTH
-	RGB 19, 16, 15
-	RGB 10, 10,  6
-; BEHEMOTH shiny
-	RGB 16, 15, 19
-	RGB 10,  6, 10
-; CLEAVER
-	RGB 23, 19, 12
-	RGB  9, 13, 10
-; CLEAVER shiny
-	RGB 19, 12, 23
-	RGB 13, 10,  9
-; HEADSMAN
-	RGB 21, 17, 10
-	RGB  8, 12,  9
-; HEADSMAN shiny
-	RGB 17, 10, 21
-	RGB 12,  9,  8
+INCBIN "gfx/pokemon/bonekeeper/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/bonekeeper/shiny.pal"
+INCBIN "gfx/pokemon/ossuary/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/ossuary/shiny.pal"
+INCBIN "gfx/pokemon/sludgelord/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/sludgelord/shiny.pal"
+INCBIN "gfx/pokemon/superfund/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/superfund/shiny.pal"
+INCBIN "gfx/pokemon/miasma/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/miasma/shiny.pal"
+INCBIN "gfx/pokemon/pandemic/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/pandemic/shiny.pal"
+INCBIN "gfx/pokemon/warhorn/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/warhorn/shiny.pal"
+INCBIN "gfx/pokemon/behemoth/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/behemoth/shiny.pal"
+INCBIN "gfx/pokemon/cleaver/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/cleaver/shiny.pal"
+INCBIN "gfx/pokemon/headsman/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/headsman/shiny.pal"
 INCBIN "gfx/pokemon/steelix/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/steelix/shiny.pal"
 INCBIN "gfx/pokemon/cthuspawn/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/cthuspawn/shiny.pal"
 INCBIN "gfx/pokemon/cthuludon/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/cthuludon/shiny.pal"
-; POLIWRAITH
-	RGB 11, 12, 20
-	RGB  4,  5, 14
-; POLIWRAITH shiny
-	RGB 12, 20, 11
-	RGB  5, 14,  4
+INCBIN "gfx/pokemon/poliwraith/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/poliwraith/shiny.pal"
 INCBIN "gfx/pokemon/scizor/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/scizor/shiny.pal"
-; AMNESIAC
-	RGB 23, 15, 24
-	RGB 11, 12, 17
-; AMNESIAC shiny
-	RGB 15, 24, 23
-	RGB 12, 17, 11
-; OBLIVION
-	RGB 20,  9, 13
-	RGB 11,  7,  8
-; OBLIVION shiny
-	RGB  9, 13, 20
-	RGB  7,  8, 11
-; TUSKDRIFT
-	RGB 16, 22, 31
-	RGB  7, 12, 22
-; TUSKDRIFT shiny
-	RGB 22, 31, 16
-	RGB 12, 22,  7
-; FROSTSIREN
-	RGB 20, 21, 27
-	RGB 11, 12, 19
-; FROSTSIREN shiny
-	RGB 21, 27, 20
-	RGB 12, 19, 11
-; CRYOCLAM
-	RGB 17, 18, 27
-	RGB  9,  9, 20
-; CRYOCLAM shiny
-	RGB 18, 27, 17
-	RGB  9, 20,  9
-; ABYSSHELL
-	RGB 14, 13, 17
-	RGB  7,  7, 13
-; ABYSSHELL shiny
-	RGB 13, 17, 14
-	RGB  7, 13,  7
-; CARAPACE
-	RGB 21, 19, 19
-	RGB 16,  8, 13
-; CARAPACE shiny
-	RGB 19, 19, 21
-	RGB  8, 13, 16
+INCBIN "gfx/pokemon/amnesiac/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/amnesiac/shiny.pal"
+INCBIN "gfx/pokemon/oblivion/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/oblivion/shiny.pal"
+INCBIN "gfx/pokemon/tuskdrift/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/tuskdrift/shiny.pal"
+INCBIN "gfx/pokemon/frostsiren/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/frostsiren/shiny.pal"
+INCBIN "gfx/pokemon/cryoclam/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/cryoclam/shiny.pal"
+INCBIN "gfx/pokemon/abysshell/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/abysshell/shiny.pal"
+INCBIN "gfx/pokemon/carapace/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/carapace/shiny.pal"
 INCBIN "gfx/pokemon/swinub/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/swinub/shiny.pal"
 INCBIN "gfx/pokemon/piloswine/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/piloswine/shiny.pal"
 INCBIN "gfx/pokemon/carcinize/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/carcinize/shiny.pal"
-; NEBULON
-	RGB 21, 20, 17
-	RGB 14,  8, 20
-; NEBULON shiny
-	RGB 20, 17, 21
-	RGB  8, 20, 14
-; SUPERNOVA
-	RGB 26, 17,  9
-	RGB 19,  6, 12
-; SUPERNOVA shiny
-	RGB 17,  9, 26
-	RGB  6, 12, 19
-; MAELDRA
-	RGB 19, 18, 19
-	RGB  8, 10, 23
-; MAELDRA shiny
-	RGB 18, 19, 19
-	RGB 10, 23,  8
-; RAGECARP
-	RGB 20, 20, 21
-	RGB  8, 10, 24
-; RAGECARP shiny
-	RGB 20, 21, 20
-	RGB 10, 24,  8
-; WORLDEATER
-	RGB 18, 18, 19
-	RGB  7,  9, 22
-; WORLDEATER shiny
-	RGB 18, 19, 18
-	RGB  9, 22,  7
+INCBIN "gfx/pokemon/nebulon/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/nebulon/shiny.pal"
+INCBIN "gfx/pokemon/supernova/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/supernova/shiny.pal"
+INCBIN "gfx/pokemon/maeldra/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/maeldra/shiny.pal"
+INCBIN "gfx/pokemon/ragecarp/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/ragecarp/shiny.pal"
+INCBIN "gfx/pokemon/worldeater/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/worldeater/shiny.pal"
 INCBIN "gfx/pokemon/houndour/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/houndour/shiny.pal"
 INCBIN "gfx/pokemon/houndoom/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/houndoom/shiny.pal"
 INCBIN "gfx/pokemon/kingdra/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/kingdra/shiny.pal"
-; TIDEBELLY
-	RGB 15, 18, 27
-	RGB 16,  9, 15
-; TIDEBELLY shiny
-	RGB 18, 27, 15
-	RGB  9, 15, 16
-; BEACHBALL
-	RGB 14, 16, 24
-	RGB 14,  8, 13
-; BEACHBALL shiny
-	RGB 16, 24, 14
-	RGB  8, 13, 14
+INCBIN "gfx/pokemon/tidebelly/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/tidebelly/shiny.pal"
+INCBIN "gfx/pokemon/beachball/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/beachball/shiny.pal"
 INCBIN "gfx/pokemon/porygon2/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/porygon2/shiny.pal"
-; NARCOLEPT
-	RGB 31, 20, 11
-	RGB 22,  9,  7
-; NARCOLEPT shiny
-	RGB 20, 11, 31
-	RGB  9,  7, 22
-; SANDMAN
-	RGB 20, 14,  8
-	RGB 13,  6,  5
-; SANDMAN shiny
-	RGB 14,  8, 20
-	RGB  6,  5, 13
-; PLACEBO
-	RGB 30, 16, 20
-	RGB 22,  8, 13
-; PLACEBO shiny
-	RGB 16, 20, 30
-	RGB  8, 13, 22
-; HOSPICE
-	RGB 20, 11, 15
-	RGB 14,  5, 10
-; HOSPICE shiny
-	RGB 11, 15, 20
-	RGB  5, 10, 14
+INCBIN "gfx/pokemon/narcolept/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/narcolept/shiny.pal"
+INCBIN "gfx/pokemon/sandman/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/sandman/shiny.pal"
+INCBIN "gfx/pokemon/placebo/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/placebo/shiny.pal"
+INCBIN "gfx/pokemon/hospice/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/hospice/shiny.pal"
 INCBIN "gfx/pokemon/smoochum/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/smoochum/shiny.pal"
-; MAMMOTH
-	RGB 22, 22, 19
-	RGB 13, 14, 16
-; MAMMOTH shiny
-	RGB 22, 19, 22
-	RGB 14, 16, 13
-; ICEAGE
-	RGB 20, 20, 17
-	RGB 12, 12, 14
-; ICEAGE shiny
-	RGB 20, 17, 20
-	RGB 12, 14, 12
-; FROSTBITE
-	RGB 20, 15, 23
-	RGB 20, 11, 21
-; FROSTBITE shiny
-	RGB 15, 23, 20
-	RGB 11, 21, 20
+INCBIN "gfx/pokemon/mammoth/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/mammoth/shiny.pal"
+INCBIN "gfx/pokemon/iceage/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/iceage/shiny.pal"
+INCBIN "gfx/pokemon/frostbite/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/frostbite/shiny.pal"
 INCBIN "gfx/pokemon/blissey/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/blissey/shiny.pal"
-; RIMEQUEEN
-	RGB 18, 14, 21
-	RGB 19, 10, 20
-; RIMEQUEEN shiny
-	RGB 14, 21, 18
-	RGB 10, 20, 19
+INCBIN "gfx/pokemon/rimequeen/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/rimequeen/shiny.pal"
 INCBIN "gfx/pokemon/wyrmking/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/wyrmking/shiny.pal"
 INCBIN "gfx/pokemon/typhoneus/normal.gbcpal", middle_colors
