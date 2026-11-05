@@ -4,6 +4,7 @@ An area module defines a painter class P with one method per block type (see bui
 and gets its Tileset from build_set().  Block 0 is always the border (the engine draws map block id 0 as the border block).
 Roles (areas/layout.py autotile): floor / floor_rare, plaza, facade (floor to the south of the wall), roof (floor to the north),
 side_e (floor to the east), side_w (floor to the west), mass (deep inside), the Pokecenter / Mart / house blocks, rift, border."""
+import scenery
 from tilebuild import Tileset
 
 AUTO = {"facade": [("facade", 1)], "side_e": [("side_e", 1), ("side_e_win", 2)], "side_w": [("side_w", 1), ("side_w_win", 2)],
@@ -46,6 +47,7 @@ def build_set(name, const, stem, P):
     ids["rift"] = t.add(P.rift(), ("WALL", "WALL", "DOOR", "WALL"), "rift")
     for cv in P.grass():  # two blocks: wild encounters (stage 9)
         t.add(cv, "TALL_GRASS", "grass")
+    scenery.add(t, P.floors()[0])  # ponds, fences, ledge, tree, flower beds (after the grass: no earlier block id moves)
     t.ids = ids
     return t
 

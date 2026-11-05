@@ -5,6 +5,7 @@ east), side_w (floor to the west), mass (deep inside), center/mart/house blocks,
 from tilebuild import Tileset, Canvas, GRAY, RED, GREEN, WATER, YELLOW, BROWN, ROOF
 import paint
 import grass
+import scenery
 
 
 def cornice(cv):
@@ -439,6 +440,7 @@ def build():
     ids["rift"] = t.add(portal(), ("WALL", "WALL", "DOOR", "WALL"), "rift")
     for cv in grass.grass_pair("tithe"):  # wild encounters (stage 9)
         t.add(cv, "TALL_GRASS", "grass")
+    scenery.add(t, cobbles(0))  # ponds, fences, ledge, tree, flower beds (after the grass: no earlier block id moves)
     t.ids = ids
     return t
 

@@ -41,3 +41,19 @@
 	tilecoll WALL, WALL, DOOR, WALL ; 28
 	tilecoll TALL_GRASS, TALL_GRASS, TALL_GRASS, TALL_GRASS ; 29
 	tilecoll TALL_GRASS, TALL_GRASS, TALL_GRASS, TALL_GRASS ; 2a
+	tilecoll WALL, WALL, WALL, WALL ; 2b
+	tilecoll WALL, WALL, WALL, WALL ; 2c
+	tilecoll WALL, WALL, WALL, WALL ; 2d
+	tilecoll WALL, WALL, WALL, WALL ; 2e
+	tilecoll WALL, WALL, WALL, WALL ; 2f
+	tilecoll WALL, WALL, WALL, WALL ; 30
+	tilecoll WALL, WALL, WALL, WALL ; 31
+	tilecoll WALL, WALL, WALL, WALL ; 32
+	tilecoll WALL, WALL, WALL, WALL ; 33
+	tilecoll WALL, WALL, WALL, WALL ; 34
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 35
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 36
+	tilecoll FLOOR, FLOOR, HOP_DOWN, HOP_DOWN ; 37
+	tilecoll WALL, WALL, WALL, WALL ; 38
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 39
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 3a
