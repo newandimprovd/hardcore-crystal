@@ -6,6 +6,71 @@ LotusPlaza6_MapScripts:
 
 	def_callbacks
 
+LotusPlaza6SteinerScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_STEINER
+	iftrue .Again
+	writetext LotusPlaza6SteinerScriptText
+	waitbutton
+	setevent EVENT_LORE_STEINER
+	closetext
+	end
+
+.Again:
+	writetext LotusPlaza6SteinerScriptAgainText
+	waitbutton
+	closetext
+	end
+
+LotusPlaza6SteinerScriptText:
+	text "Last time I will"
+	line "speak with you, I"
+	para "am afraid."
+	line "Teachers are"
+	para "seldom allowed"
+	line "encores."
+	para "When the seam"
+	line "closes, one era"
+	para "will remain. Be"
+	line "sure you leave it"
+	para "better than you"
+	line "found it."
+	para "Preferably with"
+	line "plumbing."
+	para "You killed many. I"
+	line "will not tell you"
+	para "it was right. I"
+	line "will tell you it"
+	para "was efficient."
+	line "Both are true of"
+	para "Ahriman too."
+	done
+
+LotusPlaza6SteinerScriptAgainText:
+	text "Last time I will"
+	line "speak with you, I"
+	para "am afraid."
+	line "Teachers are"
+	para "seldom allowed"
+	line "encores."
+	para "When the seam"
+	line "closes, one era"
+	para "will remain. Be"
+	line "sure you leave it"
+	para "better than you"
+	line "found it."
+	para "Preferably with"
+	line "plumbing."
+	para "You killed many. I"
+	line "will not tell you"
+	para "it was right. I"
+	line "will tell you it"
+	para "was efficient."
+	line "Both are true of"
+	para "Ahriman too."
+	done
+
 LotusPlaza6_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,4 +84,5 @@ LotusPlaza6_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 20, 18, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6SteinerScript, -1
 

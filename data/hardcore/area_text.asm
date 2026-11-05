@@ -4170,3 +4170,695 @@ HC_AfterText_A5_15:
 
 ENDSECTION
 
+SECTION "Area Text PG", ROMX
+
+HC_SeenText_PG::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_PG_Table
+	ld b, 28
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_PG
+	cp b
+	jr c, .got_HC_SeenText_PG
+	sub b
+	jr .mod_HC_SeenText_PG
+.got_HC_SeenText_PG
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_PG_Table:
+	dw HC_SeenText_PG_0
+	dw HC_SeenText_PG_1
+	dw HC_SeenText_PG_2
+	dw HC_SeenText_PG_3
+	dw HC_SeenText_PG_4
+	dw HC_SeenText_PG_5
+	dw HC_SeenText_PG_6
+	dw HC_SeenText_PG_7
+	dw HC_SeenText_PG_8
+	dw HC_SeenText_PG_9
+	dw HC_SeenText_PG_10
+	dw HC_SeenText_PG_11
+	dw HC_SeenText_PG_12
+	dw HC_SeenText_PG_13
+	dw HC_SeenText_PG_14
+	dw HC_SeenText_PG_15
+	dw HC_SeenText_PG_16
+	dw HC_SeenText_PG_17
+	dw HC_SeenText_PG_18
+	dw HC_SeenText_PG_19
+	dw HC_SeenText_PG_20
+	dw HC_SeenText_PG_21
+	dw HC_SeenText_PG_22
+	dw HC_SeenText_PG_23
+	dw HC_SeenText_PG_24
+	dw HC_SeenText_PG_25
+	dw HC_SeenText_PG_26
+	dw HC_SeenText_PG_27
+
+HC_SeenText_PG_0:
+	text "Nobody dies in"
+	line "here. It is the"
+	para "worst thing about"
+	line "the place. Fight"
+	para "me anyway."
+	done
+
+HC_SeenText_PG_1:
+	text "I know you. You"
+	line "killed my cousin"
+	para "Dale. No hard"
+	line "feelings. We're"
+	para "all dead down"
+	line "here."
+	done
+
+HC_SeenText_PG_2:
+	text "I have argued with"
+	line "myself for four"
+	para "hundred years. You"
+	line "are a refreshing"
+	para "change of"
+	line "opponent."
+	done
+
+HC_SeenText_PG_3:
+	text "I came here for"
+	line "the afterlife."
+	para "They gave me a"
+	line "queue and a cave."
+	para "Fight me."
+	done
+
+HC_SeenText_PG_4:
+	text "Free will is a"
+	line "rumor spread by"
+	para "people who lose"
+	line "fights. Let's test"
+	para "it."
+	done
+
+HC_SeenText_PG_5:
+	text "I died of boredom."
+	line "This is the first"
+	para "interesting thing"
+	line "that has happened"
+	para "to me."
+	done
+
+HC_SeenText_PG_6:
+	text "You smell like a"
+	line "body count. Come."
+	para "Sit. Battle."
+	done
+
+HC_SeenText_PG_7:
+	text "Do you believe in"
+	line "reincarnation? I"
+	para "do. I also believe"
+	line "I was a mattress"
+	para "last time."
+	done
+
+HC_SeenText_PG_8:
+	text "I was promised"
+	line "seventy two of"
+	para "something. I got a"
+	line "cave. Hold this"
+	para "grudge for me."
+	done
+
+HC_SeenText_PG_9:
+	text "Cogito, ergo I'm"
+	line "still here, and"
+	para "you have a target"
+	line "on your forehead."
+	done
+
+HC_SeenText_PG_10:
+	text "I have no body"
+	line "anymore, so please"
+	para "do not take it"
+	line "personally when I"
+	para "hit you with a"
+	line "rock."
+	done
+
+HC_SeenText_PG_11:
+	text "My therapist is"
+	line "somewhere above"
+	para "us, billing. I am"
+	line "here, free. Fight"
+	para "me."
+	done
+
+HC_SeenText_PG_12:
+	text "Hell is other"
+	line "people. Purgatory"
+	para "is other people"
+	line "with a cave."
+	done
+
+HC_SeenText_PG_13:
+	text "I have read every"
+	line "book on this"
+	para "level. Both of"
+	line "them. Fight me."
+	done
+
+HC_SeenText_PG_14:
+	text "I am in a debate"
+	line "with a wall. The"
+	para "wall is winning."
+	line "Be my second"
+	para "opinion."
+	done
+
+HC_SeenText_PG_15:
+	text "Everything is"
+	line "meaningless, and"
+	para "yet here you are,"
+	line "walking into my"
+	para "line of sight."
+	line "Interesting."
+	done
+
+HC_SeenText_PG_16:
+	text "I've been dead"
+	line "long enough to get"
+	para "a taste for"
+	line "violence with"
+	para "consequences"
+	line "removed."
+	done
+
+HC_SeenText_PG_17:
+	text "They say suffering"
+	line "ennobles. I've"
+	para "suffered. I'm"
+	line "still a jerk."
+	para "Battle!"
+	done
+
+HC_SeenText_PG_18:
+	text "The meek shall"
+	line "inherit the earth."
+	para "I'm not meek. I'm"
+	line "here for the cave."
+	done
+
+HC_SeenText_PG_19:
+	text "If a trainer falls"
+	line "in a cave and"
+	para "nobody kills him,"
+	line "did he lose? Find"
+	para "out."
+	done
+
+HC_SeenText_PG_20:
+	text "I do not fear"
+	line "death. I have"
+	para "already done it"
+	line "and the reviews"
+	para "were mixed."
+	done
+
+HC_SeenText_PG_21:
+	text "My last words were"
+	line "a complaint about"
+	para "parking. Be gentle"
+	line "with me."
+	done
+
+HC_SeenText_PG_22:
+	text "I asked the cave"
+	line "for meaning. It"
+	para "echoed. I'll take"
+	line "your answer in a"
+	para "battle."
+	done
+
+HC_SeenText_PG_23:
+	text "You are late."
+	line "Everyone down here"
+	para "is early, because"
+	line "there's nowhere"
+	para "else to be."
+	done
+
+HC_SeenText_PG_24:
+	text "I once had seven"
+	line "wives. Now I have"
+	para "a cave and no"
+	line "hobby. Let's"
+	para "battle."
+	done
+
+HC_SeenText_PG_25:
+	text "I used to be"
+	line "somebody's father."
+	para "Then I was a lot"
+	line "of nothing. Now"
+	para "I'm your opponent."
+	done
+
+HC_SeenText_PG_26:
+	text "Do not worry about"
+	line "the dark. The dark"
+	para "has seen"
+	line "everything and is"
+	para "not impressed."
+	done
+
+HC_SeenText_PG_27:
+	text "I saw the light at"
+	line "the end of the"
+	para "tunnel. It was a"
+	line "flashlight. It was"
+	para "pointed at me."
+	done
+
+
+HC_BeatenText_PG::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_PG_Table
+	ld b, 22
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_PG
+	cp b
+	jr c, .got_HC_BeatenText_PG
+	sub b
+	jr .mod_HC_BeatenText_PG
+.got_HC_BeatenText_PG
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_PG_Table:
+	dw HC_BeatenText_PG_0
+	dw HC_BeatenText_PG_1
+	dw HC_BeatenText_PG_2
+	dw HC_BeatenText_PG_3
+	dw HC_BeatenText_PG_4
+	dw HC_BeatenText_PG_5
+	dw HC_BeatenText_PG_6
+	dw HC_BeatenText_PG_7
+	dw HC_BeatenText_PG_8
+	dw HC_BeatenText_PG_9
+	dw HC_BeatenText_PG_10
+	dw HC_BeatenText_PG_11
+	dw HC_BeatenText_PG_12
+	dw HC_BeatenText_PG_13
+	dw HC_BeatenText_PG_14
+	dw HC_BeatenText_PG_15
+	dw HC_BeatenText_PG_16
+	dw HC_BeatenText_PG_17
+	dw HC_BeatenText_PG_18
+	dw HC_BeatenText_PG_19
+	dw HC_BeatenText_PG_20
+	dw HC_BeatenText_PG_21
+
+HC_BeatenText_PG_0:
+	text "Ow. I felt that."
+	line "I'd forgotten what"
+	para "feeling was."
+	line "Thanks, I guess."
+	done
+
+HC_BeatenText_PG_1:
+	text "Lost again."
+	line "Eternity is a long"
+	para "time to be"
+	line "mediocre."
+	done
+
+HC_BeatenText_PG_2:
+	text "You win. Please do"
+	line "not tell Dale."
+	done
+
+HC_BeatenText_PG_3:
+	text "Defeat is a type"
+	line "of knowledge."
+	para "Terrible"
+	line "knowledge, but"
+	para "knowledge."
+	done
+
+HC_BeatenText_PG_4:
+	text "I yield. My"
+	line "argument was"
+	para "weaker than my"
+	line "team."
+	done
+
+HC_BeatenText_PG_5:
+	text "Beaten by someone"
+	line "who did not read"
+	para "the books."
+	line "Humiliating."
+	done
+
+HC_BeatenText_PG_6:
+	text "That hurt in a"
+	line "very metaphysical"
+	para "way."
+	done
+
+HC_BeatenText_PG_7:
+	text "Well. That is one"
+	line "thing off my list"
+	para "of things to"
+	line "avoid."
+	done
+
+HC_BeatenText_PG_8:
+	text "I will remember"
+	line "this. I have"
+	para "nothing but time"
+	line "to do it."
+	done
+
+HC_BeatenText_PG_9:
+	text "You hit like"
+	line "someone with a"
+	para "deadline."
+	done
+
+HC_BeatenText_PG_10:
+	text "You win. The cave"
+	line "will be pleased."
+	para "The cave is easily"
+	line "pleased."
+	done
+
+HC_BeatenText_PG_11:
+	text "Another loss. At"
+	line "least I am"
+	para "consistent."
+	done
+
+HC_BeatenText_PG_12:
+	text "I thought dying"
+	line "would be the last"
+	para "indignity. I was"
+	line "wrong, I was"
+	para "wrong, I was"
+	line "wrong."
+	done
+
+HC_BeatenText_PG_13:
+	text "A loss in the"
+	line "afterlife is just"
+	para "a loss in a nicer"
+	line "font."
+	done
+
+HC_BeatenText_PG_14:
+	text "Fine. Go on. Be"
+	line "the protagonist."
+	done
+
+HC_BeatenText_PG_15:
+	text "I'll go tell the"
+	line "others. They'll be"
+	para "crushed. They're"
+	line "always crushed."
+	done
+
+HC_BeatenText_PG_16:
+	text "I surrender my"
+	line "dignity. It was in"
+	para "poor shape anyway."
+	done
+
+HC_BeatenText_PG_17:
+	text "So that's how it"
+	line "ends. Again."
+	done
+
+HC_BeatenText_PG_18:
+	text "You won, so I get"
+	line "to lose in peace."
+	para "A fair trade."
+	done
+
+HC_BeatenText_PG_19:
+	text "Nothing matters."
+	line "But that matters a"
+	para "little less now."
+	done
+
+HC_BeatenText_PG_20:
+	text "You were stronger"
+	line "than my regrets. I"
+	para "did not think that"
+	line "was possible."
+	done
+
+HC_BeatenText_PG_21:
+	text "I lost to you. I'd"
+	line "lose to anyone."
+	para "That's why I'm in"
+	line "this cave."
+	done
+
+
+HC_AfterText_PG::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_PG_Table
+	ld b, 20
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_PG
+	cp b
+	jr c, .got_HC_AfterText_PG
+	sub b
+	jr .mod_HC_AfterText_PG
+.got_HC_AfterText_PG
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_PG_Table:
+	dw HC_AfterText_PG_0
+	dw HC_AfterText_PG_1
+	dw HC_AfterText_PG_2
+	dw HC_AfterText_PG_3
+	dw HC_AfterText_PG_4
+	dw HC_AfterText_PG_5
+	dw HC_AfterText_PG_6
+	dw HC_AfterText_PG_7
+	dw HC_AfterText_PG_8
+	dw HC_AfterText_PG_9
+	dw HC_AfterText_PG_10
+	dw HC_AfterText_PG_11
+	dw HC_AfterText_PG_12
+	dw HC_AfterText_PG_13
+	dw HC_AfterText_PG_14
+	dw HC_AfterText_PG_15
+	dw HC_AfterText_PG_16
+	dw HC_AfterText_PG_17
+	dw HC_AfterText_PG_18
+	dw HC_AfterText_PG_19
+
+HC_AfterText_PG_0:
+	text "Nobody dies here."
+	line "Remember that when"
+	para "you go back up."
+	line "That is a sentence"
+	para "to think about."
+	done
+
+HC_AfterText_PG_1:
+	text "Keep going."
+	line "Somewhere down"
+	para "here there is a"
+	line "grave. Someone has"
+	para "to read it."
+	done
+
+HC_AfterText_PG_2:
+	text "The deeper you go,"
+	line "the less the cave"
+	para "says. That is how"
+	line "you can tell it"
+	para "likes you."
+	done
+
+HC_AfterText_PG_3:
+	text "I do not hold a"
+	line "grudge. Grudges"
+	para "need a pulse."
+	done
+
+HC_AfterText_PG_4:
+	text "Take the ladder"
+	line "when you are"
+	para "ready. Or don't."
+	line "Eternity is a very"
+	para "good listener."
+	done
+
+HC_AfterText_PG_5:
+	text "If you see Dale,"
+	line "tell him I said"
+	para "hello. Do not tell"
+	line "him how."
+	done
+
+HC_AfterText_PG_6:
+	text "I envy you. You"
+	line "get to leave. I"
+	para "have to stand here"
+	line "and be a plot"
+	para "device."
+	done
+
+HC_AfterText_PG_7:
+	text "There is a man at"
+	line "the top of this"
+	para "place who wants to"
+	line "be killed. I told"
+	para "him there is a"
+	line "queue."
+	done
+
+HC_AfterText_PG_8:
+	text "I used to believe"
+	line "in progress. Then"
+	para "I met a staircase."
+	done
+
+HC_AfterText_PG_9:
+	text "I think the dark"
+	line "is hiding"
+	para "something. I think"
+	line "it is the grave."
+	done
+
+HC_AfterText_PG_10:
+	text "The floors above"
+	line "are harder. The"
+	para "floors below are"
+	line "quieter. Pick your"
+	para "poison."
+	done
+
+HC_AfterText_PG_11:
+	text "I would tell you"
+	line "my story, but you"
+	para "already killed"
+	line "everyone who knew"
+	para "how it ends."
+	done
+
+HC_AfterText_PG_12:
+	text "A man in a long"
+	line "coat keeps coming"
+	para "through here"
+	line "talking about"
+	para "ownership. I do"
+	line "not like him, and"
+	para "I am dead."
+	done
+
+HC_AfterText_PG_13:
+	text "You fight well for"
+	line "a murderer. That"
+	para "is a compliment in"
+	line "some cultures."
+	done
+
+HC_AfterText_PG_14:
+	text "I will be here. I"
+	line "am always here."
+	para "That is the entire"
+	line "joke."
+	done
+
+HC_AfterText_PG_15:
+	text "You get used to"
+	line "the cave. You"
+	para "never get used to"
+	line "the cough."
+	done
+
+HC_AfterText_PG_16:
+	text "Be careful around"
+	line "the roots. I think"
+	para "one of them winked"
+	line "at me."
+	done
+
+HC_AfterText_PG_17:
+	text "My team is tired."
+	line "Mostly of me."
+	done
+
+HC_AfterText_PG_18:
+	text "They say the Abyss"
+	line "has a trumpet."
+	para "They also say"
+	line "nothing in it is"
+	para "worth finding."
+	line "Both are probably"
+	para "lies."
+	done
+
+HC_AfterText_PG_19:
+	text "There is a woman"
+	line "who sells nothing"
+	para "down here. Her"
+	line "prices are"
+	para "excellent."
+	done
+
+
+ENDSECTION
+

@@ -20,3 +20,11 @@
 	RGB 14,08,13, 03,01,04 ; morn/day
 	RGB 14,08,13, 03,01,04 ; nite
 
+; group 32 (OPEN)
+	RGB 21,21,21, 11,11,11 ; morn/day
+	RGB 21,21,21, 17,08,07 ; nite
+
+; group 33 (PURG)
+	RGB 21,21,21, 11,11,11 ; morn/day
+	RGB 21,21,21, 17,08,07 ; nite
+

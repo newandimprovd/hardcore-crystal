@@ -3,10 +3,10 @@
 SECTION "Area Attributes", ROMX
 
 	map_attributes TitheRoad, TITHE_ROAD, $05
-	connection south, CherrygroveCity, CHERRYGROVE_CITY, -5
+	connection south, TitheJunction, TITHE_JUNCTION, 0
 
 	map_attributes TithePlaza1, TITHE_PLAZA1, $00
-	connection north, TitheStreet1, TITHE_STREET1, 0
+	connection north, TitheStreet1, TITHE_STREET1, 2
 
 	map_attributes TitheCheckpoint, TITHE_CHECKPOINT, $00
 
@@ -17,12 +17,12 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheHouse1, TITHE_HOUSE1, $00
 
 	map_attributes TitheStreet1, TITHE_STREET1, $00
-	connection north, TitheStreet2, TITHE_STREET2, 0
-	connection south, TithePlaza1, TITHE_PLAZA1, 0
+	connection north, TitheStreet2, TITHE_STREET2, -2
+	connection south, TithePlaza1, TITHE_PLAZA1, -2
 
 	map_attributes TitheStreet2, TITHE_STREET2, $00
 	connection north, TitheStreet3, TITHE_STREET3, 0
-	connection south, TitheStreet1, TITHE_STREET1, 0
+	connection south, TitheStreet1, TITHE_STREET1, 2
 
 	map_attributes TitheStreet3, TITHE_STREET3, $00
 	connection north, TithePlaza2, TITHE_PLAZA2, 0
@@ -39,16 +39,16 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheHouse2, TITHE_HOUSE2, $00
 
 	map_attributes TitheStreet4, TITHE_STREET4, $00
-	connection north, TitheStreet5, TITHE_STREET5, 0
+	connection north, TitheStreet5, TITHE_STREET5, 1
 	connection south, TithePlaza2, TITHE_PLAZA2, 0
 
 	map_attributes TitheStreet5, TITHE_STREET5, $00
-	connection north, TithePlaza3, TITHE_PLAZA3, 0
-	connection south, TitheStreet4, TITHE_STREET4, 0
+	connection north, TithePlaza3, TITHE_PLAZA3, -1
+	connection south, TitheStreet4, TITHE_STREET4, -1
 
 	map_attributes TithePlaza3, TITHE_PLAZA3, $00
-	connection north, TitheStreet6, TITHE_STREET6, 0
-	connection south, TitheStreet5, TITHE_STREET5, 0
+	connection north, TitheStreet6, TITHE_STREET6, 2
+	connection south, TitheStreet5, TITHE_STREET5, 1
 
 	map_attributes TithePokecenter3, TITHE_POKECENTER3, $00
 
@@ -60,15 +60,15 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheStreet6, TITHE_STREET6, $00
 	connection north, TitheStreet7, TITHE_STREET7, 0
-	connection south, TithePlaza3, TITHE_PLAZA3, 0
+	connection south, TithePlaza3, TITHE_PLAZA3, -2
 
 	map_attributes TitheStreet7, TITHE_STREET7, $00
-	connection north, TithePlaza4, TITHE_PLAZA4, 0
+	connection north, TithePlaza4, TITHE_PLAZA4, -2
 	connection south, TitheStreet6, TITHE_STREET6, 0
 
 	map_attributes TithePlaza4, TITHE_PLAZA4, $00
-	connection north, TitheStreet8, TITHE_STREET8, 0
-	connection south, TitheStreet7, TITHE_STREET7, 0
+	connection north, TitheStreet8, TITHE_STREET8, 1
+	connection south, TitheStreet7, TITHE_STREET7, 2
 
 	map_attributes TithePokecenter4, TITHE_POKECENTER4, $00
 
@@ -77,20 +77,20 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheHouse4, TITHE_HOUSE4, $00
 
 	map_attributes TitheStreet8, TITHE_STREET8, $00
-	connection north, TitheStreet9, TITHE_STREET9, 0
-	connection south, TithePlaza4, TITHE_PLAZA4, 0
+	connection north, TitheStreet9, TITHE_STREET9, -2
+	connection south, TithePlaza4, TITHE_PLAZA4, -1
 
 	map_attributes TitheStreet9, TITHE_STREET9, $00
-	connection north, TitheStreet10, TITHE_STREET10, 0
-	connection south, TitheStreet8, TITHE_STREET8, 0
+	connection north, TitheStreet10, TITHE_STREET10, 3
+	connection south, TitheStreet8, TITHE_STREET8, 2
 
 	map_attributes TitheStreet10, TITHE_STREET10, $00
-	connection north, TithePlaza5, TITHE_PLAZA5, 0
-	connection south, TitheStreet9, TITHE_STREET9, 0
+	connection north, TithePlaza5, TITHE_PLAZA5, -2
+	connection south, TitheStreet9, TITHE_STREET9, -3
 
 	map_attributes TithePlaza5, TITHE_PLAZA5, $00
-	connection north, TitheStreet11, TITHE_STREET11, 0
-	connection south, TitheStreet10, TITHE_STREET10, 0
+	connection north, TitheStreet11, TITHE_STREET11, 2
+	connection south, TitheStreet10, TITHE_STREET10, 2
 
 	map_attributes TithePokecenter5, TITHE_POKECENTER5, $00
 
@@ -102,19 +102,19 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheStreet11, TITHE_STREET11, $00
 	connection north, TitheStreet12, TITHE_STREET12, 0
-	connection south, TithePlaza5, TITHE_PLAZA5, 0
+	connection south, TithePlaza5, TITHE_PLAZA5, -2
 
 	map_attributes TitheStreet12, TITHE_STREET12, $00
-	connection north, TitheStreet13, TITHE_STREET13, 0
+	connection north, TitheStreet13, TITHE_STREET13, -3
 	connection south, TitheStreet11, TITHE_STREET11, 0
 
 	map_attributes TitheStreet13, TITHE_STREET13, $00
-	connection north, TithePlaza6, TITHE_PLAZA6, 0
-	connection south, TitheStreet12, TITHE_STREET12, 0
+	connection north, TithePlaza6, TITHE_PLAZA6, 1
+	connection south, TitheStreet12, TITHE_STREET12, 3
 
 	map_attributes TithePlaza6, TITHE_PLAZA6, $00
-	connection north, TitheStreet14, TITHE_STREET14, 0
-	connection south, TitheStreet13, TITHE_STREET13, 0
+	connection north, TitheStreet14, TITHE_STREET14, -1
+	connection south, TitheStreet13, TITHE_STREET13, -1
 
 	map_attributes TithePokecenter6, TITHE_POKECENTER6, $00
 
@@ -123,15 +123,15 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheHouse6, TITHE_HOUSE6, $00
 
 	map_attributes TitheStreet14, TITHE_STREET14, $00
-	connection north, TitheStreet15, TITHE_STREET15, 0
-	connection south, TithePlaza6, TITHE_PLAZA6, 0
+	connection north, TitheStreet15, TITHE_STREET15, 3
+	connection south, TithePlaza6, TITHE_PLAZA6, 1
 
 	map_attributes TitheStreet15, TITHE_STREET15, $00
-	connection north, TithePlaza7, TITHE_PLAZA7, 0
-	connection south, TitheStreet14, TITHE_STREET14, 0
+	connection north, TithePlaza7, TITHE_PLAZA7, -2
+	connection south, TitheStreet14, TITHE_STREET14, -3
 
 	map_attributes TithePlaza7, TITHE_PLAZA7, $00
-	connection south, TitheStreet15, TITHE_STREET15, 0
+	connection south, TitheStreet15, TITHE_STREET15, 2
 
 	map_attributes TithePokecenter7, TITHE_POKECENTER7, $00
 
@@ -142,7 +142,7 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheCathedral, TITHE_CATHEDRAL, $00
 
 	map_attributes GrovePlaza1, GROVE_PLAZA1, $00
-	connection north, GroveStreet1, GROVE_STREET1, 0
+	connection north, GroveStreet1, GROVE_STREET1, -1
 
 	map_attributes GroveGate, GROVE_GATE, $00
 
@@ -153,16 +153,16 @@ SECTION "Area Attributes", ROMX
 	map_attributes GroveHouse1, GROVE_HOUSE1, $00
 
 	map_attributes GroveStreet1, GROVE_STREET1, $00
-	connection north, GroveStreet2, GROVE_STREET2, 0
-	connection south, GrovePlaza1, GROVE_PLAZA1, 0
+	connection north, GroveStreet2, GROVE_STREET2, 3
+	connection south, GrovePlaza1, GROVE_PLAZA1, 1
 
 	map_attributes GroveStreet2, GROVE_STREET2, $00
-	connection north, GroveStreet3, GROVE_STREET3, 0
-	connection south, GroveStreet1, GROVE_STREET1, 0
+	connection north, GroveStreet3, GROVE_STREET3, -2
+	connection south, GroveStreet1, GROVE_STREET1, -3
 
 	map_attributes GroveStreet3, GROVE_STREET3, $00
 	connection north, GrovePlaza2, GROVE_PLAZA2, 0
-	connection south, GroveStreet2, GROVE_STREET2, 0
+	connection south, GroveStreet2, GROVE_STREET2, 2
 
 	map_attributes GrovePlaza2, GROVE_PLAZA2, $00
 	connection north, GroveStreet4, GROVE_STREET4, 0
@@ -175,16 +175,16 @@ SECTION "Area Attributes", ROMX
 	map_attributes GroveHouse2, GROVE_HOUSE2, $00
 
 	map_attributes GroveStreet4, GROVE_STREET4, $00
-	connection north, GroveStreet5, GROVE_STREET5, 0
+	connection north, GroveStreet5, GROVE_STREET5, 2
 	connection south, GrovePlaza2, GROVE_PLAZA2, 0
 
 	map_attributes GroveStreet5, GROVE_STREET5, $00
-	connection north, GrovePlaza3, GROVE_PLAZA3, 0
-	connection south, GroveStreet4, GROVE_STREET4, 0
+	connection north, GrovePlaza3, GROVE_PLAZA3, -2
+	connection south, GroveStreet4, GROVE_STREET4, -2
 
 	map_attributes GrovePlaza3, GROVE_PLAZA3, $00
-	connection north, GroveStreet6, GROVE_STREET6, 0
-	connection south, GroveStreet5, GROVE_STREET5, 0
+	connection north, GroveStreet6, GROVE_STREET6, 2
+	connection south, GroveStreet5, GROVE_STREET5, 2
 
 	map_attributes GrovePokecenter3, GROVE_POKECENTER3, $00
 
@@ -195,16 +195,16 @@ SECTION "Area Attributes", ROMX
 	map_attributes GroveBoathouse, GROVE_BOATHOUSE, $00
 
 	map_attributes GroveStreet6, GROVE_STREET6, $00
-	connection north, GroveStreet7, GROVE_STREET7, 0
-	connection south, GrovePlaza3, GROVE_PLAZA3, 0
+	connection north, GroveStreet7, GROVE_STREET7, -3
+	connection south, GrovePlaza3, GROVE_PLAZA3, -2
 
 	map_attributes GroveStreet7, GROVE_STREET7, $00
-	connection north, GrovePlaza4, GROVE_PLAZA4, 0
-	connection south, GroveStreet6, GROVE_STREET6, 0
+	connection north, GrovePlaza4, GROVE_PLAZA4, 1
+	connection south, GroveStreet6, GROVE_STREET6, 3
 
 	map_attributes GrovePlaza4, GROVE_PLAZA4, $00
-	connection north, GroveStreet8, GROVE_STREET8, 0
-	connection south, GroveStreet7, GROVE_STREET7, 0
+	connection north, GroveStreet8, GROVE_STREET8, -1
+	connection south, GroveStreet7, GROVE_STREET7, -1
 
 	map_attributes GrovePokecenter4, GROVE_POKECENTER4, $00
 
@@ -213,20 +213,20 @@ SECTION "Area Attributes", ROMX
 	map_attributes GroveHouse4, GROVE_HOUSE4, $00
 
 	map_attributes GroveStreet8, GROVE_STREET8, $00
-	connection north, GroveStreet9, GROVE_STREET9, 0
-	connection south, GrovePlaza4, GROVE_PLAZA4, 0
+	connection north, GroveStreet9, GROVE_STREET9, 1
+	connection south, GrovePlaza4, GROVE_PLAZA4, 1
 
 	map_attributes GroveStreet9, GROVE_STREET9, $00
-	connection north, GroveStreet10, GROVE_STREET10, 0
-	connection south, GroveStreet8, GROVE_STREET8, 0
+	connection north, GroveStreet10, GROVE_STREET10, -1
+	connection south, GroveStreet8, GROVE_STREET8, -1
 
 	map_attributes GroveStreet10, GROVE_STREET10, $00
-	connection north, GrovePlaza5, GROVE_PLAZA5, 0
-	connection south, GroveStreet9, GROVE_STREET9, 0
+	connection north, GrovePlaza5, GROVE_PLAZA5, 1
+	connection south, GroveStreet9, GROVE_STREET9, 1
 
 	map_attributes GrovePlaza5, GROVE_PLAZA5, $00
-	connection north, GroveStreet11, GROVE_STREET11, 0
-	connection south, GroveStreet10, GROVE_STREET10, 0
+	connection north, GroveStreet11, GROVE_STREET11, -1
+	connection south, GroveStreet10, GROVE_STREET10, -1
 
 	map_attributes GrovePokecenter5, GROVE_POKECENTER5, $00
 
@@ -237,20 +237,20 @@ SECTION "Area Attributes", ROMX
 	map_attributes GroveSmokehouse, GROVE_SMOKEHOUSE, $00
 
 	map_attributes GroveStreet11, GROVE_STREET11, $00
-	connection north, GroveStreet12, GROVE_STREET12, 0
-	connection south, GrovePlaza5, GROVE_PLAZA5, 0
+	connection north, GroveStreet12, GROVE_STREET12, 3
+	connection south, GrovePlaza5, GROVE_PLAZA5, 1
 
 	map_attributes GroveStreet12, GROVE_STREET12, $00
-	connection north, GroveStreet13, GROVE_STREET13, 0
-	connection south, GroveStreet11, GROVE_STREET11, 0
+	connection north, GroveStreet13, GROVE_STREET13, -1
+	connection south, GroveStreet11, GROVE_STREET11, -3
 
 	map_attributes GroveStreet13, GROVE_STREET13, $00
-	connection north, GrovePlaza6, GROVE_PLAZA6, 0
-	connection south, GroveStreet12, GROVE_STREET12, 0
+	connection north, GrovePlaza6, GROVE_PLAZA6, -1
+	connection south, GroveStreet12, GROVE_STREET12, 1
 
 	map_attributes GrovePlaza6, GROVE_PLAZA6, $00
-	connection north, GroveStreet14, GROVE_STREET14, 0
-	connection south, GroveStreet13, GROVE_STREET13, 0
+	connection north, GroveStreet14, GROVE_STREET14, -1
+	connection south, GroveStreet13, GROVE_STREET13, 1
 
 	map_attributes GrovePokecenter6, GROVE_POKECENTER6, $00
 
@@ -260,14 +260,14 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes GroveStreet14, GROVE_STREET14, $00
 	connection north, GroveStreet15, GROVE_STREET15, 0
-	connection south, GrovePlaza6, GROVE_PLAZA6, 0
+	connection south, GrovePlaza6, GROVE_PLAZA6, 1
 
 	map_attributes GroveStreet15, GROVE_STREET15, $00
-	connection north, GrovePlaza7, GROVE_PLAZA7, 0
+	connection north, GrovePlaza7, GROVE_PLAZA7, 1
 	connection south, GroveStreet14, GROVE_STREET14, 0
 
 	map_attributes GrovePlaza7, GROVE_PLAZA7, $00
-	connection south, GroveStreet15, GROVE_STREET15, 0
+	connection south, GroveStreet15, GROVE_STREET15, -1
 
 	map_attributes GrovePokecenter7, GROVE_POKECENTER7, $00
 
@@ -277,8 +277,10 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes GroveCouncil, GROVE_COUNCIL, $00
 
+	map_attributes GroveAmphitheater, GROVE_AMPHITHEATER, $00
+
 	map_attributes AxiomPlaza1, AXIOM_PLAZA1, $00
-	connection north, AxiomStreet1, AXIOM_STREET1, 0
+	connection north, AxiomStreet1, AXIOM_STREET1, -1
 
 	map_attributes AxiomGate, AXIOM_GATE, $00
 
@@ -290,18 +292,18 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes AxiomStreet1, AXIOM_STREET1, $00
 	connection north, AxiomStreet2, AXIOM_STREET2, 0
-	connection south, AxiomPlaza1, AXIOM_PLAZA1, 0
+	connection south, AxiomPlaza1, AXIOM_PLAZA1, 1
 
 	map_attributes AxiomStreet2, AXIOM_STREET2, $00
-	connection north, AxiomStreet3, AXIOM_STREET3, 0
+	connection north, AxiomStreet3, AXIOM_STREET3, 1
 	connection south, AxiomStreet1, AXIOM_STREET1, 0
 
 	map_attributes AxiomStreet3, AXIOM_STREET3, $00
 	connection north, AxiomPlaza2, AXIOM_PLAZA2, 0
-	connection south, AxiomStreet2, AXIOM_STREET2, 0
+	connection south, AxiomStreet2, AXIOM_STREET2, -1
 
 	map_attributes AxiomPlaza2, AXIOM_PLAZA2, $00
-	connection north, AxiomStreet4, AXIOM_STREET4, 0
+	connection north, AxiomStreet4, AXIOM_STREET4, -1
 	connection south, AxiomStreet3, AXIOM_STREET3, 0
 
 	map_attributes AxiomPokecenter2, AXIOM_POKECENTER2, $00
@@ -312,15 +314,15 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes AxiomStreet4, AXIOM_STREET4, $00
 	connection north, AxiomStreet5, AXIOM_STREET5, 0
-	connection south, AxiomPlaza2, AXIOM_PLAZA2, 0
+	connection south, AxiomPlaza2, AXIOM_PLAZA2, 1
 
 	map_attributes AxiomStreet5, AXIOM_STREET5, $00
-	connection north, AxiomPlaza3, AXIOM_PLAZA3, 0
+	connection north, AxiomPlaza3, AXIOM_PLAZA3, 1
 	connection south, AxiomStreet4, AXIOM_STREET4, 0
 
 	map_attributes AxiomPlaza3, AXIOM_PLAZA3, $00
-	connection north, AxiomStreet6, AXIOM_STREET6, 0
-	connection south, AxiomStreet5, AXIOM_STREET5, 0
+	connection north, AxiomStreet6, AXIOM_STREET6, -1
+	connection south, AxiomStreet5, AXIOM_STREET5, -1
 
 	map_attributes AxiomPokecenter3, AXIOM_POKECENTER3, $00
 
@@ -331,16 +333,16 @@ SECTION "Area Attributes", ROMX
 	map_attributes AxiomRegistry, AXIOM_REGISTRY, $00
 
 	map_attributes AxiomStreet6, AXIOM_STREET6, $00
-	connection north, AxiomStreet7, AXIOM_STREET7, 0
-	connection south, AxiomPlaza3, AXIOM_PLAZA3, 0
+	connection north, AxiomStreet7, AXIOM_STREET7, 3
+	connection south, AxiomPlaza3, AXIOM_PLAZA3, 1
 
 	map_attributes AxiomStreet7, AXIOM_STREET7, $00
-	connection north, AxiomPlaza4, AXIOM_PLAZA4, 0
-	connection south, AxiomStreet6, AXIOM_STREET6, 0
+	connection north, AxiomPlaza4, AXIOM_PLAZA4, -2
+	connection south, AxiomStreet6, AXIOM_STREET6, -3
 
 	map_attributes AxiomPlaza4, AXIOM_PLAZA4, $00
-	connection north, AxiomStreet8, AXIOM_STREET8, 0
-	connection south, AxiomStreet7, AXIOM_STREET7, 0
+	connection north, AxiomStreet8, AXIOM_STREET8, 2
+	connection south, AxiomStreet7, AXIOM_STREET7, 2
 
 	map_attributes AxiomPokecenter4, AXIOM_POKECENTER4, $00
 
@@ -350,19 +352,19 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes AxiomStreet8, AXIOM_STREET8, $00
 	connection north, AxiomStreet9, AXIOM_STREET9, 0
-	connection south, AxiomPlaza4, AXIOM_PLAZA4, 0
+	connection south, AxiomPlaza4, AXIOM_PLAZA4, -2
 
 	map_attributes AxiomStreet9, AXIOM_STREET9, $00
 	connection north, AxiomStreet10, AXIOM_STREET10, 0
 	connection south, AxiomStreet8, AXIOM_STREET8, 0
 
 	map_attributes AxiomStreet10, AXIOM_STREET10, $00
-	connection north, AxiomPlaza5, AXIOM_PLAZA5, 0
+	connection north, AxiomPlaza5, AXIOM_PLAZA5, -2
 	connection south, AxiomStreet9, AXIOM_STREET9, 0
 
 	map_attributes AxiomPlaza5, AXIOM_PLAZA5, $00
-	connection north, AxiomStreet11, AXIOM_STREET11, 0
-	connection south, AxiomStreet10, AXIOM_STREET10, 0
+	connection north, AxiomStreet11, AXIOM_STREET11, 2
+	connection south, AxiomStreet10, AXIOM_STREET10, 2
 
 	map_attributes AxiomPokecenter5, AXIOM_POKECENTER5, $00
 
@@ -373,20 +375,20 @@ SECTION "Area Attributes", ROMX
 	map_attributes AxiomArmory, AXIOM_ARMORY, $00
 
 	map_attributes AxiomStreet11, AXIOM_STREET11, $00
-	connection north, AxiomStreet12, AXIOM_STREET12, 0
-	connection south, AxiomPlaza5, AXIOM_PLAZA5, 0
+	connection north, AxiomStreet12, AXIOM_STREET12, -2
+	connection south, AxiomPlaza5, AXIOM_PLAZA5, -2
 
 	map_attributes AxiomStreet12, AXIOM_STREET12, $00
-	connection north, AxiomStreet13, AXIOM_STREET13, 0
-	connection south, AxiomStreet11, AXIOM_STREET11, 0
+	connection north, AxiomStreet13, AXIOM_STREET13, 1
+	connection south, AxiomStreet11, AXIOM_STREET11, 2
 
 	map_attributes AxiomStreet13, AXIOM_STREET13, $00
-	connection north, AxiomPlaza6, AXIOM_PLAZA6, 0
-	connection south, AxiomStreet12, AXIOM_STREET12, 0
+	connection north, AxiomPlaza6, AXIOM_PLAZA6, -1
+	connection south, AxiomStreet12, AXIOM_STREET12, -1
 
 	map_attributes AxiomPlaza6, AXIOM_PLAZA6, $00
-	connection north, AxiomStreet14, AXIOM_STREET14, 0
-	connection south, AxiomStreet13, AXIOM_STREET13, 0
+	connection north, AxiomStreet14, AXIOM_STREET14, 1
+	connection south, AxiomStreet13, AXIOM_STREET13, 1
 
 	map_attributes AxiomPokecenter6, AXIOM_POKECENTER6, $00
 
@@ -395,15 +397,15 @@ SECTION "Area Attributes", ROMX
 	map_attributes AxiomHouse6, AXIOM_HOUSE6, $00
 
 	map_attributes AxiomStreet14, AXIOM_STREET14, $00
-	connection north, AxiomStreet15, AXIOM_STREET15, 0
-	connection south, AxiomPlaza6, AXIOM_PLAZA6, 0
+	connection north, AxiomStreet15, AXIOM_STREET15, 1
+	connection south, AxiomPlaza6, AXIOM_PLAZA6, -1
 
 	map_attributes AxiomStreet15, AXIOM_STREET15, $00
-	connection north, AxiomPlaza7, AXIOM_PLAZA7, 0
-	connection south, AxiomStreet14, AXIOM_STREET14, 0
+	connection north, AxiomPlaza7, AXIOM_PLAZA7, -2
+	connection south, AxiomStreet14, AXIOM_STREET14, -1
 
 	map_attributes AxiomPlaza7, AXIOM_PLAZA7, $00
-	connection south, AxiomStreet15, AXIOM_STREET15, 0
+	connection south, AxiomStreet15, AXIOM_STREET15, 2
 
 	map_attributes AxiomPokecenter7, AXIOM_POKECENTER7, $00
 
@@ -414,7 +416,7 @@ SECTION "Area Attributes", ROMX
 	map_attributes AxiomMayoralty, AXIOM_MAYORALTY, $00
 
 	map_attributes LotusPlaza1, LOTUS_PLAZA1, $00
-	connection north, LotusStreet1, LOTUS_STREET1, 0
+	connection north, LotusStreet1, LOTUS_STREET1, 1
 
 	map_attributes LotusGate, LOTUS_GATE, $00
 
@@ -425,20 +427,20 @@ SECTION "Area Attributes", ROMX
 	map_attributes LotusHouse1, LOTUS_HOUSE1, $00
 
 	map_attributes LotusStreet1, LOTUS_STREET1, $00
-	connection north, LotusStreet2, LOTUS_STREET2, 0
-	connection south, LotusPlaza1, LOTUS_PLAZA1, 0
+	connection north, LotusStreet2, LOTUS_STREET2, -1
+	connection south, LotusPlaza1, LOTUS_PLAZA1, -1
 
 	map_attributes LotusStreet2, LOTUS_STREET2, $00
-	connection north, LotusStreet3, LOTUS_STREET3, 0
-	connection south, LotusStreet1, LOTUS_STREET1, 0
+	connection north, LotusStreet3, LOTUS_STREET3, 1
+	connection south, LotusStreet1, LOTUS_STREET1, 1
 
 	map_attributes LotusStreet3, LOTUS_STREET3, $00
-	connection north, LotusPlaza2, LOTUS_PLAZA2, 0
-	connection south, LotusStreet2, LOTUS_STREET2, 0
+	connection north, LotusPlaza2, LOTUS_PLAZA2, -1
+	connection south, LotusStreet2, LOTUS_STREET2, -1
 
 	map_attributes LotusPlaza2, LOTUS_PLAZA2, $00
-	connection north, LotusStreet4, LOTUS_STREET4, 0
-	connection south, LotusStreet3, LOTUS_STREET3, 0
+	connection north, LotusStreet4, LOTUS_STREET4, -1
+	connection south, LotusStreet3, LOTUS_STREET3, 1
 
 	map_attributes LotusPokecenter2, LOTUS_POKECENTER2, $00
 
@@ -447,15 +449,15 @@ SECTION "Area Attributes", ROMX
 	map_attributes LotusHouse2, LOTUS_HOUSE2, $00
 
 	map_attributes LotusStreet4, LOTUS_STREET4, $00
-	connection north, LotusStreet5, LOTUS_STREET5, 0
-	connection south, LotusPlaza2, LOTUS_PLAZA2, 0
+	connection north, LotusStreet5, LOTUS_STREET5, 1
+	connection south, LotusPlaza2, LOTUS_PLAZA2, 1
 
 	map_attributes LotusStreet5, LOTUS_STREET5, $00
 	connection north, LotusPlaza3, LOTUS_PLAZA3, 0
-	connection south, LotusStreet4, LOTUS_STREET4, 0
+	connection south, LotusStreet4, LOTUS_STREET4, -1
 
 	map_attributes LotusPlaza3, LOTUS_PLAZA3, $00
-	connection north, LotusStreet6, LOTUS_STREET6, 0
+	connection north, LotusStreet6, LOTUS_STREET6, -1
 	connection south, LotusStreet5, LOTUS_STREET5, 0
 
 	map_attributes LotusPokecenter3, LOTUS_POKECENTER3, $00
@@ -467,16 +469,16 @@ SECTION "Area Attributes", ROMX
 	map_attributes LotusClinic, LOTUS_CLINIC, $00
 
 	map_attributes LotusStreet6, LOTUS_STREET6, $00
-	connection north, LotusStreet7, LOTUS_STREET7, 0
-	connection south, LotusPlaza3, LOTUS_PLAZA3, 0
+	connection north, LotusStreet7, LOTUS_STREET7, 3
+	connection south, LotusPlaza3, LOTUS_PLAZA3, 1
 
 	map_attributes LotusStreet7, LOTUS_STREET7, $00
-	connection north, LotusPlaza4, LOTUS_PLAZA4, 0
-	connection south, LotusStreet6, LOTUS_STREET6, 0
+	connection north, LotusPlaza4, LOTUS_PLAZA4, -2
+	connection south, LotusStreet6, LOTUS_STREET6, -3
 
 	map_attributes LotusPlaza4, LOTUS_PLAZA4, $00
-	connection north, LotusStreet8, LOTUS_STREET8, 0
-	connection south, LotusStreet7, LOTUS_STREET7, 0
+	connection north, LotusStreet8, LOTUS_STREET8, -1
+	connection south, LotusStreet7, LOTUS_STREET7, 2
 
 	map_attributes LotusPokecenter4, LOTUS_POKECENTER4, $00
 
@@ -486,19 +488,19 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes LotusStreet8, LOTUS_STREET8, $00
 	connection north, LotusStreet9, LOTUS_STREET9, 0
-	connection south, LotusPlaza4, LOTUS_PLAZA4, 0
+	connection south, LotusPlaza4, LOTUS_PLAZA4, 1
 
 	map_attributes LotusStreet9, LOTUS_STREET9, $00
 	connection north, LotusStreet10, LOTUS_STREET10, 0
 	connection south, LotusStreet8, LOTUS_STREET8, 0
 
 	map_attributes LotusStreet10, LOTUS_STREET10, $00
-	connection north, LotusPlaza5, LOTUS_PLAZA5, 0
+	connection north, LotusPlaza5, LOTUS_PLAZA5, 1
 	connection south, LotusStreet9, LOTUS_STREET9, 0
 
 	map_attributes LotusPlaza5, LOTUS_PLAZA5, $00
 	connection north, LotusStreet11, LOTUS_STREET11, 0
-	connection south, LotusStreet10, LOTUS_STREET10, 0
+	connection south, LotusStreet10, LOTUS_STREET10, -1
 
 	map_attributes LotusPokecenter5, LOTUS_POKECENTER5, $00
 
@@ -509,20 +511,20 @@ SECTION "Area Attributes", ROMX
 	map_attributes LotusCabana, LOTUS_CABANA, $00
 
 	map_attributes LotusStreet11, LOTUS_STREET11, $00
-	connection north, LotusStreet12, LOTUS_STREET12, 0
+	connection north, LotusStreet12, LOTUS_STREET12, -1
 	connection south, LotusPlaza5, LOTUS_PLAZA5, 0
 
 	map_attributes LotusStreet12, LOTUS_STREET12, $00
-	connection north, LotusStreet13, LOTUS_STREET13, 0
-	connection south, LotusStreet11, LOTUS_STREET11, 0
+	connection north, LotusStreet13, LOTUS_STREET13, 2
+	connection south, LotusStreet11, LOTUS_STREET11, 1
 
 	map_attributes LotusStreet13, LOTUS_STREET13, $00
-	connection north, LotusPlaza6, LOTUS_PLAZA6, 0
-	connection south, LotusStreet12, LOTUS_STREET12, 0
+	connection north, LotusPlaza6, LOTUS_PLAZA6, -1
+	connection south, LotusStreet12, LOTUS_STREET12, -2
 
 	map_attributes LotusPlaza6, LOTUS_PLAZA6, $00
-	connection north, LotusStreet14, LOTUS_STREET14, 0
-	connection south, LotusStreet13, LOTUS_STREET13, 0
+	connection north, LotusStreet14, LOTUS_STREET14, 1
+	connection south, LotusStreet13, LOTUS_STREET13, 1
 
 	map_attributes LotusPokecenter6, LOTUS_POKECENTER6, $00
 
@@ -531,12 +533,12 @@ SECTION "Area Attributes", ROMX
 	map_attributes LotusHouse6, LOTUS_HOUSE6, $00
 
 	map_attributes LotusStreet14, LOTUS_STREET14, $00
-	connection north, LotusStreet15, LOTUS_STREET15, 0
-	connection south, LotusPlaza6, LOTUS_PLAZA6, 0
+	connection north, LotusStreet15, LOTUS_STREET15, -1
+	connection south, LotusPlaza6, LOTUS_PLAZA6, -1
 
 	map_attributes LotusStreet15, LOTUS_STREET15, $00
 	connection north, LotusPlaza7, LOTUS_PLAZA7, 0
-	connection south, LotusStreet14, LOTUS_STREET14, 0
+	connection south, LotusStreet14, LOTUS_STREET14, 1
 
 	map_attributes LotusPlaza7, LOTUS_PLAZA7, $00
 	connection south, LotusStreet15, LOTUS_STREET15, 0
@@ -554,7 +556,7 @@ SECTION "Area Attributes", ROMX
 	map_attributes LotusBedroom, LOTUS_BEDROOM, $00
 
 	map_attributes DisPlaza1, DIS_PLAZA1, $00
-	connection north, DisStreet1, DIS_STREET1, 0
+	connection north, DisStreet1, DIS_STREET1, -1
 
 	map_attributes DisGate, DIS_GATE, $00
 
@@ -565,20 +567,20 @@ SECTION "Area Attributes", ROMX
 	map_attributes DisHouse1, DIS_HOUSE1, $00
 
 	map_attributes DisStreet1, DIS_STREET1, $00
-	connection north, DisStreet2, DIS_STREET2, 0
-	connection south, DisPlaza1, DIS_PLAZA1, 0
+	connection north, DisStreet2, DIS_STREET2, 2
+	connection south, DisPlaza1, DIS_PLAZA1, 1
 
 	map_attributes DisStreet2, DIS_STREET2, $00
-	connection north, DisStreet3, DIS_STREET3, 0
-	connection south, DisStreet1, DIS_STREET1, 0
+	connection north, DisStreet3, DIS_STREET3, -2
+	connection south, DisStreet1, DIS_STREET1, -2
 
 	map_attributes DisStreet3, DIS_STREET3, $00
-	connection north, DisPlaza2, DIS_PLAZA2, 0
-	connection south, DisStreet2, DIS_STREET2, 0
+	connection north, DisPlaza2, DIS_PLAZA2, 1
+	connection south, DisStreet2, DIS_STREET2, 2
 
 	map_attributes DisPlaza2, DIS_PLAZA2, $00
-	connection north, DisStreet4, DIS_STREET4, 0
-	connection south, DisStreet3, DIS_STREET3, 0
+	connection north, DisStreet4, DIS_STREET4, 2
+	connection south, DisStreet3, DIS_STREET3, -1
 
 	map_attributes DisPokecenter2, DIS_POKECENTER2, $00
 
@@ -587,16 +589,16 @@ SECTION "Area Attributes", ROMX
 	map_attributes DisHouse2, DIS_HOUSE2, $00
 
 	map_attributes DisStreet4, DIS_STREET4, $00
-	connection north, DisStreet5, DIS_STREET5, 0
-	connection south, DisPlaza2, DIS_PLAZA2, 0
+	connection north, DisStreet5, DIS_STREET5, -3
+	connection south, DisPlaza2, DIS_PLAZA2, -2
 
 	map_attributes DisStreet5, DIS_STREET5, $00
-	connection north, DisPlaza3, DIS_PLAZA3, 0
-	connection south, DisStreet4, DIS_STREET4, 0
+	connection north, DisPlaza3, DIS_PLAZA3, 1
+	connection south, DisStreet4, DIS_STREET4, 3
 
 	map_attributes DisPlaza3, DIS_PLAZA3, $00
-	connection north, DisStreet6, DIS_STREET6, 0
-	connection south, DisStreet5, DIS_STREET5, 0
+	connection north, DisStreet6, DIS_STREET6, 2
+	connection south, DisStreet5, DIS_STREET5, -1
 
 	map_attributes DisPokecenter3, DIS_POKECENTER3, $00
 
@@ -607,16 +609,16 @@ SECTION "Area Attributes", ROMX
 	map_attributes DisGatehouse, DIS_GATEHOUSE, $00
 
 	map_attributes DisStreet6, DIS_STREET6, $00
-	connection north, DisStreet7, DIS_STREET7, 0
-	connection south, DisPlaza3, DIS_PLAZA3, 0
+	connection north, DisStreet7, DIS_STREET7, -1
+	connection south, DisPlaza3, DIS_PLAZA3, -2
 
 	map_attributes DisStreet7, DIS_STREET7, $00
-	connection north, DisPlaza4, DIS_PLAZA4, 0
-	connection south, DisStreet6, DIS_STREET6, 0
+	connection north, DisPlaza4, DIS_PLAZA4, -1
+	connection south, DisStreet6, DIS_STREET6, 1
 
 	map_attributes DisPlaza4, DIS_PLAZA4, $00
-	connection north, DisStreet8, DIS_STREET8, 0
-	connection south, DisStreet7, DIS_STREET7, 0
+	connection north, DisStreet8, DIS_STREET8, 1
+	connection south, DisStreet7, DIS_STREET7, 1
 
 	map_attributes DisPokecenter4, DIS_POKECENTER4, $00
 
@@ -625,20 +627,20 @@ SECTION "Area Attributes", ROMX
 	map_attributes DisHouse4, DIS_HOUSE4, $00
 
 	map_attributes DisStreet8, DIS_STREET8, $00
-	connection north, DisStreet9, DIS_STREET9, 0
-	connection south, DisPlaza4, DIS_PLAZA4, 0
+	connection north, DisStreet9, DIS_STREET9, 1
+	connection south, DisPlaza4, DIS_PLAZA4, -1
 
 	map_attributes DisStreet9, DIS_STREET9, $00
-	connection north, DisStreet10, DIS_STREET10, 0
-	connection south, DisStreet8, DIS_STREET8, 0
+	connection north, DisStreet10, DIS_STREET10, -3
+	connection south, DisStreet8, DIS_STREET8, -1
 
 	map_attributes DisStreet10, DIS_STREET10, $00
-	connection north, DisPlaza5, DIS_PLAZA5, 0
-	connection south, DisStreet9, DIS_STREET9, 0
+	connection north, DisPlaza5, DIS_PLAZA5, 1
+	connection south, DisStreet9, DIS_STREET9, 3
 
 	map_attributes DisPlaza5, DIS_PLAZA5, $00
-	connection north, DisStreet11, DIS_STREET11, 0
-	connection south, DisStreet10, DIS_STREET10, 0
+	connection north, DisStreet11, DIS_STREET11, 1
+	connection south, DisStreet10, DIS_STREET10, -1
 
 	map_attributes DisPokecenter5, DIS_POKECENTER5, $00
 
@@ -649,20 +651,20 @@ SECTION "Area Attributes", ROMX
 	map_attributes CocytusIceHall, COCYTUS_ICE_HALL, $00
 
 	map_attributes DisStreet11, DIS_STREET11, $00
-	connection north, DisStreet12, DIS_STREET12, 0
-	connection south, DisPlaza5, DIS_PLAZA5, 0
+	connection north, DisStreet12, DIS_STREET12, -2
+	connection south, DisPlaza5, DIS_PLAZA5, -1
 
 	map_attributes DisStreet12, DIS_STREET12, $00
-	connection north, DisStreet13, DIS_STREET13, 0
-	connection south, DisStreet11, DIS_STREET11, 0
+	connection north, DisStreet13, DIS_STREET13, 3
+	connection south, DisStreet11, DIS_STREET11, 2
 
 	map_attributes DisStreet13, DIS_STREET13, $00
-	connection north, DisPlaza6, DIS_PLAZA6, 0
-	connection south, DisStreet12, DIS_STREET12, 0
+	connection north, DisPlaza6, DIS_PLAZA6, -2
+	connection south, DisStreet12, DIS_STREET12, -3
 
 	map_attributes DisPlaza6, DIS_PLAZA6, $00
-	connection north, DisStreet14, DIS_STREET14, 0
-	connection south, DisStreet13, DIS_STREET13, 0
+	connection north, DisStreet14, DIS_STREET14, -1
+	connection south, DisStreet13, DIS_STREET13, 2
 
 	map_attributes DisPokecenter6, DIS_POKECENTER6, $00
 
@@ -671,15 +673,15 @@ SECTION "Area Attributes", ROMX
 	map_attributes DisHouse6, DIS_HOUSE6, $00
 
 	map_attributes DisStreet14, DIS_STREET14, $00
-	connection north, DisStreet15, DIS_STREET15, 0
-	connection south, DisPlaza6, DIS_PLAZA6, 0
+	connection north, DisStreet15, DIS_STREET15, 3
+	connection south, DisPlaza6, DIS_PLAZA6, 1
 
 	map_attributes DisStreet15, DIS_STREET15, $00
-	connection north, DisPlaza7, DIS_PLAZA7, 0
-	connection south, DisStreet14, DIS_STREET14, 0
+	connection north, DisPlaza7, DIS_PLAZA7, -2
+	connection south, DisStreet14, DIS_STREET14, -3
 
 	map_attributes DisPlaza7, DIS_PLAZA7, $00
-	connection south, DisStreet15, DIS_STREET15, 0
+	connection south, DisStreet15, DIS_STREET15, 2
 
 	map_attributes DisPokecenter7, DIS_POKECENTER7, $00
 
@@ -688,6 +690,34 @@ SECTION "Area Attributes", ROMX
 	map_attributes DisHouse7, DIS_HOUSE7, $00
 
 	map_attributes JudeccaCentre, JUDECCA_CENTRE, $00
+
+	map_attributes TitheJunction, TITHE_JUNCTION, $05
+	connection north, TitheRoad, TITHE_ROAD, 0
+	connection south, CherrygroveCity, CHERRYGROVE_CITY, 1
+
+	map_attributes FinneganHouse, FINNEGAN_HOUSE, $00
+
+	map_attributes PurgThreshold, PURG_THRESHOLD, $00
+
+	map_attributes PurgDown1, PURG_DOWN1, $00
+
+	map_attributes PurgDown2, PURG_DOWN2, $00
+
+	map_attributes PurgDown3, PURG_DOWN3, $00
+
+	map_attributes PurgDown4, PURG_DOWN4, $00
+
+	map_attributes PurgAbyss, PURG_ABYSS, $00
+
+	map_attributes PurgUp1, PURG_UP1, $00
+
+	map_attributes PurgUp2, PURG_UP2, $00
+
+	map_attributes PurgUp3, PURG_UP3, $00
+
+	map_attributes PurgUp4, PURG_UP4, $00
+
+	map_attributes PurgLanding, PURG_LANDING, $00
 
 ENDSECTION
 
@@ -981,6 +1011,9 @@ GroveHouse7_Blocks:
 
 GroveCouncil_Blocks:
 	INCBIN "maps/gen/GroveCouncil.blk"
+
+GroveAmphitheater_Blocks:
+	INCBIN "maps/gen/GroveAmphitheater.blk"
 
 ENDSECTION
 
@@ -1422,6 +1455,53 @@ DisHouse7_Blocks:
 
 JudeccaCentre_Blocks:
 	INCBIN "maps/gen/JudeccaCentre.blk"
+
+ENDSECTION
+
+SECTION "Open Blocks", ROMX
+
+TitheJunction_Blocks:
+	INCBIN "maps/gen/TitheJunction.blk"
+
+FinneganHouse_Blocks:
+	INCBIN "maps/gen/FinneganHouse.blk"
+
+ENDSECTION
+
+SECTION "Purg Blocks", ROMX
+
+PurgThreshold_Blocks:
+	INCBIN "maps/gen/PurgThreshold.blk"
+
+PurgDown1_Blocks:
+	INCBIN "maps/gen/PurgDown1.blk"
+
+PurgDown2_Blocks:
+	INCBIN "maps/gen/PurgDown2.blk"
+
+PurgDown3_Blocks:
+	INCBIN "maps/gen/PurgDown3.blk"
+
+PurgDown4_Blocks:
+	INCBIN "maps/gen/PurgDown4.blk"
+
+PurgAbyss_Blocks:
+	INCBIN "maps/gen/PurgAbyss.blk"
+
+PurgUp1_Blocks:
+	INCBIN "maps/gen/PurgUp1.blk"
+
+PurgUp2_Blocks:
+	INCBIN "maps/gen/PurgUp2.blk"
+
+PurgUp3_Blocks:
+	INCBIN "maps/gen/PurgUp3.blk"
+
+PurgUp4_Blocks:
+	INCBIN "maps/gen/PurgUp4.blk"
+
+PurgLanding_Blocks:
+	INCBIN "maps/gen/PurgLanding.blk"
 
 ENDSECTION
 
@@ -1992,6 +2072,12 @@ ENDSECTION
 SECTION "GroveCouncil Scripts", ROMX
 
 INCLUDE "maps/gen/GroveCouncil.asm"
+
+ENDSECTION
+
+SECTION "GroveAmphitheater Scripts", ROMX
+
+INCLUDE "maps/gen/GroveAmphitheater.asm"
 
 ENDSECTION
 
@@ -2850,6 +2936,84 @@ ENDSECTION
 SECTION "JudeccaCentre Scripts", ROMX
 
 INCLUDE "maps/gen/JudeccaCentre.asm"
+
+ENDSECTION
+
+SECTION "TitheJunction Scripts", ROMX
+
+INCLUDE "maps/gen/TitheJunction.asm"
+
+ENDSECTION
+
+SECTION "FinneganHouse Scripts", ROMX
+
+INCLUDE "maps/gen/FinneganHouse.asm"
+
+ENDSECTION
+
+SECTION "PurgThreshold Scripts", ROMX
+
+INCLUDE "maps/gen/PurgThreshold.asm"
+
+ENDSECTION
+
+SECTION "PurgDown1 Scripts", ROMX
+
+INCLUDE "maps/gen/PurgDown1.asm"
+
+ENDSECTION
+
+SECTION "PurgDown2 Scripts", ROMX
+
+INCLUDE "maps/gen/PurgDown2.asm"
+
+ENDSECTION
+
+SECTION "PurgDown3 Scripts", ROMX
+
+INCLUDE "maps/gen/PurgDown3.asm"
+
+ENDSECTION
+
+SECTION "PurgDown4 Scripts", ROMX
+
+INCLUDE "maps/gen/PurgDown4.asm"
+
+ENDSECTION
+
+SECTION "PurgAbyss Scripts", ROMX
+
+INCLUDE "maps/gen/PurgAbyss.asm"
+
+ENDSECTION
+
+SECTION "PurgUp1 Scripts", ROMX
+
+INCLUDE "maps/gen/PurgUp1.asm"
+
+ENDSECTION
+
+SECTION "PurgUp2 Scripts", ROMX
+
+INCLUDE "maps/gen/PurgUp2.asm"
+
+ENDSECTION
+
+SECTION "PurgUp3 Scripts", ROMX
+
+INCLUDE "maps/gen/PurgUp3.asm"
+
+ENDSECTION
+
+SECTION "PurgUp4 Scripts", ROMX
+
+INCLUDE "maps/gen/PurgUp4.asm"
+
+ENDSECTION
+
+SECTION "PurgLanding Scripts", ROMX
+
+INCLUDE "maps/gen/PurgLanding.asm"
 
 ENDSECTION
 

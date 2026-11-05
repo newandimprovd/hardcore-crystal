@@ -61,3 +61,10 @@
 	overworld_sprite HcFirebreatherSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
 	overworld_sprite HcDemonLordSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
 	overworld_sprite HcFinneganSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
+	overworld_sprite HcJoyceSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
+	overworld_sprite HcMrPokemonSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
+	overworld_sprite HcSteinerSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
+	overworld_sprite HcBrunoSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
+	overworld_sprite HcCioranSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
+	overworld_sprite HcSabbahSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
+	overworld_sprite HcCrowleySpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE

@@ -28,6 +28,29 @@ TitheHouse6Npc1Text:
 	para "Don't tell anyone."
 	done
 
+TitheHouse6YakuzaScript:
+	jumptextfaceplayer TitheHouse6YakuzaScriptText
+
+TitheHouse6YakuzaScriptText:
+	text "My boss gave a"
+	line "crate of bees to a"
+	para "man with a beard."
+	line "The crate leaked."
+	para "A boy followed one"
+	line "bee into a field"
+	para "and wrote down"
+	line "every insect he"
+	para "found. Years later"
+	line "the insects had"
+	para "little faces."
+	para "I am a"
+	line "professional"
+	para "criminal. I am not"
+	line "a poet. But even I"
+	para "can smell a"
+	line "pattern."
+	done
+
 TitheHouse6_MapEvents:
 	db 0, 0 ; filler
 
@@ -42,4 +65,5 @@ TitheHouse6_MapEvents:
 	def_object_events
 	object_event  2,  3, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse6Npc0Script, -1
 	object_event  5,  5, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheHouse6Npc1Script, -1
+	object_event  5,  2, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheHouse6YakuzaScript, -1
 

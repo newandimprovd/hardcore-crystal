@@ -6,6 +6,10 @@ TithePlaza5_MapScripts:
 
 	def_callbacks
 
+TithePlaza5PurgFlagScript:
+	setevent EVENT_PURG_OPEN_A1
+	end
+
 TithePlaza5_MapEvents:
 	db 0, 0 ; filler
 
@@ -14,8 +18,10 @@ TithePlaza5_MapEvents:
 	warp_event 12,  3, TITHE_MART5, 1
 	warp_event 16,  3, TITHE_HOUSE5, 1
 	warp_event 20,  3, TITHE_EVIDENCE_ROOM, 1
+	warp_event 24,  3, PURG_THRESHOLD, 2
 
 	def_coord_events
+	coord_event 24,  4, -1, TithePlaza5PurgFlagScript
 
 	def_bg_events
 

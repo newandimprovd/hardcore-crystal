@@ -30,6 +30,89 @@ TitheHouse4Npc1Text:
 	line "In the walls."
 	done
 
+TitheHouse4MafiaScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_BEES
+	iftrue .Again
+	writetext TitheHouse4MafiaScriptText
+	waitbutton
+	setevent EVENT_LORE_BEES
+	closetext
+	end
+
+.Again:
+	writetext TitheHouse4MafiaScriptAgainText
+	waitbutton
+	closetext
+	end
+
+TitheHouse4MafiaScriptText:
+	text "Do not worry about"
+	line "the beard. The"
+	para "beard is how we"
+	line "recognize each"
+	para "other."
+	para "I run the"
+	line "wholesale. Spices,"
+	para "scrolls, certain"
+	line "rare birds,"
+	para "certain rarer"
+	line "rumors. And"
+	para "bumblebees, for my"
+	line "garden."
+	para "A Yakuza boss owed"
+	line "me a favor. He"
+	para "sent me a crate."
+	line "The crate had a"
+	para "hole. The bees got"
+	line "out. One landed on"
+	para "a boy in Tokyo."
+	line "The boy was called"
+	para "Satoshi."
+	para "I do not know what"
+	line "happened after. I"
+	para "hear he made a"
+	line "game about"
+	para "catching things."
+	line "How strange. I"
+	para "would never catch"
+	line "a bee."
+	done
+
+TitheHouse4MafiaScriptAgainText:
+	text "Do not worry about"
+	line "the beard. The"
+	para "beard is how we"
+	line "recognize each"
+	para "other."
+	para "I run the"
+	line "wholesale. Spices,"
+	para "scrolls, certain"
+	line "rare birds,"
+	para "certain rarer"
+	line "rumors. And"
+	para "bumblebees, for my"
+	line "garden."
+	para "A Yakuza boss owed"
+	line "me a favor. He"
+	para "sent me a crate."
+	line "The crate had a"
+	para "hole. The bees got"
+	line "out. One landed on"
+	para "a boy in Tokyo."
+	line "The boy was called"
+	para "Satoshi."
+	para "I do not know what"
+	line "happened after. I"
+	para "hear he made a"
+	line "game about"
+	para "catching things."
+	line "How strange. I"
+	para "would never catch"
+	line "a bee."
+	done
+
 TitheHouse4_MapEvents:
 	db 0, 0 ; filler
 
@@ -44,4 +127,5 @@ TitheHouse4_MapEvents:
 	def_object_events
 	object_event  2,  3, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse4Npc0Script, -1
 	object_event  5,  5, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheHouse4Npc1Script, -1
+	object_event  5,  2, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse4MafiaScript, -1
 

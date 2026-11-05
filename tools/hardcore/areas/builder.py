@@ -1,4 +1,5 @@
 """Shared building blocks for the five areas: acts (a run of lanes ending in a plaza), town interiors, bosses."""
+from .flags import flag_once
 from .layout import (boss_room, chain, gatehouse, house_interior, lane, mart_interior, plaza, pokecenter_interior)
 from .party import make_party
 from .text import Text
@@ -21,8 +22,11 @@ class ActSpec:
     """lanes lanes of `trainers` fighters each, then a plaza (Pokecenter, Mart, a house, the boss door)."""
 
     def __init__(self, tag, lanes, kit, landmark, music, trainers=13, gate=None, boss=None, houses=1,
-                 mart=None, texts=None, plaza_width=13, lane_names=None, split=None, pal="PALETTE_DAY"):
+                 mart=None, texts=None, plaza_width=13, lane_names=None, split=None, pal="PALETTE_DAY", rift=False,
+                 split_houses=1):
         self.pal = pal
+        self.rift = rift  # the end plaza of this act gets a door to PURGATORIO (it needs a plaza width of 15)
+        self.split_houses = split_houses
         self.tag, self.lanes, self.kit, self.landmark, self.music = tag, lanes, kit, landmark, music
         self.split = split  # a second, smaller plaza (Pokecenter, Mart, house) after this many lanes
         self.trainers, self.gate, self.boss, self.houses = trainers, gate, boss, houses
@@ -111,24 +115,34 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
         first = i == 0
         gate = act.gate if first else None
         tr = act.trainers[i] if isinstance(act.trainers, (list, tuple)) else act.trainers
-        m, s = lane(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark,
+        la = rng.choice((1, 2, 3, 4))  # the road drifts sideways from lane to lane, so it winds instead of running straight north
+        m, s = lane(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark, a=la, right=6 - la,
                     music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal)
         pickup(w, m, reserve=len(s))
-        chain(below, m)
+        chain(below, m, below.a - m.a)
         lanes.append((m, s))
         below = m
         lane_no += 1
         if act.split and i + 1 == act.split:
             pm, dm = plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
-                           houses=1, width=act.plaza_width, pal=act.pal)
-            chain(below, pm)
+                           houses=act.split_houses, width=act.plaza_width, pal=act.pal)
+            chain(below, pm, below.a - pm.a)
             town(w, g, tag, plaza_no, pm, dm, kit, act.landmark, f"{tag.upper()}_{plaza_no}", stocks.pop(0), act.texts,
                  f"{tag.upper()}_{plaza_no}")
             below = pm
             plaza_no += 1
     p, doors = plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
-                     houses=act.houses, extra=1 if act.boss else 0, width=act.plaza_width, pal=act.pal)
-    chain(below, p)
+                     houses=act.houses, extra=1 if act.boss else 0, width=act.plaza_width, pal=act.pal, rift=act.rift)
+    chain(below, p, below.a - p.a)
+    if act.rift:
+        door = doors["rift"]
+        short = "A" + g.key[-1]
+        flag = flag_once(w, f"EVENT_PURG_OPEN_{short}")
+        p.coords.append((door.x, door.y + 1, -1, f"{p.name}PurgFlagScript"))
+        p.scripts.append(f"{p.name}PurgFlagScript:\n\tsetevent {flag}\n\tend\n")
+        if not hasattr(w, "purg_doors"):
+            w.purg_doors = {}
+        w.purg_doors[short] = door
     town(w, g, tag, plaza_no, p, doors, kit, act.landmark, f"{tag.upper()}_{plaza_no}", stocks.pop(0), act.texts,
          f"{tag.upper()}_{plaza_no}")
     plaza_no += 1
@@ -159,7 +173,10 @@ class AreaCfg:
     the gate of act 2, boss2 the one for the gate of act 3, boss3 ends the area."""
 
     def __init__(self, key, tag, spec, kit, pal, landmarks, music, texts, tiers, bosses, gates, splits,
-                 gate_name, gate_text, stock_ix=(0, 0, 1, 1, 2, 2, 2), lanes=(5, 5, 5), trainers=(13, 13, 13)):
+                 gate_name, gate_text, stock_ix=(0, 0, 1, 1, 2, 2, 2), lanes=(5, 5, 5), trainers=(13, 13, 13),
+                 split_houses=(1, 1, 1), purg=True):
+        self.split_houses = split_houses
+        self.purg = purg  # the end plaza of act 2 gets a door into PURGATORIO
         self.trainers = trainers  # per act: one number for every lane, or a list with one number per lane
         self.key, self.tag, self.spec, self.kit, self.pal = key, tag, spec, kit, pal
         self.landmarks, self.music, self.texts, self.tiers = landmarks, music, texts, tiers
@@ -185,7 +202,9 @@ def build_area(w, roster, rng, cfg, entry_doors):
     acts = []
     for k in range(3):
         acts.append(ActSpec(cfg.tag, cfg.lanes[k], cfg.kit, lms[k], cfg.music, trainers=cfg.trainers[k],
-                            boss=cfg.bosses[k], texts=cfg.texts, split=cfg.splits[k], gate=cfg.gates[k], pal=cfg.pal))
+                            boss=cfg.bosses[k], texts=cfg.texts, split=cfg.splits[k], gate=cfg.gates[k], pal=cfg.pal,
+                            plaza_width=15 if (k == 1 and cfg.purg) else 13, rift=(k == 1 and cfg.purg),
+                            split_houses=cfg.split_houses[k]))
     all_lanes = []
     prev, lane_no, plaza_no = p1, 1, 2
     exits = []

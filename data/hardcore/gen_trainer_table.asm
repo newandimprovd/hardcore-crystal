@@ -134,8 +134,8 @@ HC_GenGroupTable:
 	dw 0 ; 65 OFFICER
 	db 0
 	dw 0 ; 66 GRUNTF
-	db 0
-	dw 0 ; 67 MYSTICALMAN
+	db BANK(HC_GenGroup_MYSTICALMAN)
+	dw HC_GenGroup_MYSTICALMAN ; 67 MYSTICALMAN
 	db BANK(HC_GenGroup_T_COP)
 	dw HC_GenGroup_T_COP ; 68 T_COP
 	db BANK(HC_GenGroup_T_SUIT)

@@ -6,6 +6,121 @@ AxiomPlaza1_MapScripts:
 
 	def_callbacks
 
+AxiomPlaza1SabbahScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_SABBAH
+	iftrue .Again
+	writetext AxiomPlaza1SabbahScriptText
+	waitbutton
+	setevent EVENT_LORE_SABBAH
+	closetext
+	end
+
+.Again:
+	writetext AxiomPlaza1SabbahScriptAgainText
+	waitbutton
+	closetext
+	end
+
+AxiomPlaza1SabbahScriptText:
+	text "Hassan i Sabbah."
+	line "The Old Man of the"
+	para "Mountain. I sent"
+	line "young men to the"
+	para "garden of delight,"
+	line "and they came back"
+	para "extremely"
+	line "motivated."
+	para "Nothing is true."
+	line "Everything is"
+	para "permitted. Do not"
+	line "tell the robots."
+	para "They believe in"
+	line "compliance, which"
+	para "is the same thing"
+	line "as belief."
+	para "The Dajjal is"
+	line "coming. He has"
+	para "always been"
+	line "coming. He lives"
+	para "in a separate"
+	line "world, one door"
+	para "over, and he is"
+	line "bored."
+	para "He plans to"
+	line "connect his world"
+	para "with ours very"
+	line "soon. That is why"
+	para "the sky has a seam"
+	line "now. That is why"
+	para "time smells of old"
+	line "pennies."
+	para "When the doors"
+	line "open, the robots"
+	para "will serve him"
+	line "first. They are"
+	para "built for it. You"
+	line "are not, which is"
+	para "to your credit."
+	para "Take a message to"
+	line "your sandals. Walk"
+	para "until the road"
+	line "ends, then keep"
+	para "walking. That is"
+	line "the whole of the"
+	para "Assassin's method."
+	done
+
+AxiomPlaza1SabbahScriptAgainText:
+	text "Hassan i Sabbah."
+	line "The Old Man of the"
+	para "Mountain. I sent"
+	line "young men to the"
+	para "garden of delight,"
+	line "and they came back"
+	para "extremely"
+	line "motivated."
+	para "Nothing is true."
+	line "Everything is"
+	para "permitted. Do not"
+	line "tell the robots."
+	para "They believe in"
+	line "compliance, which"
+	para "is the same thing"
+	line "as belief."
+	para "The Dajjal is"
+	line "coming. He has"
+	para "always been"
+	line "coming. He lives"
+	para "in a separate"
+	line "world, one door"
+	para "over, and he is"
+	line "bored."
+	para "He plans to"
+	line "connect his world"
+	para "with ours very"
+	line "soon. That is why"
+	para "the sky has a seam"
+	line "now. That is why"
+	para "time smells of old"
+	line "pennies."
+	para "When the doors"
+	line "open, the robots"
+	para "will serve him"
+	line "first. They are"
+	para "built for it. You"
+	line "are not, which is"
+	para "to your credit."
+	para "Take a message to"
+	line "your sandals. Walk"
+	para "until the road"
+	line "ends, then keep"
+	para "walking. That is"
+	line "the whole of the"
+	para "Assassin's method."
+	done
+
 AxiomPlaza1_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +135,5 @@ AxiomPlaza1_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 20, 18, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahScript, -1
 

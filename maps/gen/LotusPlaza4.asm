@@ -6,6 +6,51 @@ LotusPlaza4_MapScripts:
 
 	def_callbacks
 
+LotusPlaza4CioranScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_CIORAN
+	iftrue .Again
+	writetext LotusPlaza4CioranScriptText
+	waitbutton
+	setevent EVENT_LORE_CIORAN
+	closetext
+	end
+
+.Again:
+	writetext LotusPlaza4CioranScriptAgainText
+	waitbutton
+	closetext
+	end
+
+LotusPlaza4CioranScriptText:
+	text "Still here? Good."
+	line "So am I. A small"
+	para "victory against"
+	line "the obvious."
+	para "If the voice"
+	line "speaks, answer it."
+	para "Do not argue."
+	line "Offer it a drink."
+	para "It likes to be"
+	line "listened to. That"
+	para "is its weakness."
+	done
+
+LotusPlaza4CioranScriptAgainText:
+	text "Still here? Good."
+	line "So am I. A small"
+	para "victory against"
+	line "the obvious."
+	para "If the voice"
+	line "speaks, answer it."
+	para "Do not argue."
+	line "Offer it a drink."
+	para "It likes to be"
+	line "listened to. That"
+	para "is its weakness."
+	done
+
 LotusPlaza4_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,4 +64,5 @@ LotusPlaza4_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 20, 18, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4CioranScript, -1
 

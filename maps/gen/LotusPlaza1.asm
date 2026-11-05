@@ -6,6 +6,139 @@ LotusPlaza1_MapScripts:
 
 	def_callbacks
 
+LotusPlaza1CioranScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_CIORAN
+	iftrue .Again
+	writetext LotusPlaza1CioranScriptText
+	waitbutton
+	setevent EVENT_LORE_CIORAN
+	closetext
+	end
+
+.Again:
+	writetext LotusPlaza1CioranScriptAgainText
+	waitbutton
+	closetext
+	end
+
+LotusPlaza1CioranScriptText:
+	text "Emil Cioran. I"
+	line "wrote four hundred"
+	para "pages explaining"
+	line "why I should not"
+	para "have been born,"
+	line "and then I lived"
+	para "to eighty four."
+	line "The irony is the"
+	para "only thing I"
+	line "earned."
+	para "You want Ahriman?"
+	line "Fine. Here is"
+	para "Ahriman, from"
+	line "inside."
+	para "It is the voice"
+	line "that comes at"
+	para "three in the"
+	line "morning and says:"
+	para "it was all for"
+	line "nothing. It is not"
+	para "a monster. It is a"
+	line "very reasonable"
+	para "accountant."
+	para "Steiner calls it a"
+	line "spirit. I call it"
+	para "a tone of voice."
+	line "Same thing,"
+	para "different tax"
+	line "bracket."
+	para "The terrible part"
+	line "is that the voice"
+	para "is partly right."
+	line "Everything is for"
+	para "nothing. The trick"
+	line "is to go on"
+	para "without being"
+	line "consoled, and to"
+	para "make a good joke"
+	line "of it."
+	para "Sleeplessness is"
+	line "the only honest"
+	para "metaphysics. When"
+	line "you cannot sleep"
+	para "you see what the"
+	line "world is made of,"
+	para "and it is not"
+	line "marble."
+	para "So fight. Or do"
+	line "not. The sea is"
+	para "very large, and"
+	line "nothing here will"
+	para "love you back."
+	line "That is why you"
+	para "may love it"
+	line "anyway."
+	done
+
+LotusPlaza1CioranScriptAgainText:
+	text "Emil Cioran. I"
+	line "wrote four hundred"
+	para "pages explaining"
+	line "why I should not"
+	para "have been born,"
+	line "and then I lived"
+	para "to eighty four."
+	line "The irony is the"
+	para "only thing I"
+	line "earned."
+	para "You want Ahriman?"
+	line "Fine. Here is"
+	para "Ahriman, from"
+	line "inside."
+	para "It is the voice"
+	line "that comes at"
+	para "three in the"
+	line "morning and says:"
+	para "it was all for"
+	line "nothing. It is not"
+	para "a monster. It is a"
+	line "very reasonable"
+	para "accountant."
+	para "Steiner calls it a"
+	line "spirit. I call it"
+	para "a tone of voice."
+	line "Same thing,"
+	para "different tax"
+	line "bracket."
+	para "The terrible part"
+	line "is that the voice"
+	para "is partly right."
+	line "Everything is for"
+	para "nothing. The trick"
+	line "is to go on"
+	para "without being"
+	line "consoled, and to"
+	para "make a good joke"
+	line "of it."
+	para "Sleeplessness is"
+	line "the only honest"
+	para "metaphysics. When"
+	line "you cannot sleep"
+	para "you see what the"
+	line "world is made of,"
+	para "and it is not"
+	line "marble."
+	para "So fight. Or do"
+	line "not. The sea is"
+	para "very large, and"
+	line "nothing here will"
+	para "love you back."
+	line "That is why you"
+	para "may love it"
+	line "anyway."
+	done
+
 LotusPlaza1_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +153,5 @@ LotusPlaza1_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 20, 18, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranScript, -1
 

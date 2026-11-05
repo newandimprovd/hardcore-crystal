@@ -80,10 +80,7 @@ def build(w, roster, rng, open_exit=False):
     road.bg(2 * sx + 1, 2 * sy + 1, "BGEVENT_READ", "TitheRoadTipsSign")
     road.scripts.append("TitheRoadTipsSign:\n\tjumptext TitheRoadTipsSignText\n")
     road.scripts.append(Text(T.TIPS_SIGN).emit("TitheRoadTipsSignText"))
-    # Cherrygrove link
-    class Cherry:
-        name, const = "CherrygroveCity", "CHERRYGROVE_CITY"
-    road.connections["south"] = (Cherry, -5)
+    # the road's south end is joined to the Tithe Junction by gen_areas.py (opening.py)
 
     boss1 = BossSpec("TitheVestry", "DEACON", "T_DEACON", "SPRITE_HC_PRIEST", "PAL_NPC_RED", 15, 4, T.VESTRY_SEEN,
                      T.VESTRY_BEATEN, T.VESTRY_AFTER, template="karen", item="CHAINSAW")
@@ -96,7 +93,7 @@ def build(w, roster, rng, open_exit=False):
     acts = [ActSpec("Tithe", 5, modern, LM_CITY, "MUSIC_GOLDENROD_CITY", boss=boss1, texts=texts, split=3,
                     trainers=[12, 12, 13, 13, 12]),
             ActSpec("Tithe", 5, modern, LM_MID, "MUSIC_GOLDENROD_CITY", gate="tree", boss=boss2, texts=texts, split=2,
-                    trainers=[13, 12, 13, 13, 13]),
+                    trainers=[13, 12, 13, 13, 13], plaza_width=15, rift=True),
             ActSpec("Tithe", 5, modern, LM_PARISH, "MUSIC_GOLDENROD_CITY", gate="boulder", boss=boss3, texts=texts, split=3,
                     trainers=[13, 13, 12, 13, 13])]
 

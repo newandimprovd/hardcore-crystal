@@ -6,6 +6,124 @@ TithePlaza2_MapScripts:
 
 	def_callbacks
 
+TithePlaza2CrowleyScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_CROWLEY
+	iftrue .Again
+	writetext TithePlaza2CrowleyScriptText
+	waitbutton
+	setevent EVENT_LORE_CROWLEY
+	closetext
+	end
+
+.Again:
+	writetext TithePlaza2CrowleyScriptAgainText
+	waitbutton
+	closetext
+	end
+
+TithePlaza2CrowleyScriptText:
+	text "Do not mind them."
+	line "They are the"
+	para "residents of the"
+	line "Parish, and they"
+	para "mistake a"
+	line "ceremonial circle"
+	para "for a hopscotch"
+	line "court."
+	para "Aleister Crowley."
+	line "Mage. Mountaineer."
+	para "Man of great"
+	line "appetite and small"
+	para "apology."
+	para "I once knelt in"
+	line "the dust and"
+	para "prayed to the"
+	line "Beast. I said:"
+	para "send me to a place"
+	line "where my sex"
+	para "magick is"
+	line "celebrated, and I"
+	para "will be your most"
+	line "diligent servant."
+	para "The Beast came."
+	line "Not as a lion. As"
+	para "Choronzon, the"
+	line "dweller in the"
+	para "abyss, in a very"
+	line "bad mood. He said:"
+	para "yes. First, do"
+	line "something for me."
+	para "Smuggle a"
+	line "Kabbalist mafia"
+	para "out of Italy and"
+	line "Eastern Europe"
+	para "into New York."
+	line "Teach them the"
+	para "Tree of Life, so"
+	line "that they can"
+	para "speak to the"
+	line "Beast. To"
+	para "Finnegan."
+	para "I did. They became"
+	line "smugglers. Exotic"
+	para "goods, black"
+	line "market, a"
+	para "perfectly"
+	line "respectable trade."
+	para "Find me at the"
+	line "Amphitheater in"
+	para "the Commune. I"
+	line "will finish the"
+	para "story when the"
+	line "circle is full."
+	para "Bring an open"
+	line "mind. And a towel."
+	done
+
+TithePlaza2CrowleyScriptAgainText:
+	text "The crowd has"
+	line "calmed. By which I"
+	para "mean the crowd has"
+	line "gotten tired."
+	para "The Amphitheater."
+	line "The Commune. Come"
+	para "when you are"
+	line "ready."
+	done
+
+TithePlaza2Crowd0Script:
+	jumptextfaceplayer TithePlaza2Crowd0ScriptText
+
+TithePlaza2Crowd0ScriptText:
+	text "GET OUT OF THE"
+	line "PARK, YOU PERVERT!"
+	para "There are CHILDREN"
+	line "on those swings!"
+	done
+
+TithePlaza2Crowd1Script:
+	jumptextfaceplayer TithePlaza2Crowd1ScriptText
+
+TithePlaza2Crowd1ScriptText:
+	text "He was just"
+	line "standing there in"
+	para "a trench coat,"
+	line "doing arithmetic"
+	para "at the slide!"
+	done
+
+TithePlaza2Crowd2Script:
+	jumptextfaceplayer TithePlaza2Crowd2ScriptText
+
+TithePlaza2Crowd2ScriptText:
+	text "Call the cops!"
+	line "Wait. We are the"
+	para "cops. Okay. Get"
+	line "him!"
+	done
+
 TithePlaza2_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,4 +137,8 @@ TithePlaza2_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 21, 17, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2CrowleyScript, -1
+	object_event 18, 16, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd0Script, -1
+	object_event 18, 19, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd1Script, -1
+	object_event 19, 18, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd2Script, -1
 

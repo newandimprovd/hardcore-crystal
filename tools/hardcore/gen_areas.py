@@ -10,7 +10,7 @@ import random
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from areas import a1, a2, a3, a4, a5, emit, wild  # noqa: E402
+from areas import a1, a2, a3, a4, a5, cameos, emit, lore, opening, purg, wild  # noqa: E402
 from areas.model import ForeignWarp  # noqa: E402
 from areas.model import World, read, write  # noqa: E402
 from areas.party import Roster  # noqa: E402
@@ -28,11 +28,18 @@ def emit_pools(w):
 
 
 def patch_extra():
-    """Cherrygrove's north exit leads to Tithe Road, Route 29 no longer leads to Route 46."""
+    """Cherrygrove's north exit leads to the Tithe Junction, Route 29 no longer leads to Route 46."""
     p = "data/maps/attributes.asm"
     s = read(p)
-    s = s.replace("\tconnection north, Route30, ROUTE_30, 5\n\tconnection east, Route29, ROUTE_29, 0\n",
-                  "\tconnection north, TitheRoad, TITHE_ROAD, 5 ; HC-AREAS\n\tconnection east, Route29, ROUTE_29, 0\n")
+    new = "\tconnection north, TitheJunction, TITHE_JUNCTION, %d ; HC-AREAS\n" % (opening.CHERRY_COL - opening.STEM_A)
+    for old in ("\tconnection north, Route30, ROUTE_30, 5\n",
+                "\tconnection north, TitheRoad, TITHE_ROAD, 5 ; HC-AREAS\n",
+                "\tconnection north, TitheJunction, TITHE_JUNCTION, -1 ; HC-AREAS\n"):
+        if old in s:
+            s = s.replace(old, new, 1)
+            break
+    else:
+        raise AssertionError("Cherrygrove north connection not found")
     s = s.replace("\tconnection north, Route46, ROUTE_46, 10\n\tconnection west, CherrygroveCity, CHERRYGROVE_CITY, 0\n",
                   "\tconnection west, CherrygroveCity, CHERRYGROVE_CITY, 0 ; HC-AREAS: no way north to Route 46\n")
     write(p, s)
@@ -53,6 +60,22 @@ def main():
     a4.build(w, roster, rng, exits, open_exit=True)  # its last boss room leads into the mansion
     # Area 5 is entered through the portal in the New Bark Town crater (warp 5 of that map, see maps/NewBarkTown.asm)
     a5.build(w, roster, rng, [ForeignWarp("NEW_BARK_TOWN", 5)])
+    # the historic characters, placed into the finished areas
+    cameos.area1(w, w.groups["AREA1"])
+    cameos.area2(w, w.groups["AREA2"], rng)
+    cameos.area3(w, w.groups["AREA3"])
+    cameos.area4(w, w.groups["AREA4"])
+    # the opening junction outside Cherrygrove (Mr. Pokemon, Joyce, the door to Purgatorio) and Purgatorio itself
+    _, cave, junction = opening.build(w, roster, rng)
+    road = next(m for m in w.groups["AREA1"].maps if m.name == "TitheRoad")
+    junction.connections["north"] = (road, junction.a - road.a)
+    road.connections["south"] = (junction, road.a - junction.a)
+
+    class Cherry:
+        name, const = "CherrygroveCity", "CHERRYGROVE_CITY"
+    junction.connections["south"] = (Cherry, opening.STEM_A - opening.CHERRY_COL)
+    purg.build(w, roster, rng, w.purg_doors, cave)
+    lore.emit(w)
     emit.patch_tree()
     wild.build(w, roster)
     sizes = emit.emit_all(w)

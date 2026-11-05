@@ -6,6 +6,63 @@ AxiomPlaza6_MapScripts:
 
 	def_callbacks
 
+AxiomPlaza6SabbahScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_SABBAH
+	iftrue .Again
+	writetext AxiomPlaza6SabbahScriptText
+	waitbutton
+	setevent EVENT_LORE_SABBAH
+	closetext
+	end
+
+.Again:
+	writetext AxiomPlaza6SabbahScriptAgainText
+	waitbutton
+	closetext
+	end
+
+AxiomPlaza6SabbahScriptText:
+	text "You are still"
+	line "alive. This makes"
+	para "you either lucky"
+	line "or useful. I have"
+	para "not decided."
+	para "If you meet him,"
+	line "do not fight him."
+	para "Fight what he"
+	line "stands on. He is a"
+	para "tall man on a"
+	line "short ladder."
+	para "Remember: nothing"
+	line "is true,"
+	para "everything is"
+	line "permitted, and the"
+	para "second part is the"
+	line "dangerous one."
+	done
+
+AxiomPlaza6SabbahScriptAgainText:
+	text "You are still"
+	line "alive. This makes"
+	para "you either lucky"
+	line "or useful. I have"
+	para "not decided."
+	para "If you meet him,"
+	line "do not fight him."
+	para "Fight what he"
+	line "stands on. He is a"
+	para "tall man on a"
+	line "short ladder."
+	para "Remember: nothing"
+	line "is true,"
+	para "everything is"
+	line "permitted, and the"
+	para "second part is the"
+	line "dangerous one."
+	done
+
 AxiomPlaza6_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,4 +76,5 @@ AxiomPlaza6_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 20, 18, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SabbahScript, -1
 

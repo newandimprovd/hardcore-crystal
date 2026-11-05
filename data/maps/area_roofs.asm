@@ -5,3 +5,5 @@
 	db -1 ; AREA3
 	db -1 ; AREA4
 	db -1 ; AREA5
+	db -1 ; OPEN
+	db -1 ; PURG

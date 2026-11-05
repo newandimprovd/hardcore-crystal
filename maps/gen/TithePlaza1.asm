@@ -6,6 +6,91 @@ TithePlaza1_MapScripts:
 
 	def_callbacks
 
+TithePlaza1SteinerScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_STEINER
+	iftrue .Again
+	writetext TithePlaza1SteinerScriptText
+	waitbutton
+	setevent EVENT_LORE_STEINER
+	closetext
+	end
+
+.Again:
+	writetext TithePlaza1SteinerScriptAgainText
+	waitbutton
+	closetext
+	end
+
+TithePlaza1SteinerScriptText:
+	text "Rudolf Steiner. I"
+	line "teach spiritual"
+	para "science and I am"
+	line "very bad at"
+	para "parties."
+	para "Listen. There are"
+	line "two great"
+	para "adversaries of the"
+	line "spirit. Lucifer"
+	para "warms you and lies"
+	line "to you. Ahriman"
+	para "cools you and"
+	line "tells you nothing"
+	para "is real but dead"
+	line "matter."
+	para "Ahriman is the one"
+	line "who wants you to"
+	para "believe the world"
+	line "is just rock,"
+	para "money and"
+	line "spreadsheets. He"
+	para "has been very"
+	line "successful. Look"
+	para "around you."
+	para "He is not here"
+	line "because he is"
+	para "strong. He is here"
+	line "because everyone"
+	para "agreed to stop"
+	line "looking. A pity,"
+	para "really."
+	done
+
+TithePlaza1SteinerScriptAgainText:
+	text "Rudolf Steiner. I"
+	line "teach spiritual"
+	para "science and I am"
+	line "very bad at"
+	para "parties."
+	para "Listen. There are"
+	line "two great"
+	para "adversaries of the"
+	line "spirit. Lucifer"
+	para "warms you and lies"
+	line "to you. Ahriman"
+	para "cools you and"
+	line "tells you nothing"
+	para "is real but dead"
+	line "matter."
+	para "Ahriman is the one"
+	line "who wants you to"
+	para "believe the world"
+	line "is just rock,"
+	para "money and"
+	line "spreadsheets. He"
+	para "has been very"
+	line "successful. Look"
+	para "around you."
+	para "He is not here"
+	line "because he is"
+	para "strong. He is here"
+	line "because everyone"
+	para "agreed to stop"
+	line "looking. A pity,"
+	para "really."
+	done
+
 TithePlaza1_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +105,5 @@ TithePlaza1_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 20, 18, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1SteinerScript, -1
 

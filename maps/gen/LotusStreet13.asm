@@ -30,43 +30,43 @@ LotusStreet13AfterScript:
 	end
 
 LotusStreet13Trainer0:
-	trainer L_TOURISTF, 136, EVENT_GEN_LOTUS_STREET13_0, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_SUNBATHER, 149, EVENT_GEN_LOTUS_STREET13_0, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer1:
-	trainer L_LOUNGER, 142, EVENT_GEN_LOTUS_STREET13_1, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_TOURISTF, 135, EVENT_GEN_LOTUS_STREET13_1, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer2:
-	trainer L_SUNBATHER, 148, EVENT_GEN_LOTUS_STREET13_2, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_TOURISTG, 133, EVENT_GEN_LOTUS_STREET13_2, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer3:
-	trainer L_SAILOR, 135, EVENT_GEN_LOTUS_STREET13_3, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_SWIMMERF, 148, EVENT_GEN_LOTUS_STREET13_3, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer4:
-	trainer L_TOURISTG, 136, EVENT_GEN_LOTUS_STREET13_4, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_TOURISTM, 139, EVENT_GEN_LOTUS_STREET13_4, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer5:
-	trainer L_FORGOTTEN, 133, EVENT_GEN_LOTUS_STREET13_5, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_BELLHOP, 135, EVENT_GEN_LOTUS_STREET13_5, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer6:
-	trainer L_LIFEGUARD, 138, EVENT_GEN_LOTUS_STREET13_6, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_TOURISTG, 134, EVENT_GEN_LOTUS_STREET13_6, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer7:
-	trainer L_LOUNGER, 143, EVENT_GEN_LOTUS_STREET13_7, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_WAITER, 133, EVENT_GEN_LOTUS_STREET13_7, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer8:
-	trainer L_SWIMMERM, 145, EVENT_GEN_LOTUS_STREET13_8, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_MANAGER, 141, EVENT_GEN_LOTUS_STREET13_8, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer9:
-	trainer L_SWIMMERF, 147, EVENT_GEN_LOTUS_STREET13_9, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_FORGOTTEN, 137, EVENT_GEN_LOTUS_STREET13_9, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer10:
-	trainer L_SWIMMERM, 146, EVENT_GEN_LOTUS_STREET13_10, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_LOUNGER, 140, EVENT_GEN_LOTUS_STREET13_10, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer11:
-	trainer L_CLINICIAN, 135, EVENT_GEN_LOTUS_STREET13_11, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_SUNBATHER, 150, EVENT_GEN_LOTUS_STREET13_11, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13Trainer12:
-	trainer L_LOUNGER, 144, EVENT_GEN_LOTUS_STREET13_12, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_SAILOR, 135, EVENT_GEN_LOTUS_STREET13_12, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13_MapEvents:
 	db 0, 0 ; filler
@@ -78,18 +78,18 @@ LotusStreet13_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  8,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet13Pickup, EVENT_GEN_LOTUS_STREET13_PICKUP
-	object_event  6, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer0, -1
-	object_event 11, 20, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer1, -1
-	object_event  6, 18, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer2, -1
-	object_event 11, 18, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer3, -1
-	object_event  6, 16, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer4, -1
-	object_event 11, 14, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer5, -1
-	object_event  6, 12, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer6, -1
-	object_event 11, 12, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer7, -1
-	object_event  6, 10, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer8, -1
-	object_event 11, 10, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer9, -1
-	object_event  6,  8, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer10, -1
-	object_event 11,  6, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer11, -1
-	object_event  6,  4, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer12, -1
+	object_event  6,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet13Pickup, EVENT_GEN_LOTUS_STREET13_PICKUP
+	object_event  4, 20, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer0, -1
+	object_event  4, 18, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer1, -1
+	object_event  9, 18, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer2, -1
+	object_event  9, 16, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer3, -1
+	object_event  4, 14, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer4, -1
+	object_event  9, 12, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer5, -1
+	object_event  4, 10, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer6, -1
+	object_event  9, 10, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer7, -1
+	object_event  4,  8, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer8, -1
+	object_event  4,  6, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer9, -1
+	object_event  9,  6, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer10, -1
+	object_event  4,  4, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer11, -1
+	object_event  9,  4, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer12, -1
 

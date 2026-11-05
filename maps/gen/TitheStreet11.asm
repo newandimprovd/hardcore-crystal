@@ -32,43 +32,43 @@ TitheStreet11AfterScript:
 	end
 
 TitheStreet11Trainer0:
-	trainer T_THUG, 133, EVENT_GEN_TITHE_STREET11_0, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_DRIFTER, 130, EVENT_GEN_TITHE_STREET11_0, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer1:
-	trainer T_PUNK, 138, EVENT_GEN_TITHE_STREET11_1, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_SUIT, 138, EVENT_GEN_TITHE_STREET11_1, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer2:
-	trainer T_HOODIE, 134, EVENT_GEN_TITHE_STREET11_2, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_COP, 150, EVENT_GEN_TITHE_STREET11_2, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer3:
-	trainer T_COP, 153, EVENT_GEN_TITHE_STREET11_3, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_PRIEST, 134, EVENT_GEN_TITHE_STREET11_3, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer4:
 	trainer T_BEGGAR, 135, EVENT_GEN_TITHE_STREET11_4, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer5:
-	trainer T_BANKER, 138, EVENT_GEN_TITHE_STREET11_5, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_BUSKER, 132, EVENT_GEN_TITHE_STREET11_5, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer6:
-	trainer T_BANKER, 139, EVENT_GEN_TITHE_STREET11_6, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_ALTARBOY, 137, EVENT_GEN_TITHE_STREET11_6, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer7:
-	trainer T_PRIEST, 141, EVENT_GEN_TITHE_STREET11_7, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_BEGGAR, 136, EVENT_GEN_TITHE_STREET11_7, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer8:
-	trainer T_SUIT, 142, EVENT_GEN_TITHE_STREET11_8, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_PRIEST, 135, EVENT_GEN_TITHE_STREET11_8, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer9:
-	trainer T_BEGGAR, 136, EVENT_GEN_TITHE_STREET11_9, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_COP, 151, EVENT_GEN_TITHE_STREET11_9, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer10:
-	trainer T_DRIFTER, 128, EVENT_GEN_TITHE_STREET11_10, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_ALTARBOY, 138, EVENT_GEN_TITHE_STREET11_10, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer11:
-	trainer T_HOODIE, 135, EVENT_GEN_TITHE_STREET11_11, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_PUNK, 141, EVENT_GEN_TITHE_STREET11_11, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11Trainer12:
-	trainer T_DRIFTER, 129, EVENT_GEN_TITHE_STREET11_12, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_BANKER, 137, EVENT_GEN_TITHE_STREET11_12, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11_MapEvents:
 	db 0, 0 ; filler
@@ -80,19 +80,19 @@ TitheStreet11_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  8, 22, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11BoulderScript, -1
-	object_event  9, 22, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11BoulderScript, -1
-	object_event  6, 20, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer0, -1
-	object_event 11, 20, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer1, -1
-	object_event  6, 18, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer2, -1
-	object_event 11, 18, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer3, -1
-	object_event  6, 16, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer4, -1
-	object_event 11, 16, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer5, -1
-	object_event  6, 14, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer6, -1
-	object_event  6, 12, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer7, -1
-	object_event 11, 12, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer8, -1
-	object_event 11, 10, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer9, -1
-	object_event  6,  8, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer10, -1
-	object_event 11,  6, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer11, -1
-	object_event  6,  4, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer12, -1
+	object_event  4, 22, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11BoulderScript, -1
+	object_event  5, 22, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11BoulderScript, -1
+	object_event  2, 20, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer0, -1
+	object_event  7, 18, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer1, -1
+	object_event  2, 16, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer2, -1
+	object_event  7, 16, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer3, -1
+	object_event  2, 14, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer4, -1
+	object_event  7, 14, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer5, -1
+	object_event  2, 12, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer6, -1
+	object_event  7, 10, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer7, -1
+	object_event  2,  8, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer8, -1
+	object_event  2,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer9, -1
+	object_event  7,  6, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer10, -1
+	object_event  2,  4, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer11, -1
+	object_event  7,  4, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer12, -1
 

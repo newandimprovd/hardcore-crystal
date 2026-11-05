@@ -6,6 +6,10 @@ LotusPlaza5_MapScripts:
 
 	def_callbacks
 
+LotusPlaza5PurgFlagScript:
+	setevent EVENT_PURG_OPEN_A4
+	end
+
 LotusPlaza5_MapEvents:
 	db 0, 0 ; filler
 
@@ -14,8 +18,10 @@ LotusPlaza5_MapEvents:
 	warp_event 12,  3, LOTUS_MART5, 1
 	warp_event 16,  3, LOTUS_HOUSE5, 1
 	warp_event 20,  3, LOTUS_CABANA, 1
+	warp_event 24,  3, PURG_THRESHOLD, 5
 
 	def_coord_events
+	coord_event 24,  4, -1, LotusPlaza5PurgFlagScript
 
 	def_bg_events
 

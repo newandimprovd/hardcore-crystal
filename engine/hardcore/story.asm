@@ -231,6 +231,19 @@ HC_ElmRimScript::
 	waitbutton
 	writetext HC_ElmEnd5
 	waitbutton
+	; the true ending: Bruno reborn as Nick and the grave in the Abyss read (PURGATORIO), and the Trumpet if it is carried
+	checkevent EVENT_PURG_NICK
+	iffalse .NormalEnd
+	checkevent EVENT_ABYSS_GRAVE_READ
+	iffalse .NormalEnd
+	setevent EVENT_HC_TRUE_END
+	writetext HC_TrueEndText
+	waitbutton
+	checkitem TRUMPET
+	iffalse .NormalEnd
+	writetext HC_TrumpetText
+	waitbutton
+.NormalEnd:
 	closetext
 	setevent EVENT_HC_ENDED
 	halloffame ; saves, hall of fame, credits; Continue then spawns in the mansion bedroom (intro_menu.asm)

@@ -121,7 +121,7 @@ ENDM
 	; HC: no way east to Route 27 (the vanilla world is cut off)
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35
-	connection north, TitheRoad, TITHE_ROAD, 5 ; HC-AREAS
+	connection north, TitheJunction, TITHE_JUNCTION, -1 ; HC-AREAS
 	connection east, Route29, ROUTE_29, 0
 
 	map_attributes VioletCity, VIOLET_CITY, $05

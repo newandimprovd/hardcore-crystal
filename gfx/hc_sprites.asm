@@ -70,3 +70,10 @@ SECTION "HC Sprites 3", ROMX
 
 HcDemonLordSpriteGFX:: INCBIN "gfx/sprites/hc/demon_lord.2bpp"
 HcFinneganSpriteGFX:: INCBIN "gfx/sprites/hc/finnegan.2bpp"
+HcJoyceSpriteGFX:: INCBIN "gfx/sprites/hc/joyce.2bpp"
+HcMrPokemonSpriteGFX:: INCBIN "gfx/sprites/hc/mr_pokemon.2bpp"
+HcSteinerSpriteGFX:: INCBIN "gfx/sprites/hc/steiner.2bpp"
+HcBrunoSpriteGFX:: INCBIN "gfx/sprites/hc/bruno.2bpp"
+HcCioranSpriteGFX:: INCBIN "gfx/sprites/hc/cioran.2bpp"
+HcSabbahSpriteGFX:: INCBIN "gfx/sprites/hc/sabbah.2bpp"
+HcCrowleySpriteGFX:: INCBIN "gfx/sprites/hc/crowley.2bpp"

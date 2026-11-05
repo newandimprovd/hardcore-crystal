@@ -16,3 +16,7 @@
 	landmark  24,  50, DisCityName
 	landmark  20,  46, DisCocytusName
 	landmark  16,  42, DisJudeccaName
+	landmark  80,  90, TitheJunctionName
+	landmark  84,  76, PurgatorioName
+	landmark  84,  84, TheAbyssName
+	landmark  84,  68, NicksLandingName

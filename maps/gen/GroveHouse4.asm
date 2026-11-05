@@ -31,6 +31,27 @@ GroveHouse4Npc1Text:
 	para "restful."
 	done
 
+GroveHouse4SatoshiScript:
+	jumptextfaceplayer GroveHouse4SatoshiScriptText
+
+GroveHouse4SatoshiScriptText:
+	text "I like bugs. I"
+	line "like to put them"
+	para "in a box and look"
+	line "at them."
+	para "One day I want to"
+	line "put a lot of small"
+	para "creatures in a lot"
+	line "of small boxes and"
+	para "let millions of"
+	line "children carry"
+	para "them."
+	para "Do not tell my"
+	line "mother. She thinks"
+	para "I am going to be a"
+	line "dentist."
+	done
+
 GroveHouse4_MapEvents:
 	db 0, 0 ; filler
 
@@ -45,4 +66,5 @@ GroveHouse4_MapEvents:
 	def_object_events
 	object_event  2,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse4Npc0Script, -1
 	object_event  5,  5, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse4Npc1Script, -1
+	object_event  5,  2, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse4SatoshiScript, -1
 

@@ -45,5 +45,5 @@ def build(w, roster, rng, entry_doors, open_exit=False):
                   [("GROVE_COMMUNE", 60, 66, "THE<BSP>COMMUNE"), ("GROVE_ORCHARD", 56, 62, "THE<BSP>ORCHARD"),
                    ("GROVE_HEARTH", 52, 58, "THE<BSP>GREAT<BSP>HEARTH")],
                   "MUSIC_ROUTE_36", texts, TIERS, bosses, [None, "river", "hive"], [3, 2, 3], "GroveGate", T.GATE[0],
-                  trainers=([13, 14, 13, 13, 13], [13, 13, 13, 14, 13], 13), stock_ix=(0, 0, 1, 1, 2, 2, 2))
+                  trainers=([13, 14, 13, 13, 13], [13, 13, 13, 14, 13], 13), stock_ix=(0, 0, 1, 1, 2, 2, 2), split_houses=(2, 1, 1))
     return build_area(w, roster, rng, cfg, entry_doors)

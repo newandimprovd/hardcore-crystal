@@ -5,3 +5,5 @@
 	dw MapGroup_Area3                ; AREA3
 	dw MapGroup_Area4                ; AREA4
 	dw MapGroup_Area5                ; AREA5
+	dw MapGroup_Open                 ; OPEN
+	dw MapGroup_Purg                 ; PURG

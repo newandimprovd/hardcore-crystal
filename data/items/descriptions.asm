@@ -280,7 +280,8 @@ PokeBallDesc:
 	next "ing #MON.@"
 
 TeruSama1Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 BicycleDesc:
 	db   "A collapsible bike"
@@ -355,7 +356,8 @@ WaterStoneDesc:
 	next "kinds of #MON.@"
 
 TeruSama2Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 HPUpDesc:
 	db   "Raises the HP of"
@@ -434,7 +436,8 @@ DireHitDesc:
 	next "ratio. (1 BTL)@"
 
 TeruSama3Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 FreshWaterDesc:
 	db   "Restores #MON"
@@ -453,7 +456,8 @@ XAttackDesc:
 	next "(1 BTL)@"
 
 TeruSama4Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."
@@ -476,7 +480,8 @@ ItemfinderDesc:
 	next "items in the area.@"
 
 TeruSama5Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 ExpShareDesc:
 	db   "Shares battle EXP."
@@ -609,7 +614,8 @@ BluApricornDesc:
 	db   "A blue APRICORN.@"
 
 TeruSama6Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 AmuletCoinDesc:
 	db   "Doubles monetary"
@@ -645,7 +651,8 @@ BlkApricornDesc:
 	next "@"
 
 TeruSama7Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."
@@ -724,7 +731,8 @@ FocusBandDesc:
 	next "ing. (HOLD)@"
 
 TeruSama8Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 EnergyPowderDesc:
 	db   "Restores #MON"
@@ -782,7 +790,8 @@ PassDesc:
 	next "MAGNET TRAIN.@"
 
 TeruSama9Desc:
-	db   "?@"
+	db   "Notes of the dead."
+	next "Pinned. Read them.@"
 
 TeruSama10Desc:
 	db   "Cuts trees, shrubs"
@@ -861,7 +870,8 @@ TeruSama19Desc:
 	next "you have visited.@"
 
 TeruSama20Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 SacredAshDesc:
 	db   "Fully revives all"
@@ -888,7 +898,8 @@ FastBallDesc:
 	next "ing fast #MON.@"
 
 TeruSama21Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 LightBallDesc:
 	db   "An odd, electrical"
@@ -923,7 +934,8 @@ PolkadotBowDesc:
 	next "type moves. (HOLD)@"
 
 TeruSama22Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 UpGradeDesc:
 	db   "A mysterious box"
@@ -942,7 +954,8 @@ SquirtBottleDesc:
 	next "watering plants.@"
 
 TeruSama23Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 ParkBallDesc:
 	db   "The Bug-Catching"
@@ -953,7 +966,8 @@ RainbowWingDesc:
 	next "of rainbow colors.@"
 
 TeruSama24Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 BrickPieceDesc:
 	db   "A rare chunk of"
@@ -996,28 +1010,37 @@ MirageMailDesc:
 	next "(HOLD)@"
 
 TeruSama25Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 TeruSama26Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 TeruSama27Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 TeruSama28Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 TeruSama29Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 TeruSama30Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 TeruSama31Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 TeruSama32Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"
 
 TeruSama33Desc:
-	db   "?@"
+	db   "A brass horn. It"
+	next "knows the ending.@"

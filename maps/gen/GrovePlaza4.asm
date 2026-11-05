@@ -6,6 +6,81 @@ GrovePlaza4_MapScripts:
 
 	def_callbacks
 
+GrovePlaza4SteinerScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_STEINER
+	iftrue .Again
+	writetext GrovePlaza4SteinerScriptText
+	waitbutton
+	setevent EVENT_LORE_STEINER
+	closetext
+	end
+
+.Again:
+	writetext GrovePlaza4SteinerScriptAgainText
+	waitbutton
+	closetext
+	end
+
+GrovePlaza4SteinerScriptText:
+	text "You again. Good. I"
+	line "will say it"
+	para "slowly."
+	para "For millennia"
+	line "Ahriman was"
+	para "sealed, in a world"
+	line "that was a mirror"
+	para "of ours. A neat"
+	line "little jail made"
+	para "of belief."
+	para "Then a man"
+	line "overdosed and"
+	para "dreamed reality"
+	line "sideways. In his"
+	para "last sleep he"
+	line "handed Ahriman the"
+	para "key. That man is"
+	line "Finnegan."
+	para "Now two worlds"
+	line "lean on each"
+	para "other. Time folds."
+	line "Cultures collide."
+	para "You are standing"
+	line "where the seam is."
+	para "Do not touch the"
+	line "seam."
+	done
+
+GrovePlaza4SteinerScriptAgainText:
+	text "You again. Good. I"
+	line "will say it"
+	para "slowly."
+	para "For millennia"
+	line "Ahriman was"
+	para "sealed, in a world"
+	line "that was a mirror"
+	para "of ours. A neat"
+	line "little jail made"
+	para "of belief."
+	para "Then a man"
+	line "overdosed and"
+	para "dreamed reality"
+	line "sideways. In his"
+	para "last sleep he"
+	line "handed Ahriman the"
+	para "key. That man is"
+	line "Finnegan."
+	para "Now two worlds"
+	line "lean on each"
+	para "other. Time folds."
+	line "Cultures collide."
+	para "You are standing"
+	line "where the seam is."
+	para "Do not touch the"
+	line "seam."
+	done
+
 GrovePlaza4_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,4 +94,5 @@ GrovePlaza4_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 20, 18, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4SteinerScript, -1
 

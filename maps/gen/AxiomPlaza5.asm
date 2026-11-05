@@ -6,6 +6,10 @@ AxiomPlaza5_MapScripts:
 
 	def_callbacks
 
+AxiomPlaza5PurgFlagScript:
+	setevent EVENT_PURG_OPEN_A3
+	end
+
 AxiomPlaza5_MapEvents:
 	db 0, 0 ; filler
 
@@ -14,8 +18,10 @@ AxiomPlaza5_MapEvents:
 	warp_event 12,  3, AXIOM_MART5, 1
 	warp_event 16,  3, AXIOM_HOUSE5, 1
 	warp_event 20,  3, AXIOM_ARMORY, 1
+	warp_event 24,  3, PURG_THRESHOLD, 4
 
 	def_coord_events
+	coord_event 24,  4, -1, AxiomPlaza5PurgFlagScript
 
 	def_bg_events
 

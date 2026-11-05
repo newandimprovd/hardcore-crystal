@@ -5,3 +5,5 @@
 	dw Area3GroupSprites
 	dw Area4GroupSprites
 	dw Area5GroupSprites
+	dw OpenGroupSprites
+	dw PurgGroupSprites

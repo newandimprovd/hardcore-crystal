@@ -422,6 +422,7 @@ INCLUDE "data/hardcore/area_text.asm"
 SECTION "Hardcore Story", ROMX
 
 INCLUDE "engine/hardcore/story.asm"
+INCLUDE "data/hardcore/corkboard.asm"
 INCLUDE "engine/hardcore/warning.asm"
 INCLUDE "engine/hardcore/nurse.asm"
 INCLUDE "engine/hardcore/stubs.asm"

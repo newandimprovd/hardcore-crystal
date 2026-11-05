@@ -140,7 +140,7 @@
 	const STAR_PIECE   ; 84
 	const BASEMENT_KEY ; 85
 	const PASS         ; 86
-	const ITEM_87      ; 87
+	const CORKBOARD    ; 87
 	const CHAINSAW ; 88
 	const JET_SKI ; 89
 	const CHARCOAL     ; 8a
@@ -160,7 +160,7 @@
 	const BERSERK_GENE ; 98
 	const SHOVEL ; 99
 	const GETAWAY_CAR ; 9a
-	const ITEM_9B      ; 9b
+	const TRUMPET      ; 9b
 	const SACRED_ASH   ; 9c
 	const HEAVY_BALL   ; 9d
 	const FLOWER_MAIL  ; 9e

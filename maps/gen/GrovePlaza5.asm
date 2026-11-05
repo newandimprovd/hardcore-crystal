@@ -6,6 +6,10 @@ GrovePlaza5_MapScripts:
 
 	def_callbacks
 
+GrovePlaza5PurgFlagScript:
+	setevent EVENT_PURG_OPEN_A2
+	end
+
 GrovePlaza5_MapEvents:
 	db 0, 0 ; filler
 
@@ -14,8 +18,10 @@ GrovePlaza5_MapEvents:
 	warp_event 12,  3, GROVE_MART5, 1
 	warp_event 16,  3, GROVE_HOUSE5, 1
 	warp_event 20,  3, GROVE_SMOKEHOUSE, 1
+	warp_event 24,  3, PURG_THRESHOLD, 3
 
 	def_coord_events
+	coord_event 24,  4, -1, GrovePlaza5PurgFlagScript
 
 	def_bg_events
 
