@@ -11,8 +11,8 @@ DisPlaza6_MapEvents:
 
 	def_warp_events
 	warp_event  2,  3, DIS_POKECENTER6, 1
-	warp_event 12,  3, DIS_MART6, 1
-	warp_event 16,  3, DIS_HOUSE6, 1
+	warp_event 12,  3, DIS_HOUSE6, 1
+	warp_event 18,  3, DIS_MART6, 1
 
 	def_coord_events
 

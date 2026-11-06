@@ -128,6 +128,20 @@ def fence_v(g):
     return cv
 
 
+def fence_vl(g):
+    """The mirror of fence_v: the rail down the middle of the left half (same tiles, so no tile costs)."""
+    cv = new(g)
+    plank_l = ["00000031", "00000032", "00000031", "00000032", "00000031", "00000032", "00000031", "00000032"]
+    plank_r = ["13000000", "23000000", "13000000", "23000000", "13000000", "23000000", "13000000", "23000000"]
+    post_l = ["00033331", "00032221", "00031111", "00032221", "00033331", "00000032", "00000031", "00000032"]
+    post_r = ["13333000", "12223000", "11113000", "12223000", "13333000", "23000000", "13000000", "23000000"]
+    for cy in range(4):
+        post = cy % 2 == 0
+        cell_px(cv, 0, cy, post_l if post else plank_l, BROWN)
+        cell_px(cv, 1, cy, post_r if post else plank_r, BROWN)
+    return cv
+
+
 # ------------------------------------------------------------------------------------------------------------ ledge
 def ledge(g):
     """Top half ground; a lip of grass over a cliff face in the bottom half. The two bottom quadrants hop down."""
@@ -183,6 +197,7 @@ def add(t, g):
         scn[role] = t.add(cv, "WALL", role)
     scn["fence_h"] = t.add(fence_h(g), ("FLOOR", "FLOOR", "WALL", "WALL"), "fence_h")
     scn["fence_v"] = t.add(fence_v(g), ("FLOOR", "WALL", "FLOOR", "WALL"), "fence_v")
+    scn["fence_vl"] = t.add(fence_vl(g), ("WALL", "FLOOR", "WALL", "FLOOR"), "fence_vl")
     scn["ledge"] = t.add(ledge(g), ("FLOOR", "FLOOR", "HOP_DOWN", "HOP_DOWN"), "ledge")
     scn["tree"] = t.add(tree(g), "WALL", "tree")
     scn["flowers"] = [t.add(flowers(g, k), "FLOOR", "flowers") for k in (0, 1)]

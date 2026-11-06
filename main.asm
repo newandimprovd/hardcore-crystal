@@ -463,11 +463,15 @@ INCLUDE "gfx/pokemon/unown_anim_pointers.asm"
 INCLUDE "gfx/pokemon/unown_anims.asm"
 INCLUDE "gfx/pokemon/unown_idle_pointers.asm"
 INCLUDE "gfx/pokemon/unown_idles.asm"
+INCLUDE "gfx/pokemon/hc_anims.asm"
+
+
+SECTION "Pic Animations 4", ROMX ; HC: the bitmasks of the many generated pictures no longer fit the bank of the animation code
+
 INCLUDE "gfx/pokemon/bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/bitmasks.asm"
 INCLUDE "gfx/pokemon/unown_bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/unown_bitmasks.asm"
-INCLUDE "gfx/pokemon/hc_anims.asm"
 
 
 SECTION "Pic Animations 2", ROMX

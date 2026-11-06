@@ -95,15 +95,15 @@ TithePlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, TITHE_POKECENTER1, 1
-	warp_event 12,  3, TITHE_MART1, 1
-	warp_event 16,  3, TITHE_HOUSE1, 1
-	warp_event 20,  3, TITHE_CHECKPOINT, 1
+	warp_event  4,  3, TITHE_POKECENTER1, 1
+	warp_event 16,  3, TITHE_MART1, 1
+	warp_event 20,  3, TITHE_HOUSE1, 1
+	warp_event 24,  3, TITHE_CHECKPOINT, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 20, 18, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1SteinerScript, -1
+	object_event 25,  9, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1SteinerScript, -1
 

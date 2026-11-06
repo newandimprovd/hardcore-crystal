@@ -75,14 +75,14 @@ LotusPlaza6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, LOTUS_POKECENTER6, 1
-	warp_event 12,  3, LOTUS_MART6, 1
-	warp_event 16,  3, LOTUS_HOUSE6, 1
+	warp_event  2,  3, LOTUS_MART6, 1
+	warp_event  6,  3, LOTUS_POKECENTER6, 1
+	warp_event 10,  3, LOTUS_HOUSE6, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 20, 18, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6SteinerScript, -1
+	object_event 18, 17, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6SteinerScript, -1
 

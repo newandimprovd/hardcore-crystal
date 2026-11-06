@@ -110,48 +110,70 @@
    "area": 1,
    "map": "TithePlaza2",
    "const": "TITHE_PLAZA2",
-   "level": 8.0,
+   "level": 8.6,
    "morn": [
     [
-     8,
+     9,
      "MANKEY"
     ],
     [
-     9,
+     10,
      "IGGLYBUFF"
     ],
     [
-     7,
+     8,
      "EKANS"
     ],
     [
-     10,
+     11,
      "GRIMER"
     ],
     [
-     8,
+     9,
      "KOFFING"
     ],
     [
-     9,
+     10,
      "NIDORAN_F"
     ],
     [
-     11,
+     12,
      "BULBASAUR"
     ]
    ],
    "day": [
     [
-     8,
+     9,
      "MANKEY"
     ],
     [
-     9,
+     10,
      "IGGLYBUFF"
     ],
     [
-     7,
+     8,
+     "EKANS"
+    ],
+    [
+     11,
+     "GRIMER"
+    ],
+    [
+     9,
+     "KOFFING"
+    ],
+    [
+     10,
+     "NIDORAN_F"
+    ],
+    [
+     12,
+     "BULBASAUR"
+    ]
+   ],
+   "nite": [
+    [
+     9,
      "EKANS"
     ],
     [
@@ -163,139 +185,20 @@
      "KOFFING"
     ],
     [
-     9,
-     "NIDORAN_F"
-    ],
-    [
      11,
-     "BULBASAUR"
-    ]
-   ],
-   "nite": [
-    [
-     8,
-     "EKANS"
-    ],
-    [
-     9,
-     "GRIMER"
-    ],
-    [
-     7,
-     "KOFFING"
-    ],
-    [
-     10,
      "NIDORAN_F"
     ],
     [
-     8,
+     9,
      "MANKEY"
     ],
     [
-     9,
+     10,
      "IGGLYBUFF"
     ],
     [
-     11,
+     12,
      "BULBASAUR"
-    ]
-   ],
-   "rate": 10
-  },
-  {
-   "area": 1,
-   "map": "TithePlaza3",
-   "const": "TITHE_PLAZA3",
-   "level": 11.0,
-   "morn": [
-    [
-     11,
-     "NIDORAN_M"
-    ],
-    [
-     12,
-     "SPINARAK"
-    ],
-    [
-     10,
-     "WEEDLE"
-    ],
-    [
-     13,
-     "TENTACOOL"
-    ],
-    [
-     11,
-     "MACHOP"
-    ],
-    [
-     12,
-     "MANKEY"
-    ],
-    [
-     14,
-     "CHIKORITA"
-    ]
-   ],
-   "day": [
-    [
-     11,
-     "NIDORAN_M"
-    ],
-    [
-     12,
-     "SPINARAK"
-    ],
-    [
-     10,
-     "WEEDLE"
-    ],
-    [
-     13,
-     "TENTACOOL"
-    ],
-    [
-     11,
-     "MACHOP"
-    ],
-    [
-     12,
-     "MANKEY"
-    ],
-    [
-     14,
-     "CHIKORITA"
-    ]
-   ],
-   "nite": [
-    [
-     11,
-     "NIDORAN_M"
-    ],
-    [
-     12,
-     "SPINARAK"
-    ],
-    [
-     10,
-     "WEEDLE"
-    ],
-    [
-     13,
-     "TENTACOOL"
-    ],
-    [
-     11,
-     "MACHOP"
-    ],
-    [
-     12,
-     "MANKEY"
-    ],
-    [
-     14,
-     "CHIKORITA"
     ]
    ],
    "rate": 10
@@ -304,95 +207,95 @@
    "area": 1,
    "map": "TithePlaza4",
    "const": "TITHE_PLAZA4",
-   "level": 14.0,
+   "level": 12.2,
    "morn": [
     [
-     14,
-     "KOFFING"
-    ],
-    [
-     15,
-     "NIDORAN_F"
+     12,
+     "NIDORAN_M"
     ],
     [
      13,
-     "HOOTHOOT"
+     "SPINARAK"
     ],
     [
-     16,
-     "MACHOP"
+     11,
+     "WEEDLE"
     ],
     [
      14,
-     "IGGLYBUFF"
+     "TENTACOOL"
+    ],
+    [
+     12,
+     "MACHOP"
+    ],
+    [
+     13,
+     "MANKEY"
     ],
     [
      15,
-     "EKANS"
-    ],
-    [
-     17,
-     "ODDISH"
+     "CHIKORITA"
     ]
    ],
    "day": [
     [
-     14,
-     "KOFFING"
-    ],
-    [
-     15,
-     "NIDORAN_F"
+     12,
+     "NIDORAN_M"
     ],
     [
      13,
-     "HOOTHOOT"
+     "SPINARAK"
     ],
     [
-     16,
-     "MACHOP"
+     11,
+     "WEEDLE"
     ],
     [
      14,
-     "IGGLYBUFF"
+     "TENTACOOL"
+    ],
+    [
+     12,
+     "MACHOP"
+    ],
+    [
+     13,
+     "MANKEY"
     ],
     [
      15,
-     "EKANS"
-    ],
-    [
-     17,
-     "ODDISH"
+     "CHIKORITA"
     ]
    ],
    "nite": [
     [
-     14,
-     "KOFFING"
-    ],
-    [
-     15,
-     "NIDORAN_F"
+     12,
+     "NIDORAN_M"
     ],
     [
      13,
-     "EKANS"
+     "SPINARAK"
     ],
     [
-     16,
-     "HOOTHOOT"
+     11,
+     "WEEDLE"
     ],
     [
      14,
+     "TENTACOOL"
+    ],
+    [
+     12,
      "MACHOP"
     ],
     [
-     15,
-     "IGGLYBUFF"
+     13,
+     "MANKEY"
     ],
     [
-     17,
-     "ODDISH"
+     15,
+     "CHIKORITA"
     ]
    ],
    "rate": 10
@@ -401,95 +304,95 @@
    "area": 1,
    "map": "TithePlaza5",
    "const": "TITHE_PLAZA5",
-   "level": 17.0,
+   "level": 15.8,
    "morn": [
+    [
+     16,
+     "KOFFING"
+    ],
+    [
+     17,
+     "NIDORAN_F"
+    ],
+    [
+     15,
+     "HOOTHOOT"
+    ],
+    [
+     18,
+     "MACHOP"
+    ],
+    [
+     16,
+     "EKANS"
+    ],
     [
      17,
      "GRIMER"
     ],
     [
-     18,
-     "NIDORAN_M"
-    ],
-    [
-     16,
-     "SPINARAK"
-    ],
-    [
      19,
-     "WEEDLE"
-    ],
-    [
-     17,
-     "TENTACOOL"
-    ],
-    [
-     18,
-     "MEOWTH"
-    ],
-    [
-     20,
-     "PARAS"
+     "ODDISH"
     ]
    ],
    "day": [
     [
+     16,
+     "KOFFING"
+    ],
+    [
+     17,
+     "NIDORAN_F"
+    ],
+    [
+     15,
+     "HOOTHOOT"
+    ],
+    [
+     18,
+     "MACHOP"
+    ],
+    [
+     16,
+     "EKANS"
+    ],
+    [
      17,
      "GRIMER"
     ],
     [
-     18,
-     "NIDORAN_M"
-    ],
-    [
-     16,
-     "SPINARAK"
-    ],
-    [
      19,
-     "WEEDLE"
-    ],
-    [
-     17,
-     "TENTACOOL"
-    ],
-    [
-     18,
-     "MEOWTH"
-    ],
-    [
-     20,
-     "PARAS"
+     "ODDISH"
     ]
    ],
    "nite": [
     [
+     16,
+     "KOFFING"
+    ],
+    [
      17,
+     "NIDORAN_F"
+    ],
+    [
+     15,
+     "EKANS"
+    ],
+    [
+     18,
      "GRIMER"
     ],
     [
-     18,
-     "NIDORAN_M"
-    ],
-    [
      16,
-     "SPINARAK"
-    ],
-    [
-     19,
-     "WEEDLE"
+     "HOOTHOOT"
     ],
     [
      17,
-     "TENTACOOL"
+     "MACHOP"
     ],
     [
-     18,
-     "MEOWTH"
-    ],
-    [
-     20,
-     "PARAS"
+     19,
+     "ODDISH"
     ]
    ],
    "rate": 10
@@ -498,95 +401,95 @@
    "area": 1,
    "map": "TithePlaza6",
    "const": "TITHE_PLAZA6",
-   "level": 20.0,
+   "level": 19.4,
    "morn": [
+    [
+     19,
+     "NIDORAN_M"
+    ],
+    [
+     20,
+     "SPINARAK"
+    ],
+    [
+     18,
+     "WEEDLE"
+    ],
+    [
+     21,
+     "TENTACOOL"
+    ],
+    [
+     19,
+     "MEOWTH"
+    ],
     [
      20,
      "PORYGON"
     ],
     [
-     21,
-     "RATTATA"
-    ],
-    [
-     19,
-     "SENTRET"
-    ],
-    [
      22,
-     "NIDORAN_F"
-    ],
-    [
-     20,
-     "NIDORAN_M"
-    ],
-    [
-     21,
-     "SPINARAK"
-    ],
-    [
-     23,
-     "CATERPIE"
+     "PARAS"
     ]
    ],
    "day": [
     [
+     19,
+     "NIDORAN_M"
+    ],
+    [
+     20,
+     "SPINARAK"
+    ],
+    [
+     18,
+     "WEEDLE"
+    ],
+    [
+     21,
+     "TENTACOOL"
+    ],
+    [
+     19,
+     "MEOWTH"
+    ],
+    [
      20,
      "PORYGON"
     ],
     [
-     21,
-     "RATTATA"
-    ],
-    [
-     19,
-     "SENTRET"
-    ],
-    [
      22,
-     "NIDORAN_F"
-    ],
-    [
-     20,
-     "NIDORAN_M"
-    ],
-    [
-     21,
-     "SPINARAK"
-    ],
-    [
-     23,
-     "CATERPIE"
+     "PARAS"
     ]
    ],
    "nite": [
     [
-     20,
-     "NIDORAN_F"
-    ],
-    [
-     21,
+     19,
      "NIDORAN_M"
     ],
     [
-     19,
+     20,
      "SPINARAK"
     ],
     [
-     22,
-     "PORYGON"
-    ],
-    [
-     20,
-     "RATTATA"
+     18,
+     "WEEDLE"
     ],
     [
      21,
-     "SENTRET"
+     "TENTACOOL"
     ],
     [
-     23,
-     "CATERPIE"
+     19,
+     "MEOWTH"
+    ],
+    [
+     20,
+     "PORYGON"
+    ],
+    [
+     22,
+     "PARAS"
     ]
    ],
    "rate": 10
@@ -599,67 +502,67 @@
    "morn": [
     [
      23,
-     "TENTACOOL"
+     "RATTATA"
     ],
     [
      24,
-     "MEOWTH"
+     "SENTRET"
     ],
     [
      22,
-     "HOOTHOOT"
+     "IGGLYBUFF"
     ],
     [
      25,
-     "MANKEY"
+     "MEOWTH"
     ],
     [
      23,
-     "WEEDLE"
+     "SPINARAK"
     ],
     [
      24,
-     "PORYGON"
+     "WEEDLE"
     ],
     [
      26,
-     "VENONAT"
+     "CATERPIE"
     ]
    ],
    "day": [
     [
      23,
-     "TENTACOOL"
+     "RATTATA"
     ],
     [
      24,
-     "MEOWTH"
+     "SENTRET"
     ],
     [
      22,
-     "HOOTHOOT"
+     "IGGLYBUFF"
     ],
     [
      25,
-     "MANKEY"
+     "MEOWTH"
     ],
     [
      23,
-     "WEEDLE"
+     "SPINARAK"
     ],
     [
      24,
-     "PORYGON"
+     "WEEDLE"
     ],
     [
      26,
-     "VENONAT"
+     "CATERPIE"
     ]
    ],
    "nite": [
     [
      23,
-     "TENTACOOL"
+     "SPINARAK"
     ],
     [
      24,
@@ -667,31 +570,31 @@
     ],
     [
      22,
-     "MEOWTH"
+     "RATTATA"
     ],
     [
      25,
-     "HOOTHOOT"
+     "SENTRET"
     ],
     [
      23,
-     "MANKEY"
+     "IGGLYBUFF"
     ],
     [
      24,
-     "PORYGON"
+     "MEOWTH"
     ],
     [
      26,
-     "VENONAT"
+     "CATERPIE"
     ]
    ],
    "rate": 10
   },
   {
    "area": 2,
-   "map": "GrovePlaza1",
-   "const": "GROVE_PLAZA1",
+   "map": "GrovePlaza2",
+   "const": "GROVE_PLAZA2",
    "level": 24.0,
    "morn": [
     [
@@ -787,194 +690,97 @@
   },
   {
    "area": 2,
-   "map": "GrovePlaza2",
-   "const": "GROVE_PLAZA2",
-   "level": 27.2,
-   "morn": [
-    [
-     27,
-     "VENONAT"
-    ],
-    [
-     28,
-     "HOPPIP"
-    ],
-    [
-     26,
-     "SCYTHER"
-    ],
-    [
-     29,
-     "CUBONE"
-    ],
-    [
-     27,
-     "SQUIRTLE"
-    ],
-    [
-     28,
-     "STARYU"
-    ],
-    [
-     30,
-     "PICHU"
-    ]
-   ],
-   "day": [
-    [
-     27,
-     "VENONAT"
-    ],
-    [
-     28,
-     "HOPPIP"
-    ],
-    [
-     26,
-     "SCYTHER"
-    ],
-    [
-     29,
-     "CUBONE"
-    ],
-    [
-     27,
-     "SQUIRTLE"
-    ],
-    [
-     28,
-     "STARYU"
-    ],
-    [
-     30,
-     "PICHU"
-    ]
-   ],
-   "nite": [
-    [
-     27,
-     "VENONAT"
-    ],
-    [
-     28,
-     "HOPPIP"
-    ],
-    [
-     26,
-     "SCYTHER"
-    ],
-    [
-     29,
-     "CUBONE"
-    ],
-    [
-     27,
-     "SQUIRTLE"
-    ],
-    [
-     28,
-     "STARYU"
-    ],
-    [
-     30,
-     "PICHU"
-    ]
-   ],
-   "rate": 10
-  },
-  {
-   "area": 2,
    "map": "GrovePlaza3",
    "const": "GROVE_PLAZA3",
    "level": 30.3,
    "morn": [
     [
      30,
-     "TOTODILE"
-    ],
-    [
-     31,
-     "GEODUDE"
-    ],
-    [
-     29,
-     "SLOWPOKE"
-    ],
-    [
-     32,
-     "SWINUB"
-    ],
-    [
-     30,
-     "PARAS"
-    ],
-    [
-     31,
      "VENONAT"
     ],
     [
+     31,
+     "HOPPIP"
+    ],
+    [
+     29,
+     "SCYTHER"
+    ],
+    [
+     32,
+     "CUBONE"
+    ],
+    [
+     30,
+     "SQUIRTLE"
+    ],
+    [
+     31,
+     "STARYU"
+    ],
+    [
      33,
-     "MAGNEMITE"
+     "PICHU"
     ]
    ],
    "day": [
     [
      30,
-     "TOTODILE"
-    ],
-    [
-     31,
-     "GEODUDE"
-    ],
-    [
-     29,
-     "SLOWPOKE"
-    ],
-    [
-     32,
-     "SWINUB"
-    ],
-    [
-     30,
-     "PARAS"
-    ],
-    [
-     31,
      "VENONAT"
     ],
     [
+     31,
+     "HOPPIP"
+    ],
+    [
+     29,
+     "SCYTHER"
+    ],
+    [
+     32,
+     "CUBONE"
+    ],
+    [
+     30,
+     "SQUIRTLE"
+    ],
+    [
+     31,
+     "STARYU"
+    ],
+    [
      33,
-     "MAGNEMITE"
+     "PICHU"
     ]
    ],
    "nite": [
     [
      30,
-     "TOTODILE"
-    ],
-    [
-     31,
-     "GEODUDE"
-    ],
-    [
-     29,
-     "SLOWPOKE"
-    ],
-    [
-     32,
-     "SWINUB"
-    ],
-    [
-     30,
-     "PARAS"
-    ],
-    [
-     31,
      "VENONAT"
     ],
     [
+     31,
+     "HOPPIP"
+    ],
+    [
+     29,
+     "SCYTHER"
+    ],
+    [
+     32,
+     "CUBONE"
+    ],
+    [
+     30,
+     "SQUIRTLE"
+    ],
+    [
+     31,
+     "STARYU"
+    ],
+    [
      33,
-     "MAGNEMITE"
+     "PICHU"
     ]
    ],
    "rate": 10
@@ -983,289 +789,95 @@
    "area": 2,
    "map": "GrovePlaza4",
    "const": "GROVE_PLAZA4",
-   "level": 33.5,
-   "morn": [
-    [
-     34,
-     "SQUIRTLE"
-    ],
-    [
-     35,
-     "STARYU"
-    ],
-    [
-     33,
-     "ODDISH"
-    ],
-    [
-     36,
-     "PARAS"
-    ],
-    [
-     34,
-     "HOPPIP"
-    ],
-    [
-     35,
-     "SCYTHER"
-    ],
-    [
-     37,
-     "SMOOCHUM"
-    ]
-   ],
-   "day": [
-    [
-     34,
-     "SQUIRTLE"
-    ],
-    [
-     35,
-     "STARYU"
-    ],
-    [
-     33,
-     "ODDISH"
-    ],
-    [
-     36,
-     "PARAS"
-    ],
-    [
-     34,
-     "HOPPIP"
-    ],
-    [
-     35,
-     "SCYTHER"
-    ],
-    [
-     37,
-     "SMOOCHUM"
-    ]
-   ],
-   "nite": [
-    [
-     34,
-     "SQUIRTLE"
-    ],
-    [
-     35,
-     "STARYU"
-    ],
-    [
-     33,
-     "ODDISH"
-    ],
-    [
-     36,
-     "PARAS"
-    ],
-    [
-     34,
-     "HOPPIP"
-    ],
-    [
-     35,
-     "SCYTHER"
-    ],
-    [
-     37,
-     "SMOOCHUM"
-    ]
-   ],
-   "rate": 10
-  },
-  {
-   "area": 2,
-   "map": "GrovePlaza5",
-   "const": "GROVE_PLAZA5",
    "level": 36.7,
    "morn": [
     [
      37,
-     "CUBONE"
-    ],
-    [
-     38,
      "TOTODILE"
     ],
     [
-     36,
+     38,
      "GEODUDE"
     ],
     [
-     39,
+     36,
      "SLOWPOKE"
     ],
     [
-     37,
+     39,
      "SWINUB"
     ],
     [
+     37,
+     "SCYTHER"
+    ],
+    [
      38,
-     "BELLSPROUT"
+     "CUBONE"
     ],
     [
      40,
-     "LARVITAR"
+     "MAGNEMITE"
     ]
    ],
    "day": [
     [
      37,
-     "CUBONE"
-    ],
-    [
-     38,
      "TOTODILE"
     ],
     [
-     36,
+     38,
      "GEODUDE"
     ],
     [
-     39,
+     36,
      "SLOWPOKE"
     ],
     [
-     37,
+     39,
      "SWINUB"
     ],
     [
+     37,
+     "SCYTHER"
+    ],
+    [
      38,
-     "BELLSPROUT"
+     "CUBONE"
     ],
     [
      40,
-     "LARVITAR"
+     "MAGNEMITE"
     ]
    ],
    "nite": [
     [
      37,
-     "CUBONE"
+     "TOTODILE"
     ],
     [
      38,
-     "TOTODILE"
+     "GEODUDE"
     ],
     [
      36,
-     "GEODUDE"
-    ],
-    [
-     39,
      "SLOWPOKE"
     ],
     [
-     37,
+     39,
      "SWINUB"
     ],
     [
+     37,
+     "SCYTHER"
+    ],
+    [
      38,
-     "BELLSPROUT"
+     "CUBONE"
     ],
     [
      40,
-     "LARVITAR"
-    ]
-   ],
-   "rate": 10
-  },
-  {
-   "area": 2,
-   "map": "GrovePlaza6",
-   "const": "GROVE_PLAZA6",
-   "level": 39.8,
-   "morn": [
-    [
-     40,
-     "BULBASAUR"
-    ],
-    [
-     41,
-     "CATERPIE"
-    ],
-    [
-     39,
-     "CHIKORITA"
-    ],
-    [
-     42,
-     "STARYU"
-    ],
-    [
-     40,
-     "TOTODILE"
-    ],
-    [
-     41,
-     "GEODUDE"
-    ],
-    [
-     43,
-     "ONIX"
-    ]
-   ],
-   "day": [
-    [
-     40,
-     "BULBASAUR"
-    ],
-    [
-     41,
-     "CATERPIE"
-    ],
-    [
-     39,
-     "CHIKORITA"
-    ],
-    [
-     42,
-     "STARYU"
-    ],
-    [
-     40,
-     "TOTODILE"
-    ],
-    [
-     41,
-     "GEODUDE"
-    ],
-    [
-     43,
-     "ONIX"
-    ]
-   ],
-   "nite": [
-    [
-     40,
-     "BULBASAUR"
-    ],
-    [
-     41,
-     "CATERPIE"
-    ],
-    [
-     39,
-     "CHIKORITA"
-    ],
-    [
-     42,
-     "STARYU"
-    ],
-    [
-     40,
-     "TOTODILE"
-    ],
-    [
-     41,
-     "GEODUDE"
-    ],
-    [
-     43,
-     "ONIX"
+     "MAGNEMITE"
     ]
    ],
    "rate": 10
@@ -1278,91 +890,91 @@
    "morn": [
     [
      43,
-     "SWINUB"
-    ],
-    [
-     44,
-     "BELLSPROUT"
-    ],
-    [
-     42,
      "ODDISH"
     ],
     [
+     44,
+     "PARAS"
+    ],
+    [
+     42,
+     "SQUIRTLE"
+    ],
+    [
      45,
-     "VENONAT"
+     "STARYU"
     ],
     [
      43,
-     "SLOWPOKE"
+     "TOTODILE"
     ],
     [
      44,
-     "BULBASAUR"
+     "GEODUDE"
     ],
     [
      46,
-     "RHYHORN"
+     "SMOOCHUM"
     ]
    ],
    "day": [
     [
      43,
-     "SWINUB"
-    ],
-    [
-     44,
-     "BELLSPROUT"
-    ],
-    [
-     42,
      "ODDISH"
     ],
     [
+     44,
+     "PARAS"
+    ],
+    [
+     42,
+     "SQUIRTLE"
+    ],
+    [
      45,
-     "VENONAT"
+     "STARYU"
     ],
     [
      43,
-     "SLOWPOKE"
+     "TOTODILE"
     ],
     [
      44,
-     "BULBASAUR"
+     "GEODUDE"
     ],
     [
      46,
-     "RHYHORN"
+     "SMOOCHUM"
     ]
    ],
    "nite": [
     [
      43,
-     "SWINUB"
-    ],
-    [
-     44,
-     "BELLSPROUT"
-    ],
-    [
-     42,
      "ODDISH"
     ],
     [
+     44,
+     "PARAS"
+    ],
+    [
+     42,
+     "SQUIRTLE"
+    ],
+    [
      45,
-     "VENONAT"
+     "STARYU"
     ],
     [
      43,
-     "SLOWPOKE"
+     "TOTODILE"
     ],
     [
      44,
-     "BULBASAUR"
+     "GEODUDE"
     ],
     [
      46,
-     "RHYHORN"
+     "SMOOCHUM"
     ]
    ],
    "rate": 10

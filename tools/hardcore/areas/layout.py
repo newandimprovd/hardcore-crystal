@@ -37,6 +37,20 @@ def autotile(m, kit, rng):
         m.set(x, y, rng.choice(auto[role]))
 
 
+def reach(m, kit, start):
+    """Set of walkable cells (cell coordinates) reachable on foot from `start`: floor and tall grass quadrants of the blocks."""
+    seen, stack = {start}, [start]
+    while stack:
+        x, y = stack.pop()
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < 2 * m.w and 0 <= ny < 2 * m.h and (nx, ny) not in seen:
+                if kit.coll[m.get(nx // 2, ny // 2)][(nx % 2) + 2 * (ny % 2)] in ("FLOOR", "TALL_GRASS"):
+                    seen.add((nx, ny))
+                    stack.append((nx, ny))
+    return seen
+
+
 def blk(path):
     return open(os.path.join(ROOT, path), "rb").read()
 
@@ -99,7 +113,7 @@ def lane(g, name, kit, rng, *, trainers=13, a=3, cw=3, right=3, landmark, music,
             side ^= 1
     autotile(m, kit, rng)
     g.add(m)
-    m.a, m.cw = a, cw
+    m.a, m.a_out, m.cw = a, a, cw
     m.door = door
     return m, slots
 
@@ -165,7 +179,7 @@ def gate_objects(m, kind, w, x, y):
 
 def chain(lower, upper, offset=0):
     """Connect upper to the north of lower."""
-    lower.connect("north", upper, offset)
+    lower.connect("north", upper, offset)  # offset: columns of upper = columns of lower + offset; callers pass lower.a_out - upper.a
     upper.connect("south", lower, -offset)
 
 
@@ -245,7 +259,7 @@ def plaza(g, name, kit, rng, *, landmark, music, a=3, cw=3, width=13, height=11,
     m.grass = grass_patches(m, kit)
     autotile(m, kit, rng)
     g.add(m)
-    m.a, m.cw = a, cw
+    m.a, m.a_out, m.cw = a, a, cw
     m.spawn_cell = (kit.door_cell(1, 1, pc[1][0])[0], kit.door_cell(1, 1, pc[1][0])[1] + 1)
     return m, doors
 

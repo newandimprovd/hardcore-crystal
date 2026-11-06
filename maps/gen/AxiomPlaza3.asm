@@ -10,10 +10,10 @@ AxiomPlaza3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, AXIOM_POKECENTER3, 1
-	warp_event 12,  3, AXIOM_MART3, 1
-	warp_event 16,  3, AXIOM_HOUSE3, 1
-	warp_event 20,  3, AXIOM_REGISTRY, 1
+	warp_event  4,  3, AXIOM_REGISTRY, 1
+	warp_event  8,  3, AXIOM_POKECENTER3, 1
+	warp_event 20,  3, AXIOM_MART3, 1
+	warp_event 24,  3, AXIOM_HOUSE3, 1
 
 	def_coord_events
 

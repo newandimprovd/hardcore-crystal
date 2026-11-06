@@ -23,8 +23,8 @@ LotusGate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  0, LOTUS_PLAZA1, 4
-	warp_event  5,  0, LOTUS_PLAZA1, 4
+	warp_event  4,  0, LOTUS_PLAZA1, 2
+	warp_event  5,  0, LOTUS_PLAZA1, 2
 	warp_event  4,  7, AXIOM_MAYORALTY, 3
 	warp_event  5,  7, AXIOM_MAYORALTY, 3
 

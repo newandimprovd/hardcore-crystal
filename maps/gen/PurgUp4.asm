@@ -65,19 +65,16 @@ PurgUp4AfterScript:
 	end
 
 PurgUp4Trainer0:
-	trainer T_SUIT, 147, EVENT_GEN_PURG_UP4_0, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer L_SAILOR, 139, EVENT_GEN_PURG_UP4_0, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
 
 PurgUp4Trainer1:
-	trainer U_SERFF, 153, EVENT_GEN_PURG_UP4_1, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer U_SERF, 165, EVENT_GEN_PURG_UP4_1, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
 
 PurgUp4Trainer2:
-	trainer T_PRIEST, 143, EVENT_GEN_PURG_UP4_2, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer U_SERF, 166, EVENT_GEN_PURG_UP4_2, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
 
 PurgUp4Trainer3:
-	trainer T_SUIT, 148, EVENT_GEN_PURG_UP4_3, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
-
-PurgUp4Trainer4:
-	trainer T_SUIT, 149, EVENT_GEN_PURG_UP4_4, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer T_NUN, 145, EVENT_GEN_PURG_UP4_3, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
 
 PurgUp4Hermit0:
 	faceplayer
@@ -90,7 +87,7 @@ PurgUp4Hermit0:
 	waitbutton
 	closetext
 	winlosstext PurgUp4Hermit0BeatenText, 0
-	loadtrainer G_GRANNY, 148
+	loadtrainer G_GRANNY, 156
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_PURG_UP4_HERMIT0
@@ -164,7 +161,7 @@ PurgUp4Hermit1:
 	waitbutton
 	closetext
 	winlosstext PurgUp4Hermit1BeatenText, 0
-	loadtrainer G_SHAMAN, 159
+	loadtrainer G_SHAMAN, 152
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_PURG_UP4_HERMIT1
@@ -234,8 +231,8 @@ PurgUp4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 15,  7, PURG_UP3, 2
-	warp_event  9, 29, PURG_LANDING, 1
+	warp_event 27,  9, PURG_UP3, 2
+	warp_event 19, 31, PURG_LANDING, 1
 
 	def_coord_events
 
@@ -244,13 +241,12 @@ PurgUp4_MapEvents:
 	def_object_events
 	object_event 14, 20, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp4Gate0Script, EVENT_GEN_PURG_UP4_GATE0
 	object_event 15, 20, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp4Gate0Script, EVENT_GEN_PURG_UP4_GATE0
-	object_event 20,  8, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer0, -1
-	object_event 24, 11, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer1, -1
-	object_event 19, 12, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, PurgUp4Trainer2, -1
-	object_event  9, 32, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, PurgUp4Trainer3, -1
-	object_event 20, 30, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer4, -1
-	object_event 28, 10, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PurgUp4Hermit0, -1
-	object_event 24, 28, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PurgUp4Hermit1, -1
-	object_event 10,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp4BALL0, EVENT_GEN_PURG_UP4_BALL0
-	object_event 15, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp4BALL1, EVENT_GEN_PURG_UP4_BALL1
+	object_event 13, 12, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, PurgUp4Trainer0, -1
+	object_event 22,  8, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer1, -1
+	object_event  8, 26, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer2, -1
+	object_event 14,  8, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer3, -1
+	object_event 24, 28, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PurgUp4Hermit0, -1
+	object_event 30, 30, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PurgUp4Hermit1, -1
+	object_event 18,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp4BALL0, EVENT_GEN_PURG_UP4_BALL0
+	object_event 12, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp4BALL1, EVENT_GEN_PURG_UP4_BALL1
 

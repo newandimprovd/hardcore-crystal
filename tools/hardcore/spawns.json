@@ -1,0 +1,632 @@
+{
+ "AxiomPlaza1": {
+  "const": "AXIOM_PLAZA1",
+  "grass": [
+   7,
+   9,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   22,
+   4
+  ],
+  "street": [
+   15,
+   15
+  ],
+  "w": 15
+ },
+ "AxiomPlaza2": {
+  "const": "AXIOM_PLAZA2",
+  "grass": [
+   22,
+   9,
+   3
+  ],
+  "h": 14,
+  "spawn": [
+   4,
+   4
+  ],
+  "street": [
+   9,
+   15
+  ],
+  "w": 15
+ },
+ "AxiomPlaza3": {
+  "const": "AXIOM_PLAZA3",
+  "grass": [
+   16,
+   21,
+   3
+  ],
+  "h": 13,
+  "spawn": [
+   8,
+   4
+  ],
+  "street": [
+   5,
+   13
+  ],
+  "w": 15
+ },
+ "AxiomPlaza4": {
+  "const": "AXIOM_PLAZA4",
+  "grass": [
+   6,
+   21,
+   3
+  ],
+  "h": 13,
+  "spawn": [
+   16,
+   4
+  ],
+  "street": [
+   5,
+   11
+  ],
+  "w": 13
+ },
+ "AxiomPlaza5": {
+  "const": "AXIOM_PLAZA5",
+  "grass": [
+   18,
+   9,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   28,
+   4
+  ],
+  "street": [
+   5,
+   13
+  ],
+  "w": 19
+ },
+ "AxiomPlaza6": {
+  "const": "AXIOM_PLAZA6",
+  "grass": [
+   8,
+   25,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   22,
+   4
+  ],
+  "street": [
+   9,
+   17
+  ],
+  "w": 15
+ },
+ "AxiomPlaza7": {
+  "const": "AXIOM_PLAZA7",
+  "grass": [
+   8,
+   19,
+   3
+  ],
+  "h": 13,
+  "spawn": [
+   16,
+   4
+  ],
+  "street": [
+   17,
+   11
+  ],
+  "w": 17
+ },
+ "DisPlaza1": {
+  "const": "DIS_PLAZA1",
+  "grass": [
+   7,
+   23,
+   3
+  ],
+  "h": 14,
+  "spawn": [
+   2,
+   4
+  ],
+  "street": [
+   7,
+   13
+  ],
+  "w": 15
+ },
+ "DisPlaza2": {
+  "const": "DIS_PLAZA2",
+  "grass": [
+   8,
+   9,
+   3
+  ],
+  "h": 13,
+  "spawn": [
+   8,
+   4
+  ],
+  "street": [
+   9,
+   13
+  ],
+  "w": 13
+ },
+ "DisPlaza3": {
+  "const": "DIS_PLAZA3",
+  "grass": [
+   29,
+   21,
+   2
+  ],
+  "h": 13,
+  "spawn": [
+   6,
+   4
+  ],
+  "street": [
+   11,
+   13
+  ],
+  "w": 17
+ },
+ "DisPlaza4": {
+  "const": "DIS_PLAZA4",
+  "grass": [
+   8,
+   9,
+   3
+  ],
+  "h": 14,
+  "spawn": [
+   8,
+   4
+  ],
+  "street": [
+   9,
+   13
+  ],
+  "w": 13
+ },
+ "DisPlaza5": {
+  "const": "DIS_PLAZA5",
+  "grass": [
+   6,
+   23,
+   3
+  ],
+  "h": 14,
+  "spawn": [
+   18,
+   4
+  ],
+  "street": [
+   7,
+   13
+  ],
+  "w": 15
+ },
+ "DisPlaza6": {
+  "const": "DIS_PLAZA6",
+  "grass": [
+   7,
+   19,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   2,
+   4
+  ],
+  "street": [
+   7,
+   11
+  ],
+  "w": 13
+ },
+ "DisPlaza7": {
+  "const": "DIS_PLAZA7",
+  "grass": [
+   24,
+   19,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   4,
+   4
+  ],
+  "street": [
+   13,
+   11
+  ],
+  "w": 15
+ },
+ "GrovePlaza1": {
+  "const": "GROVE_PLAZA1",
+  "grass": [
+   0,
+   0,
+   0
+  ],
+  "h": 14,
+  "spawn": [
+   16,
+   4
+  ],
+  "street": [
+   3,
+   11
+  ],
+  "w": 17
+ },
+ "GrovePlaza2": {
+  "const": "GROVE_PLAZA2",
+  "grass": [
+   16,
+   25,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   2,
+   4
+  ],
+  "street": [
+   5,
+   17
+  ],
+  "w": 15
+ },
+ "GrovePlaza3": {
+  "const": "GROVE_PLAZA3",
+  "grass": [
+   23,
+   25,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   14,
+   4
+  ],
+  "street": [
+   11,
+   15
+  ],
+  "w": 15
+ },
+ "GrovePlaza4": {
+  "const": "GROVE_PLAZA4",
+  "grass": [
+   8,
+   25,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   14,
+   4
+  ],
+  "street": [
+   9,
+   15
+  ],
+  "w": 15
+ },
+ "GrovePlaza5": {
+  "const": "GROVE_PLAZA5",
+  "grass": [
+   0,
+   0,
+   0
+  ],
+  "h": 14,
+  "spawn": [
+   18,
+   4
+  ],
+  "street": [
+   3,
+   11
+  ],
+  "w": 17
+ },
+ "GrovePlaza6": {
+  "const": "GROVE_PLAZA6",
+  "grass": [
+   0,
+   0,
+   0
+  ],
+  "h": 14,
+  "spawn": [
+   16,
+   4
+  ],
+  "street": [
+   9,
+   11
+  ],
+  "w": 13
+ },
+ "GrovePlaza7": {
+  "const": "GROVE_PLAZA7",
+  "grass": [
+   16,
+   9,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   10,
+   4
+  ],
+  "street": [
+   5,
+   13
+  ],
+  "w": 15
+ },
+ "LotusPlaza1": {
+  "const": "LOTUS_PLAZA1",
+  "grass": [
+   29,
+   9,
+   2
+  ],
+  "h": 15,
+  "spawn": [
+   6,
+   4
+  ],
+  "street": [
+   3,
+   13
+  ],
+  "w": 17
+ },
+ "LotusPlaza2": {
+  "const": "LOTUS_PLAZA2",
+  "grass": [
+   16,
+   23,
+   3
+  ],
+  "h": 14,
+  "spawn": [
+   8,
+   4
+  ],
+  "street": [
+   5,
+   13
+  ],
+  "w": 15
+ },
+ "LotusPlaza3": {
+  "const": "LOTUS_PLAZA3",
+  "grass": [
+   16,
+   23,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   24,
+   4
+  ],
+  "street": [
+   5,
+   15
+  ],
+  "w": 15
+ },
+ "LotusPlaza4": {
+  "const": "LOTUS_PLAZA4",
+  "grass": [
+   21,
+   21,
+   2
+  ],
+  "h": 13,
+  "spawn": [
+   4,
+   4
+  ],
+  "street": [
+   3,
+   11
+  ],
+  "w": 13
+ },
+ "LotusPlaza5": {
+  "const": "LOTUS_PLAZA5",
+  "grass": [
+   19,
+   9,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   10,
+   4
+  ],
+  "street": [
+   11,
+   13
+  ],
+  "w": 19
+ },
+ "LotusPlaza6": {
+  "const": "LOTUS_PLAZA6",
+  "grass": [
+   8,
+   9,
+   3
+  ],
+  "h": 14,
+  "spawn": [
+   6,
+   4
+  ],
+  "street": [
+   3,
+   13
+  ],
+  "w": 13
+ },
+ "LotusPlaza7": {
+  "const": "LOTUS_PLAZA7",
+  "grass": [
+   6,
+   11,
+   3
+  ],
+  "h": 14,
+  "spawn": [
+   8,
+   4
+  ],
+  "street": [
+   9,
+   15
+  ],
+  "w": 17
+ },
+ "TithePlaza1": {
+  "const": "TITHE_PLAZA1",
+  "grass": [
+   13,
+   19,
+   2
+  ],
+  "h": 13,
+  "spawn": [
+   4,
+   4
+  ],
+  "street": [
+   11,
+   11
+  ],
+  "w": 15
+ },
+ "TithePlaza2": {
+  "const": "TITHE_PLAZA2",
+  "grass": [
+   7,
+   19,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   2,
+   4
+  ],
+  "street": [
+   7,
+   11
+  ],
+  "w": 13
+ },
+ "TithePlaza3": {
+  "const": "TITHE_PLAZA3",
+  "grass": [
+   0,
+   0,
+   0
+  ],
+  "h": 14,
+  "spawn": [
+   2,
+   4
+  ],
+  "street": [
+   3,
+   11
+  ],
+  "w": 17
+ },
+ "TithePlaza4": {
+  "const": "TITHE_PLAZA4",
+  "grass": [
+   6,
+   11,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   20,
+   4
+  ],
+  "street": [
+   3,
+   15
+  ],
+  "w": 13
+ },
+ "TithePlaza5": {
+  "const": "TITHE_PLAZA5",
+  "grass": [
+   7,
+   19,
+   3
+  ],
+  "h": 15,
+  "spawn": [
+   28,
+   4
+  ],
+  "street": [
+   13,
+   11
+  ],
+  "w": 17
+ },
+ "TithePlaza6": {
+  "const": "TITHE_PLAZA6",
+  "grass": [
+   8,
+   9,
+   3
+  ],
+  "h": 14,
+  "spawn": [
+   8,
+   4
+  ],
+  "street": [
+   9,
+   15
+  ],
+  "w": 15
+ },
+ "TithePlaza7": {
+  "const": "TITHE_PLAZA7",
+  "grass": [
+   6,
+   11,
+   3
+  ],
+  "h": 14,
+  "spawn": [
+   16,
+   4
+  ],
+  "street": [
+   11,
+   15
+  ],
+  "w": 15
+ }
+}

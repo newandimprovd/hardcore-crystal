@@ -11,9 +11,9 @@ TithePlaza3_MapEvents:
 
 	def_warp_events
 	warp_event  2,  3, TITHE_POKECENTER3, 1
+	warp_event  8,  3, TITHE_HOUSE3, 1
 	warp_event 12,  3, TITHE_MART3, 1
-	warp_event 16,  3, TITHE_HOUSE3, 1
-	warp_event 20,  3, TITHE_VESTRY, 1
+	warp_event 16,  3, TITHE_VESTRY, 1
 
 	def_coord_events
 

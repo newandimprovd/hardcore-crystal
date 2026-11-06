@@ -87,7 +87,7 @@ R("PYREMOTH", "insect",
 
 # ============================================================================================ Jumpluff
 R("DANDELION", "orb",
-  dict(kind="cloud", r=1.05, cloud_n=6, arms=0, spikes=11, spike_size=0.55, eye="round", mouth_big=True, face_s=0.9, hover=0.7),
+  dict(kind="puff", r=1.0, puff_n=44, arms=2, arm_len=0.9, arm_r=0.17, hand="claw", spikes=0, legs=True, eye="round", mouth_big=True, face_s=0.9, hover=0.35),
   *P((29, 28, 17), (22, 20, 8), 1))
 
 # ============================================================================================ Fearow line
@@ -125,10 +125,10 @@ R("SOPORIFIC", "biped",
        tail={"kind": "plain", "length": 1.0, "thick": 0.3, "curl": 0.8}, back=None, spikes=False),
   *P((30, 22, 26), (22, 11, 17), 2))
 R("PLACEBO", "orb",
-  dict(kind="blob", r=1.25, arms=2, spikes=0, eye="round", mouth_big=True, face_s=0.9, hover=0.2),
+  dict(kind="pill", r=1.0, tilt=18, arms=2, arm_len=0.8, arm_r=0.16, spikes=0, legs=True, eye="round", mouth_big=True, face_s=0.8, hover=0.3, extra_eyes=0),
   *P((31, 26, 27), (25, 15, 18), 2), front=dict(yaw=10), back=dict(yaw=-170))
 R("HOSPICE", "orb",
-  dict(kind="ghost", r=1.2, arms=2, spikes=0, eye="round", mouth_big=True, face_s=0.9, hover=0.6),
+  dict(kind="ghost", r=1.2, arms=2, arm_len=1.0, spikes=0, halo=True, iv=True, bands=2, eye="round", mouth_big=True, face_s=0.9, hover=0.6),
   *P((27, 26, 31), (17, 15, 25), 0), front=dict(yaw=12), back=dict(yaw=-168))
 
 # ============================================================================================ Nidoqueen, Nidoking
@@ -254,17 +254,17 @@ R("BLACKSHEEP", "biped",
 
 # ============================================================================================ Magneton, Porygon2 lines
 R("MAGNETRON", "orb",
-  dict(kind="core", r=0.9, arms=0, spikes=0, satellites=3, sat_r=0.5, eye="round", mouth_big=True, hover=0.6, face_s=0.9),
+  dict(kind="magnets", r=0.95, arms=0, spikes=0, sat_r=0.42, eye="round", mouth_big=True, hover=0.55, face_s=0.9),
   *P((17, 20, 27), (8, 10, 19), 1))
 R("SOLENOID", "orb",
-  dict(kind="core", r=1.2, arms=0, spikes=6, spike_size=0.5, satellites=4, sat_r=0.5, eye="slit", mouth_big=True, hover=0.4, face_s=1.0),
+  dict(kind="coil", r=1.1, turns=7, arms=2, arm_len=1.1, arm_r=0.16, hand="claw", spikes=0, eye="slit", mouth_big=True, hover=0.35, face_s=0.8),
   *P((27, 19, 8), (14, 8, 4), 0))
 R("MAINFRAME", "biped",
   dict(bulk=1.2, hunch=6, head="robot", head_s=1.5, arms=1, hand="fist", tail=None, back=("plates", 3, 0.8), tex=("dots", 0.3, 0.12, 2), spikes=False,
        foot_size=1.4),
   *P((22, 22, 19), (9, 10, 13), 1))
 R("ALGORITHM", "orb",
-  dict(kind="core", r=1.05, arms=0, spikes=0, satellites=6, sat_r=0.3, eye="slit", mouth_big=True, hover=0.5, face_s=1.0),
+  dict(kind="cubes", r=1.0, sat_n=7, sat_r=0.32, arms=0, spikes=0, eye="slit", mouth_big=True, hover=0.55, face_s=0.9),
   *P((8, 23, 24), (3, 10, 14), 1))
 
 # ============================================================================================ Marowak line
@@ -279,16 +279,16 @@ R("OSSUARY", "biped",
 
 # ============================================================================================ Muk, Weezing lines
 R("SLUDGELORD", "orb",
-  dict(kind="blob", r=1.35, arms=2, arm_len=1.2, spikes=7, spike_size=0.45, eye="angry", mouth_big=True, hover=0.1, tex=("spots", 3.0, 0.64, 2)),
+  dict(kind="heap", r=1.25, arms=2, arm_len=1.1, spikes=0, bumps=7, drips=4, pods=3, junk=4, bubbles=5, eye="angry", mouth_big=True, hover=0.1, tex=("spots", 3.0, 0.64, 2), seed=3),
   *P((16, 9, 20), (7, 3, 11), 1), front=dict(yaw=10), back=dict(yaw=-170))
 R("SUPERFUND", "orb",
-  dict(kind="blob", r=1.7, arms=3, arm_len=1.3, spikes=0, eye="round", mouth_big=True, hover=0.05, tex=("spots", 2.5, 0.6, 2)),
+  dict(kind="heap", r=1.55, arms=3, arm_len=1.2, spikes=0, bumps=6, drips=5, pods=4, junk=7, bubbles=8, extra_eyes=1, eye="round", mouth_big=True, hover=0.05, tex=("spots", 2.5, 0.6, 2), seed=5),
   *P((14, 24, 8), (5, 12, 3), 1), front=dict(yaw=10), back=dict(yaw=-170))
 R("MIASMA", "orb",
-  dict(kind="cloud", r=0.95, cloud_n=6, arms=0, spikes=0, eye="slit", mouth_big=True, hover=0.6),
+  dict(kind="cloud", r=0.95, cloud_n=7, arms=0, spikes=0, tendrils=5, bumps=0, extra_eyes=1, eye="slit", mouth_big=True, hover=0.75),
   *P((20, 16, 24), (10, 7, 16), 0))
 R("PANDEMIC", "orb",
-  dict(kind="cloud", r=1.15, cloud_n=7, arms=0, spikes=10, spike_size=0.45, eye="angry", mouth_big=True, hover=0.5),
+  dict(kind="cloud", r=1.1, cloud_n=7, arms=0, spikes=0, virus=24, tendrils=3, extra_eyes=2, eye="angry", mouth_big=True, hover=0.65),
   *P((10, 17, 10), (4, 7, 5), 1))
 
 # ============================================================================================ Rhydon line
@@ -337,10 +337,10 @@ R("FROSTSIREN", "serpent",
 
 # ============================================================================================ Cloyster line
 R("CRYOCLAM", "orb",
-  dict(kind="core", r=1.1, arms=0, spikes=9, spike_size=0.7, eye="angry", mouth_big=True, hover=0.15, face_s=1.0),
+  dict(kind="clam", r=1.05, arms=0, spikes=0, eye="angry", mouth_big=True, hover=0.1, face_s=0.9),
   *P((19, 25, 30), (9, 13, 22), 1), front=dict(yaw=10), back=dict(yaw=-170))
 R("ABYSSHELL", "orb",
-  dict(kind="core", r=1.3, arms=0, spikes=13, spike_size=0.95, satellites=1, sat_r=0.45, eye="hollow", mouth_big=True, hover=0.1, face_s=1.0),
+  dict(kind="nautilus", r=1.2, shell_spikes=9, arms=0, spikes=0, eye="hollow", mouth_big=True, hover=0.15, face_s=0.9),
   *P((8, 10, 21), (3, 4, 11), 0), front=dict(yaw=10), back=dict(yaw=-170))
 
 # ============================================================================================ Kingler
@@ -351,10 +351,10 @@ R("CARAPACE", "arthro",
 
 # ============================================================================================ Starmie line
 R("NEBULON", "orb",
-  dict(kind="star", r=1.15, arms=0, spikes=0, eye="round", mouth_big=True, hover=0.35, face_s=0.8),
+  dict(kind="starfish", r=1.15, star_arms=5, curl=0.6, halo=True, arms=0, spikes=0, satellites=2, sat_r=0.2, eye="round", mouth_big=True, hover=0.45, face_s=0.8),
   *P((18, 12, 26), (8, 5, 16), 1))
 R("SUPERNOVA", "orb",
-  dict(kind="star", r=1.35, arms=0, spikes=0, satellites=2, sat_r=0.35, eye="angry", mouth_big=True, hover=0.3, face_s=0.8),
+  dict(kind="starfish", r=1.3, star_arms=8, curl=0.15, halo=False, arms=0, spikes=0, eye="angry", mouth_big=True, hover=0.35, face_s=0.8, extra_eyes=2),
   *P((30, 22, 6), (24, 8, 3), 1))
 
 # ============================================================================================ Kingdra, Gyarados lines
@@ -379,7 +379,7 @@ R("TIDEBELLY", "biped",
        tail={"kind": "plain", "length": 0.9, "thick": 0.3, "curl": 0.9}, back=None, spikes=False),
   *P((12, 19, 28), (5, 9, 19), 2))
 R("BEACHBALL", "orb",
-  dict(kind="blob", r=1.5, arms=0, spikes=0, eye="round", mouth_big=True, hover=0.1, face_s=0.8, tex=("stripes", 1, 0.9, 0.5, 2)),
+  dict(kind="blob", r=1.45, arms=2, arm_len=0.7, arm_r=0.18, spikes=0, legs=True, hat=True, valve=True, eye="round", mouth_big=True, hover=0.2, face_s=0.8, tex=("stripes", 1, 0.9, 0.5, 2)),
   *P((29, 29, 31), (9, 14, 28), 1), front=dict(yaw=10), back=dict(yaw=-170))
 R("NARCOLEPT", "biped",
   dict(bulk=1.1, hunch=26, head="beast", head_s=1.5, head_kw=dict(snout=1.6, eye="dot", ears="round"), arms=1, hand="paw", torso_h=0.8,

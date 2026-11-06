@@ -11,9 +11,9 @@ GrovePlaza2_MapEvents:
 
 	def_warp_events
 	warp_event  2,  3, GROVE_POKECENTER2, 1
-	warp_event 12,  3, GROVE_MART2, 1
-	warp_event 16,  3, GROVE_HOUSE2, 1
-	warp_event 20,  3, GROVE_AMPHITHEATER, 1
+	warp_event  6,  3, GROVE_HOUSE2, 1
+	warp_event 10,  3, GROVE_MART2, 1
+	warp_event 14,  3, GROVE_AMPHITHEATER, 1
 
 	def_coord_events
 

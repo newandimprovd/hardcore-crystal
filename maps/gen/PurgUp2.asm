@@ -66,22 +66,28 @@ PurgUp2AfterScript:
 	end
 
 PurgUp2Trainer0:
-	trainer T_NUN, 148, EVENT_GEN_PURG_UP2_0, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer U_SERFF, 145, EVENT_GEN_PURG_UP2_0, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
 
 PurgUp2Trainer1:
-	trainer T_SUIT, 145, EVENT_GEN_PURG_UP2_1, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer G_SHAMAN, 149, EVENT_GEN_PURG_UP2_1, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
 
 PurgUp2Trainer2:
-	trainer T_BEGGAR, 145, EVENT_GEN_PURG_UP2_2, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer U_SERFF, 146, EVENT_GEN_PURG_UP2_2, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
 
 PurgUp2Trainer3:
-	trainer T_BEGGAR, 146, EVENT_GEN_PURG_UP2_3, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer U_SERFF, 147, EVENT_GEN_PURG_UP2_3, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
 
 PurgUp2Trainer4:
-	trainer T_SUIT, 146, EVENT_GEN_PURG_UP2_4, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer G_GRANNY, 154, EVENT_GEN_PURG_UP2_4, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
 
 PurgUp2Trainer5:
-	trainer U_SERF, 147, EVENT_GEN_PURG_UP2_5, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer G_SHAMAN, 150, EVENT_GEN_PURG_UP2_5, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+
+PurgUp2Trainer6:
+	trainer G_ELDER, 139, EVENT_GEN_PURG_UP2_6, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+
+PurgUp2Trainer7:
+	trainer G_ELDER, 140, EVENT_GEN_PURG_UP2_7, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
 
 PurgUp2Hermit0:
 	faceplayer
@@ -94,7 +100,7 @@ PurgUp2Hermit0:
 	waitbutton
 	closetext
 	winlosstext PurgUp2Hermit0BeatenText, 0
-	loadtrainer G_ELDER, 147
+	loadtrainer G_ELDER, 141
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_PURG_UP2_HERMIT0
@@ -163,7 +169,7 @@ PurgUp2Hermit1:
 	waitbutton
 	closetext
 	winlosstext PurgUp2Hermit1BeatenText, 0
-	loadtrainer G_GRANNY, 146
+	loadtrainer G_GRANNY, 155
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_PURG_UP2_HERMIT1
@@ -238,24 +244,26 @@ PurgUp2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11, 11, PURG_UP1, 2
-	warp_event 25, 31, PURG_UP3, 1
+	warp_event 25, 11, PURG_UP1, 2
+	warp_event 21, 29, PURG_UP3, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 18, 20, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp2Gate0Script, EVENT_GEN_PURG_UP2_GATE0
-	object_event 19, 20, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp2Gate0Script, EVENT_GEN_PURG_UP2_GATE0
-	object_event 19, 11, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp2Trainer0, -1
-	object_event 25, 14, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp2Trainer1, -1
-	object_event 15, 29, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp2Trainer2, -1
-	object_event 20, 28, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, PurgUp2Trainer3, -1
-	object_event 14, 12, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp2Trainer4, -1
-	object_event  9,  4, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp2Trainer5, -1
-	object_event 30, 30, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp2Hermit0, -1
-	object_event  8, 28, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PurgUp2Hermit1, -1
-	object_event 13,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp2BALL0, EVENT_GEN_PURG_UP2_BALL0
-	object_event 29, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp2BALL1, EVENT_GEN_PURG_UP2_BALL1
+	object_event 22, 20, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp2Gate0Script, EVENT_GEN_PURG_UP2_GATE0
+	object_event 23, 20, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp2Gate0Script, EVENT_GEN_PURG_UP2_GATE0
+	object_event 31,  4, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, PurgUp2Trainer0, -1
+	object_event 24, 28, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp2Trainer1, -1
+	object_event 16, 32, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, PurgUp2Trainer2, -1
+	object_event 26,  6, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp2Trainer3, -1
+	object_event 14, 28, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, PurgUp2Trainer4, -1
+	object_event 21,  6, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp2Trainer5, -1
+	object_event 30,  8, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, PurgUp2Trainer6, -1
+	object_event 10,  5, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp2Trainer7, -1
+	object_event 10, 28, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp2Hermit0, -1
+	object_event 30, 28, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PurgUp2Hermit1, -1
+	object_event 10,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp2BALL0, EVENT_GEN_PURG_UP2_BALL0
+	object_event 17,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp2BALL1, EVENT_GEN_PURG_UP2_BALL1
 

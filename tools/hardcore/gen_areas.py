@@ -50,6 +50,17 @@ def patch_extra():
         write("main.asm", m)
 
 
+def write_spawns(w):
+    """tools/hardcore/spawns.json: where the tests may put the player on every plaza (the Pokecenter door cell, and a street cell)."""
+    import json
+    out = {}
+    for g, m in w.all_maps():
+        if hasattr(m, "spawn_cell"):
+            e, xo, jr = getattr(m, "street", (3, 3, 4))
+            out[m.name] = dict(const=m.const, spawn=list(m.spawn_cell), street=[2 * min(e, xo) + 1, 2 * jr + 1], w=m.w, h=m.h, grass=list(getattr(m, "grass_cell", (0, 0, 0))))
+    json.dump(out, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "spawns.json"), "w"), indent=1, sort_keys=True)
+
+
 def main():
     rng = random.Random(20261024)
     w = World()
@@ -75,6 +86,7 @@ def main():
         name, const = "CherrygroveCity", "CHERRYGROVE_CITY"
     junction.connections["south"] = (Cherry, opening.STEM_A - opening.CHERRY_COL)
     purg.build(w, roster, rng, w.purg_doors, cave)
+    write_spawns(w)
     lore.emit(w)
     emit.patch_tree()
     wild.build(w, roster)

@@ -14,14 +14,14 @@ LotusPlaza5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, LOTUS_POKECENTER5, 1
-	warp_event 12,  3, LOTUS_MART5, 1
-	warp_event 16,  3, LOTUS_HOUSE5, 1
-	warp_event 20,  3, LOTUS_CABANA, 1
-	warp_event 24,  3, PURG_THRESHOLD, 5
+	warp_event  6,  3, LOTUS_MART5, 1
+	warp_event 10,  3, LOTUS_POKECENTER5, 1
+	warp_event 14,  3, PURG_THRESHOLD, 5
+	warp_event 18,  3, LOTUS_HOUSE5, 1
+	warp_event 22,  3, LOTUS_CABANA, 1
 
 	def_coord_events
-	coord_event 24,  4, -1, LotusPlaza5PurgFlagScript
+	coord_event 14,  4, -1, LotusPlaza5PurgFlagScript
 
 	def_bg_events
 

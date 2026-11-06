@@ -10,10 +10,10 @@ DisPlaza3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, DIS_POKECENTER3, 1
-	warp_event 12,  3, DIS_MART3, 1
-	warp_event 16,  3, DIS_HOUSE3, 1
-	warp_event 20,  3, DIS_GATEHOUSE, 1
+	warp_event  2,  3, DIS_HOUSE3, 1
+	warp_event  6,  3, DIS_POKECENTER3, 1
+	warp_event 14,  3, DIS_MART3, 1
+	warp_event 26,  3, DIS_GATEHOUSE, 1
 
 	def_coord_events
 

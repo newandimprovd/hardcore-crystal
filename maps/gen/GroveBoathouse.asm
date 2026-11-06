@@ -53,8 +53,8 @@ GroveBoathouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 17, GROVE_PLAZA3, 4
-	warp_event  5, 17, GROVE_PLAZA3, 4
+	warp_event  4, 17, GROVE_PLAZA3, 1
+	warp_event  5, 17, GROVE_PLAZA3, 1
 
 	def_coord_events
 

@@ -4,7 +4,7 @@ import random
 
 from . import a1_text as T
 from . import kits
-from .builder import ActSpec, BossSpec, build_act, pickup, town
+from .builder import ActSpec, BossSpec, build_act, make_plaza, pickup, town
 from .layout import chain, gatehouse, lane, plaza
 from .populate import populate
 from .text import Text
@@ -70,8 +70,8 @@ def build(w, roster, rng, open_exit=False):
     # Segment 2: the city (modern tileset)
     # The road ends at a checkpoint gate hall (the classic Pokemon route -> gate house -> city transition);
     # the plaza's south side is closed, so the hall is the only way in.
-    p1, d1 = plaza(g, "TithePlaza1", modern, rng, landmark=LM_CITY, music="MUSIC_GOLDENROD_CITY", rift=True,
-                   houses=1, south="closed")
+    p1, d1 = make_plaza(g, "TithePlaza1", modern, rng, landmark=LM_CITY, music="MUSIC_GOLDENROD_CITY", rift=True,
+                        houses=1, south="closed", index=1)
     gatehouse(g, "TitheCheckpoint", road.door, d1["rift"], LM_CITY, "MUSIC_GOLDENROD_CITY", [Text(T.GATE[0])])
     town(w, g, "Tithe", 1, p1, d1, modern, LM_CITY, "TITHE_1", items[0], texts, "TITHE_1", reminders=(T.TIP_A, T.TIP_B))
     # Trainer tips sign: a Johto signpost block just left of the road, above the neck. Read it from the road side.

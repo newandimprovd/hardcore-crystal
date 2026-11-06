@@ -143,15 +143,15 @@ LotusPlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, LOTUS_POKECENTER1, 1
-	warp_event 12,  3, LOTUS_MART1, 1
-	warp_event 16,  3, LOTUS_HOUSE1, 1
-	warp_event 20,  3, LOTUS_GATE, 1
+	warp_event  6,  3, LOTUS_POKECENTER1, 1
+	warp_event 16,  3, LOTUS_GATE, 1
+	warp_event 22,  3, LOTUS_MART1, 1
+	warp_event 28,  3, LOTUS_HOUSE1, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 20, 18, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranScript, -1
+	object_event 19,  9, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranScript, -1
 

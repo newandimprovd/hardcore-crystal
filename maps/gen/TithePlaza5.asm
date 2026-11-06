@@ -14,14 +14,14 @@ TithePlaza5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, TITHE_POKECENTER5, 1
-	warp_event 12,  3, TITHE_MART5, 1
-	warp_event 16,  3, TITHE_HOUSE5, 1
-	warp_event 20,  3, TITHE_EVIDENCE_ROOM, 1
-	warp_event 24,  3, PURG_THRESHOLD, 2
+	warp_event  4,  3, TITHE_EVIDENCE_ROOM, 1
+	warp_event  8,  3, TITHE_MART5, 1
+	warp_event 18,  3, PURG_THRESHOLD, 2
+	warp_event 22,  3, TITHE_HOUSE5, 1
+	warp_event 28,  3, TITHE_POKECENTER5, 1
 
 	def_coord_events
-	coord_event 24,  4, -1, TithePlaza5PurgFlagScript
+	coord_event 18,  4, -1, TithePlaza5PurgFlagScript
 
 	def_bg_events
 

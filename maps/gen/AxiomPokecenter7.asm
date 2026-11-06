@@ -25,8 +25,8 @@ AxiomPokecenter7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  7, AXIOM_PLAZA7, 1
-	warp_event  4,  7, AXIOM_PLAZA7, 1
+	warp_event  3,  7, AXIOM_PLAZA7, 3
+	warp_event  4,  7, AXIOM_PLAZA7, 3
 
 	def_coord_events
 

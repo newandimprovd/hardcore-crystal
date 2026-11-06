@@ -85,14 +85,14 @@ GrovePlaza4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, GROVE_POKECENTER4, 1
-	warp_event 12,  3, GROVE_MART4, 1
-	warp_event 16,  3, GROVE_HOUSE4, 1
+	warp_event 14,  3, GROVE_POKECENTER4, 1
+	warp_event 18,  3, GROVE_HOUSE4, 1
+	warp_event 24,  3, GROVE_MART4, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 20, 18, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4SteinerScript, -1
+	object_event  3, 22, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4SteinerScript, -1
 

@@ -21,10 +21,12 @@ step b_vc $TB vc TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=3 TEST_MON=CTHULUDON
 step cross python3 tools/hardcore/test_cross.py /home/claude/scratch/vc.gbc
 step b_cg1 $TB cg1 TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=8 TEST_MON=CTHULUDON TEST_LEVEL=60 TEST_REVEALED=1 TEST_ITEMS=1
 step whiteout python3 tools/hardcore/test_whiteout.py /home/claude/scratch/cg1.gbc
-step b_wa1 $TB wa1 TEST_MAP=TITHE_PLAZA1 TEST_X=12 TEST_Y=12 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_ITEMS=0
+read -r WC WX WY <<< "$(python3 tools/hardcore/spawn.py TithePlaza1 grass)"
+step b_wa1 $TB wa1 TEST_MAP=$WC TEST_X=$WX TEST_Y=$WY TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_ITEMS=0
 step wild python3 tools/hardcore/test_wild.py /home/claude/scratch/wa1.gbc TithePlaza1 40
 step split python3 tools/hardcore/test_split.py /home/claude/scratch/wa1.gbc 400
-step b_stA $TB stA TEST_MAP=TITHE_PLAZA1 TEST_X=3 TEST_Y=4 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
+read -r SC SX SY <<< "$(python3 tools/hardcore/spawn.py TithePlaza1 spawn)"
+step b_stA $TB stA TEST_MAP=$SC TEST_X=$SX TEST_Y=$SY TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
 step milestone python3 tools/hardcore/test_story.py milestone /home/claude/scratch/stA.gbc
 step b_stB $TB stB TEST_MAP=NEW_BARK_TOWN TEST_X=10 TEST_Y=10 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2
 step newbark python3 tools/hardcore/test_story.py newbark /home/claude/scratch/stB.gbc

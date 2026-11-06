@@ -182,6 +182,8 @@ class Walker:
         t = self.t
         quiet = 0
         for i in range(limit):
+            if i == 400:
+                print(f"  settle: still busy after 400 rounds at {self.raw_state()} script={t.mem('wScriptRunning')} battle={t.mem('wBattleMode')}", flush=True)
             if self.busy():
                 quiet = 0
                 t.pb.button("a", 4)

@@ -30,40 +30,40 @@ TitheStreet7AfterScript:
 	end
 
 TitheStreet7Trainer0:
-	trainer T_PRIEST, 131, EVENT_GEN_TITHE_STREET7_0, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_ACCOUNTANT, 129, EVENT_GEN_TITHE_STREET7_0, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer1:
-	trainer T_ENFORCER, 132, EVENT_GEN_TITHE_STREET7_1, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_COP, 134, EVENT_GEN_TITHE_STREET7_1, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer2:
-	trainer T_BEGGAR, 132, EVENT_GEN_TITHE_STREET7_2, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_SISTER, 132, EVENT_GEN_TITHE_STREET7_2, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer3:
-	trainer T_SUIT, 133, EVENT_GEN_TITHE_STREET7_3, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_SISTER, 133, EVENT_GEN_TITHE_STREET7_3, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer4:
-	trainer T_BANKER, 134, EVENT_GEN_TITHE_STREET7_4, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_ALTARBOY, 132, EVENT_GEN_TITHE_STREET7_4, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer5:
-	trainer T_BEGGAR, 133, EVENT_GEN_TITHE_STREET7_5, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_ALTARBOY, 133, EVENT_GEN_TITHE_STREET7_5, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer6:
-	trainer T_HOODIE, 130, EVENT_GEN_TITHE_STREET7_6, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_BEGGAR, 130, EVENT_GEN_TITHE_STREET7_6, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer7:
-	trainer T_COP, 146, EVENT_GEN_TITHE_STREET7_7, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_COP, 135, EVENT_GEN_TITHE_STREET7_7, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer8:
-	trainer T_ALTARBOY, 136, EVENT_GEN_TITHE_STREET7_8, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_COP, 136, EVENT_GEN_TITHE_STREET7_8, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer9:
-	trainer T_CHOIR, 130, EVENT_GEN_TITHE_STREET7_9, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_PRIEST, 139, EVENT_GEN_TITHE_STREET7_9, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer10:
-	trainer T_HOODIE, 131, EVENT_GEN_TITHE_STREET7_10, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_ENFORCER, 130, EVENT_GEN_TITHE_STREET7_10, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7Trainer11:
-	trainer T_SUIT, 134, EVENT_GEN_TITHE_STREET7_11, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_PRIEST, 140, EVENT_GEN_TITHE_STREET7_11, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7_MapEvents:
 	db 0, 0 ; filler
@@ -75,17 +75,17 @@ TitheStreet7_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  4, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet7Pickup, EVENT_GEN_TITHE_STREET7_PICKUP
-	object_event  2, 18, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer0, -1
-	object_event  7, 18, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer1, -1
-	object_event  2, 16, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer2, -1
-	object_event  7, 16, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer3, -1
-	object_event  2, 14, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer4, -1
-	object_event  7, 12, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer5, -1
-	object_event  2, 10, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer6, -1
-	object_event  2,  8, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer7, -1
-	object_event  7,  8, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer8, -1
-	object_event  2,  6, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer9, -1
-	object_event  7,  6, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer10, -1
-	object_event  7,  4, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer11, -1
+	object_event 21, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet7Pickup, EVENT_GEN_TITHE_STREET7_PICKUP
+	object_event 12, 24, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer0, -1
+	object_event 17, 24, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer1, -1
+	object_event 10, 22, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer2, -1
+	object_event  8, 20, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer3, -1
+	object_event 13, 20, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer4, -1
+	object_event  8, 18, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer5, -1
+	object_event 13, 18, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer6, -1
+	object_event  8, 16, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer7, -1
+	object_event 13, 16, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer8, -1
+	object_event 13, 14, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer9, -1
+	object_event 10, 12, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer10, -1
+	object_event 17, 10, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer11, -1
 

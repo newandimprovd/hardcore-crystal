@@ -88,6 +88,9 @@ def kanto():
                house=[0x7c, 0x7e], house_roof=[0x20, 0x21], rift=0x7c, border=0x0f)
 
 
+STYLE = {"TILESET_TITHE": "urban", "TILESET_GROVE": "wild", "TILESET_AXIOM": "urban", "TILESET_LOTUS": "wild", "TILESET_DIS": "wild"}
+
+
 def _art_kit(tileset, mod, weights):
     """Kit for a generated area tileset: ids come from art/<area>.py (roles), see gen_tilesets.py."""
     t = mod.build()
@@ -106,7 +109,7 @@ def _art_kit(tileset, mod, weights):
                plaza=plaza, center=[[ids["cr_l"], ids["cr_r"]], [ids["c_door"], ids["c_sign"]]],
                mart=[[ids["cr_l"], ids["cr_r"]], [ids["m_door"], ids["m_sign"]]],
                house=[ids["h_door"], ids["h_side"]], house_roof=[ids["hr_l"], ids["hr_r"]], rift=ids["rift"],
-               border=ids["border"], auto=auto, grass=r["grass"])
+               border=ids["border"], auto=auto, grass=r["grass"], scn=t.scn, style=STYLE[tileset])
 
 
 def tithe():

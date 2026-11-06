@@ -28,8 +28,8 @@ AxiomMart5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, AXIOM_PLAZA5, 2
-	warp_event  3,  7, AXIOM_PLAZA5, 2
+	warp_event  2,  7, AXIOM_PLAZA5, 5
+	warp_event  3,  7, AXIOM_PLAZA5, 5
 
 	def_coord_events
 

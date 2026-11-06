@@ -35,8 +35,8 @@ DisHouse5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, DIS_PLAZA5, 3
-	warp_event  3,  7, DIS_PLAZA5, 3
+	warp_event  2,  7, DIS_PLAZA5, 2
+	warp_event  3,  7, DIS_PLAZA5, 2
 
 	def_coord_events
 

@@ -1,6 +1,9 @@
 """Shared building blocks for the five areas: acts (a run of lanes ending in a plaza), town interiors, bosses."""
 from .flags import flag_once
 from .layout import (boss_room, chain, gatehouse, house_interior, lane, mart_interior, plaza, pokecenter_interior)
+from .town import plaza2
+from .wayfolk import HERMIT, TOWNIE
+from .trail import trail
 from .party import make_party
 from .text import Text
 
@@ -70,11 +73,79 @@ def pickup(w, m, reserve=0, total_lanes=75):
     taken = {(o["x"], o["y"]) for o in m.objects}
     cells = [(x, y) for y in range(5, 2 * m.h - 8, 2) for x in range(2 * a + 1, 2 * (a + cw) - 1)
              if (x, y) not in taken]
+    if hasattr(m, "corridor"):
+        cells = [(x, 2 * r + dy) for r in range(2, m.h - 3) for dy in (0, 1) for x in range(2 * m.corridor[r] + 1, 2 * (m.corridor[r] + cw) - 1)
+                 if (x, 2 * r + dy) not in taken]
+    gl = [cl for gd in getattr(m, "glades", []) for cl in gd["cells"] if cl not in taken]
+    if gl:  # the ball is the reward for leaving the road: it lies in a glade
+        cells = gl
     x, y = rnd.choice(cells)
     flag = w.flag(f"EVENT_GEN_{m.const}_PICKUP")
     m.scripts.append(f"{m.name}Pickup:\n\titemball {item}\n")
     m.obj(x, y, "SPRITE_POKE_BALL", "SPRITEMOVEDATA_STILL", f"{m.name}Pickup", otype="OBJECTTYPE_ITEMBALL", flag=flag)
     return item
+
+
+HIDDEN = [["ETHER", "ANTIDOTE", "REVIVE", "AWAKENING"], ["ETHER", "ELIXER", "REVIVE", "PP_UP"], ["MAX_ETHER", "ELIXER", "MAX_REVIVE", "PP_UP"]]
+NPC_PALS = ["PAL_NPC_BROWN", "PAL_NPC_GREEN", "PAL_NPC_BLUE", "PAL_NPC_RED", "PAL_NPC_PINK"]
+
+
+def people_sprites(g):
+    """The overworld sprites a group's outdoor maps can show (its sprite list) that are people."""
+    return [sp for sp in g.sprites if sp not in ("SPRITE_POKE_BALL", "SPRITE_ROCK", "SPRITE_BOULDER", "SPRITE_FRUIT_TREE")]
+
+
+def area_tag(m):
+    return next(t for t in ("Tithe", "Grove", "Axiom", "Lotus", "Dis") if m.name.startswith(t))
+
+
+def furnish_lane(w, g, m, reserve, total_lanes=75):
+    """What a glade holds besides the item ball: a hermit who talks (if the lane has an object left) and a hidden item under the
+    ground (a bg event, which costs no object).  Own random generator, seeded by the map name."""
+    import random
+    from .people import plain_npc
+    R = random.Random("furnish:" + m.name)
+    cells = [cl for gd in getattr(m, "glades", []) for cl in gd["cells"]]
+    if not cells:
+        return
+    taken = {(o["x"], o["y"]) for o in m.objects}
+    cells = [cl for cl in cells if cl not in taken]
+    tier = min(2, w.hidden * 3 // total_lanes) if hasattr(w, "hidden") else 0
+    w.hidden = getattr(w, "hidden", 0)
+    if R.random() < 0.8:
+        x, y = R.choice(cells)
+        cells.remove((x, y))
+        item = R.choice(HIDDEN[tier])
+        flag = w.flag(f"EVENT_GEN_{m.const}_HIDDEN")
+        m.scripts.append(f"{m.name}Hidden:\n\thiddenitem {item}, {flag}\n")
+        m.bg(x, y, "BGEVENT_ITEM", f"{m.name}Hidden")
+        w.hidden += 1
+    if len(m.objects) + reserve + 1 <= 15 and cells:
+        x, y = R.choice(cells)
+        tag = area_tag(m)
+        sp = R.choice(people_sprites(g))
+        plain_npc(m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}Hermit", R.choice(HERMIT[tag]))
+
+
+def crowd(w, g, m, n=6):
+    """Townsfolk for a plaza: n plain talkers on its free floor cells (from the front of the seeded list; cameos take from the end)."""
+    import random
+    from .people import plain_npc
+    R = random.Random("crowd:" + m.name)
+    tag = area_tag(m)
+    lines = list(TOWNIE[tag])
+    R.shuffle(lines)
+    for i, (x, y) in enumerate(m.npc_cells[:n]):
+        sp = R.choice(people_sprites(g))
+        plain_npc(m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}Townie{i}", lines[i % len(lines)])
+    m.npc_cells = m.npc_cells[n:]
+
+
+def make_plaza(g, name, kit, rng, *, index=0, width=None, **kw):
+    """The street town of the area tilesets (town.py); the old box plaza for the vanilla tilesets (the Johto road)."""
+    if kit.extra.get("scn"):
+        return plaza2(g, name, kit, rng, index=index, **kw)
+    return plaza(g, name, kit, rng, width=width or 13, **kw)
 
 
 def pick(lst, i):
@@ -115,25 +186,31 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
         first = i == 0
         gate = act.gate if first else None
         tr = act.trainers[i] if isinstance(act.trainers, (list, tuple)) else act.trainers
-        la = rng.choice((1, 2, 3, 4))  # the road drifts sideways from lane to lane, so it winds instead of running straight north
-        m, s = lane(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark, a=la, right=6 - la,
-                    music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal)
+        if kit.extra.get("scn"):
+            m, s = trail(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark, a=below.a_out,
+                         music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal)
+        else:
+            la = rng.choice((1, 2, 3, 4))  # the road drifts sideways from lane to lane, so it winds instead of running straight north
+            m, s = lane(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark, a=la, right=6 - la,
+                        music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal)
         pickup(w, m, reserve=len(s))
-        chain(below, m, below.a - m.a)
+        furnish_lane(w, g, m, reserve=len(s))
+        chain(below, m, below.a_out - m.a)
         lanes.append((m, s))
         below = m
         lane_no += 1
         if act.split and i + 1 == act.split:
-            pm, dm = plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
-                           houses=act.split_houses, width=act.plaza_width, pal=act.pal)
-            chain(below, pm, below.a - pm.a)
+            pm, dm = make_plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
+                                houses=act.split_houses, width=act.plaza_width, pal=act.pal, index=plaza_no)
+            chain(below, pm, below.a_out - pm.a)
             town(w, g, tag, plaza_no, pm, dm, kit, act.landmark, f"{tag.upper()}_{plaza_no}", stocks.pop(0), act.texts,
                  f"{tag.upper()}_{plaza_no}")
             below = pm
             plaza_no += 1
-    p, doors = plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
-                     houses=act.houses, extra=1 if act.boss else 0, width=act.plaza_width, pal=act.pal, rift=act.rift)
-    chain(below, p, below.a - p.a)
+    p, doors = make_plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
+                          houses=act.houses, extra=1 if act.boss else 0, width=act.plaza_width, pal=act.pal, rift=act.rift,
+                          index=plaza_no)
+    chain(below, p, below.a_out - p.a)
     if act.rift:
         door = doors["rift"]
         short = "A" + g.key[-1]
@@ -161,8 +238,8 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
 def start_plaza(w, g, rng, kit, tag, landmark, music, texts, stock, entry_doors, gate_name, gate_text, pal="PALETTE_DAY"):
     """First plaza of an area (south side closed), reached through a gate house from the unlinked doors
     `entry_doors` of the previous area's last boss room. Returns the plaza."""
-    p, d = plaza(g, f"{tag}Plaza1", kit, rng, landmark=landmark, music=music, rift=True, houses=1, south="closed",
-                 pal=pal)
+    p, d = make_plaza(g, f"{tag}Plaza1", kit, rng, landmark=landmark, music=music, rift=True, houses=1, south="closed",
+                      pal=pal, index=1)
     gatehouse(g, gate_name, entry_doors, d["rift"], landmark, music, [Text(gate_text)])
     town(w, g, tag, 1, p, d, kit, landmark, f"{tag.upper()}_1", stock, texts, f"{tag.upper()}_1")
     return p

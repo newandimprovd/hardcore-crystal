@@ -55,8 +55,8 @@ LotusMansion_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 17, LOTUS_PLAZA7, 4
-	warp_event  5, 17, LOTUS_PLAZA7, 4
+	warp_event  4, 17, LOTUS_PLAZA7, 1
+	warp_event  5, 17, LOTUS_PLAZA7, 1
 	warp_event  4,  2, LOTUS_HALL, 1
 	warp_event  5,  2, LOTUS_HALL, 1
 

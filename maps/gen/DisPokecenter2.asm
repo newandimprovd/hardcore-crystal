@@ -27,8 +27,8 @@ DisPokecenter2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  7, DIS_PLAZA2, 1
-	warp_event  4,  7, DIS_PLAZA2, 1
+	warp_event  3,  7, DIS_PLAZA2, 2
+	warp_event  4,  7, DIS_PLAZA2, 2
 
 	def_coord_events
 

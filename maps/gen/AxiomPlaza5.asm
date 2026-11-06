@@ -14,14 +14,14 @@ AxiomPlaza5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, AXIOM_POKECENTER5, 1
-	warp_event 12,  3, AXIOM_MART5, 1
-	warp_event 16,  3, AXIOM_HOUSE5, 1
-	warp_event 20,  3, AXIOM_ARMORY, 1
-	warp_event 24,  3, PURG_THRESHOLD, 4
+	warp_event 14,  3, AXIOM_ARMORY, 1
+	warp_event 20,  3, PURG_THRESHOLD, 4
+	warp_event 24,  3, AXIOM_HOUSE5, 1
+	warp_event 28,  3, AXIOM_POKECENTER5, 1
+	warp_event 32,  3, AXIOM_MART5, 1
 
 	def_coord_events
-	coord_event 24,  4, -1, AxiomPlaza5PurgFlagScript
+	coord_event 20,  4, -1, AxiomPlaza5PurgFlagScript
 
 	def_bg_events
 

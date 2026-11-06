@@ -129,16 +129,16 @@ TithePlaza2_MapEvents:
 
 	def_warp_events
 	warp_event  2,  3, TITHE_POKECENTER2, 1
-	warp_event 12,  3, TITHE_MART2, 1
-	warp_event 16,  3, TITHE_HOUSE2, 1
+	warp_event 14,  3, TITHE_HOUSE2, 1
+	warp_event 18,  3, TITHE_MART2, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 21, 17, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2CrowleyScript, -1
-	object_event 18, 16, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd0Script, -1
-	object_event 18, 19, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd1Script, -1
-	object_event 19, 18, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd2Script, -1
+	object_event 13, 22, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2CrowleyScript, -1
+	object_event 10, 21, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd0Script, -1
+	object_event 10, 23, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd1Script, -1
+	object_event 11, 22, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd2Script, -1
 

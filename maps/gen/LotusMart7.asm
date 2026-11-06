@@ -29,8 +29,8 @@ LotusMart7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, LOTUS_PLAZA7, 2
-	warp_event  3,  7, LOTUS_PLAZA7, 2
+	warp_event  2,  7, LOTUS_PLAZA7, 3
+	warp_event  3,  7, LOTUS_PLAZA7, 3
 
 	def_coord_events
 

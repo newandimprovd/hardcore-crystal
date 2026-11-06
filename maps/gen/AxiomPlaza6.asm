@@ -67,14 +67,14 @@ AxiomPlaza6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, AXIOM_POKECENTER6, 1
-	warp_event 12,  3, AXIOM_MART6, 1
-	warp_event 16,  3, AXIOM_HOUSE6, 1
+	warp_event 14,  3, AXIOM_HOUSE6, 1
+	warp_event 18,  3, AXIOM_MART6, 1
+	warp_event 22,  3, AXIOM_POKECENTER6, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 20, 18, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SabbahScript, -1
+	object_event 20,  7, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SabbahScript, -1
 

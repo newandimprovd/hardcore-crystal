@@ -5,9 +5,11 @@ Common parameters (all plans):  tex  texture tuple for the body, mat/accent  pal
 hook(M, pose, A) called at the end with the anchor dict, for the extras that make one species itself.
 """
 import math
+import random
 
 import numpy as np
 
+import orbs
 import parts
 from parts import V
 from sdf import ACCENT, BODY, BONE, DARK, EYE, MEMB, Model
@@ -552,7 +554,10 @@ def orb(M, pose, p):
     cy = d["hover"] + r * 1.1
     breath = _pose(pose, "breath")
     M.part()
-    if d["kind"] in ("ghost", "blob", "core"):
+    face_z = None
+    if d["kind"] in orbs.KINDS:
+        face_z = orbs.KINDS[d["kind"]](M, d, cy, tex)
+    elif d["kind"] in ("ghost", "blob", "core"):
         M.ell((0, cy, 0), (r * 1.1, r * (1.0 + 0.03 * breath), r * 0.95), BODY, 0.2, tex=tex)
         if d["kind"] == "ghost":
             # a tapering ghostly tail below the body
@@ -571,7 +576,7 @@ def orb(M, pose, p):
             a = math.radians(90 + 72 * i)
             M.cone((0, cy, 0), (math.cos(a) * r * 1.9, cy + math.sin(a) * r * 1.9, 0.0), r * 0.5, r * 0.08, BODY, 0.15, tex=tex)
     # face on the front
-    fc = V(0, cy + d["face_y"] * r, r * 0.8)
+    fc = V(0, cy + d["face_y"] * r, face_z if face_z is not None else r * 0.8)
     if d["mouth_big"]:
         M.part()
     hs = d["face_s"]
@@ -579,7 +584,11 @@ def orb(M, pose, p):
     M.anchor("eye_r", fc + V(-0.32 * r * hs, 0.12 * r, 0.12 * r))
     M.anchor("mouth_a", fc + V(-0.4 * r * hs, -0.3 * r, 0.1 * r))
     M.anchor("mouth_b", fc + V(0.4 * r * hs, -0.3 * r, 0.1 * r))
-    face = dict(eye=d["eye"], eyes=["eye_l", "eye_r"], mouth=["mouth_a", "mouth_b"] if d["mouth_big"] else None, teeth=5, size=1.4, eye_col=d["eye_col"])
+    eyes = ["eye_l", "eye_r"]
+    for i in range(d.get("extra_eyes", 0)):  # more eyes: a row above the pair
+        M.anchor(f"eye_x{i}", fc + V((i - (d["extra_eyes"] - 1) / 2) * 0.3 * r * hs, 0.5 * r, 0.05 * r))
+        eyes.append(f"eye_x{i}")
+    face = dict(eye=d["eye"], eyes=eyes, mouth=["mouth_a", "mouth_b"] if d["mouth_big"] else None, teeth=5, size=1.4, eye_col=d["eye_col"])
     # arms
     if d["arms"]:
         M.part()
@@ -600,6 +609,7 @@ def orb(M, pose, p):
         a = i * 6.28 / max(d["satellites"], 1) + 0.6
         M.part()
         M.ell((math.cos(a) * r * 1.6, cy + math.sin(a) * r * 0.9, 0.3), (d["sat_r"],) * 3, BODY, 0.1, tex=tex)
+    orbs.feature(M, d, cy, tex, random.Random(d.get("seed", 1)))
     M.face = face
     M.A = A
     if d["hook"]:

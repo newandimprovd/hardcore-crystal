@@ -14,14 +14,14 @@ GrovePlaza5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, GROVE_POKECENTER5, 1
-	warp_event 12,  3, GROVE_MART5, 1
-	warp_event 16,  3, GROVE_HOUSE5, 1
-	warp_event 20,  3, GROVE_SMOKEHOUSE, 1
-	warp_event 24,  3, PURG_THRESHOLD, 3
+	warp_event  2,  3, GROVE_SMOKEHOUSE, 1
+	warp_event  6,  3, GROVE_MART5, 1
+	warp_event 10,  3, GROVE_HOUSE5, 1
+	warp_event 14,  3, PURG_THRESHOLD, 3
+	warp_event 18,  3, GROVE_POKECENTER5, 1
 
 	def_coord_events
-	coord_event 24,  4, -1, GrovePlaza5PurgFlagScript
+	coord_event 14,  4, -1, GrovePlaza5PurgFlagScript
 
 	def_bg_events
 

@@ -125,15 +125,15 @@ AxiomPlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, AXIOM_POKECENTER1, 1
-	warp_event 12,  3, AXIOM_MART1, 1
-	warp_event 16,  3, AXIOM_HOUSE1, 1
-	warp_event 20,  3, AXIOM_GATE, 1
+	warp_event  2,  3, AXIOM_MART1, 1
+	warp_event  6,  3, AXIOM_GATE, 1
+	warp_event 10,  3, AXIOM_HOUSE1, 1
+	warp_event 22,  3, AXIOM_POKECENTER1, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 20, 18, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahScript, -1
+	object_event 13, 16, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahScript, -1
 

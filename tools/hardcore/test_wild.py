@@ -4,8 +4,8 @@ species and level against the generated table for the time of day, runs from mos
 that a wild kill does not count as a trainer kill.
 
 usage: test_wild.py ROM MAP_NAME [N]
-ROM built with: testbuild.sh wild1 TEST_MAP=TITHE_PLAZA1 TEST_X=12 TEST_Y=12 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
-(the player starts on plaza floor to the west of the east grass patch)"""
+ROM built with: testbuild.sh wild1 TEST_MAP=TITHE_PLAZA1 TEST_X=<grass x> TEST_Y=<grass y> (spawn.py MAP grass) TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
+(the player starts in the middle of the grass patch)"""
 import json
 import os
 import sys
@@ -21,14 +21,18 @@ SHOTS = os.environ.get("SHOTS", "/home/claude/scratch/wild")
 os.makedirs(SHOTS, exist_ok=True)
 
 
+PATCH = {}
+
+
 def shuffle_key(t, steps):
-    """Stay inside the east patch (cells 14..23): walk right until deep in the grass, then back and forth."""
+    """Stay inside the grass patch (spawns.json: its middle cell and half width): walk back and forth around the middle."""
+    cx, hw = PATCH["cx"], PATCH["hw"]
     x = t.where()[2]
-    if x <= 15:
+    if x <= cx - hw:
         return "right"
-    if x >= 22:
+    if x >= cx + hw:
         return "left"
-    return "right" if (steps // 3) % 2 == 0 else "left"
+    return "right" if (steps // 2) % 2 == 0 else "left"
 
 
 def main():
@@ -36,6 +40,8 @@ def main():
     want = int(sys.argv[3]) if len(sys.argv) > 3 else 40
     spec = json.load(open(os.path.join(HERE, "wild_out.json")))
     entry = next(e for e in spec["entries"] if e["map"] == mapname)
+    sp = json.load(open(os.path.join(HERE, "spawns.json")))[mapname]
+    PATCH["cx"], PATCH["hw"] = sp["grass"][0], sp["grass"][2]
     species = const_table("constants/pokemon_constants.asm")
     names = {}
     for k, v in species.items():

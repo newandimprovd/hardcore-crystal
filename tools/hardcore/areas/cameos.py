@@ -9,7 +9,23 @@ from .model import MapDef
 from .people import lore_npc, plain_npc
 from .text import Text
 
-CELL = (20, 18)  # an east side cell of every plaza (outside the corridor, below the grass), clear of the doors
+def free_cells(m):
+    taken = {(o["x"], o["y"]) for o in m.objects}
+    return [c for c in m.npc_cells if c not in taken]
+
+
+def spot(m, k=0):
+    """A free floor cell of the plaza for a named character (the plaza keeps its free cells in a seeded random order, from the end)."""
+    return free_cells(m)[-1 - k]
+
+
+def cluster(m, offsets):
+    """A cell c such that c and c + every offset are free floor cells (a little scene: a man and the crowd around him)."""
+    free = set(free_cells(m))
+    for c in reversed(free_cells(m)):
+        if all((c[0] + dx, c[1] + dy) in free for dx, dy in offsets):
+            return c
+    raise AssertionError(f"{m.name}: no free place for a scene")
 
 
 def find(g, name):
@@ -28,7 +44,8 @@ def add_sprite(g, *names):
 def steiner(w, g, plaza, text, label):
     add_sprite(g, "SPRITE_HC_STEINER")
     m = find(g, plaza)
-    lore_npc(w, m, CELL[0], CELL[1], "SPRITE_HC_STEINER", "PAL_NPC_BROWN", "LEFT", label, text, flag="EVENT_LORE_STEINER")
+    x, y = spot(m)
+    lore_npc(w, m, x, y, "SPRITE_HC_STEINER", "PAL_NPC_BROWN", "LEFT", label, text, flag="EVENT_LORE_STEINER")
 
 
 def area1(w, g):
@@ -36,13 +53,13 @@ def area1(w, g):
     steiner(w, g, "TithePlaza1", C.STEINER_1, "TithePlaza1SteinerScript")
     # the chase: Crowley caught at the east side of the first mid-city plaza, three residents screaming at him
     m = find(g, "TithePlaza2")
-    lore_npc(w, m, 21, 17, "SPRITE_HC_CROWLEY", "PAL_NPC_BROWN", "LEFT", "TithePlaza2CrowleyScript", C.CROWLEY_1,
+    crowd_at = [(-3, -1, "SPRITE_HC_SUIT", "PAL_NPC_BROWN", C.CROWD_1), (-3, 1, "SPRITE_HC_HOODIE", "PAL_NPC_GREEN", C.CROWD_2),
+                (-2, 0, "SPRITE_HC_COP", "PAL_NPC_BLUE", C.CROWD_3)]
+    cx, cy = cluster(m, [(dx, dy) for dx, dy, *_ in crowd_at])
+    lore_npc(w, m, cx, cy, "SPRITE_HC_CROWLEY", "PAL_NPC_BROWN", "LEFT", "TithePlaza2CrowleyScript", C.CROWLEY_1,
              again=C.CROWLEY_1_AGAIN, flag="EVENT_LORE_CROWLEY")
-    for i, (x, y, sp, pal, face, t) in enumerate([
-            (18, 16, "SPRITE_HC_SUIT", "PAL_NPC_BROWN", "RIGHT", C.CROWD_1),
-            (18, 19, "SPRITE_HC_HOODIE", "PAL_NPC_GREEN", "RIGHT", C.CROWD_2),
-            (19, 18, "SPRITE_HC_COP", "PAL_NPC_BLUE", "RIGHT", C.CROWD_3)]):
-        plain_npc(m, x, y, sp, pal, face, f"TithePlaza2Crowd{i}Script", t)
+    for i, (dx, dy, sp, pal, t) in enumerate(crowd_at):
+        plain_npc(m, cx + dx, cy + dy, sp, pal, "RIGHT", f"TithePlaza2Crowd{i}Script", t)
     # the Kabbalist mafia and the Yakuza sit in two house interiors (a third person in each room)
     flag_once(w, "EVENT_LORE_BEES")
     h4 = find(g, "TitheHouse4")
@@ -125,13 +142,13 @@ def amphitheater(w, g, rng):
 def area3(w, g):
     add_sprite(g, "SPRITE_HC_SABBAH")
     for plaza, text, label in (("AxiomPlaza1", C.SABBAH_1, "AxiomPlaza1SabbahScript"), ("AxiomPlaza6", C.SABBAH_2, "AxiomPlaza6SabbahScript")):
-        lore_npc(w, find(g, plaza), CELL[0], CELL[1], "SPRITE_HC_SABBAH", "PAL_NPC_BROWN", "LEFT", label, text, flag="EVENT_LORE_SABBAH")
+        lore_npc(w, find(g, plaza), *spot(find(g, plaza)), "SPRITE_HC_SABBAH", "PAL_NPC_BROWN", "LEFT", label, text, flag="EVENT_LORE_SABBAH")
 
 
 def area4(w, g):
     add_sprite(g, "SPRITE_HC_CIORAN", "SPRITE_HC_STEINER")
-    lore_npc(w, find(g, "LotusPlaza1"), CELL[0], CELL[1], "SPRITE_HC_CIORAN", "PAL_NPC_BROWN", "LEFT", "LotusPlaza1CioranScript",
+    lore_npc(w, find(g, "LotusPlaza1"), *spot(find(g, "LotusPlaza1")), "SPRITE_HC_CIORAN", "PAL_NPC_BROWN", "LEFT", "LotusPlaza1CioranScript",
              C.CIORAN_1, flag="EVENT_LORE_CIORAN")
-    lore_npc(w, find(g, "LotusPlaza4"), CELL[0], CELL[1], "SPRITE_HC_CIORAN", "PAL_NPC_BROWN", "LEFT", "LotusPlaza4CioranScript",
+    lore_npc(w, find(g, "LotusPlaza4"), *spot(find(g, "LotusPlaza4")), "SPRITE_HC_CIORAN", "PAL_NPC_BROWN", "LEFT", "LotusPlaza4CioranScript",
              C.CIORAN_2, flag="EVENT_LORE_CIORAN")
     steiner(w, g, "LotusPlaza6", C.STEINER_4, "LotusPlaza6SteinerScript")
