@@ -9,6 +9,20 @@ TitheStreet8_MapScripts:
 TitheStreet8Pickup:
 	itemball ETHER
 
+TitheStreet8Hidden:
+	hiddenitem REVIVE, EVENT_GEN_TITHE_STREET8_HIDDEN
+
+TitheStreet8Hermit:
+	jumptextfaceplayer TitheStreet8HermitText
+
+TitheStreet8HermitText:
+	text "Take the roots."
+	line "Take the berries."
+	para "Take whatever. I'm"
+	line "not the"
+	para "government."
+	done
+
 TitheStreet8SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -76,9 +90,11 @@ TitheStreet8_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 21, 19, BGEVENT_ITEM, TitheStreet8Hidden
 
 	def_object_events
 	object_event 17, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet8Pickup, EVENT_GEN_TITHE_STREET8_PICKUP
+	object_event 17, 18, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet8Hermit, -1
 	object_event 12, 26, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet8Trainer0, -1
 	object_event 17, 26, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet8Trainer1, -1
 	object_event 10, 24, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet8Trainer2, -1

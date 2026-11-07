@@ -9,6 +9,20 @@ TitheStreet4_MapScripts:
 TitheStreet4Pickup:
 	itemball TM_SWAGGER
 
+TitheStreet4Hidden:
+	hiddenitem ANTIDOTE, EVENT_GEN_TITHE_STREET4_HIDDEN
+
+TitheStreet4Hermit:
+	jumptextfaceplayer TitheStreet4HermitText
+
+TitheStreet4HermitText:
+	text "Take the roots."
+	line "Take the berries."
+	para "Take whatever. I'm"
+	line "not the"
+	para "government."
+	done
+
 TitheStreet4SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -76,9 +90,11 @@ TitheStreet4_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 17, 16, BGEVENT_ITEM, TitheStreet4Hidden
 
 	def_object_events
 	object_event 19, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet4Pickup, EVENT_GEN_TITHE_STREET4_PICKUP
+	object_event 20, 19, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet4Hermit, -1
 	object_event  6, 26, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer0, -1
 	object_event 11, 24, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer1, -1
 	object_event  6, 22, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer2, -1

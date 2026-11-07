@@ -9,6 +9,20 @@ TitheStreet3_MapScripts:
 TitheStreet3Pickup:
 	itemball POTION
 
+TitheStreet3Hidden:
+	hiddenitem ANTIDOTE, EVENT_GEN_TITHE_STREET3_HIDDEN
+
+TitheStreet3Hermit:
+	jumptextfaceplayer TitheStreet3HermitText
+
+TitheStreet3HermitText:
+	text "I used to be a"
+	line "loan officer. Now"
+	para "I'm a loan."
+	line "Somebody owes me"
+	para "an apology."
+	done
+
 TitheStreet3SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -76,9 +90,11 @@ TitheStreet3_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  6, 13, BGEVENT_ITEM, TitheStreet3Hidden
 
 	def_object_events
 	object_event  3, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet3Pickup, EVENT_GEN_TITHE_STREET3_PICKUP
+	object_event  4, 12, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet3Hermit, -1
 	object_event  6, 26, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer0, -1
 	object_event 11, 26, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer1, -1
 	object_event  8, 24, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer2, -1

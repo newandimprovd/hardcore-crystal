@@ -9,6 +9,20 @@ GroveStreet12_MapScripts:
 GroveStreet12Pickup:
 	itemball AWAKENING
 
+GroveStreet12Hidden:
+	hiddenitem AWAKENING, EVENT_GEN_GROVE_STREET12_HIDDEN
+
+GroveStreet12Hermit:
+	jumptextfaceplayer GroveStreet12HermitText
+
+GroveStreet12HermitText:
+	text "Have you tried not"
+	line "fighting? I've"
+	para "been not fighting"
+	line "for years. Nobody"
+	para "asked me to stop."
+	done
+
 GroveStreet12SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -76,9 +90,11 @@ GroveStreet12_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  5, 10, BGEVENT_ITEM, GroveStreet12Hidden
 
 	def_object_events
 	object_event 11, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet12Pickup, EVENT_GEN_GROVE_STREET12_PICKUP
+	object_event  6, 16, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet12Hermit, -1
 	object_event  6, 26, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer0, -1
 	object_event 11, 26, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer1, -1
 	object_event  8, 24, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer2, -1

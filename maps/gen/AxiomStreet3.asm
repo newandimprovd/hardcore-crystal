@@ -9,6 +9,19 @@ AxiomStreet3_MapScripts:
 AxiomStreet3Pickup:
 	itemball TM_SUNNY_DAY
 
+AxiomStreet3Hidden:
+	hiddenitem ETHER, EVENT_GEN_AXIOM_STREET3_HIDDEN
+
+AxiomStreet3Hermit:
+	jumptextfaceplayer AxiomStreet3HermitText
+
+AxiomStreet3HermitText:
+	text "The glitch in the"
+	line "system is me."
+	para "Please don't patch"
+	line "me."
+	done
+
 AxiomStreet3SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -76,9 +89,11 @@ AxiomStreet3_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 21, 26, BGEVENT_ITEM, AxiomStreet3Hidden
 
 	def_object_events
 	object_event 18, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet3Pickup, EVENT_GEN_AXIOM_STREET3_PICKUP
+	object_event 16, 22, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet3Hermit, -1
 	object_event  2, 26, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet3Trainer0, -1
 	object_event  7, 24, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet3Trainer1, -1
 	object_event  2, 22, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet3Trainer2, -1

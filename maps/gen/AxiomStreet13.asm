@@ -9,6 +9,20 @@ AxiomStreet13_MapScripts:
 AxiomStreet13Pickup:
 	itemball TM_GIGA_DRAIN
 
+AxiomStreet13Hidden:
+	hiddenitem REVIVE, EVENT_GEN_AXIOM_STREET13_HIDDEN
+
+AxiomStreet13Hermit:
+	jumptextfaceplayer AxiomStreet13HermitText
+
+AxiomStreet13HermitText:
+	text "I escaped the"
+	line "Registry. I'm no"
+	para "longer a number."
+	line "I'm a letter. The"
+	para "letter is Q."
+	done
+
 AxiomStreet13SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -76,9 +90,11 @@ AxiomStreet13_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 11,  9, BGEVENT_ITEM, AxiomStreet13Hidden
 
 	def_object_events
 	object_event  5,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet13Pickup, EVENT_GEN_AXIOM_STREET13_PICKUP
+	object_event 11, 12, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet13Hermit, -1
 	object_event 12, 26, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet13Trainer0, -1
 	object_event 10, 24, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet13Trainer1, -1
 	object_event 15, 24, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet13Trainer2, -1

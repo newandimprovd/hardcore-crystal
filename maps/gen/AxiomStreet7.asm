@@ -9,6 +9,20 @@ AxiomStreet7_MapScripts:
 AxiomStreet7Pickup:
 	itemball TM_SANDSTORM
 
+AxiomStreet7Hidden:
+	hiddenitem PP_UP, EVENT_GEN_AXIOM_STREET7_HIDDEN
+
+AxiomStreet7Hermit:
+	jumptextfaceplayer AxiomStreet7HermitText
+
+AxiomStreet7HermitText:
+	text "I have proven that"
+	line "I exist. It took"
+	para "six months. The"
+	line "proof expired on"
+	para "Tuesday."
+	done
+
 AxiomStreet7SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -76,9 +90,11 @@ AxiomStreet7_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  3, 22, BGEVENT_ITEM, AxiomStreet7Hidden
 
 	def_object_events
 	object_event  9, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet7Pickup, EVENT_GEN_AXIOM_STREET7_PICKUP
+	object_event  3, 18, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomStreet7Hermit, -1
 	object_event  8, 26, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer0, -1
 	object_event 13, 26, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer1, -1
 	object_event 10, 24, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer2, -1

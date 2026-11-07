@@ -9,6 +9,9 @@ GroveStreet9_MapScripts:
 GroveStreet9Pickup:
 	itemball TM_SWIFT
 
+GroveStreet9Hidden:
+	hiddenitem ETHER, EVENT_GEN_GROVE_STREET9_HIDDEN
+
 GroveStreet9SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -79,6 +82,7 @@ GroveStreet9_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 13, 18, BGEVENT_ITEM, GroveStreet9Hidden
 
 	def_object_events
 	object_event 12, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet9Pickup, EVENT_GEN_GROVE_STREET9_PICKUP

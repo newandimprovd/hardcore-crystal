@@ -9,6 +9,21 @@ GroveStreet7_MapScripts:
 GroveStreet7Pickup:
 	itemball POKE_BALL
 
+GroveStreet7Hidden:
+	hiddenitem REVIVE, EVENT_GEN_GROVE_STREET7_HIDDEN
+
+GroveStreet7Hermit:
+	jumptextfaceplayer GroveStreet7HermitText
+
+GroveStreet7HermitText:
+	text "The trainers out"
+	line "there are so"
+	para "friendly. They"
+	line "shout 'peace' and"
+	para "then try to kill"
+	line "you."
+	done
+
 GroveStreet7SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -76,9 +91,11 @@ GroveStreet7_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 16, 17, BGEVENT_ITEM, GroveStreet7Hidden
 
 	def_object_events
 	object_event 13, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet7Pickup, EVENT_GEN_GROVE_STREET7_PICKUP
+	object_event 18, 25, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet7Hermit, -1
 	object_event  6, 26, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer0, -1
 	object_event  4, 24, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer1, -1
 	object_event  9, 24, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer2, -1

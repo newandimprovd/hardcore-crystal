@@ -9,6 +9,20 @@ GroveStreet14_MapScripts:
 GroveStreet14Pickup:
 	itemball TM_THUNDERPUNCH
 
+GroveStreet14Hidden:
+	hiddenitem ETHER, EVENT_GEN_GROVE_STREET14_HIDDEN
+
+GroveStreet14Hermit:
+	jumptextfaceplayer GroveStreet14HermitText
+
+GroveStreet14HermitText:
+	text "Have you tried not"
+	line "fighting? I've"
+	para "been not fighting"
+	line "for years. Nobody"
+	para "asked me to stop."
+	done
+
 GroveStreet14SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -76,9 +90,11 @@ GroveStreet14_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 12, 18, BGEVENT_ITEM, GroveStreet14Hidden
 
 	def_object_events
 	object_event  9, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet14Pickup, EVENT_GEN_GROVE_STREET14_PICKUP
+	object_event  2, 19, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GroveStreet14Hermit, -1
 	object_event  8, 26, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet14Trainer0, -1
 	object_event 13, 26, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet14Trainer1, -1
 	object_event 10, 24, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet14Trainer2, -1

@@ -9,6 +9,9 @@ GroveStreet2_MapScripts:
 GroveStreet2Pickup:
 	itemball POKE_BALL
 
+GroveStreet2Hidden:
+	hiddenitem AWAKENING, EVENT_GEN_GROVE_STREET2_HIDDEN
+
 GroveStreet2SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -79,6 +82,7 @@ GroveStreet2_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  2, 18, BGEVENT_ITEM, GroveStreet2Hidden
 
 	def_object_events
 	object_event  2, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet2Pickup, EVENT_GEN_GROVE_STREET2_PICKUP

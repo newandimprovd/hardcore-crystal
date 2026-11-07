@@ -9,6 +9,9 @@ DisStreet10_MapScripts:
 DisStreet10Pickup:
 	itemball TM_RETURN
 
+DisStreet10Hidden:
+	hiddenitem MAX_ETHER, EVENT_GEN_DIS_STREET10_HIDDEN
+
 DisStreet10SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -79,6 +82,7 @@ DisStreet10_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 15,  9, BGEVENT_ITEM, DisStreet10Hidden
 
 	def_object_events
 	object_event 21, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet10Pickup, EVENT_GEN_DIS_STREET10_PICKUP

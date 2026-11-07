@@ -9,6 +9,9 @@ AxiomStreet2_MapScripts:
 AxiomStreet2Pickup:
 	itemball TM_SWEET_SCENT
 
+AxiomStreet2Hidden:
+	hiddenitem REVIVE, EVENT_GEN_AXIOM_STREET2_HIDDEN
+
 AxiomStreet2SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -79,6 +82,7 @@ AxiomStreet2_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  4, 18, BGEVENT_ITEM, AxiomStreet2Hidden
 
 	def_object_events
 	object_event  4, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet2Pickup, EVENT_GEN_AXIOM_STREET2_PICKUP

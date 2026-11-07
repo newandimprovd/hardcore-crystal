@@ -43,6 +43,9 @@ LotusStreet6GateUseText:
 	line "nearby."
 	done
 
+LotusStreet6Hidden:
+	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET6_HIDDEN
+
 LotusStreet6SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -110,6 +113,7 @@ LotusStreet6_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  4, 11, BGEVENT_ITEM, LotusStreet6Hidden
 
 	def_object_events
 	object_event  6, 28, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet6GateScript, EVENT_GEN_LOTUS_STREET6_GATE

@@ -9,6 +9,19 @@ DisStreet13_MapScripts:
 DisStreet13Pickup:
 	itemball TM_HYPER_BEAM
 
+DisStreet13Hidden:
+	hiddenitem PP_UP, EVENT_GEN_DIS_STREET13_HIDDEN
+
+DisStreet13Hermit:
+	jumptextfaceplayer DisStreet13HermitText
+
+DisStreet13HermitText:
+	text "I'm not dead. I'm"
+	line "just in the wrong"
+	para "queue. It's been"
+	line "forty years."
+	done
+
 DisStreet13SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -76,9 +89,11 @@ DisStreet13_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 21, 19, BGEVENT_ITEM, DisStreet13Hidden
 
 	def_object_events
 	object_event 15, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet13Pickup, EVENT_GEN_DIS_STREET13_PICKUP
+	object_event 15, 14, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisStreet13Hermit, -1
 	object_event 12, 26, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet13Trainer0, -1
 	object_event 17, 26, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet13Trainer1, -1
 	object_event 10, 24, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet13Trainer2, -1

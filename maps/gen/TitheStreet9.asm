@@ -9,6 +9,20 @@ TitheStreet9_MapScripts:
 TitheStreet9Pickup:
 	itemball TM_REST
 
+TitheStreet9Hidden:
+	hiddenitem ETHER, EVENT_GEN_TITHE_STREET9_HIDDEN
+
+TitheStreet9Hermit:
+	jumptextfaceplayer TitheStreet9HermitText
+
+TitheStreet9HermitText:
+	text "If you meet the"
+	line "Mayor, tell him"
+	para "the hole in my"
+	line "roof is his fault."
+	para "And the roof."
+	done
+
 TitheStreet9SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -76,9 +90,11 @@ TitheStreet9_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 18, 19, BGEVENT_ITEM, TitheStreet9Hidden
 
 	def_object_events
 	object_event 16, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet9Pickup, EVENT_GEN_TITHE_STREET9_PICKUP
+	object_event 17, 14, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet9Hermit, -1
 	object_event 10, 26, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer0, -1
 	object_event 15, 24, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer1, -1
 	object_event 10, 22, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer2, -1

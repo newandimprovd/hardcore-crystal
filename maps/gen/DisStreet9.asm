@@ -9,6 +9,21 @@ DisStreet9_MapScripts:
 DisStreet9Pickup:
 	itemball TM_FRUSTRATION
 
+DisStreet9Hidden:
+	hiddenitem MAX_ETHER, EVENT_GEN_DIS_STREET9_HIDDEN
+
+DisStreet9Hermit:
+	jumptextfaceplayer DisStreet9HermitText
+
+DisStreet9HermitText:
+	text "The demons are"
+	line "very professional."
+	para "They send a"
+	line "thank-you note"
+	para "after the"
+	line "screaming."
+	done
+
 DisStreet9SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -76,9 +91,11 @@ DisStreet9_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  7, 25, BGEVENT_ITEM, DisStreet9Hidden
 
 	def_object_events
 	object_event 21, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet9Pickup, EVENT_GEN_DIS_STREET9_PICKUP
+	object_event 20, 10, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisStreet9Hermit, -1
 	object_event 14, 26, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet9Trainer0, -1
 	object_event 19, 26, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet9Trainer1, -1
 	object_event 12, 24, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet9Trainer2, -1

@@ -9,6 +9,18 @@ LotusStreet8_MapScripts:
 LotusStreet8Pickup:
 	itemball TM_DIG
 
+LotusStreet8Hidden:
+	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET8_HIDDEN
+
+LotusStreet8Hermit:
+	jumptextfaceplayer LotusStreet8HermitText
+
+LotusStreet8HermitText:
+	text "The cocktails are"
+	line "free. Meaning is"
+	para "extra."
+	done
+
 LotusStreet8SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -76,9 +88,11 @@ LotusStreet8_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  4, 19, BGEVENT_ITEM, LotusStreet8Hidden
 
 	def_object_events
 	object_event  5, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet8Pickup, EVENT_GEN_LOTUS_STREET8_PICKUP
+	object_event  5, 19, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet8Hermit, -1
 	object_event  8, 26, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet8Trainer0, -1
 	object_event 13, 26, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet8Trainer1, -1
 	object_event 10, 24, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet8Trainer2, -1

@@ -9,6 +9,9 @@ LotusStreet2_MapScripts:
 LotusStreet2Pickup:
 	itemball TM_NIGHTMARE
 
+LotusStreet2Hidden:
+	hiddenitem REVIVE, EVENT_GEN_LOTUS_STREET2_HIDDEN
+
 LotusStreet2SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -79,6 +82,7 @@ LotusStreet2_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 21, 23, BGEVENT_ITEM, LotusStreet2Hidden
 
 	def_object_events
 	object_event 19, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet2Pickup, EVENT_GEN_LOTUS_STREET2_PICKUP

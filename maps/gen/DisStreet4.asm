@@ -9,6 +9,20 @@ DisStreet4_MapScripts:
 DisStreet4Pickup:
 	itemball TM_BLIZZARD
 
+DisStreet4Hidden:
+	hiddenitem PP_UP, EVENT_GEN_DIS_STREET4_HIDDEN
+
+DisStreet4Hermit:
+	jumptextfaceplayer DisStreet4HermitText
+
+DisStreet4HermitText:
+	text "The flames are"
+	line "warm. I stopped"
+	para "complaining. The"
+	line "complaint box is"
+	para "also on fire."
+	done
+
 DisStreet4SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -76,9 +90,11 @@ DisStreet4_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  2, 26, BGEVENT_ITEM, DisStreet4Hidden
 
 	def_object_events
 	object_event  5, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet4Pickup, EVENT_GEN_DIS_STREET4_PICKUP
+	object_event  2, 11, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisStreet4Hermit, -1
 	object_event 16, 26, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet4Trainer0, -1
 	object_event 19, 24, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet4Trainer1, -1
 	object_event 12, 22, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet4Trainer2, -1

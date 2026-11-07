@@ -9,6 +9,17 @@ AxiomStreet1_MapScripts:
 AxiomStreet1Pickup:
 	itemball GREAT_BALL
 
+AxiomStreet1Hermit:
+	jumptextfaceplayer AxiomStreet1HermitText
+
+AxiomStreet1HermitText:
+	text "The machines here"
+	line "are polite. They"
+	para "kill you with a"
+	line "smile and a"
+	para "receipt."
+	done
+
 AxiomStreet1SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -79,6 +90,7 @@ AxiomStreet1_MapEvents:
 
 	def_object_events
 	object_event 18, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet1Pickup, EVENT_GEN_AXIOM_STREET1_PICKUP
+	object_event 18, 11, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomStreet1Hermit, -1
 	object_event 14, 26, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet1Trainer0, -1
 	object_event 19, 26, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet1Trainer1, -1
 	object_event 12, 24, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet1Trainer2, -1

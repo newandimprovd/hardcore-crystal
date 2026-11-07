@@ -9,6 +9,20 @@ LotusStreet4_MapScripts:
 LotusStreet4Pickup:
 	itemball ETHER
 
+LotusStreet4Hidden:
+	hiddenitem PP_UP, EVENT_GEN_LOTUS_STREET4_HIDDEN
+
+LotusStreet4Hermit:
+	jumptextfaceplayer LotusStreet4HermitText
+
+LotusStreet4HermitText:
+	text "I've been lying on"
+	line "this beach for"
+	para "eleven years. The"
+	line "tide has asked me"
+	para "to move twice."
+	done
+
 LotusStreet4SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -76,9 +90,11 @@ LotusStreet4_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 18, 13, BGEVENT_ITEM, LotusStreet4Hidden
 
 	def_object_events
 	object_event 16, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet4Pickup, EVENT_GEN_LOTUS_STREET4_PICKUP
+	object_event 20, 21, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet4Hermit, -1
 	object_event 12, 26, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer0, -1
 	object_event 15, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer1, -1
 	object_event  8, 22, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer2, -1

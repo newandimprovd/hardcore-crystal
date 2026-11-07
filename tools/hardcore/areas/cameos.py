@@ -106,8 +106,8 @@ def amphitheater(w, g, rng):
         for x in range(3, 6):
             m.set(x, y, kit.extra["plaza"][-1])
     m.set(4, 7, rng.choice(kit.floor))
-    m.set(4, 8, kit.extra["rift"])
-    door = m.warp(*kit.door_cell(4, 8, kit.extra["rift"]))
+    m.set(4, 8, kit.extra["scn"]["mat"])  # a doormat: stepping on a door tile on the last row would walk the player off the map
+    door = m.warp(8, 17)
     outer.dest = door
     door.dest = outer
     flag_once(w, "EVENT_AMPH_DONE")

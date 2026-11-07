@@ -9,6 +9,20 @@ AxiomStreet12_MapScripts:
 AxiomStreet12Pickup:
 	itemball TM_DRAGONBREATH
 
+AxiomStreet12Hidden:
+	hiddenitem REVIVE, EVENT_GEN_AXIOM_STREET12_HIDDEN
+
+AxiomStreet12Hermit:
+	jumptextfaceplayer AxiomStreet12HermitText
+
+AxiomStreet12HermitText:
+	text "I have proven that"
+	line "I exist. It took"
+	para "six months. The"
+	line "proof expired on"
+	para "Tuesday."
+	done
+
 AxiomStreet12SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -76,9 +90,11 @@ AxiomStreet12_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 16, 16, BGEVENT_ITEM, AxiomStreet12Hidden
 
 	def_object_events
 	object_event 15, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet12Pickup, EVENT_GEN_AXIOM_STREET12_PICKUP
+	object_event 14, 23, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomStreet12Hermit, -1
 	object_event  8, 26, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer0, -1
 	object_event 11, 24, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer1, -1
 	object_event  4, 22, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet12Trainer2, -1

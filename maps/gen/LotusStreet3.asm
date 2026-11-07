@@ -9,6 +9,19 @@ LotusStreet3_MapScripts:
 LotusStreet3Pickup:
 	itemball TM_DREAM_EATER
 
+LotusStreet3Hidden:
+	hiddenitem ETHER, EVENT_GEN_LOTUS_STREET3_HIDDEN
+
+LotusStreet3Hermit:
+	jumptextfaceplayer LotusStreet3HermitText
+
+LotusStreet3HermitText:
+	text "I came to the"
+	line "coast to forget. I"
+	para "forgot why. Best"
+	line "vacation ever."
+	done
+
 LotusStreet3SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -76,9 +89,11 @@ LotusStreet3_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 17, 26, BGEVENT_ITEM, LotusStreet3Hidden
 
 	def_object_events
 	object_event 20, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet3Pickup, EVENT_GEN_LOTUS_STREET3_PICKUP
+	object_event 20, 25, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusStreet3Hermit, -1
 	object_event  8, 26, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet3Trainer0, -1
 	object_event  8, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet3Trainer1, -1
 	object_event 13, 24, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet3Trainer2, -1

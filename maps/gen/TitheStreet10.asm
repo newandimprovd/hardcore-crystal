@@ -9,6 +9,17 @@ TitheStreet10_MapScripts:
 TitheStreet10Pickup:
 	itemball TM_DEFENSE_CURL
 
+TitheStreet10Hermit:
+	jumptextfaceplayer TitheStreet10HermitText
+
+TitheStreet10HermitText:
+	text "I've lived here"
+	line "nine years. Nobody"
+	para "has come to arrest"
+	line "me. I find that"
+	para "deeply insulting."
+	done
+
 TitheStreet10SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -79,6 +90,7 @@ TitheStreet10_MapEvents:
 
 	def_object_events
 	object_event 11, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet10Pickup, EVENT_GEN_TITHE_STREET10_PICKUP
+	object_event  6, 16, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet10Hermit, -1
 	object_event 14, 26, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet10Trainer0, -1
 	object_event 14, 24, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet10Trainer1, -1
 	object_event 19, 24, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet10Trainer2, -1

@@ -9,6 +9,20 @@ TitheStreet2_MapScripts:
 TitheStreet2Pickup:
 	itemball TM_DOUBLE_TEAM
 
+TitheStreet2Hidden:
+	hiddenitem AWAKENING, EVENT_GEN_TITHE_STREET2_HIDDEN
+
+TitheStreet2Hermit:
+	jumptextfaceplayer TitheStreet2HermitText
+
+TitheStreet2HermitText:
+	text "The pond is clean."
+	line "That is because"
+	para "I've been drinking"
+	line "all the dirty"
+	para "bits."
+	done
+
 TitheStreet2SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -73,9 +87,11 @@ TitheStreet2_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 20, 17, BGEVENT_ITEM, TitheStreet2Hidden
 
 	def_object_events
 	object_event 19, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet2Pickup, EVENT_GEN_TITHE_STREET2_PICKUP
+	object_event 15,  8, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet2Hermit, -1
 	object_event 10, 24, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer0, -1
 	object_event 15, 24, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer1, -1
 	object_event 10, 22, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet2Trainer2, -1

@@ -9,6 +9,21 @@ DisStreet6_MapScripts:
 DisStreet6Pickup:
 	itemball TM_ZAP_CANNON
 
+DisStreet6Hidden:
+	hiddenitem PP_UP, EVENT_GEN_DIS_STREET6_HIDDEN
+
+DisStreet6Hermit:
+	jumptextfaceplayer DisStreet6HermitText
+
+DisStreet6HermitText:
+	text "I found a corner"
+	line "nobody has"
+	para "tortured yet. I"
+	line "call it home."
+	para "Don't tell"
+	line "management."
+	done
+
 DisStreet6SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -76,9 +91,11 @@ DisStreet6_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 19, 19, BGEVENT_ITEM, DisStreet6Hidden
 
 	def_object_events
 	object_event 19, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet6Pickup, EVENT_GEN_DIS_STREET6_PICKUP
+	object_event 19, 12, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisStreet6Hermit, -1
 	object_event 16, 26, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet6Trainer0, -1
 	object_event 21, 26, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet6Trainer1, -1
 	object_event 14, 24, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet6Trainer2, -1

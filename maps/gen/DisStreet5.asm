@@ -9,6 +9,15 @@ DisStreet5_MapScripts:
 DisStreet5Pickup:
 	itemball TM_EARTHQUAKE
 
+DisStreet5Hermit:
+	jumptextfaceplayer DisStreet5HermitText
+
+DisStreet5HermitText:
+	text "The river is not"
+	line "water. It's"
+	para "deadlines."
+	done
+
 DisStreet5SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -79,6 +88,7 @@ DisStreet5_MapEvents:
 
 	def_object_events
 	object_event  7, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet5Pickup, EVENT_GEN_DIS_STREET5_PICKUP
+	object_event  3, 13, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisStreet5Hermit, -1
 	object_event 10, 26, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet5Trainer0, -1
 	object_event 15, 24, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet5Trainer1, -1
 	object_event 10, 22, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet5Trainer2, -1

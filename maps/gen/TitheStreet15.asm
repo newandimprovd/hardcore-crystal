@@ -9,6 +9,20 @@ TitheStreet15_MapScripts:
 TitheStreet15Pickup:
 	itemball TM_ENDURE
 
+TitheStreet15Hidden:
+	hiddenitem ETHER, EVENT_GEN_TITHE_STREET15_HIDDEN
+
+TitheStreet15Hermit:
+	jumptextfaceplayer TitheStreet15HermitText
+
+TitheStreet15HermitText:
+	text "I used to be a"
+	line "loan officer. Now"
+	para "I'm a loan."
+	line "Somebody owes me"
+	para "an apology."
+	done
+
 TitheStreet15SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -76,9 +90,11 @@ TitheStreet15_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  3, 24, BGEVENT_ITEM, TitheStreet15Hidden
 
 	def_object_events
 	object_event  4, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet15Pickup, EVENT_GEN_TITHE_STREET15_PICKUP
+	object_event  7, 21, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet15Hermit, -1
 	object_event 12, 26, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet15Trainer0, -1
 	object_event 17, 26, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet15Trainer1, -1
 	object_event 14, 24, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet15Trainer2, -1

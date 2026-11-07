@@ -9,6 +9,20 @@ AxiomStreet5_MapScripts:
 AxiomStreet5Pickup:
 	itemball SUPER_POTION
 
+AxiomStreet5Hidden:
+	hiddenitem ELIXER, EVENT_GEN_AXIOM_STREET5_HIDDEN
+
+AxiomStreet5Hermit:
+	jumptextfaceplayer AxiomStreet5HermitText
+
+AxiomStreet5HermitText:
+	text "I escaped the"
+	line "Registry. I'm no"
+	para "longer a number."
+	line "I'm a letter. The"
+	para "letter is Q."
+	done
+
 AxiomStreet5SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -76,9 +90,11 @@ AxiomStreet5_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 18, 12, BGEVENT_ITEM, AxiomStreet5Hidden
 
 	def_object_events
 	object_event 15, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet5Pickup, EVENT_GEN_AXIOM_STREET5_PICKUP
+	object_event 20, 13, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomStreet5Hermit, -1
 	object_event 10, 26, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer0, -1
 	object_event 13, 24, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer1, -1
 	object_event  6, 22, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer2, -1

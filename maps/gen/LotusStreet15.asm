@@ -9,6 +9,20 @@ LotusStreet15_MapScripts:
 LotusStreet15Pickup:
 	itemball TM_PSYCHIC_M
 
+LotusStreet15Hidden:
+	hiddenitem MAX_ETHER, EVENT_GEN_LOTUS_STREET15_HIDDEN
+
+LotusStreet15Hermit:
+	jumptextfaceplayer LotusStreet15HermitText
+
+LotusStreet15HermitText:
+	text "Everyone is so"
+	line "relaxed here."
+	para "That's what giving"
+	line "up looks like with"
+	para "a tan."
+	done
+
 LotusStreet15SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -76,9 +90,11 @@ LotusStreet15_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  5, 18, BGEVENT_ITEM, LotusStreet15Hidden
 
 	def_object_events
 	object_event  9, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet15Pickup, EVENT_GEN_LOTUS_STREET15_PICKUP
+	object_event  4, 21, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet15Hermit, -1
 	object_event 12, 26, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet15Trainer0, -1
 	object_event 17, 26, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet15Trainer1, -1
 	object_event 12, 24, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet15Trainer2, -1

@@ -11,6 +11,8 @@ Roles added (after the grass blocks, so no existing block id changes):
   ledge       one way drop: the bottom quadrants hop down
   tree        a canopy over a trunk, a whole block of wall
   flowers     two passable flower beds
+  mat         a doormat on the bottom row: the bottom quadrants are directional warp carpets (the exit of an open air room, as in the
+              vanilla interiors; a DOOR tile would walk the player down off the map edge on arrival)
 Collision of the pond blocks is WALL (this hack has no Surf, the water is scenery that shapes the path)."""
 from tilebuild import Canvas, GRAY, RED, GREEN, WATER, BROWN
 
@@ -190,6 +192,17 @@ def flowers(g, k):
     return cv
 
 
+def mat(g):
+    """Doormat across the bottom row of the block: a woven strip with a dark rim, three tiles (left cap, middle, right cap)."""
+    cv = new(g)
+    left = ["00000000", "00000000", "03333333", "03121212", "03212121", "03121212", "03333333", "00000000"]
+    mid = ["00000000", "00000000", "33333333", "12121212", "21212121", "12121212", "33333333", "00000000"]
+    right = ["00000000", "00000000", "33333330", "21212130", "12121230", "21212130", "33333330", "00000000"]
+    for cx, px in enumerate((left, mid, mid, right)):
+        cell_px(cv, cx, 3, px, BROWN)
+    return cv
+
+
 def add(t, g):
     """Append the scenery blocks to Tileset t; g is the plain floor Canvas of the area. Records the ids in t.scn."""
     scn = {}
@@ -201,5 +214,6 @@ def add(t, g):
     scn["ledge"] = t.add(ledge(g), ("FLOOR", "FLOOR", "HOP_DOWN", "HOP_DOWN"), "ledge")
     scn["tree"] = t.add(tree(g), "WALL", "tree")
     scn["flowers"] = [t.add(flowers(g, k), "FLOOR", "flowers") for k in (0, 1)]
+    scn["mat"] = t.add(mat(g), ("FLOOR", "FLOOR", "WARP_CARPET_DOWN", "WARP_CARPET_DOWN"), "mat")
     t.scn = scn
     return scn

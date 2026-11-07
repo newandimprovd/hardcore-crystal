@@ -42,6 +42,9 @@ TitheStreet6GateUseText:
 	line "coming."
 	done
 
+TitheStreet6Hidden:
+	hiddenitem ETHER, EVENT_GEN_TITHE_STREET6_HIDDEN
+
 TitheStreet6SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -109,6 +112,7 @@ TitheStreet6_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  2, 10, BGEVENT_ITEM, TitheStreet6Hidden
 
 	def_object_events
 	object_event 18, 28, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TitheStreet6GateScript, EVENT_GEN_TITHE_STREET6_GATE

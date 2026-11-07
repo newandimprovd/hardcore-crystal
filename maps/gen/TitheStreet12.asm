@@ -9,6 +9,20 @@ TitheStreet12_MapScripts:
 TitheStreet12Pickup:
 	itemball TM_MUD_SLAP
 
+TitheStreet12Hidden:
+	hiddenitem REVIVE, EVENT_GEN_TITHE_STREET12_HIDDEN
+
+TitheStreet12Hermit:
+	jumptextfaceplayer TitheStreet12HermitText
+
+TitheStreet12HermitText:
+	text "The pond is clean."
+	line "That is because"
+	para "I've been drinking"
+	line "all the dirty"
+	para "bits."
+	done
+
 TitheStreet12SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -76,9 +90,11 @@ TitheStreet12_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 19, 19, BGEVENT_ITEM, TitheStreet12Hidden
 
 	def_object_events
 	object_event 19, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet12Pickup, EVENT_GEN_TITHE_STREET12_PICKUP
+	object_event 21, 18, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheStreet12Hermit, -1
 	object_event 10, 26, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet12Trainer0, -1
 	object_event 15, 24, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet12Trainer1, -1
 	object_event 10, 22, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet12Trainer2, -1

@@ -9,6 +9,20 @@ LotusStreet12_MapScripts:
 LotusStreet12Pickup:
 	itemball TM_SOLARBEAM
 
+LotusStreet12Hidden:
+	hiddenitem MAX_ETHER, EVENT_GEN_LOTUS_STREET12_HIDDEN
+
+LotusStreet12Hermit:
+	jumptextfaceplayer LotusStreet12HermitText
+
+LotusStreet12HermitText:
+	text "The waves keep"
+	line "saying 'shh'. I"
+	para "think they're"
+	line "embarrassed for"
+	para "us."
+	done
+
 LotusStreet12SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -76,9 +90,11 @@ LotusStreet12_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 20, 16, BGEVENT_ITEM, LotusStreet12Hidden
 
 	def_object_events
 	object_event 16, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet12Pickup, EVENT_GEN_LOTUS_STREET12_PICKUP
+	object_event 18, 14, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet12Hermit, -1
 	object_event 12, 26, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer0, -1
 	object_event 15, 24, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer1, -1
 	object_event  8, 22, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer2, -1

@@ -9,6 +9,20 @@ GroveStreet3_MapScripts:
 GroveStreet3Pickup:
 	itemball TM_FURY_CUTTER
 
+GroveStreet3Hidden:
+	hiddenitem AWAKENING, EVENT_GEN_GROVE_STREET3_HIDDEN
+
+GroveStreet3Hermit:
+	jumptextfaceplayer GroveStreet3HermitText
+
+GroveStreet3HermitText:
+	text "I'm founding a"
+	line "cult of one."
+	para "Membership is"
+	line "great. The leader"
+	para "is a little tired."
+	done
+
 GroveStreet3SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -76,9 +90,11 @@ GroveStreet3_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  2, 16, BGEVENT_ITEM, GroveStreet3Hidden
 
 	def_object_events
 	object_event  2, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet3Pickup, EVENT_GEN_GROVE_STREET3_PICKUP
+	object_event  7, 11, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GroveStreet3Hermit, -1
 	object_event 12, 26, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer0, -1
 	object_event 15, 24, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer1, -1
 	object_event  8, 22, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer2, -1

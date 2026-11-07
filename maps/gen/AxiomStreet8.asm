@@ -9,6 +9,18 @@ AxiomStreet8_MapScripts:
 AxiomStreet8Pickup:
 	itemball TM_IRON_TAIL
 
+AxiomStreet8Hidden:
+	hiddenitem REVIVE, EVENT_GEN_AXIOM_STREET8_HIDDEN
+
+AxiomStreet8Hermit:
+	jumptextfaceplayer AxiomStreet8HermitText
+
+AxiomStreet8HermitText:
+	text "Don't speak"
+	line "loudly. The leaves"
+	para "are audited."
+	done
+
 AxiomStreet8SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -76,9 +88,11 @@ AxiomStreet8_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 21, 26, BGEVENT_ITEM, AxiomStreet8Hidden
 
 	def_object_events
 	object_event 18, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet8Pickup, EVENT_GEN_AXIOM_STREET8_PICKUP
+	object_event 17, 23, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomStreet8Hermit, -1
 	object_event  4, 26, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer0, -1
 	object_event  9, 26, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer1, -1
 	object_event  2, 24, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer2, -1

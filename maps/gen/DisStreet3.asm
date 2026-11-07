@@ -9,6 +9,9 @@ DisStreet3_MapScripts:
 DisStreet3Pickup:
 	itemball ULTRA_BALL
 
+DisStreet3Hidden:
+	hiddenitem MAX_REVIVE, EVENT_GEN_DIS_STREET3_HIDDEN
+
 DisStreet3SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -79,6 +82,7 @@ DisStreet3_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  3, 26, BGEVENT_ITEM, DisStreet3Hidden
 
 	def_object_events
 	object_event  6, 27, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet3Pickup, EVENT_GEN_DIS_STREET3_PICKUP

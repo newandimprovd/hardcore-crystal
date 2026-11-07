@@ -9,6 +9,21 @@ LotusStreet5_MapScripts:
 LotusStreet5Pickup:
 	itemball TM_ROAR
 
+LotusStreet5Hidden:
+	hiddenitem PP_UP, EVENT_GEN_LOTUS_STREET5_HIDDEN
+
+LotusStreet5Hermit:
+	jumptextfaceplayer LotusStreet5HermitText
+
+LotusStreet5HermitText:
+	text "I keep a journal."
+	line "Today's entry:"
+	para "'Same.'"
+	line "Yesterday's:"
+	para "'Same.' The day"
+	line "before: 'Same.'"
+	done
+
 LotusStreet5SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -76,9 +91,11 @@ LotusStreet5_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 18, 18, BGEVENT_ITEM, LotusStreet5Hidden
 
 	def_object_events
 	object_event 21, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet5Pickup, EVENT_GEN_LOTUS_STREET5_PICKUP
+	object_event 21, 20, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusStreet5Hermit, -1
 	object_event  8, 26, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet5Trainer0, -1
 	object_event 11, 24, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet5Trainer1, -1
 	object_event  4, 22, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet5Trainer2, -1

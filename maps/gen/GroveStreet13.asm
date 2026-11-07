@@ -9,6 +9,20 @@ GroveStreet13_MapScripts:
 GroveStreet13Pickup:
 	itemball TM_ICE_PUNCH
 
+GroveStreet13Hidden:
+	hiddenitem ETHER, EVENT_GEN_GROVE_STREET13_HIDDEN
+
+GroveStreet13Hermit:
+	jumptextfaceplayer GroveStreet13HermitText
+
+GroveStreet13HermitText:
+	text "This glade belongs"
+	line "to everyone."
+	para "Please leave. I"
+	line "mean it"
+	para "communally."
+	done
+
 GroveStreet13SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -76,9 +90,11 @@ GroveStreet13_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 17, 18, BGEVENT_ITEM, GroveStreet13Hidden
 
 	def_object_events
 	object_event 15, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet13Pickup, EVENT_GEN_GROVE_STREET13_PICKUP
+	object_event 19, 18, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet13Hermit, -1
 	object_event  8, 26, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet13Trainer0, -1
 	object_event 13, 26, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet13Trainer1, -1
 	object_event  6, 24, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet13Trainer2, -1

@@ -9,6 +9,9 @@ DisStreet1_MapScripts:
 DisStreet1Pickup:
 	itemball TM_THUNDER
 
+DisStreet1Hidden:
+	hiddenitem PP_UP, EVENT_GEN_DIS_STREET1_HIDDEN
+
 DisStreet1SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -79,6 +82,7 @@ DisStreet1_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  7, 18, BGEVENT_ITEM, DisStreet1Hidden
 
 	def_object_events
 	object_event  4, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet1Pickup, EVENT_GEN_DIS_STREET1_PICKUP

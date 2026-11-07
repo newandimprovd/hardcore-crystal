@@ -11,6 +11,9 @@ TitheStreet11_MapScripts:
 TitheStreet11BoulderScript:
 	jumpstd StrengthBoulderScript
 
+TitheStreet11Hidden:
+	hiddenitem REVIVE, EVENT_GEN_TITHE_STREET11_HIDDEN
+
 TitheStreet11SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -78,6 +81,7 @@ TitheStreet11_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 18, 19, BGEVENT_ITEM, TitheStreet11Hidden
 
 	def_object_events
 	object_event 14, 28, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11BoulderScript, -1

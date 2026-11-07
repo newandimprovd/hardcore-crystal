@@ -9,6 +9,9 @@ DisStreet7_MapScripts:
 DisStreet7Pickup:
 	itemball REVIVE
 
+DisStreet7Hidden:
+	hiddenitem PP_UP, EVENT_GEN_DIS_STREET7_HIDDEN
+
 DisStreet7SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -79,6 +82,7 @@ DisStreet7_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  7, 28, BGEVENT_ITEM, DisStreet7Hidden
 
 	def_object_events
 	object_event  9, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet7Pickup, EVENT_GEN_DIS_STREET7_PICKUP

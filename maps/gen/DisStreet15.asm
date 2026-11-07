@@ -9,6 +9,20 @@ DisStreet15_MapScripts:
 DisStreet15Pickup:
 	itemball ELIXER
 
+DisStreet15Hidden:
+	hiddenitem ELIXER, EVENT_GEN_DIS_STREET15_HIDDEN
+
+DisStreet15Hermit:
+	jumptextfaceplayer DisStreet15HermitText
+
+DisStreet15HermitText:
+	text "The flames are"
+	line "warm. I stopped"
+	para "complaining. The"
+	line "complaint box is"
+	para "also on fire."
+	done
+
 DisStreet15SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -76,9 +90,11 @@ DisStreet15_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 21, 23, BGEVENT_ITEM, DisStreet15Hidden
 
 	def_object_events
 	object_event 17, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet15Pickup, EVENT_GEN_DIS_STREET15_PICKUP
+	object_event 16,  9, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisStreet15Hermit, -1
 	object_event  4, 26, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet15Trainer0, -1
 	object_event  9, 26, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet15Trainer1, -1
 	object_event  6, 24, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet15Trainer2, -1

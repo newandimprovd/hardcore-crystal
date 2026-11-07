@@ -9,6 +9,20 @@ LotusStreet1_MapScripts:
 LotusStreet1Pickup:
 	itemball TM_TOXIC
 
+LotusStreet1Hidden:
+	hiddenitem PP_UP, EVENT_GEN_LOTUS_STREET1_HIDDEN
+
+LotusStreet1Hermit:
+	jumptextfaceplayer LotusStreet1HermitText
+
+LotusStreet1HermitText:
+	text "Everyone is so"
+	line "relaxed here."
+	para "That's what giving"
+	line "up looks like with"
+	para "a tan."
+	done
+
 LotusStreet1SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -76,9 +90,11 @@ LotusStreet1_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  8, 10, BGEVENT_ITEM, LotusStreet1Hidden
 
 	def_object_events
 	object_event  3, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet1Pickup, EVENT_GEN_LOTUS_STREET1_PICKUP
+	object_event 10, 19, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusStreet1Hermit, -1
 	object_event 10, 26, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet1Trainer0, -1
 	object_event 12, 24, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet1Trainer1, -1
 	object_event 17, 24, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet1Trainer2, -1

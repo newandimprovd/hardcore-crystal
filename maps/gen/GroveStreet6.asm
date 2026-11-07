@@ -45,6 +45,9 @@ GroveStreet6GateUseText:
 	line "anyway."
 	done
 
+GroveStreet6Hidden:
+	hiddenitem REVIVE, EVENT_GEN_GROVE_STREET6_HIDDEN
+
 GroveStreet6SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -112,6 +115,7 @@ GroveStreet6_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  6, 27, BGEVENT_ITEM, GroveStreet6Hidden
 
 	def_object_events
 	object_event 18, 28, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet6GateScript, EVENT_GEN_GROVE_STREET6_GATE

@@ -42,6 +42,9 @@ LotusStreet11GateUseText:
 	line "Mostly nothing."
 	done
 
+LotusStreet11Hidden:
+	hiddenitem ETHER, EVENT_GEN_LOTUS_STREET11_HIDDEN
+
 LotusStreet11SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -109,6 +112,7 @@ LotusStreet11_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  6, 25, BGEVENT_ITEM, LotusStreet11Hidden
 
 	def_object_events
 	object_event 18, 28, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet11GateScript, EVENT_GEN_LOTUS_STREET11_GATE

@@ -9,6 +9,20 @@ TitheStreet7_MapScripts:
 TitheStreet7Pickup:
 	itemball TM_SLEEP_TALK
 
+TitheStreet7Hidden:
+	hiddenitem REVIVE, EVENT_GEN_TITHE_STREET7_HIDDEN
+
+TitheStreet7Hermit:
+	jumptextfaceplayer TitheStreet7HermitText
+
+TitheStreet7HermitText:
+	text "Shh. The trainers"
+	line "can't see you when"
+	para "you sit down. I"
+	line "have been sitting"
+	para "down since March."
+	done
+
 TitheStreet7SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -73,9 +87,11 @@ TitheStreet7_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 21, 18, BGEVENT_ITEM, TitheStreet7Hidden
 
 	def_object_events
 	object_event 21, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet7Pickup, EVENT_GEN_TITHE_STREET7_PICKUP
+	object_event 20, 17, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheStreet7Hermit, -1
 	object_event 12, 24, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer0, -1
 	object_event 17, 24, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer1, -1
 	object_event 10, 22, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer2, -1

@@ -9,6 +9,20 @@ AxiomStreet15_MapScripts:
 AxiomStreet15Pickup:
 	itemball SUPER_POTION
 
+AxiomStreet15Hidden:
+	hiddenitem PP_UP, EVENT_GEN_AXIOM_STREET15_HIDDEN
+
+AxiomStreet15Hermit:
+	jumptextfaceplayer AxiomStreet15HermitText
+
+AxiomStreet15HermitText:
+	text "I have proven that"
+	line "I exist. It took"
+	para "six months. The"
+	line "proof expired on"
+	para "Tuesday."
+	done
+
 AxiomStreet15SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -76,9 +90,11 @@ AxiomStreet15_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 19, 26, BGEVENT_ITEM, AxiomStreet15Hidden
 
 	def_object_events
 	object_event 21, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet15Pickup, EVENT_GEN_AXIOM_STREET15_PICKUP
+	object_event 17, 21, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet15Hermit, -1
 	object_event  8, 26, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet15Trainer0, -1
 	object_event 13, 26, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet15Trainer1, -1
 	object_event  8, 24, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet15Trainer2, -1

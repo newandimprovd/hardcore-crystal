@@ -9,6 +9,9 @@ LotusStreet9_MapScripts:
 LotusStreet9Pickup:
 	itemball REPEL
 
+LotusStreet9Hidden:
+	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET9_HIDDEN
+
 LotusStreet9SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -79,6 +82,7 @@ LotusStreet9_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 21, 21, BGEVENT_ITEM, LotusStreet9Hidden
 
 	def_object_events
 	object_event 15, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet9Pickup, EVENT_GEN_LOTUS_STREET9_PICKUP

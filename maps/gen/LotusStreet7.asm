@@ -9,6 +9,17 @@ LotusStreet7_MapScripts:
 LotusStreet7Pickup:
 	itemball TM_PSYCH_UP
 
+LotusStreet7Hermit:
+	jumptextfaceplayer LotusStreet7HermitText
+
+LotusStreet7HermitText:
+	text "I've been lying on"
+	line "this beach for"
+	para "eleven years. The"
+	line "tide has asked me"
+	para "to move twice."
+	done
+
 LotusStreet7SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -79,6 +90,7 @@ LotusStreet7_MapEvents:
 
 	def_object_events
 	object_event  5, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet7Pickup, EVENT_GEN_LOTUS_STREET7_PICKUP
+	object_event 13, 18, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet7Hermit, -1
 	object_event 16, 26, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet7Trainer0, -1
 	object_event 21, 26, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet7Trainer1, -1
 	object_event 16, 24, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet7Trainer2, -1

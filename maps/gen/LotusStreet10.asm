@@ -9,6 +9,19 @@ LotusStreet10_MapScripts:
 LotusStreet10Pickup:
 	itemball TM_SLUDGE_BOMB
 
+LotusStreet10Hidden:
+	hiddenitem PP_UP, EVENT_GEN_LOTUS_STREET10_HIDDEN
+
+LotusStreet10Hermit:
+	jumptextfaceplayer LotusStreet10HermitText
+
+LotusStreet10HermitText:
+	text "The sunset here is"
+	line "wonderful. It"
+	para "reminds me of the"
+	line "end of everything."
+	done
+
 LotusStreet10SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -76,9 +89,11 @@ LotusStreet10_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 16, 23, BGEVENT_ITEM, LotusStreet10Hidden
 
 	def_object_events
 	object_event 17, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet10Pickup, EVENT_GEN_LOTUS_STREET10_PICKUP
+	object_event 20, 22, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet10Hermit, -1
 	object_event 12, 26, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer0, -1
 	object_event 15, 24, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer1, -1
 	object_event  8, 22, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer2, -1

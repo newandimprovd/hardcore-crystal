@@ -9,6 +9,9 @@ AxiomStreet9_MapScripts:
 AxiomStreet9Pickup:
 	itemball TM_STEEL_WING
 
+AxiomStreet9Hidden:
+	hiddenitem ETHER, EVENT_GEN_AXIOM_STREET9_HIDDEN
+
 AxiomStreet9SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -79,6 +82,7 @@ AxiomStreet9_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 18, 28, BGEVENT_ITEM, AxiomStreet9Hidden
 
 	def_object_events
 	object_event 19, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet9Pickup, EVENT_GEN_AXIOM_STREET9_PICKUP

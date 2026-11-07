@@ -9,6 +9,17 @@ AxiomStreet10_MapScripts:
 AxiomStreet10Pickup:
 	itemball REVIVE
 
+AxiomStreet10Hermit:
+	jumptextfaceplayer AxiomStreet10HermitText
+
+AxiomStreet10HermitText:
+	text "I escaped the"
+	line "Registry. I'm no"
+	para "longer a number."
+	line "I'm a letter. The"
+	para "letter is Q."
+	done
+
 AxiomStreet10SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -79,6 +90,7 @@ AxiomStreet10_MapEvents:
 
 	def_object_events
 	object_event  7, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet10Pickup, EVENT_GEN_AXIOM_STREET10_PICKUP
+	object_event  7, 25, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomStreet10Hermit, -1
 	object_event 10, 26, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet10Trainer0, -1
 	object_event 15, 26, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet10Trainer1, -1
 	object_event 12, 24, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet10Trainer2, -1

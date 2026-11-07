@@ -9,6 +9,20 @@ TitheStreet14_MapScripts:
 TitheStreet14Pickup:
 	itemball TM_DETECT
 
+TitheStreet14Hidden:
+	hiddenitem AWAKENING, EVENT_GEN_TITHE_STREET14_HIDDEN
+
+TitheStreet14Hermit:
+	jumptextfaceplayer TitheStreet14HermitText
+
+TitheStreet14HermitText:
+	text "I've lived here"
+	line "nine years. Nobody"
+	para "has come to arrest"
+	line "me. I find that"
+	para "deeply insulting."
+	done
+
 TitheStreet14SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -76,9 +90,11 @@ TitheStreet14_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  6, 15, BGEVENT_ITEM, TitheStreet14Hidden
 
 	def_object_events
 	object_event  3, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet14Pickup, EVENT_GEN_TITHE_STREET14_PICKUP
+	object_event 10, 17, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheStreet14Hermit, -1
 	object_event 16, 26, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer0, -1
 	object_event 21, 26, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer1, -1
 	object_event 16, 24, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer2, -1

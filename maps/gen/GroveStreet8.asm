@@ -9,6 +9,17 @@ GroveStreet8_MapScripts:
 GroveStreet8Pickup:
 	itemball TM_ROLLOUT
 
+GroveStreet8Hermit:
+	jumptextfaceplayer GroveStreet8HermitText
+
+GroveStreet8HermitText:
+	text "If you hear"
+	line "chanting, it isn't"
+	para "a ritual. It's"
+	line "just Greg. He's"
+	para "had a bad week."
+	done
+
 GroveStreet8SeenText:
 	text_far HC_SeenText_A2
 	text_end
@@ -79,6 +90,7 @@ GroveStreet8_MapEvents:
 
 	def_object_events
 	object_event 21, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet8Pickup, EVENT_GEN_GROVE_STREET8_PICKUP
+	object_event 16, 22, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet8Hermit, -1
 	object_event  8, 26, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer0, -1
 	object_event 13, 26, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer1, -1
 	object_event  8, 24, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer2, -1

@@ -9,6 +9,21 @@ TitheStreet1_MapScripts:
 TitheStreet1Pickup:
 	itemball TM_ROCK_SMASH
 
+TitheStreet1Hidden:
+	hiddenitem ETHER, EVENT_GEN_TITHE_STREET1_HIDDEN
+
+TitheStreet1Hermit:
+	jumptextfaceplayer TitheStreet1HermitText
+
+TitheStreet1HermitText:
+	text "I left the city to"
+	line "escape the tithe."
+	para "The trees also"
+	line "want ten percent."
+	para "Of what, they"
+	line "won't say."
+	done
+
 TitheStreet1SeenText:
 	text_far HC_SeenText_A1
 	text_end
@@ -73,9 +88,11 @@ TitheStreet1_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  2,  8, BGEVENT_ITEM, TitheStreet1Hidden
 
 	def_object_events
 	object_event  8, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet1Pickup, EVENT_GEN_TITHE_STREET1_PICKUP
+	object_event  3, 12, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TitheStreet1Hermit, -1
 	object_event 10, 24, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet1Trainer0, -1
 	object_event 15, 24, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet1Trainer1, -1
 	object_event 12, 22, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet1Trainer2, -1

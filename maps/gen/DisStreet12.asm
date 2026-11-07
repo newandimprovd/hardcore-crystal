@@ -9,6 +9,18 @@ DisStreet12_MapScripts:
 DisStreet12Pickup:
 	itemball TM_DYNAMICPUNCH
 
+DisStreet12Hidden:
+	hiddenitem MAX_REVIVE, EVENT_GEN_DIS_STREET12_HIDDEN
+
+DisStreet12Hermit:
+	jumptextfaceplayer DisStreet12HermitText
+
+DisStreet12HermitText:
+	text "Be careful. The"
+	line "trainers are the"
+	para "nice ones."
+	done
+
 DisStreet12SeenText:
 	text_far HC_SeenText_A5
 	text_end
@@ -76,9 +88,11 @@ DisStreet12_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 21, 24, BGEVENT_ITEM, DisStreet12Hidden
 
 	def_object_events
 	object_event 21, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet12Pickup, EVENT_GEN_DIS_STREET12_PICKUP
+	object_event 21, 21, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisStreet12Hermit, -1
 	object_event 10, 26, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer0, -1
 	object_event  8, 24, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer1, -1
 	object_event 13, 24, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer2, -1

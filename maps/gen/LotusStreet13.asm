@@ -9,6 +9,20 @@ LotusStreet13_MapScripts:
 LotusStreet13Pickup:
 	itemball TM_SHADOW_BALL
 
+LotusStreet13Hidden:
+	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET13_HIDDEN
+
+LotusStreet13Hermit:
+	jumptextfaceplayer LotusStreet13HermitText
+
+LotusStreet13HermitText:
+	text "I saw a trainer"
+	line "yawn mid-attack."
+	para "It was the most"
+	line "honest violence I"
+	para "have ever seen."
+	done
+
 LotusStreet13SeenText:
 	text_far HC_SeenText_A4
 	text_end
@@ -76,9 +90,11 @@ LotusStreet13_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 14, 10, BGEVENT_ITEM, LotusStreet13Hidden
 
 	def_object_events
 	object_event 19,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet13Pickup, EVENT_GEN_LOTUS_STREET13_PICKUP
+	object_event 17, 13, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet13Hermit, -1
 	object_event  6, 26, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer0, -1
 	object_event 11, 26, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer1, -1
 	object_event  8, 24, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer2, -1

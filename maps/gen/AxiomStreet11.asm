@@ -44,6 +44,9 @@ AxiomStreet11GateUseText:
 	line "property."
 	done
 
+AxiomStreet11Hidden:
+	hiddenitem ELIXER, EVENT_GEN_AXIOM_STREET11_HIDDEN
+
 AxiomStreet11SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -111,6 +114,7 @@ AxiomStreet11_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 14, 12, BGEVENT_ITEM, AxiomStreet11Hidden
 
 	def_object_events
 	object_event  6, 28, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet11GateScript, EVENT_GEN_AXIOM_STREET11_GATE

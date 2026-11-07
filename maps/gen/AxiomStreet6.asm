@@ -42,6 +42,9 @@ AxiomStreet6GateUseText:
 	para "fine."
 	done
 
+AxiomStreet6Hidden:
+	hiddenitem ELIXER, EVENT_GEN_AXIOM_STREET6_HIDDEN
+
 AxiomStreet6SeenText:
 	text_far HC_SeenText_A3
 	text_end
@@ -109,6 +112,7 @@ AxiomStreet6_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  8, 20, BGEVENT_ITEM, AxiomStreet6Hidden
 
 	def_object_events
 	object_event 14, 28, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet6GateScript, EVENT_GEN_AXIOM_STREET6_GATE
