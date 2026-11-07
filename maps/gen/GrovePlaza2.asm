@@ -6,6 +6,69 @@ GrovePlaza2_MapScripts:
 
 	def_callbacks
 
+GrovePlaza2Townie0:
+	jumptextfaceplayer GrovePlaza2Townie0Text
+
+GrovePlaza2Townie0Text:
+	text "The drum circle"
+	line "has gone on for"
+	para "three days. Please"
+	line "send help, or a"
+	para "replacement"
+	line "drummer."
+	done
+
+GrovePlaza2Townie1:
+	jumptextfaceplayer GrovePlaza2Townie1Text
+
+GrovePlaza2Townie1Text:
+	text "We banned locks."
+	line "Now we just have a"
+	para "lot of nice open"
+	line "grudges."
+	done
+
+GrovePlaza2Townie2:
+	jumptextfaceplayer GrovePlaza2Townie2Text
+
+GrovePlaza2Townie2Text:
+	text "The compost is a"
+	line "very emotional"
+	para "place. Visit at"
+	line "your own risk."
+	done
+
+GrovePlaza2Townie3:
+	jumptextfaceplayer GrovePlaza2Townie3Text
+
+GrovePlaza2Townie3Text:
+	text "We don't have a"
+	line "flag. We have a"
+	para "banner. It's a"
+	line "tablecloth. It's"
+	para "the tablecloth's"
+	line "last stand."
+	done
+
+GrovePlaza2Townie4:
+	jumptextfaceplayer GrovePlaza2Townie4Text
+
+GrovePlaza2Townie4Text:
+	text "There's no money"
+	line "in the commune. We"
+	para "have vibes. Vibes"
+	line "are rationed."
+	done
+
+GrovePlaza2Townie5:
+	jumptextfaceplayer GrovePlaza2Townie5Text
+
+GrovePlaza2Townie5Text:
+	text "Have you seen my"
+	line "goat? She is my"
+	para "lawyer."
+	done
+
 GrovePlaza2_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +83,10 @@ GrovePlaza2_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 26, 24, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie0, -1
+	object_event 19, 20, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie1, -1
+	object_event 14, 20, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie2, -1
+	object_event 17, 13, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie3, -1
+	object_event  8, 23, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie4, -1
+	object_event 15, 18, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie5, -1
 

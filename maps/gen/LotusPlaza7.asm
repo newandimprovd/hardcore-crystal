@@ -6,6 +6,65 @@ LotusPlaza7_MapScripts:
 
 	def_callbacks
 
+LotusPlaza7Townie0:
+	jumptextfaceplayer LotusPlaza7Townie0Text
+
+LotusPlaza7Townie0Text:
+	text "Looking for the"
+	line "meaning of life?"
+	para "Try the minibar."
+	line "It's empty. That's"
+	para "the meaning."
+	done
+
+LotusPlaza7Townie1:
+	jumptextfaceplayer LotusPlaza7Townie1Text
+
+LotusPlaza7Townie1Text:
+	text "The lifeguard is a"
+	line "philosopher. He"
+	para "hasn't saved"
+	line "anyone yet, but he"
+	para "has had thoughts."
+	done
+
+LotusPlaza7Townie2:
+	jumptextfaceplayer LotusPlaza7Townie2Text
+
+LotusPlaza7Townie2Text:
+	text "I booked a week."
+	line "It's been four"
+	para "years. Checkout is"
+	line "a state of mind."
+	done
+
+LotusPlaza7Townie3:
+	jumptextfaceplayer LotusPlaza7Townie3Text
+
+LotusPlaza7Townie3Text:
+	text "The pool is closed"
+	line "due to depth."
+	done
+
+LotusPlaza7Townie4:
+	jumptextfaceplayer LotusPlaza7Townie4Text
+
+LotusPlaza7Townie4Text:
+	text "Every day is"
+	line "Sunday here. The"
+	para "Sunday scaries are"
+	line "permanent."
+	done
+
+LotusPlaza7Townie5:
+	jumptextfaceplayer LotusPlaza7Townie5Text
+
+LotusPlaza7Townie5Text:
+	text "Smile! You're on"
+	line "vacation! That's"
+	para "an order."
+	done
+
 LotusPlaza7_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +79,10 @@ LotusPlaza7_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 20, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie0, -1
+	object_event 27, 18, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie1, -1
+	object_event 30, 14, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie2, -1
+	object_event 18, 23, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie3, -1
+	object_event 28,  9, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie4, -1
+	object_event 26, 12, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie5, -1
 

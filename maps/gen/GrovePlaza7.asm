@@ -6,6 +6,72 @@ GrovePlaza7_MapScripts:
 
 	def_callbacks
 
+GrovePlaza7Townie0:
+	jumptextfaceplayer GrovePlaza7Townie0Text
+
+GrovePlaza7Townie0Text:
+	text "The drum circle"
+	line "has gone on for"
+	para "three days. Please"
+	line "send help, or a"
+	para "replacement"
+	line "drummer."
+	done
+
+GrovePlaza7Townie1:
+	jumptextfaceplayer GrovePlaza7Townie1Text
+
+GrovePlaza7Townie1Text:
+	text "Everyone here is"
+	line "equal. Some of us"
+	para "are more equal"
+	line "because we hold"
+	para "the key to the"
+	line "pantry."
+	done
+
+GrovePlaza7Townie2:
+	jumptextfaceplayer GrovePlaza7Townie2Text
+
+GrovePlaza7Townie2Text:
+	text "We banned locks."
+	line "Now we just have a"
+	para "lot of nice open"
+	line "grudges."
+	done
+
+GrovePlaza7Townie3:
+	jumptextfaceplayer GrovePlaza7Townie3Text
+
+GrovePlaza7Townie3Text:
+	text "We share"
+	line "everything here."
+	para "I'm sharing my"
+	line "opinion: you"
+	para "should leave."
+	done
+
+GrovePlaza7Townie4:
+	jumptextfaceplayer GrovePlaza7Townie4Text
+
+GrovePlaza7Townie4Text:
+	text "Have you seen my"
+	line "goat? She is my"
+	para "lawyer."
+	done
+
+GrovePlaza7Townie5:
+	jumptextfaceplayer GrovePlaza7Townie5Text
+
+GrovePlaza7Townie5Text:
+	text "The harvest was"
+	line "bad again. Our"
+	para "leader says it's a"
+	line "spiritual test."
+	para "Our leader also"
+	line "has a ham."
+	done
+
 GrovePlaza7_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +86,10 @@ GrovePlaza7_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  6, 17, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie0, -1
+	object_event 27,  9, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie1, -1
+	object_event 11, 13, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie2, -1
+	object_event 18, 14, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie3, -1
+	object_event 21, 24, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie4, -1
+	object_event 10,  9, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie5, -1
 

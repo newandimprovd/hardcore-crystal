@@ -6,6 +6,68 @@ TithePlaza4_MapScripts:
 
 	def_callbacks
 
+TithePlaza4Townie0:
+	jumptextfaceplayer TithePlaza4Townie0Text
+
+TithePlaza4Townie0Text:
+	text "I've been waiting"
+	line "for the bus since"
+	para "the line was"
+	line "cancelled. I'm"
+	para "very committed."
+	done
+
+TithePlaza4Townie1:
+	jumptextfaceplayer TithePlaza4Townie1Text
+
+TithePlaza4Townie1Text:
+	text "I took out a loan"
+	line "to pay off the"
+	para "other loan. The"
+	line "system works!"
+	done
+
+TithePlaza4Townie2:
+	jumptextfaceplayer TithePlaza4Townie2Text
+
+TithePlaza4Townie2Text:
+	text "Prices went up"
+	line "again. Hope stayed"
+	para "the same. It was"
+	line "already free, and"
+	para "nobody took it."
+	done
+
+TithePlaza4Townie3:
+	jumptextfaceplayer TithePlaza4Townie3Text
+
+TithePlaza4Townie3Text:
+	text "My horoscope says"
+	line "'Pay.' Just that."
+	para "Every day. 'Pay.'"
+	done
+
+TithePlaza4Townie4:
+	jumptextfaceplayer TithePlaza4Townie4Text
+
+TithePlaza4Townie4Text:
+	text "Don't drink from"
+	line "the fountain."
+	para "Don't look at the"
+	line "fountain. Don't"
+	para "wave. It knows."
+	done
+
+TithePlaza4Townie5:
+	jumptextfaceplayer TithePlaza4Townie5Text
+
+TithePlaza4Townie5Text:
+	text "Free samples! Just"
+	line "kidding."
+	para "Everything is a"
+	line "subscription."
+	done
+
 TithePlaza4_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,4 +81,10 @@ TithePlaza4_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 12, 24, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie0, -1
+	object_event  3, 22, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie1, -1
+	object_event  9, 24, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie2, -1
+	object_event  8, 21, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie3, -1
+	object_event 20, 24, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie4, -1
+	object_event 21, 24, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie5, -1
 

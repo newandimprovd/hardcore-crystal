@@ -6,6 +6,69 @@ GrovePlaza1_MapScripts:
 
 	def_callbacks
 
+GrovePlaza1Townie0:
+	jumptextfaceplayer GrovePlaza1Townie0Text
+
+GrovePlaza1Townie0Text:
+	text "We share"
+	line "everything here."
+	para "I'm sharing my"
+	line "opinion: you"
+	para "should leave."
+	done
+
+GrovePlaza1Townie1:
+	jumptextfaceplayer GrovePlaza1Townie1Text
+
+GrovePlaza1Townie1Text:
+	text "The drum circle"
+	line "has gone on for"
+	para "three days. Please"
+	line "send help, or a"
+	para "replacement"
+	line "drummer."
+	done
+
+GrovePlaza1Townie2:
+	jumptextfaceplayer GrovePlaza1Townie2Text
+
+GrovePlaza1Townie2Text:
+	text "I came for inner"
+	line "peace. I stayed"
+	para "for the outer"
+	line "debts."
+	done
+
+GrovePlaza1Townie3:
+	jumptextfaceplayer GrovePlaza1Townie3Text
+
+GrovePlaza1Townie3Text:
+	text "The compost is a"
+	line "very emotional"
+	para "place. Visit at"
+	line "your own risk."
+	done
+
+GrovePlaza1Townie4:
+	jumptextfaceplayer GrovePlaza1Townie4Text
+
+GrovePlaza1Townie4Text:
+	text "There's no money"
+	line "in the commune. We"
+	para "have vibes. Vibes"
+	line "are rationed."
+	done
+
+GrovePlaza1Townie5:
+	jumptextfaceplayer GrovePlaza1Townie5Text
+
+GrovePlaza1Townie5Text:
+	text "We banned locks."
+	line "Now we just have a"
+	para "lot of nice open"
+	line "grudges."
+	done
+
 GrovePlaza1_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +83,10 @@ GrovePlaza1_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  5,  8, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie0, -1
+	object_event 21, 16, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie1, -1
+	object_event 22, 15, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie2, -1
+	object_event 29, 16, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie3, -1
+	object_event 31, 12, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie4, -1
+	object_event  9,  9, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie5, -1
 

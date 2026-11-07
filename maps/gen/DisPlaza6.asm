@@ -6,6 +6,68 @@ DisPlaza6_MapScripts:
 
 	def_callbacks
 
+DisPlaza6Townie0:
+	jumptextfaceplayer DisPlaza6Townie0Text
+
+DisPlaza6Townie0Text:
+	text "The fountain is"
+	line "boiling lead. It's"
+	para "called mineral"
+	line "water. Everything"
+	para "here is."
+	done
+
+DisPlaza6Townie1:
+	jumptextfaceplayer DisPlaza6Townie1Text
+
+DisPlaza6Townie1Text:
+	text "Welcome to Dis!"
+	line "Your suffering is"
+	para "being processed."
+	line "Estimated wait:"
+	para "forever."
+	done
+
+DisPlaza6Townie2:
+	jumptextfaceplayer DisPlaza6Townie2Text
+
+DisPlaza6Townie2Text:
+	text "I got a pamphlet"
+	line "called 'How to"
+	para "Cope.' It was one"
+	line "page. It said"
+	para "'Don't.'"
+	done
+
+DisPlaza6Townie3:
+	jumptextfaceplayer DisPlaza6Townie3Text
+
+DisPlaza6Townie3Text:
+	text "The weather is the"
+	line "same all year."
+	para "Sulfurous, with a"
+	line "chance of regret."
+	done
+
+DisPlaza6Townie4:
+	jumptextfaceplayer DisPlaza6Townie4Text
+
+DisPlaza6Townie4Text:
+	text "We have a union."
+	line "It meets every"
+	para "Never."
+	done
+
+DisPlaza6Townie5:
+	jumptextfaceplayer DisPlaza6Townie5Text
+
+DisPlaza6Townie5Text:
+	text "Demons are people"
+	line "too. Terrible,"
+	para "terrible people,"
+	line "but still."
+	done
+
 DisPlaza6_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,4 +81,10 @@ DisPlaza6_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 13, 14, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie0, -1
+	object_event 23, 16, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie1, -1
+	object_event 10, 26, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie2, -1
+	object_event 20, 22, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie3, -1
+	object_event 12, 15, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie4, -1
+	object_event 13, 25, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie5, -1
 

@@ -6,6 +6,70 @@ AxiomPlaza6_MapScripts:
 
 	def_callbacks
 
+AxiomPlaza6Townie0:
+	jumptextfaceplayer AxiomPlaza6Townie0Text
+
+AxiomPlaza6Townie0Text:
+	text "I once saw a bug"
+	line "in the system. It"
+	para "saw me too. We"
+	line "don't talk about"
+	para "it."
+	done
+
+AxiomPlaza6Townie1:
+	jumptextfaceplayer AxiomPlaza6Townie1Text
+
+AxiomPlaza6Townie1Text:
+	text "Please queue here."
+	line "Queue for the"
+	para "queue, then queue."
+	line "Thank you for"
+	para "queueing."
+	done
+
+AxiomPlaza6Townie2:
+	jumptextfaceplayer AxiomPlaza6Townie2Text
+
+AxiomPlaza6Townie2Text:
+	text "The Mayor is a"
+	line "great listener. He"
+	para "has forty thousand"
+	line "microphones and no"
+	para "mouth."
+	done
+
+AxiomPlaza6Townie3:
+	jumptextfaceplayer AxiomPlaza6Townie3Text
+
+AxiomPlaza6Townie3Text:
+	text "I'm just a regular"
+	line "citizen. Ignore"
+	para "the antenna."
+	done
+
+AxiomPlaza6Townie4:
+	jumptextfaceplayer AxiomPlaza6Townie4Text
+
+AxiomPlaza6Townie4Text:
+	text "We are all equal"
+	line "before the"
+	para "algorithm. The"
+	line "algorithm is not"
+	para "equal to us."
+	done
+
+AxiomPlaza6Townie5:
+	jumptextfaceplayer AxiomPlaza6Townie5Text
+
+AxiomPlaza6Townie5Text:
+	text "I voted. The"
+	line "result was"
+	para "'accepted'. I"
+	line "don't know what I"
+	para "accepted."
+	done
+
 AxiomPlaza6SabbahScript:
 	faceplayer
 	opentext
@@ -76,5 +140,11 @@ AxiomPlaza6_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  4,  9, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie0, -1
+	object_event  4, 15, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie1, -1
+	object_event  4,  8, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie2, -1
+	object_event 22, 27, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie3, -1
+	object_event 15, 26, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie4, -1
+	object_event 24, 14, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie5, -1
 	object_event 20,  7, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SabbahScript, -1
 

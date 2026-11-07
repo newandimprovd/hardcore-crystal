@@ -6,6 +6,70 @@ TithePlaza1_MapScripts:
 
 	def_callbacks
 
+TithePlaza1Townie0:
+	jumptextfaceplayer TithePlaza1Townie0Text
+
+TithePlaza1Townie0Text:
+	text "I took out a loan"
+	line "to pay off the"
+	para "other loan. The"
+	line "system works!"
+	done
+
+TithePlaza1Townie1:
+	jumptextfaceplayer TithePlaza1Townie1Text
+
+TithePlaza1Townie1Text:
+	text "Don't drink from"
+	line "the fountain."
+	para "Don't look at the"
+	line "fountain. Don't"
+	para "wave. It knows."
+	done
+
+TithePlaza1Townie2:
+	jumptextfaceplayer TithePlaza1Townie2Text
+
+TithePlaza1Townie2Text:
+	text "They say the city"
+	line "has a heart. I've"
+	para "seen its pulse. It"
+	line "was a collection"
+	para "plate."
+	done
+
+TithePlaza1Townie3:
+	jumptextfaceplayer TithePlaza1Townie3Text
+
+TithePlaza1Townie3Text:
+	text "The fountain is"
+	line "for show. The"
+	para "water is"
+	line "meter-reading you."
+	done
+
+TithePlaza1Townie4:
+	jumptextfaceplayer TithePlaza1Townie4Text
+
+TithePlaza1Townie4Text:
+	text "I've been waiting"
+	line "for the bus since"
+	para "the line was"
+	line "cancelled. I'm"
+	para "very committed."
+	done
+
+TithePlaza1Townie5:
+	jumptextfaceplayer TithePlaza1Townie5Text
+
+TithePlaza1Townie5Text:
+	text "I told my kids the"
+	line "coins in the"
+	para "fountain are"
+	line "wishes. They now"
+	para "work three jobs."
+	done
+
 TithePlaza1SteinerScript:
 	faceplayer
 	opentext
@@ -105,5 +169,11 @@ TithePlaza1_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 16, 19, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie0, -1
+	object_event  7, 10, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie1, -1
+	object_event 21,  6, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie2, -1
+	object_event 11, 13, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie3, -1
+	object_event  6, 10, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie4, -1
+	object_event 11,  9, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie5, -1
 	object_event 25,  9, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1SteinerScript, -1
 

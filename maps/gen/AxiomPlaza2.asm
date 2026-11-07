@@ -6,6 +6,66 @@ AxiomPlaza2_MapScripts:
 
 	def_callbacks
 
+AxiomPlaza2Townie0:
+	jumptextfaceplayer AxiomPlaza2Townie0Text
+
+AxiomPlaza2Townie0Text:
+	text "Please enjoy the"
+	line "mandatory leisure."
+	done
+
+AxiomPlaza2Townie1:
+	jumptextfaceplayer AxiomPlaza2Townie1Text
+
+AxiomPlaza2Townie1Text:
+	text "Your happiness has"
+	line "been scheduled for"
+	para "Thursday. Please"
+	line "arrive early."
+	done
+
+AxiomPlaza2Townie2:
+	jumptextfaceplayer AxiomPlaza2Townie2Text
+
+AxiomPlaza2Townie2Text:
+	text "I'm just a regular"
+	line "citizen. Ignore"
+	para "the antenna."
+	done
+
+AxiomPlaza2Townie3:
+	jumptextfaceplayer AxiomPlaza2Townie3Text
+
+AxiomPlaza2Townie3Text:
+	text "Please queue here."
+	line "Queue for the"
+	para "queue, then queue."
+	line "Thank you for"
+	para "queueing."
+	done
+
+AxiomPlaza2Townie4:
+	jumptextfaceplayer AxiomPlaza2Townie4Text
+
+AxiomPlaza2Townie4Text:
+	text "Citizen, your face"
+	line "has been"
+	para "recognized. It is"
+	line "mostly in the"
+	para "clear."
+	done
+
+AxiomPlaza2Townie5:
+	jumptextfaceplayer AxiomPlaza2Townie5Text
+
+AxiomPlaza2Townie5Text:
+	text "We are all equal"
+	line "before the"
+	para "algorithm. The"
+	line "algorithm is not"
+	para "equal to us."
+	done
+
 AxiomPlaza2_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,4 +79,10 @@ AxiomPlaza2_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 25, 24, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie0, -1
+	object_event  3, 13, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie1, -1
+	object_event  5, 10, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie2, -1
+	object_event 13, 23, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie3, -1
+	object_event  3, 19, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie4, -1
+	object_event 14, 13, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie5, -1
 

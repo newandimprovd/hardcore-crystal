@@ -6,6 +6,68 @@ TithePlaza2_MapScripts:
 
 	def_callbacks
 
+TithePlaza2Townie0:
+	jumptextfaceplayer TithePlaza2Townie0Text
+
+TithePlaza2Townie0Text:
+	text "I told my kids the"
+	line "coins in the"
+	para "fountain are"
+	line "wishes. They now"
+	para "work three jobs."
+	done
+
+TithePlaza2Townie1:
+	jumptextfaceplayer TithePlaza2Townie1Text
+
+TithePlaza2Townie1Text:
+	text "I've been waiting"
+	line "for the bus since"
+	para "the line was"
+	line "cancelled. I'm"
+	para "very committed."
+	done
+
+TithePlaza2Townie2:
+	jumptextfaceplayer TithePlaza2Townie2Text
+
+TithePlaza2Townie2Text:
+	text "Free samples! Just"
+	line "kidding."
+	para "Everything is a"
+	line "subscription."
+	done
+
+TithePlaza2Townie3:
+	jumptextfaceplayer TithePlaza2Townie3Text
+
+TithePlaza2Townie3Text:
+	text "The fountain is"
+	line "for show. The"
+	para "water is"
+	line "meter-reading you."
+	done
+
+TithePlaza2Townie4:
+	jumptextfaceplayer TithePlaza2Townie4Text
+
+TithePlaza2Townie4Text:
+	text "My horoscope says"
+	line "'Pay.' Just that."
+	para "Every day. 'Pay.'"
+	done
+
+TithePlaza2Townie5:
+	jumptextfaceplayer TithePlaza2Townie5Text
+
+TithePlaza2Townie5Text:
+	text "That man is a cop."
+	line "This man is a cop."
+	para "I'm also a cop."
+	line "It's a very safe"
+	para "neighbourhood."
+	done
+
 TithePlaza2CrowleyScript:
 	faceplayer
 	opentext
@@ -137,6 +199,12 @@ TithePlaza2_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 19,  7, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie0, -1
+	object_event  4, 25, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie1, -1
+	object_event 23, 23, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie2, -1
+	object_event  5, 26, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie3, -1
+	object_event 11, 24, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie4, -1
+	object_event 12, 14, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie5, -1
 	object_event 13, 22, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2CrowleyScript, -1
 	object_event 10, 21, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd0Script, -1
 	object_event 10, 23, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Crowd1Script, -1

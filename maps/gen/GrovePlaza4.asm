@@ -6,6 +6,75 @@ GrovePlaza4_MapScripts:
 
 	def_callbacks
 
+GrovePlaza4Townie0:
+	jumptextfaceplayer GrovePlaza4Townie0Text
+
+GrovePlaza4Townie0Text:
+	text "We share"
+	line "everything here."
+	para "I'm sharing my"
+	line "opinion: you"
+	para "should leave."
+	done
+
+GrovePlaza4Townie1:
+	jumptextfaceplayer GrovePlaza4Townie1Text
+
+GrovePlaza4Townie1Text:
+	text "The harvest was"
+	line "bad again. Our"
+	para "leader says it's a"
+	line "spiritual test."
+	para "Our leader also"
+	line "has a ham."
+	done
+
+GrovePlaza4Townie2:
+	jumptextfaceplayer GrovePlaza4Townie2Text
+
+GrovePlaza4Townie2Text:
+	text "I came for inner"
+	line "peace. I stayed"
+	para "for the outer"
+	line "debts."
+	done
+
+GrovePlaza4Townie3:
+	jumptextfaceplayer GrovePlaza4Townie3Text
+
+GrovePlaza4Townie3Text:
+	text "The drum circle"
+	line "has gone on for"
+	para "three days. Please"
+	line "send help, or a"
+	para "replacement"
+	line "drummer."
+	done
+
+GrovePlaza4Townie4:
+	jumptextfaceplayer GrovePlaza4Townie4Text
+
+GrovePlaza4Townie4Text:
+	text "Everyone here is"
+	line "equal. Some of us"
+	para "are more equal"
+	line "because we hold"
+	para "the key to the"
+	line "pantry."
+	done
+
+GrovePlaza4Townie5:
+	jumptextfaceplayer GrovePlaza4Townie5Text
+
+GrovePlaza4Townie5Text:
+	text "We don't have a"
+	line "flag. We have a"
+	para "banner. It's a"
+	line "tablecloth. It's"
+	para "the tablecloth's"
+	line "last stand."
+	done
+
 GrovePlaza4SteinerScript:
 	faceplayer
 	opentext
@@ -94,5 +163,11 @@ GrovePlaza4_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 25,  9, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie0, -1
+	object_event 14, 17, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie1, -1
+	object_event 24, 23, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie2, -1
+	object_event 13, 19, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie3, -1
+	object_event 14, 11, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie4, -1
+	object_event 17,  9, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie5, -1
 	object_event  3, 22, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4SteinerScript, -1
 

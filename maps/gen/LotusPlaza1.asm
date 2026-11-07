@@ -6,6 +6,67 @@ LotusPlaza1_MapScripts:
 
 	def_callbacks
 
+LotusPlaza1Townie0:
+	jumptextfaceplayer LotusPlaza1Townie0Text
+
+LotusPlaza1Townie0Text:
+	text "Every day is"
+	line "Sunday here. The"
+	para "Sunday scaries are"
+	line "permanent."
+	done
+
+LotusPlaza1Townie1:
+	jumptextfaceplayer LotusPlaza1Townie1Text
+
+LotusPlaza1Townie1Text:
+	text "I booked a week."
+	line "It's been four"
+	para "years. Checkout is"
+	line "a state of mind."
+	done
+
+LotusPlaza1Townie2:
+	jumptextfaceplayer LotusPlaza1Townie2Text
+
+LotusPlaza1Townie2Text:
+	text "The lifeguard is a"
+	line "philosopher. He"
+	para "hasn't saved"
+	line "anyone yet, but he"
+	para "has had thoughts."
+	done
+
+LotusPlaza1Townie3:
+	jumptextfaceplayer LotusPlaza1Townie3Text
+
+LotusPlaza1Townie3Text:
+	text "Looking for the"
+	line "meaning of life?"
+	para "Try the minibar."
+	line "It's empty. That's"
+	para "the meaning."
+	done
+
+LotusPlaza1Townie4:
+	jumptextfaceplayer LotusPlaza1Townie4Text
+
+LotusPlaza1Townie4Text:
+	text "Smile! You're on"
+	line "vacation! That's"
+	para "an order."
+	done
+
+LotusPlaza1Townie5:
+	jumptextfaceplayer LotusPlaza1Townie5Text
+
+LotusPlaza1Townie5Text:
+	text "I'm so relaxed I"
+	line "forgot to be"
+	para "afraid. Oh no."
+	line "There it is."
+	done
+
 LotusPlaza1CioranScript:
 	faceplayer
 	opentext
@@ -153,5 +214,11 @@ LotusPlaza1_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 13,  6, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie0, -1
+	object_event 16, 15, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie1, -1
+	object_event 17, 12, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie2, -1
+	object_event  9, 25, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie3, -1
+	object_event 12, 20, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie4, -1
+	object_event 21, 18, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie5, -1
 	object_event 19,  9, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranScript, -1
 

@@ -6,6 +6,70 @@ DisPlaza3_MapScripts:
 
 	def_callbacks
 
+DisPlaza3Townie0:
+	jumptextfaceplayer DisPlaza3Townie0Text
+
+DisPlaza3Townie0Text:
+	text "Welcome to Dis!"
+	line "Your suffering is"
+	para "being processed."
+	line "Estimated wait:"
+	para "forever."
+	done
+
+DisPlaza3Townie1:
+	jumptextfaceplayer DisPlaza3Townie1Text
+
+DisPlaza3Townie1Text:
+	text "I got a pamphlet"
+	line "called 'How to"
+	para "Cope.' It was one"
+	line "page. It said"
+	para "'Don't.'"
+	done
+
+DisPlaza3Townie2:
+	jumptextfaceplayer DisPlaza3Townie2Text
+
+DisPlaza3Townie2Text:
+	text "The weather is the"
+	line "same all year."
+	para "Sulfurous, with a"
+	line "chance of regret."
+	done
+
+DisPlaza3Townie3:
+	jumptextfaceplayer DisPlaza3Townie3Text
+
+DisPlaza3Townie3Text:
+	text "Demons are people"
+	line "too. Terrible,"
+	para "terrible people,"
+	line "but still."
+	done
+
+DisPlaza3Townie4:
+	jumptextfaceplayer DisPlaza3Townie4Text
+
+DisPlaza3Townie4Text:
+	text "Sorry about the"
+	line "heat. We tried air"
+	para "conditioning. It"
+	line "just made the"
+	para "screaming echo."
+	done
+
+DisPlaza3Townie5:
+	jumptextfaceplayer DisPlaza3Townie5Text
+
+DisPlaza3Townie5Text:
+	text "The fountain is"
+	line "boiling lead. It's"
+	para "called mineral"
+	line "water. Everything"
+	para "here is."
+	done
+
 DisPlaza3_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +84,10 @@ DisPlaza3_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  8, 11, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie0, -1
+	object_event 24,  9, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie1, -1
+	object_event 19, 23, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie2, -1
+	object_event  6, 12, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie3, -1
+	object_event 27, 11, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie4, -1
+	object_event 25, 11, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie5, -1
 

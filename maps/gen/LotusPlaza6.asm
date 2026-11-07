@@ -6,6 +6,66 @@ LotusPlaza6_MapScripts:
 
 	def_callbacks
 
+LotusPlaza6Townie0:
+	jumptextfaceplayer LotusPlaza6Townie0Text
+
+LotusPlaza6Townie0Text:
+	text "Looking for the"
+	line "meaning of life?"
+	para "Try the minibar."
+	line "It's empty. That's"
+	para "the meaning."
+	done
+
+LotusPlaza6Townie1:
+	jumptextfaceplayer LotusPlaza6Townie1Text
+
+LotusPlaza6Townie1Text:
+	text "Welcome to the"
+	line "Lotus Coast! The"
+	para "all-inclusive plan"
+	line "includes"
+	para "everything but a"
+	line "reason."
+	done
+
+LotusPlaza6Townie2:
+	jumptextfaceplayer LotusPlaza6Townie2Text
+
+LotusPlaza6Townie2Text:
+	text "I'm so relaxed I"
+	line "forgot to be"
+	para "afraid. Oh no."
+	line "There it is."
+	done
+
+LotusPlaza6Townie3:
+	jumptextfaceplayer LotusPlaza6Townie3Text
+
+LotusPlaza6Townie3Text:
+	text "Smile! You're on"
+	line "vacation! That's"
+	para "an order."
+	done
+
+LotusPlaza6Townie4:
+	jumptextfaceplayer LotusPlaza6Townie4Text
+
+LotusPlaza6Townie4Text:
+	text "Every day is"
+	line "Sunday here. The"
+	para "Sunday scaries are"
+	line "permanent."
+	done
+
+LotusPlaza6Townie5:
+	jumptextfaceplayer LotusPlaza6Townie5Text
+
+LotusPlaza6Townie5Text:
+	text "The pool is closed"
+	line "due to depth."
+	done
+
 LotusPlaza6SteinerScript:
 	faceplayer
 	opentext
@@ -84,5 +144,11 @@ LotusPlaza6_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 21, 17, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie0, -1
+	object_event 14, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie1, -1
+	object_event 19, 16, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie2, -1
+	object_event  9, 19, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie3, -1
+	object_event 12, 20, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie4, -1
+	object_event 15, 16, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie5, -1
 	object_event 18, 17, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6SteinerScript, -1
 

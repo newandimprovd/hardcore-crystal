@@ -6,6 +6,68 @@ DisPlaza5_MapScripts:
 
 	def_callbacks
 
+DisPlaza5Townie0:
+	jumptextfaceplayer DisPlaza5Townie0Text
+
+DisPlaza5Townie0Text:
+	text "The weather is the"
+	line "same all year."
+	para "Sulfurous, with a"
+	line "chance of regret."
+	done
+
+DisPlaza5Townie1:
+	jumptextfaceplayer DisPlaza5Townie1Text
+
+DisPlaza5Townie1Text:
+	text "There's a rumour"
+	line "of an exit. Just a"
+	para "rumour. We're very"
+	line "good at rumours."
+	done
+
+DisPlaza5Townie2:
+	jumptextfaceplayer DisPlaza5Townie2Text
+
+DisPlaza5Townie2Text:
+	text "The fountain is"
+	line "boiling lead. It's"
+	para "called mineral"
+	line "water. Everything"
+	para "here is."
+	done
+
+DisPlaza5Townie3:
+	jumptextfaceplayer DisPlaza5Townie3Text
+
+DisPlaza5Townie3Text:
+	text "Welcome to Dis!"
+	line "Your suffering is"
+	para "being processed."
+	line "Estimated wait:"
+	para "forever."
+	done
+
+DisPlaza5Townie4:
+	jumptextfaceplayer DisPlaza5Townie4Text
+
+DisPlaza5Townie4Text:
+	text "We have a union."
+	line "It meets every"
+	para "Never."
+	done
+
+DisPlaza5Townie5:
+	jumptextfaceplayer DisPlaza5Townie5Text
+
+DisPlaza5Townie5Text:
+	text "Sorry about the"
+	line "heat. We tried air"
+	para "conditioning. It"
+	line "just made the"
+	para "screaming echo."
+	done
+
 DisPlaza5_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +82,10 @@ DisPlaza5_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10, 16, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie0, -1
+	object_event  3,  9, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie1, -1
+	object_event 13, 24, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie2, -1
+	object_event  6,  9, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie3, -1
+	object_event 27, 24, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie4, -1
+	object_event 11, 21, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie5, -1
 

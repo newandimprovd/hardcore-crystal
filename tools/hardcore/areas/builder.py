@@ -133,6 +133,9 @@ def crowd(w, g, m, n=6):
     from .people import plain_npc
     R = random.Random("crowd:" + m.name)
     tag = area_tag(m)
+    if not hasattr(m, "npc_cells"):  # the box plaza of the Johto road has no seeded cell list
+        return
+    n = min(n, 15 - len(m.objects) - 3)  # three object slots stay free for the cameos
     lines = list(TOWNIE[tag])
     R.shuffle(lines)
     for i, (x, y) in enumerate(m.npc_cells[:n]):
@@ -168,6 +171,7 @@ def town(w, g, tag, n, p, doors, kit, landmark, spawn_const, mart_items, texts, 
     for i, hd in enumerate(doors["houses"]):
         h = [pick(texts.get("house", []), n * 2 + i), pick(texts.get("house", []), n * 2 + i + 5)]
         house_interior(g, f"{tag}House{n}" if i == 0 else f"{tag}House{n}b", hd, landmark, [t for t in h if t])
+    crowd(w, g, p, 6)
 
 
 def boss_party(roster, rng, boss, theme):

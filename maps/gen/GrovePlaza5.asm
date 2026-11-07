@@ -10,6 +10,70 @@ GrovePlaza5PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A2
 	end
 
+GrovePlaza5Townie0:
+	jumptextfaceplayer GrovePlaza5Townie0Text
+
+GrovePlaza5Townie0Text:
+	text "There's no money"
+	line "in the commune. We"
+	para "have vibes. Vibes"
+	line "are rationed."
+	done
+
+GrovePlaza5Townie1:
+	jumptextfaceplayer GrovePlaza5Townie1Text
+
+GrovePlaza5Townie1Text:
+	text "We banned locks."
+	line "Now we just have a"
+	para "lot of nice open"
+	line "grudges."
+	done
+
+GrovePlaza5Townie2:
+	jumptextfaceplayer GrovePlaza5Townie2Text
+
+GrovePlaza5Townie2Text:
+	text "Everyone here is"
+	line "equal. Some of us"
+	para "are more equal"
+	line "because we hold"
+	para "the key to the"
+	line "pantry."
+	done
+
+GrovePlaza5Townie3:
+	jumptextfaceplayer GrovePlaza5Townie3Text
+
+GrovePlaza5Townie3Text:
+	text "I came for inner"
+	line "peace. I stayed"
+	para "for the outer"
+	line "debts."
+	done
+
+GrovePlaza5Townie4:
+	jumptextfaceplayer GrovePlaza5Townie4Text
+
+GrovePlaza5Townie4Text:
+	text "The compost is a"
+	line "very emotional"
+	para "place. Visit at"
+	line "your own risk."
+	done
+
+GrovePlaza5Townie5:
+	jumptextfaceplayer GrovePlaza5Townie5Text
+
+GrovePlaza5Townie5Text:
+	text "We don't have a"
+	line "flag. We have a"
+	para "banner. It's a"
+	line "tablecloth. It's"
+	para "the tablecloth's"
+	line "last stand."
+	done
+
 GrovePlaza5_MapEvents:
 	db 0, 0 ; filler
 
@@ -26,4 +90,10 @@ GrovePlaza5_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 27, 21, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie0, -1
+	object_event  8, 16, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie1, -1
+	object_event 16,  8, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie2, -1
+	object_event  8, 19, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie3, -1
+	object_event  8, 22, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie4, -1
+	object_event 23, 23, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie5, -1
 

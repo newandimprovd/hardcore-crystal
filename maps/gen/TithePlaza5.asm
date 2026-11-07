@@ -10,6 +10,69 @@ TithePlaza5PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A1
 	end
 
+TithePlaza5Townie0:
+	jumptextfaceplayer TithePlaza5Townie0Text
+
+TithePlaza5Townie0Text:
+	text "Prices went up"
+	line "again. Hope stayed"
+	para "the same. It was"
+	line "already free, and"
+	para "nobody took it."
+	done
+
+TithePlaza5Townie1:
+	jumptextfaceplayer TithePlaza5Townie1Text
+
+TithePlaza5Townie1Text:
+	text "Don't drink from"
+	line "the fountain."
+	para "Don't look at the"
+	line "fountain. Don't"
+	para "wave. It knows."
+	done
+
+TithePlaza5Townie2:
+	jumptextfaceplayer TithePlaza5Townie2Text
+
+TithePlaza5Townie2Text:
+	text "Free samples! Just"
+	line "kidding."
+	para "Everything is a"
+	line "subscription."
+	done
+
+TithePlaza5Townie3:
+	jumptextfaceplayer TithePlaza5Townie3Text
+
+TithePlaza5Townie3Text:
+	text "My horoscope says"
+	line "'Pay.' Just that."
+	para "Every day. 'Pay.'"
+	done
+
+TithePlaza5Townie4:
+	jumptextfaceplayer TithePlaza5Townie4Text
+
+TithePlaza5Townie4Text:
+	text "That man is a cop."
+	line "This man is a cop."
+	para "I'm also a cop."
+	line "It's a very safe"
+	para "neighbourhood."
+	done
+
+TithePlaza5Townie5:
+	jumptextfaceplayer TithePlaza5Townie5Text
+
+TithePlaza5Townie5Text:
+	text "I've been waiting"
+	line "for the bus since"
+	para "the line was"
+	line "cancelled. I'm"
+	para "very committed."
+	done
+
 TithePlaza5_MapEvents:
 	db 0, 0 ; filler
 
@@ -26,4 +89,10 @@ TithePlaza5_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 20, 11, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie0, -1
+	object_event 21,  7, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie1, -1
+	object_event 20, 21, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie2, -1
+	object_event 24,  6, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie3, -1
+	object_event 17,  9, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie4, -1
+	object_event  7, 10, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie5, -1
 

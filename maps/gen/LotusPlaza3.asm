@@ -6,6 +6,68 @@ LotusPlaza3_MapScripts:
 
 	def_callbacks
 
+LotusPlaza3Townie0:
+	jumptextfaceplayer LotusPlaza3Townie0Text
+
+LotusPlaza3Townie0Text:
+	text "The lifeguard is a"
+	line "philosopher. He"
+	para "hasn't saved"
+	line "anyone yet, but he"
+	para "has had thoughts."
+	done
+
+LotusPlaza3Townie1:
+	jumptextfaceplayer LotusPlaza3Townie1Text
+
+LotusPlaza3Townie1Text:
+	text "Welcome to the"
+	line "Lotus Coast! The"
+	para "all-inclusive plan"
+	line "includes"
+	para "everything but a"
+	line "reason."
+	done
+
+LotusPlaza3Townie2:
+	jumptextfaceplayer LotusPlaza3Townie2Text
+
+LotusPlaza3Townie2Text:
+	text "I booked a week."
+	line "It's been four"
+	para "years. Checkout is"
+	line "a state of mind."
+	done
+
+LotusPlaza3Townie3:
+	jumptextfaceplayer LotusPlaza3Townie3Text
+
+LotusPlaza3Townie3Text:
+	text "Sunscreen? In this"
+	line "economy of"
+	para "despair? Let it"
+	line "burn."
+	done
+
+LotusPlaza3Townie4:
+	jumptextfaceplayer LotusPlaza3Townie4Text
+
+LotusPlaza3Townie4Text:
+	text "The pool is closed"
+	line "due to depth."
+	done
+
+LotusPlaza3Townie5:
+	jumptextfaceplayer LotusPlaza3Townie5Text
+
+LotusPlaza3Townie5Text:
+	text "Looking for the"
+	line "meaning of life?"
+	para "Try the minibar."
+	line "It's empty. That's"
+	para "the meaning."
+	done
+
 LotusPlaza3_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +82,10 @@ LotusPlaza3_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 21,  9, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie0, -1
+	object_event 14, 12, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie1, -1
+	object_event 10, 10, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie2, -1
+	object_event 26,  7, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie3, -1
+	object_event 27, 13, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie4, -1
+	object_event 15, 14, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie5, -1
 

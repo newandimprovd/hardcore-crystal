@@ -6,6 +6,70 @@ AxiomPlaza3_MapScripts:
 
 	def_callbacks
 
+AxiomPlaza3Townie0:
+	jumptextfaceplayer AxiomPlaza3Townie0Text
+
+AxiomPlaza3Townie0Text:
+	text "Statistics say"
+	line "nine of ten"
+	para "citizens are"
+	line "satisfied. The"
+	para "tenth is being"
+	line "resolved."
+	done
+
+AxiomPlaza3Townie1:
+	jumptextfaceplayer AxiomPlaza3Townie1Text
+
+AxiomPlaza3Townie1Text:
+	text "Please enjoy the"
+	line "mandatory leisure."
+	done
+
+AxiomPlaza3Townie2:
+	jumptextfaceplayer AxiomPlaza3Townie2Text
+
+AxiomPlaza3Townie2Text:
+	text "I voted. The"
+	line "result was"
+	para "'accepted'. I"
+	line "don't know what I"
+	para "accepted."
+	done
+
+AxiomPlaza3Townie3:
+	jumptextfaceplayer AxiomPlaza3Townie3Text
+
+AxiomPlaza3Townie3Text:
+	text "I once saw a bug"
+	line "in the system. It"
+	para "saw me too. We"
+	line "don't talk about"
+	para "it."
+	done
+
+AxiomPlaza3Townie4:
+	jumptextfaceplayer AxiomPlaza3Townie4Text
+
+AxiomPlaza3Townie4Text:
+	text "The Mayor is a"
+	line "great listener. He"
+	para "has forty thousand"
+	line "microphones and no"
+	para "mouth."
+	done
+
+AxiomPlaza3Townie5:
+	jumptextfaceplayer AxiomPlaza3Townie5Text
+
+AxiomPlaza3Townie5Text:
+	text "We are all equal"
+	line "before the"
+	para "algorithm. The"
+	line "algorithm is not"
+	para "equal to us."
+	done
+
 AxiomPlaza3_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +84,10 @@ AxiomPlaza3_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 19, 10, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie0, -1
+	object_event 11, 18, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie1, -1
+	object_event 15, 16, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie2, -1
+	object_event 24, 16, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie3, -1
+	object_event 27, 16, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie4, -1
+	object_event 10, 13, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie5, -1
 

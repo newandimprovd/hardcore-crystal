@@ -6,6 +6,71 @@ AxiomPlaza1_MapScripts:
 
 	def_callbacks
 
+AxiomPlaza1Townie0:
+	jumptextfaceplayer AxiomPlaza1Townie0Text
+
+AxiomPlaza1Townie0Text:
+	text "I once saw a bug"
+	line "in the system. It"
+	para "saw me too. We"
+	line "don't talk about"
+	para "it."
+	done
+
+AxiomPlaza1Townie1:
+	jumptextfaceplayer AxiomPlaza1Townie1Text
+
+AxiomPlaza1Townie1Text:
+	text "We are all equal"
+	line "before the"
+	para "algorithm. The"
+	line "algorithm is not"
+	para "equal to us."
+	done
+
+AxiomPlaza1Townie2:
+	jumptextfaceplayer AxiomPlaza1Townie2Text
+
+AxiomPlaza1Townie2Text:
+	text "I'm just a regular"
+	line "citizen. Ignore"
+	para "the antenna."
+	done
+
+AxiomPlaza1Townie3:
+	jumptextfaceplayer AxiomPlaza1Townie3Text
+
+AxiomPlaza1Townie3Text:
+	text "I voted. The"
+	line "result was"
+	para "'accepted'. I"
+	line "don't know what I"
+	para "accepted."
+	done
+
+AxiomPlaza1Townie4:
+	jumptextfaceplayer AxiomPlaza1Townie4Text
+
+AxiomPlaza1Townie4Text:
+	text "Please queue here."
+	line "Queue for the"
+	para "queue, then queue."
+	line "Thank you for"
+	para "queueing."
+	done
+
+AxiomPlaza1Townie5:
+	jumptextfaceplayer AxiomPlaza1Townie5Text
+
+AxiomPlaza1Townie5Text:
+	text "Statistics say"
+	line "nine of ten"
+	para "citizens are"
+	line "satisfied. The"
+	para "tenth is being"
+	line "resolved."
+	done
+
 AxiomPlaza1SabbahScript:
 	faceplayer
 	opentext
@@ -135,5 +200,11 @@ AxiomPlaza1_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 12, 27, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie0, -1
+	object_event  4, 23, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie1, -1
+	object_event 15, 18, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie2, -1
+	object_event 10, 23, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie3, -1
+	object_event  9, 22, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie4, -1
+	object_event 26, 20, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie5, -1
 	object_event 13, 16, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahScript, -1
 

@@ -6,6 +6,70 @@ TithePlaza3_MapScripts:
 
 	def_callbacks
 
+TithePlaza3Townie0:
+	jumptextfaceplayer TithePlaza3Townie0Text
+
+TithePlaza3Townie0Text:
+	text "That man is a cop."
+	line "This man is a cop."
+	para "I'm also a cop."
+	line "It's a very safe"
+	para "neighbourhood."
+	done
+
+TithePlaza3Townie1:
+	jumptextfaceplayer TithePlaza3Townie1Text
+
+TithePlaza3Townie1Text:
+	text "Free samples! Just"
+	line "kidding."
+	para "Everything is a"
+	line "subscription."
+	done
+
+TithePlaza3Townie2:
+	jumptextfaceplayer TithePlaza3Townie2Text
+
+TithePlaza3Townie2Text:
+	text "Prices went up"
+	line "again. Hope stayed"
+	para "the same. It was"
+	line "already free, and"
+	para "nobody took it."
+	done
+
+TithePlaza3Townie3:
+	jumptextfaceplayer TithePlaza3Townie3Text
+
+TithePlaza3Townie3Text:
+	text "Don't drink from"
+	line "the fountain."
+	para "Don't look at the"
+	line "fountain. Don't"
+	para "wave. It knows."
+	done
+
+TithePlaza3Townie4:
+	jumptextfaceplayer TithePlaza3Townie4Text
+
+TithePlaza3Townie4Text:
+	text "I told my kids the"
+	line "coins in the"
+	para "fountain are"
+	line "wishes. They now"
+	para "work three jobs."
+	done
+
+TithePlaza3Townie5:
+	jumptextfaceplayer TithePlaza3Townie5Text
+
+TithePlaza3Townie5Text:
+	text "The fountain is"
+	line "for show. The"
+	para "water is"
+	line "meter-reading you."
+	done
+
 TithePlaza3_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +84,10 @@ TithePlaza3_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 26,  8, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie0, -1
+	object_event 16, 19, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie1, -1
+	object_event 29, 15, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie2, -1
+	object_event 21, 16, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie3, -1
+	object_event 14,  7, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie4, -1
+	object_event  8, 15, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie5, -1
 

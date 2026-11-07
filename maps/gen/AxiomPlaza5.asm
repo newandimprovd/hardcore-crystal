@@ -10,6 +10,68 @@ AxiomPlaza5PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A3
 	end
 
+AxiomPlaza5Townie0:
+	jumptextfaceplayer AxiomPlaza5Townie0Text
+
+AxiomPlaza5Townie0Text:
+	text "I'm just a regular"
+	line "citizen. Ignore"
+	para "the antenna."
+	done
+
+AxiomPlaza5Townie1:
+	jumptextfaceplayer AxiomPlaza5Townie1Text
+
+AxiomPlaza5Townie1Text:
+	text "Please enjoy the"
+	line "mandatory leisure."
+	done
+
+AxiomPlaza5Townie2:
+	jumptextfaceplayer AxiomPlaza5Townie2Text
+
+AxiomPlaza5Townie2Text:
+	text "The Mayor is a"
+	line "great listener. He"
+	para "has forty thousand"
+	line "microphones and no"
+	para "mouth."
+	done
+
+AxiomPlaza5Townie3:
+	jumptextfaceplayer AxiomPlaza5Townie3Text
+
+AxiomPlaza5Townie3Text:
+	text "Please queue here."
+	line "Queue for the"
+	para "queue, then queue."
+	line "Thank you for"
+	para "queueing."
+	done
+
+AxiomPlaza5Townie4:
+	jumptextfaceplayer AxiomPlaza5Townie4Text
+
+AxiomPlaza5Townie4Text:
+	text "Statistics say"
+	line "nine of ten"
+	para "citizens are"
+	line "satisfied. The"
+	para "tenth is being"
+	line "resolved."
+	done
+
+AxiomPlaza5Townie5:
+	jumptextfaceplayer AxiomPlaza5Townie5Text
+
+AxiomPlaza5Townie5Text:
+	text "I voted. The"
+	line "result was"
+	para "'accepted'. I"
+	line "don't know what I"
+	para "accepted."
+	done
+
 AxiomPlaza5_MapEvents:
 	db 0, 0 ; filler
 
@@ -26,4 +88,10 @@ AxiomPlaza5_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 13, 15, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie0, -1
+	object_event 14, 25, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie1, -1
+	object_event 21, 25, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie2, -1
+	object_event 25, 12, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie3, -1
+	object_event 19, 14, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie4, -1
+	object_event 30, 24, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie5, -1
 

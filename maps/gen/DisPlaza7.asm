@@ -6,6 +6,68 @@ DisPlaza7_MapScripts:
 
 	def_callbacks
 
+DisPlaza7Townie0:
+	jumptextfaceplayer DisPlaza7Townie0Text
+
+DisPlaza7Townie0Text:
+	text "Demons are people"
+	line "too. Terrible,"
+	para "terrible people,"
+	line "but still."
+	done
+
+DisPlaza7Townie1:
+	jumptextfaceplayer DisPlaza7Townie1Text
+
+DisPlaza7Townie1Text:
+	text "I got a pamphlet"
+	line "called 'How to"
+	para "Cope.' It was one"
+	line "page. It said"
+	para "'Don't.'"
+	done
+
+DisPlaza7Townie2:
+	jumptextfaceplayer DisPlaza7Townie2Text
+
+DisPlaza7Townie2Text:
+	text "We have a union."
+	line "It meets every"
+	para "Never."
+	done
+
+DisPlaza7Townie3:
+	jumptextfaceplayer DisPlaza7Townie3Text
+
+DisPlaza7Townie3Text:
+	text "The fountain is"
+	line "boiling lead. It's"
+	para "called mineral"
+	line "water. Everything"
+	para "here is."
+	done
+
+DisPlaza7Townie4:
+	jumptextfaceplayer DisPlaza7Townie4Text
+
+DisPlaza7Townie4Text:
+	text "There's a rumour"
+	line "of an exit. Just a"
+	para "rumour. We're very"
+	line "good at rumours."
+	done
+
+DisPlaza7Townie5:
+	jumptextfaceplayer DisPlaza7Townie5Text
+
+DisPlaza7Townie5Text:
+	text "Please take a"
+	line "number. We lost"
+	para "the numbers."
+	line "Please take a"
+	para "different one."
+	done
+
 DisPlaza7_MapEvents:
 	db 0, 0 ; filler
 
@@ -20,4 +82,10 @@ DisPlaza7_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 10, 21, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie0, -1
+	object_event 12, 14, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie1, -1
+	object_event 18, 22, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie2, -1
+	object_event 18,  8, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie3, -1
+	object_event  3, 20, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie4, -1
+	object_event 17,  8, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie5, -1
 

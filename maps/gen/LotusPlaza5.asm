@@ -10,6 +10,70 @@ LotusPlaza5PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A4
 	end
 
+LotusPlaza5Townie0:
+	jumptextfaceplayer LotusPlaza5Townie0Text
+
+LotusPlaza5Townie0Text:
+	text "The buffet is"
+	line "endless. The thing"
+	para "about endless is"
+	line "that it's endless."
+	done
+
+LotusPlaza5Townie1:
+	jumptextfaceplayer LotusPlaza5Townie1Text
+
+LotusPlaza5Townie1Text:
+	text "Looking for the"
+	line "meaning of life?"
+	para "Try the minibar."
+	line "It's empty. That's"
+	para "the meaning."
+	done
+
+LotusPlaza5Townie2:
+	jumptextfaceplayer LotusPlaza5Townie2Text
+
+LotusPlaza5Townie2Text:
+	text "The lifeguard is a"
+	line "philosopher. He"
+	para "hasn't saved"
+	line "anyone yet, but he"
+	para "has had thoughts."
+	done
+
+LotusPlaza5Townie3:
+	jumptextfaceplayer LotusPlaza5Townie3Text
+
+LotusPlaza5Townie3Text:
+	text "Welcome to the"
+	line "Lotus Coast! The"
+	para "all-inclusive plan"
+	line "includes"
+	para "everything but a"
+	line "reason."
+	done
+
+LotusPlaza5Townie4:
+	jumptextfaceplayer LotusPlaza5Townie4Text
+
+LotusPlaza5Townie4Text:
+	text "Every day is"
+	line "Sunday here. The"
+	para "Sunday scaries are"
+	line "permanent."
+	done
+
+LotusPlaza5Townie5:
+	jumptextfaceplayer LotusPlaza5Townie5Text
+
+LotusPlaza5Townie5Text:
+	text "I booked a week."
+	line "It's been four"
+	para "years. Checkout is"
+	line "a state of mind."
+	done
+
 LotusPlaza5_MapEvents:
 	db 0, 0 ; filler
 
@@ -26,4 +90,10 @@ LotusPlaza5_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  5,  6, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie0, -1
+	object_event  4,  7, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie1, -1
+	object_event 25, 14, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie2, -1
+	object_event  5, 23, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie3, -1
+	object_event  4, 14, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie4, -1
+	object_event 23, 21, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie5, -1
 
