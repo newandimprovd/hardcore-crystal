@@ -170,3 +170,22 @@ Goal: stop reusing vanilla graphics that clash with the dark-comedy vibe.
   trainer stays where he walked up to the player); check_text reports 44 vanilla "<USER>'s" lines at the worst-case name width, not defects.
 - Not done in pass 1 (pass 2 / later): bicycle, multiplayer, mobile, phone and Battle Tower code removal beyond the map stubs (about 200 KB more possible), real run sprite
   art, sprite polish, first-kill reveal rewrite, story/world rework (see the alpha-1 triage).
+
+## Alpha 3 (maps, creatures, Purgatorio, crowds) - state
+- Maps reworked from the old-school playbook, see docs/MAP_DESIGN_NOTES.md: winding lanes with a wide/narrow rhythm, tree-line borders with ponds, fenced meadows, flower beds
+  and groves behind them, glades with item ball, hermit and a hidden item behind a one-block mouth, hub towns with an S-shaped main street and districts with landmarks.
+  Scenery blocks (ponds with shores, fences, ledge, tree, flowers, doormat) exist in all five area tilesets (about 33 tiles each, 168..188 of 192 used).
+- Townsfolk: every plaza gets up to six neutral locals with lore lines (areas/wayfolk.py, builder.crowd), the 15 object limit is kept (three slots stay free for cameos).
+- Creatures: the 16 flat star/blob/orb species were redrawn with real structure (tools/hardcore/sprites/orbs.py: pill, puffball, coil, cubes, clam, starfish, heap, magnets,
+  ghost with halo, beach ball with hat, a log-spiral nautilus) and all pictures regenerated with gen_roster.py.
+- Purgatorio: test_purg.py passes end to end (junction, Mr. Pokemon, Joyce and the corkboard, four floors down, the Abyss, four floors up, Bruno, Nick's lift).
+- Bugs found by the new tests and fixed:
+  1. **A door tile on the last row of a map resets the game.** Arriving on a COLL_DOOR / COLL_CAVE cell makes the engine walk the player one step down, off the map edge.
+     Open-air rooms and the Purgatorio south mouth now exit over a warp carpet (scenery "mat" block, cave block 0x24). The model scan in docs says: no DOOR-type warp on a last row.
+  2. A beaten trainer stays where it stopped, so two of them could seal a one or two tile wide cave corridor for good (PurgUp1). cave.trainer_slots now refuses any slot that
+     would split the cave into more pieces when every cell a trainer could stop on is rock.
+  3. Some new towns had no tall grass, which starved four Grove forms of wild slots; plaza2 now requires a reachable grass patch.
+  4. Boulders return to their original cells whenever a map is entered, so the test pushes them again on the way back up.
+- Verification on the final tree: verify_all.sh all PASS (check_text still lists the 44 vanilla lines), walk_all 1-5 pass.
+- Not done: TitheRoad (Johto tileset) keeps its old lane, the Tithe junction and the Purgatorio hub were not redesigned, hermits are 18 lanes of 30, unique trainer teams,
+  bike/multiplayer/phone/Battle Tower code removal, real run sprite art, first-kill reveal rewrite.

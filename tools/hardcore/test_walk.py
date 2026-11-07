@@ -283,6 +283,13 @@ class Walker:
                     print(f"  (drift: {actual} instead of {exp}, replanning)")  # a held key took one more step
                 elif actual[0] != before[0] or abs(actual[1] - before[1]) + abs(actual[2] - before[2]) > 1:
                     self.note(f"unexpected position {actual} after {d} from {before}, expected {exp}")
+                    tt = self.t
+                    print("    raw", tt.where(), "script", tt.mem("wScriptRunning"), "battle", tt.mem("wBattleMode"), "mapgroup/num prev",
+                          tt.mem("wPrevMapGroup") if "wPrevMapGroup" in tt.sym else "-", flush=True)
+                    try:
+                        tt.shot(os.path.join(os.environ.get("SHOTS", "."), f"unexpected_{before[0]}_{before[1]}_{before[2]}.png"), 2)
+                    except Exception as e:  # a screenshot is only a debugging aid
+                        print("    (no screenshot:", e, ")")
                 break
         self.note(f"gave up on {goal_map}")
         return False
