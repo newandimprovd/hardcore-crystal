@@ -47,12 +47,12 @@ New Bark Town and Cherrygrove keep the normal Crystal look and sound. They count
 | Event | Trigger | Result |
 | --- | --- | --- |
 | First kill | Beating the trainer in Cherrygrove | The reveal that the player is a serial killer, trainer death switches on, and trainer tips appear |
-| Tidal wave | 200 kills | News that a tidal wave hit New Bark Town, which is ruined and slightly destroyed on return |
-| Crater and portal | 800 kills | New Bark Town is a large crater with a portal in the middle that teleports to the final area |
-| The thief | The 800th mandatory kill, near the end | The stolen rival Pokémon is recovered at level 75 as a stage 3 form, and the player wants to return it to the professor |
+| Tidal wave | 400 kills (the author's number since Nov 2026, with 500 mandatory kills in all) | News that a tidal wave hit New Bark Town, which is ruined and slightly destroyed on return |
+| Crater and portal | The rival's fall, the last boss of Area 4 (kill 412 on the shortest path) | New Bark Town is a large crater with a portal in the middle that teleports to the final area |
+| The thief | The rival, the last boss of Area 4, near the end | The stolen rival Pokémon is recovered at level 75 as a stage 3 form, and the player wants to return it to the professor |
 | The ending | After Area 5 | The fully evolved starter is returned to New Bark Town, and the game saves and ends in the mansion bedroom |
 
-Purgatorio trainers do not count toward the 200 and 800 totals. The rival encounter in New Bark Town is skipped when the player returns there.
+Purgatorio trainers do not count toward the kill counter. The rival encounter in New Bark Town is skipped when the player returns there.
 
 The rival becomes a crimelord with many henchmen and owns a large mansion in Area 4. After the rival falls the mansion becomes the player's, staffed by beautiful maids. The game ends and saves in its bedroom, and the postgame begins in the same room, because New Bark Town is now a permanent crater.
 
@@ -161,7 +161,7 @@ The author's newest theme is that restrictive sexual boundaries are an Ahrimanic
 
 A design note from Claude, not yet confirmed by the author. In Steiner's own scheme Ahriman is the force of materialism, cold intellect and mechanical hardening, while sensual excess is closer to the Luciferic. The thesis hangs together best if Ahrimanic is read as ownership, contract, ledger and surveillance applied to bodies and to love. That reading also suits Ahriman as the lord of pacts, and it fits Area 3's gene farm and Area 4's subscription to forgetting.
 
-A second design note from Claude, also unconfirmed. Every pact hardens a stretch of time into fixed space, so enough pacts force different eras onto the same map. That is the rift mechanic. Crowley's pact with Choronzon, Finnegan's invitation and Dajjal's planned bridge are the named pacts. The kill counter can be read as the pact ledger, with each kill a signature, which explains why 200 kills bring the tidal wave and 800 bring the crater and the portal.
+A second design note from Claude, also unconfirmed. Every pact hardens a stretch of time into fixed space, so enough pacts force different eras onto the same map. That is the rift mechanic. Crowley's pact with Choronzon, Finnegan's invitation and Dajjal's planned bridge are the named pacts. The kill counter can be read as the pact ledger, with each kill a signature, which explains why 400 kills bring the tidal wave and the rival's fall brings the crater and the portal.
 
 ### Steiner, Sabbah and Cioran
 
@@ -259,7 +259,7 @@ The author set the premise, the twist, the structure and nearly all of the lore.
 | Decided by the author | Proposed by Claude |
 | --- | --- |
 | The serial killer twist, trainer death, the key items replacing HMs | The cause-of-death pool, item names and descriptions, the first victim's name |
-| Five areas, about 1000 battles, kill milestones at 200 and 800 | Area 4, the Lotus Coast (delegated by the author) |
+| Five areas, 500 mandatory battles (650 in all), the tidal wave at kill 400 | Area 4, the Lotus Coast (delegated by the author) |
 | Areas 1, 2, 3 and 5 settings and themes | The generator design with lanes, rifts, plazas and forced fights |
 | The four-stage evolution system at levels 25, 50 and 75, Tyranitar and Dragonite on top | The 62 lines, the new species names and the type spread |
 | Type chart changes, the Fairy type, the physical and special split | The five Fairy moves and the Poison and Fairy rebalance |

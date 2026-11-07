@@ -14,6 +14,7 @@ step build_real make -j2 crystal11
 step check_text python3 tools/hardcore/check_text.py
 step check_names python3 tools/hardcore/check_names.py
 step check_wild python3 tools/hardcore/check_wild.py
+step battle_budget python3 tools/hardcore/battle_budget.py --quiet
 step roster python3 tools/hardcore/test_roster.py pokecrystal11.gbc
 step category python3 tools/hardcore/test_category.py pokecrystal11.gbc
 step intro python3 tools/hardcore/test_intro.py pokecrystal11.gbc

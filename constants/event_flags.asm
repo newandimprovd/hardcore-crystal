@@ -1464,8 +1464,8 @@
 	const EVENT_HC_ROUTE29_DUDE_DEAD
 	const EVENT_BEAT_YOUNGSTER_TIMMY
 	const EVENT_HC_REVEAL_PENDING
-	const EVENT_HC_TIDAL_WAVE ; kill 200: New Bark Town is flooded
-	const EVENT_HC_CRATER ; the rival fell (kill 800): New Bark Town is a crater with a portal
+	const EVENT_HC_TIDAL_WAVE ; kill 400 (HC_TSUNAMI_KILLS): New Bark Town is flooded
+	const EVENT_HC_CRATER ; the rival fell (the last boss of Area 4): New Bark Town is a crater with a portal
 	const EVENT_HC_RIVAL_FELL
 	const EVENT_HC_FINN_FELL ; the Sleeper in Judecca fell
 	const EVENT_HC_ENDED ; the normal ending has played

@@ -7,7 +7,7 @@ GroveStreet4_MapScripts:
 	def_callbacks
 
 GroveStreet4Pickup:
-	itemball TM_ATTRACT
+	itemball PARLYZ_HEAL
 
 GroveStreet4Hidden:
 	hiddenitem ETHER, EVENT_GEN_GROVE_STREET4_HIDDEN
@@ -44,43 +44,25 @@ GroveStreet4AfterScript:
 	end
 
 GroveStreet4Trainer0:
-	trainer G_SCOUT, 130, EVENT_GEN_GROVE_STREET4_0, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_DRUIDESS, 129, EVENT_GEN_GROVE_STREET4_0, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
 
 GroveStreet4Trainer1:
-	trainer G_SPROUT, 131, EVENT_GEN_GROVE_STREET4_1, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_SPROUT, 130, EVENT_GEN_GROVE_STREET4_1, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
 
 GroveStreet4Trainer2:
-	trainer G_URCHIN, 129, EVENT_GEN_GROVE_STREET4_2, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_SPROUT, 131, EVENT_GEN_GROVE_STREET4_2, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
 
 GroveStreet4Trainer3:
-	trainer G_DRUMMER, 128, EVENT_GEN_GROVE_STREET4_3, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_DRUIDESS, 130, EVENT_GEN_GROVE_STREET4_3, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
 
 GroveStreet4Trainer4:
-	trainer G_NATURISTM, 131, EVENT_GEN_GROVE_STREET4_4, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_HIKER, 130, EVENT_GEN_GROVE_STREET4_4, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
 
 GroveStreet4Trainer5:
-	trainer G_SCOUT, 131, EVENT_GEN_GROVE_STREET4_5, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_BARD, 129, EVENT_GEN_GROVE_STREET4_5, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
 
 GroveStreet4Trainer6:
-	trainer G_ANGLER, 134, EVENT_GEN_GROVE_STREET4_6, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
-
-GroveStreet4Trainer7:
-	trainer G_FLOWERKID, 129, EVENT_GEN_GROVE_STREET4_7, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
-
-GroveStreet4Trainer8:
-	trainer G_NATURISTF, 131, EVENT_GEN_GROVE_STREET4_8, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
-
-GroveStreet4Trainer9:
-	trainer G_BIRDER, 128, EVENT_GEN_GROVE_STREET4_9, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
-
-GroveStreet4Trainer10:
-	trainer G_FORAGER, 129, EVENT_GEN_GROVE_STREET4_10, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
-
-GroveStreet4Trainer11:
-	trainer G_SHAMAN, 131, EVENT_GEN_GROVE_STREET4_11, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
-
-GroveStreet4Trainer12:
-	trainer G_FLOWERKID, 130, EVENT_GEN_GROVE_STREET4_12, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_HIKER, 131, EVENT_GEN_GROVE_STREET4_6, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
 
 GroveStreet4_MapEvents:
 	db 0, 0 ; filler
@@ -90,22 +72,16 @@ GroveStreet4_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  9, 10, BGEVENT_ITEM, GroveStreet4Hidden
+	bg_event  9, 12, BGEVENT_ITEM, GroveStreet4Hidden
 
 	def_object_events
 	object_event  6, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet4Pickup, EVENT_GEN_GROVE_STREET4_PICKUP
-	object_event  8, 10, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet4Hermit, -1
-	object_event 16, 26, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer0, -1
-	object_event 19, 24, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer1, -1
-	object_event 12, 22, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer2, -1
-	object_event 10, 20, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer3, -1
-	object_event 15, 20, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer4, -1
-	object_event 13, 18, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer5, -1
-	object_event 10, 16, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer6, -1
-	object_event 15, 16, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer7, -1
-	object_event 12, 14, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer8, -1
-	object_event 17, 14, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer9, -1
-	object_event 12, 12, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer10, -1
-	object_event 17, 12, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer11, -1
-	object_event 12, 10, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer12, -1
+	object_event  8, 12, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet4Hermit, -1
+	object_event 16, 28, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer0, -1
+	object_event 12, 24, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer1, -1
+	object_event 17, 24, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer2, -1
+	object_event  8, 20, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer3, -1
+	object_event 13, 20, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer4, -1
+	object_event 17, 16, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer5, -1
+	object_event 12, 12, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer6, -1
 

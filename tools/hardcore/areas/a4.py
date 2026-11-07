@@ -1,7 +1,7 @@
 """Area 4: THE LOTUS COAST, a resort nation built on forgetting, ending at the rival's mansion."""
 from art.classes import area_mix
 from . import a4_text as T
-from . import kits
+from . import counts, kits
 from .builder import AreaCfg, BossSpec, build_area
 from .layout import mansion_bedroom, mansion_hall
 from .text import Text
@@ -40,7 +40,7 @@ def build(w, roster, rng, entry_doors, open_exit=False):
                   [("LOTUS_COAST", 36, 62, "LOTUS<BSP>COAST"), ("LOTUS_BOARDWALK", 32, 58, "THE<BSP>BOARDWALK"),
                    ("LOTUS_MANSION", 28, 54, "THE<BSP>HILLTOP")],
                   "MUSIC_VERMILION_CITY", texts, TIERS, bosses, [None, "hook", "rubble"], [3, 2, 3], "LotusGate",
-                  T.GATE[0], trainers=([13, 14, 13, 13, 13], [13, 13, 13, 14, 13], 13), stock_ix=(2, 2, 2, 2, 2, 2, 2))
+                  T.GATE[0], trainers=counts.lanes_of(4), stock_ix=(2, 2, 2, 2, 2, 2, 2))
     g, exits = build_area(w, roster, rng, cfg, entry_doors)
     mansion(g, w, exits)
     return g, exits

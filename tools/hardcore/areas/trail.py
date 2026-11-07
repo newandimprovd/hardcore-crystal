@@ -14,6 +14,7 @@ gate, and the map records m.a (corridor column at the bottom edge), m.a_out (at 
 a random source of their own (seeded by the map name), so the parties and flags of the rest of the world stay where they were."""
 import random
 
+from . import counts
 from .layout import Slot, autotile, gate_objects, reach
 from .model import MapDef
 
@@ -197,7 +198,8 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
     style = kit.extra["style"]
     rows = trainers - trainers // 3
     pairs = trainers - rows
-    H = rows + 7
+    gap = counts.GAP  # block rows between two trainer rows: fewer fighters, the same long lane
+    H = rows * gap + 7
     R = random.Random("trail:" + name)
     m = MapDef(g.key, name, W, H, kit.tileset, "ROUTE", landmark, music, border=kit.extra["border"], pal=pal)
     base = S["tree"] if style == "wild" else None
@@ -228,7 +230,7 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
         assert neck >= 2, "a gate needs a neck"
         gate_objects(m, gate, w, 2 * (c[H - neck] + cw // 2), 2 * (H - neck))
     # trainers: one block row each (a pair on some), on the cells at the two edges of that row of the corridor
-    ys = [H - 3 - i for i in range(rows)]
+    ys = [H - 3 - i * gap for i in range(rows)]
     assert ys[-1] >= ROW0, (name, ys)
     pair_rows = set(R.sample(range(rows), pairs))
     slots, side = [], 0

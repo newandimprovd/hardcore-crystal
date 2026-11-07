@@ -16,12 +16,10 @@ DisStreet11Hermit:
 	jumptextfaceplayer DisStreet11HermitText
 
 DisStreet11HermitText:
-	text "I found a corner"
-	line "nobody has"
-	para "tortured yet. I"
-	line "call it home."
-	para "Don't tell"
-	line "management."
+	text "I'm not dead. I'm"
+	line "just in the wrong"
+	para "queue. It's been"
+	line "forty years."
 	done
 
 DisStreet11SeenText:
@@ -45,43 +43,22 @@ DisStreet11AfterScript:
 	end
 
 DisStreet11Trainer0:
-	trainer D_SHADE, 143, EVENT_GEN_DIS_STREET11_0, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_CRONE, 129, EVENT_GEN_DIS_STREET11_0, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
 
 DisStreet11Trainer1:
-	trainer D_JUDGE, 139, EVENT_GEN_DIS_STREET11_1, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_WARDEN, 135, EVENT_GEN_DIS_STREET11_1, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
 
 DisStreet11Trainer2:
-	trainer D_BRUTE, 138, EVENT_GEN_DIS_STREET11_2, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_BRAWLER, 135, EVENT_GEN_DIS_STREET11_2, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
 
 DisStreet11Trainer3:
-	trainer D_SHADE, 144, EVENT_GEN_DIS_STREET11_3, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_IMPF, 133, EVENT_GEN_DIS_STREET11_3, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
 
 DisStreet11Trainer4:
-	trainer D_JESTER, 137, EVENT_GEN_DIS_STREET11_4, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_FIREEATER, 134, EVENT_GEN_DIS_STREET11_4, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
 
 DisStreet11Trainer5:
-	trainer D_HAG, 140, EVENT_GEN_DIS_STREET11_5, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
-
-DisStreet11Trainer6:
-	trainer D_WARDEN, 136, EVENT_GEN_DIS_STREET11_6, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
-
-DisStreet11Trainer7:
-	trainer D_HAG, 141, EVENT_GEN_DIS_STREET11_7, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
-
-DisStreet11Trainer8:
-	trainer D_SHADE, 145, EVENT_GEN_DIS_STREET11_8, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
-
-DisStreet11Trainer9:
-	trainer D_BRUTE, 139, EVENT_GEN_DIS_STREET11_9, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
-
-DisStreet11Trainer10:
-	trainer D_SPECTRE, 131, EVENT_GEN_DIS_STREET11_10, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
-
-DisStreet11Trainer11:
-	trainer D_DAMNED, 134, EVENT_GEN_DIS_STREET11_11, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
-
-DisStreet11Trainer12:
-	trainer D_HAG, 142, EVENT_GEN_DIS_STREET11_12, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_IMPF, 134, EVENT_GEN_DIS_STREET11_5, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
 
 DisStreet11_MapEvents:
 	db 0, 0 ; filler
@@ -91,22 +68,15 @@ DisStreet11_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 21, 17, BGEVENT_ITEM, DisStreet11Hidden
+	bg_event 15, 16, BGEVENT_ITEM, DisStreet11Hidden
 
 	def_object_events
-	object_event 14, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet11Pickup, EVENT_GEN_DIS_STREET11_PICKUP
-	object_event 21, 19, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisStreet11Hermit, -1
-	object_event  6, 26, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer0, -1
-	object_event 11, 24, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer1, -1
-	object_event  6, 22, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer2, -1
-	object_event 11, 22, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer3, -1
-	object_event  6, 20, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer4, -1
-	object_event 11, 20, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer5, -1
-	object_event  4, 18, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer6, -1
-	object_event  7, 16, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer7, -1
-	object_event  2, 14, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer8, -1
-	object_event  2, 12, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer9, -1
-	object_event  7, 12, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer10, -1
-	object_event  4, 10, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer11, -1
-	object_event  9, 10, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer12, -1
+	object_event 17, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet11Pickup, EVENT_GEN_DIS_STREET11_PICKUP
+	object_event 19,  8, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisStreet11Hermit, -1
+	object_event  6, 24, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer0, -1
+	object_event  6, 20, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer1, -1
+	object_event 11, 20, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer2, -1
+	object_event  9, 16, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer3, -1
+	object_event  2, 12, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer4, -1
+	object_event  7, 12, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer5, -1
 

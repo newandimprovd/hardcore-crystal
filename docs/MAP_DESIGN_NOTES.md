@@ -19,7 +19,7 @@ techniques the rework uses, where each one lives in the generator, and what is s
 
 ## Numbers
 - Tilesets: 168..188 of 192 tiles used, 62 blocks each (19 scenery blocks plus the mat, about 33 tiles per tileset).
-- Maps: 252 generated maps, 1080 trainers. Kill totals unchanged (Grove, Axiom, Lotus 200; Tithe, Dis 199), milestones 200 and 800 still hold.
+- Maps: 252 generated maps, 593 trainers: 500 mandatory (100 per area, Tithe 99 plus Timmy), 15 bosses, Purgatorio 60 (total 576 of 650, areas/counts.py). The tidal wave news is kill 400, the crater is the rival's fall (kill 412).
 - Block rule: (w+6)(h+6) <= 1300 for every map; at most 15 objects per map; at most 23 distinct outdoor sprites per group.
 
 ## Tests

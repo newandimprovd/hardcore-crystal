@@ -18,7 +18,7 @@ class BossSpec:
         self.seen, self.beaten, self.after = seen, beaten, after
         self.template, self.item, self.theme = template, item, theme
         self.landmark, self.music, self.open_exit = landmark, music, open_exit
-        self.story = story  # 2 = the rival (kill 800), 3 = the final boss: scripts in engine/hardcore/story.asm
+        self.story = story  # 2 = the rival (the crater), 3 = the final boss: scripts in engine/hardcore/story.asm
 
 
 class ActSpec:

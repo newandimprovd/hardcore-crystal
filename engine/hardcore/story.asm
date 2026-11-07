@@ -2,8 +2,9 @@
 ; Everything here lives in one ROMX section ("Hardcore Story"); TrainerDeathScript reaches it with farsjump.
 
 HC_CheckStory:
-; After a kill: wScriptVar = 0 nothing happens, 1 = this was kill 200, otherwise the kind of the story boss that
-; was just beaten (2 = the rival, 3 = the final boss), looked up by trainer class and id in HC_StoryBosses.
+; After a kill: wScriptVar = 0 nothing happens, 1 = the kill counter has reached HC_TSUNAMI_KILLS and the tidal wave news has not run yet,
+; otherwise the kind of the story boss that was just beaten (2 = the rival, 3 = the final boss), looked up by trainer class and id in HC_StoryBosses.
+; The news is tied to the flag and not to the exact count, so it still runs on the next kill when the 400th was a boss.
 	ld hl, HC_StoryBosses
 .loop
 	ld a, [hli]
@@ -25,13 +26,23 @@ HC_CheckStory:
 	ret
 
 .milestone
+	ld de, EVENT_HC_TIDAL_WAVE
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	ld a, c
+	and a
+	jr nz, .none ; the news has run
 	ld hl, wHCKillCount
 	ld a, [hli]
-	cp LOW(200)
-	jr nz, .none
+	ld c, a
 	ld a, [hl]
-	cp HIGH(200)
-	jr nz, .none
+	cp HIGH(HC_TSUNAMI_KILLS)
+	jr c, .none
+	jr nz, .news
+	ld a, c
+	cp LOW(HC_TSUNAMI_KILLS)
+	jr c, .none
+.news
 	ld a, 1
 	ld [wScriptVar], a
 	ret
@@ -42,12 +53,12 @@ HC_CheckStory:
 	ret
 
 HC_StoryDispatch::
-	ifequal 1, HC_Milestone200
+	ifequal 1, HC_MilestoneNews
 	ifequal 2, HC_RivalFalls
 	ifequal 3, HC_FinnFalls
 	end
 
-HC_Milestone200:
+HC_MilestoneNews:
 	setevent EVENT_HC_TIDAL_WAVE
 	pause 20
 	opentext

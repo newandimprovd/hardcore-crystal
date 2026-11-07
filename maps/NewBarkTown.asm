@@ -25,7 +25,7 @@ NewBarkTownFlypointCallback:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	endcallback
 
-; Hardcore Crystal: kill 200 floods the south of the town, the rival's fall (kill 800) turns all of it into a crater
+; Hardcore Crystal: kill 400 (the tidal wave news) floods the south of the town, the rival's fall turns all of it into a crater
 ; with a portal in the middle (the swirl block $07 at block (5, 4)).
 NewBarkTownHCTilesCallback:
 	checkevent EVENT_HC_CRATER

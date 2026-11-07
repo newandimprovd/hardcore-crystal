@@ -44,7 +44,7 @@ TrainerDeathScript::
 	callasm HC_CountKill
 	checkevent EVENT_HC_REVEAL_PENDING
 	iftrue HC_RevealAftermath
-	callasm HC_CheckStory ; kill 200, the rival and the final boss run story scripts (engine/hardcore/story.asm)
+	callasm HC_CheckStory ; the tidal wave kill, the rival and the final boss run story scripts (engine/hardcore/story.asm)
 	iffalse .NoStory
 	farsjump HC_StoryDispatch
 .NoStory:
@@ -151,7 +151,7 @@ HC_ItemDropText:
 
 HC_RollItemDrop:
 ; wScriptVar = an expendable item for the kill count reached so far, or 0 for nothing (about 1 body in 4).
-; The kill counter is already past this kill's predecessor, so tiers are 0-99, 100-199, 200-349 and 350+ kills.
+; The kill counter is already past this kill's predecessor, so the tiers are 0 to HC_DROP_TIER1-1, up to HC_DROP_TIER2-1, up to HC_DROP_TIER3-1 and beyond (areas/counts.py).
 	call Random
 	cp 64
 	jr c, .drop
@@ -166,21 +166,21 @@ HC_RollItemDrop:
 	ld b, [hl] ; bc = kills
 	ld d, 0 ; tier
 	ld a, c
-	sub LOW(100)
+	sub LOW(HC_DROP_TIER1)
 	ld a, b
-	sbc HIGH(100)
+	sbc HIGH(HC_DROP_TIER1)
 	jr c, .tier_done
 	inc d
 	ld a, c
-	sub LOW(200)
+	sub LOW(HC_DROP_TIER2)
 	ld a, b
-	sbc HIGH(200)
+	sbc HIGH(HC_DROP_TIER2)
 	jr c, .tier_done
 	inc d
 	ld a, c
-	sub LOW(350)
+	sub LOW(HC_DROP_TIER3)
 	ld a, b
-	sbc HIGH(350)
+	sbc HIGH(HC_DROP_TIER3)
 	jr c, .tier_done
 	inc d
 .tier_done

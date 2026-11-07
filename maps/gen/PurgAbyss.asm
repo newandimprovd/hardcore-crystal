@@ -100,19 +100,19 @@ PurgAbyssAfterScript:
 	end
 
 PurgAbyssTrainer0:
-	trainer G_GRANNY, 151, EVENT_GEN_PURG_ABYSS_0, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer U_SERFF, 140, EVENT_GEN_PURG_ABYSS_0, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
 
 PurgAbyssTrainer1:
-	trainer G_GRANNY, 152, EVENT_GEN_PURG_ABYSS_1, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer G_GRANNY, 138, EVENT_GEN_PURG_ABYSS_1, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
 
 PurgAbyssTrainer2:
-	trainer U_SERF, 159, EVENT_GEN_PURG_ABYSS_2, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer U_SERFF, 141, EVENT_GEN_PURG_ABYSS_2, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
 
 PurgAbyssTrainer3:
-	trainer L_SAILOR, 137, EVENT_GEN_PURG_ABYSS_3, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer T_SUIT, 139, EVENT_GEN_PURG_ABYSS_3, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
 
 PurgAbyssTrainer4:
-	trainer U_SERF, 160, EVENT_GEN_PURG_ABYSS_4, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer G_GRANNY, 139, EVENT_GEN_PURG_ABYSS_4, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
 
 PurgAbyssHermit0:
 	faceplayer
@@ -125,7 +125,7 @@ PurgAbyssHermit0:
 	waitbutton
 	closetext
 	winlosstext PurgAbyssHermit0BeatenText, 0
-	loadtrainer G_SHAMAN, 147
+	loadtrainer G_SHAMAN, 140
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_PURG_ABYSS_HERMIT0
@@ -196,7 +196,7 @@ PurgAbyssHermit1:
 	waitbutton
 	closetext
 	winlosstext PurgAbyssHermit1BeatenText, 0
-	loadtrainer G_ELDER, 137
+	loadtrainer G_ELDER, 145
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_PURG_ABYSS_HERMIT1
@@ -328,26 +328,26 @@ PurgAbyss_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 29, 11, PURG_DOWN4, 2
+	warp_event 21,  9, PURG_DOWN4, 2
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 20, 48, BGEVENT_READ, PurgAbyssPost
+	bg_event 16, 48, BGEVENT_READ, PurgAbyssPost
 
 	def_object_events
-	object_event 20, 18, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGate0Script, EVENT_GEN_PURG_ABYSS_GATE0
-	object_event 21, 18, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGate0Script, EVENT_GEN_PURG_ABYSS_GATE0
-	object_event 18, 36, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGate1Script, EVENT_GEN_PURG_ABYSS_GATE1
-	object_event 19, 36, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGate1Script, EVENT_GEN_PURG_ABYSS_GATE1
-	object_event  7, 29, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, PurgAbyssTrainer0, -1
-	object_event 24, 26, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, PurgAbyssTrainer1, -1
-	object_event 12, 45, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, PurgAbyssTrainer2, -1
-	object_event 15,  8, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, PurgAbyssTrainer3, -1
-	object_event 24, 45, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, PurgAbyssTrainer4, -1
-	object_event 10,  8, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PurgAbyssHermit0, -1
-	object_event 30, 26, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssHermit1, -1
-	object_event 23,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgAbyssBALL0, EVENT_GEN_PURG_ABYSS_BALL0
-	object_event 22, 46, SPRITE_CORPSE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGraveScript, -1
-	object_event 19, 45, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgAbyssTRUMPET, EVENT_GEN_PURG_ABYSS_TRUMPET
+	object_event 14, 18, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGate0Script, EVENT_GEN_PURG_ABYSS_GATE0
+	object_event 15, 18, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGate0Script, EVENT_GEN_PURG_ABYSS_GATE0
+	object_event 10, 36, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGate1Script, EVENT_GEN_PURG_ABYSS_GATE1
+	object_event 11, 36, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGate1Script, EVENT_GEN_PURG_ABYSS_GATE1
+	object_event  6, 44, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, PurgAbyssTrainer0, -1
+	object_event  9, 46, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, PurgAbyssTrainer1, -1
+	object_event 16, 26, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgAbyssTrainer2, -1
+	object_event 22, 44, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgAbyssTrainer3, -1
+	object_event 14, 44, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, PurgAbyssTrainer4, -1
+	object_event 30, 44, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PurgAbyssHermit0, -1
+	object_event 22, 26, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssHermit1, -1
+	object_event 15,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgAbyssBALL0, EVENT_GEN_PURG_ABYSS_BALL0
+	object_event 13, 47, SPRITE_CORPSE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgAbyssGraveScript, -1
+	object_event 11, 46, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgAbyssTRUMPET, EVENT_GEN_PURG_ABYSS_TRUMPET
 

@@ -29,7 +29,7 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
          (WALK_GOD=1 for A3-A5, see below) and every boss-room-to-next-gate transition passes. Key items: A1 Chainsaw+Crowbar, A2 Jet Ski+
          Baseball Bat, A3 Flashlight+Sledgehammer, A4 Grapple Hook+Shovel, A5 Getaway Car; Outboard still TBD (plan: Purgatorio).
          Final boss FINNEGAN text is a placeholder until the ending is designed. Art is kit-based (johto/modern/kanto kits), palettes per area.
-- [x] 7  milestones (200/800), rival crimelord, mansion hall and bedroom, Area 5 entered through the New Bark crater portal, normal ending
+- [x] 7  milestones (tidal wave news at kill 400, crater with the rival's fall), rival crimelord, mansion hall and bedroom, Area 5 entered through the New Bark crater portal, normal ending
          (final boss falls -> crater rim -> Elm checks the fully evolved starter -> hall of fame + credits -> Continue in the bedroom).
          Tests: tools/hardcore/test_story.py milestone | newbark | rival | ending | notyet (see the docstring for the testbuild line of each).
          Still open from stage 7: credits text naming Claude, chauffeur trip and hall NPC checks, Getaway Car use, Elm hands the mon back
@@ -107,9 +107,9 @@ newandimprovd/hardcore-crystal under docs/). Standing rules are in that document
 
 ## Stage 7 notes (story and ending)
 - Story hook: TrainerDeathScript -> HC_CheckStory (engine/hardcore/story.asm, section "Hardcore Story") -> farsjump HC_StoryDispatch.
-  Kind 1 = kill 200 (tidal wave news), 2 = the rival (class RIVAL2, boss 3 of Area 4: stolen starter back at L75, EVENT_HC_CRATER),
+  Kind 1 = the kill counter has reached HC_TSUNAMI_KILLS = 400 and the news has not run (tidal wave news, flag based), 2 = the rival (class RIVAL2, boss 3 of Area 4: stolen starter back at L75, EVENT_HC_CRATER),
   3 = the final boss FINNEGAN (EVENT_HC_FINN_FELL, warp to NEW_BARK_TOWN 10,10, the crater rim). Story texts: tools/hardcore/gen_story.py STORY.
-- New Bark Town (maps/NewBarkTown.asm): tiles callback floods (kill 200) or craters (kill 800) the town, swirl block at block (5,4) leads to DIS_GATE;
+- New Bark Town (maps/NewBarkTown.asm): tiles callback floods (tidal wave, kill 400) or craters (the rival's fall) the town, swirl block at block (5,4) leads to DIS_GATE;
   object visibility goes through event flags: teacher/fisher carry EVENT_HC_CRATER, Elm carries EVENT_HC_ELM_HIDDEN (callback appears him with the crater).
   A flagless `disappear` in a MAPCALLBACK_OBJECTS callback does NOT hide an object (the callback runs before the object structs exist).
 - Ending: Elm checks `special FindPartyMonThatSpecies` (wScriptVar = species in, TRUE/FALSE out) for ELDERWOOD / CALDERA / DEATHROLL depending on
@@ -186,6 +186,10 @@ Goal: stop reusing vanilla graphics that clash with the dark-comedy vibe.
      would split the cave into more pieces when every cell a trainer could stop on is rock.
   3. Some new towns had no tall grass, which starved four Grove forms of wild slots; plaza2 now requires a reachable grass patch.
   4. Boulders return to their original cells whenever a map is entered, so the test pushes them again on the way back up.
+- Battle budget (author's decision, Nov 2026, all numbers in tools/hardcore/areas/counts.py, checked by battle_budget.py as a verify_all step): 500 mandatory normal trainers
+  (100 per area, Tithe 99 plus Timmy), bosses and scripted duels counted apart (15 plus 1), Purgatorio apart (60), 576 battles of the 650 allowed, room for 74 more special encounters.
+  Lanes keep their length (trail() spaces trainer rows GAP = 2 block rows apart). The tidal wave news comes with kill 400 (HC_TSUNAMI_KILLS) wherever it happens, the radio is
+  the dead trainer's; the crater comes with the rival, the last boss of Area 4 (kill 412 on the shortest path). Item drop tiers scale with the 500 (50, 100, 175 kills).
 - Verification on the final tree: verify_all.sh all PASS (check_text still lists the 44 vanilla lines), walk_all 1-5 pass.
 - Not done: TitheRoad (Johto tileset) keeps its old lane, the Tithe junction and the Purgatorio hub were not redesigned, hermits are 18 lanes of 30, unique trainer teams,
   bike/multiplayer/phone/Battle Tower code removal, real run sprite art, first-kill reveal rewrite.

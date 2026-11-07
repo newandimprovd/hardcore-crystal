@@ -227,6 +227,8 @@ class Walker:
             kills1 = self.t.mem("wHCKillCount", 0, 2)
             if kills1 != kills0:
                 print(f"  kill {kills1[0] + 256 * kills1[1]} at {self.state()}")
+                if getattr(self, "on_kill", None):
+                    self.on_kill(kills1[0] + 256 * kills1[1])
 
     def go(self, goal_map, max_replans=60):
         return self.go_state(lambda s: s[0] == goal_map, goal_map, max_replans)

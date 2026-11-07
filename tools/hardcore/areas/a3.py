@@ -1,7 +1,7 @@
 """Area 3: THE UNION, a robot state with a robot mayor where humans are filed, ranked and paired by committee."""
 from art.classes import area_mix
 from . import a3_text as T
-from . import kits
+from . import counts, kits
 from .builder import AreaCfg, BossSpec, build_area
 from .specbase import SpecBase
 from .a2 import TIERS
@@ -37,5 +37,5 @@ def build(w, roster, rng, entry_doors, open_exit=False):
                   [("AXIOM_OUTSKIRTS", 46, 54, "AXIOM<BSP>OUTSKIRTS"), ("AXIOM_CENTRAL", 42, 50, "AXIOM<BSP>CENTRAL"),
                    ("AXIOM_MAYORALTY", 38, 46, "THE<BSP>MAYORALTY")],
                   "MUSIC_GOLDENROD_CITY", texts, TIERS, bosses, [None, "dark", "slab"], [3, 2, 3], "AxiomGate",
-                  T.GATE[0], trainers=([13, 14, 13, 13, 13], [13, 13, 13, 14, 13], 13), stock_ix=(1, 1, 1, 2, 2, 2, 2))
+                  T.GATE[0], trainers=counts.lanes_of(3), stock_ix=(1, 1, 1, 2, 2, 2, 2))
     return build_area(w, roster, rng, cfg, entry_doors)

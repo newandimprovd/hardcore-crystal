@@ -62,6 +62,11 @@ def emit_flags(w):
     o = [HEADER]
     for name, idx in w.flag_names:
         o.append(f"DEF {name} EQU {idx}")
+    # the battle budget (areas/counts.py): the kill the tidal wave news comes with and the kill counts of the item drop tiers
+    from . import counts
+    o.append(f"DEF HC_TSUNAMI_KILLS EQU {counts.TSUNAMI_KILLS}")
+    for i, k in enumerate(counts.drop_tiers(), 1):
+        o.append(f"DEF HC_DROP_TIER{i} EQU {k}")
     write("constants/area_event_flags.asm", "\n".join(o) + "\n")
 
 

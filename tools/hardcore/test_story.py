@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Story tests (stage 7): the kill 200 news, the flooded and cratered New Bark Town, the portal.
+"""Story tests (stage 7): the tidal wave news (HC_TSUNAMI_KILLS), the flooded and cratered New Bark Town, the portal.
 
 usage:
   test_story.py milestone ROM   ROM = testbuild.sh stA TEST_MAP=TITHE_PLAZA1 TEST_X=3 TEST_Y=4 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
@@ -43,14 +43,32 @@ def boot(rom):
     return t
 
 
+def tsunami_kills():
+    """HC_TSUNAMI_KILLS from the generated constants (areas/counts.py): the kill the tidal wave news comes with."""
+    import re
+    src = open(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "constants", "area_event_flags.asm")).read()
+    return int(re.search(r"DEF HC_TSUNAMI_KILLS EQU (\d+)", src).group(1))
+
+
 def milestone(rom):
     wk = tw.Walker(rom)
     t = wk.t
     wk.seen_map()
-    t.poke("wHCKillCount", 199, 0)
-    t.poke("wHCKillCount", 0, 1)
+
+    def set_kills(n):
+        t.poke("wHCKillCount", n & 0xFF, 0)
+        t.poke("wHCKillCount", n >> 8, 1)
+
+    # the news must stay quiet below the threshold and run on the kill that reaches it, so the tidal flag is read after every kill
+    first = tsunami_kills() - 3
+    flags = {}
+    wk.on_kill = lambda n: flags.__setitem__(n, getflag(t, "EVENT_HC_TIDAL_WAVE"))
+    set_kills(first)
     ok = wk.go("TitheStreet1")
     ok = ok and wk.go("TitheStreet2")
+    print("tidal flag after each kill", dict(sorted(flags.items())))
+    ok = ok and all(f == (1 if n >= tsunami_kills() else 0) for n, f in flags.items())
+    ok = ok and min(flags, default=0) < tsunami_kills() <= max(flags, default=0)
     kills = t.mem("wHCKillCount", 0, 2)
     print("kills", kills[0] + 256 * kills[1], "tidal flag", getflag(t, "EVENT_HC_TIDAL_WAVE"))
     t.shot(f"{SHOTS}/milestone_end.png", 3)

@@ -26,13 +26,13 @@ REVEAL = [
 
 
 STORY = {
-    # kill 200 (the Monsignor): the radio
-    "TidalText1": "A radio on the desk crackled to life, the way radios do at funerals.",
+    # kill 400 (HC_TSUNAMI_KILLS, anywhere): the radio of the man who just died
+    "TidalText1": "The dead trainer's radio crackled to life, the way radios do at funerals.",
     "TidalText2": "BULLETIN: A tidal wave has struck NEW BARK TOWN. Officials describe the town as ruined and slightly destroyed.",
     "TidalText3": "PROF. ELM's lab has reportedly entered a new relationship with the sea. The professor is unavailable for comment, but his hat was found.",
     "TidalText4": "Police ask anyone with information about the many bodies along the road to please keep it to themselves.",
     "TidalText5": "<PLAYER> switched the radio off. Home was a long walk back now. It was also, in all likelihood, a pond.",
-    # kill 800 (the rival): the stolen POKéMON, the maids, the crater
+    # the rival (the last boss of Area 4): the stolen POKéMON, the maids, the crater
     "RivalText1": "A POKé BALL had rolled out of the rival's coat and stopped against <PLAYER>'s shoe. It was warm. It had been stolen from PROF. ELM's lab so long ago that it no longer felt guilty.",
     "RivalText3": "The stolen POKéMON looked at <PLAYER>, at the body, at the wine-colored carpet, and decided not to ask.",
     "RivalText4": "The mansion's staff had been standing very still, the way staff do when the boss is on the floor. A maid in a very small apron set down her tray.",

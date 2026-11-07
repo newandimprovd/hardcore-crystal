@@ -3,7 +3,7 @@ from art.classes import area_mix
 import random
 
 from . import a1_text as T
-from . import kits
+from . import counts, kits
 from .builder import ActSpec, BossSpec, build_act, make_plaza, pickup, town
 from .layout import chain, gatehouse, lane, plaza
 from .populate import populate
@@ -64,7 +64,7 @@ def build(w, roster, rng, open_exit=False):
     items = [tiers[0]] + [tiers[t] for t in (1, 1, 2, 2, 3, 3)]
 
     # Segment 1: the road out of Cherrygrove (outdoor Johto tileset)
-    road, s_road = lane(g, "TitheRoad", johto, rng, trainers=6, a=2, cw=3, right=3, landmark=LM_ROAD,
+    road, s_road = lane(g, "TitheRoad", johto, rng, trainers=counts.ROAD_TRAINERS, a=2, cw=3, right=3, landmark=LM_ROAD,
                         music="MUSIC_ROUTE_30", north="door", neck=2)
     pickup(w, road, reserve=len(s_road))
     # Segment 2: the city (modern tileset)
@@ -89,13 +89,13 @@ def build(w, roster, rng, open_exit=False):
     boss3 = BossSpec("TitheCathedral", "MONSIGNOR", "T_MONSIGNOR", "SPRITE_HC_MONSIGNOR", "PAL_NPC_RED", 27, 6,
                      T.CATHEDRAL_SEEN, T.CATHEDRAL_BEATEN, T.CATHEDRAL_AFTER, template="bruno", landmark=LM_PARISH,
                      music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)
-    # Timmy is kill 1, so 199 more put the Monsignor on kill 200 (the tidal wave milestone)
+    # Timmy is kill 1; the tidal wave news is kill counts.TSUNAMI_KILLS (HC_TSUNAMI_KILLS) and does not depend on any one room
     acts = [ActSpec("Tithe", 5, modern, LM_CITY, "MUSIC_GOLDENROD_CITY", boss=boss1, texts=texts, split=3,
-                    trainers=[12, 12, 13, 13, 12]),
+                    trainers=counts.lanes_of(1)[0]),
             ActSpec("Tithe", 5, modern, LM_MID, "MUSIC_GOLDENROD_CITY", gate="tree", boss=boss2, texts=texts, split=2,
-                    trainers=[13, 12, 13, 13, 13], plaza_width=15, rift=True),
+                    trainers=counts.lanes_of(1)[1], plaza_width=15, rift=True),
             ActSpec("Tithe", 5, modern, LM_PARISH, "MUSIC_GOLDENROD_CITY", gate="boulder", boss=boss3, texts=texts, split=3,
-                    trainers=[13, 13, 12, 13, 13])]
+                    trainers=counts.lanes_of(1)[2])]
 
     all_lanes = [(road, s_road)]
     prev, lane_no, plaza_no = p1, 1, 2

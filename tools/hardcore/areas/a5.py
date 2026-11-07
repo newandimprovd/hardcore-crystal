@@ -1,7 +1,7 @@
 """Area 5: the walled city of DIS, the frozen lake COCYTUS, and JUDECCA at its centre where the Sleeper lies."""
 from art.classes import area_mix
 from . import a5_text as T
-from . import kits
+from . import counts, kits
 from .builder import AreaCfg, BossSpec, build_area
 from .specbase import SpecBase
 from .a2 import TIERS
@@ -37,5 +37,5 @@ def build(w, roster, rng, entry_doors):
                   [("DIS_CITY", 24, 50, "THE<BSP>CITY<BSP>OF<BSP>DIS"), ("DIS_COCYTUS", 20, 46, "LAKE<BSP>COCYTUS"),
                    ("DIS_JUDECCA", 16, 42, "JUDECCA")],
                   "MUSIC_ROCKET_HIDEOUT", texts, TIERS, bosses, [None, None, None], [3, 2, 3], "DisGate",
-                  T.GATE[0], trainers=([14, 13, 14, 13, 13], [13, 14, 13, 13, 14], 13), stock_ix=(2, 2, 2, 2, 2, 2, 2), purg=False)
+                  T.GATE[0], trainers=counts.lanes_of(5), stock_ix=(2, 2, 2, 2, 2, 2, 2), purg=False)
     return build_area(w, roster, rng, cfg, entry_doors)
