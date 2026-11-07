@@ -100,10 +100,10 @@ PurgAbyssAfterScript:
 	end
 
 PurgAbyssTrainer0:
-	trainer G_GRANNY, 150, EVENT_GEN_PURG_ABYSS_0, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer G_GRANNY, 151, EVENT_GEN_PURG_ABYSS_0, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
 
 PurgAbyssTrainer1:
-	trainer G_GRANNY, 151, EVENT_GEN_PURG_ABYSS_1, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer G_GRANNY, 152, EVENT_GEN_PURG_ABYSS_1, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
 
 PurgAbyssTrainer2:
 	trainer U_SERF, 159, EVENT_GEN_PURG_ABYSS_2, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
@@ -196,7 +196,7 @@ PurgAbyssHermit1:
 	waitbutton
 	closetext
 	winlosstext PurgAbyssHermit1BeatenText, 0
-	loadtrainer G_ELDER, 138
+	loadtrainer G_ELDER, 137
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_PURG_ABYSS_HERMIT1

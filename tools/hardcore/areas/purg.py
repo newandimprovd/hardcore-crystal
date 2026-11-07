@@ -91,7 +91,7 @@ def tile_grid(m):
 
 
 def passable(c):
-    return c in ("FLOOR", "LADDER", "CAVE", "TALL_GRASS")
+    return c in ("FLOOR", "LADDER", "CAVE", "TALL_GRASS", "WARP_CARPET_DOWN")
 
 
 def reach(m, start):
@@ -357,7 +357,7 @@ def hub(g, w, roster, rng):
     m = MapDef(g.key, "PurgThreshold", bw, bh, "TILESET_CAVE", "DUNGEON", LM, "MUSIC_UNION_CAVE", pal="PALETTE_DAY", border=0x00)
     render(G, m, rng)
     south = m.warp(2 * ex + 1, 2 * (bh - 1) + 1, "mouth")
-    m.set(ex, bh - 1, 0x13)
+    m.set(ex, bh - 1, 0x24)  # floor with a warp carpet bottom right: a cave door (0x13) on the last row walks the player off the map on arrival
     # the four mouths
     mouths = []
     for bx in (6, 10, 14, 18):

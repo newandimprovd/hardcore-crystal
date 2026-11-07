@@ -171,9 +171,37 @@ def free_line(grid, x, y, dx, dy, n):
     return k
 
 
+def components(grid, blocked):
+    """Number of 4-connected floor regions of the grid when the cells in blocked count as wall."""
+    seen, n = set(blocked), 0
+    for y in range(grid.th):
+        for x in range(grid.tw):
+            if (x, y) in seen or not grid.floor(x, y):
+                continue
+            n += 1
+            todo = [(x, y)]
+            seen.add((x, y))
+            while todo:
+                cx, cy = todo.pop()
+                for nx, ny in ((cx + 1, cy), (cx - 1, cy), (cx, cy + 1), (cx, cy - 1)):
+                    if (nx, ny) not in seen and grid.floor(nx, ny):
+                        seen.add((nx, ny))
+                        todo.append((nx, ny))
+    return n
+
+
+def stop_cells(x, y, face, n):
+    """Where a trainer can end up standing: the trainer walks up to the player, so any cell of its line of sight (and its own cell) may be
+    the one it stays on after the fight."""
+    dx, dy = {"UP": (0, -1), "DOWN": (0, 1), "LEFT": (-1, 0), "RIGHT": (1, 0)}[face]
+    return {(x + dx * k, y + dy * k) for k in range(0, n)}
+
+
 def trainer_slots(grid, rng, count, avoid, minsep=5, sight=5):
     """Places trainers on floor tiles that look along a free line of at least 3 tiles.  avoid: tiles that must stay clear (ladders,
-    objects).  Returns Slot objects."""
+    objects).  A beaten trainer stays on the cell where it stopped, and the cells of two of them can seal a narrow passage for good, so a
+    slot is only accepted when the cave stays in as many pieces as it was with every cell a trainer could stop on counted as rock (a
+    trainer never ends in a one or two tile wide corridor).  Returns Slot objects."""
     cands = []
     for y in range(3, grid.th - 3):
         for x in range(3, grid.tw - 3):
@@ -184,13 +212,17 @@ def trainer_slots(grid, rng, count, avoid, minsep=5, sight=5):
                 if n >= 3:
                     cands.append((x, y, face, n))
     rng.shuffle(cands)
-    slots, used = [], []
+    base = components(grid, set())
+    slots, used, blocked = [], [], set()
     for x, y, face, n in cands:
         if len(slots) >= count:
             break
         if any(abs(x - ux) + abs(y - uy) < minsep for ux, uy in used) or (x, y) in avoid:
             continue
-        # not on a one tile wide chokepoint of the only path: keep it simple, require two floor neighbours
+        more = blocked | stop_cells(x, y, face, n)
+        if components(grid, more) > base:
+            continue
         used.append((x, y))
+        blocked = more
         slots.append(Slot(x, y, face, n))
     return slots

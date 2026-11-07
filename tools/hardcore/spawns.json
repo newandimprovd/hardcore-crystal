@@ -254,20 +254,20 @@
  "GrovePlaza1": {
   "const": "GROVE_PLAZA1",
   "grass": [
-   0,
-   0,
-   0
+   22,
+   25,
+   3
   ],
-  "h": 14,
+  "h": 15,
   "spawn": [
-   16,
+   2,
    4
   ],
   "street": [
-   3,
-   11
+   9,
+   17
   ],
-  "w": 17
+  "w": 15
  },
  "GrovePlaza2": {
   "const": "GROVE_PLAZA2",
@@ -326,17 +326,17 @@
  "GrovePlaza5": {
   "const": "GROVE_PLAZA5",
   "grass": [
-   0,
-   0,
-   0
+   8,
+   21,
+   3
   ],
-  "h": 14,
+  "h": 13,
   "spawn": [
-   18,
+   14,
    4
   ],
   "street": [
-   3,
+   5,
    11
   ],
   "w": 17
@@ -344,18 +344,18 @@
  "GrovePlaza6": {
   "const": "GROVE_PLAZA6",
   "grass": [
-   0,
-   0,
-   0
+   18,
+   9,
+   3
   ],
   "h": 14,
   "spawn": [
-   16,
+   10,
    4
   ],
   "street": [
-   9,
-   11
+   5,
+   13
   ],
   "w": 13
  },
@@ -542,18 +542,18 @@
  "TithePlaza3": {
   "const": "TITHE_PLAZA3",
   "grass": [
-   0,
-   0,
-   0
+   8,
+   9,
+   3
   ],
-  "h": 14,
+  "h": 13,
   "spawn": [
-   2,
+   12,
    4
   ],
   "street": [
-   3,
-   11
+   11,
+   13
   ],
   "w": 17
  },

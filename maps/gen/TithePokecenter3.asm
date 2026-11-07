@@ -26,8 +26,8 @@ TithePokecenter3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3,  7, TITHE_PLAZA3, 1
-	warp_event  4,  7, TITHE_PLAZA3, 1
+	warp_event  3,  7, TITHE_PLAZA3, 3
+	warp_event  4,  7, TITHE_PLAZA3, 3
 
 	def_coord_events
 

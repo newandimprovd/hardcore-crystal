@@ -27,7 +27,7 @@ PurgUp1AfterScript:
 	end
 
 PurgUp1Trainer0:
-	trainer G_GRANNY, 152, EVENT_GEN_PURG_UP1_0, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+	trainer G_GRANNY, 153, EVENT_GEN_PURG_UP1_0, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
 
 PurgUp1Trainer1:
 	trainer G_BARD, 143, EVENT_GEN_PURG_UP1_1, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
@@ -45,7 +45,10 @@ PurgUp1Trainer5:
 	trainer T_SUIT, 144, EVENT_GEN_PURG_UP1_5, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
 
 PurgUp1Trainer6:
-	trainer T_BEGGAR, 140, EVENT_GEN_PURG_UP1_6, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+	trainer T_SUIT, 145, EVENT_GEN_PURG_UP1_6, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+
+PurgUp1Trainer7:
+	trainer T_SUIT, 146, EVENT_GEN_PURG_UP1_7, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
 
 PurgUp1Hermit0:
 	faceplayer
@@ -58,7 +61,7 @@ PurgUp1Hermit0:
 	waitbutton
 	closetext
 	winlosstext PurgUp1Hermit0BeatenText, 0
-	loadtrainer G_GRANNY, 153
+	loadtrainer G_GRANNY, 154
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_PURG_UP1_HERMIT0
@@ -212,13 +215,14 @@ PurgUp1_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 15, 23, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, PurgUp1Trainer0, -1
-	object_event 17,  7, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp1Trainer1, -1
-	object_event 21, 12, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp1Trainer2, -1
-	object_event 21, 17, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp1Trainer3, -1
-	object_event 27, 13, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp1Trainer4, -1
-	object_event 20, 26, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, PurgUp1Trainer5, -1
-	object_event 12,  6, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, PurgUp1Trainer6, -1
+	object_event 17,  7, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, PurgUp1Trainer0, -1
+	object_event 22, 14, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp1Trainer1, -1
+	object_event 27, 13, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp1Trainer2, -1
+	object_event 20, 26, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, PurgUp1Trainer3, -1
+	object_event 16, 23, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp1Trainer4, -1
+	object_event 19, 11, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, PurgUp1Trainer5, -1
+	object_event 12,  7, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, PurgUp1Trainer6, -1
+	object_event 20, 17, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp1Trainer7, -1
 	object_event 16, 16, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PurgUp1Hermit0, -1
 	object_event 10, 16, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PurgUp1Hermit1, -1
 	object_event 23, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp1BALL0, EVENT_GEN_PURG_UP1_BALL0

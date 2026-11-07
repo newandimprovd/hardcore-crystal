@@ -12,12 +12,13 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 os.environ.setdefault("SHOTS", "/home/claude/scratch/purg")
+os.environ.setdefault("WALK_GOD", "1")  # a map test: one Pokemon cannot carry the fights of a whole underworld
 import test_walk  # noqa: E402
 from test_walk import Walker, has_item, item_value  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(HERE))
 FACE_KEY = {(0, -1): "up", (0, 1): "down", (-1, 0): "left", (1, 0): "right"}
-SKIP_SCRIPT = re.compile(r"(Gate\d*Script|BoulderScript|SealedScript)$")
+SKIP_SCRIPT = re.compile(r"(Gate\d*Script|BoulderScript|SealedScript|BrunoScript)$")  # Bruno has his own step (the lift question comes once)
 results = {}
 
 
@@ -181,15 +182,33 @@ def main():
     check("Joyce gives the CORKBOARD", ok and has_item(wk, item_value("CORKBOARD")))
     check("  Joyce lore flag", flag_get(t, "EVENT_LORE_JOYCE"))
 
-    # ---- the CORKBOARD script itself (queued the way the item effect does it)
-    seen = []
-    t.hook("CorkboardScript", lambda ctx: seen.append(1))
+    # ---- the CORKBOARD script itself: the item effect only queues it (FarQueueScript) and the start menu callback jumps to the queue, so the
+    # test stands in for the menu: StartMenu returns at once with the queue filled and hMenuReturn = HMENURETURN_SCRIPT
+    seen = []  # a script is data, so no hook can see it start: the test watches the script engine instead
     bank, addr = t.sym["CorkboardScript"]
-    t.poke("wQueuedScriptBank", bank)
-    t.poke("wQueuedScriptAddr", addr & 0xFF)
-    t.poke("wQueuedScriptAddr", addr >> 8, 1)
-    t.pb.button("b", 4)
-    t.tick(60)
+
+    armed = [True]
+
+    def fake_start_menu(ctx):
+        if not armed[0]:
+            return
+        armed[0] = False
+        t.poke("wQueuedScriptBank", bank)
+        t.poke("wQueuedScriptAddr", addr & 0xFF)
+        t.poke("wQueuedScriptAddr", addr >> 8, 1)
+        t.poke("hMenuReturn", 0x80)
+        rf = t.pb.register_file
+        sp = rf.SP
+        rf.PC = t.pb.memory[sp] | (t.pb.memory[sp + 1] << 8)  # a ret
+        rf.SP = sp + 2
+
+    t.hook("StartMenu", fake_start_menu)
+    t.pb.button("start", 4)
+    for _ in range(12):
+        t.tick(10)
+        if wk.busy():
+            seen.append(1)
+            break
     wk.settle()
     check("CorkboardScript runs and ends", bool(seen) and not wk.busy())
 
@@ -198,21 +217,34 @@ def main():
     for i, o in enumerate(wk.w.maps["PurgThreshold"].objects):
         if o["script"].endswith("SealedScript") and o["x"] == 42:
             wk.w.removed.add(("PurgThreshold", i))
-    plan = ["PurgThreshold", "PurgDown1", "PurgDown2", "PurgDown3", "PurgDown4", "PurgAbyss", "PurgThreshold",
+    # the way back up is walked floor by floor: the engine puts every boulder back on its original cell whenever a map is entered, so each
+    # visit has to push them again (the removable rocks stay gone, their flag is set)
+    plan = ["PurgThreshold", "PurgDown1", "PurgDown2", "PurgDown3", "PurgDown4", "PurgAbyss",
+            "PurgDown4", "PurgDown3", "PurgDown2", "PurgDown1", "PurgThreshold",
             "PurgUp1", "PurgUp2", "PurgUp3", "PurgUp4", "PurgLanding"]
     fights0 = len(wk.fights)
     k0 = kills(t)
+    visited = set()
     for idx, name in enumerate(plan):
+        for key in [k for k in wk.w.moved if k[0] == name]:
+            del wk.w.moved[key]
         if not wk.go(name):
             check(f"reach {name}", False)
             break
         wk.seen_map()
+        again = name in visited
+        visited.add(name)
         if name == "PurgThreshold":
             if idx == 0:
                 n = talk_all(wk, name)
                 print(f"  {name}: {n} talkers")
             continue
         ok = cave_gates(wk, name)
+        if again:
+            if not ok:
+                check(f"{name}: gates on the way back", False, str(wk.state()))
+                break
+            continue
         nb = pick_all(wk, name)
         nt = talk_all(wk, name)
         check(f"{name}: gates, {nb} balls, {nt} talkers", ok, str(wk.state()))

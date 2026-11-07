@@ -2,17 +2,17 @@
 
 	spawn TITHE_PLAZA1,  4,  4
 	spawn TITHE_PLAZA2,  2,  4
-	spawn TITHE_PLAZA3,  2,  4
+	spawn TITHE_PLAZA3, 12,  4
 	spawn TITHE_PLAZA4, 20,  4
 	spawn TITHE_PLAZA5, 28,  4
 	spawn TITHE_PLAZA6,  8,  4
 	spawn TITHE_PLAZA7, 16,  4
-	spawn GROVE_PLAZA1, 16,  4
+	spawn GROVE_PLAZA1,  2,  4
 	spawn GROVE_PLAZA2,  2,  4
 	spawn GROVE_PLAZA3, 14,  4
 	spawn GROVE_PLAZA4, 14,  4
-	spawn GROVE_PLAZA5, 18,  4
-	spawn GROVE_PLAZA6, 16,  4
+	spawn GROVE_PLAZA5, 14,  4
+	spawn GROVE_PLAZA6, 10,  4
 	spawn GROVE_PLAZA7, 10,  4
 	spawn AXIOM_PLAZA1, 22,  4
 	spawn AXIOM_PLAZA2,  4,  4

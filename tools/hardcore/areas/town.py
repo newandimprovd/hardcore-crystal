@@ -28,8 +28,8 @@ def plaza2(g, name, kit, rng, **kw):
         e, xo, jr = m.street
         r = reach(m, kit, (2 * e + 1, 2 * (m.h - 2) + 1))
         ok = all((wp.x, wp.y + 1) in r for wp in m.warps) and (2 * xo + 1, 0) in r
-        if getattr(m, "grass_cell", None):
-            ok = ok and m.grass_cell[:2] in r
+        if kit.extra.get("grass"):  # every town has tall grass (wild.py gives each plaza a table), and it can be walked to
+            ok = ok and bool(getattr(m, "grass_cell", None)) and m.grass_cell[:2] in r
         if ok:
             m.npc_cells = [c for c in m.npc_cells if c in r]
             g.add(m)

@@ -43,12 +43,12 @@ SECTION "Area Attributes", ROMX
 	connection south, TithePlaza2, TITHE_PLAZA2, 0
 
 	map_attributes TitheStreet5, TITHE_STREET5, $00
-	connection north, TithePlaza3, TITHE_PLAZA3, 5
+	connection north, TithePlaza3, TITHE_PLAZA3, 1
 	connection south, TitheStreet4, TITHE_STREET4, 0
 
 	map_attributes TithePlaza3, TITHE_PLAZA3, $00
-	connection north, TitheStreet6, TITHE_STREET6, 2
-	connection south, TitheStreet5, TITHE_STREET5, -5
+	connection north, TitheStreet6, TITHE_STREET6, 0
+	connection south, TitheStreet5, TITHE_STREET5, -1
 
 	map_attributes TithePokecenter3, TITHE_POKECENTER3, $00
 
@@ -60,7 +60,7 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes TitheStreet6, TITHE_STREET6, $00
 	connection north, TitheStreet7, TITHE_STREET7, 0
-	connection south, TithePlaza3, TITHE_PLAZA3, -2
+	connection south, TithePlaza3, TITHE_PLAZA3, 0
 
 	map_attributes TitheStreet7, TITHE_STREET7, $00
 	connection north, TithePlaza4, TITHE_PLAZA4, 6
@@ -142,7 +142,7 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheCathedral, TITHE_CATHEDRAL, $00
 
 	map_attributes GrovePlaza1, GROVE_PLAZA1, $00
-	connection north, GroveStreet1, GROVE_STREET1, 4
+	connection north, GroveStreet1, GROVE_STREET1, 2
 
 	map_attributes GroveGate, GROVE_GATE, $00
 
@@ -154,7 +154,7 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes GroveStreet1, GROVE_STREET1, $00
 	connection north, GroveStreet2, GROVE_STREET2, 0
-	connection south, GrovePlaza1, GROVE_PLAZA1, -4
+	connection south, GrovePlaza1, GROVE_PLAZA1, -2
 
 	map_attributes GroveStreet2, GROVE_STREET2, $00
 	connection north, GroveStreet3, GROVE_STREET3, 0
@@ -221,12 +221,12 @@ SECTION "Area Attributes", ROMX
 	connection south, GroveStreet8, GROVE_STREET8, 0
 
 	map_attributes GroveStreet10, GROVE_STREET10, $00
-	connection north, GrovePlaza5, GROVE_PLAZA5, 2
+	connection north, GrovePlaza5, GROVE_PLAZA5, -5
 	connection south, GroveStreet9, GROVE_STREET9, 0
 
 	map_attributes GrovePlaza5, GROVE_PLAZA5, $00
-	connection north, GroveStreet11, GROVE_STREET11, 3
-	connection south, GroveStreet10, GROVE_STREET10, -2
+	connection north, GroveStreet11, GROVE_STREET11, 0
+	connection south, GroveStreet10, GROVE_STREET10, 5
 
 	map_attributes GrovePokecenter5, GROVE_POKECENTER5, $00
 
@@ -238,19 +238,19 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes GroveStreet11, GROVE_STREET11, $00
 	connection north, GroveStreet12, GROVE_STREET12, 0
-	connection south, GrovePlaza5, GROVE_PLAZA5, -3
+	connection south, GrovePlaza5, GROVE_PLAZA5, 0
 
 	map_attributes GroveStreet12, GROVE_STREET12, $00
 	connection north, GroveStreet13, GROVE_STREET13, 0
 	connection south, GroveStreet11, GROVE_STREET11, 0
 
 	map_attributes GroveStreet13, GROVE_STREET13, $00
-	connection north, GrovePlaza6, GROVE_PLAZA6, -2
+	connection north, GrovePlaza6, GROVE_PLAZA6, 1
 	connection south, GroveStreet12, GROVE_STREET12, 0
 
 	map_attributes GrovePlaza6, GROVE_PLAZA6, $00
 	connection north, GroveStreet14, GROVE_STREET14, 0
-	connection south, GroveStreet13, GROVE_STREET13, 2
+	connection south, GroveStreet13, GROVE_STREET13, -1
 
 	map_attributes GrovePokecenter6, GROVE_POKECENTER6, $00
 

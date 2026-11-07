@@ -73,9 +73,6 @@ PurgUp4Trainer1:
 PurgUp4Trainer2:
 	trainer U_SERF, 166, EVENT_GEN_PURG_UP4_2, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
 
-PurgUp4Trainer3:
-	trainer T_NUN, 145, EVENT_GEN_PURG_UP4_3, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
-
 PurgUp4Hermit0:
 	faceplayer
 	opentext
@@ -87,7 +84,7 @@ PurgUp4Hermit0:
 	waitbutton
 	closetext
 	winlosstext PurgUp4Hermit0BeatenText, 0
-	loadtrainer G_GRANNY, 156
+	loadtrainer G_GRANNY, 157
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_PURG_UP4_HERMIT0
@@ -241,10 +238,9 @@ PurgUp4_MapEvents:
 	def_object_events
 	object_event 14, 20, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp4Gate0Script, EVENT_GEN_PURG_UP4_GATE0
 	object_event 15, 20, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PurgUp4Gate0Script, EVENT_GEN_PURG_UP4_GATE0
-	object_event 13, 12, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, PurgUp4Trainer0, -1
-	object_event 22,  8, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer1, -1
+	object_event 22,  8, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer0, -1
+	object_event 14,  9, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer1, -1
 	object_event  8, 26, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer2, -1
-	object_event 14,  8, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, PurgUp4Trainer3, -1
 	object_event 24, 28, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PurgUp4Hermit0, -1
 	object_event 30, 30, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PurgUp4Hermit1, -1
 	object_event 18,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PurgUp4BALL0, EVENT_GEN_PURG_UP4_BALL0

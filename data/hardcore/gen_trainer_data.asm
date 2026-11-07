@@ -259,14 +259,27 @@ HC_GenGroup_T_SUIT:
 	db 24, MANKEY
 	db -1
 	db "CURT@"
-	db 39, CLOYSTER
-	db 42, BLISSEY
+	db 40, CLOYSTER
+	db 43, BLISSEY
 	db -1
-	db "CHUCK@"
-	db 39, NIDORINO
-	db 40, KOFFING
+	db "CARLA@"
+	db 39, KOFFING
+	db 40, NIDORINO
+	db 41, STARMIE
+	db -1
+	db "NOAH@"
+	db 40, SMOOCHUM
+	db 41, PONYTA
+	db 41, KADABRA
+	db 42, PORYGON
+	db 43, SLOWBRO
+	db -1
+	db "KURT@"
+	db 41, HYPNO
+	db 42, WEEZING
 	db 42, STARMIE
-	db 43, SKIPLOOM
+	db 43, DRAGONAIR
+	db 44, NINETALES
 	db -1
 
 HC_GenGroup_T_HOODIE:
@@ -745,24 +758,11 @@ HC_GenGroup_T_NUN:
 	db 25, SCYTHER
 	db 25, PORYGON2
 	db -1
-	db "ESTHER@"
-	db 45, KADABRA
-	db 46, SKIPLOOM
-	db 46, PRIMEAPE
-	db -1
-	db "IRA@"
-	db 46, CLEFFA
-	db 47, IGGLYBUFF
-	db 48, MEOWTH
-	db 49, JIGGLYPUFF
-	db 49, ARBOK
-	db -1
-	db "ALDO@"
-	db 69, SKIPLOOM
-	db 69, SENTINEL
-	db 70, DREADBEAK
-	db 70, MACHOKE
-	db 71, TYRANITAR
+	db "DOUG@"
+	db 45, PRIMEAPE
+	db 46, KADABRA
+	db 47, SKIPLOOM
+	db 50, GOLEM
 	db -1
 
 HC_GenGroup_T_BEGGAR:
@@ -827,12 +827,6 @@ HC_GenGroup_T_BEGGAR:
 	db 36, PORYGON2
 	db 38, FEAROW
 	db 39, ABRA
-	db -1
-	db "NOAH@"
-	db 41, SMOOCHUM
-	db 42, KAKUNA
-	db 43, PORYGON
-	db 44, SLOWBRO
 	db -1
 	db "ABBY@"
 	db 49, HAUNTER
@@ -1677,21 +1671,15 @@ HC_GenGroup_G_ELDER:
 	db 27, HOUNDOUR
 	db -1
 	db "MIA@"
-	db 43, HOOTHOOT
-	db 44, RATTATA
-	db 46, METAPOD
+	db 44, HOOTHOOT
+	db 45, RATTATA
+	db 47, METAPOD
 	db -1
 	db "CARL@"
-	db 47, ZUBAT
-	db 49, MAGNETON
-	db 49, SEEL
-	db 49, PARAS
-	db -1
-	db "GAIL@"
-	db 40, PILOSWINE
-	db 42, JIGGLYPUFF
-	db 43, KADABRA
-	db 44, GOLBAT
+	db 40, ZUBAT
+	db 42, MAGNETON
+	db 42, SEEL
+	db 42, PARAS
 	db -1
 	db "LEE@"
 	db 62, BUTTERFREE
@@ -1700,24 +1688,17 @@ HC_GenGroup_G_ELDER:
 	db 65, ALLEYCAT
 	db -1
 	db "DANTE@"
-	db 47, STARMIE
-	db 47, SQUIRTLE
-	db 48, WEEZING
-	db 49, SPEAROW
-	db 49, JYNX
+	db 48, STARMIE
+	db 48, SQUIRTLE
+	db 49, WEEZING
+	db 50, RATICATE
+	db 50, SLUDGELORD
 	db -1
-	db "JILL@"
-	db 49, MAROWAK
-	db 49, AZUMARILL
-	db 50, PIDGEOTTO
-	db 50, PIDGEOTTO
-	db 51, AMNESIAC
-	db -1
-	db "EMMA@"
-	db 43, ABRA
-	db 44, FURRET
-	db 45, IGGLYBUFF
-	db 47, WEEZING
+	db "CLYDE@"
+	db 43, HORSEA
+	db 43, AZUMARILL
+	db 44, PIDGEY
+	db 47, FURRET
 	db -1
 	db "LORI@"
 	db 54, RAGECARP
@@ -1840,16 +1821,23 @@ HC_GenGroup_G_GRANNY:
 	db 34, WEEZING
 	db -1
 	db "ARNIE@"
-	db 45, BAYLEEF
-	db 46, RATICATE
-	db 46, KAKUNA
-	db 48, FEAROW
+	db 46, BAYLEEF
+	db 47, RATICATE
+	db 47, KAKUNA
+	db 49, FEAROW
 	db -1
-	db "CARLA@"
-	db 45, PRIMEAPE
-	db 47, PIDGEY
-	db 47, ZUBAT
-	db 48, STEELIX
+	db "BESS@"
+	db 47, MEOWTH
+	db 48, GLOOM
+	db 49, MAGNETON
+	db 50, ALAKAZAM
+	db 51, KAKUNA
+	db -1
+	db "GAIL@"
+	db 44, PILOSWINE
+	db 46, JIGGLYPUFF
+	db 47, KADABRA
+	db 48, GOLBAT
 	db -1
 	db "GARY@"
 	db 54, PIDGEOT
@@ -1864,29 +1852,29 @@ HC_GenGroup_G_GRANNY:
 	db 35, PIDGEOTTO
 	db 38, BLISSEY
 	db -1
-	db "JADE@"
-	db 38, WEEZING
-	db 39, KINGLER
-	db 39, DRAGONAIR
-	db 40, STARMIE
+	db "VERN@"
+	db 37, METAPOD
+	db 38, SLOWBRO
+	db 39, ARBOK
+	db 41, HAUNTER
 	db -1
 	db "NINA@"
-	db 44, AZUMARILL
-	db 47, ARIADOS
-	db 47, GRAVELER
-	db 47, HYPNO
+	db 45, AZUMARILL
+	db 48, ARIADOS
+	db 48, GRAVELER
+	db 48, HYPNO
 	db -1
-	db "BEN@"
-	db 46, ARIADOS
-	db 47, MAREEP
-	db 48, MACHOP
-	db 48, AZUMARILL
+	db "SALLY@"
+	db 46, KOFFING
+	db 46, ABRA
+	db 48, IGGLYBUFF
+	db 49, FURRET
 	db -1
-	db "MILO@"
-	db 62, GENGAR
-	db 64, BONEKEEPER
-	db 65, PIDGEOT
-	db 66, KINGCOBRA
+	db "ALDO@"
+	db 63, SKIPLOOM
+	db 63, SENTINEL
+	db 64, DREADBEAK
+	db 64, MACHOKE
 	db -1
 
 HC_GenGroup_G_SHAMAN:
@@ -1996,11 +1984,11 @@ HC_GenGroup_G_SHAMAN:
 	db 58, HELLHOUND
 	db 60, GENGAR
 	db -1
-	db "ANITA@"
-	db 40, NINETALES
-	db 40, JYNX
-	db 40, SWINUB
-	db 41, GASTLY
+	db "SHEILA@"
+	db 39, FURRET
+	db 41, VENOMOTH
+	db 41, CHARMANDER
+	db 42, DROWZEE
 	db -1
 	db "LEN@"
 	db 44, TENTACRUEL
@@ -2020,11 +2008,11 @@ HC_GenGroup_G_SHAMAN:
 	db 52, NIDOKING
 	db 56, BONEKEEPER
 	db -1
-	db "JOAN@"
-	db 66, NEBULON
-	db 67, SILKFANG
-	db 68, SLUDGELORD
-	db 70, HOUNDOOM
+	db "MILO@"
+	db 66, GENGAR
+	db 68, BONEKEEPER
+	db 69, PIDGEOT
+	db 70, KINGCOBRA
 	db -1
 
 HC_GenGroup_G_DRUIDESS:
@@ -2333,9 +2321,9 @@ HC_GenGroup_G_BARD:
 	db 37, NIDORINA
 	db -1
 	db "ESTHER@"
-	db 41, SMOOCHUM
-	db 41, MAGNETON
-	db 42, JYNX
+	db 40, SMOOCHUM
+	db 40, MAGNETON
+	db 41, JYNX
 	db -1
 	db "DAISY@"
 	db 55, CLEFABLE
@@ -3137,15 +3125,16 @@ HC_GenGroup_U_SERF:
 	db 59, CTHUSPAWN
 	db 59, WIGGLYTUFF
 	db -1
-	db "ROD@"
-	db 63, TYRANITAR
+	db "AL@"
+	db 65, TYRANITAR
 	db 65, PILOSWINE
+	db 69, CROBAT
 	db -1
-	db "YVONNE@"
-	db 66, ALAKAZAM
-	db 68, TIDEBELLY
+	db "HARV@"
 	db 68, BUTTERFREE
-	db 69, NIDOQUEEN
+	db 70, TIDEBELLY
+	db 70, CROBAT
+	db 71, NIDOQUEEN
 	db -1
 
 HC_GenGroup_U_GUARD:
@@ -3322,11 +3311,11 @@ HC_GenGroup_U_SERFF:
 	db 43, PRIMEAPE
 	db -1
 	db "TY@"
-	db 42, QUILAVA
+	db 43, QUILAVA
 	db -1
 	db "DREW@"
-	db 43, GEODUDE
-	db 47, JYNX
+	db 44, GEODUDE
+	db 48, JYNX
 	db -1
 	db "DARREN@"
 	db 44, HOOTHOOT

@@ -217,7 +217,7 @@ PurgThreshold_MapEvents:
 	def_warp_events
 	warp_event 25, 39, TITHE_JUNCTION, 2
 	warp_event 13, 11, TITHE_PLAZA5, 3
-	warp_event 21, 11, GROVE_PLAZA5, 4
+	warp_event 21, 11, GROVE_PLAZA5, 1
 	warp_event 29, 11, AXIOM_PLAZA5, 2
 	warp_event 37, 11, LOTUS_PLAZA5, 3
 	warp_event  5, 25, PURG_DOWN1, 1

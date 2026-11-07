@@ -78,22 +78,22 @@ GrovePlaza5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, GROVE_SMOKEHOUSE, 1
-	warp_event  6,  3, GROVE_MART5, 1
-	warp_event 10,  3, GROVE_HOUSE5, 1
-	warp_event 14,  3, PURG_THRESHOLD, 3
-	warp_event 18,  3, GROVE_POKECENTER5, 1
+	warp_event 10,  3, PURG_THRESHOLD, 3
+	warp_event 14,  3, GROVE_POKECENTER5, 1
+	warp_event 18,  3, GROVE_MART5, 1
+	warp_event 22,  3, GROVE_HOUSE5, 1
+	warp_event 28,  3, GROVE_SMOKEHOUSE, 1
 
 	def_coord_events
-	coord_event 14,  4, -1, GrovePlaza5PurgFlagScript
+	coord_event 10,  4, -1, GrovePlaza5PurgFlagScript
 
 	def_bg_events
 
 	def_object_events
-	object_event 27, 21, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie0, -1
-	object_event  8, 16, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie1, -1
-	object_event 16,  8, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie2, -1
-	object_event  8, 19, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie3, -1
-	object_event  8, 22, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie4, -1
-	object_event 23, 23, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie5, -1
+	object_event 17, 11, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie0, -1
+	object_event  3,  6, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie1, -1
+	object_event 27,  9, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie2, -1
+	object_event 25, 13, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie3, -1
+	object_event 13, 11, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie4, -1
+	object_event 26, 18, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie5, -1
 

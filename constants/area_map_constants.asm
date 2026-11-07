@@ -16,7 +16,7 @@
 	map_const TITHE_HOUSE2,                             4,  4 ; 13
 	map_const TITHE_STREET4,                           12, 16 ; 14
 	map_const TITHE_STREET5,                           12, 15 ; 15
-	map_const TITHE_PLAZA3,                            17, 14 ; 16
+	map_const TITHE_PLAZA3,                            17, 13 ; 16
 	map_const TITHE_POKECENTER3,                        5,  4 ; 17
 	map_const TITHE_MART3,                              6,  4 ; 18
 	map_const TITHE_HOUSE3,                             4,  4 ; 19
@@ -52,7 +52,7 @@
 	endgroup
 
 	newgroup AREA2                ; 28
-	map_const GROVE_PLAZA1,                            17, 14 ;  1
+	map_const GROVE_PLAZA1,                            15, 15 ;  1
 	map_const GROVE_GATE,                               5,  4 ;  2
 	map_const GROVE_POKECENTER1,                        5,  4 ;  3
 	map_const GROVE_MART1,                              6,  4 ;  4
@@ -80,7 +80,7 @@
 	map_const GROVE_STREET8,                           12, 16 ; 26
 	map_const GROVE_STREET9,                           12, 17 ; 27
 	map_const GROVE_STREET10,                          12, 16 ; 28
-	map_const GROVE_PLAZA5,                            17, 14 ; 29
+	map_const GROVE_PLAZA5,                            17, 13 ; 29
 	map_const GROVE_POKECENTER5,                        5,  4 ; 30
 	map_const GROVE_MART5,                              6,  4 ; 31
 	map_const GROVE_HOUSE5,                             4,  4 ; 32
