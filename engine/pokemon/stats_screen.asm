@@ -11,21 +11,9 @@ DEF STAT_PAGE_MASK EQU %00000011
 	const STATS_SCREEN_ANIMATE_EGG    ; 6
 
 BattleStatsScreenInit:
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	jr nz, StatsScreenInit
-
-	ld a, [wBattleMode]
-	and a
-	jr z, StatsScreenInit
-	jr _MobileStatsScreenInit
-
+	jr StatsScreenInit
 StatsScreenInit:
 	ld hl, StatsScreenMain
-	jr StatsScreenInit_gotaddress
-
-_MobileStatsScreenInit:
-	ld hl, StatsScreenMobile
 	jr StatsScreenInit_gotaddress
 
 StatsScreenInit_gotaddress:
@@ -82,32 +70,6 @@ StatsScreenMain:
 	ld a, [wJumptableIndex]
 	bit JUMPTABLE_EXIT_F, a
 	jr z, .loop
-	ret
-
-StatsScreenMobile:
-	xor a
-	ld [wJumptableIndex], a
-	ld [wStatsScreenFlags], a
-
-	ld a, [wStatsScreenFlags]
-	and ~STAT_PAGE_MASK
-	or PINK_PAGE ; first_page
-	ld [wStatsScreenFlags], a
-
-.loop
-	farcall Mobile_SetOverworldDelay
-	ld a, [wJumptableIndex]
-	and JUMPTABLE_INDEX_MASK
-	ld hl, StatsScreenPointerTable
-	rst JumpTable
-	call StatsScreen_WaitAnim
-	farcall MobileComms_CheckInactivityTimer
-	jr c, .exit
-	ld a, [wJumptableIndex]
-	bit JUMPTABLE_EXIT_F, a
-	jr z, .loop
-
-.exit
 	ret
 
 StatsScreenPointerTable:
@@ -191,10 +153,6 @@ EggStatsJoypad:
 .check
 	bit B_PAD_A, a
 	jr nz, .quit
-if DEF(_DEBUG)
-	cp PAD_START
-	jr z, .hatch
-endc
 	and PAD_DOWN | PAD_UP | PAD_A | PAD_B
 	jp StatsScreen_JoypadAction
 
@@ -203,38 +161,6 @@ endc
 	call StatsScreen_SetJumptableIndex
 	ret
 
-if DEF(_DEBUG)
-.hatch
-	ld a, [wMonType]
-	or a
-	jr nz, .skip
-	push bc
-	push de
-	push hl
-	ld a, [wCurPartyMon]
-	ld bc, PARTYMON_STRUCT_LENGTH
-	ld hl, wPartyMon1Happiness
-	call AddNTimes
-	ld [hl], 1
-	ld a, 1
-	ld [wTempMonHappiness], a
-	ld a, 127
-	ld [wStepCount], a
-	ld de, .HatchSoonString
-	hlcoord 8, 17
-	call PlaceString
-	ld hl, wStatsScreenFlags
-	set STATS_SCREEN_ANIMATE_MON, [hl]
-	pop hl
-	pop de
-	pop bc
-.skip
-	xor a
-	jp StatsScreen_JoypadAction
-
-.HatchSoonString:
-	db "▶HATCH SOON!@"
-endc
 
 StatsScreen_LoadPage:
 	call StatsScreen_LoadGFX
@@ -489,19 +415,6 @@ StatsScreen_InitUpperHalf:
 	dw sBoxMonNicknames
 	dw wBufferMonNickname
 
-StatsScreen_PlaceVerticalDivider: ; unreferenced
-; The Japanese stats screen has a vertical divider.
-	hlcoord 7, 0
-	ld bc, SCREEN_WIDTH
-	ld d, SCREEN_HEIGHT
-.loop
-	ld a, $31 ; vertical divider
-	ld [hl], a
-	add hl, bc
-	dec d
-	jr nz, .loop
-	ret
-
 StatsScreen_PlaceHorizontalDivider:
 	hlcoord 0, 7
 	ld b, SCREEN_WIDTH
@@ -753,9 +666,6 @@ LoadGreenPage:
 	ld a, [wTempMonItem]
 	and a
 	ret z
-	ld b, a
-	farcall TimeCapsule_ReplaceTeruSama
-	ld a, b
 	ld [wNamedObjectIndex], a
 	call GetItemName
 	ret
@@ -945,7 +855,6 @@ StatsScreen_GetAnimationParam:
 
 .Tempmon:
 	ld bc, wTempMonSpecies
-	jr .CheckEggFaintedFrzSlp ; utterly pointless
 
 .CheckEggFaintedFrzSlp:
 	ld a, [wCurPartySpecies]
@@ -990,9 +899,6 @@ StatsScreen_LoadTextboxSpaceGFX:
 	pop hl
 	ret
 
-StatsScreenSpaceGFX: ; unreferenced
-INCBIN "gfx/font/space.2bpp"
-
 EggStatsScreen:
 	xor a
 	ldh [hBGMapMode], a
@@ -1016,17 +922,6 @@ EggStatsScreen:
 	ld de, FiveQMarkString
 	hlcoord 11, 5
 	call PlaceString
-if DEF(_DEBUG)
-	ld de, .PushStartString
-	hlcoord 8, 17
-	call PlaceString
-	jr .placed_push_start
-
-.PushStartString:
-	db "▶PUSH START.@"
-
-.placed_push_start
-endc
 	ld a, [wTempMonHappiness] ; egg status
 	ld de, EggSoonString
 	cp $6
@@ -1146,8 +1041,6 @@ StatsScreen_LoadPageIndicators:
 CopyNickname:
 	ld de, wStringBuffer1
 	ld bc, MON_NAME_LENGTH
-	jr .okay ; utterly pointless
-.okay
 	ld a, [wMonType]
 	cp BOXMON
 	jr nz, .partymon

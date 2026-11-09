@@ -15,24 +15,6 @@ GetPartyLocation::
 	ld bc, PARTYMON_STRUCT_LENGTH
 	jp AddNTimes
 
-GetDexNumber:: ; unreferenced
-; Probably used in gen 1 to convert index number to dex number
-; Not required in gen 2 because index number == dex number
-	push hl
-	ld a, b
-	dec a
-	ld b, 0
-	add hl, bc
-	ld hl, BaseData + BASE_DEX_NO
-	ld bc, BASE_DATA_SIZE
-	call AddNTimes
-	ld a, BANK(BaseData)
-	call GetFarWord
-	ld b, l
-	ld c, h
-	pop hl
-	ret
-
 UserPartyAttr::
 	push af
 	ldh a, [hBattleTurn]
@@ -176,25 +158,10 @@ FarCopyRadioText::
 	ld [rROMB], a
 	ret
 
-MobileTextBorder::
-	; For mobile link battles only.
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	ret c
-
-	; Draw a cell phone icon at the
-	; top right corner of the border.
-	hlcoord 19, 12
-	ld [hl], $5e ; top
-	hlcoord 19, 13
-	ld [hl], $5f ; bottom
-	ret
-
 BattleTextbox::
 ; Open a textbox and print text at hl.
 	push hl
 	call SpeechTextbox
-	call MobileTextBorder
 	call UpdateSprites
 	call ApplyTilemap
 	pop hl

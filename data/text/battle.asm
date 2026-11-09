@@ -1,12 +1,5 @@
 BattleText:: ; used only for BANK(BattleText)
 
-BattleText_PlayerPickedUpPayDayMoney:
-	text "<PLAYER> picked up"
-	line "¥@"
-	text_decimal wPayDayMoney, 3, 6
-	text "!"
-	prompt
-
 WildPokemonAppearedText:
 	text "Wild @"
 	text_ram wEnemyMonNickname
@@ -42,13 +35,6 @@ WantsToBattleText::
 
 BattleText_WildFled:
 	text "Wild @"
-	text_ram wEnemyMonNickname
-	text_start
-	line "fled!"
-	prompt
-
-BattleText_EnemyFled:
-	text "Enemy @"
 	text_ram wEnemyMonNickname
 	text_start
 	line "fled!"
@@ -178,11 +164,6 @@ BattleText_EnemyWasDefeated:
 	line "was defeated!"
 	prompt
 
-TiedAgainstText:
-	text "Tied against"
-	line "<ENEMY>!"
-	prompt
-
 SentSomeToMomText:
 	text "<PLAYER> got ¥@"
 	text_decimal wBattleReward, 3, 6
@@ -199,12 +180,6 @@ SentAllToMomText:
 	text "Sent all to MOM!"
 	prompt
 
-UnusedRivalLossText: ; unreferenced
-	text "<RIVAL>: Huh? I"
-	line "should've chosen"
-	cont "your #MON!"
-	prompt
-
 BattleText_MonFainted:
 	text_ram wBattleMonNickname
 	text_start
@@ -214,17 +189,6 @@ BattleText_MonFainted:
 BattleText_UseNextMon:
 	text "Use next #MON?"
 	done
-
-UnusedRivalWinText: ; unreferenced
-	text "<RIVAL>: Yes!"
-	line "I guess I chose a"
-	cont "good #MON!"
-	prompt
-
-LostAgainstText:
-	text "Lost against"
-	line "<ENEMY>!"
-	prompt
 
 BattleText_EnemyIsAboutToUseWillPlayerChangeMon:
 	text "<ENEMY>"
@@ -302,11 +266,6 @@ BattleText_UsersStringBuffer1Activated:
 	cont "activated!"
 	prompt
 
-BattleText_ItemsCantBeUsedHere:
-	text "Items can't be"
-	line "used here."
-	prompt
-
 BattleText_MonIsAlreadyOut:
 	text_ram wBattleMonNickname
 	text_start
@@ -329,12 +288,6 @@ BattleText_TheMoveIsDisabled:
 	line "DISABLED!"
 	prompt
 
-BattleText_MonHasNoMovesLeft:
-	text_ram wBattleMonNickname
-	text_start
-	line "has no moves left!"
-	done
-
 BattleText_TargetsEncoreEnded:
 	text "<TARGET>'s"
 	line "ENCORE ended!"
@@ -350,20 +303,6 @@ BattleText_StringBuffer1GrewToLevel:
 	text_end
 
 	text_end ; unreferenced
-
-BattleText_WildMonIsEating:
-	text "Wild @"
-	text_ram wEnemyMonNickname
-	text_start
-	line "is eating!"
-	prompt
-
-BattleText_WildMonIsAngry:
-	text "Wild @"
-	text_ram wEnemyMonNickname
-	text_start
-	line "is angry!"
-	prompt
 
 FastAsleepText:
 	text "<USER>"
@@ -628,11 +567,6 @@ TookDownWithItText:
 	text "<TARGET>"
 	line "took down with it,"
 	cont "<USER>!"
-	prompt
-
-RageBuildingText:
-	text "<USER>'s"
-	line "RAGE is building!"
 	prompt
 
 GotAnEncoreText:
@@ -1095,14 +1029,6 @@ IgnoredOrders2Text:
 	line "ignored orders!"
 	prompt
 
-BattleText_LinkErrorBattleCanceled:
-	text "Link error…"
-
 	para "The battle has"
 	line "been canceled…"
 	prompt
-
-BattleText_NoTimeLeftToday: ; unreferenced
-	text "There is no time"
-	line "left today!"
-	done

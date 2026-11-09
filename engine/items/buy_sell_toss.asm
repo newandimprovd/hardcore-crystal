@@ -6,7 +6,6 @@ SelectQuantityToToss:
 
 SelectQuantityToBuy:
 	farcall GetItemPrice
-RooftopSale_SelectQuantityToBuy:
 	ld a, d
 	ld [wBuySellItemPrice + 0], a
 	ld a, e

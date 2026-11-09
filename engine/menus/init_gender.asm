@@ -18,7 +18,6 @@ InitCrystalData:
 	ld [wCrystalFlags], a
 	ret
 
-INCLUDE "mobile/mobile_12.asm"
 
 InitGender:
 	call InitGenderScreen

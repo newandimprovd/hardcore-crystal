@@ -10,7 +10,7 @@ DisMart5_MapScripts:
 
 DisMart5ClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_DIS_5
+	pokemart MART_DIS_5
 	closetext
 	end
 

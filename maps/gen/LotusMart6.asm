@@ -10,7 +10,7 @@ LotusMart6_MapScripts:
 
 LotusMart6ClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_LOTUS_6
+	pokemart MART_LOTUS_6
 	closetext
 	end
 

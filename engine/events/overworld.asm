@@ -270,14 +270,9 @@ FlashFunction:
 	ld de, ENGINE_ZEPHYRBADGE
 	farcall CheckBadge
 	jr c, .nozephyrbadge
-	push hl
-	farcall SpecialAerodactylChamber
-	pop hl
-	jr c, .useflash
 	ld a, [wTimeOfDayPalset]
 	cp DARKNESS_PALSET
 	jr nz, .notadarkcave
-.useflash
 	call UseFlash
 	ld a, JUMPTABLE_EXIT | $1
 	ret
@@ -336,9 +331,6 @@ SurfFunction:
 	ld de, ENGINE_FOGBADGE
 	call CheckBadge
 	jr c, .nofogbadge
-	ld hl, wBikeFlags
-	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
-	jr nz, .cannotsurf
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
 	jr z, .alreadyfail
@@ -407,7 +399,6 @@ UsedSurfScript:
 	end
 
 .stubbed_fn
-	farcall StubbedTrainerRankings_Surf
 	ret
 
 UsedSurfText:
@@ -498,10 +489,6 @@ TrySurfOW::
 	ld d, SURF
 	call CheckPartyMove
 	jr c, .quit
-
-	ld hl, wBikeFlags
-	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
-	jr nz, .quit
 
 	call GetSurfType
 	ld [wSurfingPlayerState], a
@@ -601,8 +588,6 @@ FlyFunction:
 	callasm HideSprites
 	special UpdateTimePals
 	callasm FlyFromAnim
-	farscall Script_AbortBugContest
-	special WarpToSpawnPoint
 	callasm SkipUpdateMapSprites
 	loadvar VAR_MOVEMENT, PLAYER_NORMAL
 	newloadmap MAPSETUP_FLY
@@ -678,7 +663,6 @@ Script_UsedWaterfall:
 	ld a, [wPlayerTileCollision]
 	call CheckWaterfallTile
 	ret z
-	farcall StubbedTrainerRankings_Waterfall
 	ld a, $1
 	ld [wScriptVar], a
 	ret
@@ -795,7 +779,6 @@ EscapeRopeOrDig:
 	ret
 
 .escaperope
-	farcall SpecialKabutoChamber
 	ld hl, .UsedEscapeRopeScript
 	call QueueScript
 	ld a, JUMPTABLE_EXIT | $1
@@ -842,8 +825,6 @@ EscapeRopeOrDig:
 	closetext
 	playsound SFX_WARP_TO
 	applymovement PLAYER, .DigOut
-	farscall Script_AbortBugContest
-	special WarpToSpawnPoint
 	loadvar VAR_MOVEMENT, PLAYER_NORMAL
 	newloadmap MAPSETUP_DOOR
 	playsound SFX_WARP_FROM
@@ -927,8 +908,6 @@ TeleportFunction:
 	closetext
 	playsound SFX_WARP_TO
 	applymovement PLAYER, .TeleportFrom
-	farscall Script_AbortBugContest
-	special WarpToSpawnPoint
 	loadvar VAR_MOVEMENT, PLAYER_NORMAL
 	newloadmap MAPSETUP_TELEPORT
 	playsound SFX_WARP_FROM
@@ -955,16 +934,6 @@ StrengthFunction:
 	jr c, .Failed
 	jr .UseStrength
 
-.AlreadyUsingStrength: ; unreferenced
-	ld hl, .AlreadyUsingStrengthText
-	call MenuTextboxBackup
-	ld a, JUMPTABLE_EXIT
-	ret
-
-.AlreadyUsingStrengthText:
-	text_far _AlreadyUsingStrengthText
-	text_end
-
 .Failed:
 	ld a, JUMPTABLE_EXIT
 	ret
@@ -976,8 +945,8 @@ StrengthFunction:
 	ret
 
 SetStrengthFlag:
-	ld hl, wBikeFlags
-	set BIKEFLAGS_STRENGTH_ACTIVE_F, [hl]
+	ld hl, wFieldMoveFlags
+	set FIELDMOVE_STRENGTH_ACTIVE_F, [hl]
 	ld a, [wCurPartyMon]
 	ld e, a
 	ld d, 0
@@ -1049,8 +1018,8 @@ TryStrengthOW:
 	call CheckEngineFlag
 	jr c, .nope
 
-	ld hl, wBikeFlags
-	bit BIKEFLAGS_STRENGTH_ACTIVE_F, [hl]
+	ld hl, wFieldMoveFlags
+	bit FIELDMOVE_STRENGTH_ACTIVE_F, [hl]
 	jr z, .already_using
 
 	ld a, 2
@@ -1062,7 +1031,6 @@ TryStrengthOW:
 
 .already_using
 	xor a
-	jr .done
 
 .done
 	ld [wScriptVar], a
@@ -1370,379 +1338,6 @@ MovementData_RockSmash:
 
 UseRockSmashText:
 	text_far _UseRockSmashText
-	text_end
-
-AskRockSmashScript:
-	callasm HasRockSmash
-	ifequal 1, .no
-
-	opentext
-	writetext AskRockSmashText
-	yesorno
-	iftrue RockSmashScript
-	closetext
-	end
-.no
-	jumptext MaySmashText
-
-MaySmashText:
-	text_far _MaySmashText
-	text_end
-
-AskRockSmashText:
-	text_far _AskRockSmashText
-	text_end
-
-HasRockSmash:
-	ld d, ROCK_SMASH
-	call CheckPartyMove
-	jr nc, .yes
-; no
-	ld a, 1
-	jr .done
-.yes
-	xor a
-	jr .done
-.done
-	ld [wScriptVar], a
-	ret
-
-FishFunction:
-	ld a, e
-	push af
-	call FieldMoveJumptableReset
-	pop af
-	ld [wFishingRodUsed], a
-.loop
-	ld hl, .FishTable
-	call FieldMoveJumptable
-	jr nc, .loop
-	and JUMPTABLE_INDEX_MASK
-	ld [wFieldMoveSucceeded], a
-	ret
-
-.FishTable:
-	dw .TryFish
-	dw .FishNoBite
-	dw .FishGotSomething
-	dw .FailFish
-	dw .FishNoFish
-
-.TryFish:
-; BUG: You can fish on top of NPCs (see docs/bugs_and_glitches.md)
-	ld a, [wPlayerState]
-	cp PLAYER_SURF
-	jr z, .fail
-	cp PLAYER_SURF_PIKA
-	jr z, .fail
-	call GetFacingTileCoord
-	call GetTilePermission
-	cp WATER_TILE
-	jr z, .facingwater
-.fail
-	ld a, $3
-	ret
-
-.facingwater
-	call GetFishingGroup
-	and a
-	jr nz, .goodtofish
-	ld a, $4
-	ret
-
-.goodtofish
-	ld d, a
-	ld a, [wFishingRodUsed]
-	ld e, a
-	farcall Fish
-	ld a, d
-	and a
-	jr z, .nonibble
-	ld [wTempWildMonSpecies], a
-	ld a, e
-	ld [wCurPartyLevel], a
-	ld a, BATTLETYPE_FISH
-	ld [wBattleType], a
-	ld a, $2
-	ret
-
-.nonibble
-	ld a, $1
-	ret
-
-.FailFish:
-	ld a, JUMPTABLE_EXIT
-	ret
-
-.FishGotSomething:
-	ld a, $1
-	ld [wFishingResult], a
-	ld hl, Script_GotABite
-	call QueueScript
-	ld a, JUMPTABLE_EXIT | $1
-	ret
-
-.FishNoBite:
-	ld a, $2
-	ld [wFishingResult], a
-	ld hl, Script_NotEvenANibble
-	call QueueScript
-	ld a, JUMPTABLE_EXIT | $1
-	ret
-
-.FishNoFish:
-	ld a, $0
-	ld [wFishingResult], a
-	ld hl, Script_NotEvenANibble2
-	call QueueScript
-	ld a, JUMPTABLE_EXIT | $1
-	ret
-
-Script_NotEvenANibble:
-	scall Script_FishCastRod
-	writetext RodNothingText
-	sjump Script_NotEvenANibble_FallThrough
-
-Script_NotEvenANibble2:
-	scall Script_FishCastRod
-	writetext RodNothingText
-
-Script_NotEvenANibble_FallThrough:
-	loademote EMOTE_SHADOW
-	callasm PutTheRodAway
-	closetext
-	end
-
-Script_GotABite:
-	scall Script_FishCastRod
-	callasm Fishing_CheckFacingUp
-	iffalse .NotFacingUp
-	applymovement PLAYER, .Movement_FacingUp
-	sjump .FightTheHookedPokemon
-
-.NotFacingUp:
-	applymovement PLAYER, .Movement_NotFacingUp
-
-.FightTheHookedPokemon:
-	pause 40
-	applymovement PLAYER, .Movement_RestoreRod
-	writetext RodBiteText
-	callasm PutTheRodAway
-	closetext
-	randomwildmon
-	startbattle
-	reloadmapafterbattle
-	end
-
-.Movement_NotFacingUp:
-	fish_got_bite
-	fish_got_bite
-	fish_got_bite
-	fish_got_bite
-	show_emote
-	step_end
-
-.Movement_FacingUp:
-	fish_got_bite
-	fish_got_bite
-	fish_got_bite
-	fish_got_bite
-	step_sleep 1
-	show_emote
-	step_end
-
-.Movement_RestoreRod:
-	hide_emote
-	fish_cast_rod
-	step_end
-
-Fishing_CheckFacingUp:
-	ld a, [wPlayerDirection]
-	and $c
-	cp OW_UP
-	ld a, $1
-	jr z, .up
-	xor a
-
-.up
-	ld [wScriptVar], a
-	ret
-
-Script_FishCastRod:
-	refreshmap
-	loadmem hBGMapMode, $0
-	special UpdateTimePals
-	loademote EMOTE_ROD
-	callasm LoadFishingGFX
-	loademote EMOTE_SHOCK
-	applymovement PLAYER, MovementData_CastRod
-	pause 40
-	end
-
-MovementData_CastRod:
-	fish_cast_rod
-	step_end
-
-PutTheRodAway:
-	xor a
-	ldh [hBGMapMode], a
-	ld a, $1
-	ld [wPlayerAction], a
-	call UpdateSprites
-	call UpdatePlayerSprite
-	ret
-
-RodBiteText:
-	text_far _RodBiteText
-	text_end
-
-RodNothingText:
-	text_far _RodNothingText
-	text_end
-
-UnusedNothingHereText: ; unreferenced
-	text_far _UnusedNothingHereText
-	text_end
-
-BikeFunction:
-	call .TryBike
-	and JUMPTABLE_INDEX_MASK
-	ld [wFieldMoveSucceeded], a
-	ret
-
-.TryBike:
-	call .CheckEnvironment
-	jr c, .CannotUseBike
-	ld a, [wPlayerState]
-	cp PLAYER_NORMAL
-	jr z, .GetOnBike
-	cp PLAYER_BIKE
-	jr z, .GetOffBike
-	jr .CannotUseBike
-
-.GetOnBike:
-	ld hl, Script_GetOnBike
-	ld de, Script_GetOnBike_Register
-	call .CheckIfRegistered
-	call QueueScript
-	xor a
-	ld [wMusicFade], a
-	ld de, MUSIC_NONE
-	call PlayMusic
-	call DelayFrame
-	call MaxVolume
-	ld de, MUSIC_BICYCLE
-	ld a, e
-	ld [wMapMusic], a
-	call PlayMusic
-	ld a, $1
-	ret
-
-.GetOffBike:
-	ld hl, wBikeFlags
-	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
-	jr nz, .CantGetOffBike
-	ld hl, Script_GetOffBike
-	ld de, Script_GetOffBike_Register
-	call .CheckIfRegistered
-	ld a, BANK(Script_GetOffBike)
-	jr .done
-
-.CantGetOffBike:
-	ld hl, Script_CantGetOffBike
-	jr .done
-
-.CannotUseBike:
-	ld a, $0
-	ret
-
-.done
-	call QueueScript
-	ld a, $1
-	ret
-
-.CheckIfRegistered:
-	ld a, [wUsingItemWithSelect]
-	and a
-	ret z
-	ld h, d
-	ld l, e
-	ret
-
-.CheckEnvironment:
-	call GetMapEnvironment
-	call CheckOutdoorMap
-	jr z, .ok
-	cp CAVE
-	jr z, .ok
-	cp GATE
-	jr z, .ok
-	jr .nope
-
-.ok
-	call GetPlayerTilePermission
-	and $f ; lo nybble only
-	jr nz, .nope ; not FLOOR_TILE
-	xor a
-	ret
-
-.nope
-	scf
-	ret
-
-Script_GetOnBike:
-	refreshmap
-	special UpdateTimePals
-	loadvar VAR_MOVEMENT, PLAYER_BIKE
-	writetext GotOnBikeText
-	waitbutton
-	closetext
-	special UpdatePlayerSprite
-	end
-
-Script_GetOnBike_Register:
-	loadvar VAR_MOVEMENT, PLAYER_BIKE
-	closetext
-	special UpdatePlayerSprite
-	end
-
-Overworld_DummyFunction: ; unreferenced
-	nop
-	ret
-
-Script_GetOffBike:
-	refreshmap
-	special UpdateTimePals
-	loadvar VAR_MOVEMENT, PLAYER_NORMAL
-	writetext GotOffBikeText
-	waitbutton
-
-FinishGettingOffBike:
-	closetext
-	special UpdatePlayerSprite
-	special PlayMapMusic
-	end
-
-Script_GetOffBike_Register:
-	loadvar VAR_MOVEMENT, PLAYER_NORMAL
-	sjump FinishGettingOffBike
-
-Script_CantGetOffBike:
-	writetext .CantGetOffBikeText
-	waitbutton
-	closetext
-	end
-
-.CantGetOffBikeText:
-	text_far _CantGetOffBikeText
-	text_end
-
-GotOnBikeText:
-	text_far _GotOnBikeText
-	text_end
-
-GotOffBikeText:
-	text_far _GotOffBikeText
 	text_end
 
 TryCutOW::

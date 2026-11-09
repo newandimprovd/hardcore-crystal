@@ -297,6 +297,30 @@ class Walker:
         return False
 
 
+def map_id(const):
+    """(group, number) of a map constant, read from constants/map_constants.asm (the numbers move whenever maps are removed)."""
+    group, num = 0, 1
+    def scan(path):
+        nonlocal group, num
+        for ln in open(os.path.join(ROOT, path)):
+            ln = ln.split(";")[0].strip()
+            m = re.match(r'INCLUDE "(.+)"', ln)
+            if m:
+                r = scan(m[1])
+                if r: return r
+            elif ln.startswith("newgroup"):
+                group, num = group + 1, 1
+            else:
+                m = re.match(r"map_const (\w+),", ln)
+                if m:
+                    if m[1] == const:
+                        return (group, num)
+                    num += 1
+    r = scan("constants/map_constants.asm")
+    if not r: raise KeyError(const)
+    return r
+
+
 def has_item(wk, const_value):
     t = wk.t
     n = t.mem("wNumKeyItems")
@@ -305,11 +329,7 @@ def has_item(wk, const_value):
 
 
 def item_value(name):
-    for l in open(os.path.join(ROOT, "constants/item_constants.asm")):
-        m = re.match(r"\s*const (\w+)\s*;\s*([0-9a-f]+)", l)
-        if m and m[1] == name:
-            return int(m[2], 16)
-    raise KeyError(name)
+    return const_table("constants/item_constants.asm")[name]
 
 
 def open_gate(wk, name):

@@ -3,13 +3,10 @@ HandleNewMap:
 	call ResetMapBufferEventFlags
 	call ResetFlashIfOutOfCave
 	call GetCurrentMapSceneID
-	call ResetBikeFlags
+	call ResetFieldMoveFlags
 	ld a, MAPCALLBACK_NEWMAP
 	call RunMapCallback
 HandleContinueMap:
-	farcall ClearCmdQueue
-	ld a, MAPCALLBACK_CMDQUEUE
-	call RunMapCallback
 	call GetMapTimeOfDay
 	ld [wMapTimeOfDay], a
 	ret
@@ -171,19 +168,6 @@ EnterMapWarp:
 	call GetAnyMapEnvironment
 	call CheckIndoorMap
 	ret nz
-
-; MOUNT_MOON_SQUARE and TIN_TOWER_ROOF are outdoor maps within indoor maps.
-; Dig and Escape Rope should not take you to them.
-	ld a, [wPrevMapGroup]
-	cp GROUP_MOUNT_MOON_SQUARE
-	jr nz, .not_mt_moon_square_or_tin_tower_roof
-	assert GROUP_MOUNT_MOON_SQUARE == GROUP_TIN_TOWER_ROOF
-	ld a, [wPrevMapNumber]
-	cp MAP_MOUNT_MOON_SQUARE
-	ret z
-	cp MAP_TIN_TOWER_ROOF
-	ret z
-.not_mt_moon_square_or_tin_tower_roof
 
 	ld a, [wPrevWarp]
 	ld [wDigWarpNumber], a

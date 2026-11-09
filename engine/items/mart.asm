@@ -7,95 +7,10 @@
 	const MARTTEXT_SOLD_OUT
 
 OpenMartDialog::
+; There is one kind of shop left: the standard one.
 	call GetMart
-	ld a, c
-	ld [wMartType], a
 	call LoadMartPointer
-	ld a, [wMartType]
-	ld hl, MartTypeDialogs
-	rst JumpTable
-	ret
-
-MartTypeDialogs:
-; entries correspond to MARTTYPE_* constants
-	table_width 2
-	dw MartDialog
-	dw HerbShop
-	dw BargainShop
-	dw Pharmacist
-	dw RooftopSale
-	assert_table_length NUM_MART_TYPES
-
-MartDialog:
-	ld a, MARTTYPE_STANDARD
-	ld [wMartType], a
-	xor a ; STANDARDMART_HOWMAYIHELPYOU
-	ld [wMartJumptableIndex], a
-	call StandardMart
-	ret
-
-HerbShop:
-	call FarReadMart
-	call LoadStandardMenuHeader
-	ld hl, HerbShopLadyIntroText
-	call MartTextbox
-	call BuyMenu
-	ld hl, HerbalLadyComeAgainText
-	call MartTextbox
-	ret
-
-BargainShop:
-	ld b, BANK(BargainShopData)
-	ld de, BargainShopData
-	call LoadMartPointer
-	call ReadMart
-	call LoadStandardMenuHeader
-	ld hl, BargainShopIntroText
-	call MartTextbox
-	call BuyMenu
-	ld hl, wBargainShopFlags
-	ld a, [hli]
-	or [hl]
-	jr z, .skip_set
-	ld hl, wDailyFlags1
-	set DAILYFLAGS1_GOLDENROD_UNDERGROUND_BARGAIN_F, [hl]
-
-.skip_set
-	ld hl, BargainShopComeAgainText
-	call MartTextbox
-	ret
-
-Pharmacist:
-	call FarReadMart
-	call LoadStandardMenuHeader
-	ld hl, PharmacyIntroText
-	call MartTextbox
-	call BuyMenu
-	ld hl, PharmacyComeAgainText
-	call MartTextbox
-	ret
-
-RooftopSale:
-	ld b, BANK(RooftopSaleMart1)
-	ld de, RooftopSaleMart1
-	ld hl, wStatusFlags
-	bit STATUSFLAGS_HALL_OF_FAME_F, [hl]
-	jr z, .ok
-	ld b, BANK(RooftopSaleMart2)
-	ld de, RooftopSaleMart2
-
-.ok
-	call LoadMartPointer
-	call ReadMart
-	call LoadStandardMenuHeader
-	ld hl, MartWelcomeText
-	call MartTextbox
-	call BuyMenu
-	ld hl, MartComeAgainText
-	call MartTextbox
-	ret
-
-INCLUDE "data/items/rooftop_sale.asm"
+	jp StandardMart
 
 LoadMartPointer:
 	ld a, b
@@ -111,8 +26,6 @@ LoadMartPointer:
 	call ByteFill
 	xor a ; STANDARDMART_HOWMAYIHELPYOU
 	ld [wMartJumptableIndex], a
-	ld [wBargainShopFlags], a
-	ld [wBargainShopFlags + 1], a
 	ret
 
 GetMart:
@@ -291,52 +204,6 @@ GetMartPrice:
 	sub '0'
 	ret
 
-ReadMart:
-; Load the mart pointer.  Mart data is local (no need for bank).
-	ld hl, wMartPointer
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	push hl
-; set hl to the first item
-	inc hl
-	ld bc, wMartItem1BCD
-	ld de, wCurMartItems
-.loop
-; copy the items to wCurMartItems
-	ld a, [hli]
-	ld [de], a
-	inc de
-; -1 is the terminator
-	cp -1
-	jr z, .done
-
-	push de
-; copy the price to de
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-; convert the price to 3-byte BCD at [bc]
-	push hl
-	ld h, b
-	ld l, c
-	call GetMartPrice
-	ld b, h
-	ld c, l
-	pop hl
-
-	pop de
-	jr .loop
-
-.done
-	pop hl
-	ld a, [hl]
-	ld [wCurMartCount], a
-	ret
-
-INCLUDE "data/items/bargain_shop.asm"
-
 BuyMenu:
 	call FadeToMenu
 	farcall BlankScreen
@@ -351,15 +218,8 @@ BuyMenu:
 	ret
 
 LoadBuyMenuText:
-; load text from a nested table
-; which table is in wMartType
-; which entry is in register a
-	push af
-	call GetMartDialogGroup ; gets a pointer from GetMartDialogGroup.MartTextFunctionPointers
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	pop af
+; print the shop text number a (MARTTEXT_*)
+	ld hl, .Pointers
 	ld e, a
 	ld d, 0
 	add hl, de
@@ -367,67 +227,15 @@ LoadBuyMenuText:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	call PrintText
-	ret
+	jp PrintText
 
-MartAskPurchaseQuantity:
-	call GetMartDialogGroup ; gets a pointer from GetMartDialogGroup.MartTextFunctionPointers
-	inc hl
-	inc hl
-	ld a, [hl]
-	and a
-	jp z, StandardMartAskPurchaseQuantity
-	cp 1
-	jp z, BargainShopAskPurchaseQuantity
-	jp RooftopSaleAskPurchaseQuantity
-
-GetMartDialogGroup:
-	ld a, [wMartType]
-	ld e, a
-	ld d, 0
-	ld hl, .MartTextFunctionPointers
-	add hl, de
-	add hl, de
-	add hl, de
-	ret
-
-.MartTextFunctionPointers:
-	dwb .StandardMartPointers, 0
-	dwb .HerbShopPointers, 0
-	dwb .BargainShopPointers, 1
-	dwb .PharmacyPointers, 0
-	dwb .StandardMartPointers, 2
-
-.StandardMartPointers:
+.Pointers:
+; entries correspond to MARTTEXT_* constants
 	dw MartHowManyText
 	dw MartFinalPriceText
 	dw MartNoMoneyText
 	dw MartPackFullText
 	dw MartThanksText
-	dw BuyMenuLoop
-
-.HerbShopPointers:
-	dw HerbalLadyHowManyText
-	dw HerbalLadyFinalPriceText
-	dw HerbalLadyNoMoneyText
-	dw HerbalLadyPackFullText
-	dw HerbalLadyThanksText
-	dw BuyMenuLoop
-
-.BargainShopPointers:
-	dw BuyMenuLoop
-	dw BargainShopFinalPriceText
-	dw BargainShopNoFundsText
-	dw BargainShopPackFullText
-	dw BargainShopThanksText
-	dw BargainShopSoldOutText
-
-.PharmacyPointers:
-	dw PharmacyHowManyText
-	dw PharmacyFinalPriceText
-	dw PharmacyNoMoneyText
-	dw PharmacyPackFullText
-	dw PharmacyThanksText
 	dw BuyMenuLoop
 
 BuyMenuLoop:
@@ -452,7 +260,7 @@ BuyMenuLoop:
 	jr z, .useless_pointer
 
 .useless_pointer
-	call MartAskPurchaseQuantity
+	call StandardMartAskPurchaseQuantity
 	jr c, .cancel
 	call MartConfirmPurchase
 	jr c, .cancel
@@ -464,12 +272,6 @@ BuyMenuLoop:
 	ld hl, wNumItems
 	call ReceiveItem
 	jr nc, .insufficient_bag_space
-	ld a, [wMartItemID]
-	ld e, a
-	ld d, 0
-	ld b, SET_FLAG
-	ld hl, wBargainShopFlags
-	call FlagAction
 	call PlayTransactionSound
 	ld de, wMoney
 	ld bc, hMoneyTemp
@@ -517,74 +319,6 @@ MartConfirmPurchase:
 	call YesNoBox
 	ret
 
-BargainShopAskPurchaseQuantity:
-	ld a, 1
-	ld [wItemQuantityChange], a
-	ld a, [wMartItemID]
-	ld e, a
-	ld d, 0
-	ld b, CHECK_FLAG
-	ld hl, wBargainShopFlags
-	call FlagAction
-	ld a, c
-	and a
-	jr nz, .SoldOut
-	ld a, [wMartItemID]
-	ld e, a
-	ld d, 0
-	ld hl, wMartPointer
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	inc hl
-	add hl, de
-	add hl, de
-	add hl, de
-	inc hl
-	ld a, [hli]
-	ldh [hMoneyTemp + 2], a
-	ld a, [hl]
-	ldh [hMoneyTemp + 1], a
-	xor a
-	ldh [hMoneyTemp], a
-	and a
-	ret
-
-.SoldOut:
-	ld a, MARTTEXT_SOLD_OUT
-	call LoadBuyMenuText
-	call JoyWaitAorB
-	scf
-	ret
-
-RooftopSaleAskPurchaseQuantity:
-	ld a, MARTTEXT_HOW_MANY
-	call LoadBuyMenuText
-	call .GetSalePrice
-	ld a, MAX_ITEM_STACK
-	ld [wItemQuantity], a
-	farcall RooftopSale_SelectQuantityToBuy
-	call ExitMenu
-	ret
-
-.GetSalePrice:
-	ld a, [wMartItemID]
-	ld e, a
-	ld d, 0
-	ld hl, wMartPointer
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	inc hl
-	add hl, de
-	add hl, de
-	add hl, de
-	inc hl
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	ret
-
 MartHowManyText:
 	text_far _MartHowManyText
 	text_end
@@ -625,90 +359,6 @@ MenuHeader_Buy:
 	ld c, PRINTNUM_LEADINGZEROS | PRINTNUM_MONEY | 3
 	call PrintBCDNumber
 	ret
-
-HerbShopLadyIntroText:
-	text_far _HerbShopLadyIntroText
-	text_end
-
-HerbalLadyHowManyText:
-	text_far _HerbalLadyHowManyText
-	text_end
-
-HerbalLadyFinalPriceText:
-	text_far _HerbalLadyFinalPriceText
-	text_end
-
-HerbalLadyThanksText:
-	text_far _HerbalLadyThanksText
-	text_end
-
-HerbalLadyPackFullText:
-	text_far _HerbalLadyPackFullText
-	text_end
-
-HerbalLadyNoMoneyText:
-	text_far _HerbalLadyNoMoneyText
-	text_end
-
-HerbalLadyComeAgainText:
-	text_far _HerbalLadyComeAgainText
-	text_end
-
-BargainShopIntroText:
-	text_far _BargainShopIntroText
-	text_end
-
-BargainShopFinalPriceText:
-	text_far _BargainShopFinalPriceText
-	text_end
-
-BargainShopThanksText:
-	text_far _BargainShopThanksText
-	text_end
-
-BargainShopPackFullText:
-	text_far _BargainShopPackFullText
-	text_end
-
-BargainShopSoldOutText:
-	text_far _BargainShopSoldOutText
-	text_end
-
-BargainShopNoFundsText:
-	text_far _BargainShopNoFundsText
-	text_end
-
-BargainShopComeAgainText:
-	text_far _BargainShopComeAgainText
-	text_end
-
-PharmacyIntroText:
-	text_far _PharmacyIntroText
-	text_end
-
-PharmacyHowManyText:
-	text_far _PharmacyHowManyText
-	text_end
-
-PharmacyFinalPriceText:
-	text_far _PharmacyFinalPriceText
-	text_end
-
-PharmacyThanksText:
-	text_far _PharmacyThanksText
-	text_end
-
-PharmacyPackFullText:
-	text_far _PharmacyPackFullText
-	text_end
-
-PharmacyNoMoneyText:
-	text_far _PharmacyNoMoneyText
-	text_end
-
-PharmacyComeAgainText:
-	text_far _PharmacyComeAgainText
-	text_end
 
 SellMenu:
 	call DisableSpriteUpdates
@@ -807,9 +457,6 @@ MartSellHowManyText:
 MartSellPriceText:
 	text_far _MartSellPriceText
 	text_end
-
-UnusedDummyString: ; unreferenced
-	db "！ダミー！@" ; "!Dummy!"
 
 MartWelcomeText:
 	text_far _MartWelcomeText

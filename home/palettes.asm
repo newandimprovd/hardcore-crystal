@@ -305,25 +305,6 @@ ClearVBank1::
 GSReloadPalettes:: ; dummied out
 	ret
 
-ReloadSpritesNoPalettes::
-	ldh a, [hCGB]
-	and a
-	ret z
-	ldh a, [rWBK]
-	push af
-	ld a, BANK(wBGPals2)
-	ldh [rWBK], a
-	ld hl, wBGPals2
-	ld bc, (8 palettes) + (2 palettes)
-	xor a
-	call ByteFill
-	pop af
-	ldh [rWBK], a
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	call DelayFrame
-	ret
-
 LoadOverworldAttrmapPals::
 	homecall _LoadOverworldAttrmapPals
 	ret

@@ -124,20 +124,12 @@ PC_CheckPartyForPokemon:
 	text_end
 
 
-	; PlayersPCMenuData.WhichPC indexes
-	const_def
-	const PLAYERSPC_NORMAL ; 0
-	const PLAYERSPC_HOUSE  ; 1
-
 	; PlayersPCMenuData.PlayersPCMenuPointers indexes
 	const_def
 	const PLAYERSPCITEM_WITHDRAW_ITEM ; 0
 	const PLAYERSPCITEM_DEPOSIT_ITEM  ; 1
 	const PLAYERSPCITEM_TOSS_ITEM     ; 2
-	const PLAYERSPCITEM_MAIL_BOX      ; 3
-	const PLAYERSPCITEM_DECORATION    ; 4
-	const PLAYERSPCITEM_LOG_OFF       ; 5
-	const PLAYERSPCITEM_TURN_OFF      ; 6
+	const PLAYERSPCITEM_LOG_OFF       ; 3
 
 BillsPC:
 	call PC_PlayChoosePCSound
@@ -151,7 +143,6 @@ PlayersPC:
 	call PC_PlayChoosePCSound
 	ld hl, PokecenterPlayersPCText
 	call PC_DisplayText
-	ld b, PLAYERSPC_NORMAL
 	call _PlayersPC
 	and a
 	ret
@@ -204,32 +195,8 @@ PC_WaitPlaySFX:
 	call PlaySFX
 	ret
 
-_PlayersHousePC:
-	call PC_PlayBootSound
-	ld hl, PlayersPCTurnOnText
-	call PC_DisplayText
-	ld b, PLAYERSPC_HOUSE
-	call _PlayersPC
-	and a
-	jr nz, .changed_deco_tiles
-	call LoadOverworldTilemapAndAttrmapPals
-	call ApplyTilemap
-	call UpdateSprites
-	call PC_PlayShutdownSound
-	ld c, FALSE
-	ret
-
-.changed_deco_tiles
-	call ClearBGPalettes
-	ld c, TRUE
-	ret
-
-PlayersPCTurnOnText:
-	text_far _PlayersPCTurnOnText
-	text_end
-
 _PlayersPC:
-	ld a, b
+	xor a
 	ld [wWhichIndexSet], a
 	ld hl, PlayersPCAskWhatDoText
 	call PC_DisplayTextWaitMenu
@@ -266,7 +233,7 @@ PlayersPCMenuData:
 
 .PlayersPCMenuData:
 	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
-	db 0 ; # items?
+	db 0 ; items
 	dw .WhichPC
 	dw PlaceNthMenuStrings
 	dw .PlayersPCMenuPointers
@@ -276,39 +243,19 @@ PlayersPCMenuData:
 	dw PlayerWithdrawItemMenu, .WithdrawItem
 	dw PlayerDepositItemMenu,  .DepositItem
 	dw PlayerTossItemMenu,     .TossItem
-	dw PlayerMailBoxMenu,      .MailBox
-	dw PlayerDecorationMenu,   .Decoration
 	dw PlayerLogOffMenu,       .LogOff
-	dw PlayerLogOffMenu,       .TurnOff
 
 .WithdrawItem: db "WITHDRAW ITEM@"
 .DepositItem:  db "DEPOSIT ITEM@"
 .TossItem:     db "TOSS ITEM@"
-.MailBox:      db "MAIL BOX@"
-.Decoration:   db "DECORATION@"
-.TurnOff:      db "TURN OFF@"
 .LogOff:       db "LOG OFF@"
 
 .WhichPC:
-; entries correspond to PLAYERSPC_* constants
-
-	; PLAYERSPC_NORMAL
-	db 5
+	db 4
 	db PLAYERSPCITEM_WITHDRAW_ITEM
 	db PLAYERSPCITEM_DEPOSIT_ITEM
 	db PLAYERSPCITEM_TOSS_ITEM
-	db PLAYERSPCITEM_MAIL_BOX
 	db PLAYERSPCITEM_LOG_OFF
-	db -1 ; end
-
-	; PLAYERSPC_HOUSE
-	db 6
-	db PLAYERSPCITEM_WITHDRAW_ITEM
-	db PLAYERSPCITEM_DEPOSIT_ITEM
-	db PLAYERSPCITEM_TOSS_ITEM
-	db PLAYERSPCITEM_MAIL_BOX
-	db PLAYERSPCITEM_DECORATION
-	db PLAYERSPCITEM_TURN_OFF
 	db -1 ; end
 
 PC_DisplayTextWaitMenu:
@@ -414,14 +361,6 @@ PlayerTossItemMenu:
 .quit
 	call CloseSubmenu
 	xor a
-	ret
-
-PlayerDecorationMenu:
-	farcall _PlayerDecorationMenu
-	ld a, c
-	and a
-	ret z
-	scf
 	ret
 
 PlayerLogOffMenu:
@@ -559,11 +498,6 @@ PlayerDepositItemMenu:
 .PlayersPCNoRoomDepositText:
 	text_far _PlayersPCNoRoomDepositText
 	text_end
-
-PlayerMailBoxMenu:
-	farcall _PlayerMailBoxMenu
-	xor a
-	ret
 
 PCItemsJoypad:
 	xor a

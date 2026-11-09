@@ -127,22 +127,6 @@ FadeOutToWhite::
 	call ConvertTimePalsIncHL
 	ret
 
-BattleTowerFade:
-	call FillWhiteBGColor
-	ld c, $9
-	call GetTimePalFade
-	ld b, $4
-.loop
-	call DmgToCgbTimePals
-	inc hl
-	inc hl
-	inc hl
-	ld c, $7
-	call DelayFrames
-	dec b
-	jr nz, .loop
-	ret
-
 FadeInFromBlack:
 	ld c, $0
 	call GetTimePalFade

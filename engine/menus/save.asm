@@ -23,19 +23,6 @@ SaveMenu:
 	scf
 	ret
 
-SaveAfterLinkTrade:
-	call PauseGameLogic
-	farcall StageRTCTimeForSave
-	farcall BackupMysteryGift
-	call SavePokemonData
-	call SaveChecksum
-	call SaveBackupPokemonData
-	call SaveBackupChecksum
-	farcall BackupPartyMonMail
-	farcall SaveRTC
-	call ResumeGameLogic
-	ret
-
 ChangeBoxSaveGame:
 	push de
 	ld hl, ChangeBoxSaveText
@@ -60,17 +47,6 @@ ChangeBoxSaveGame:
 	pop de
 	ret
 
-Link_SaveGame:
-	call AskOverwriteSaveFile
-	jr c, .refused
-	call PauseGameLogic
-	call _SavingDontTurnOffThePower
-	call ResumeGameLogic
-	and a
-
-.refused
-	ret
-
 MoveMonWOMail_SaveGame:
 	call PauseGameLogic
 	push de
@@ -92,7 +68,6 @@ MoveMonWOMail_InsertMon_SaveGame:
 	ld a, TRUE
 	ld [wSaveFileExists], a
 	farcall StageRTCTimeForSave
-	farcall BackupMysteryGift
 	call ValidateSave
 	call SaveOptions
 	call SavePlayerData
@@ -103,8 +78,6 @@ MoveMonWOMail_InsertMon_SaveGame:
 	call SaveBackupPlayerData
 	call SaveBackupPokemonData
 	call SaveBackupChecksum
-	farcall BackupPartyMonMail
-	farcall BackupGSBallFlag
 	farcall SaveRTC
 	call LoadBox
 	call ResumeGameLogic
@@ -267,7 +240,6 @@ _SaveGameData:
 	ld a, TRUE
 	ld [wSaveFileExists], a
 	farcall StageRTCTimeForSave
-	farcall BackupMysteryGift
 	call ValidateSave
 	call SaveOptions
 	call SavePlayerData
@@ -280,18 +252,7 @@ _SaveGameData:
 	call SaveBackupPokemonData
 	call SaveBackupChecksum
 	call UpdateStackTop
-	farcall BackupPartyMonMail
-	farcall BackupGSBallFlag
 	farcall SaveRTC
-	ld a, BANK(sBattleTowerChallengeState)
-	call OpenSRAM
-	ld a, [sBattleTowerChallengeState]
-	cp BATTLETOWER_RECEIVED_REWARD
-	jr nz, .ok
-	xor a
-	ld [sBattleTowerChallengeState], a
-.ok
-	call CloseSRAM
 	ret
 
 UpdateStackTop:
@@ -401,29 +362,6 @@ EraseHallOfFame:
 	call ByteFill
 	jp CloseSRAM
 
-InitDefaultEZChatMsgs: ; unreferenced
-	ld a, BANK(sEZChatMessages) ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call OpenSRAM
-	ld hl, .Data
-	ld de, sEZChatMessages
-	ld bc, EASY_CHAT_MESSAGE_LENGTH * 4
-	call CopyBytes
-	jp CloseSRAM
-
-.Data:
-; introduction
-	db $0d, EZCHAT_GREETINGS,    $00, EZCHAT_EXCLAMATIONS, $00, EZCHAT_POKEMON
-	db $22, EZCHAT_GREETINGS,    $01, EZCHAT_EXCLAMATIONS, $00, EZCHAT_POKEMON
-; begin battle
-	db $03, EZCHAT_BATTLE,       $05, EZCHAT_CONDITIONS,   $03, EZCHAT_EXCLAMATIONS
-	db $0e, EZCHAT_CONVERSATION, $03, EZCHAT_GREETINGS,    $00, EZCHAT_POKEMON
-; win battle
-	db $39, EZCHAT_FEELINGS,     $07, EZCHAT_BATTLE,       $00, EZCHAT_EXCLAMATIONS
-	db $04, EZCHAT_FEELINGS,     $01, EZCHAT_EXCLAMATIONS, $00, EZCHAT_POKEMON
-; lose battle
-	db $0f, EZCHAT_EXCLAMATIONS, $14, EZCHAT_FEELINGS,     $05, EZCHAT_EXCLAMATIONS
-	db $11, EZCHAT_TIME,         $0c, EZCHAT_CONVERSATION, $06, EZCHAT_BATTLE
-
 EraseBattleTowerStatus:
 	ld a, BANK(sBattleTowerChallengeState)
 	call OpenSRAM
@@ -433,38 +371,6 @@ EraseBattleTowerStatus:
 
 SaveData:
 	call _SaveData
-	ret
-
-Function14d6c: ; unreferenced
-	ld a, BANK(s4_a60b) ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call OpenSRAM
-	ld a, [s4_a60b] ; address of MBC30 bank
-	ld b, $0
-	and a
-	jr z, .ok
-	ld b, $2
-
-.ok
-	ld a, b
-	ld [s4_a60b], a ; address of MBC30 bank
-	call CloseSRAM
-	ret
-
-Function14d83: ; unreferenced
-	ld a, BANK(s4_a60c) ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call OpenSRAM
-	xor a
-	ld [s4_a60c], a ; address of MBC30 bank
-	ld [s4_a60c+1], a ; address of MBC30 bank
-	call CloseSRAM
-	ret
-
-DisableMobileStadium: ; unreferenced
-	ld a, BANK(sMobileStadiumFlag)
-	call OpenSRAM
-	xor a
-	ld [sMobileStadiumFlag], a
-	call CloseSRAM
 	ret
 
 HallOfFame_InitSaveIfNeeded:
@@ -599,9 +505,6 @@ TryLoadSaveFile:
 	call LoadPlayerData
 	call LoadPokemonData
 	call LoadBox
-	farcall RestorePartyMonMail
-	farcall RestoreGSBallFlag
-	farcall RestoreMysteryGift
 	call ValidateBackupSave
 	call SaveBackupOptions
 	call SaveBackupPlayerData
@@ -616,9 +519,6 @@ TryLoadSaveFile:
 	call LoadBackupPlayerData
 	call LoadBackupPokemonData
 	call LoadBox
-	farcall RestorePartyMonMail
-	farcall RestoreGSBallFlag
-	farcall RestoreMysteryGift
 	call ValidateSave
 	call SaveOptions
 	call SavePlayerData
@@ -741,15 +641,6 @@ LoadPlayerData:
 	ld de, wCurMapData
 	ld bc, wCurMapDataEnd - wCurMapData
 	call CopyBytes
-	call CloseSRAM
-	ld a, BANK(sBattleTowerChallengeState)
-	call OpenSRAM
-	ld a, [sBattleTowerChallengeState]
-	cp BATTLETOWER_RECEIVED_REWARD
-	jr nz, .not_4
-	ld a, BATTLETOWER_WON_CHALLENGE
-	ld [sBattleTowerChallengeState], a
-.not_4
 	call CloseSRAM
 	ret
 

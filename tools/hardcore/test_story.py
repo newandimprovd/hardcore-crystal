@@ -19,7 +19,7 @@ from gbtest import T  # noqa: E402
 SHOTS = os.environ.get("SHOTS", "/home/claude/scratch/story")
 os.makedirs(SHOTS, exist_ok=True)
 EV = tw.const_table("constants/event_flags.asm")
-NEWBARK = "?24:4"  # the walker only names generated maps
+NEWBARK = "?%d:%d" % tw.map_id("NEW_BARK_TOWN")  # the walker only names generated maps
 
 
 def getflag(t, name):

@@ -38,84 +38,6 @@ LoadMenuMonIcon:
 	dw PartyMenu_InitAnimatedMonIcon    ; MONICON_PARTYMENU
 	dw NamingScreen_InitAnimatedMonIcon ; MONICON_NAMINGSCREEN
 	dw MoveList_InitAnimatedMonIcon     ; MONICON_MOVES
-	dw Trade_LoadMonIconGFX             ; MONICON_TRADE
-	dw Mobile_InitAnimatedMonIcon       ; MONICON_MOBILE1
-	dw Mobile_InitPartyMenuBGPal71      ; MONICON_MOBILE2
-	dw Unused_InitFastAnimatedMonIcon   ; MONICON_UNUSED
-
-Unused_InitFastAnimatedMonIcon:
-	call InitPartyMenuIcon
-	call .SpawnItemIcon
-	call SetPartyMonIconAnimSpeed
-	ret
-
-.SpawnItemIcon:
-	push bc
-	ldh a, [hObjectStructIndex]
-	ld hl, wPartyMon1Item
-	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
-	pop bc
-	ld a, [hl]
-	and a
-	jr z, .no_item
-	push hl
-	push bc
-	ld d, a
-	callfar ItemIsMail
-	pop bc
-	pop hl
-	jr c, .mail
-	ld a, SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_ITEM_FAST
-	jr .got_frameset
-.mail
-	ld a, SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_MAIL_FAST
-	; fallthrough
-
-.no_item
-	ld a, SPRITE_ANIM_FRAMESET_PARTY_MON_FAST
-.got_frameset
-	ld hl, SPRITEANIMSTRUCT_FRAMESET_ID
-	add hl, bc
-	ld [hl], a
-	ret
-
-Mobile_InitAnimatedMonIcon:
-	call PartyMenu_InitAnimatedMonIcon
-	ld hl, SPRITEANIMSTRUCT_ANIM_SEQ_ID
-	add hl, bc
-	ld a, SPRITE_ANIM_FUNC_NULL
-	ld [hl], a
-	ld hl, SPRITEANIMSTRUCT_XCOORD
-	add hl, bc
-	ld a, 9 * TILE_WIDTH
-	ld [hl], a
-	ld hl, SPRITEANIMSTRUCT_YCOORD
-	add hl, bc
-	ld a, 9 * TILE_WIDTH
-	ld [hl], a
-	ret
-
-Mobile_InitPartyMenuBGPal71:
-	call InitPartyMenuIcon
-	call SetPartyMonIconAnimSpeed
-	ld hl, SPRITEANIMSTRUCT_ANIM_SEQ_ID
-	add hl, bc
-	ld a, SPRITE_ANIM_FUNC_NULL
-	ld [hl], a
-	ld hl, SPRITEANIMSTRUCT_XCOORD
-	add hl, bc
-	ld a, 3 * TILE_WIDTH
-	ld [hl], a
-	ld hl, SPRITEANIMSTRUCT_YCOORD
-	add hl, bc
-	ld a, 12 * TILE_WIDTH
-	ld [hl], a
-	ld a, c
-	ld [wc608], a
-	ld a, b
-	ld [wc608 + 1], a
-	ret
 
 PartyMenu_InitAnimatedMonIcon:
 	call InitPartyMenuIcon
@@ -133,19 +55,7 @@ PartyMenu_InitAnimatedMonIcon:
 	ld a, [hl]
 	and a
 	ret z
-	push hl
-	push bc
-	ld d, a
-	callfar ItemIsMail
-	pop bc
-	pop hl
-	jr c, .mail
 	ld a, SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_ITEM
-	jr .got_frameset
-
-.mail
-	ld a, SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_MAIL
-.got_frameset
 	ld hl, SPRITEANIMSTRUCT_FRAMESET_ID
 	add hl, bc
 	ld [hl], a
@@ -243,15 +153,6 @@ MoveList_InitAnimatedMonIcon:
 	ld [hl], SPRITE_ANIM_FUNC_NULL
 	ret
 
-Trade_LoadMonIconGFX:
-	ld a, [wTempIconSpecies]
-	call ReadMonMenuIcon
-	ld [wCurIcon], a
-	ld a, $62
-	ld [wCurIconTile], a
-	call GetMemIconGFX
-	ret
-
 GetSpeciesIcon:
 ; Load species icon into VRAM at tile a
 	push de
@@ -273,15 +174,6 @@ FlyFunction_GetMonIcon:
 	call GetIcon_a
 	ret
 
-GetMonIconDE: ; unreferenced
-	push de
-	ld a, [wTempIconSpecies]
-	call ReadMonMenuIcon
-	ld [wCurIcon], a
-	pop de
-	call GetIcon_de
-	ret
-
 GetMemIconGFX:
 	ld a, [wCurIconTile]
 GetIconGFX:
@@ -290,7 +182,7 @@ GetIconGFX:
 	add hl, de
 	ld de, HeldItemIcons
 	lb bc, BANK(HeldItemIcons), 2
-	call GetGFXUnlessMobile
+	call Request2bpp
 	ld a, [wCurIconTile]
 	add 10
 	ld [wCurIconTile], a
@@ -299,12 +191,6 @@ GetIconGFX:
 HeldItemIcons:
 INCBIN "gfx/stats/mail.2bpp"
 INCBIN "gfx/stats/item.2bpp"
-
-GetIcon_de:
-; Load icon graphics into VRAM starting from tile de.
-	ld l, e
-	ld h, d
-	jr GetIcon
 
 GetIcon_a:
 ; Load icon graphics into VRAM starting from tile a.
@@ -338,16 +224,10 @@ endr
 	pop hl
 
 	lb bc, BANK(Icons), 8
-	call GetGFXUnlessMobile
+	call Request2bpp
 
 	pop hl
 	ret
-
-GetGFXUnlessMobile:
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	jp nz, Request2bpp
-	jp Get2bppViaHDMA
 
 FreezeMonIcons:
 	ld hl, wSpriteAnimationStructs

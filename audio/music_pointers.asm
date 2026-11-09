@@ -98,13 +98,10 @@ Music:
 	dba Music_PostCredits
 ; new to Crystal
 	dba Music_Clair
-	dba Music_MobileAdapterMenu
-	dba Music_MobileAdapter
 	dba Music_BuenasPassword
 	dba Music_LookMysticalMan
 	dba Music_CrystalOpening
 	dba Music_BattleTowerTheme
 	dba Music_SuicuneBattle
 	dba Music_BattleTowerLobby
-	dba Music_MobileCenter
 	assert_table_length NUM_MUSIC_SONGS

@@ -405,19 +405,6 @@ UpdatePlayerStep:
 	set PLAYERSTEP_CONTINUE_F, [hl]
 	ret
 
-GetMapObjectField: ; unreferenced
-	push bc
-	ld e, a
-	ld d, 0
-	ld hl, OBJECT_MAP_OBJECT_INDEX
-	add hl, bc
-	ld a, [hl]
-	call GetMapObject
-	add hl, de
-	ld a, [hl]
-	pop bc
-	ret
-
 RestoreDefaultMovement:
 	ld hl, OBJECT_MAP_OBJECT_INDEX
 	add hl, bc
@@ -434,12 +421,6 @@ RestoreDefaultMovement:
 
 .ok
 	ld a, SPRITEMOVEDATA_STANDING_DOWN
-	ret
-
-ObjectMovement_ZeroAnonJumptableIndex: ; unreferenced
-	ld hl, OBJECT_MOVEMENT_INDEX
-	add hl, bc
-	ld [hl], 0
 	ret
 
 ObjectMovement_IncAnonJumptableIndex:
@@ -480,18 +461,6 @@ ObjectStep_AnonJumptable:
 	ld a, [hl]
 	pop hl
 	rst JumpTable
-	ret
-
-ObjectStep_GetAnonJumptableIndex: ; unreferenced
-	ld hl, OBJECT_STEP_INDEX
-	add hl, bc
-	ld a, [hl]
-	ret
-
-ObjectStep_SetAnonJumptableIndex: ; unreferenced
-	ld hl, OBJECT_STEP_INDEX
-	add hl, bc
-	ld [hl], a
 	ret
 
 StepFunction_Reset:
@@ -651,7 +620,6 @@ MovementFunction_Script:
 
 MovementFunction_Strength:
 	call ObjectMovement_AnonJumptable
-.anon_dw
 	dw .start
 	dw .stop
 
@@ -789,14 +757,12 @@ MovementFunction_Bouncing:
 
 MovementFunction_SpinCounterclockwise:
 	call ObjectMovement_AnonJumptable
-.anon_dw
 	dw _MovementSpinInit
 	dw _MovementSpinRepeat
 	dw _MovementSpinTurnLeft
 
 MovementFunction_SpinClockwise:
 	call ObjectMovement_AnonJumptable
-.anon_dw
 	dw _MovementSpinInit
 	dw _MovementSpinRepeat
 	dw _MovementSpinTurnRight
@@ -1129,7 +1095,6 @@ WaitStep_InPlace:
 
 StepFunction_NPCJump:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .Jump
 	dw .Land
 
@@ -1163,7 +1128,6 @@ StepFunction_NPCJump:
 
 StepFunction_PlayerJump:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .initjump
 	dw .stepjump
 	dw .initland
@@ -1212,7 +1176,6 @@ StepFunction_PlayerJump:
 
 StepFunction_TeleportFrom:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .InitSpin
 	dw .DoSpin
 	dw .InitSpinRise
@@ -1280,7 +1243,6 @@ StepFunction_TeleportFrom:
 
 StepFunction_TeleportTo:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .InitWait
 	dw .DoWait
 	dw .InitDescent
@@ -1367,7 +1329,6 @@ StepFunction_TeleportTo:
 
 StepFunction_Skyfall:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .Init
 	dw .Step
 	dw .Fall
@@ -1430,7 +1391,6 @@ StepFunction_Skyfall:
 
 StepFunction_GotBite:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .Init
 	dw .Run
 
@@ -1527,7 +1487,6 @@ StepFunction_Bump:
 
 StepFunction_Restore:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .Reset
 	dw StepFunction_Standing
 
@@ -1574,7 +1533,6 @@ StepFunction_ContinueWalk:
 
 StepFunction_PlayerWalk:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .init
 	dw .step
 
@@ -1601,7 +1559,6 @@ StepFunction_PlayerWalk:
 
 StepFunction_Turn:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .init1
 	dw .step1
 	dw .init2
@@ -1713,7 +1670,6 @@ StepFunction_TrackingObject:
 StepFunction_14:
 StepFunction_ScreenShake:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .Init
 	dw .Run
 
@@ -1765,7 +1721,6 @@ StepFunction_16:
 
 StepFunction_17:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .null
 	dw .null
 	dw .null
@@ -1773,7 +1728,6 @@ StepFunction_17:
 
 StepFunction_SkyfallTop:
 	call ObjectStep_AnonJumptable
-.anon_dw
 	dw .Init
 	dw .Run
 
@@ -2512,29 +2466,6 @@ _ContinueSpawnFacing:
 	call SetSpriteDirection
 	ret
 
-_SetPlayerPalette:
-	ld a, d
-	and 1 << 7
-	ret z
-	ld bc, 0 ; debug?
-	ld hl, OBJECT_DIRECTION
-	add hl, bc
-	ld a, [hl]
-	or d
-	ld [hl], a
-	ld a, d
-	swap a
-	and OAM_PALETTE
-	ld d, a
-	ld bc, wPlayerStruct
-	ld hl, OBJECT_PALETTE
-	add hl, bc
-	ld a, [hl]
-	and ~OAM_PALETTE
-	or d
-	ld [hl], a
-	ret
-
 StartFollow::
 	push bc
 	ld a, b
@@ -2602,15 +2533,6 @@ FreezeAllOtherObjects::
 	xor a
 	ret
 
-FreezeObject: ; unreferenced
-	call CheckObjectVisibility
-	ret c
-	ld hl, OBJECT_FLAGS2
-	add hl, bc
-	set FROZEN_F, [hl]
-	xor a
-	ret
-
 FreezeAllObjects:
 	ld bc, wObjectStructs
 	xor a
@@ -2674,14 +2596,6 @@ UnfreezeAllObjects::
 	cp NUM_OBJECT_STRUCTS
 	jr nz, .loop
 	pop bc
-	ret
-
-UnfreezeObject: ; unreferenced
-	call CheckObjectVisibility
-	ret c
-	ld hl, OBJECT_FLAGS2
-	add hl, bc
-	res FROZEN_F, [hl]
 	ret
 
 ResetObject:

@@ -37,7 +37,7 @@ BattleCommand_Encore:
 	bit SUBSTATUS_ENCORED, [hl]
 	jp nz, .failed
 	set SUBSTATUS_ENCORED, [hl]
-	call BattleRandom
+	call Random
 	and $3
 	inc a
 	inc a

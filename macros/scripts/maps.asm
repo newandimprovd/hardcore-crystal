@@ -182,17 +182,3 @@ MACRO conditional_event
 	dw \1, \2
 ENDM
 
-MACRO cmdqueue
-;\1: type: a CMDQUEUE_* constant
-;\2: data pointer
-	dbw \1, \2
-	dw 0 ; filler
-ENDM
-
-MACRO stonetable
-;\1: warp id
-;\2: object_event id
-;\3: script pointer
-	db \1, \2
-	dw \3
-ENDM

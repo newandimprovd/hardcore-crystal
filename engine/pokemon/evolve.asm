@@ -68,9 +68,6 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_TRADE
 	jr z, .trade
 
-	ld a, [wLinkMode]
-	and a
-	jp nz, .dont_evolve_2
 
 	ld a, b
 	cp EVOLVE_ITEM
@@ -142,30 +139,7 @@ EvolveAfterBattle_MasterLoop:
 	jr .proceed
 
 .trade
-	ld a, [wLinkMode]
-	and a
-	jp z, .dont_evolve_2
-
-	call IsMonHoldingEverstone
-	jp z, .dont_evolve_2
-
-	ld a, [hli]
-	ld b, a
-	inc a
-	jr z, .proceed
-
-	ld a, [wLinkMode]
-	cp LINK_TIMECAPSULE
-	jp z, .dont_evolve_3
-
-	ld a, [wTempMonItem]
-	cp b
-	jp nz, .dont_evolve_3
-
-	xor a
-	ld [wTempMonItem], a
-	jr .proceed
-
+	jp .dont_evolve_2
 .item
 	ld a, [hli]
 	ld b, a
@@ -176,9 +150,6 @@ EvolveAfterBattle_MasterLoop:
 	ld a, [wForceEvolution]
 	and a
 	jp z, .dont_evolve_3
-	ld a, [wLinkMode]
-	and a
-	jp nz, .dont_evolve_3
 	jr .proceed
 
 .level
@@ -242,8 +213,6 @@ EvolveAfterBattle_MasterLoop:
 	push hl
 	ld hl, EvolvedIntoText
 	call PrintTextboxText
-	farcall StubbedTrainerRankings_MonsEvolved
-
 	ld de, MUSIC_NONE
 	call PlayMusic
 	ld de, SFX_CAUGHT_MON
@@ -327,15 +296,10 @@ EvolveAfterBattle_MasterLoop:
 	inc hl
 	jp .loop
 
-.UnusedReturnToMap: ; unreferenced
-	pop hl
 .ReturnToMap:
 	pop de
 	pop bc
 	pop hl
-	ld a, [wLinkMode]
-	and a
-	ret nz
 	ld a, [wBattleMode]
 	and a
 	ret nz

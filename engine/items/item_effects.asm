@@ -16,11 +16,9 @@ ItemEffects:
 	table_width 2
 	dw PokeBallEffect      ; MASTER_BALL
 	dw PokeBallEffect      ; ULTRA_BALL
-	dw NoEffect            ; BRIGHTPOWDER
 	dw PokeBallEffect      ; GREAT_BALL
 	dw PokeBallEffect      ; POKE_BALL
 	dw TownMapEffect       ; TOWN_MAP
-	dw BicycleEffect       ; BICYCLE
 	dw EvoStoneEffect      ; MOON_STONE
 	dw StatusHealingEffect ; ANTIDOTE
 	dw StatusHealingEffect ; BURN_HEAL
@@ -35,10 +33,6 @@ ItemEffects:
 	dw EscapeRopeEffect    ; ESCAPE_ROPE
 	dw RepelEffect         ; REPEL
 	dw RestorePPEffect     ; MAX_ELIXER
-	dw EvoStoneEffect      ; FIRE_STONE
-	dw EvoStoneEffect      ; THUNDERSTONE
-	dw EvoStoneEffect      ; WATER_STONE
-	dw NoEffect            ; ITEM_19
 	dw VitaminEffect       ; HP_UP
 	dw VitaminEffect       ; PROTEIN
 	dw VitaminEffect       ; IRON
@@ -47,10 +41,8 @@ ItemEffects:
 	dw VitaminEffect       ; CALCIUM
 	dw RareCandyEffect     ; RARE_CANDY
 	dw XAccuracyEffect     ; X_ACCURACY
-	dw EvoStoneEffect      ; LEAF_STONE
 	dw NoEffect            ; METAL_POWDER
 	dw NoEffect            ; NUGGET
-	dw PokeDollEffect      ; POKE_DOLL
 	dw StatusHealingEffect ; FULL_HEAL
 	dw ReviveEffect        ; REVIVE
 	dw ReviveEffect        ; MAX_REVIVE
@@ -58,37 +50,23 @@ ItemEffects:
 	dw SuperRepelEffect    ; SUPER_REPEL
 	dw MaxRepelEffect      ; MAX_REPEL
 	dw DireHitEffect       ; DIRE_HIT
-	dw NoEffect            ; ITEM_2D
 	dw RestoreHPEffect     ; FRESH_WATER
 	dw RestoreHPEffect     ; SODA_POP
 	dw RestoreHPEffect     ; LEMONADE
 	dw XItemEffect         ; X_ATTACK
-	dw NoEffect            ; ITEM_32
 	dw XItemEffect         ; X_DEFEND
 	dw XItemEffect         ; X_SPEED
 	dw XItemEffect         ; X_SPECIAL
-	dw CoinCaseEffect      ; COIN_CASE
 	dw ItemfinderEffect    ; ITEMFINDER
-	dw PokeFluteEffect     ; POKE_FLUTE
 	dw NoEffect            ; EXP_SHARE
-	dw OldRodEffect        ; OLD_ROD
-	dw GoodRodEffect       ; GOOD_ROD
-	dw NoEffect            ; SILVER_LEAF
-	dw SuperRodEffect      ; SUPER_ROD
 	dw RestorePPEffect     ; PP_UP
 	dw RestorePPEffect     ; ETHER
 	dw RestorePPEffect     ; MAX_ETHER
 	dw RestorePPEffect     ; ELIXER
-	dw NoEffect            ; RED_SCALE
-	dw NoEffect            ; SECRETPOTION
 	dw NoEffect            ; S_S_TICKET
 	dw NoEffect            ; MYSTERY_EGG
-	dw NoEffect            ; CLEAR_BELL
-	dw NoEffect            ; SILVER_WING
 	dw RestoreHPEffect     ; MOOMOO_MILK
-	dw NoEffect            ; QUICK_CLAW
 	dw StatusHealingEffect ; PSNCUREBERRY
-	dw NoEffect            ; GOLD_LEAF
 	dw NoEffect            ; SOFT_SAND
 	dw NoEffect            ; SHARP_BEAK
 	dw StatusHealingEffect ; PRZCUREBERRY
@@ -103,8 +81,6 @@ ItemEffects:
 	dw NoEffect            ; BIG_MUSHROOM
 	dw NoEffect            ; SILVERPOWDER
 	dw NoEffect            ; BLU_APRICORN
-	dw NoEffect            ; ITEM_5A
-	dw NoEffect            ; AMULET_COIN
 	dw NoEffect            ; YLW_APRICORN
 	dw NoEffect            ; GRN_APRICORN
 	dw NoEffect            ; CLEANSE_TAG
@@ -113,13 +89,10 @@ ItemEffects:
 	dw NoEffect            ; WHT_APRICORN
 	dw NoEffect            ; BLACKBELT_I
 	dw NoEffect            ; BLK_APRICORN
-	dw NoEffect            ; ITEM_64
 	dw NoEffect            ; PNK_APRICORN
 	dw NoEffect            ; BLACKGLASSES
-	dw NoEffect            ; SLOWPOKETAIL
 	dw NoEffect            ; PINK_BOW
 	dw NoEffect            ; STICK
-	dw NoEffect            ; SMOKE_BALL
 	dw NoEffect            ; NEVERMELTICE
 	dw NoEffect            ; MAGNET
 	dw StatusHealingEffect ; MIRACLEBERRY
@@ -128,38 +101,26 @@ ItemEffects:
 	dw NoEffect            ; EVERSTONE
 	dw NoEffect            ; SPELL_TAG
 	dw RestoreHPEffect     ; RAGECANDYBAR
-	dw NoEffect            ; GS_BALL
-	dw BlueCardEffect      ; BLUE_CARD
 	dw NoEffect            ; MIRACLE_SEED
 	dw NoEffect            ; THICK_CLUB
 	dw NoEffect            ; FOCUS_BAND
-	dw NoEffect            ; ITEM_78
 	dw EnergypowderEffect  ; ENERGYPOWDER
 	dw EnergyRootEffect    ; ENERGY_ROOT
 	dw HealPowderEffect    ; HEAL_POWDER
-	dw RevivalHerbEffect   ; REVIVAL_HERB
 	dw NoEffect            ; HARD_STONE
 	dw NoEffect            ; LUCKY_EGG
-	dw CardKeyEffect       ; CARD_KEY
-	dw NoEffect            ; MACHINE_PART
-	dw NoEffect            ; EGG_TICKET
-	dw NoEffect            ; LOST_ITEM
 	dw NoEffect            ; STARDUST
 	dw NoEffect            ; STAR_PIECE
-	dw BasementKeyEffect   ; BASEMENT_KEY
 	dw NoEffect            ; PASS
 	dw CorkboardEffect     ; CORKBOARD
 	dw ChainsawEffect ; CHAINSAW
 	dw JetSkiEffect ; JET_SKI
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
-	dw NoEffect            ; SCOPE_LENS
 	dw CrowbarEffect ; CROWBAR
 	dw FlashlightEffect ; FLASHLIGHT
 	dw NoEffect            ; METAL_COAT
-	dw NoEffect            ; DRAGON_FANG
 	dw OutboardEffect ; OUTBOARD
-	dw NoEffect            ; LEFTOVERS
 	dw GrappleHookEffect ; GRAPPLE_HOOK
 	dw SledgehammerEffect ; SLEDGEHAMMER
 	dw BaseballBatEffect ; BASEBALL_BAT
@@ -169,45 +130,21 @@ ItemEffects:
 	dw ShovelEffect ; SHOVEL
 	dw GetawayCarEffect ; GETAWAY_CAR
 	dw NoEffect            ; TRUMPET
-	dw SacredAshEffect     ; SACRED_ASH
 	dw PokeBallEffect      ; HEAVY_BALL
-	dw NoEffect            ; FLOWER_MAIL
 	dw PokeBallEffect      ; LEVEL_BALL
 	dw PokeBallEffect      ; LURE_BALL
 	dw PokeBallEffect      ; FAST_BALL
-	dw NoEffect            ; ITEM_A2
 	dw NoEffect            ; LIGHT_BALL
 	dw PokeBallEffect      ; FRIEND_BALL
 	dw PokeBallEffect      ; MOON_BALL
 	dw PokeBallEffect      ; LOVE_BALL
-	dw NormalBoxEffect     ; NORMAL_BOX
-	dw GorgeousBoxEffect   ; GORGEOUS_BOX
-	dw EvoStoneEffect      ; SUN_STONE
 	dw NoEffect            ; POLKADOT_BOW
-	dw NoEffect            ; ITEM_AB
-	dw NoEffect            ; UP_GRADE
 	dw RestoreHPEffect     ; BERRY
 	dw RestoreHPEffect     ; GOLD_BERRY
-	dw SquirtbottleEffect  ; SQUIRTBOTTLE
-	dw NoEffect            ; ITEM_B0
 	dw PokeBallEffect      ; PARK_BALL
-	dw NoEffect            ; RAINBOW_WING
 	dw NoEffect            ; ITEM_B3
 	assert_table_length ITEM_B3
-; The items past ITEM_B3 do not have effect entries:
-;	BRICK_PIECE
-;	SURF_MAIL
-;	LITEBLUEMAIL
-;	PORTRAITMAIL
-;	LOVELY_MAIL
-;	EON_MAIL
-;	MORPH_MAIL
-;	BLUESKY_MAIL
-;	MUSIC_MAIL
-;	MIRAGE_MAIL
-;	ITEM_BE
-; They all have the ITEMMENU_NOUSE attribute so they can't be used anyway.
-; NoEffect would be appropriate, with the table then being NUM_ITEMS long.
+; The items past ITEM_B3 have no effect entries and cannot be used (ITEMMENU_NOUSE).
 
 PokeBallEffect:
 ; BUG: The Dude's catching tutorial may crash if his Poké Ball can't be used (see docs/bugs_and_glitches.md)
@@ -227,12 +164,9 @@ PokeBallEffect:
 	jp z, Ball_BoxIsFullMessage
 
 .room_in_party
-; BUG: Using a Park Ball in non-Contest battles has a corrupt animation (see docs/bugs_and_glitches.md)
 	xor a
 	ld [wWildMon], a
-	ld a, [wCurItem]
-	cp PARK_BALL
-	call nz, ReturnToBattle_UseBall
+	call ReturnToBattle_UseBall
 
 	ld hl, wOptions
 	res NO_TEXT_SCROLL, [hl]
@@ -502,9 +436,6 @@ PokeBallEffect:
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
 	jp z, .FinishTutorial
-
-	farcall StubbedTrainerRankings_WildMonsCaught
-
 	ld hl, Text_GotchaMonWasCaught
 	call PrintText
 
@@ -537,8 +468,6 @@ PokeBallEffect:
 
 .skip_pokedex
 	ld a, [wBattleType]
-	cp BATTLETYPE_CONTEST
-	jp z, .catch_bug_contest_mon
 	cp BATTLETYPE_CELEBI
 	jr nz, .not_celebi
 	ld hl, wBattleResult
@@ -681,10 +610,6 @@ PokeBallEffect:
 	call LoadStandardFont
 	jr .return_from_capture
 
-.catch_bug_contest_mon
-	farcall BugContest_SetCaughtContestMon
-	jr .return_from_capture
-
 .FinishTutorial:
 	ld hl, Text_GotchaMonWasCaught
 
@@ -698,9 +623,6 @@ PokeBallEffect:
 	ret z
 	cp BATTLETYPE_DEBUG
 	ret z
-	cp BATTLETYPE_CONTEST
-	jr z, .used_park_ball
-
 	ld a, [wWildMon]
 	and a
 	jr z, .toss
@@ -713,11 +635,6 @@ PokeBallEffect:
 	inc a
 	ld [wItemQuantityChange], a
 	jp TossItem
-
-.used_park_ball
-	ld hl, wParkBallsRemaining
-	dec [hl]
-	ret
 
 BallMultiplierFunctionTable:
 ; table of routines that increase or decrease the catch rate based on
@@ -1059,14 +976,6 @@ LevelBallMultiplier:
 
 ; BallDodgedText and BallMissedText were used in Gen 1.
 
-BallDodgedText: ; unreferenced
-	text_far _BallDodgedText
-	text_end
-
-BallMissedText: ; unreferenced
-	text_far _BallMissedText
-	text_end
-
 BallBrokeFreeText:
 	text_far _BallBrokeFreeText
 	text_end
@@ -1120,10 +1029,6 @@ ReturnToBattle_UseBall:
 
 TownMapEffect:
 	farcall PokegearMap
-	ret
-
-BicycleEffect:
-	farcall BikeFunction
 	ret
 
 MACRO field_key_item_effect
@@ -1518,24 +1423,6 @@ StatusHealer_Jumptable:
 	dw StatusHealer_NoEffect
 	dw StatusHealer_ExitMenu
 
-RevivalHerbEffect:
-	ld b, PARTYMENUACTION_HEALING_ITEM
-	call UseItem_SelectMon
-	jp c, StatusHealer_ExitMenu
-
-	call RevivePokemon
-	cp FALSE
-	jr nz, .not_used
-
-	ld c, HAPPINESS_REVIVALHERB
-	farcall ChangeHappiness
-	call LooksBitterMessage
-
-	ld a, $0
-
-.not_used
-	jp StatusHealer_Jumptable
-
 ReviveEffect:
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	call UseItem_SelectMon
@@ -1909,20 +1796,6 @@ LoadCurHPIntoBuffer3:
 	ld [wHPBuffer3], a
 	ret
 
-LoadHPIntoBuffer3: ; unreferenced
-	ld a, d
-	ld [wHPBuffer3 + 1], a
-	ld a, e
-	ld [wHPBuffer3], a
-	ret
-
-LoadHPFromBuffer3: ; unreferenced
-	ld a, [wHPBuffer3 + 1]
-	ld d, a
-	ld a, [wHPBuffer3]
-	ld e, a
-	ret
-
 LoadCurHPIntoBuffer2:
 	ld a, MON_HP
 	call GetPartyParamLocation
@@ -2112,23 +1985,6 @@ XAccuracyEffect:
 	set SUBSTATUS_X_ACCURACY, [hl]
 	jp UseItemText
 
-PokeDollEffect:
-	ld a, [wBattleMode]
-	dec a ; WILD_BATTLE?
-	jr nz, .not_wild
-	inc a ; TRUE
-	ld [wForcedSwitch], a
-	ld a, [wBattleResult]
-	and BATTLERESULT_BITMASK
-	or DRAW
-	ld [wBattleResult], a
-	jp UseItemText
-
-.not_wild
-	xor a
-	ld [wItemEffectSucceeded], a
-	ret
-
 GuardSpecEffect:
 	ld hl, wPlayerSubStatus4
 	bit SUBSTATUS_MIST, [hl]
@@ -2267,14 +2123,6 @@ PokeFluteEffect:
 .battle
 	jp PokeFluteTerminator
 
-BlueCardEffect:
-	ld hl, .BlueCardBalanceText
-	jp MenuTextboxWaitButton
-
-.BlueCardBalanceText:
-	text_far _BlueCardBalanceText
-	text_end
-
 CorkboardEffect:
 ; the lore notes the player has collected (data/hardcore/corkboard.asm, generated by tools/hardcore/areas/lore.py)
 	ld a, BANK(CorkboardScript)
@@ -2282,30 +2130,6 @@ CorkboardEffect:
 	call FarQueueScript
 	ld a, $1
 	ld [wItemEffectSucceeded], a
-	ret
-
-CoinCaseEffect:
-	ld hl, .CoinCaseCountText
-	jp MenuTextboxWaitButton
-
-.CoinCaseCountText:
-	text_far _CoinCaseCountText
-	text_end
-
-OldRodEffect:
-	ld e, $0
-	jr UseRod
-
-GoodRodEffect:
-	ld e, $1
-	jr UseRod
-
-SuperRodEffect:
-	ld e, $2
-	jr UseRod
-
-UseRod:
-	farcall FishFunction
 	ret
 
 ItemfinderEffect:
@@ -2561,44 +2385,6 @@ PPRestoredText:
 	text_far _PPRestoredText
 	text_end
 
-SquirtbottleEffect:
-	farcall _Squirtbottle
-	ret
-
-CardKeyEffect:
-	farcall _CardKey
-	ret
-
-BasementKeyEffect:
-	farcall _BasementKey
-	ret
-
-SacredAshEffect:
-	farcall _SacredAsh
-	ld a, [wItemEffectSucceeded]
-	cp $1
-	ret nz
-	call UseDisposableItem
-	ret
-
-NormalBoxEffect:
-	ld c, DECOFLAG_SILVER_TROPHY_DOLL
-	jr OpenBox
-
-GorgeousBoxEffect:
-	ld c, DECOFLAG_GOLD_TROPHY_DOLL
-OpenBox:
-	farcall SetSpecificDecorationFlag
-
-	ld hl, .SentTrophyHomeText
-	call PrintText
-
-	jp UseDisposableItem
-
-.SentTrophyHomeText:
-	text_far _SentTrophyHomeText
-	text_end
-
 NoEffect:
 	jp IsntTheTimeMessage
 
@@ -2672,18 +2458,6 @@ WontHaveAnyEffectMessage:
 	ld hl, ItemWontHaveEffectText
 	jr CantUseItemMessage
 
-BelongsToSomeoneElseMessage: ; unreferenced
-	ld hl, ItemBelongsToSomeoneElseText
-	jr CantUseItemMessage
-
-CyclingIsntAllowedMessage: ; unreferenced
-	ld hl, NoCyclingText
-	jr CantUseItemMessage
-
-CantGetOnYourBikeMessage: ; unreferenced
-	ld hl, ItemCantGetOnText
-	; fallthrough
-
 CantUseItemMessage:
 ; Item couldn't be used.
 	xor a
@@ -2702,10 +2476,6 @@ ItemOakWarningText:
 	text_far _ItemOakWarningText
 	text_end
 
-ItemBelongsToSomeoneElseText:
-	text_far _ItemBelongsToSomeoneElseText
-	text_end
-
 ItemWontHaveEffectText:
 	text_far _ItemWontHaveEffectText
 	text_end
@@ -2718,28 +2488,12 @@ BallDontBeAThiefText:
 	text_far _BallDontBeAThiefText
 	text_end
 
-NoCyclingText:
-	text_far _NoCyclingText
-	text_end
-
-ItemCantGetOnText:
-	text_far _ItemCantGetOnText
-	text_end
-
 BallBoxFullText:
 	text_far _BallBoxFullText
 	text_end
 
 ItemUsedText:
 	text_far _ItemUsedText
-	text_end
-
-ItemGotOnText: ; unreferenced
-	text_far _ItemGotOnText
-	text_end
-
-ItemGotOffText: ; unreferenced
-	text_far _ItemGotOffText
 	text_end
 
 ApplyPPUp:

@@ -366,14 +366,6 @@ CheckIndoorMap::
 	cp GATE
 	ret
 
-CheckUnknownMap:: ; unreferenced
-	cp INDOOR
-	ret z
-	cp GATE
-	ret z
-	cp ENVIRONMENT_5
-	ret
-
 LoadMapAttributes::
 	call CopyMapPartialAndAttributes
 	call SwitchToMapScriptsBank
@@ -942,14 +934,6 @@ CallScript::
 	scf
 	ret
 
-CallMapScript::
-; Call a script at hl in the current bank if there isn't already a script running
-	ld a, [wScriptRunning]
-	and a
-	ret nz
-	call GetMapScriptsBank
-	jr CallScript
-
 RunMapCallback::
 ; Will run the first callback found with execution index equal to a.
 	ld b, a
@@ -1039,25 +1023,6 @@ MapTextbox::
 	rst Bankswitch
 	ret
 
-Call_a_de::
-; Call a:de.
-
-	ldh [hTempBank], a
-	ldh a, [hROMBank]
-	push af
-	ldh a, [hTempBank]
-	rst Bankswitch
-
-	call .de
-
-	pop af
-	rst Bankswitch
-	ret
-
-.de
-	push de
-	ret
-
 GetMovementData::
 ; Initialize the movement data for object c at b:hl
 	ldh a, [hROMBank]
@@ -1108,20 +1073,6 @@ ObjectEvent::
 
 ObjectEventText::
 	text_far _ObjectEventText
-	text_end
-
-BGEvent:: ; unreferenced
-	jumptext BGEventText
-
-BGEventText::
-	text_far _BGEventText
-	text_end
-
-CoordinatesEvent:: ; unreferenced
-	jumptext CoordinatesEventText
-
-CoordinatesEventText::
-	text_far _CoordinatesEventText
 	text_end
 
 CheckObjectMask::
@@ -1333,13 +1284,6 @@ UpdateBGMapColumn::
 	jr nz, .loop
 	ld a, SCREEN_HEIGHT
 	ldh [hBGMapTileCount], a
-	ret
-
-ClearBGMapBuffer:: ; unreferenced
-	ld hl, wBGMapBuffer
-	ld bc, wBGMapBufferEnd - wBGMapBuffer
-	xor a
-	call ByteFill
 	ret
 
 LoadTilesetGFX::
@@ -2070,11 +2014,6 @@ SwitchToAnyMapAttributesBank::
 	rst Bankswitch
 	ret
 
-GetMapAttributesBank:: ; unreferenced
-	ld a, [wMapGroup]
-	ld b, a
-	ld a, [wMapNumber]
-	ld c, a
 GetAnyMapAttributesBank::
 	push hl
 	push de
@@ -2164,9 +2103,6 @@ GetMapEnvironment::
 	pop hl
 	ret
 
-Map_DummyFunction:: ; unreferenced
-	ret
-
 GetAnyMapEnvironment::
 	push hl
 	push de
@@ -2205,54 +2141,15 @@ GetMapMusic::
 	push bc
 	ld de, MAP_MUSIC
 	call GetMapField
-	ld a, c
-	cp MUSIC_MAHOGANY_MART
-	jr z, .mahoganymart
-	bit RADIO_TOWER_MUSIC_F, c
-	jr nz, .radiotower
-	farcall Function8b342
 	ld e, c
 	ld d, 0
-.done
 	pop bc
 	pop hl
 	ret
 
-.radiotower
-	ld a, [wStatusFlags2]
-	bit STATUSFLAGS2_ROCKETS_IN_RADIO_TOWER_F, a
-	jr z, .clearedradiotower
-	ld de, MUSIC_ROCKET_OVERTURE
-	jr .done
-
-.clearedradiotower
-	; the rest of the byte
-	ld a, c
-	and RADIO_TOWER_MUSIC - 1
-	ld e, a
-	ld d, 0
-	jr .done
-
-.mahoganymart
-	ld a, [wStatusFlags2]
-	bit STATUSFLAGS2_ROCKETS_IN_MAHOGANY_F, a
-	jr z, .clearedmahogany
-	ld de, MUSIC_ROCKET_HIDEOUT
-	jr .done
-
-.clearedmahogany
-	ld de, MUSIC_CHERRYGROVE_CITY
-	jr .done
-
 GetMapTimeOfDay::
 	call GetPhoneServiceTimeOfDayByte
 	and $f
-	ret
-
-GetMapPhoneService::
-	call GetPhoneServiceTimeOfDayByte
-	and $f0
-	swap a
 	ret
 
 GetPhoneServiceTimeOfDayByte::
@@ -2265,20 +2162,6 @@ GetPhoneServiceTimeOfDayByte::
 
 	pop bc
 	pop hl
-	ret
-
-GetFishingGroup::
-	push de
-	push hl
-	push bc
-
-	ld de, MAP_FISHGROUP
-	call GetMapField
-	ld a, c
-
-	pop bc
-	pop hl
-	pop de
 	ret
 
 LoadMapTileset::

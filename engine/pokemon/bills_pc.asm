@@ -239,21 +239,6 @@ BillsPCDepositMenuHeader:
 	db "RELEASE@"
 	db "CANCEL@"
 
-BillsPCClearThreeBoxes: ; unreferenced
-	hlcoord 0, 0
-	ld b, 4
-	ld c, 8
-	call ClearBox
-	hlcoord 0, 4
-	ld b, 10
-	ld c, 9
-	call ClearBox
-	hlcoord 0, 14
-	ld b, 2
-	ld c, 8
-	call ClearBox
-	ret
-
 _WithdrawPKMN:
 	ld hl, wOptions
 	ld a, [hl]
@@ -1065,8 +1050,6 @@ PCMonInfo:
 	call GetBaseData
 	ld de, vTiles2 tile $00
 	predef GetMonFrontpic
-	xor a
-	ld [wBillsPC_MonHasMail], a
 	ld a, [wCurPartySpecies]
 	ld [wTempSpecies], a
 	cp EGG
@@ -1095,16 +1078,7 @@ PCMonInfo:
 	and a
 	ret z
 
-	ld d, a
-	callfar ItemIsMail
-	jr c, .mail
 	ld a, $5d ; item icon
-	jr .printitem
-.mail
-	ld a, $1
-	ld [wBillsPC_MonHasMail], a
-	ld a, $5c ; mail icon
-.printitem
 	hlcoord 7, 12
 	ld [hl], a
 	ret
@@ -1540,22 +1514,6 @@ endr
 	dbsprite 19, 4, 0, 7, $07, 0
 	db -1
 
-BillsPC_FillBox: ; unreferenced
-.row
-	push bc
-	push hl
-.col
-	ld [hli], a
-	dec c
-	jr nz, .col
-	pop hl
-	ld bc, SCREEN_WIDTH
-	add hl, bc
-	pop bc
-	dec b
-	jr nz, .row
-	ret
-
 BillsPC_CheckSpaceInDestination:
 ; If moving within a box, no need to be here.
 	ld hl, wBillsPC_LoadedBox
@@ -1604,16 +1562,9 @@ BillsPC_CheckMail_PreventBlackout:
 	ld [wCurPartyMon], a
 	farcall CheckCurPartyMonFainted
 	jr c, .AllOthersFainted
-	ld a, [wBillsPC_MonHasMail]
-	and a
-	jr nz, .HasMail
 .Okay:
 	and a
 	ret
-
-.HasMail:
-	ld de, PCString_RemoveMail
-	jr .NotOkay
 
 .AllOthersFainted:
 	ld de, PCString_NoMoreUsablePKMN
@@ -2398,27 +2349,6 @@ BillsPC_ChangeBoxSubmenu:
 	jr z, .Switch
 	cp $2
 	jr z, .Name
-	cp $3
-	jr z, .Print
-	and a
-	ret
-
-.Print:
-	call GetBoxCount
-	and a
-	jr z, .EmptyBox
-	ld e, l
-	ld d, h
-	ld a, [wMenuSelection]
-	dec a
-	ld c, a
-	farcall PrintPCBox
-	call BillsPC_ClearTilemap
-	and a
-	ret
-
-.EmptyBox:
-	call BillsPC_PlaceEmptyBoxString_SFX
 	and a
 	ret
 
@@ -2458,16 +2388,15 @@ BillsPC_ChangeBoxSubmenu:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 11, 4, SCREEN_WIDTH - 1, 13
+	menu_coords 11, 4, SCREEN_WIDTH - 1, 11
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
+	db 3 ; items
 	db "SWITCH@"
 	db "NAME@"
-	db "PRINT@"
 	db "QUIT@"
 
 BillsPC_PlaceChooseABoxString:
@@ -2483,19 +2412,6 @@ BillsPC_PlaceWhatsUpString:
 
 .WhatsUp:
 	db "What's up?@"
-
-BillsPC_PlaceEmptyBoxString_SFX:
-	ld de, .NoMonString
-	call BillsPC_PlaceChangeBoxString
-	ld de, SFX_WRONG
-	call WaitPlaySFX
-	call WaitSFX
-	ld c, 50
-	call DelayFrames
-	ret
-
-.NoMonString:
-	db "There's no #MON.@"
 
 BillsPC_PlaceChangeBoxString:
 	push de

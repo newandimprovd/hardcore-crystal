@@ -48,7 +48,7 @@ ProtectChance:
 .done
 
 .rand
-	call BattleRandom
+	call Random
 	and a
 	jr z, .rand
 

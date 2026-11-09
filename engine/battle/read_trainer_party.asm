@@ -1,12 +1,4 @@
 ReadTrainerParty:
-	ld a, [wInBattleTowerBattle]
-	bit IN_BATTLE_TOWER_BATTLE_F, a
-	ret nz
-
-	ld a, [wLinkMode]
-	and a
-	ret nz
-
 	ld hl, wOTPartyCount
 	xor a
 	ld [hli], a
@@ -393,14 +385,6 @@ CopyTrainerName:
 	push de
 	ld bc, NAME_LENGTH
 	call CopyBytes
-	pop de
-	ret
-
-IncompleteCopyNameFunction: ; unreferenced
-; Copy of CopyTrainerName but without "call CopyBytes"
-	ld de, wStringBuffer1
-	push de
-	ld bc, NAME_LENGTH
 	pop de
 	ret
 

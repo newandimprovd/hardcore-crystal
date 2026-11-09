@@ -103,6 +103,13 @@ _PrepMonFrontpic::
 	ld [wCurPartySpecies], a
 	ret
 
+PlayStereoCry2::
+	push af
+	ld a, 1
+	ld [wStereoPanningMask], a
+	pop af
+	jp _PlayMonCry
+
 PlayStereoCry::
 	push af
 	ld a, 1
@@ -111,15 +118,6 @@ PlayStereoCry::
 	call _PlayMonCry
 	call WaitSFX
 	ret
-
-PlayStereoCry2::
-; Don't wait for the cry to end.
-; Used during pic animations.
-	push af
-	ld a, 1
-	ld [wStereoPanningMask], a
-	pop af
-	jp _PlayMonCry
 
 PlayMonCry::
 	call PlayMonCry2
@@ -222,25 +220,11 @@ PrintLevel::
 	inc c
 	jr Print8BitNumLeftAlign
 
-PrintLevel_Force3Digits::
-; Print :L and all 3 digits
-	ld [hl], '<LV>'
-	inc hl
-	ld c, 3
-
 Print8BitNumLeftAlign::
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
 	ld b, PRINTNUM_LEFTALIGN | 1
 	jp PrintNum
-
-GetNthMove:: ; unreferenced
-	ld hl, wListMoves_MoveIndicesBuffer
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	ret
 
 GetBaseData::
 	push bc

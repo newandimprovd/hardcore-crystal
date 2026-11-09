@@ -22,24 +22,6 @@ ScrollingMenu::
 	jp nz, UpdateTimePals
 	jp SetDefaultBGPAndOBP
 
-InitScrollingMenu::
-	ld a, [wMenuBorderTopCoord]
-	dec a
-	ld b, a
-	ld a, [wMenuBorderBottomCoord]
-	sub b
-	ld d, a
-	ld a, [wMenuBorderLeftCoord]
-	dec a
-	ld c, a
-	ld a, [wMenuBorderRightCoord]
-	sub c
-	ld e, a
-	push de
-	call Coord2Tile
-	pop bc
-	jp Textbox
-
 JoyTextDelay_ForcehJoyDown::
 	call DelayFrame
 

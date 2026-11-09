@@ -23,16 +23,16 @@ DoSpriteAnimFrame:
 	dw SpriteAnimFunc_GameFreakLogo
 	dw SpriteAnimFunc_GSGameFreakLogoStar
 	dw SpriteAnimFunc_GSGameFreakLogoSparkle
-	dw SpriteAnimFunc_SlotsGolem
-	dw SpriteAnimFunc_SlotsChansey
-	dw SpriteAnimFunc_SlotsChanseyEgg
-	dw SpriteAnimFunc_MailCursor
-	dw SpriteAnimFunc_UnusedCursor
-	dw SpriteAnimFunc_MemoryGameCursor
+	dw SpriteAnimFunc_Null
+	dw SpriteAnimFunc_Null
+	dw SpriteAnimFunc_Null
+	dw SpriteAnimFunc_Null
+	dw SpriteAnimFunc_Null
+	dw SpriteAnimFunc_Null
 	dw SpriteAnimFunc_PokegearArrow
-	dw SpriteAnimFunc_TradePokeBall
-	dw SpriteAnimFunc_TradeTubeBulge
-	dw SpriteAnimFunc_TrademonInTube
+	dw SpriteAnimFunc_Null
+	dw SpriteAnimFunc_Null
+	dw SpriteAnimFunc_Null
 	dw SpriteAnimFunc_RevealNewMon
 	dw SpriteAnimFunc_RadioTuningKnob
 	dw SpriteAnimFunc_CutLeaves
@@ -40,12 +40,12 @@ DoSpriteAnimFrame:
 	dw SpriteAnimFunc_FlyLeaf
 	dw SpriteAnimFunc_FlyTo
 	dw SpriteAnimFunc_GSIntroHoOhLugia
-	dw SpriteAnimFunc_EZChatCursor
-	dw SpriteAnimFunc_MobileTradeSentPulse
-	dw SpriteAnimFunc_MobileTradeOTPulse
+	dw SpriteAnimFunc_Null
+	dw SpriteAnimFunc_Null
+	dw SpriteAnimFunc_Null
 	dw SpriteAnimFunc_IntroSuicune
 	dw SpriteAnimFunc_IntroPichuWooper
-	dw SpriteAnimFunc_Celebi
+	dw SpriteAnimFunc_Null
 	dw SpriteAnimFunc_IntroUnown
 	dw SpriteAnimFunc_IntroUnownF
 	dw SpriteAnimFunc_IntroSuicuneAway
@@ -217,10 +217,6 @@ SpriteAnimFunc_NamingScreenCursor:
 	callfar NamingScreen_AnimateCursor
 	ret
 
-SpriteAnimFunc_MailCursor:
-	callfar ComposeMail_AnimateCursor
-	ret
-
 SpriteAnimFunc_GameFreakLogo:
 	callfar GameFreakLogoSpriteAnim
 	ret
@@ -353,210 +349,8 @@ SpriteAnimFunc_GSGameFreakLogoSparkle:
 	call DeinitializeSprite
 	ret
 
-SpriteAnimFunc_SlotsGolem:
-	callfar Slots_AnimateGolem
-	ret
-
-SpriteAnimFunc_SlotsChansey:
-	callfar Slots_AnimateChansey
-	ld hl, wSlotsDelay
-	ld a, [hl]
-	cp $2
-	ret nz
-	ld [hl], $3
-	ld a, SPRITE_ANIM_FRAMESET_SLOTS_CHANSEY_2
-	call _ReinitSpriteAnimFrame
-	ret
-
-SpriteAnimFunc_SlotsChanseyEgg:
-	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
-	add hl, bc
-	ld a, [hl]
-	dec [hl]
-	ld e, a
-	and $1
-	jr z, .move_vertical
-
-	ld hl, SPRITEANIMSTRUCT_XCOORD
-	add hl, bc
-	ld a, [hl]
-	cp 15 * TILE_WIDTH
-	jr c, .move_right
-	call DeinitializeSprite
-	ld a, $4
-	ld [wSlotsDelay], a
-	ld de, SFX_PLACE_PUZZLE_PIECE_DOWN
-	call PlaySFX
-	ret
-
-.move_right
-	inc [hl]
-.move_vertical
-	ld a, e
-	ld d, 32
-	call AnimSeqs_Sine
-
-	ld hl, SPRITEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], a
-	ret
-
-SpriteAnimFunc_UnusedCursor:
-	callfar UnusedCursor_InterpretJoypad_AnimateCursor
-	ret
-
 SpriteAnimFunc_PokegearArrow:
 	callfar AnimatePokegearModeIndicatorArrow
-	ret
-
-SpriteAnimFunc_MemoryGameCursor:
-	callfar MemoryGame_InterpretJoypad_AnimateCursor
-	ret
-
-SpriteAnimFunc_TradePokeBall:
-	call AnimSeqs_AnonJumptable
-	jp hl
-.anon_dw
-	dw .zero
-	dw .one
-	dw .two
-	dw .three
-	dw .four
-	dw .delete
-
-.zero
-	ld a, SPRITE_ANIM_FRAMESET_TRADE_POKE_BALL_WOBBLE
-	call _ReinitSpriteAnimFrame
-
-	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
-	add hl, bc
-	ld [hl], 2 ; .two
-
-	ld hl, SPRITEANIMSTRUCT_VAR1
-	add hl, bc
-	ld [hl], $20
-	ret
-
-.two
-	ld hl, SPRITEANIMSTRUCT_VAR1
-	add hl, bc
-	ld a, [hl]
-	and a
-	jr z, .next
-	dec [hl]
-	ret
-
-.next
-	call AnimSeqs_IncAnonJumptableIndex
-
-	ld hl, SPRITEANIMSTRUCT_VAR1
-	add hl, bc
-	ld [hl], $40
-
-.three
-	ld hl, SPRITEANIMSTRUCT_VAR1
-	add hl, bc
-	ld a, [hl]
-	cp 48
-	jr c, .done
-	dec [hl]
-	ld d, 40
-	call AnimSeqs_Sine
-
-	ld hl, SPRITEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], a
-	ret
-
-.done
-	ld de, SFX_GOT_SAFARI_BALLS
-	call PlaySFX
-	jr .delete
-
-.one
-	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
-	add hl, bc
-	ld [hl], $4
-
-	ld hl, SPRITEANIMSTRUCT_VAR1
-	add hl, bc
-	ld [hl], $30
-
-	ld hl, SPRITEANIMSTRUCT_VAR2
-	add hl, bc
-	ld [hl], $24
-	ret
-
-.four
-	ld hl, SPRITEANIMSTRUCT_VAR2
-	add hl, bc
-	ld a, [hl]
-	and a
-	jr z, .done2
-
-	ld d, a
-	ld hl, SPRITEANIMSTRUCT_VAR1
-	add hl, bc
-	ld a, [hl]
-	call Sprites_Sine
-
-	ld hl, SPRITEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], a
-
-	ld hl, SPRITEANIMSTRUCT_VAR1
-	add hl, bc
-	inc [hl]
-	ld a, [hl]
-	and $3f
-	ret nz
-
-	ld hl, SPRITEANIMSTRUCT_VAR1
-	add hl, bc
-	ld [hl], $20
-
-	ld hl, SPRITEANIMSTRUCT_VAR2
-	add hl, bc
-	ld a, [hl]
-	sub $c
-	ld [hl], a
-	ld de, SFX_SWITCH_POKEMON
-	call PlaySFX
-	ret
-
-.done2
-	xor a
-
-	ld hl, SPRITEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], a
-	call AnimSeqs_IncAnonJumptableIndex
-	ret
-
-.delete
-	call DeinitializeSprite
-	ret
-
-SpriteAnimFunc_TradeTubeBulge:
-	ld hl, SPRITEANIMSTRUCT_XCOORD
-	add hl, bc
-	ld a, [hl]
-	inc [hl]
-	inc [hl]
-	cp $b0
-	jr nc, .delete
-	and $3
-	ret nz
-	ld de, SFX_POKEBALLS_PLACED_ON_TABLE
-	call PlaySFX
-	ret
-
-.delete
-	call DeinitializeSprite
-	ret
-
-SpriteAnimFunc_TrademonInTube:
-	callfar TradeAnim_AnimateTrademonInTube
 	ret
 
 SpriteAnimFunc_RevealNewMon:
@@ -596,8 +390,7 @@ SpriteAnimFunc_RevealNewMon:
 	call DeinitializeSprite
 	ret
 
-SpriteAnimFunc_RadioTuningKnob:
-	callfar AnimateTuningKnob
+SpriteAnimFunc_RadioTuningKnob: ; the radio is gone, the animation object is kept for the constant tables
 	ret
 
 SpriteAnimFunc_CutLeaves:
@@ -739,14 +532,6 @@ SpriteAnimFunc_FlyTo:
 	ld [hl], a
 	ret
 
-SpriteAnimFunc_MobileTradeSentPulse:
-	farcall MobileTradeAnim_AnimateSentPulse
-	ret
-
-SpriteAnimFunc_MobileTradeOTPulse:
-	farcall MobileTradeAnim_AnimateOTPulse
-	ret
-
 SpriteAnimFunc_IntroSuicune:
 	ld a, [wIntroSceneTimer]
 	and a
@@ -834,14 +619,6 @@ SpriteAnimFunc_IntroSuicuneAway:
 	ld a, [hl]
 	add 16
 	ld [hl], a
-	ret
-
-SpriteAnimFunc_EZChatCursor:
-	farcall AnimateEZChatCursor
-	ret
-
-SpriteAnimFunc_Celebi:
-	farcall UpdateCelebiPosition
 	ret
 
 AnimSeqs_AnonJumptable:

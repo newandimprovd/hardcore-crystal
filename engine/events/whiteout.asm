@@ -12,17 +12,10 @@ Script_Whiteout:
 	special FadeOutToWhite
 	pause 40
 	special HealParty
-	checkflag ENGINE_BUG_CONTEST_TIMER
-	iftrue .bug_contest
 	callasm HalveMoney
 	callasm GetWhiteoutSpawn
-	farscall Script_AbortBugContest
-	special WarpToSpawnPoint
 	newloadmap MAPSETUP_WARP
 	endall
-
-.bug_contest
-	jumpstd BugContestResultsWarpScript
 
 .WhitedOutText:
 	text_far _WhitedOutText
@@ -43,8 +36,6 @@ BattleBGMap:
 	ret
 
 HalveMoney:
-	farcall StubbedTrainerRankings_WhiteOuts
-
 ; Halve the player's money.
 	ld hl, wMoney
 	ld a, [hl]

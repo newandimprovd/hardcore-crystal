@@ -10,7 +10,7 @@ TitheMart7_MapScripts:
 
 TitheMart7ClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_TITHE_7
+	pokemart MART_TITHE_7
 	closetext
 	end
 

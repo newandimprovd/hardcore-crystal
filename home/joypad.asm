@@ -261,34 +261,6 @@ StopAutoInput::
 	ld [wInputType], a
 	ret
 
-JoyTitleScreenInput:: ; unreferenced
-.loop
-	call DelayFrame
-
-	push bc
-	call JoyTextDelay
-	pop bc
-
-; Save data can be deleted by pressing Up + B + Select.
-	ldh a, [hJoyDown]
-	cp PAD_UP | PAD_SELECT | PAD_B
-	jr z, .keycombo
-
-; Press Start or A to start the game.
-	ldh a, [hJoyLast]
-	and PAD_START | PAD_A
-	jr nz, .keycombo
-
-	dec c
-	jr nz, .loop
-
-	and a
-	ret
-
-.keycombo
-	scf
-	ret
-
 JoyWaitAorB::
 .loop
 	call DelayFrame
@@ -372,31 +344,16 @@ WaitPressAorB_BlinkCursor::
 	ldh [hMapObjectIndex], a
 	ret
 
-SimpleWaitPressAorB::
-.loop
-	call JoyTextDelay
-	ldh a, [hJoyLast]
-	and PAD_A | PAD_B
-	jr z, .loop
-	ret
-
 PromptButton::
 ; Show a blinking cursor in the lower right-hand
 ; corner of a textbox and wait until A or B is
 ; pressed, afterwards, play a sound.
-	ld a, [wLinkMode]
-	and a
-	jr nz, .link
 	call .wait_input
 	push de
 	ld de, SFX_READ_TEXT_2
 	call PlaySFX
 	pop de
 	ret
-
-.link
-	ld c, 65
-	jp DelayFrames
 
 .wait_input
 	ldh a, [hOAMUpdate]

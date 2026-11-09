@@ -95,37 +95,6 @@ PlayMusic::
 	pop hl
 	ret
 
-PlayMusic2::
-; Stop playing music, then play music de.
-
-	push hl
-	push de
-	push bc
-	push af
-
-	ldh a, [hROMBank]
-	push af
-	ld a, BANK(_PlayMusic)
-	ldh [hROMBank], a
-	ld [rROMB], a
-
-	push de
-	ld de, MUSIC_NONE
-	call _PlayMusic
-	call DelayFrame
-	pop de
-	call _PlayMusic
-
-	pop af
-	ldh [hROMBank], a
-	ld [rROMB], a
-
-	pop af
-	pop bc
-	pop de
-	pop hl
-	ret
-
 PlayCry::
 ; Play cry de.
 
@@ -281,16 +250,6 @@ LowVolume::
 	ld [wVolume], a
 	ret
 
-MinVolume::
-	xor a
-	ld [wVolume], a
-	ret
-
-FadeOutToMusic:: ; unreferenced
-	ld a, 4
-	ld [wMusicFade], a
-	ret
-
 FadeInToMusic::
 	ld a, 4 | (1 << MUSIC_FADE_IN_F)
 	ld [wMusicFade], a
@@ -359,8 +318,8 @@ PlayMapMusic::
 	pop hl
 	ret
 
-PlayMapMusicBike::
-; If the player's on a bike, play the bike music instead of the map music
+PlayMapMusicFromStart::
+; Play the map music from its beginning, even when it is already playing.
 	push hl
 	push de
 	push bc
@@ -368,10 +327,7 @@ PlayMapMusicBike::
 
 	xor a
 	ld [wDontPlayMapMusicOnReload], a
-	ld de, MUSIC_BICYCLE
-	ld a, [wPlayerState]
-	cp PLAYER_BIKE
-	jr z, .play
+	call GetMapMusic_MaybeSpecial
 	call GetMapMusic_MaybeSpecial
 .play
 	push de
@@ -427,18 +383,7 @@ SpecialMapMusic::
 	jr z, .surf
 	cp PLAYER_SURF_PIKA
 	jr z, .surf
-
-	ld a, [wStatusFlags2]
-	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, a
-	jr nz, .contest
-
-.no
 	and a
-	ret
-
-.bike ; unreferenced
-	ld de, MUSIC_BICYCLE
-	scf
 	ret
 
 .surf
@@ -446,59 +391,10 @@ SpecialMapMusic::
 	scf
 	ret
 
-.contest
-	ld a, [wMapGroup]
-	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE
-	jr nz, .no
-	ld a, [wMapNumber]
-	cp MAP_ROUTE_35_NATIONAL_PARK_GATE
-	jr z, .ranking
-	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
-	jr nz, .no
-
-.ranking
-	ld de, MUSIC_BUG_CATCHING_CONTEST_RANKING
-	scf
-	ret
-
 GetMapMusic_MaybeSpecial::
 	call SpecialMapMusic
 	ret c
 	call GetMapMusic
-	ret
-
-PlaceBCDNumberSprite:: ; unreferenced
-; Places a BCD number at the upper center of the screen.
-	ld a, 4 * TILE_WIDTH
-	ld [wShadowOAMSprite38YCoord], a
-	ld [wShadowOAMSprite39YCoord], a
-	ld a, 10 * TILE_WIDTH
-	ld [wShadowOAMSprite38XCoord], a
-	ld a, 11 * TILE_WIDTH
-	ld [wShadowOAMSprite39XCoord], a
-	xor a
-	ld [wShadowOAMSprite38Attributes], a
-	ld [wShadowOAMSprite39Attributes], a
-	ld a, [wUnusedBCDNumber]
-	cp 100
-	jr nc, .max
-	add 1
-	daa
-	ld b, a
-	swap a
-	and $f
-	add '0'
-	ld [wShadowOAMSprite38TileID], a
-	ld a, b
-	and $f
-	add '0'
-	ld [wShadowOAMSprite39TileID], a
-	ret
-
-.max
-	ld a, '9'
-	ld [wShadowOAMSprite38TileID], a
-	ld [wShadowOAMSprite39TileID], a
 	ret
 
 CheckSFX::

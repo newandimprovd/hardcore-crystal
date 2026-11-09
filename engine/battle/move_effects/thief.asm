@@ -17,26 +17,12 @@ BattleCommand_Thief:
 	and a
 	ret z
 
-; Can't steal mail.
-
 	ld [wNamedObjectIndex], a
-	ld d, a
-	farcall ItemIsMail
-	ret c
 
 	ld a, [wEffectFailed]
 	and a
 	ret nz
 
-	ld a, [wLinkMode]
-	and a
-	jr z, .stealenemyitem
-
-	ld a, [wBattleMode]
-	dec a
-	ret z
-
-.stealenemyitem
 	call .enemyitem
 	xor a
 	ld [hl], a
@@ -64,12 +50,7 @@ BattleCommand_Thief:
 	and a
 	ret z
 
-; Can't steal mail!
-
 	ld [wNamedObjectIndex], a
-	ld d, a
-	farcall ItemIsMail
-	ret c
 
 	ld a, [wEffectFailed]
 	and a

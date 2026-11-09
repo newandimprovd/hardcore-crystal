@@ -15,44 +15,9 @@ _InterpretBattleMenu::
 	rst FarCall
 
 	call Draw2DMenu
-	farcall MobileTextBorder
 	call UpdateSprites
 	call ApplyTilemap
 	call Get2DMenuSelection
-	ret
-
-_InterpretMobileMenu::
-	ld hl, CopyMenuData
-	ld a, [wMenuData_2DMenuItemStringsBank]
-	rst FarCall
-
-	call Draw2DMenu
-	farcall MobileTextBorder
-	call UpdateSprites
-	call ApplyTilemap
-	call Init2DMenuCursorPosition
-	ld hl, w2DMenuFlags1
-	set _2DMENU_DISABLE_JOYPAD_FILTER_F, [hl]
-.loop
-	call DelayFrame
-	farcall Function10032e
-	ld a, [wcd2b]
-	and a
-	jr nz, .quit
-	call MobileMenuJoypad
-	ld a, [wMenuJoypadFilter]
-	and c
-	jr z, .loop
-	call Mobile_GetMenuSelection
-	ret
-
-.quit
-	ld a, [w2DMenuNumCols]
-	ld c, a
-	ld a, [w2DMenuNumRows]
-	call SimpleMultiply
-	ld [wMenuCursorPosition], a
-	and a
 	ret
 
 Draw2DMenu:
@@ -66,7 +31,6 @@ Get2DMenuSelection:
 	call Init2DMenuCursorPosition
 	call StaticMenuJoypad
 	call MenuClickSound
-Mobile_GetMenuSelection:
 	ld a, [wMenuDataFlags]
 	bit STATICMENU_ENABLE_SELECT_F, a
 	jr z, .skip
@@ -254,58 +218,6 @@ _ScrollingMenuJoypad::
 	call MenuJoypadLoop
 	pop af
 	ldh [hBGMapMode], a
-	ret
-
-MobileMenuJoypad:
-	ld hl, w2DMenuFlags2
-	res _2DMENU_DISABLE_JOYPAD_FILTER_F, [hl]
-	ldh a, [hBGMapMode]
-	push af
-	call Move2DMenuCursor
-	call Do2DMenuRTCJoypad
-	jr nc, .skip_joypad
-	call _2DMenuInterpretJoypad
-.skip_joypad
-	pop af
-	ldh [hBGMapMode], a
-	call GetMenuJoypad
-	ld c, a
-	ret
-
-Function241d5: ; unreferenced
-	call Place2DMenuCursor
-.loop
-	call Move2DMenuCursor
-	call HDMATransferTilemapToWRAMBank3 ; should be farcall
-	call .loop2
-	jr nc, .done
-	call _2DMenuInterpretJoypad
-	jr c, .done
-	ld a, [w2DMenuFlags1]
-	bit _2DMENU_DISABLE_JOYPAD_FILTER_F, a
-	jr nz, .done
-	call GetMenuJoypad
-	ld c, a
-	ld a, [wMenuJoypadFilter]
-	and c
-	jr z, .loop
-
-.done
-	ret
-
-.loop2
-	call Menu_WasButtonPressed
-	ret c
-	ld c, 1
-	ld b, 3
-	call AdvanceMobileInactivityTimerAndCheckExpired ; should be farcall
-	ret c
-	farcall Function100337
-	ret c
-	ld a, [w2DMenuFlags1]
-	bit _2DMENU_DISABLE_JOYPAD_FILTER_F, a
-	jr z, .loop2
-	and a
 	ret
 
 MenuJoypadLoop:
@@ -691,38 +603,6 @@ _ExitMenu::
 	ldh [rWBK], a
 	ld hl, wWindowStackSize
 	dec [hl]
-	ret
-
-RestoreOverworldMapTiles: ; unreferenced
-	ld a, [wStateFlags]
-	bit SPRITE_UPDATES_DISABLED_F, a
-	ret z
-	xor a ; sScratch
-	call OpenSRAM
-	hlcoord 0, 0
-	ld de, sScratch
-	ld bc, SCREEN_AREA
-	call CopyBytes
-	call CloseSRAM
-	call LoadOverworldTilemapAndAttrmapPals
-	xor a ; sScratch
-	call OpenSRAM
-	ld hl, sScratch
-	decoord 0, 0
-	ld bc, SCREEN_AREA
-.loop
-	ld a, [hl]
-	cp $61
-	jr c, .next
-	ld [de], a
-.next
-	inc hl
-	inc de
-	dec bc
-	ld a, c
-	or b
-	jr nz, .loop
-	call CloseSRAM
 	ret
 
 Error_Cant_ExitMenu:

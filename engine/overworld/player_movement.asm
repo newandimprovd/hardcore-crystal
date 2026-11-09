@@ -13,20 +13,6 @@ DoPlayerMovement::
 .GetDPad:
 	ldh a, [hJoyDown]
 	ld [wCurInput], a
-
-; Standing downhill instead moves down.
-
-	ld hl, wBikeFlags
-	bit BIKEFLAGS_DOWNHILL_F, [hl]
-	ret z
-
-	ld c, a
-	and PAD_CTRL_PAD
-	ret nz
-
-	ld a, c
-	or PAD_DOWN
-	ld [wCurInput], a
 	ret
 
 .TranslateIntoMovement:
@@ -37,10 +23,6 @@ DoPlayerMovement::
 	jr z, .Surf
 	cp PLAYER_SURF_PIKA
 	jr z, .Surf
-	cp PLAYER_BIKE
-	jr z, .Normal
-	cp PLAYER_SKATE
-	jr z, .Ice
 
 .Normal:
 	call .CheckForced
@@ -274,35 +256,12 @@ DoPlayerMovement::
 	call CheckIceTile
 	jr nc, .ice
 
-; Downhill riding is slower when not moving down.
-	call .BikeCheck
-	jr nz, .walk
-
-	ld hl, wBikeFlags
-	bit BIKEFLAGS_DOWNHILL_F, [hl]
-	jr z, .fast
-
-	ld a, [wWalkingDirection]
-	cp DOWN
-	jr z, .fast
-
-	ld a, STEP_WALK
-	call .DoStep
-	scf
-	ret
-
-.fast
-	ld a, STEP_BIKE
-	call .DoStep
-	scf
-	ret
-
 .walk
 	ldh a, [hJoyDown]
 	and PAD_B
 	ld a, STEP_WALK
 	jr z, .walk_step
-	ld a, STEP_BIKE ; HC: hold B to run (a 1000 fight game needs it)
+	ld a, STEP_RUN ; HC: hold B to run
 .walk_step
 	call .DoStep
 	scf
@@ -653,8 +612,8 @@ ENDM
 	ret
 
 .CheckStrengthBoulder:
-	ld hl, wBikeFlags
-	bit BIKEFLAGS_STRENGTH_ACTIVE_F, [hl]
+	ld hl, wFieldMoveFlags
+	bit FIELDMOVE_STRENGTH_ACTIVE_F, [hl]
 	jr z, .not_boulder
 
 	ld hl, OBJECT_WALKING
@@ -730,13 +689,6 @@ ENDM
 	scf
 	ret
 
-.BikeCheck:
-	ld a, [wPlayerState]
-	cp PLAYER_BIKE
-	ret z
-	cp PLAYER_SKATE
-	ret
-
 .CheckWalkable:
 ; Return 0 if tile a is land. Otherwise, return carry.
 
@@ -797,9 +749,7 @@ CheckStandingOnIce::
 	ld a, [wPlayerTileCollision]
 	call CheckIceTile
 	jr nc, .yep
-	ld a, [wPlayerState]
-	cp PLAYER_SKATE
-	jr nz, .not_ice
+	jr .not_ice
 
 .yep
 	scf

@@ -254,7 +254,6 @@ ElmDirectionsScript:
 	writetext ElmDirectionsText1
 	waitbutton
 	closetext
-	addcellnum PHONE_ELM
 	opentext
 	writetext GotElmsNumberText
 	playsound SFX_REGISTER_PHONE_NUMBER
@@ -307,7 +306,6 @@ ElmsLabHealingMachine:
 	end
 
 ElmsLabHealingMachine_HealParty:
-	special StubbedTrainerRankings_Healings
 	special HealParty
 	playmusic MUSIC_NONE
 	setval HEALMACHINE_ELMS_LAB
@@ -565,24 +563,7 @@ CopScript:
 	end
 
 ElmsLabWindow:
-	opentext
-	checkflag ENGINE_FLYPOINT_VIOLET
-	iftrue .Normal
-	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
-	iftrue .BreakIn
-	sjump .Normal
-
-.BreakIn:
-	writetext ElmsLabWindowText2
-	waitbutton
-	closetext
-	end
-
-.Normal:
-	writetext ElmsLabWindowText1
-	waitbutton
-	closetext
-	end
+	jumptext ElmsLabWindowText1
 
 ElmsLabTravelTip1:
 	jumptext ElmsLabTravelTip1Text

@@ -280,7 +280,7 @@ DEF NUM_FACINGS EQU const_value
 	const_def
 	const STEP_SLOW          ; 0
 	const STEP_WALK          ; 1
-	const STEP_BIKE          ; 2
+	const STEP_RUN          ; 2
 	const STEP_LEDGE         ; 3
 	const STEP_ICE           ; 4
 	const STEP_TURN          ; 5

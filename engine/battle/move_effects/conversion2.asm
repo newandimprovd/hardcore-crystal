@@ -24,7 +24,7 @@ BattleCommand_Conversion2:
 	call BattleCommand_SwitchTurn
 
 .loop
-	call BattleRandom
+	call Random
 	maskbits TYPES_END
 	cp UNUSED_TYPES
 	jr c, .okay

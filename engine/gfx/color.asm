@@ -76,29 +76,6 @@ Unused_CheckShininess:
 	and a
 	ret
 
-SGB_ApplyCreditsPals: ; unreferenced
-	push de
-	push bc
-	ld hl, PalPacket_Pal01
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	pop bc
-	pop de
-	ld a, c
-	ld [wSGBPals + 3], a
-	ld a, b
-	ld [wSGBPals + 4], a
-	ld a, e
-	ld [wSGBPals + 5], a
-	ld a, d
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	call PushSGBPals
-	ld hl, BlkPacket_AllPal0
-	call PushSGBPals
-	ret
-
 InitPartyMenuPalettes:
 	ld hl, PalPacket_PartyMenu + 1
 	call CopyFourPalettes
@@ -133,29 +110,6 @@ SGB_ApplyPartyMenuHPPals:
 	ld [hl], e
 	ret
 
-Intro_LoadMagikarpPalettes: ; unreferenced
-	call CheckCGB
-	ret z
-
-; CGB only
-	ld hl, .MagikarpBGPal
-	ld de, wBGPals1
-	ld bc, 1 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-
-	ld hl, .MagikarpOBPal
-	ld de, wOBPals1
-	ld bc, 1 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
-
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
-.MagikarpBGPal:
 INCLUDE "gfx/intro/gs_magikarp_bg.pal"
 
 .MagikarpOBPal:
@@ -169,134 +123,6 @@ Intro_LoadAllPal0: ; unreferenced
 	ret z
 	ld hl, BlkPacket_AllPal0
 	jp PushSGBPals
-
-Intro_LoadBetaIntroVenusaurPalettes: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, PalPacket_BetaIntroVenusaur
-	jp PushSGBPals
-
-.cgb
-	ld de, wOBPals1
-	ld a, PREDEFPAL_BETA_INTRO_VENUSAUR
-	call GetPredefPal
-	jp LoadHLPaletteIntoDE
-
-Intro_LoadPackPalettes: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, PalPacket_Pack
-	jp PushSGBPals
-
-.cgb
-	ld de, wOBPals1
-	ld a, PREDEFPAL_PACK
-	call GetPredefPal
-	jp LoadHLPaletteIntoDE
-
-GSIntro_LoadMonPalette: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld a, c
-	push af
-	ld hl, PalPacket_Pal01
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	pop af
-	call GetMonPalettePointer
-	ld a, [hli]
-	ld [wSGBPals + 3], a
-	ld a, [hli]
-	ld [wSGBPals + 4], a
-	ld a, [hli]
-	ld [wSGBPals + 5], a
-	ld a, [hl]
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	jp PushSGBPals
-
-.cgb
-	ld de, wOBPals1
-	ld a, c
-	call GetMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
-	ret
-
-LoadTrainerClassPaletteAsNthBGPal:
-	ld a, [wTrainerClass]
-	call GetTrainerPalettePointer
-	ld a, e
-	jr LoadNthMiddleBGPal
-
-LoadMonPaletteAsNthBGPal:
-	ld a, [wCurPartySpecies]
-	call _GetMonPalettePointer
-	ld a, e
-	bit 7, a
-	jr z, LoadNthMiddleBGPal
-	and $7f
-	inc hl
-	inc hl
-	inc hl
-	inc hl
-
-LoadNthMiddleBGPal:
-	push hl
-	ld hl, wBGPals1
-	ld de, 1 palettes
-.loop
-	and a
-	jr z, .got_addr
-	add hl, de
-	dec a
-	jr .loop
-
-.got_addr
-	ld e, l
-	ld d, h
-	pop hl
-	call LoadPalette_White_Col1_Col2_Black
-	ret
-
-LoadBetaPokerPalettes: ; unreferenced
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-	ld hl, wBetaPokerSGBPals
-	jp PushSGBPals
-
-.cgb
-	ld a, [wBetaPokerSGBCol]
-	ld c, a
-	ld a, [wBetaPokerSGBRow]
-	hlcoord 0, 0, wAttrmap
-	ld de, SCREEN_WIDTH
-.loop
-	and a
-	jr z, .done
-	add hl, de
-	dec a
-	jr .loop
-
-.done
-	ld b, 0
-	add hl, bc
-	lb bc, 6, 4
-	ld a, [wBetaPokerSGBAttr]
-	and $3
-	call FillBoxCGB
-	call CopyTilemapAtOnce
-	ret
 
 ApplyMonOrTrainerPals:
 	call CheckCGB
@@ -394,49 +220,6 @@ LoadStatsScreenPals:
 	ld a, $1
 	ret
 
-LoadMailPalettes:
-	ld l, e
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld de, .MailPals
-	add hl, de
-	call CheckCGB
-	jr nz, .cgb
-	push hl
-	ld hl, PalPacket_Pal01
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	pop hl
-	inc hl
-	inc hl
-	ld a, [hli]
-	ld [wSGBPals + 3], a
-	ld a, [hli]
-	ld [wSGBPals + 4], a
-	ld a, [hli]
-	ld [wSGBPals + 5], a
-	ld a, [hli]
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	call PushSGBPals
-	ld hl, BlkPacket_AllPal0
-	call PushSGBPals
-	ret
-
-.cgb
-	ld de, wBGPals1
-	ld bc, 1 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	call ApplyPals
-	call WipeAttrmap
-	call ApplyAttrmap
-	ret
-
-.MailPals:
 INCLUDE "gfx/mail/mail.pal"
 
 INCLUDE "engine/gfx/cgb_layouts.asm"
@@ -714,27 +497,6 @@ GetMonPalettePointer:
 	call _GetMonPalettePointer
 	ret
 
-CGBCopyBattleObjectPals: ; unreferenced
-; dummied out
-	ret
-	call CheckCGB
-	ret z
-	ld hl, BattleObjectPals
-	ld a, OBPI_AUTOINC | $10
-	ldh [rOBPI], a
-	ld c, 6 palettes
-.loop
-	ld a, [hli]
-	ldh [rOBPD], a
-	dec c
-	jr nz, .loop
-	ld hl, BattleObjectPals
-	ld de, wOBPals1 palette PAL_BATTLE_OB_GRAY
-	ld bc, 2 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
-	ret
-
 BattleObjectPals:
 INCLUDE "gfx/battle_anims/battle_anims.pal"
 
@@ -950,20 +712,6 @@ _InitSGBBorderPals:
 	dw DataSndPacket6
 	dw DataSndPacket7
 	dw DataSndPacket8
-
-UpdateSGBBorder: ; unreferenced
-	di
-	xor a
-	ldh [rJOYP], a
-	ld hl, MaskEnFreezePacket
-	call _PushSGBPals
-	call PushSGBBorder
-	call SGBDelayCycles
-	call SGB_ClearVRAM
-	ld hl, MaskEnCancelPacket
-	call _PushSGBPals
-	ei
-	ret
 
 PushSGBBorder:
 	call .LoadSGBBorderPointers
@@ -1297,9 +1045,6 @@ endr
 	ret
 
 INCLUDE "data/maps/environment_colors.asm"
-
-PartyMenuBGMobilePalette:
-INCLUDE "gfx/stats/party_menu_bg_mobile.pal"
 
 PartyMenuBGPalette:
 INCLUDE "gfx/stats/party_menu_bg.pal"

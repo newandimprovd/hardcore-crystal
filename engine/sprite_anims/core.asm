@@ -70,45 +70,6 @@ DoNextFrameForAllSprites:
 .done
 	ret
 
-DoNextFrameForFirst16Sprites:
-	ld hl, wSpriteAnimationStructs
-	ld e, NUM_SPRITE_ANIM_STRUCTS
-
-.loop
-	ld a, [hl]
-	and a
-	jr z, .next
-	ld c, l
-	ld b, h
-	push hl
-	push de
-	call DoSpriteAnimFrame ; Uses a massive dw
-	call UpdateAnimFrame
-	pop de
-	pop hl
-	jr c, .done
-
-.next
-	ld bc, SPRITEANIMSTRUCT_LENGTH
-	add hl, bc
-	dec e
-	jr nz, .loop
-
-	ld a, [wCurSpriteOAMAddr]
-	ld l, a
-	ld h, HIGH(wShadowOAMSprite16)
-
-.loop2 ; Clear (wShadowOAM + [wCurSpriteOAMAddr] --> Sprites + $40)
-	ld a, l
-	cp LOW(wShadowOAMSprite16)
-	jr nc, .done
-	xor a
-	ld [hli], a
-	jr .loop2
-
-.done
-	ret
-
 _InitSpriteAnimStruct::
 ; Initialize animation a at pixel x=e, y=d
 ; Find if there's any room in the wSpriteAnimationStructs array, which is 10x16
@@ -211,19 +172,6 @@ DeinitializeSprite:
 	ld hl, SPRITEANIMSTRUCT_INDEX
 	add hl, bc
 	ld [hl], 0
-	ret
-
-DeinitializeAllSprites:
-; Clear the index field of every struct in the wSpriteAnimationStructs array.
-	ld hl, wSpriteAnimationStructs
-	ld bc, SPRITEANIMSTRUCT_LENGTH
-	ld e, NUM_SPRITE_ANIM_STRUCTS
-	xor a
-.loop
-	ld [hl], a
-	add hl, bc
-	dec e
-	jr nz, .loop
 	ret
 
 UpdateAnimFrame:
@@ -503,27 +451,6 @@ GetFrameOAMPointer:
 	add hl, de
 	add hl, de
 	add hl, de
-	ret
-
-UnusedLoadSpriteAnimGFX: ; unreferenced
-	push hl
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld de, UnusedSpriteAnimGFX
-	add hl, de
-	ld c, [hl]
-	inc hl
-	ld b, [hl]
-	inc hl
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	pop hl
-	push bc
-	call Request2bpp
-	pop bc
 	ret
 
 INCLUDE "data/sprite_anims/objects.asm"

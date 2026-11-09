@@ -1,39 +1,3 @@
-SelectMonFromParty:
-	call DisableSpriteUpdates
-	xor a
-	ld [wPartyMenuActionText], a
-	call ClearBGPalettes
-	call InitPartyMenuLayout
-	call WaitBGMap
-	call SetDefaultBGPAndOBP
-	call DelayFrame
-	call PartyMenuSelect
-	call ReturnToMapWithSpeechTextbox
-	ret
-
-SelectTradeOrDayCareMon:
-	ld a, b
-	ld [wPartyMenuActionText], a
-	call DisableSpriteUpdates
-	call ClearBGPalettes
-	call InitPartyMenuLayout
-	call WaitBGMap
-	ld b, SCGB_PARTY_MENU
-	call GetSGBLayout
-	call SetDefaultBGPAndOBP
-	call DelayFrame
-	call PartyMenuSelect
-	call ReturnToMapWithSpeechTextbox
-	ret
-
-InitPartyMenuLayout:
-	call LoadPartyMenuGFX
-	call InitPartyMenuWithCancel
-	call InitPartyMenuGFX
-	call WritePartyMenuTilemap
-	call PlacePartyMenuText
-	ret
-
 LoadPartyMenuGFX:
 	call LoadFontsBattleExtra
 	callfar InitPartyMenuPalettes
@@ -760,12 +724,6 @@ TeachWhichPKMNString:
 
 MoveToWhereString:
 	db "Move to where?@"
-
-ChooseAFemalePKMNString: ; unreferenced
-	db "Choose a ♀<PK><MN>.@"
-
-ChooseAMalePKMNString: ; unreferenced
-	db "Choose a ♂<PK><MN>.@"
 
 ToWhichPKMNString:
 	db "To which <PK><MN>?@"

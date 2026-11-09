@@ -10,7 +10,7 @@ GroveMart7_MapScripts:
 
 GroveMart7ClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_GROVE_7
+	pokemart MART_GROVE_7
 	closetext
 	end
 

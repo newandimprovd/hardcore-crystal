@@ -1,17 +1,3 @@
-ShowLinkBattleParticipants:
-; If we're not in a communications room,
-; we don't need to be here.
-	ld a, [wLinkMode]
-	and a
-	ret z
-
-	farcall _ShowLinkBattleParticipants
-	ld c, 150
-	call DelayFrames
-	call ClearTilemap
-	call ClearSprites
-	ret
-
 FindFirstAliveMonAndStartBattle:
 	xor a
 	ldh [hMapAnims], a
@@ -124,16 +110,12 @@ PlayBattleMusic:
 	jr .done
 
 .othertrainer
-	ld a, [wLinkMode]
-	and a
-	jr nz, .johtotrainer
 
 	farcall RegionCheck
 	ld a, e
 	and a
 	jr nz, .kantotrainer
 
-.johtotrainer
 	ld de, MUSIC_JOHTO_TRAINER_BATTLE
 	jr .done
 

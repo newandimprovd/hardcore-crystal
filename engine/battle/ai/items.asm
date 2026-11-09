@@ -5,10 +5,6 @@ AI_SwitchOrTryItem:
 	dec a
 	ret z
 
-	ld a, [wLinkMode]
-	and a
-	ret nz
-
 	farcall CheckEnemyLockedIn
 	ret nz
 
@@ -22,16 +18,12 @@ AI_SwitchOrTryItem:
 
 	; always load the first trainer class in wTrainerClass for Battle Tower trainers
 	ld hl, TrainerClassAttributes + TRNATTR_AI_ITEM_SWITCH
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .ok
 
 	ld a, [wTrainerClass]
 	dec a
 	ld bc, NUM_TRAINER_ATTRIBUTES
 	call AddNTimes
 
-.ok
 	bit SWITCH_OFTEN_F, [hl]
 	jp nz, SwitchOften
 	bit SWITCH_RARELY_F, [hl]
@@ -147,17 +139,8 @@ SwitchSometimes:
 	ld [wEnemySwitchMonIndex], a
 	jp AI_TrySwitch
 
-CheckSubstatusCantRun: ; unreferenced
-	ld a, [wEnemySubStatus5]
-	bit SUBSTATUS_CANT_RUN, a
-	ret
-
 AI_TryItem:
 	; items are not allowed in the Battle Tower
-	ld a, [wInBattleTowerBattle]
-	and a
-	ret nz
-
 	ld a, [wEnemyTrainerItem1]
 	ld b, a
 	ld a, [wEnemyTrainerItem2]
@@ -262,7 +245,6 @@ AI_TryItem:
 	cp e
 	jr nc, .yes
 
-.no ; unreferenced
 	and a
 	ret
 
@@ -401,52 +383,6 @@ AI_Items:
 	jp .Use
 
 ; Everything up to "End unused" is unused
-
-.UnusedHealItem: ; unreferenced
-; This has similar conditions to .HealItem
-	callfar AICheckEnemyMaxHP
-	jr c, .dont_use
-	push bc
-	ld de, wEnemyMonMaxHP + 1
-	ld hl, wEnemyMonHP + 1
-	ld a, [de]
-	sub [hl]
-	jr z, .check_40_percent
-	dec hl
-	dec de
-	ld c, a
-	sbc [hl]
-	and a
-	jr nz, .check_40_percent
-	ld a, c
-	cp b
-	jp c, .check_50_percent
-	callfar AICheckEnemyQuarterHP
-	jr c, .check_40_percent
-
-.check_50_percent
-	pop bc
-	ld a, [bc]
-	bit UNKNOWN_USE_F, a
-	jp z, .Use
-	call Random
-	cp 50 percent + 1
-	jp c, .Use
-
-.dont_use
-	jp .DontUse
-
-.check_40_percent
-	pop bc
-	ld a, [bc]
-	bit UNKNOWN_USE_F, a
-	jp z, .DontUse
-	call Random
-	cp 39 percent + 1
-	jp c, .Use
-	jp .DontUse
-
-; End unused
 
 .XAccuracy:
 	call .XItem
@@ -711,21 +647,12 @@ AI_Switch:
 	farcall ResetBattleParticipants
 	xor a
 	ld [wBattleHasJustStarted], a
-	ld a, [wLinkMode]
-	and a
-	ret nz
 	scf
 	ret
 
 EnemyWithdrewText:
 	text_far _EnemyWithdrewText
 	text_end
-
-EnemyUsedFullHealRed: ; unreferenced
-	call AIUsedItemSound
-	call AI_HealStatus
-	ld a, FULL_HEAL_RED ; X_SPEED
-	jp PrintText_UsedItemOn_AND_AIUpdateHUD
 
 AI_HealStatus:
 ; BUG: AI use of Full Heal or Full Restore does not cure Nightmare status (see docs/bugs_and_glitches.md)
@@ -761,38 +688,6 @@ EnemyUsedDireHit:
 	set SUBSTATUS_FOCUS_ENERGY, [hl]
 	ld a, DIRE_HIT
 	jp PrintText_UsedItemOn_AND_AIUpdateHUD
-
-AICheckEnemyFractionMaxHP: ; unreferenced
-; Input: a = divisor
-; Work: bc = [wEnemyMonMaxHP] / a
-; Work: de = [wEnemyMonHP]
-; Output:
-; -  c, nz if [wEnemyMonHP] > [wEnemyMonMaxHP] / a
-; - nc,  z if [wEnemyMonHP] = [wEnemyMonMaxHP] / a
-; - nc, nz if [wEnemyMonHP] < [wEnemyMonMaxHP] / a
-	ldh [hDivisor], a
-	ld hl, wEnemyMonMaxHP
-	ld a, [hli]
-	ldh [hDividend], a
-	ld a, [hl]
-	ldh [hDividend + 1], a
-	ld b, 2
-	call Divide
-	ldh a, [hQuotient + 3]
-	ld c, a
-	ldh a, [hQuotient + 2]
-	ld b, a
-	ld hl, wEnemyMonHP + 1
-	ld a, [hld]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	ld a, d
-	sub b
-	ret nz
-	ld a, e
-	sub c
-	ret
 
 EnemyUsedXAttack:
 	ld b, ATTACK

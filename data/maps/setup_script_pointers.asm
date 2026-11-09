@@ -19,7 +19,7 @@ MapSetupCommands:
 	add_mapsetup RestartMapMusic ; 04
 	add_mapsetup FadeToMapMusic ; 05
 	add_mapsetup FadeMapMusicAndPalettes ; 06
-	add_mapsetup PlayMapMusicBike ; 07
+	add_mapsetup PlayMapMusicFromStart ; 07
 	add_mapsetup ForceMapMusic ; 08
 	add_mapsetup FadeInToMusic ; 09
 	add_mapsetup LoadBlockData ; 0a (callback 1)
@@ -50,8 +50,6 @@ MapSetupCommands:
 	add_mapsetup RefreshPlayerCoords ; 23
 	add_mapsetup ResetPlayerObjectAction ; 24
 	add_mapsetup SkipUpdateMapSprites ; 25
-	add_mapsetup UpdateRoamMons ; 26
-	add_mapsetup JumpRoamMons ; 27
 	add_mapsetup FadeOutMapMusic ; 28
 	add_mapsetup ActivateMapAnims ; 29
 	add_mapsetup SuspendMapAnims ; 2a

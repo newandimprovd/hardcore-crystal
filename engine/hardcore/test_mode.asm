@@ -17,7 +17,7 @@ MACRO test_giveitem
 ENDM
 
 HC_TestIntro::
-	call InitCrystalData
+	farcall InitCrystalData
 	ld hl, wPlayerName
 	ld de, .name
 	call InitName
@@ -70,7 +70,6 @@ HC_TestSetup::
 	test_giveitem BASEBALL_BAT, 1
 	test_giveitem SHOVEL, 1
 	test_giveitem GETAWAY_CAR, 1
-	test_giveitem BICYCLE, 1
 	endc
 	test_giveitem POKE_BALL, 20
 	test_giveitem SUPER_POTION, 10

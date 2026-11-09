@@ -30,11 +30,6 @@ BattleCommand_BatonPass:
 	ld b, SCGB_BATTLE_COLORS
 	call GetSGBLayout
 	call SetDefaultBGPAndOBP
-	call BatonPass_LinkPlayerSwitch
-
-; Mobile link battles handle entrances differently
-	farcall CheckMobileBattleError
-	jp c, EndMoveEffect
 
 	ld hl, PassedBattleMonEntrance
 	call CallBattleCore
@@ -53,11 +48,6 @@ BattleCommand_BatonPass:
 
 	call UpdateEnemyMonInParty
 	call AnimateCurrentMove
-	call BatonPass_LinkEnemySwitch
-
-; Mobile link battles handle entrances differently
-	farcall CheckMobileBattleError
-	jp c, EndMoveEffect
 
 ; Passed enemy PartyMon entrance
 	xor a
@@ -75,48 +65,6 @@ BattleCommand_BatonPass:
 	call CallBattleCore
 
 	jr ResetBatonPassStatus
-
-BatonPass_LinkPlayerSwitch:
-	ld a, [wLinkMode]
-	and a
-	ret z
-
-	ld a, BATTLEPLAYERACTION_USEITEM
-	ld [wBattlePlayerAction], a
-
-	call LoadStandardMenuHeader
-	ld hl, LinkBattleSendReceiveAction
-	call CallBattleCore
-	call CloseWindow
-
-	xor a ; BATTLEPLAYERACTION_USEMOVE
-	ld [wBattlePlayerAction], a
-	ret
-
-BatonPass_LinkEnemySwitch:
-	ld a, [wLinkMode]
-	and a
-	ret z
-
-	call LoadStandardMenuHeader
-	ld hl, LinkBattleSendReceiveAction
-	call CallBattleCore
-
-	ld a, [wOTPartyCount]
-	add BATTLEACTION_SWITCH1
-	ld b, a
-	ld a, [wBattleAction]
-	cp BATTLEACTION_SWITCH1
-	jr c, .baton_pass
-	cp b
-	jr c, .switch
-
-.baton_pass
-	ld a, [wCurOTMon]
-	add BATTLEACTION_SWITCH1
-	ld [wBattleAction], a
-.switch
-	jp CloseWindow
 
 FailedBatonPass:
 	call AnimateFailedMove

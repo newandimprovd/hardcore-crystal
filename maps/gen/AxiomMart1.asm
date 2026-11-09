@@ -10,7 +10,7 @@ AxiomMart1_MapScripts:
 
 AxiomMart1ClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_AXIOM_1
+	pokemart MART_AXIOM_1
 	closetext
 	end
 

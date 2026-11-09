@@ -7,18 +7,6 @@ MACRO scall
 	dw \1 ; pointer
 ENDM
 
-	const farscall_command ; $01
-MACRO farscall
-	db farscall_command
-	dba \1
-ENDM
-
-	const memcall_command ; $02
-MACRO memcall
-	db memcall_command
-	dw \1 ; pointer
-ENDM
-
 	const sjump_command ; $03
 MACRO sjump
 	db sjump_command
@@ -63,29 +51,9 @@ MACRO iftrue
 	dw \1 ; pointer
 ENDM
 
-	const ifgreater_command ; $0a
-MACRO ifgreater
-	db ifgreater_command
-	db \1 ; byte
-	dw \2 ; pointer
-ENDM
-
-	const ifless_command ; $0b
-MACRO ifless
-	db ifless_command
-	db \1 ; byte
-	dw \2 ; pointer
-ENDM
-
 	const jumpstd_command ; $0c
 MACRO jumpstd
 	db jumpstd_command
-	dw (\1StdScript - StdScripts) / 3
-ENDM
-
-	const callstd_command ; $0d
-MACRO callstd
-	db callstd_command
 	dw (\1StdScript - StdScripts) / 3
 ENDM
 
@@ -105,12 +73,6 @@ ENDM
 MACRO memcallasm
 	db memcallasm_command
 	dw \1 ; asm
-ENDM
-
-	const checkmapscene_command ; $11
-MACRO checkmapscene
-	db checkmapscene_command
-	map_id \1 ; map
 ENDM
 
 	const setmapscene_command ; $12
@@ -137,32 +99,9 @@ MACRO setval
 	db \1 ; value
 ENDM
 
-	const addval_command ; $16
-MACRO addval
-	db addval_command
-	db \1 ; value
-ENDM
-
-	const random_command ; $17
-MACRO random
-	db random_command
-	db \1 ; input
-ENDM
-
-	const checkver_command ; $18
-MACRO checkver
-	db checkver_command
-ENDM
-
 	const readmem_command ; $19
 MACRO readmem
 	db readmem_command
-	dw \1 ; address
-ENDM
-
-	const writemem_command ; $1a
-MACRO writemem
-	db writemem_command
 	dw \1 ; address
 ENDM
 
@@ -225,73 +164,10 @@ MACRO checkitem
 	db \1 ; item
 ENDM
 
-	const givemoney_command ; $22
-MACRO givemoney
-	db givemoney_command
-	db \1 ; account
-	bigdt \2 ; money
-ENDM
-
-	const takemoney_command ; $23
-MACRO takemoney
-	db takemoney_command
-	db \1 ; account
-	bigdt \2 ; money
-ENDM
-
-	const checkmoney_command ; $24
-MACRO checkmoney
-	db checkmoney_command
-	db \1 ; account
-	bigdt \2 ; money
-ENDM
-
-	const givecoins_command ; $25
-MACRO givecoins
-	db givecoins_command
-	dw \1 ; coins
-ENDM
-
-	const takecoins_command ; $26
-MACRO takecoins
-	db takecoins_command
-	dw \1 ; coins
-ENDM
-
-	const checkcoins_command ; $27
-MACRO checkcoins
-	db checkcoins_command
-	dw \1 ; coins
-ENDM
-
-	const addcellnum_command ; $28
-MACRO addcellnum
-	db addcellnum_command
-	db \1 ; person
-ENDM
-
-	const delcellnum_command ; $29
-MACRO delcellnum
-	db delcellnum_command
-	db \1 ; person
-ENDM
-
-	const checkcellnum_command ; $2a
-MACRO checkcellnum
-	db checkcellnum_command
-	db \1 ; person
-ENDM
-
 	const checktime_command ; $2b
 MACRO checktime
 	db checktime_command
 	db \1 ; time
-ENDM
-
-	const checkpoke_command ; $2c
-MACRO checkpoke
-	db checkpoke_command
-	db \1 ; pkmn
 ENDM
 
 	const givepoke_command ; $2d
@@ -313,25 +189,6 @@ MACRO givepoke
 			dw \6 ; ot_name_pointer
 		endc
 	endc
-ENDM
-
-	const giveegg_command ; $2e
-MACRO giveegg
-	db giveegg_command
-	db \1 ; pkmn
-	db \2 ; level
-ENDM
-
-	const givepokemail_command ; $2f
-MACRO givepokemail
-	db givepokemail_command
-	dw \1 ; pointer
-ENDM
-
-	const checkpokemail_command ; $30
-MACRO checkpokemail
-	db checkpokemail_command
-	dw \1 ; pointer
 ENDM
 
 	const checkevent_command ; $31
@@ -358,45 +215,10 @@ MACRO checkflag
 	dw \1 ; engine_flag
 ENDM
 
-	const clearflag_command ; $35
-MACRO clearflag
-	db clearflag_command
-	dw \1 ; engine_flag
-ENDM
-
 	const setflag_command ; $36
 MACRO setflag
 	db setflag_command
 	dw \1 ; engine_flag
-ENDM
-
-	const wildon_command ; $37
-MACRO wildon
-	db wildon_command
-ENDM
-
-	const wildoff_command ; $38
-MACRO wildoff
-	db wildoff_command
-ENDM
-
-	const xycompare_command ; $39
-MACRO xycompare
-	db xycompare_command
-	dw \1 ; pointer
-ENDM
-
-	const warpmod_command ; $3a
-MACRO warpmod
-	db warpmod_command
-	db \1 ; warp_id
-	map_id \2 ; map
-ENDM
-
-	const blackoutmod_command ; $3b
-MACRO blackoutmod
-	db blackoutmod_command
-	map_id \1 ; map
 ENDM
 
 	const warp_command ; $3c
@@ -414,18 +236,6 @@ MACRO getmoney
 	db \1 ; string_buffer
 ENDM
 
-	const getcoins_command ; $3e
-MACRO getcoins
-	db getcoins_command
-	db \1 ; string_buffer
-ENDM
-
-	const getnum_command ; $3f
-MACRO getnum
-	db getnum_command
-	db \1 ; string_buffer
-ENDM
-
 	const getmonname_command ; $40
 MACRO getmonname
 	db getmonname_command
@@ -437,12 +247,6 @@ ENDM
 MACRO getitemname
 	db getitemname_command
 	db \2 ; item
-	db \1 ; string_buffer
-ENDM
-
-	const getcurlandmarkname_command ; $42
-MACRO getcurlandmarkname
-	db getcurlandmarkname_command
 	db \1 ; string_buffer
 ENDM
 
@@ -491,12 +295,6 @@ MACRO closetext
 	db closetext_command
 ENDM
 
-	const writeunusedbyte_command ; $4a
-MACRO writeunusedbyte
-	db writeunusedbyte_command
-	db \1 ; byte
-ENDM
-
 	const farwritetext_command ; $4b
 MACRO farwritetext
 	db farwritetext_command
@@ -519,17 +317,6 @@ ENDM
 	const yesorno_command ; $4e
 MACRO yesorno
 	db yesorno_command
-ENDM
-
-	const loadmenu_command ; $4f
-MACRO loadmenu
-	db loadmenu_command
-	dw \1 ; menu_header
-ENDM
-
-	const closewindow_command ; $50
-MACRO closewindow
-	db closewindow_command
 ENDM
 
 	const jumptextfaceplayer_command ; $51
@@ -569,21 +356,6 @@ ENDM
 	const closepokepic_command ; $57
 MACRO closepokepic
 	db closepokepic_command
-ENDM
-
-	const _2dmenu_command ; $58
-MACRO _2dmenu
-	db _2dmenu_command
-ENDM
-
-	const verticalmenu_command ; $59
-MACRO verticalmenu
-	db verticalmenu_command
-ENDM
-
-	const loadpikachudata_command ; $5a
-MACRO loadpikachudata
-	db loadpikachudata_command
 ENDM
 
 	const randomwildmon_command ; $5b
@@ -655,11 +427,6 @@ MACRO endifjustbattled
 	db endifjustbattled_command
 ENDM
 
-	const checkjustbattled_command ; $67
-MACRO checkjustbattled
-	db checkjustbattled_command
-ENDM
-
 	const setlasttalked_command ; $68
 MACRO setlasttalked
 	db setlasttalked_command
@@ -689,13 +456,6 @@ MACRO faceobject
 	db faceobject_command
 	db \1 ; object1
 	db \2 ; object2
-ENDM
-
-	const variablesprite_command ; $6d
-MACRO variablesprite
-	db variablesprite_command
-	db \1 - SPRITE_VARS ; byte
-	db \2 ; sprite
 ENDM
 
 	const disappear_command ; $6e
@@ -757,23 +517,10 @@ MACRO turnobject
 	db \2 ; facing
 ENDM
 
-	const follownotexact_command ; $77
-MACRO follownotexact
-	db follownotexact_command
-	db \1 ; object2
-	db \2 ; object1
-ENDM
-
 	const earthquake_command ; $78
 MACRO earthquake
 	db earthquake_command
 	db \1 ; param
-ENDM
-
-	const changemapblocks_command ; $79
-MACRO changemapblocks
-	db changemapblocks_command
-	dba \1 ; map_data_pointer
 ENDM
 
 	const changeblock_command ; $7a
@@ -792,18 +539,6 @@ ENDM
 	const refreshmap_command ; $7c
 MACRO refreshmap
 	db refreshmap_command
-ENDM
-
-	const writecmdqueue_command ; $7d
-MACRO writecmdqueue
-	db writecmdqueue_command
-	dw \1 ; queue_pointer
-ENDM
-
-	const delcmdqueue_command ; $7e
-MACRO delcmdqueue
-	db delcmdqueue_command
-	db \1 ; byte
 ENDM
 
 	const playmusic_command ; $7f
@@ -861,12 +596,6 @@ MACRO specialsound
 	db specialsound_command
 ENDM
 
-	const autoinput_command ; $89
-MACRO autoinput
-	db autoinput_command
-	dba \1
-ENDM
-
 	const newloadmap_command ; $8a
 MACRO newloadmap
 	db newloadmap_command
@@ -888,17 +617,6 @@ ENDM
 	const sdefer_command ; $8d
 MACRO sdefer
 	db sdefer_command
-	dw \1 ; pointer
-ENDM
-
-	const warpcheck_command ; $8e
-MACRO warpcheck
-	db warpcheck_command
-ENDM
-
-	const stopandsjump_command ; $8f
-MACRO stopandsjump
-	db stopandsjump_command
 	dw \1 ; pointer
 ENDM
 
@@ -926,55 +644,13 @@ ENDM
 	const pokemart_command ; $94
 MACRO pokemart
 	db pokemart_command
-	db \1 ; dialog_id
-	dw \2 ; mart_id
-ENDM
-
-	const elevator_command ; $95
-MACRO elevator
-	db elevator_command
-	dw \1 ; floor_list_pointer
-ENDM
-
-	const trade_command ; $96
-MACRO trade
-	db trade_command
-	db \1 ; trade_id
-ENDM
-
-	const askforphonenumber_command ; $97
-MACRO askforphonenumber
-	db askforphonenumber_command
-	db \1 ; number
-ENDM
-
-	const phonecall_command ; $98
-MACRO phonecall
-	db phonecall_command
-	dw \1 ; caller_name
-ENDM
-
-	const hangup_command ; $99
-MACRO hangup
-	db hangup_command
-ENDM
-
-	const describedecoration_command ; $9a
-MACRO describedecoration
-	db describedecoration_command
-	db \1 ; byte
+	dw \1 ; mart_id
 ENDM
 
 	const fruittree_command ; $9b
 MACRO fruittree
 	db fruittree_command
 	db \1 ; tree_id
-ENDM
-
-	const specialphonecall_command ; $9c
-MACRO specialphonecall
-	db specialphonecall_command
-	dw \1 ; call_id
 ENDM
 
 	const checkphonecall_command ; $9d
@@ -993,43 +669,9 @@ MACRO verbosegiveitem
 	endc
 ENDM
 
-	const verbosegiveitemvar_command ; $9f
-MACRO verbosegiveitemvar
-	db verbosegiveitemvar_command
-	db \1 ; item
-	db \2 ; var
-ENDM
-
-	const swarm_command ; $a0
-MACRO swarm
-	db swarm_command
-	db \1 ; flag
-	map_id \2 ; map
-ENDM
-
 	const halloffame_command ; $a1
 MACRO halloffame
 	db halloffame_command
-ENDM
-
-	const credits_command ; $a2
-MACRO credits
-	db credits_command
-ENDM
-
-	const warpfacing_command ; $a3
-MACRO warpfacing
-	db warpfacing_command
-	db \1 ; facing
-	map_id \2 ; map
-	db \3 ; x
-	db \4 ; y
-ENDM
-
-	const battletowertext_command ; $a4
-MACRO battletowertext
-	db battletowertext_command
-	db \1 ; bttext_id
 ENDM
 
 	const getlandmarkname_command ; $a5
@@ -1052,17 +694,6 @@ MACRO getname
 	db \2 ; type
 	db \3 ; id
 	db \1 ; memory
-ENDM
-
-	const wait_command ; $a8
-MACRO wait
-	db wait_command
-	db \1 ; duration
-ENDM
-
-	const checksave_command ; $a9
-MACRO checksave
-	db checksave_command
 ENDM
 
 DEF NUM_EVENT_COMMANDS EQU const_value

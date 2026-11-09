@@ -55,7 +55,7 @@ SetFacingStepAction:
 	add hl, bc
 	ld a, [hl]
 	and %00001100
-	cp STEP_BIKE << 2
+	cp STEP_RUN << 2
 	ld hl, OBJECT_STEP_FRAME
 	add hl, bc
 	ld a, [hl]

@@ -305,7 +305,7 @@ def mart_interior(g, name, outer_warp, landmark, mart_const, texts):
     w1.dest = outer_warp
     w2.dest = outer_warp
     m.object_consts = ["CLERK"] + [f"NPC{i}" for i in range(len(texts))]
-    m.scripts.append(f"{name}ClerkScript:\n\topentext\n\tpokemart MARTTYPE_STANDARD, MART_{mart_const}\n\tclosetext\n\tend\n")
+    m.scripts.append(f"{name}ClerkScript:\n\topentext\n\tpokemart MART_{mart_const}\n\tclosetext\n\tend\n")
     cs, cpal = hub(g, "clerk", 0, "SPRITE_CLERK")
     m.obj(1, 3, cs, FACE["RIGHT"], f"{name}ClerkScript", pal=cpal)
     spots = [(7, 6, "SPRITE_COOLTRAINER_M", "LEFT"), (2, 5, "SPRITE_YOUNGSTER", "DOWN")]

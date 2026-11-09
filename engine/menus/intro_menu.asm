@@ -9,9 +9,6 @@ Intro_MainMenu:
 	farcall MainMenu
 	jp StartTitleScreen
 
-IntroMenu_DummyFunction: ; unreferenced
-	ret
-
 PrintDayOfWeek:
 	push de
 	ld hl, .Days
@@ -48,12 +45,6 @@ NewGame_ClearTilemapEtc:
 	call ClearWindowData
 	ret
 
-MysteryGift:
-	call UpdateTime
-	farcall DoMysteryGiftIfDayHasPassed
-	farcall DoMysteryGift
-	ret
-
 Option:
 	farcall _Option
 	ret
@@ -67,7 +58,7 @@ if DEF(_TESTMODE)
 	farcall HC_TestIntro
 else
 	farcall HC_AdultWarning ; HC
-	call PlayerProfileSetup
+	farcall InitGender
 	call OakSpeech
 endc
 	call InitializeWorld
@@ -89,21 +80,6 @@ endc
 	ldh [hMapEntryMethod], a
 	jp FinishContinueFunction
 
-PlayerProfileSetup:
-	farcall CheckMobileAdapterStatus
-	jr c, .ok
-	farcall InitGender
-	ret
-.ok
-	ld c, 0
-	farcall InitMobileProfile
-	ret
-
-if DEF(_DEBUG)
-DebugRoom: ; unreferenced
-	farcall _DebugRoom
-	ret
-endc
 
 ResetWRAM:
 	xor a
@@ -184,27 +160,11 @@ _ResetWRAM:
 	ld [wRoamMon2MapNumber], a
 	ld [wRoamMon3MapNumber], a
 
-	ld a, BANK(sMysteryGiftItem) ; aka BANK(sMysteryGiftUnlocked)
-	call OpenSRAM
-	ld hl, sMysteryGiftItem
-	xor a
-	ld [hli], a
-	assert sMysteryGiftItem + 1 == sMysteryGiftUnlocked
-	dec a ; -1
-	ld [hl], a
-	call CloseSRAM
-
-	call LoadOrRegenerateLuckyIDNumber
-	call InitializeMagikarpHouse
-
 	xor a
 	ld [wMonType], a
 
 	ld [wJohtoBadges], a
 	ld [wKantoBadges], a
-
-	ld [wCoins], a
-	ld [wCoins + 1], a
 
 if START_MONEY >= $10000
 	ld a, HIGH(START_MONEY >> 8)
@@ -215,23 +175,7 @@ endc
 	ld a, LOW(START_MONEY)
 	ld [wMoney + 2], a
 
-	xor a
-	ld [wWhichMomItem], a
-
-	ld hl, wMomItemTriggerBalance
-	ld [hl], HIGH(MOM_MONEY >> 8)
-	inc hl
-	ld [hl], HIGH(MOM_MONEY) ; mid
-	inc hl
-	ld [hl], LOW(MOM_MONEY)
-
 	call InitializeNPCNames
-
-	farcall InitDecorations
-
-	farcall DeletePartyMonMail
-
-	farcall ClearGSBallFlag
 
 	call ResetGameTime
 	ret
@@ -276,19 +220,6 @@ SetDefaultBoxNames:
 .Box:
 	db "BOX@"
 
-InitializeMagikarpHouse:
-	ld hl, wBestMagikarpLengthFeet
-	ld a, $3
-	ld [hli], a
-	ld a, $6
-	ld [hli], a
-	ld de, .Ralph
-	call CopyName2
-	ret
-
-.Ralph:
-	db "RALPH@"
-
 InitializeNPCNames:
 	ld hl, .Rival
 	ld de, wRivalName
@@ -321,32 +252,6 @@ InitializeWorld:
 	farcall _InitializeStartDay
 	ret
 
-LoadOrRegenerateLuckyIDNumber:
-	ld a, BANK(sLuckyIDNumber)
-	call OpenSRAM
-	ld a, [wCurDay]
-	inc a
-	ld b, a
-	ld a, [sLuckyNumberDay]
-	cp b
-	ld a, [sLuckyIDNumber + 1]
-	ld c, a
-	ld a, [sLuckyIDNumber]
-	jr z, .skip
-	ld a, b
-	ld [sLuckyNumberDay], a
-	call Random
-	ld c, a
-	call Random
-
-.skip
-	ld [wLuckyIDNumber], a
-	ld [sLuckyIDNumber], a
-	ld a, c
-	ld [wLuckyIDNumber + 1], a
-	ld [sLuckyIDNumber + 1], a
-	jp CloseSRAM
-
 Continue:
 	farcall TryLoadSaveFile
 	jr c, .FailToLoad
@@ -376,13 +281,10 @@ Continue:
 	ld a, HIGH(MUSIC_NONE)
 	ld [wMusicFadeID + 1], a
 	call ClearBGPalettes
-	call Continue_MobileAdapterMenu
 	call CloseWindow
 	call ClearTilemap
 	ld c, 20
 	call DelayFrames
-	farcall JumpRoamMons
-	farcall CopyMysteryGiftReceivedDecorationsToPC
 	farcall ClockContinue
 	ld a, [wSpawnAfterChampion]
 	cp SPAWN_LANCE
@@ -400,42 +302,11 @@ Continue:
 	call PostCreditsSpawn
 	jp FinishContinueFunction
 
-SpawnAfterRed:
-	ld a, SPAWN_MT_SILVER
-	ld [wDefaultSpawnpoint], a
-
 PostCreditsSpawn:
 	xor a
 	ld [wSpawnAfterChampion], a
 	ld a, MAPSETUP_WARP
 	ldh [hMapEntryMethod], a
-	ret
-
-Continue_MobileAdapterMenu: ; unused
-	farcall CheckMobileAdapterStatus
-	ret nc
-	ld hl, wCrystalFlags
-	bit 1, [hl]
-	ret nz
-	ld a, 5
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID + 1], a
-	ld c, 20
-	call DelayFrames
-	ld c, $1
-	farcall InitMobileProfile ; mobile
-	farcall _SaveData
-	ld a, 8
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_NONE)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_NONE)
-	ld [wMusicFadeID + 1], a
-	ld c, 35
-	call DelayFrames
 	ret
 
 ConfirmContinue:
@@ -472,21 +343,13 @@ FinishContinueFunction:
 .loop
 	xor a
 	ld [wDontPlayMapMusicOnReload], a
-	ld [wLinkMode], a
 	ld hl, wGameTimerPaused
 	set GAME_TIMER_COUNTING_F, [hl]
 	res GAME_TIMER_MOBILE_F, [hl]
 	ld hl, wMapNameSignFlags
 	set SHOWN_MAP_NAME_SIGN, [hl]
 	farcall OverworldLoop
-	ld a, [wSpawnAfterChampion]
-	cp SPAWN_RED
-	jr z, .AfterRed
 	jp Reset
-
-.AfterRed:
-	call SpawnAfterRed
-	jr .loop
 
 DisplaySaveInfoOnContinue:
 	call CheckRTCStatus
@@ -1050,18 +913,6 @@ RunTitleScreen:
 	scf
 	ret
 
-UnusedTitlePerspectiveScroll: ; unreferenced
-; Similar behavior to Intro_PerspectiveScrollBG.
-	ldh a, [hVBlankCounter]
-	and $7
-	ret nz
-	ld hl, wLYOverrides + $5f
-	ld a, [hl]
-	dec a
-	ld bc, 2 * SCREEN_WIDTH
-	call ByteFill
-	ret
-
 TitleScreenScene:
 	ld e, a
 	ld d, 0
@@ -1078,11 +929,6 @@ TitleScreenScene:
 	dw TitleScreenTimer
 	dw TitleScreenMain
 	dw TitleScreenEnd
-
-TitleScreenNextScene: ; unreferenced
-	ld hl, wJumptableIndex
-	inc [hl]
-	ret
 
 TitleScreenEntrance:
 ; Animate the logo:
@@ -1270,39 +1116,6 @@ ResetClock:
 	farcall _ResetClock
 	jp Init
 
-UpdateTitleTrailSprite: ; unreferenced
-	; Only update every 4 seconds, when the low 2 bits of [wTitleScreenTimer] are 0.
-	ld a, [wTitleScreenTimer]
-	and %00000011
-	ret nz
-	ld bc, wSpriteAnim10
-	ld hl, SPRITEANIMSTRUCT_FRAME
-	add hl, bc
-	ld l, [hl]
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld de, .TitleTrailCoords
-	add hl, de
-	; Every 8 seconds (i.e. every other update), get the second coords; else, get the first coords
-	ld a, [wTitleScreenTimer]
-	and %00000100
-	srl a
-	srl a
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	and a
-	ret z
-	ld e, a
-	ld d, [hl]
-	ld a, SPRITE_ANIM_OBJ_GS_TITLE_TRAIL
-	call InitSpriteAnimStruct
-	ret
-
-.TitleTrailCoords:
 MACRO trail_coords
 	rept _NARG / 2
 		DEF _dx = 4

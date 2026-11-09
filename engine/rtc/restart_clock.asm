@@ -234,8 +234,3 @@ RestartClock:
 	ld [hl], e
 	ret
 
-JPHourString: ; unreferenced
-	db "じ@" ; HR
-
-JPMinuteString: ; unreferenced
-	db "ふん@" ; MIN

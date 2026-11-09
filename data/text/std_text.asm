@@ -133,9 +133,6 @@ MagazineBookshelfText:
 	line "#MON GRAPH…"
 	done
 
-TeamRocketOathText:
-	text "TEAM ROCKET OATH"
-
 	para "Steal #MON for"
 	line "profit!"
 
@@ -172,9 +169,12 @@ TVText:
 	text "It's a TV."
 	done
 
-HomepageText:
-	text "#MON JOURNAL"
-	line "HOME PAGE…"
+RadioOffText:
+	text "A radio. A man is"
+	line "selling calm. The"
+	cont "price is your"
+	cont "peace of mind."
+	done
 
 	para "It hasn't been"
 	line "updated…"
@@ -214,11 +214,6 @@ MartSignText:
 	para "#MON MART"
 	done
 
-ContestResults_ReadyToJudgeText:
-	text "We will now judge"
-	line "the #MON you've"
-	cont "caught."
-
 	para "<……>"
 	line "<……>"
 
@@ -229,16 +224,6 @@ ContestResults_ReadyToJudgeText:
 	line "this?"
 	done
 
-ContestResults_PlayerWonAPrizeText:
-	text "<PLAYER>, the No.@"
-	text_ram wStringBuffer3
-	text_start
-	line "finisher, wins"
-	cont "@"
-	text_ram wStringBuffer4
-	text "!"
-	done
-
 ReceivedItemText:
 	text "<PLAYER> received"
 	line "@"
@@ -246,103 +231,23 @@ ReceivedItemText:
 	text "."
 	done
 
-ContestResults_JoinUsNextTimeText:
-	text "Please join us for"
-	line "the next Contest!"
-	done
-
-ContestResults_ConsolationPrizeText:
-	text "Everyone else gets"
-	line "a BERRY as a con-"
-	cont "solation prize!"
-	done
-
-ContestResults_DidNotWinText:
-	text "We hope you do"
-	line "better next time."
-	done
-
-ContestResults_ReturnPartyText:
-	text "We'll return the"
-	line "#MON we kept"
-
 	para "for you."
 	line "Here you go!"
 	done
 
-ContestResults_PartyFullText:
-	text "Your party's full,"
-	line "so the #MON was"
-
 	para "sent to your BOX"
 	line "in BILL's PC."
 	done
-
-GymStatue_CityGymText:
-	text_ram wStringBuffer3
-	text_start
-	line "#MON GYM"
-	done
-
-GymStatue_WinningTrainersText:
-	text "LEADER: @"
-	text_ram wStringBuffer4
-	text_start
-	para "WINNING TRAINERS:"
-	line "<PLAYER>"
-	done
-
-CoinVendor_WelcomeText:
-	text "Welcome to the"
-	line "GAME CORNER."
-	done
-
-CoinVendor_NoCoinCaseText:
-	text "Do you need game"
-	line "coins?"
 
 	para "Oh, you don't have"
 	line "a COIN CASE for"
 	cont "your coins."
 	done
 
-CoinVendor_IntroText:
-	text "Do you need some"
-	line "game coins?"
-
 	para "It costs ¥1000 for"
 	line "50 coins. Do you"
 	cont "want some?"
 	done
-
-CoinVendor_Buy50CoinsText:
-	text "Thank you!"
-	line "Here are 50 coins."
-	done
-
-CoinVendor_Buy500CoinsText:
-	text "Thank you! Here"
-	line "are 500 coins."
-	done
-
-CoinVendor_NotEnoughMoneyText:
-	text "You don't have"
-	line "enough money."
-	done
-
-CoinVendor_CoinCaseFullText:
-	text "Whoops! Your COIN"
-	line "CASE is full."
-	done
-
-CoinVendor_CancelText:
-	text "No coins for you?"
-	line "Come again!"
-	done
-
-BugContestPrizeNoRoomText:
-	text "Oh? Your PACK is"
-	line "full."
 
 	para "We'll keep this"
 	line "for you today, so"
@@ -351,38 +256,10 @@ BugContestPrizeNoRoomText:
 	line "make room for it."
 	done
 
-HappinessText3:
-	text "Wow! You and your"
-	line "#MON are really"
-	cont "close!"
-	done
-
-HappinessText2:
-	text "#MON get more"
-	line "friendly if you"
-
 	para "spend time with"
 	line "them."
 	done
 
-HappinessText1:
-	text "You haven't tamed"
-	line "your #MON."
-
 	para "If you aren't"
 	line "nice, it'll pout."
-	done
-
-RegisteredNumber1Text:
-	text "<PLAYER> registered"
-	line "@"
-	text_ram wStringBuffer3
-	text "'s number."
-	done
-
-RegisteredNumber2Text:
-	text "<PLAYER> registered"
-	line "@"
-	text_ram wStringBuffer3
-	text "'s number."
 	done

@@ -34,28 +34,6 @@ HallOfFame::
 	farcall Credits
 	ret
 
-RedCredits::
-	ld a, LOW(MUSIC_NONE)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_NONE)
-	ld [wMusicFadeID + 1], a
-	ld a, 10
-	ld [wMusicFade], a
-	farcall FadeOutToWhite
-	xor a
-	ld [wStateFlags], a
-	ldh [hMapAnims], a
-	farcall InitDisplayForRedCredits
-	ld c, 8
-	call DelayFrames
-	call DisableSpriteUpdates
-	ld a, SPAWN_RED
-	ld [wSpawnAfterChampion], a
-	ld a, [wStatusFlags]
-	ld b, a
-	farcall Credits
-	ret
-
 HallOfFame_FadeOutMusic:
 	ld a, LOW(MUSIC_NONE)
 	ld [wMusicFadeID], a

@@ -252,25 +252,6 @@ EXPORT DEF PICS_FIX EQU $36
 	add PICS_FIX
 	ret
 
-GSIntro_GetMonFrontpic: ; unreferenced
-	ld a, c
-	push de
-	ld hl, PokemonPicPointers
-	dec a
-	ld bc, 6
-	call AddNTimes
-	ld a, BANK(PokemonPicPointers)
-	call GetFarByte
-	call FixPicBank
-	push af
-	inc hl
-	ld a, BANK(PokemonPicPointers)
-	call GetFarWord
-	pop af
-	pop de
-	call FarDecompress
-	ret
-
 GetTrainerPic:
 	ld a, [wTrainerClass]
 	and a

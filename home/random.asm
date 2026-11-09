@@ -28,25 +28,6 @@ Random::
 	pop bc
 	ret
 
-BattleRandom::
-; _BattleRandom lives in another bank.
-
-; It handles all RNG calls in the battle engine, allowing
-; link battles to remain in sync using a shared PRNG.
-
-	ldh a, [hROMBank]
-	push af
-	ld a, BANK(_BattleRandom)
-	rst Bankswitch
-
-	call _BattleRandom
-
-	ld [wPredefHL + 1], a
-	pop af
-	rst Bankswitch
-	ld a, [wPredefHL + 1]
-	ret
-
 RandomRange::
 ; Return a random number between 0 and a (non-inclusive).
 

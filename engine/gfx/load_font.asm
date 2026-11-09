@@ -3,18 +3,6 @@ INCLUDE "gfx/font.asm"
 EnableHDMAForGraphics:
 	db FALSE
 
-Get1bppOptionalHDMA: ; unreferenced
-	ld a, [EnableHDMAForGraphics]
-	and a
-	jp nz, Get1bppViaHDMA
-	jp Get1bpp
-
-Get2bppOptionalHDMA: ; unreferenced
-	ld a, [EnableHDMAForGraphics]
-	and a
-	jp nz, Get2bppViaHDMA
-	jp Get2bpp
-
 _LoadStandardFont::
 	ld de, Font
 	ld hl, vTiles1
@@ -111,10 +99,6 @@ LoadHPBar:
 	ld de, ExpBarGFX
 	ld hl, vTiles2 tile $55
 	lb bc, BANK(ExpBarGFX), 9
-	call Get2bppViaHDMA
-	ld de, MobilePhoneTilesGFX + 7 tiles ; mobile phone icon
-	ld hl, vTiles2 tile $5e
-	lb bc, BANK(MobilePhoneTilesGFX), 2
 	call Get2bppViaHDMA
 	ret
 

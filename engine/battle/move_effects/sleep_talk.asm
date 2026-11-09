@@ -25,7 +25,7 @@ BattleCommand_SleepTalk:
 	dec hl
 .sample_move
 	push hl
-	call BattleRandom
+	call Random
 	maskbits NUM_MOVES
 	ld c, a
 	ld b, 0

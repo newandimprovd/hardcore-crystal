@@ -16,36 +16,6 @@ Unused_AnimateMon_Slow_Normal:
 	call AnimateFrontpic
 	ret
 
-AnimateMon_Menu:
-	ld e, ANIM_MON_MENU
-	ld d, $0
-	call AnimateFrontpic
-	ret
-
-AnimateMon_Trade:
-	ld e, ANIM_MON_TRADE
-	ld d, $0
-	call AnimateFrontpic
-	ret
-
-AnimateMon_Evolve:
-	ld e, ANIM_MON_EVOLVE
-	ld d, $0
-	call AnimateFrontpic
-	ret
-
-AnimateMon_Hatch:
-	ld e, ANIM_MON_HATCH
-	ld d, $0
-	call AnimateFrontpic
-	ret
-
-AnimateMon_HOF:
-	ld e, ANIM_MON_HOF
-	ld d, $0
-	call AnimateFrontpic
-	ret
-
 MACRO pokeanim
 	rept _NARG
 		db (PokeAnim_\1_SetupCommand - PokeAnim_SetupCommands) / 2

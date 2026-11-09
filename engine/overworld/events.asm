@@ -35,41 +35,6 @@ CheckEnabledMapEventsBit5:
 	bit PLAYEREVENTS_UNUSED, [hl]
 	ret
 
-DisableWarpsConnections: ; unreferenced
-	ld hl, wEnabledPlayerEvents
-	res PLAYEREVENTS_WARPS_AND_CONNECTIONS, [hl]
-	ret
-
-DisableCoordEvents: ; unreferenced
-	ld hl, wEnabledPlayerEvents
-	res PLAYEREVENTS_COORD_EVENTS, [hl]
-	ret
-
-DisableStepCount: ; unreferenced
-	ld hl, wEnabledPlayerEvents
-	res PLAYEREVENTS_COUNT_STEPS, [hl]
-	ret
-
-DisableWildEncounters: ; unreferenced
-	ld hl, wEnabledPlayerEvents
-	res PLAYEREVENTS_WILD_ENCOUNTERS, [hl]
-	ret
-
-EnableWarpsConnections: ; unreferenced
-	ld hl, wEnabledPlayerEvents
-	set PLAYEREVENTS_WARPS_AND_CONNECTIONS, [hl]
-	ret
-
-EnableCoordEvents: ; unreferenced
-	ld hl, wEnabledPlayerEvents
-	set PLAYEREVENTS_COORD_EVENTS, [hl]
-	ret
-
-EnableStepCount: ; unreferenced
-	ld hl, wEnabledPlayerEvents
-	set PLAYEREVENTS_COUNT_STEPS, [hl]
-	ret
-
 EnableWildEncounters:
 	ld hl, wEnabledPlayerEvents
 	set PLAYEREVENTS_WILD_ENCOUNTERS, [hl]
@@ -132,15 +97,9 @@ EnterMap:
 	ld [wMapStatus], a
 	ret
 
-UnusedWait30Frames: ; unreferenced
-	ld c, 30
-	call DelayFrames
-	ret
-
 HandleMap:
 	call ResetOverworldDelay
 	call HandleMapTimeAndJoypad
-	farcall HandleCmdQueue ; no need to farcall
 	call MapEvents
 
 ; Not immediately entering a connected map will cause problems.
@@ -334,7 +293,6 @@ CheckTileEvent:
 
 	call RandomEncounter
 	ret c
-	jr .ok ; pointless
 
 .ok
 	xor a
@@ -447,39 +405,9 @@ endr
 	ret
 
 CheckTimeEvents:
-	ld a, [wLinkMode]
-	and a
-	jr nz, .nothing
-
-	ld hl, wStatusFlags2
-	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, [hl]
-	jr z, .do_daily
-
-	farcall CheckBugContestTimer
-	jr c, .end_bug_contest
-	xor a
-	ret
-
-.do_daily
 	farcall CheckDailyResetTimer
 	farcall CheckPokerusTick
-	farcall CheckPhoneCall
-	ret c
-
-.nothing
 	xor a
-	ret
-
-.end_bug_contest
-	ld a, BANK(BugCatchingContestOverScript)
-	ld hl, BugCatchingContestOverScript
-	call CallScript
-	scf
-	ret
-
-.hatch ; unreferenced
-	ld a, PLAYEREVENT_HATCH
-	scf
 	ret
 
 OWPlayerInput:
@@ -667,7 +595,6 @@ BGEventJumptable:
 
 .left:
 	ld b, OW_LEFT
-	jr .checkdir
 
 .checkdir:
 	ld a, [wPlayerDirection]
@@ -865,13 +792,6 @@ SelectMenuCallback:
 
 CountStep:
 	; Don't count steps in link communication rooms.
-	ld a, [wLinkMode]
-	and a
-	jr nz, .done
-
-	; If there is a special phone call, don't count the step.
-	farcall CheckSpecialPhoneCall
-	jr c, .doscript
 
 	; If Repel wore off, don't count the step.
 	call DoRepelStep
@@ -913,9 +833,7 @@ CountStep:
 	jr c, .doscript
 
 .skip_poison
-	farcall DoBikeStep
 
-.done
 	xor a
 	ret
 
@@ -926,11 +844,6 @@ CountStep:
 
 .hatch
 	ld a, PLAYEREVENT_HATCH
-	scf
-	ret
-
-.whiteout ; unreferenced
-	ld a, PLAYEREVENT_WHITEOUT
 	scf
 	ret
 
@@ -993,9 +906,6 @@ PlayerEventScriptPointers:
 InvalidEventScript:
 	end
 
-UnusedPlayerEventScript: ; unreferenced
-	end
-
 HatchEggScript:
 	callasm OverworldHatchEgg
 	end
@@ -1031,12 +941,6 @@ ChangeDirectionScript:
 
 INCLUDE "engine/overworld/scripting.asm"
 
-WarpToSpawnPoint::
-	ld hl, wStatusFlags2
-	res STATUSFLAGS2_SAFARI_GAME_F, [hl]
-	res STATUSFLAGS2_BUG_CONTEST_TIMER_F, [hl]
-	ret
-
 RunMemScript::
 ; If there is no script here, we don't need to be here.
 	ld a, [wMapReentryScriptQueueFlag]
@@ -1057,24 +961,6 @@ RunMemScript::
 	ld bc, 8
 	call ByteFill
 	pop af
-	ret
-
-LoadMemScript::
-; If there's already a script here, don't overwrite.
-	ld hl, wMapReentryScriptQueueFlag
-	ld a, [hl]
-	and a
-	ret nz
-; Set the flag
-	ld [hl], 1
-	inc hl
-; Load the script pointer b:de into (wMapReentryScriptBank):(wMapReentryScriptAddress)
-	ld [hl], b
-	inc hl
-	ld [hl], e
-	inc hl
-	ld [hl], d
-	scf
 	ret
 
 TryTileCollisionEvent::
@@ -1135,36 +1021,17 @@ RandomEncounter::
 	jr c, .nope
 	call CanEncounterWildMon
 	jr nc, .nope
-	ld hl, wStatusFlags2
-	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, [hl]
-	jr nz, .bug_contest
 	farcall TryWildEncounter
 	jr nz, .nope
-	jr .ok
-
-.bug_contest
-	call _TryWildEncounter_BugContest
-	jr nc, .nope
-	jr .ok_bug_contest
+	ld a, BANK(WildBattleScript)
+	ld hl, WildBattleScript
+	call CallScript
+	scf
+	ret
 
 .nope
 	ld a, 1
 	and a
-	ret
-
-.ok
-	ld a, BANK(WildBattleScript)
-	ld hl, WildBattleScript
-	jr .done
-
-.ok_bug_contest
-	ld a, BANK(BugCatchingContestBattleScript)
-	ld hl, BugCatchingContestBattleScript
-	jr .done
-
-.done
-	call CallScript
-	scf
 	ret
 
 WildBattleScript:
@@ -1196,150 +1063,3 @@ CanEncounterWildMon::
 	and a
 	ret
 
-_TryWildEncounter_BugContest:
-	call TryWildEncounter_BugContest
-	ret nc
-	call ChooseWildEncounter_BugContest
-	farcall CheckRepelEffect
-	ret
-
-ChooseWildEncounter_BugContest::
-; Pick a random mon out of ContestMons.
-
-.loop
-	call Random
-	cp 100 << 1
-	jr nc, .loop
-	srl a
-
-	ld hl, ContestMons
-	ld de, 4
-.CheckMon:
-	sub [hl]
-	jr c, .GotMon
-	add hl, de
-	jr .CheckMon
-
-.GotMon:
-	inc hl
-
-; Species
-	ld a, [hli]
-	ld [wTempWildMonSpecies], a
-
-; Min level
-	ld a, [hli]
-	ld d, a
-
-; Max level
-	ld a, [hl]
-
-	sub d
-	jr nz, .RandomLevel
-
-; If min and max are the same.
-	ld a, d
-	jr .GotLevel
-
-.RandomLevel:
-; Get a random level between the min and max.
-	ld c, a
-	inc c
-	call Random
-	ldh a, [hRandomAdd]
-	call SimpleDivide
-	add d
-
-.GotLevel:
-	ld [wCurPartyLevel], a
-
-	xor a
-	ret
-
-TryWildEncounter_BugContest:
-	ld a, [wPlayerTileCollision]
-	call CheckSuperTallGrassTile
-	ld b, 40 percent
-	jr z, .ok
-	ld b, 20 percent
-
-.ok
-	farcall ApplyMusicEffectOnEncounterRate
-	farcall ApplyCleanseTagEffectOnEncounterRate
-	call Random
-	ldh a, [hRandomAdd]
-	cp b
-	ret c
-	ld a, 1
-	and a
-	ret
-
-INCLUDE "data/wild/bug_contest_mons.asm"
-
-DoBikeStep::
-	nop
-	nop
-	; If the bike shop owner doesn't have our number, or
-	; if we've already gotten the call, we don't have to
-	; be here.
-	ld hl, wStatusFlags2
-	bit STATUSFLAGS2_BIKE_SHOP_CALL_F, [hl]
-	jr z, .NoCall
-
-	; If we're not on the bike, we don't have to be here.
-	ld a, [wPlayerState]
-	cp PLAYER_BIKE
-	jr nz, .NoCall
-
-	; If we're not in an area of phone service, we don't
-	; have to be here.
-	call GetMapPhoneService
-	and a
-	jr nz, .NoCall
-
-	; Check the bike step count and check whether we've
-	; taken 65536 of them yet.
-	ld hl, wBikeStep
-	ld a, [hli]
-	ld d, a
-	ld e, [hl]
-	cp 255
-	jr nz, .increment
-	ld a, e
-	cp 255
-	jr z, .dont_increment
-
-.increment
-	inc de
-	ld [hl], e
-	dec hl
-	ld [hl], d
-
-.dont_increment
-	; If we've taken at least 1024 steps, have the bike
-	;  shop owner try to call us.
-	ld a, d
-	cp HIGH(1024)
-	jr c, .NoCall
-
-	; If a call has already been queued, don't overwrite
-	; that call.
-	ld a, [wSpecialPhoneCallID]
-	and a
-	jr nz, .NoCall
-
-	; Queue the call.
-	ld a, SPECIALCALL_BIKESHOP
-	ld [wSpecialPhoneCallID], a
-	xor a
-	ld [wSpecialPhoneCallID + 1], a
-	ld hl, wStatusFlags2
-	res STATUSFLAGS2_BIKE_SHOP_CALL_F, [hl]
-	scf
-	ret
-
-.NoCall:
-	xor a
-	ret
-
-INCLUDE "engine/overworld/cmd_queue.asm"

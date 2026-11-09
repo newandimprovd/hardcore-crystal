@@ -29,8 +29,33 @@ VANILLA = {
     "ElmsLab": ("TILESET_LAB", 5, "ELMS_LAB"),
     "Route29": ("TILESET_JOHTO", 30, "ROUTE_29"),
 }
-IDS = {(24, 7): "PlayersHouse2F", (24, 6): "PlayersHouse1F", (24, 4): "NewBarkTown", (24, 5): "ElmsLab",
-       (24, 3): "Route29", (26, 3): "CherrygroveCity"}
+BYCONST = {c: n for n, (_, _, c) in VANILLA.items()}
+BYCONST["CHERRYGROVE_CITY"] = "CherrygroveCity"
+
+
+def map_ids():
+    """(group, number) -> map name, read from constants/map_constants.asm (the numbers move whenever maps are removed)."""
+    ids, group, num = {}, 0, 1
+    def scan(path):
+        nonlocal group, num
+        for ln in open(os.path.join(HERE, "..", "..", path)):
+            ln = ln.split(";")[0].strip()
+            m = re.match(r'INCLUDE "(.+)"', ln)
+            if m:
+                scan(m[1])
+            elif ln.startswith("newgroup"):
+                group, num = group + 1, 1
+            else:
+                m = re.match(r"map_const (\w+),", ln)
+                if m:
+                    if m[1] in BYCONST:
+                        ids[(group, num)] = BYCONST[m[1]]
+                    num += 1
+    scan("constants/map_constants.asm")
+    return ids
+
+
+IDS = map_ids()
 
 
 def event_index(name):

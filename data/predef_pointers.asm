@@ -8,7 +8,6 @@ ENDM
 
 PredefPointers::
 	add_predef LearnMove
-	add_predef DummyPredef1
 	add_predef HealParty ; this is both a special and a predef
 	add_predef SmallFarFlagAction
 	add_predef ComputeHPBarPixels
@@ -23,7 +22,6 @@ PredefPointers::
 	add_predef CalcMonStatC
 	add_predef CanLearnTMHMMove
 	add_predef GetTMHMMove
-	add_predef LinkTextboxAtHL
 	add_predef PrintMoveDescription
 	add_predef UpdatePlayerHUD
 	add_predef PlaceGraphic
@@ -36,8 +34,6 @@ PredefPointers::
 	add_predef LearnLevelMoves
 	add_predef FillMoves
 	add_predef EvolveAfterBattle
-	add_predef TradeAnimationPlayer2
-	add_predef TradeAnimation
 	add_predef CopyMonToTempMon
 	add_predef ListMoves
 	add_predef PlaceNonFaintStatus
@@ -54,7 +50,6 @@ PredefPointers::
 	add_predef PrintMonTypes
 	add_predef GetUnownLetter
 	add_predef LoadPoisonBGPals
-	add_predef DummyPredef2F
 	add_predef InitSGBBorder
 	add_predef LoadSGBLayout
 	add_predef Pokedex_GetArea
@@ -63,9 +58,6 @@ PredefPointers::
 	add_predef DummyPredef35
 	add_predef DummyPredef36
 	add_predef PlayBattleAnim
-	add_predef DummyPredef38
-	add_predef DummyPredef39
-	add_predef DummyPredef3A
 	add_predef PartyMonItemName
 	add_predef GetMonFrontpic
 	add_predef GetMonBackpic
@@ -73,7 +65,6 @@ PredefPointers::
 	add_predef GetTrainerPic
 	add_predef DecompressGet2bpp
 	add_predef CheckTypeMatchup
-	add_predef ConvertMon_1to2
 	add_predef NewPokedexEntry
 	add_predef Unused_AnimateMon_Slow_Normal
 	add_predef PlaceStatusString

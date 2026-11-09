@@ -214,9 +214,6 @@ DisplayDexEntry:
 	call PlaceFarString
 	ret
 
-POKeString: ; unreferenced
-	db "#@"
-
 GetDexEntryPointer:
 ; return dex entry pointer b:de
 	push hl
@@ -249,19 +246,6 @@ GetDexEntryPointer:
 	db BANK("Pokedex Entries 129-192")
 	db BANK("Pokedex Entries 193-251")
 
-GetDexEntryPagePointer:
-	call GetDexEntryPointer
-	push hl
-	ld h, d
-	ld l, e
-; skip species name
-.loop1
-	ld a, b
-	call GetFarByte
-	inc hl
-	cp '@'
-	jr nz, .loop1
-; skip height and weight
 rept 4
 	inc hl
 endr

@@ -82,9 +82,6 @@ LoadMapObjects:
 	farcall InitializeVisibleSprites
 	ret
 
-MapSetup_DummyFunction: ; unreferenced
-	ret
-
 ResetPlayerObjectAction:
 	ld hl, wPlayerSpriteSetupFlags
 	set PLAYERSPRITESETUP_RESET_ACTION_F, [hl]
@@ -97,11 +94,9 @@ SkipUpdateMapSprites:
 
 CheckUpdatePlayerSprite:
 	nop
-	call .CheckForcedBiking
-	jr c, .ok
 	call .CheckSurfing
 	jr c, .ok
-	call .ResetSurfingOrBikingState
+	call .ResetSurfingState
 	jr c, .ok
 	ret
 
@@ -109,37 +104,11 @@ CheckUpdatePlayerSprite:
 	call UpdatePlayerSprite
 	ret
 
-.CheckForcedBiking:
-	and a
-	ld hl, wBikeFlags
-	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
-	ret z
-	ld a, PLAYER_BIKE
-	ld [wPlayerState], a
-	scf
-	ret
-
-.ResetSurfingOrBikingState:
+.ResetSurfingState:
 	ld a, [wPlayerState]
-	cp PLAYER_NORMAL
-	jr z, .nope
-	cp PLAYER_SKATE
-	jr z, .nope
 	cp PLAYER_SURF
 	jr z, .surfing
 	cp PLAYER_SURF_PIKA
-	jr z, .surfing
-	call GetMapEnvironment
-	cp INDOOR
-	jr z, .no_biking
-	cp ENVIRONMENT_5
-	jr z, .no_biking
-	cp DUNGEON
-	jr z, .no_biking
-	jr .nope
-.no_biking
-	ld a, [wPlayerState]
-	cp PLAYER_BIKE
 	jr nz, .nope
 .surfing
 	ld a, PLAYER_NORMAL
@@ -189,12 +158,4 @@ FadeMapMusicAndPalettes:
 	ret
 
 ForceMapMusic:
-	ld a, [wPlayerState]
-	cp PLAYER_BIKE
-	jr nz, .notbiking
-	call MinVolume
-	ld a, $88
-	ld [wMusicFade], a
-.notbiking
-	call TryRestartMapMusic
-	ret
+	jp TryRestartMapMusic

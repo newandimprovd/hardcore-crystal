@@ -145,26 +145,6 @@ DEF NUM_BGEVENTS EQU const_value
 	const OBJECTTYPE_6
 DEF NUM_OBJECT_TYPES EQU const_value
 
-; command queue members
-rsreset
-DEF CMDQUEUE_TYPE            rb
-DEF CMDQUEUE_ADDR            rb
-DEF CMDQUEUE_02              rb
-DEF CMDQUEUE_03              rb
-DEF CMDQUEUE_04              rb
-DEF CMDQUEUE_JUMPTABLE_INDEX rb
-DEF CMDQUEUE_ENTRY_SIZE EQU _RS
-DEF CMDQUEUE_CAPACITY EQU 4
-
-; HandleQueuedCommand.Jumptable indexes (see engine/overworld/events.asm)
-	const_def
-	const CMDQUEUE_NULL
-	const CMDQUEUE_TYPE1
-	const CMDQUEUE_STONETABLE
-	const CMDQUEUE_TYPE3
-	const CMDQUEUE_TYPE4
-DEF NUM_CMDQUEUE_TYPES EQU const_value
-
 ; elevfloor macro values
 ; ElevatorFloorNames indexes (see data/events/elevator_floors.asm)
 	const_def
@@ -239,16 +219,6 @@ DEF EMOTE_LENGTH EQU 6
 	const FRUITTREE_PEWTER_CITY_2 ; 1d
 	const FRUITTREE_FUCHSIA_CITY  ; 1e
 DEF NUM_FRUIT_TREES EQU const_value - 1
-
-; describedecoration arguments
-; DescribeDecoration.JumpTable indexes (see engine/overworld/decorations.asm)
-	const_def
-	const DECODESC_POSTER     ; 0
-	const DECODESC_LEFT_DOLL  ; 1
-	const DECODESC_RIGHT_DOLL ; 2
-	const DECODESC_BIG_DOLL   ; 3
-	const DECODESC_CONSOLE    ; 4
-DEF NUM_DECODESCS EQU const_value
 
 ; swarm arguments
 ; StoreSwarmMapIndices arguments

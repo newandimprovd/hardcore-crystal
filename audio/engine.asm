@@ -645,10 +645,6 @@ FadeMusic:
 	; make sure volume is off
 	xor a
 	ld [wVolume], a
-	; did we just get on a bike?
-	ld a, [wPlayerState]
-	cp PLAYER_BIKE
-	jr z, .bicycle
 	push bc
 	; restart sound
 	call MusicFadeRestart
@@ -667,27 +663,6 @@ FadeMusic:
 	; stop fading
 	xor a
 	ld [wMusicFade], a
-	ret
-
-.bicycle
-	push bc
-	; restart sound
-	call MusicFadeRestart
-	; this turns the volume up
-	; turn it back down
-	xor a
-	ld [wVolume], a
-	; get new song id
-	ld a, [wMusicFadeID]
-	ld e, a
-	ld a, [wMusicFadeID + 1]
-	ld d, a
-	; load new song
-	call _PlayMusic
-	pop bc
-	; fade in
-	ld hl, wMusicFade
-	set MUSIC_FADE_IN_F, [hl]
 	ret
 
 .fadein

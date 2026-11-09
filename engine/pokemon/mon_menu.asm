@@ -146,7 +146,6 @@ PokemonActionSubmenu:
 	dbw MONMENUITEM_ITEM,       GiveTakePartyMonItem
 	dbw MONMENUITEM_CANCEL,     CancelPokemonAction
 	dbw MONMENUITEM_MOVE,       ManagePokemonMoves
-	dbw MONMENUITEM_MAIL,       MonMailAction
 
 SwitchPartyMons:
 ; Don't try if there's nothing to switch!
@@ -275,12 +274,6 @@ TryGiveItemToPartymon:
 	and a
 	jr z, .give_item_to_mon
 
-	push hl
-	ld d, a
-	farcall ItemIsMail
-	pop hl
-	jr c, .please_remove_mail
-	ld a, [hl]
 	jr .already_holding_item
 
 .give_item_to_mon
@@ -288,11 +281,6 @@ TryGiveItemToPartymon:
 	ld hl, PokemonHoldItemText
 	call MenuTextboxBackup
 	call GivePartyItem
-	ret
-
-.please_remove_mail
-	ld hl, PokemonRemoveMailText
-	call MenuTextboxBackup
 	ret
 
 .already_holding_item
@@ -333,12 +321,6 @@ GivePartyItem:
 	call GetPartyItemLocation
 	ld a, [wCurItem]
 	ld [hl], a
-	ld d, a
-	farcall ItemIsMail
-	jr nc, .done
-	call ComposeMailMessage
-
-.done
 	ret
 
 TakePartyItem:
@@ -352,7 +334,6 @@ TakePartyItem:
 	call ReceiveItemFromPokemon
 	jr nc, .item_storage_full
 
-	farcall ItemIsMail
 	call GetPartyItemLocation
 	ld a, [hl]
 	ld [wNamedObjectIndex], a
@@ -392,10 +373,6 @@ PokemonSwapItemText:
 
 PokemonHoldItemText:
 	text_far _PokemonHoldItemText
-	text_end
-
-PokemonRemoveMailText:
-	text_far _PokemonRemoveMailText
 	text_end
 
 PokemonNotHoldingText:
@@ -442,144 +419,6 @@ StartMenuYesNo:
 	call YesNoBox
 	jp ExitMenu
 
-ComposeMailMessage:
-	ld de, wTempMailMessage
-	farcall _ComposeMailMessage
-	ld hl, wPlayerName
-	ld de, wTempMailAuthor
-	ld bc, NAME_LENGTH - 1
-	call CopyBytes
-	ld hl, wPlayerID
-	ld bc, 2
-	call CopyBytes
-	ld a, [wCurPartySpecies]
-	ld [de], a
-	inc de
-	ld a, [wCurItem]
-	ld [de], a
-	ld a, [wCurPartyMon]
-	ld hl, sPartyMail
-	ld bc, MAIL_STRUCT_LENGTH
-	call AddNTimes
-	ld d, h
-	ld e, l
-	ld hl, wTempMail
-	ld bc, MAIL_STRUCT_LENGTH
-	ld a, BANK(sPartyMail)
-	call OpenSRAM
-	call CopyBytes
-	call CloseSRAM
-	ret
-
-MonMailAction:
-; If in the time capsule or trade center,
-; selecting the mail only allows you to
-; read the mail.
-	ld a, [wLinkMode]
-	cp LINK_TIMECAPSULE
-	jr z, .read
-	cp LINK_TRADECENTER
-	jr z, .read
-
-; Show the READ/TAKE/QUIT menu.
-	ld hl, .MenuHeader
-	call LoadMenuHeader
-	call VerticalMenu
-	call ExitMenu
-
-; Interpret the menu.
-	jp c, .done
-	ld a, [wMenuCursorY]
-	cp $1
-	jr z, .read
-	cp $2
-	jr z, .take
-	jp .done
-
-.read
-	farcall ReadPartyMonMail
-	ld a, $0
-	ret
-
-.take
-	ld hl, .MailAskSendToPCText
-	call StartMenuYesNo
-	jr c, .RemoveMailToBag
-	ld a, [wCurPartyMon]
-	ld b, a
-	farcall SendMailToPC
-	jr c, .MailboxFull
-	ld hl, .MailSentToPCText
-	call MenuTextboxBackup
-	jr .done
-
-.MailboxFull:
-	ld hl, .MailboxFullText
-	call MenuTextboxBackup
-	jr .done
-
-.RemoveMailToBag:
-	ld hl, .MailLoseMessageText
-	call StartMenuYesNo
-	jr c, .done
-	call GetPartyItemLocation
-	ld a, [hl]
-	ld [wCurItem], a
-	call ReceiveItemFromPokemon
-	jr nc, .BagIsFull
-	call GetPartyItemLocation
-	ld [hl], $0
-	call GetCurNickname
-	ld hl, .MailDetachedText
-	call MenuTextboxBackup
-	jr .done
-
-.BagIsFull:
-	ld hl, .MailNoSpaceText
-	call MenuTextboxBackup
-	jr .done
-
-.done
-	ld a, $3
-	ret
-
-.MenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 12, 10, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "READ@"
-	db "TAKE@"
-	db "QUIT@"
-
-.MailLoseMessageText:
-	text_far _MailLoseMessageText
-	text_end
-
-.MailDetachedText:
-	text_far _MailDetachedText
-	text_end
-
-.MailNoSpaceText:
-	text_far _MailNoSpaceText
-	text_end
-
-.MailAskSendToPCText:
-	text_far _MailAskSendToPCText
-	text_end
-
-.MailboxFullText:
-	text_far _MailboxFullText
-	text_end
-
-.MailSentToPCText:
-	text_far _MailSentToPCText
-	text_end
-
 OpenPartyStats:
 	call LoadStandardMenuHeader
 	call ClearSprites
@@ -613,7 +452,6 @@ MonMenu_Fly:
 	jr z, .Fail
 	cp $0
 	jr z, .Error
-	farcall StubbedTrainerRankings_Fly
 	ld b, $4
 	ld a, $2
 	ret
@@ -624,10 +462,6 @@ MonMenu_Fly:
 
 .Error:
 	ld a, $0
-	ret
-
-.NoReload: ; unreferenced
-	ld a, $1
 	ret
 
 MonMenu_Flash:

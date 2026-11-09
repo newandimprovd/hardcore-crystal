@@ -64,16 +64,6 @@ ScrollTileRightLeft:
 	jr nz, ScrollTileLeft
 	jr ScrollTileRight
 
-ScrollTileUpDown: ; unreferenced
-; Scroll up for 4 ticks, then down for 4 ticks.
-	ld a, [wTileAnimationTimer]
-	inc a
-	and %111
-	ld [wTileAnimationTimer], a
-	and %100
-	jr nz, ScrollTileDown
-	jr ScrollTileUp
-
 ScrollTileLeft:
 	ld h, d
 	ld l, e
@@ -99,32 +89,6 @@ rept 4
 	ld [hli], a
 endr
 	dec c
-	jr nz, .loop
-	ret
-
-ScrollTileUp:
-	ld h, d
-	ld l, e
-	ld d, [hl]
-	inc hl
-	ld e, [hl]
-	ld bc, TILE_SIZE - 2
-	add hl, bc
-	ld a, TILE_SIZE / 4
-.loop
-	ld c, [hl]
-	ld [hl], e
-	dec hl
-	ld b, [hl]
-	ld [hl], d
-	dec hl
-	ld e, [hl]
-	ld [hl], c
-	dec hl
-	ld d, [hl]
-	ld [hl], b
-	dec hl
-	dec a
 	jr nz, .loop
 	ret
 

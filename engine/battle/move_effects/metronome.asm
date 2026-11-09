@@ -13,7 +13,7 @@ BattleCommand_Metronome:
 	call LoadMoveAnim
 
 .GetMove:
-	call BattleRandom
+	call Random
 
 ; No invalid moves.
 	cp NUM_ATTACKS + 1

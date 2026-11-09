@@ -64,7 +64,7 @@ BattleCommand_Conversion:
 
 .done
 .loop3
-	call BattleRandom
+	call Random
 	maskbits NUM_MOVES
 	ld c, a
 	ld b, 0

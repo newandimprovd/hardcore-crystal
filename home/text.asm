@@ -128,17 +128,6 @@ SpeechTextbox::
 	ld c, TEXTBOX_INNERW
 	jp Textbox
 
-GameFreakText:: ; unreferenced
-	text "ゲームフりーク！" ; "GAMEFREAK!"
-	done
-
-RadioTerminator::
-	ld hl, .stop
-	ret
-
-.stop:
-	text_end
-
 PrintText::
 	call SetUpTextbox
 	; fallthrough
@@ -177,10 +166,6 @@ PlaceNextChar::
 	pop hl
 	ret
 
-DummyChar:: ; unreferenced
-	pop de
-	; fallthrough
-
 NextChar::
 	inc de
 	jp PlaceNextChar
@@ -205,7 +190,6 @@ MACRO dict
 	endc
 ENDM
 
-	dict '<MOBILE>',  MobileScriptChar
 	dict '<LINE>',    LineChar
 	dict '<NEXT>',    NextLineChar
 	dict '<CR>',      CarriageReturnChar
@@ -243,14 +227,7 @@ ENDM
 	dict '<PLAY_G>',  PlaceGenderedPlayerName
 	dict 'ﾟ',         .place ; should be .diacritic
 	dict 'ﾞ',         .place ; should be .diacritic
-	jr .not_diacritic
 
-.diacritic ; unreferenced
-	ld b, a
-	call Diacritic
-	jp NextChar
-
-.not_diacritic
 	cp FIRST_REGULAR_TEXT_CHAR
 	jr nc, .place
 ; dakuten or handakuten
@@ -287,12 +264,6 @@ ENDM
 	ld [hli], a
 	call PrintLetterDelay
 	jp NextChar
-
-MobileScriptChar::
-	ld c, l
-	ld b, h
-	farcall RunMobileScript
-	jp PlaceNextChar
 
 MACRO print_name
 	push de
@@ -347,9 +318,6 @@ PlaceBattlersName:
 PlaceEnemysName::
 	push de
 
-	ld a, [wLinkMode]
-	and a
-	jr nz, .linkbattle
 
 	ld a, [wTrainerClass]
 	cp RIVAL1
@@ -385,10 +353,6 @@ PlaceEnemysName::
 
 .rival
 	ld de, wRivalName
-	jr PlaceCommandCharacter
-
-.linkbattle
-	ld de, wOTClassName
 	jr PlaceCommandCharacter
 
 HC_StringLength:
@@ -506,14 +470,7 @@ LineChar::
 Paragraph::
 	push de
 
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jr z, .linkbattle
-	cp LINK_MOBILE
-	jr z, .linkbattle
 	call LoadBlinkingCursor
-
-.linkbattle
 	call Text_WaitBGMap
 	call PromptButton
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
@@ -527,21 +484,14 @@ Paragraph::
 	jp NextChar
 
 _ContText::
-	ld a, [wLinkMode]
-	or a
-	jr nz, .communication
 	call LoadBlinkingCursor
-
-.communication
 	call Text_WaitBGMap
 
 	push de
 	call PromptButton
 	pop de
 
-	ld a, [wLinkMode]
-	or a
-	call z, UnloadBlinkingCursor
+	call UnloadBlinkingCursor
 	; fallthrough
 
 _ContTextNoPause::
@@ -573,21 +523,9 @@ PlaceDexEnd::
 	ret
 
 PromptText::
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jr z, .ok
-	cp LINK_MOBILE
-	jr z, .ok
 	call LoadBlinkingCursor
-
-.ok
 	call Text_WaitBGMap
 	call PromptButton
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jr z, DoneText
-	cp LINK_MOBILE
-	jr z, DoneText
 	call UnloadBlinkingCursor
 
 DoneText::
@@ -850,12 +788,6 @@ TextCommand_LOW::
 
 TextCommand_PROMPT_BUTTON::
 ; wait for button press; show arrow
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jp z, TextCommand_WAIT_BUTTON
-	cp LINK_MOBILE
-	jp z, TextCommand_WAIT_BUTTON
-
 	push hl
 	call LoadBlinkingCursor
 	push bc
@@ -954,18 +886,6 @@ TextCommand_SOUND::
 	pop de
 
 .done
-	pop hl
-	pop bc
-	ret
-
-TextCommand_CRY:: ; unreferenced
-; play a pokemon cry
-	push de
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	call PlayMonCry
-	pop de
 	pop hl
 	pop bc
 	ret

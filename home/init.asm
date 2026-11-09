@@ -52,9 +52,6 @@ Init::
 	ldh [rTAC], a
 	ld [wBetaTitleSequenceOpeningType], a
 
-	ld a, %100 ; Start timer at 4096Hz
-	ldh [rTAC], a
-
 .wait
 	ldh a, [rLY]
 	cp LY_VBLANK + 1
@@ -129,9 +126,6 @@ Init::
 	; OBJ on
 	; BG on
 	ldh [rLCDC], a
-
-	ld a, CONNECTION_NOT_ESTABLISHED
-	ldh [hSerialConnectionStatus], a
 
 	farcall InitCGBPals
 
