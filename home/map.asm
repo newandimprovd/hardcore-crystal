@@ -1324,17 +1324,10 @@ LoadTilesetGFX::
 	pop af
 	ldh [rWBK], a
 
-; These tilesets support dynamic per-mapgroup roof tiles.
+; Only the Johto tileset supports dynamic per-mapgroup roof tiles.
 	ld a, [wMapTileset]
 	cp TILESET_JOHTO
-	jr z, .load_roof
-	cp TILESET_JOHTO_MODERN
-	jr z, .load_roof
-	cp TILESET_BATTLE_TOWER_OUTSIDE
-	jr z, .load_roof
-	jr .skip_roof
-
-.load_roof
+	jr nz, .skip_roof
 	farcall LoadMapGroupRoof
 
 .skip_roof
