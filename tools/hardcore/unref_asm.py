@@ -30,10 +30,12 @@ for u in used:
     if u.endswith(ASSET): incstems.add(stem(u))
 tracked = set(os.path.normpath(x) for x in subprocess.run(["git", "ls-files"], capture_output=True, text=True).stdout.split("\n") if x)
 dead = []
+BUILD_FILES = {"rgbdscheck.asm", "test_config.asm", "includes.asm"}   # named by the Makefile / test harness, not by an INCLUDE
 for d, ds, fs in os.walk("."):
     ds[:] = [x for x in ds if x not in (".git", "tools", "scratch", "__pycache__", "docs")]
     for f in fs:
         p = os.path.normpath(os.path.join(d, f))
+        if p in BUILD_FILES or p.startswith("vc" + os.sep): continue
         if p not in tracked: continue          # build products (.2bpp, .lz ...) are made from the tracked sources
         if f.endswith((".asm", ".inc")) and p not in used and p != "includes.asm":
             dead.append(p)

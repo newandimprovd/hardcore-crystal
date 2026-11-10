@@ -346,18 +346,6 @@ GetSpriteAnimVTile:
 	pop hl
 	ret
 
-_ReinitSpriteAnimFrame::
-	ld hl, SPRITEANIMSTRUCT_FRAMESET_ID
-	add hl, bc
-	ld [hl], a
-	ld hl, SPRITEANIMSTRUCT_DURATION
-	add hl, bc
-	ld [hl], 0
-	ld hl, SPRITEANIMSTRUCT_FRAME
-	add hl, bc
-	ld [hl], -1
-	ret
-
 GetSpriteAnimFrame:
 .loop
 	ld hl, SPRITEANIMSTRUCT_DURATION
