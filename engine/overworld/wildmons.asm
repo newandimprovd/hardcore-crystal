@@ -284,15 +284,6 @@ ChooseWildEncounter:
 	call ValidateTempWildMonSpecies
 	jr c, .nowildbattle
 
-	ld a, b
-	cp UNOWN
-	jr nz, .done
-
-	ld a, [wUnlockedUnowns]
-	and a
-	jr z, .nowildbattle
-
-.done
 	jr .loadwildmon
 
 .nowildbattle

@@ -186,10 +186,6 @@ GetMonSprite:
 
 	cp SPRITE_POKEMON
 	jr c, .Normal
-	cp SPRITE_DAY_CARE_MON_1
-	jr z, .BreedMon1
-	cp SPRITE_DAY_CARE_MON_2
-	jr z, .BreedMon2
 	cp SPRITE_VARS
 	jr nc, .Variable
 	jr .Icon
@@ -206,13 +202,6 @@ GetMonSprite:
 	add hl, de
 	ld a, [hl]
 	jr .Mon
-
-.BreedMon1
-	ld a, [wBreedMon1Species]
-	jr .Mon
-
-.BreedMon2
-	ld a, [wBreedMon2Species]
 
 .Mon:
 	ld e, a

@@ -24,3 +24,6 @@ for k, v in sorted(seen.items()):
     print(f"{len(v):3d}  {k}   e.g. {v[0][0][:110]}  {' '.join(v[0][1][:1])}")
 print("distinct sources:", len(seen), "total errors:", sum(len(v) for v in seen.values()))
 PY
+# make-level failures (missing rule, link failure) have no "error:" line the parser above recognises
+grep -E "^make: \*\*\*|Linking failed|^error|ERROR" /home/claude/scratch/builderrs.log | head -5
+if [ ! -s pokecrystal11.gbc ] || [ -n "$(find pokecrystal11.gbc -mmin +2 2>/dev/null)" ]; then echo "WARNING: pokecrystal11.gbc was not rebuilt just now"; fi

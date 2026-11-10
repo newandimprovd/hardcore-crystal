@@ -14,7 +14,6 @@ rom_obj := \
 	data/text/common.o \
 	data/maps/map_data.o \
 	data/pokemon/dex_entries.o \
-	data/pokemon/egg_moves.o \
 	data/pokemon/evos_attacks.o \
 	engine/movie/credits.o \
 	engine/overworld/events.o \
@@ -86,7 +85,6 @@ clean: tidy
 	        -o -name "*.sgb.tilemap" \) \
 	     -delete
 	find gfx/pokemon -mindepth 1 \
-	     ! -path "gfx/pokemon/unown/*" \
 	     \( -name "bitmask.asm" \
 	        -o -name "frames.asm" \
 	        -o -name "front.animated.tilemap" \
@@ -237,15 +235,6 @@ gfx/trainers/%.2bpp: gfx/trainers/%.png gfx/trainers/%.gbcpal
 gfx/pokemon/egg/front.2bpp: gfx/pokemon/egg/front.png gfx/pokemon/egg/front.gbcpal
 gfx/pokemon/egg/front.2bpp: RGBGFXFLAGS += --colors gbc:$(word 2,$^)
 
-# Unown letters share one normal.gbcpal
-unown_pngs := $(wildcard gfx/pokemon/unown_*/front.png) $(wildcard gfx/pokemon/unown_*/back.png)
-$(foreach png, $(unown_pngs),\
-	$(eval $(png:.png=.2bpp): $(png) gfx/pokemon/unown/normal.gbcpal))
-gfx/pokemon/unown_%/back.2bpp: RGBGFXFLAGS += --colors gbc:$(word 2,$^)
-gfx/pokemon/unown_%/front.2bpp: RGBGFXFLAGS += --colors gbc:$(word 2,$^)
-gfx/pokemon/unown/normal.gbcpal: $(subst .png,.gbcpal,$(unown_pngs))
-	tools/gbcpal $(tools/gbcpal) $@ $^
-
 
 ### Misc file-specific graphics rules
 
@@ -265,11 +254,6 @@ gfx/trainers/swimmer_m.gbcpal: tools/gbcpal += --reverse
 gfx/new_game/shrink1.2bpp: RGBGFXFLAGS += --columns
 gfx/new_game/shrink2.2bpp: RGBGFXFLAGS += --columns
 
-gfx/mail/dragonite.1bpp: tools/gfx += --remove-whitespace
-gfx/mail/large_note.1bpp: tools/gfx += --remove-whitespace
-gfx/mail/surf_mail_border.1bpp: tools/gfx += --remove-whitespace
-gfx/mail/flower_mail_border.1bpp: tools/gfx += --remove-whitespace
-gfx/mail/litebluemail_border.1bpp: tools/gfx += --remove-whitespace
 
 gfx/pokedex/pokedex.2bpp: tools/gfx += --trim-whitespace
 gfx/pokedex/pokedex_sgb.2bpp: tools/gfx += --trim-whitespace
@@ -285,16 +269,9 @@ gfx/title/crystal.2bpp: tools/gfx += --interleave --png=$<
 gfx/title/old_fg.2bpp: tools/gfx += --interleave --png=$<
 gfx/title/logo.2bpp: RGBGFXFLAGS += --trim-end 4
 
-gfx/trade/ball.2bpp: tools/gfx += --remove-whitespace
-gfx/trade/game_boy.2bpp: tools/gfx += --remove-duplicates --preserve=0x23,0x27
 gfx/trade/game_boy_cable.2bpp: gfx/trade/game_boy.2bpp gfx/trade/link_cable.2bpp ; cat $^ > $@
 
-gfx/slots/slots_1.2bpp: tools/gfx += --trim-whitespace
-gfx/slots/slots_2.2bpp: tools/gfx += --interleave --png=$<
-gfx/slots/slots_3.2bpp: tools/gfx += --interleave --png=$< --remove-duplicates --keep-whitespace --remove-xflip
 
-gfx/card_flip/card_flip_1.2bpp: tools/gfx += --trim-whitespace
-gfx/card_flip/card_flip_2.2bpp: tools/gfx += --remove-whitespace
 
 gfx/battle_anims/angels.2bpp: tools/gfx += --trim-whitespace
 gfx/battle_anims/beam.2bpp: tools/gfx += --remove-xflip --remove-yflip --remove-whitespace
@@ -323,8 +300,6 @@ gfx/trainer_card/chris_card.2bpp: RGBGFXFLAGS += --columns
 gfx/trainer_card/kris_card.2bpp: RGBGFXFLAGS += --columns
 gfx/trainer_card/leaders.2bpp: tools/gfx += --trim-whitespace
 
-gfx/overworld/chris_fish.2bpp: tools/gfx += --trim-whitespace
-gfx/overworld/kris_fish.2bpp: tools/gfx += --trim-whitespace
 
 gfx/sprites/big_onix.2bpp: tools/gfx += --remove-whitespace --remove-xflip
 
@@ -335,17 +310,6 @@ gfx/font/unused_bold_font.1bpp: tools/gfx += --trim-whitespace
 gfx/sgb/sgb_border.2bpp: tools/gfx += --trim-whitespace
 gfx/sgb/sgb_border.sgb.tilemap: gfx/sgb/sgb_border.bin ; tr < $< -d '\000' > $@
 
-gfx/mobile/ascii_font.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/dialpad.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/dialpad_cursor.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/electro_ball.2bpp: tools/gfx += --remove-duplicates --remove-xflip --preserve=0x39
-gfx/mobile/mobile_splash.2bpp: tools/gfx += --remove-duplicates --remove-xflip
-gfx/mobile/card.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/card_2.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/card_folder.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/phone_tiles.2bpp: tools/gfx += --remove-whitespace
-gfx/mobile/pichu_animated.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/stadium2_n64.2bpp: tools/gfx += --trim-whitespace
 
 
 ### Catch-all graphics rules

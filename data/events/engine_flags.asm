@@ -34,7 +34,6 @@ EngineFlags:
 
 	engine_flag wKantoBadges, EARTHBADGE
 
-	; unown sets (see data/wild/unlocked_unowns.asm)
 
 	; fly
 	engine_flag wVisitedSpawns, SPAWN_NEW_BARK

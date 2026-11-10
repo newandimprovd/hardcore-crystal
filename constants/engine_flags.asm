@@ -25,7 +25,6 @@
 	const ENGINE_RISINGBADGE
 ; wKantoBadges
 	const ENGINE_EARTHBADGE
-; wUnlockedUnowns
 ; wVisitedSpawns
 	const ENGINE_FLYPOINT_NEW_BARK
 	const ENGINE_FLYPOINT_CHERRYGROVE

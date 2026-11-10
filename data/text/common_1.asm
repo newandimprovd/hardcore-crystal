@@ -1,31 +1,3 @@
-_FruitBearingTreeText::
-	text "It's a fruit-"
-	line "bearing tree."
-	done
-
-_HeyItsFruitText::
-	text "Hey! It's"
-	line "@"
-	text_ram wStringBuffer3
-	text "!"
-	done
-
-_ObtainedFruitText::
-	text "Obtained"
-	line "@"
-	text_ram wStringBuffer3
-	text "!"
-	done
-
-_FruitPackIsFullText::
-	text "But the PACK is"
-	line "full…"
-	done
-
-_NothingHereText::
-	text "There's nothing"
-	line "here…"
-	done
 
 _RecoveredSomeHPText::
 	text_ram wStringBuffer1

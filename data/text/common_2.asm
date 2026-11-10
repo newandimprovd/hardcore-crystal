@@ -546,32 +546,10 @@ _EndUsedMove5Text::
 	text "!"
 	done
 
-Text_BreedHuh::
-	text "Huh?"
-
 	para "@"
 	text_end
 
-_BreedClearboxText::
-	text_start
-	done
-
-_BreedEggHatchText::
-	text_ram wStringBuffer1
-	text " came"
-	line "out of its EGG!@"
-	sound_caught_mon
-	text_promptbutton
-	text_end
-
 	text_end ; unreferenced
-
-_BreedAskNicknameText::
-	text "Give a nickname to"
-	line "@"
-	text_ram wStringBuffer1
-	text "?"
-	done
 
 	text_end ; unreferenced
 

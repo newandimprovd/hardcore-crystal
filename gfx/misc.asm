@@ -45,11 +45,6 @@ GameFreakDittoGFX::
 INCBIN "gfx/splash/ditto.2bpp.lz"
 
 
-SECTION "Unown Font", ROMX
-
-UnownFont::
-INCBIN "gfx/font/unown_font.2bpp"
-
 
 SECTION "Pokégear GFX", ROMX
 

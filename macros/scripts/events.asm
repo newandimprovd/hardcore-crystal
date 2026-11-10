@@ -647,12 +647,6 @@ MACRO pokemart
 	dw \1 ; mart_id
 ENDM
 
-	const fruittree_command ; $9b
-MACRO fruittree
-	db fruittree_command
-	db \1 ; tree_id
-ENDM
-
 	const checkphonecall_command ; $9d
 MACRO checkphonecall
 	db checkphonecall_command

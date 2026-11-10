@@ -26,7 +26,6 @@ IconPointers:
 	dw BulbasaurIcon
 	dw CharmanderIcon
 	dw CaterpillarIcon
-	dw UnownIcon
 	dw GeodudeIcon
 	dw FighterIcon
 	dw EggIcon

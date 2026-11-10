@@ -285,14 +285,6 @@ PokeAnim_InitPicAttributes:
 	call GetFarWRAMByte
 	ld [wPokeAnimSpecies], a
 
-	ld a, BANK(wUnownLetter)
-	ld hl, wUnownLetter
-	call GetFarWRAMByte
-	ld [wPokeAnimUnownLetter], a
-
-	call PokeAnim_GetSpeciesOrUnown
-	ld [wPokeAnimSpeciesOrUnown], a
-
 	call PokeAnim_GetFrontpicDims
 	ld a, c
 	ld [wPokeAnimFrontpicHeight], a
@@ -420,11 +412,6 @@ PokeAnim_StopWaitAnim:
 	ld a, [wPokeAnimJumptableIndex]
 	dec a
 	ld [wPokeAnimJumptableIndex], a
-	ret
-
-PokeAnim_IsUnown:
-	ld a, [wPokeAnimSpecies]
-	cp UNOWN
 	ret
 
 PokeAnim_IsEgg:
@@ -858,15 +845,9 @@ GetMonAnimPointer:
 	call PokeAnim_IsEgg
 	jr z, .egg
 
-	ld c, BANK(UnownAnimationPointers) ; aka BANK(UnownAnimationIdlePointers)
-	ld hl, UnownAnimationPointers
-	ld de, UnownAnimationIdlePointers
-	call PokeAnim_IsUnown
-	jr z, .unown
 	ld c, BANK(AnimationPointers) ; aka BANK(AnimationIdlePointers)
 	ld hl, AnimationPointers
 	ld de, AnimationIdlePointers
-.unown
 
 	ld a, [wPokeAnimIdleFlag]
 	and a
@@ -875,7 +856,7 @@ GetMonAnimPointer:
 	ld l, e
 .idles
 
-	ld a, [wPokeAnimSpeciesOrUnown]
+	ld a, [wPokeAnimSpecies]
 	dec a
 	ld e, a
 	ld d, 0
@@ -927,11 +908,6 @@ GetMonFramesPointer:
 	call PokeAnim_IsEgg
 	jr z, .egg
 
-	call PokeAnim_IsUnown
-	ld b, BANK(UnownFramesPointers)
-	ld c, BANK(UnownsFrames)
-	ld hl, UnownFramesPointers
-	jr z, .got_frames
 	; Hardcore Crystal: the bank of each frame set comes from FramesBanks, so a species can
 	; reuse the animation frames of any other species.
 	ld a, [wPokeAnimSpecies]
@@ -945,11 +921,10 @@ GetMonFramesPointer:
 	ld c, a
 	ld b, BANK(FramesPointers)
 	ld hl, FramesPointers
-.got_frames
 	ld a, c
 	ld [wPokeAnimFramesBank], a
 
-	ld a, [wPokeAnimSpeciesOrUnown]
+	ld a, [wPokeAnimSpecies]
 	dec a
 	ld e, a
 	ld d, 0
@@ -978,16 +953,11 @@ GetMonBitmaskPointer:
 	call PokeAnim_IsEgg
 	jr z, .egg
 
-	call PokeAnim_IsUnown
-	ld a, BANK(UnownBitmasksPointers)
-	ld hl, UnownBitmasksPointers
-	jr z, .unown
 	ld a, BANK(BitmasksPointers)
 	ld hl, BitmasksPointers
-.unown
 	ld [wPokeAnimBitmaskBank], a
 
-	ld a, [wPokeAnimSpeciesOrUnown]
+	ld a, [wPokeAnimSpecies]
 	dec a
 	ld e, a
 	ld d, 0
@@ -1010,16 +980,6 @@ GetMonBitmaskPointer:
 	ld [wPokeAnimBitmaskAddr], a
 	ld a, h
 	ld [wPokeAnimBitmaskAddr + 1], a
-	ret
-
-PokeAnim_GetSpeciesOrUnown:
-	call PokeAnim_IsUnown
-	jr z, .unown
-	ld a, [wPokeAnimSpecies]
-	ret
-
-.unown
-	ld a, [wPokeAnimUnownLetter]
 	ret
 
 Unused_HOF_AnimateAlignedFrontpic:

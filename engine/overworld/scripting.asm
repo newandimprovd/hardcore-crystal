@@ -166,7 +166,6 @@ ScriptCommandTable:
 	dw Script_reloadend                  ; 92
 	dw Script_endall                     ; 93
 	dw Script_pokemart                   ; 94
-	dw Script_fruittree                  ; 9b
 	dw Script_checkphonecall             ; 9d
 	dw Script_verbosegiveitem            ; 9e
 	dw Script_halloffame                 ; a1
@@ -447,13 +446,6 @@ Script_pokemart:
 	ld b, a
 	farcall OpenMartDialog
 	ret
-
-Script_fruittree:
-	call GetScriptByte
-	ld [wCurFruitTree], a
-	ld b, BANK(FruitTreeScript)
-	ld hl, FruitTreeScript
-	jp ScriptJump
 
 Script_trainertext:
 	call GetScriptByte

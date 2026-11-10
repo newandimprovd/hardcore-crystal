@@ -93,8 +93,6 @@ GetMonSpecies:
 	jr z, .otpartymon
 	cp BOXMON
 	jr z, .boxmon
-	cp TEMPMON
-	jr z, .breedmon
 	; WILDMON
 
 .partymon
@@ -112,10 +110,6 @@ GetMonSpecies:
 	call .done
 	call CloseSRAM
 	ret
-
-.breedmon
-	ld a, [wBreedMon1Species]
-	jr .done2
 
 .done
 	ld d, 0

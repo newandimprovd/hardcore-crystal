@@ -12,7 +12,6 @@ SometimesFleeMons:
 	db DRAGONAIR
 	db TOGETIC
 	db UMBREON
-	db UNOWN
 	db SNUBBULL
 	db HERACROSS
 	db -1

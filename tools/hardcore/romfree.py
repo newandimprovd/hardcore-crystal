@@ -18,8 +18,12 @@ for line in open(p, errors="replace"):
     m = re.search(r"SECTION: \$[0-9a-f]+-\$[0-9a-f]+ \(\$([0-9a-f]+) bytes\)", line)
     if m and cur is not None:
         used[cur] = used.get(cur, 0) + int(m.group(1), 16)
+# a bank that holds no section at all has no EMPTY line in the map: it is completely free (16 KB)
+empty = [b for b in free if b != 0 and free[b] == 0 and used.get(b, 0) == 0]
+for b in empty:
+    free[b] = 0x4000
 tf = sum(free.values())
-print(f"ROM banks {len(free)}, free {tf} bytes ({tf // 1024} KB), used {sum(used.values())} bytes")
+print(f"ROM banks {len(free)}, free {tf} bytes ({tf // 1024} KB), of which {len(empty)} completely empty banks ({len(empty) * 16} KB)")
 if "-v" in sys.argv:
     for b in sorted(free):
         print(f"  bank {b:3d}: used {used.get(b, 0):5d}  free {free[b]:5d}")

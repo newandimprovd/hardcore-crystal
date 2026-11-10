@@ -36,32 +36,18 @@ CGBLayoutJumptable:
 	dw _CGB_PokegearPals
 	dw _CGB_StatsScreenHPPals
 	dw _CGB_Pokedex
-	dw _CGB_SlotMachine
-	dw _CGB_BetaTitleScreen
-	dw _CGB_GSIntro
 	dw _CGB_Diploma
 	dw _CGB_MapPals
 	dw _CGB_PartyMenu
 	dw _CGB_Evolution
-	dw _CGB_GSTitleScreen
-	dw _CGB_Unused0D
 	dw _CGB_MoveList
-	dw _CGB_BetaPikachuMinigame
 	dw _CGB_PokedexSearchOption
-	dw _CGB_BetaPoker
 	dw _CGB_Pokepic
-	dw _CGB_MagnetTrain
 	dw _CGB_PackPals
 	dw _CGB_TrainerCard
-	dw _CGB_PokedexUnownMode
 	dw _CGB_BillsPC
-	dw _CGB_UnownPuzzle
-	dw _CGB_GamefreakLogo
 	dw _CGB_PlayerOrMonFrontpicPals
-	dw _CGB_TradeTube
 	dw _CGB_TrainerOrMonFrontpicPals
-	dw _CGB_MysteryGift
-	dw _CGB_Unused1E
 	assert_table_length NUM_SCGB_LAYOUTS
 
 _CGB_BattleGrayscale:
@@ -337,105 +323,6 @@ _CGB_PokedexUnownMode:
 	ldh [hCGBPalUpdate], a
 	ret
 
-_CGB_SlotMachine:
-	ld hl, SlotMachinePals
-	ld de, wBGPals1
-	ld bc, 16 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	call WipeAttrmap
-	hlcoord 0, 2, wAttrmap
-	lb bc, 10, 3
-	ld a, $2 ; "3" palette
-	call FillBoxCGB
-	hlcoord 17, 2, wAttrmap
-	lb bc, 10, 3
-	ld a, $2 ; "3" palette
-	call FillBoxCGB
-	hlcoord 0, 4, wAttrmap
-	lb bc, 6, 3
-	ld a, $3 ; "2" palette
-	call FillBoxCGB
-	hlcoord 17, 4, wAttrmap
-	lb bc, 6, 3
-	ld a, $3 ; "2" palette
-	call FillBoxCGB
-	hlcoord 0, 6, wAttrmap
-	lb bc, 2, 3
-	ld a, $4 ; "1" palette
-	call FillBoxCGB
-	hlcoord 17, 6, wAttrmap
-	lb bc, 2, 3
-	ld a, $4 ; "1" palette
-	call FillBoxCGB
-	hlcoord 4, 2, wAttrmap
-	lb bc, 2, 12
-	ld a, $1 ; Vileplume palette
-	call FillBoxCGB
-	hlcoord 3, 2, wAttrmap
-	lb bc, 10, 1
-	ld a, $1 ; lights palette
-	call FillBoxCGB
-	hlcoord 16, 2, wAttrmap
-	lb bc, 10, 1
-	ld a, $1 ; lights palette
-	call FillBoxCGB
-	hlcoord 0, 12, wAttrmap
-	ld bc, 6 * SCREEN_WIDTH
-	ld a, $7 ; text palette
-	call ByteFill
-	call ApplyAttrmap
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
-_CGB_BetaTitleScreen:
-	ld hl, PalPacket_BetaTitleScreen + 1
-	call CopyFourPalettes
-	call WipeAttrmap
-	ld de, wOBPals1
-	ld a, PREDEFPAL_PACK
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
-	hlcoord 0, 6, wAttrmap
-	lb bc, 12, SCREEN_WIDTH
-	ld a, $1
-	call FillBoxCGB
-	call ApplyAttrmap
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
-_CGB_GSIntro:
-	ld b, 0
-	ld hl, .Jumptable
-	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	jp hl
-
-.Jumptable:
-	dw .ShellderLaprasScene
-	dw .JigglypuffPikachuScene
-	dw .StartersCharizardScene
-
-.ShellderLaprasScene:
-	ld hl, .ShellderLaprasBGPalette
-	ld de, wBGPals1
-	call LoadHLPaletteIntoDE
-	ld hl, .ShellderLaprasOBPals
-	ld de, wOBPals1
-	ld bc, 2 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
-	call WipeAttrmap
-	ret
-
-.ShellderLaprasBGPalette:
 INCLUDE "gfx/intro/gs_shellder_lapras_bg.pal"
 
 .ShellderLaprasOBPals:
@@ -462,17 +349,6 @@ INCLUDE "gfx/intro/gs_shellder_lapras_ob.pal"
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	call WipeAttrmap
-	ret
-
-_CGB_BetaPoker:
-	ld hl, BetaPokerPals
-	ld de, wBGPals1
-	ld bc, 5 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	call ApplyPals
-	call WipeAttrmap
-	call ApplyAttrmap
 	ret
 
 _CGB_Diploma:
@@ -536,53 +412,6 @@ _CGB_Evolution:
 	call ApplyPals
 	ld a, TRUE
 	ldh [hCGBPalUpdate], a
-	ret
-
-_CGB_GSTitleScreen:
-	ld hl, UnusedGSTitleBGPals
-	ld de, wBGPals1
-	ld bc, 5 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	ld hl, UnusedGSTitleOBPals
-	ld de, wOBPals1
-	ld bc, 2 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
-	ld a, SCGB_DIPLOMA
-	ld [wDefaultSGBLayout], a
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
-_CGB_Unused0D:
-	ld hl, PalPacket_Diploma + 1
-	call CopyFourPalettes
-	call WipeAttrmap
-	call ApplyAttrmap
-	ret
-
-_CGB_UnownPuzzle:
-	ld hl, PalPacket_UnownPuzzle + 1
-	call CopyFourPalettes
-	ld de, wOBPals1
-	ld a, PREDEFPAL_UNOWN_PUZZLE
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
-	ldh a, [rWBK]
-	push af
-	ld a, BANK(wOBPals1)
-	ldh [rWBK], a
-	ld hl, wOBPals1
-	ld a, LOW(palred 31 + palgreen 0 + palblue 0)
-	ld [hli], a
-	ld a, HIGH(palred 31 + palgreen 0 + palblue 0)
-	ld [hl], a
-	pop af
-	ldh [rWBK], a
-	call WipeAttrmap
-	call ApplyAttrmap
 	ret
 
 _CGB_TrainerCard:
@@ -714,16 +543,6 @@ _CGB_MoveList:
 	ldh [hCGBPalUpdate], a
 	ret
 
-_CGB_BetaPikachuMinigame:
-	ld hl, PalPacket_BetaPikachuMinigame + 1
-	call CopyFourPalettes
-	call WipeAttrmap
-	call ApplyAttrmap
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
 _CGB_PokedexSearchOption:
 	ld de, wBGPals1
 	ld a, PREDEFPAL_POKEDEX
@@ -824,41 +643,6 @@ _CGB_Pokepic:
 	call ApplyAttrmap
 	ret
 
-_CGB_MagnetTrain: ; unused
-	ld hl, PalPacket_MagnetTrain + 1
-	call CopyFourPalettes
-	call WipeAttrmap
-	hlcoord 0, 4, wAttrmap
-	lb bc, 10, SCREEN_WIDTH
-	ld a, PAL_BG_GREEN
-	call FillBoxCGB
-	hlcoord 0, 6, wAttrmap
-	lb bc, 6, SCREEN_WIDTH
-	ld a, PAL_BG_RED
-	call FillBoxCGB
-	call ApplyAttrmap
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
-_CGB_GamefreakLogo:
-	ld de, wBGPals1
-	ld a, PREDEFPAL_GAMEFREAK_LOGO_BG
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
-	ld hl, .GamefreakDittoPalette
-	ld de, wOBPals1
-	call LoadHLPaletteIntoDE
-	ld hl, .GamefreakDittoPalette
-	ld de, wOBPals1 palette 1
-	call LoadHLPaletteIntoDE
-	call WipeAttrmap
-	call ApplyAttrmap
-	call ApplyPals
-	ret
-
-.GamefreakDittoPalette:
 INCLUDE "gfx/splash/ditto.pal"
 
 _CGB_PlayerOrMonFrontpicPals:
@@ -872,30 +656,6 @@ _CGB_PlayerOrMonFrontpicPals:
 	call ApplyPals
 	ret
 
-_CGB_Unused1E:
-	ld de, wBGPals1
-	ld a, [wCurPartySpecies]
-	call GetMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
-	call WipeAttrmap
-	call ApplyAttrmap
-	ret
-
-_CGB_TradeTube:
-	ld hl, PalPacket_TradeTube + 1
-	call CopyFourPalettes
-	ld hl, PartyMenuOBPals
-	ld de, wOBPals1
-	ld bc, 1 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
-	ld de, wOBPals1 palette 7
-	ld a, PREDEFPAL_TRADE_TUBE
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
-	call WipeAttrmap
-	ret
-
 _CGB_TrainerOrMonFrontpicPals:
 	ld de, wBGPals1
 	ld a, [wCurPartySpecies]
@@ -907,38 +667,6 @@ _CGB_TrainerOrMonFrontpicPals:
 	call ApplyPals
 	ret
 
-_CGB_MysteryGift:
-	ld hl, .MysteryGiftPalettes
-	ld de, wBGPals1
-	ld bc, 2 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	call ApplyPals
-	call WipeAttrmap
-	hlcoord 3, 7, wAttrmap
-	lb bc, 8, 14
-	ld a, $1
-	call FillBoxCGB
-	hlcoord 1, 5, wAttrmap
-	lb bc, 1, 18
-	ld a, $1
-	call FillBoxCGB
-	hlcoord 1, 16, wAttrmap
-	lb bc, 1, 18
-	ld a, $1
-	call FillBoxCGB
-	hlcoord 0, 0, wAttrmap
-	lb bc, 17, 2
-	ld a, $1
-	call FillBoxCGB
-	hlcoord 18, 5, wAttrmap
-	lb bc, 12, 1
-	ld a, $1
-	call FillBoxCGB
-	call ApplyAttrmap
-	ret
-
-.MysteryGiftPalettes:
 INCLUDE "gfx/mystery_gift/mystery_gift.pal"
 
 GS_CGB_MysteryGift: ; unreferenced

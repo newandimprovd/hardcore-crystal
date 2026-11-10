@@ -335,7 +335,7 @@ endr
 	ld bc, PARTYMON_STRUCT_LENGTH - MON_MAXHP
 	call CopyBytes
 	pop hl
-	jr .registerunowndex
+	jr .done
 
 .generatestats
 	pop hl
@@ -343,21 +343,6 @@ endr
 	add hl, bc
 	ld b, FALSE
 	call CalcMonStats
-
-.registerunowndex
-	ld a, [wMonType]
-	and $f
-	jr nz, .done
-	ld a, [wCurPartySpecies]
-	cp UNOWN
-	jr nz, .done
-	ld hl, wPartyMon1DVs
-	ld a, [wPartyCount]
-	dec a
-	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
-	predef GetUnownLetter
-	callfar UpdateUnownDex
 
 .done
 	scf ; When this function returns, the carry flag indicates success vs failure.
@@ -456,22 +441,6 @@ AddTempmonToParty:
 	call AddNTimes
 	ld [hl], BASE_HAPPINESS
 .egg
-
-	ld a, [wCurPartySpecies]
-	cp UNOWN
-	jr nz, .done
-	ld hl, wPartyMon1DVs
-	ld a, [wPartyCount]
-	dec a
-	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
-	predef GetUnownLetter
-	callfar UpdateUnownDex
-	ld a, [wFirstUnownSeen]
-	and a
-	jr nz, .done
-	ld a, [wUnownLetter]
-	ld [wFirstUnownSeen], a
 .done
 
 	and a
@@ -481,19 +450,12 @@ SendGetMonIntoFromBox:
 ; Sents/Gets mon into/from Box depending on Parameter
 ; wPokemonWithdrawDepositParameter == 0: get mon into Party
 ; wPokemonWithdrawDepositParameter == 1: sent mon into Box
-; wPokemonWithdrawDepositParameter == 2: get mon from DayCare
-; wPokemonWithdrawDepositParameter == 3: put mon into DayCare
 
 	ld a, BANK(sBoxCount)
 	call OpenSRAM
 	ld a, [wPokemonWithdrawDepositParameter]
 	and a
 	jr z, .check_IfPartyIsFull
-	cp DAY_CARE_WITHDRAW
-	jr z, .check_IfPartyIsFull
-	cp DAY_CARE_DEPOSIT
-	ld hl, wBreedMon1Species
-	jr z, .breedmon
 
 	; we want to sent a mon into the Box
 	; so check if there's enough space
@@ -515,13 +477,7 @@ SendGetMonIntoFromBox:
 	ld c, a
 	ld b, 0
 	add hl, bc
-	ld a, [wPokemonWithdrawDepositParameter]
-	cp DAY_CARE_WITHDRAW
-	ld a, [wBreedMon1Species]
-	jr z, .okay1
 	ld a, [wCurPartySpecies]
-
-.okay1
 	ld [hli], a
 	ld [hl], $ff
 	ld a, [wPokemonWithdrawDepositParameter]
@@ -538,7 +494,6 @@ SendGetMonIntoFromBox:
 	dec a ; wPartyCount - 1
 	call AddNTimes
 
-.breedmon
 	push hl
 	ld e, l
 	ld d, h
@@ -547,9 +502,6 @@ SendGetMonIntoFromBox:
 	ld hl, sBoxMon1Species
 	ld bc, BOXMON_STRUCT_LENGTH
 	jr z, .okay3
-	cp DAY_CARE_WITHDRAW
-	ld hl, wBreedMon1Species
-	jr z, .okay4
 	ld hl, wPartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH
 
@@ -557,13 +509,9 @@ SendGetMonIntoFromBox:
 	ld a, [wCurPartyMon]
 	call AddNTimes
 
-.okay4
 	ld bc, BOXMON_STRUCT_LENGTH
 	call CopyBytes
 	ld a, [wPokemonWithdrawDepositParameter]
-	cp DAY_CARE_DEPOSIT
-	ld de, wBreedMon1OT
-	jr z, .okay5
 	dec a
 	ld hl, wPartyMonOTs
 	ld a, [wPartyCount]
@@ -577,27 +525,19 @@ SendGetMonIntoFromBox:
 	ld d, h
 	ld e, l
 
-.okay5
 	ld hl, sBoxMonOTs
 	ld a, [wPokemonWithdrawDepositParameter]
 	and a
 	jr z, .okay7
-	ld hl, wBreedMon1OT
-	cp DAY_CARE_WITHDRAW
-	jr z, .okay8
 	ld hl, wPartyMonOTs
 
 .okay7
 	ld a, [wCurPartyMon]
 	call SkipNames
 
-.okay8
 	ld bc, NAME_LENGTH
 	call CopyBytes
 	ld a, [wPokemonWithdrawDepositParameter]
-	cp DAY_CARE_DEPOSIT
-	ld de, wBreedMon1Nickname
-	jr z, .okay9
 	dec a
 	ld hl, wPartyMonNicknames
 	ld a, [wPartyCount]
@@ -611,21 +551,16 @@ SendGetMonIntoFromBox:
 	ld d, h
 	ld e, l
 
-.okay9
 	ld hl, sBoxMonNicknames
 	ld a, [wPokemonWithdrawDepositParameter]
 	and a
 	jr z, .okay11
-	ld hl, wBreedMon1Nickname
-	cp DAY_CARE_WITHDRAW
-	jr z, .okay12
 	ld hl, wPartyMonNicknames
 
 .okay11
 	ld a, [wCurPartyMon]
 	call SkipNames
 
-.okay12
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 	pop hl
@@ -633,8 +568,6 @@ SendGetMonIntoFromBox:
 	ld a, [wPokemonWithdrawDepositParameter]
 	cp PC_DEPOSIT
 	jr z, .took_out_of_box
-	cp DAY_CARE_DEPOSIT
-	jp z, .CloseSRAM_And_ClearCarryFlag
 
 	push hl
 	srl a
@@ -874,14 +807,6 @@ SendMonIntoBox:
 	ld a, [wCurPartySpecies]
 	dec a
 	call SetSeenAndCaughtMon
-	ld a, [wCurPartySpecies]
-	cp UNOWN
-	jr nz, .not_unown
-	ld hl, sBoxMon1DVs
-	predef GetUnownLetter
-	callfar UpdateUnownDex
-
-.not_unown
 	ld hl, sBoxMon1Moves
 	ld de, wTempMonMoves
 	ld bc, NUM_MOVES

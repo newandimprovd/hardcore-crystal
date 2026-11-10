@@ -48,7 +48,6 @@ ROMX $07
 ROMX $08
 	"Clock Reset"
 	"Tileset Data 3"
-	"Egg Moves"
 ROMX $09
 	"bank9"
 ROMX $0a
@@ -194,7 +193,6 @@ ROMX $48
 	"Pics 1"
 ROMX $49
 	org $4000
-	"Unown Pic Pointers"
 	"Pics 2"
 ROMX $4a
 	"Pics 3"
@@ -295,7 +293,6 @@ ROMX $74
 ROMX $75
 	"Events" ; HC: moved out of bank $25, which the generated map tables filled
 ROMX $77
-	"Unown Font"
 	"Print Party"
 	"Tileset Data 7"
 	"bank77"

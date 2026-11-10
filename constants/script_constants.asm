@@ -59,7 +59,6 @@ DEF STRING_BUFFER_LENGTH EQU 19
 	const VAR_WEEKDAY          ; 0b
 	const VAR_MAPGROUP         ; 0c
 	const VAR_MAPNUMBER        ; 0d
-	const VAR_UNOWNCOUNT       ; 0e
 	const VAR_ENVIRONMENT      ; 0f
 	const VAR_BOXSPACE         ; 10
 	const VAR_CONTESTMINUTES   ; 11
@@ -90,7 +89,6 @@ DEF RETVAR_EXECUTE EQU 2 << 6
 	const PLAYEREVENT_WARP
 	const PLAYEREVENT_FALL
 	const PLAYEREVENT_WHITEOUT
-	const PLAYEREVENT_HATCH
 	const PLAYEREVENT_JOYCHANGEFACING
 DEF NUM_PLAYER_EVENTS EQU const_value
 
@@ -185,41 +183,6 @@ DEF NUM_EMOTES EQU const_value
 DEF EMOTE_FROM_MEM EQU -1
 DEF EMOTE_LENGTH EQU 6
 
-; fruittree arguments
-; FruitTreeItems indexes (see data/items/fruit_trees.asm)
-	const_def 1
-	const FRUITTREE_ROUTE_29      ; 01
-	const FRUITTREE_ROUTE_30_1    ; 02
-	const FRUITTREE_ROUTE_38      ; 03
-	const FRUITTREE_ROUTE_46_1    ; 04
-	const FRUITTREE_ROUTE_30_2    ; 05
-	const FRUITTREE_ROUTE_33      ; 06
-	const FRUITTREE_ROUTE_31      ; 07
-	const FRUITTREE_ROUTE_43      ; 08
-	const FRUITTREE_VIOLET_CITY   ; 09
-	const FRUITTREE_ROUTE_46_2    ; 0a
-	const FRUITTREE_ROUTE_35      ; 0b
-	const FRUITTREE_ROUTE_45      ; 0c
-	const FRUITTREE_ROUTE_36      ; 0d
-	const FRUITTREE_ROUTE_26      ; 0e
-	const FRUITTREE_ROUTE_39      ; 0f
-	const FRUITTREE_ROUTE_44      ; 10
-	const FRUITTREE_ROUTE_37_1    ; 11
-	const FRUITTREE_ROUTE_37_2    ; 12
-	const FRUITTREE_ROUTE_37_3    ; 13
-	const FRUITTREE_AZALEA_TOWN   ; 14
-	const FRUITTREE_ROUTE_42_1    ; 15
-	const FRUITTREE_ROUTE_42_2    ; 16
-	const FRUITTREE_ROUTE_42_3    ; 17
-	const FRUITTREE_ROUTE_11      ; 18
-	const FRUITTREE_ROUTE_2       ; 19
-	const FRUITTREE_ROUTE_1       ; 1a
-	const FRUITTREE_ROUTE_8       ; 1b
-	const FRUITTREE_PEWTER_CITY_1 ; 1c
-	const FRUITTREE_PEWTER_CITY_2 ; 1d
-	const FRUITTREE_FUCHSIA_CITY  ; 1e
-DEF NUM_FRUIT_TREES EQU const_value - 1
-
 ; swarm arguments
 ; StoreSwarmMapIndices arguments
 	const_def
@@ -273,25 +236,6 @@ DEF BUG_CONTESTANT_SIZE EQU 4
 	const HEALMACHINE_POKECENTER   ; 0
 	const HEALMACHINE_ELMS_LAB     ; 1
 	const HEALMACHINE_HALL_OF_FAME ; 2
-
-; UnownPuzzle setval arguments
-; LoadUnownPuzzlePiecesGFX.LZPointers indexes (see engine/games/unown_puzzle.asm)
-	const_def
-	const UNOWNPUZZLE_KABUTO     ; 0
-	const UNOWNPUZZLE_OMANYTE    ; 1
-	const UNOWNPUZZLE_AERODACTYL ; 2
-	const UNOWNPUZZLE_HO_OH      ; 3
-DEF NUM_UNOWN_PUZZLES EQU const_value
-
-; DisplayUnownWords setval arguments
-; UnownWalls and MenuHeaders_UnownWalls indexes (see data/events/unown_walls.asm)
-	const_def
-	const UNOWNWORDS_ESCAPE ; 0
-	const UNOWNWORDS_LIGHT  ; 1
-	const UNOWNWORDS_WATER  ; 2
-	const UNOWNWORDS_HO_OH  ; 3
-DEF NUM_UNOWN_WALLS EQU const_value
-DEF UNOWN_WALL_MENU_HEADER_SIZE EQU 5
 
 ; MoveTutor setval arguments
 	const_def 1

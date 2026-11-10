@@ -11,7 +11,6 @@ DEF AUTO_INPUT EQU $ff
 	const DEXMODE_NEW
 	const DEXMODE_OLD
 	const DEXMODE_ABC
-	const DEXMODE_UNOWN
 
 ; wMonType::
 	const_def
@@ -349,14 +348,6 @@ DEF DAYCAREMAN_ACTIVE_F          EQU 7
 ; wDayCareLady::
 DEF DAYCARELADY_HAS_MON_F        EQU 0
 DEF DAYCARELADY_ACTIVE_F         EQU 7
-
-; wUnlockedUnowns::
-	const_def
-	const UNLOCKED_UNOWNS_A_TO_K_F
-	const UNLOCKED_UNOWNS_L_TO_R_F
-	const UNLOCKED_UNOWNS_S_TO_W_F
-	const UNLOCKED_UNOWNS_X_TO_Z_F
-DEF NUM_UNLOCKED_UNOWN_SETS EQU const_value
 
 ; sRTCStatusFlags::
 	const_def 5

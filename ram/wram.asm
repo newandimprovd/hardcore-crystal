@@ -639,9 +639,6 @@ wDexArrowCursorPosIndex:: db
 wDexArrowCursorDelayCounter:: db
 wDexArrowCursorBlinkCounter:: db
 wDexSearchSlowpokeFrame:: db
-wUnlockedUnownMode:: db
-wDexCurUnownIndex:: db
-wDexUnownCount:: db
 wDexConvertedMonType:: db ; mon type converted from dex search mon type
 wDexListingScrollOffsetBackup:: db
 wDexListingCursorBackup:: db
@@ -2005,7 +2002,6 @@ wForcedSwitch:: db
 
 wTrainerClass:: db
 
-wUnownLetter:: db
 
 wMoveSelectionMenuType:: db
 
@@ -2495,7 +2491,6 @@ wUnusedDailyFlag:: db
 wTimerEventStartDay:: db
 	ds 3
 
-wFruitTreeFlags:: flag_array NUM_FRUIT_TREES
 
 	ds 2
 
@@ -2610,9 +2605,6 @@ wEndPokedexCaught::
 wPokedexSeen:: flag_array NUM_POKEMON
 wEndPokedexSeen::
 
-wUnownDex:: ds NUM_UNOWN
-wUnlockedUnowns:: db
-wFirstUnownSeen:: db
 
 wDayCareMan::
 ; bit 7: active
@@ -2675,7 +2667,6 @@ wPokeAnimStruct::
 wPokeAnimSceneIndex:: db
 wPokeAnimPointer:: dw
 wPokeAnimSpecies:: db
-wPokeAnimUnownLetter:: db
 wPokeAnimSpeciesOrUnown:: db
 wPokeAnimGraphicStartTile:: db
 wPokeAnimCoord:: dw

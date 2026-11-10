@@ -48,7 +48,6 @@ PredefPointers::
 	add_predef PrintMoveType
 	add_predef PrintType
 	add_predef PrintMonTypes
-	add_predef GetUnownLetter
 	add_predef LoadPoisonBGPals
 	add_predef InitSGBBorder
 	add_predef LoadSGBLayout
