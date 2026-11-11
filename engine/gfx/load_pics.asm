@@ -137,6 +137,8 @@ GetMonBackpic:
 	call IsAPokemon
 	ret c
 
+	ld a, [wCurPartySpecies] ; read it before rWBK changes, it lives in another WRAM bank
+	ld b, a
 	ldh a, [rWBK]
 	push af
 	ld a, BANK(wDecompressScratch)
@@ -144,7 +146,7 @@ GetMonBackpic:
 	push de
 
 	ld hl, PokemonPicPointers
-	ld a, [wCurPartySpecies]
+	ld a, b
 	ld d, BANK(PokemonPicPointers)
 	dec a
 	ld bc, 6

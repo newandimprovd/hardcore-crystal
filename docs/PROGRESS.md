@@ -193,3 +193,18 @@ Goal: stop reusing vanilla graphics that clash with the dark-comedy vibe.
 - Verification on the final tree: verify_all.sh all PASS (check_text still lists the 44 vanilla lines), walk_all 1-5 pass.
 - Not done: TitheRoad (Johto tileset) keeps its old lane, the Tithe junction and the Purgatorio hub were not redesigned, hermits are 18 lanes of 30, unique trainer teams,
   bike/multiplayer/phone/Battle Tower code removal, real run sprite art, first-kill reveal rewrite.
+
+## Baggage removal (Nov 2026, before the special encounters and the Tithe Road rework)
+Author's order: remove the vanilla Crystal baggage completely (bicycle data included), get the ROM building and passing the tests, only then add the essential special
+encounters and redesign Tithe Road, then walk. Free ROM went from 346 KB (old measure) to 976 KB (432 KB of that are 27 completely empty banks); `python3 tools/hardcore/romfree.py`.
+- Gone: decorations and the Mom bank, mail, debug room and colour picker, breeding / daycare / eggs, fruit trees, Unown, 32 vanilla marts, 15 items, the mobile / link / phone /
+  Battle Tower engine, 19 songs, 63 overworld sprites, 14 SCGB layouts, the vanilla intro movie (never reachable since alpha 1), 35 of 45 sprite-anim objects, 24 of 35 anim functions,
+  53 of 66 framesets, 116 OAM sets, 25 of 41 tilesets (only the 16 the maps use remain), about 1240 of 1300 vanilla event flags, 65 of 67 vanilla trainer party groups and 62 trainer pictures.
+- How: each removal is a script in tools/hardcore (unref_asm, dead_labels, prune_items, prune_music, prune_sprites, prune_scgb, prune_spriteanims, prune_tilesets, prune_trainer_data),
+  run as post-processing because gen_moves / gen_roster / vanilla.py are NOT maintained against removed data (rerunning them would recreate removed files). Index-aligned tables are
+  always pruned together (constants <-> table rows). `rgbasm -M` gives the exact include / INCBIN closure, so assets are deleted only when no object reads them.
+- Kept on purpose: field-move code (HM key items replace HMs), Pokegear clock and map, area-theme songs and HC sprites for the map pass, the Johto landmarks table (Pokegear map layout
+  depends on it, to be redone with the map pass), vanilla trainer-class slots (rows stay, data is gone, the engine indexes them by class id).
+- Still open (small, none blocks the content work): RAM / SRAM leftovers (wLinkMode, unused `ds` areas), ENGINE_* flag pruning, base-stat egg group and step fields (about 700 bytes),
+  vanilla trainer attributes / DVs / names rows of dead classes, Sfx_IntroSuicune* and other unused SFX (index aligned with sfx_pointers), empty sections left in layout.link,
+  unused landmark names, tileset-animation helper leftovers.
