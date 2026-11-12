@@ -128,6 +128,12 @@ ItemNames::
 	li "BERRY"
 	li "GOLD BERRY"
 	li "PARK BALL"
+	li "LEFTOVERS"
+	li "QUICK CLAW"
+	li "SCOPE LENS"
+	li "AMULET COIN"
+	li "BRIGHTPOWDER"
+	li "SMOKE BALL"
 	li "TERU-SAMA"
 	li "TERU-SAMA"
 	assert_list_length NUM_ITEMS

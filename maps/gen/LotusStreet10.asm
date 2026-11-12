@@ -43,25 +43,25 @@ LotusStreet10AfterScript:
 	end
 
 LotusStreet10Trainer0:
-	trainer L_SWIMMERM, 137, EVENT_GEN_LOTUS_STREET10_0, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SUNBATHER, 133, EVENT_GEN_LOTUS_STREET10_0, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer1:
-	trainer L_TOURISTG, 131, EVENT_GEN_LOTUS_STREET10_1, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SWIMMERF, 135, EVENT_GEN_LOTUS_STREET10_1, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer2:
-	trainer L_BELLHOP, 130, EVENT_GEN_LOTUS_STREET10_2, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SWIMMERM, 133, EVENT_GEN_LOTUS_STREET10_2, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer3:
-	trainer L_TOURISTF, 131, EVENT_GEN_LOTUS_STREET10_3, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SUNBATHER, 134, EVENT_GEN_LOTUS_STREET10_3, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer4:
-	trainer L_SWIMMERM, 138, EVENT_GEN_LOTUS_STREET10_4, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SWIMMERF, 136, EVENT_GEN_LOTUS_STREET10_4, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer5:
-	trainer L_BELLHOP, 131, EVENT_GEN_LOTUS_STREET10_5, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_TOURISTM, 132, EVENT_GEN_LOTUS_STREET10_5, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10Trainer6:
-	trainer L_SWIMMERF, 131, EVENT_GEN_LOTUS_STREET10_6, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SWIMMERF, 137, EVENT_GEN_LOTUS_STREET10_6, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10_MapEvents:
 	db 0, 0 ; filler
@@ -76,11 +76,11 @@ LotusStreet10_MapEvents:
 	def_object_events
 	object_event 15, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet10Pickup, EVENT_GEN_LOTUS_STREET10_PICKUP
 	object_event 17, 25, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet10Hermit, -1
-	object_event 10, 28, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer0, -1
-	object_event  6, 24, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer1, -1
-	object_event 11, 24, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer2, -1
-	object_event  7, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer3, -1
-	object_event  6, 16, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer4, -1
-	object_event 11, 16, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer5, -1
+	object_event 10, 28, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer0, -1
+	object_event  6, 24, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer1, -1
+	object_event 11, 24, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer2, -1
+	object_event  7, 20, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer3, -1
+	object_event  6, 16, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer4, -1
+	object_event 11, 16, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer5, -1
 	object_event 10, 12, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer6, -1
 

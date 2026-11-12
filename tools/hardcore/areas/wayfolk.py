@@ -114,3 +114,130 @@ TOWNIE = {
         "There's a rumour of an exit. Just a rumour. We're very good at rumours.",
     ],
 }
+
+# The plaque on a fountain: a name built the way Pokemon names are (two real words run together, one of them half swallowed by the other)
+# and its meaning, in the Pokedex's voice.  Per area tag.
+FOUNTAIN = {
+    "Tithe": [
+        "PENNYWISE FOUNTAIN. Penny + wise. A coin buys one wish. The wish is taxed at source.",
+        "DONATELLO FOUNTAIN. Donate + hello. The coins go to the Parish. The hello goes nowhere.",
+        "SPOUTIFF FOUNTAIN. Spout + pontiff. It blesses the square twice a day. Mostly the pigeons.",
+        "AQUANCE FOUNTAIN. Aqua + finance. Liquid assets, as promised in the brochure.",
+    ],
+    "Grove": [
+        "COMMUNIPOOL. Commune + pool. Everyone's water. Do not be seen being thirsty first.",
+        "SOAKIALISM FOUNTAIN. Soak + socialism. From each according to ability, to each according to splash.",
+        "WELLFAIR FOUNTAIN. Well + welfare. The water is free. Wishing costs your whole weekend.",
+        "SHAREWATER. Share + water. Please stop looking at it as yours. It looks back.",
+    ],
+    "Axiom": [
+        "FOUNTAINEER-3. Fountain + engineer. Output: 4.0 liters per sigh. Sighs are logged.",
+        "AQUAXIOM. Aqua + axiom. Axiom 1: water is wet. Axiom 2: do not touch it.",
+        "HYDRATTEST. Hydrate + attest. Drink only with a signed statement of thirst.",
+        "COOLANTAIN. Coolant + fountain. It is not cooling anything. It was told to look busy.",
+    ],
+    "Lotus": [
+        "LULLAGOON. Lull + lagoon. Listen long enough and it lets you off the hook.",
+        "DRIFTAIN. Drift + fountain. It sprays where the wind sends it. It has never apologized.",
+        "SPLASHBLASE. Splash + blase. The water has seen it all. It carries on anyway.",
+        "TIDEMURMUR FOUNTAIN. Tide + murmur. It says 'shh'. Everyone here takes the hint.",
+    ],
+    "Dis": [
+        "STYXPENSE FOUNTAIN. Styx + expense. Toll: one soul. Coins accepted when souls are out of stock.",
+        "LETHEATRE FOUNTAIN. Lethe + theatre. Drink and forget the second act. Nobody remembers the first.",
+        "BRIMSTONY BROOK. Brimstone + stony brook. It does not babble. It screams politely.",
+        "WAILSPRING. Wail + spring. The sound is not a recording. The recording quit.",
+    ],
+}
+
+# More talkers, in the modern games' way: some of them point at things (a shop, a fountain, a held item), some of them just complain.
+TOWNIE2 = {
+    "Tithe": [
+        "The pawnbroker keeps his best items in a living room. Don't ask why. Don't ask how.",
+        "Read the fountain plaque. Names here mean something. Mine means 'debtor'.",
+        "A held item does more than your whole party. I read that on a receipt.",
+        "The Pokemon Center is free. That's not a kindness. That's an advert.",
+        "My Pokemon hold a berry each. Mine holds a grudge. It's cheaper.",
+        "I heard LEFTOVERS is for sale. Six thousand. For leftovers. That's the economy.",
+        "I saw a wild Pokemon yesterday. It asked me for change.",
+        "The shop under the green awning has a clerk. The clerk has a past.",
+    ],
+    "Grove": [
+        "The swap shop is in someone's front room. They say it's a living room. Nobody is living.",
+        "Pay attention to the fountain's name. It's a word, and it's also a threat.",
+        "Held items are shared here. By which I mean they're taken.",
+        "The Heart of the Commune is a Pokemon Center. The heart has beds.",
+        "My Berry is organic. Don't tell the fruit. They're all organic. It was a quiet crime.",
+        "Someone's selling LEFTOVERS. That's a lot of nerve to charge for what's left.",
+        "A wild Pokemon asked me to join the commune. I said yes. It was a mistake.",
+        "I'd tell you more, but my tongue is on loan to the council.",
+    ],
+    "Axiom": [
+        "The shop with a clerk and a couch is real. The couch is audited weekly.",
+        "The fountain plaque is a pun. The pun is registered. The joke is not yet approved.",
+        "A held item is a form attached to a Pokemon. Fill it in correctly.",
+        "The Pokemon Center is a processing facility with a kindly name.",
+        "I requested a BERRY. I received a form. The form is also a berry.",
+        "LEFTOVERS: certified, tested, taxed. In that order, usually.",
+        "A wild Pokemon asked for ID. It was a very good wild Pokemon.",
+        "My gift was approved. It will arrive after I have stopped needing it.",
+    ],
+    "Lotus": [
+        "The shop in the living room? Honestly, I thought it was a hotel room. The clerk is sleeping.",
+        "Read the fountain plaque. It's the most work anyone does here.",
+        "Held items are like cocktails. You carry them and nothing happens until it does.",
+        "The Pokemon Center has a hammock. The nurse has a drink. Please be quiet.",
+        "I'd give you a BERRY but I'm on holiday. A BERRY holiday. It's not fair.",
+        "Somebody is selling LEFTOVERS on the beach. It was already sold twice.",
+        "A wild Pokemon asked me what I did for a living. I lied.",
+        "The tide brought a very nice item. It also brought a court order.",
+    ],
+    "Dis": [
+        "The shop in the living room is a pawn of the underworld. You will pay in pieces.",
+        "Read the fountain plaque. It's the only honest sign in the city.",
+        "A held item is a promise with a handle. The handle is hot.",
+        "The Pokemon Center is a temporary measure. Everything here is.",
+        "Take a BERRY. It's the only thing here not on fire. Do not ask why.",
+        "LEFTOVERS: another word for hellfire after dinner.",
+        "A wild Pokemon bit me. We are now related. It wants a seat.",
+        "The nice ones work in the shop. They also sign the paperwork.",
+    ],
+}
+
+# GIFT: the strangers who hand over one item, once: (name, what the name is made of, the offer).  Four per area, one per plaza in turn.
+GIFT = {
+    "Tithe": [
+        ("DONATA", "Donate plus data. Now you are in my records.", "You look underfunded."),
+        ("CHARITREE", "Charity plus tree. I am the first and the second is my fault.", "A small offering, from a large organization."),
+        ("ALMSTER", "Alms plus monster. The alms were not voluntary.", "Take it. Nobody saw. The camera is off. Probably."),
+        ("PAYTIENCE", "Pay plus patience. I have the first. You don't have the second.", "Here. I owe it to the universe."),
+    ],
+    "Grove": [
+        ("GLEANA", "Glean plus Leana. I pick up what falls. I hold what's left.", "It fell. It's yours now."),
+        ("HARVESTA", "Harvest plus vista. The view is poor. The yield is fine.", "Take some. We have plenty. We have no idea why."),
+        ("SWAPPLE", "Swap plus apple. I swapped the first, I forgot the second.", "A swap would be fair. This is only a gift. Which is worse."),
+        ("FORAGEL", "Forage plus angel. Mostly forage.", "Eat it before the goat does."),
+    ],
+    "Axiom": [
+        ("DATUMN", "Datum plus autumn. A single fact that has fallen.", "Gift certificate. Valid until this sentence ends."),
+        ("ALGORHYTHM", "Algorithm plus rhythm. I do the steps. I dance badly.", "Output: one item. Input: your gratitude."),
+        ("PROTOCOLA", "Protocol plus cola. It's bubbly and mandatory.", "Per Section 9: a gift is owed. Receipt attached."),
+        ("CACHEW", "Cache plus cashew. A snack that remembers.", "Take it. I stored a spare. I always do."),
+    ],
+    "Lotus": [
+        ("LAZULI", "Lazy plus lapis lazuli. A relaxed stone.", "Take it. I couldn't be bothered to keep it."),
+        ("SANDWICHER", "Sand plus sandwich. The sand is not optional.", "Have some. I made too many. I always do."),
+        ("COCONAP", "Coconut plus nap. I rest with my fruit.", "Don't wake me. Just take it."),
+        ("BREEZZE", "Breeze plus zzz. I drift to wherever it takes me.", "I blew in. This blew in with me. Here."),
+    ],
+    "Dis": [
+        ("SINNAMON", "Sin plus cinnamon. Sweet and not good for you.", "A gift. Terms and conditions are in the afterlife."),
+        ("PURGATEA", "Purgatory plus tea. It brews forever and never gets strong.", "Drink up. No? Then take this instead."),
+        ("INFERNOODLE", "Inferno plus noodle. Spicy, long and irreversible.", "A bowl of kindness. It's a berry. Don't ask."),
+        ("HELLEBORE", "Hell plus hellebore. Beautiful, poisonous, and very dull.", "A gift from below. It's the nicest thing down here."),
+    ],
+}
+GIFT_ITEMS = ["POTION", "ANTIDOTE", "BERRY", "SUPER_POTION", "GREAT_BALL", "GOLD_BERRY", "HYPER_POTION"]  # by plaza number 1..7
+GIFT_AFTER = ["Don't mention it. Seriously, don't. It's off the books.",
+              "That's all I have. The rest is for someone with a better reason.",
+              "Go on. Be a good person. Or an average one. I'm not picky."]

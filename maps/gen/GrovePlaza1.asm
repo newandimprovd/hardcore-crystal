@@ -6,21 +6,65 @@ GrovePlaza1_MapScripts:
 
 	def_callbacks
 
-GrovePlaza1Townie0:
-	jumptextfaceplayer GrovePlaza1Townie0Text
+GrovePlaza1Giver:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_GROVE_PLAZA1_GIFT
+	iftrue .Done
+	writetext GrovePlaza1GiverText
+	waitbutton
+	verbosegiveitem POTION
+	iffalse .NoRoom
+	setevent EVENT_GEN_GROVE_PLAZA1_GIFT
+.Done:
+	writetext GrovePlaza1GiverAfterText
+	waitbutton
+	closetext
+	end
 
-GrovePlaza1Townie0Text:
-	text "We share"
-	line "everything here."
-	para "I'm sharing my"
-	line "opinion: you"
-	para "should leave."
+.NoRoom:
+	writetext GrovePlaza1GiverNoRoomText
+	waitbutton
+	closetext
+	end
+
+GrovePlaza1GiverText:
+	text "I'm HARVESTA."
+	line "Harvest plus"
+	para "vista. The view is"
+	line "poor. The yield is"
+	para "fine. Take some."
+	line "We have plenty. We"
+	para "have no idea why."
+	done
+
+GrovePlaza1GiverAfterText:
+	text "That's all I have."
+	line "The rest is for"
+	para "someone with a"
+	line "better reason."
+	done
+
+GrovePlaza1GiverNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I."
 	done
 
 GrovePlaza1Townie1:
 	jumptextfaceplayer GrovePlaza1Townie1Text
 
 GrovePlaza1Townie1Text:
+	text "Held items are"
+	line "shared here. By"
+	para "which I mean"
+	line "they're taken."
+	done
+
+GrovePlaza1Townie2:
+	jumptextfaceplayer GrovePlaza1Townie2Text
+
+GrovePlaza1Townie2Text:
 	text "The drum circle"
 	line "has gone on for"
 	para "three days. Please"
@@ -29,44 +73,145 @@ GrovePlaza1Townie1Text:
 	line "drummer."
 	done
 
-GrovePlaza1Townie2:
-	jumptextfaceplayer GrovePlaza1Townie2Text
-
-GrovePlaza1Townie2Text:
-	text "I came for inner"
-	line "peace. I stayed"
-	para "for the outer"
-	line "debts."
-	done
-
 GrovePlaza1Townie3:
 	jumptextfaceplayer GrovePlaza1Townie3Text
 
 GrovePlaza1Townie3Text:
-	text "The compost is a"
-	line "very emotional"
-	para "place. Visit at"
-	line "your own risk."
-	done
-
-GrovePlaza1Townie4:
-	jumptextfaceplayer GrovePlaza1Townie4Text
-
-GrovePlaza1Townie4Text:
 	text "There's no money"
 	line "in the commune. We"
 	para "have vibes. Vibes"
 	line "are rationed."
 	done
 
+GrovePlaza1Townie4:
+	jumptextfaceplayer GrovePlaza1Townie4Text
+
+GrovePlaza1Townie4Text:
+	text "A wild Pokemon"
+	line "asked me to join"
+	para "the commune. I"
+	line "said yes. It was a"
+	para "mistake."
+	done
+
 GrovePlaza1Townie5:
 	jumptextfaceplayer GrovePlaza1Townie5Text
 
 GrovePlaza1Townie5Text:
-	text "We banned locks."
-	line "Now we just have a"
-	para "lot of nice open"
-	line "grudges."
+	text "We share"
+	line "everything here."
+	para "I'm sharing my"
+	line "opinion: you"
+	para "should leave."
+	done
+
+GrovePlaza1Townie6:
+	jumptextfaceplayer GrovePlaza1Townie6Text
+
+GrovePlaza1Townie6Text:
+	text "I came for inner"
+	line "peace. I stayed"
+	para "for the outer"
+	line "debts."
+	done
+
+GrovePlaza1Townie7:
+	jumptextfaceplayer GrovePlaza1Townie7Text
+
+GrovePlaza1Townie7Text:
+	text "The Heart of the"
+	line "Commune is a"
+	para "Pokemon Center."
+	line "The heart has"
+	para "beds."
+	done
+
+GrovePlaza1Townie8:
+	jumptextfaceplayer GrovePlaza1Townie8Text
+
+GrovePlaza1Townie8Text:
+	text "The compost is a"
+	line "very emotional"
+	para "place. Visit at"
+	line "your own risk."
+	done
+
+GrovePlaza1Duel:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_GROVE_PLAZA1_DUEL
+	iftrue .Beaten
+	writetext GrovePlaza1DuelSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext GrovePlaza1DuelBeatenText, 0
+	loadtrainer G_GRANNY, 137
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_GEN_GROVE_PLAZA1_DUEL
+	opentext
+.Beaten:
+	checkevent EVENT_GEN_GROVE_PLAZA1_DUELPAID
+	iftrue .After
+	writetext GrovePlaza1DuelPayText
+	waitbutton
+	verbosegiveitem HP_UP
+	iffalse .NoRoom
+	setevent EVENT_GEN_GROVE_PLAZA1_DUELPAID
+.After:
+	writetext GrovePlaza1DuelAfterText
+	waitbutton
+	closetext
+	end
+
+.No:
+	writetext GrovePlaza1DuelNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext GrovePlaza1DuelNoRoomText
+	waitbutton
+	closetext
+	end
+
+GrovePlaza1DuelSeenText:
+	text "AUNT KALE: We"
+	line "share everything"
+	para "here. I'm sharing"
+	line "a beating. Fight?"
+	done
+
+GrovePlaza1DuelBeatenText:
+	text "Oh dear. Take the"
+	line "pantry key. Don't"
+	para "eat the ham."
+	done
+
+GrovePlaza1DuelPayText:
+	text "A prize for the"
+	line "winner. Keep it."
+	para "I'd only lose it."
+	done
+
+GrovePlaza1DuelAfterText:
+	text "A fair fight is"
+	line "still a fight,"
+	para "dear."
+	done
+
+GrovePlaza1DuelNoText:
+	text "Fine. Another day."
+	line "I'll be here. I'm"
+	para "always here."
+	done
+
+GrovePlaza1DuelNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
 	done
 
 GrovePlaza1_MapEvents:
@@ -83,10 +228,14 @@ GrovePlaza1_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 18, 17, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie0, -1
-	object_event 17,  8, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie1, -1
-	object_event 12, 11, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie2, -1
-	object_event  7, 25, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie3, -1
-	object_event  5, 23, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie4, -1
-	object_event 27, 19, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie5, -1
+	object_event 10, 15, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Giver, -1
+	object_event  9,  8, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie1, -1
+	object_event  8,  6, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie2, -1
+	object_event 18, 19, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie3, -1
+	object_event  6, 19, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie4, -1
+	object_event 16, 17, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie5, -1
+	object_event 10, 19, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie6, -1
+	object_event 25, 10, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie7, -1
+	object_event 16,  9, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie8, -1
+	object_event 14, 16, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Duel, -1
 

@@ -134,6 +134,12 @@
 	const BERRY
 	const GOLD_BERRY
 	const PARK_BALL
+	const LEFTOVERS
+	const QUICK_CLAW
+	const SCOPE_LENS
+	const AMULET_COIN
+	const BRIGHTPOWDER
+	const SMOKE_BALL
 	const ITEM_B3
 	const ITEM_BE
 DEF NUM_ITEMS EQU const_value - 1

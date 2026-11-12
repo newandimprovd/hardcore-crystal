@@ -338,11 +338,41 @@ def house_interior(g, name, outer_warp, landmark, texts, music="MUSIC_VIOLET_CIT
     return m
 
 
+def boutique_interior(g, name, outer_warp, landmark, mart_const, greet, texts, music="MUSIC_CHERRYGROVE_CITY"):
+    """A shop in a living room (the House blocks, as the Pokemon games hide their odd shops): the clerk stands where the host would and
+    says the shop's name before the counter opens; the second spot is a customer.  Sells MART_<mart_const> (the rare held items)."""
+    m = MapDef(g.key, name, 4, 4, "TILESET_HOUSE", "INDOOR", landmark, music, pal="PALETTE_DAY")
+    m.blocks = bytearray(blk("maps/House1.blk"))
+    w1, w2 = m.warp(2, 7), m.warp(3, 7)
+    outer_warp.dest = w1
+    w1.dest = outer_warp
+    w2.dest = outer_warp
+    m.object_consts = ["CLERK"] + [f"NPC{i}" for i in range(len(texts))]
+    m.scripts.append(f"{name}ClerkScript:\n\tfaceplayer\n\topentext\n\twritetext {name}GreetText\n\twaitbutton\n"
+                     f"\tpokemart MART_{mart_const}\n\tclosetext\n\tend\n")
+    m.scripts.append(greet.emit(f"{name}GreetText"))
+    cs, cpal = hub(g, "mart", 1, "SPRITE_CLERK")
+    m.obj(2, 3, cs, FACE["DOWN"], f"{name}ClerkScript", pal=cpal)
+    spots = [(5, 5, "SPRITE_BUG_CATCHER", "LEFT")]
+    for i, t in enumerate(texts):
+        x, y, sp, f = spots[i]
+        sp, pal = hub(g, "house", 1, sp, "PAL_NPC_GREEN")
+        m.scripts.append(f"{name}Npc{i}Script:\n\tjumptextfaceplayer {name}Npc{i}Text\n")
+        m.scripts.append(t.emit(f"{name}Npc{i}Text"))
+        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal=pal)
+    g.add(m)
+    return m
+
+
+# the gate hall of the GATE tileset (5x4 blocks: the two mats on the top and bottom rows, a counter at the sides); the vanilla map file is gone
+GATE_BLOCKS = bytes([2, 2, 4, 2, 2, 9, 1, 1, 1, 8, 13, 1, 1, 1, 12, 20, 1, 10, 1, 20])
+
+
 def gatehouse(g, name, lane_door, plaza_door, landmark, music, texts=()):
     """A north-south gate house (rift). The bottom mats lead back to lane_door (the door at the north end
     of the southern segment), the top mats lead to plaza_door (a door on the northern segment)."""
     m = MapDef(g.key, name, 5, 4, "TILESET_GATE", "GATE", landmark, music, pal="PALETTE_DAY")
-    m.blocks = bytearray(blk("maps/NorthSouthGate.blk"))
+    m.blocks = bytearray(GATE_BLOCKS)
     t1, t2 = m.warp(4, 0), m.warp(5, 0)
     b1, b2 = m.warp(4, 7), m.warp(5, 7)
     lane_doors = lane_door if isinstance(lane_door, (list, tuple)) else [lane_door]
@@ -401,11 +431,12 @@ def mansion_bedroom(g, name, hall_door, landmark, music):
     return m
 
 
-# Boss rooms reuse the Elite Four room blocks of vanilla (same tileset), which already have the funnel shape,
-# the mat at the bottom and a door at the top. The boss stands at the left edge of the last wide row, so every
-# route from the funnel into the room crosses his line of sight.
-BOSS_TEMPLATES = {"karen": ("maps/KarensRoom.blk", 10), "will": ("maps/WillsRoom.blk", 9),
-                  "bruno": ("maps/BrunosRoom.blk", 9)}
+# Boss rooms use the Elite Four room blocks of vanilla (same tileset, the vanilla map files are gone), which already have the funnel
+# shape, the mat at the bottom and a door at the top. The boss stands at the left edge of the last wide row, so every route from the
+# funnel into the room crosses his line of sight.  template: (block bytes, row of the boss)
+BOSS_TEMPLATES = {"karen": (bytes([20, 20, 20, 20, 20, 21, 21, 34, 21, 21, 21, 21, 1, 21, 21, 25, 45, 45, 45, 25, 23, 45, 45, 45, 23, 23, 25, 45, 25, 23, 23, 23, 45, 23, 23, 42, 42, 45, 42, 42, 45, 29, 28, 30, 45]), 10),
+                  "will": (bytes([20, 20, 20, 20, 20, 21, 21, 34, 21, 21, 52, 52, 1, 52, 52, 31, 56, 56, 56, 31, 36, 56, 56, 56, 36, 36, 31, 56, 31, 36, 36, 36, 56, 36, 36, 42, 42, 45, 42, 42, 45, 29, 40, 30, 45]), 9),
+                  "bruno": (bytes([20, 20, 20, 20, 20, 21, 21, 34, 21, 21, 52, 52, 1, 52, 52, 44, 56, 56, 56, 44, 43, 56, 56, 56, 43, 43, 44, 56, 44, 43, 43, 43, 56, 43, 43, 42, 42, 45, 42, 42, 45, 29, 28, 30, 45]), 9)}
 
 
 def boss_room(g, w, name, outer_warp, landmark, music, template, boss, item=None, open_exit=False, story=0):
@@ -414,7 +445,7 @@ def boss_room(g, w, name, outer_warp, landmark, music, template, boss, item=None
     Returns (map, exit_warps); exit_warps is [] unless open_exit (then the two top warps, unlinked)."""
     path, row = BOSS_TEMPLATES[template]
     m = MapDef(g.key, name, 5, 9, "TILESET_ELITE_FOUR_ROOM", "INDOOR", landmark, music, pal="PALETTE_DAY")
-    m.blocks = bytearray(blk(path))
+    m.blocks = bytearray(path)
     w1, w2 = m.warp(4, 17), m.warp(5, 17)
     outer_warp.dest = w1
     w1.dest = outer_warp

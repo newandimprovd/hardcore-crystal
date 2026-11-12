@@ -44,22 +44,22 @@ TitheStreet5AfterScript:
 	end
 
 TitheStreet5Trainer0:
-	trainer T_PUNK, 131, EVENT_GEN_TITHE_STREET5_0, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_PRIEST, 131, EVENT_GEN_TITHE_STREET5_0, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
 
 TitheStreet5Trainer1:
-	trainer T_COP, 131, EVENT_GEN_TITHE_STREET5_1, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_COP, 133, EVENT_GEN_TITHE_STREET5_1, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
 
 TitheStreet5Trainer2:
-	trainer T_PRIEST, 132, EVENT_GEN_TITHE_STREET5_2, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_ALTARBOY, 129, EVENT_GEN_TITHE_STREET5_2, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
 
 TitheStreet5Trainer3:
-	trainer T_COP, 132, EVENT_GEN_TITHE_STREET5_3, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_SUIT, 131, EVENT_GEN_TITHE_STREET5_3, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
 
 TitheStreet5Trainer4:
-	trainer T_PRIEST, 133, EVENT_GEN_TITHE_STREET5_4, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_PRIEST, 132, EVENT_GEN_TITHE_STREET5_4, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
 
 TitheStreet5Trainer5:
-	trainer T_SUIT, 130, EVENT_GEN_TITHE_STREET5_5, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_CHOIR, 134, EVENT_GEN_TITHE_STREET5_5, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
 
 TitheStreet5_MapEvents:
 	db 0, 0 ; filler
@@ -69,15 +69,15 @@ TitheStreet5_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  6, 14, BGEVENT_ITEM, TitheStreet5Hidden
+	bg_event  8, 14, BGEVENT_ITEM, TitheStreet5Hidden
 
 	def_object_events
 	object_event  3, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet5Pickup, EVENT_GEN_TITHE_STREET5_PICKUP
-	object_event  3, 15, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheStreet5Hermit, -1
-	object_event 14, 24, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer0, -1
-	object_event 19, 24, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer1, -1
-	object_event 10, 20, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer2, -1
-	object_event 15, 16, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer3, -1
-	object_event 10, 12, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer4, -1
-	object_event 15, 12, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer5, -1
+	object_event  9, 13, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheStreet5Hermit, -1
+	object_event 16, 24, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer0, -1
+	object_event 21, 24, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer1, -1
+	object_event 12, 20, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer2, -1
+	object_event 17, 16, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer3, -1
+	object_event 12, 12, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer4, -1
+	object_event 17, 12, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer5, -1
 

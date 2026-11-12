@@ -6,21 +6,74 @@ LotusPlaza6_MapScripts:
 
 	def_callbacks
 
-LotusPlaza6Townie0:
-	jumptextfaceplayer LotusPlaza6Townie0Text
+LotusPlaza6Giver:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_LOTUS_PLAZA6_GIFT
+	iftrue .Done
+	writetext LotusPlaza6GiverText
+	waitbutton
+	verbosegiveitem GOLD_BERRY
+	iffalse .NoRoom
+	setevent EVENT_GEN_LOTUS_PLAZA6_GIFT
+.Done:
+	writetext LotusPlaza6GiverAfterText
+	waitbutton
+	closetext
+	end
 
-LotusPlaza6Townie0Text:
-	text "Looking for the"
-	line "meaning of life?"
-	para "Try the minibar."
-	line "It's empty. That's"
-	para "the meaning."
+.NoRoom:
+	writetext LotusPlaza6GiverNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusPlaza6GiverText:
+	text "I'm COCONAP."
+	line "Coconut plus nap."
+	para "I rest with my"
+	line "fruit. Don't wake"
+	para "me. Just take it."
+	done
+
+LotusPlaza6GiverAfterText:
+	text "Don't mention it."
+	line "Seriously, don't."
+	para "It's off the"
+	line "books."
+	done
+
+LotusPlaza6GiverNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I."
 	done
 
 LotusPlaza6Townie1:
 	jumptextfaceplayer LotusPlaza6Townie1Text
 
 LotusPlaza6Townie1Text:
+	text "Held items are"
+	line "like cocktails."
+	para "You carry them and"
+	line "nothing happens"
+	para "until it does."
+	done
+
+LotusPlaza6Townie2:
+	jumptextfaceplayer LotusPlaza6Townie2Text
+
+LotusPlaza6Townie2Text:
+	text "Read the fountain"
+	line "plaque. It's the"
+	para "most work anyone"
+	line "does here."
+	done
+
+LotusPlaza6Townie3:
+	jumptextfaceplayer LotusPlaza6Townie3Text
+
+LotusPlaza6Townie3Text:
 	text "Welcome to the"
 	line "Lotus Coast! The"
 	para "all-inclusive plan"
@@ -29,41 +82,55 @@ LotusPlaza6Townie1Text:
 	line "reason."
 	done
 
-LotusPlaza6Townie2:
-	jumptextfaceplayer LotusPlaza6Townie2Text
-
-LotusPlaza6Townie2Text:
-	text "I'm so relaxed I"
-	line "forgot to be"
-	para "afraid. Oh no."
-	line "There it is."
-	done
-
-LotusPlaza6Townie3:
-	jumptextfaceplayer LotusPlaza6Townie3Text
-
-LotusPlaza6Townie3Text:
-	text "Smile! You're on"
-	line "vacation! That's"
-	para "an order."
-	done
-
 LotusPlaza6Townie4:
 	jumptextfaceplayer LotusPlaza6Townie4Text
 
 LotusPlaza6Townie4Text:
-	text "Every day is"
-	line "Sunday here. The"
-	para "Sunday scaries are"
-	line "permanent."
+	text "I'd give you a"
+	line "BERRY but I'm on"
+	para "holiday. A BERRY"
+	line "holiday. It's not"
+	para "fair."
 	done
 
 LotusPlaza6Townie5:
 	jumptextfaceplayer LotusPlaza6Townie5Text
 
 LotusPlaza6Townie5Text:
-	text "The pool is closed"
-	line "due to depth."
+	text "A wild Pokemon"
+	line "asked me what I"
+	para "did for a living."
+	line "I lied."
+	done
+
+LotusPlaza6Townie6:
+	jumptextfaceplayer LotusPlaza6Townie6Text
+
+LotusPlaza6Townie6Text:
+	text "I booked a week."
+	line "It's been four"
+	para "years. Checkout is"
+	line "a state of mind."
+	done
+
+LotusPlaza6Townie7:
+	jumptextfaceplayer LotusPlaza6Townie7Text
+
+LotusPlaza6Townie7Text:
+	text "The tide brought a"
+	line "very nice item. It"
+	para "also brought a"
+	line "court order."
+	done
+
+LotusPlaza6Townie8:
+	jumptextfaceplayer LotusPlaza6Townie8Text
+
+LotusPlaza6Townie8Text:
+	text "I'm so relaxed I"
+	line "forgot to be"
+	para "afraid. Oh no."
+	line "There it is."
 	done
 
 LotusPlaza6SteinerScript:
@@ -131,24 +198,106 @@ LotusPlaza6SteinerScriptAgainText:
 	para "Ahriman too."
 	done
 
+LotusPlaza6Duel:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_LOTUS_PLAZA6_DUEL
+	iftrue .Beaten
+	writetext LotusPlaza6DuelSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext LotusPlaza6DuelBeatenText, 0
+	loadtrainer L_FORGOTTEN, 133
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_GEN_LOTUS_PLAZA6_DUEL
+	opentext
+.Beaten:
+	checkevent EVENT_GEN_LOTUS_PLAZA6_DUELPAID
+	iftrue .After
+	writetext LotusPlaza6DuelPayText
+	waitbutton
+	verbosegiveitem PP_UP
+	iffalse .NoRoom
+	setevent EVENT_GEN_LOTUS_PLAZA6_DUELPAID
+.After:
+	writetext LotusPlaza6DuelAfterText
+	waitbutton
+	closetext
+	end
+
+.No:
+	writetext LotusPlaza6DuelNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext LotusPlaza6DuelNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusPlaza6DuelSeenText:
+	text "AMNESIA: Who are"
+	line "you? Who am I?"
+	para "Let's fight to"
+	line "find out. Fight?"
+	done
+
+LotusPlaza6DuelBeatenText:
+	text "I don't remember"
+	line "losing. So I"
+	para "didn't."
+	done
+
+LotusPlaza6DuelPayText:
+	text "A prize for the"
+	line "winner. Keep it."
+	para "I'd only lose it."
+	done
+
+LotusPlaza6DuelAfterText:
+	text "Have we met? We"
+	line "should. Again."
+	done
+
+LotusPlaza6DuelNoText:
+	text "Fine. Another day."
+	line "I'll be here. I'm"
+	para "always here."
+	done
+
+LotusPlaza6DuelNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
 LotusPlaza6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, LOTUS_MART6, 1
-	warp_event  6,  3, LOTUS_POKECENTER6, 1
-	warp_event 10,  3, LOTUS_HOUSE6, 1
+	warp_event  4,  3, LOTUS_MART6, 1
+	warp_event  8,  3, LOTUS_POKECENTER6, 1
+	warp_event 20,  3, LOTUS_HOUSE6, 1
+	warp_event 24,  3, LOTUS_BOUTIQUE6, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 21, 17, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie0, -1
-	object_event 14, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie1, -1
-	object_event 19, 16, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie2, -1
-	object_event  9, 19, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie3, -1
-	object_event 12, 20, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie4, -1
-	object_event 15, 16, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie5, -1
-	object_event 18, 17, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6SteinerScript, -1
+	object_event 10, 19, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Giver, -1
+	object_event  3, 21, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie1, -1
+	object_event 16, 26, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie2, -1
+	object_event 11, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie3, -1
+	object_event 12, 20, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie4, -1
+	object_event 11, 17, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie5, -1
+	object_event 10, 15, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie6, -1
+	object_event  4, 14, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie7, -1
+	object_event  3, 11, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie8, -1
+	object_event  2, 23, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6SteinerScript, -1
+	object_event 10, 22, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Duel, -1
 

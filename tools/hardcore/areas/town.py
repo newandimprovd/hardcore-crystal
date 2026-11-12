@@ -16,9 +16,11 @@ named characters of cameos.py).  Layout choices come from a random source seeded
 import random
 
 from .layout import autotile, reach
+from .people import sign
+from .wayfolk import FOUNTAIN
 from .model import MapDef
 
-DECOR = ["fountain", "park", "market", "garden", "terrace", "lake"]
+DECOR = ["park", "market", "garden", "terrace", "lake"]  # the fountain square is placed on its own (build_plaza)
 
 
 def plaza2(g, name, kit, rng, **kw):
@@ -28,6 +30,7 @@ def plaza2(g, name, kit, rng, **kw):
         e, xo, jr = m.street
         r = reach(m, kit, (2 * e + 1, 2 * (m.h - 2) + 1))
         ok = all((wp.x, wp.y + 1) in r for wp in m.warps) and (2 * xo + 1, 0) in r
+        ok = ok and all((2 * fx + dx, 2 * fy + 3) in r for fx, fy in getattr(m, "fountains", []) for dx in (0, 1))  # the plaque can be read
         if kit.extra.get("grass"):  # every town has tall grass (wild.py gives each plaza a table), and it can be walked to
             ok = ok and bool(getattr(m, "grass_cell", None)) and m.grass_cell[:2] in r
         if ok:
@@ -145,8 +148,11 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
     R.shuffle(kinds)
     kinds = [DECOR[index % len(DECOR)]] + [k for k in kinds if k != DECOR[index % len(DECOR)]]
     m.grass = 0
+    m.fountains = []
     gr = kit.extra.get("grass")
     used_kinds = []
+    # a fountain square in the biggest pocket of every third town (the first, the fourth, the seventh)
+    fz = next((zi for zi, z in enumerate(zones) if z is not grass_zone), None) if index % 3 == 1 else None
     for zi, z in enumerate(zones):
         _, x0, x1, y0, y1 = z
         if z is grass_zone and gr:
@@ -160,7 +166,7 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
                         m.set(x, y, R.choice(S["flowers"]))
             used_kinds.append("grass")
             continue
-        kind = kinds[zi % len(kinds)]
+        kind = "fountain" if zi == fz else kinds[zi % len(kinds)]
         decorate(m, kit, S, R, kind, x0, x1, y0, y1)
         used_kinds.append(kind)
     # the frontage: trees and beds in the gaps between the buildings, never in front of a door
@@ -187,6 +193,9 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
             m.set(x, H - 2, S["tree"])
     m.districts = used_kinds
     autotile(m, kit, R)
+    for i, (fx, fy) in enumerate(m.fountains):  # the plaque on the basin, read from the south
+        tag = next(t for t in ("Tithe", "Grove", "Axiom", "Lotus", "Dis") if name.startswith(t))
+        sign(m, 2 * fx + 1, 2 * fy + 1, f"{name}Fountain{i}", R.choice(FOUNTAIN[tag]))
     # townsfolk cells: floor cells away from doors, grass and the street's middle
     door_cells = {(wp.x, wp.y) for wp in m.warps}
     cells = []
@@ -255,16 +264,13 @@ def decorate(m, kit, S, R, kind, x0, x1, y0, y1):
     flowers = S["flowers"]
     cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
     paved = kit.extra["plaza"]
-    if kind == "fountain":
-        if w >= 4 and h >= 4:
-            pond_rect(m, S, cx, cy, 2, 2)
-            ring = [(x, y) for y in range(cy - 1, cy + 3) for x in range(cx - 1, cx + 3)
-                    if not (cx <= x <= cx + 1 and cy <= y <= cy + 1)]
-            for (x, y) in ring:
-                if x0 <= x <= x1 and y0 <= y <= y1:
-                    m.set(x, y, R.choice(paved))
-        else:
-            m.set(cx, cy, S["pool"])
+    if kind == "fountain":  # the round basin on a block of its own, paved all round, trees in the corners of the pocket
+        for yy in range(cy - 1, cy + 2):
+            for xx in range(cx - 1, cx + 2):
+                if x0 <= xx <= x1 and y0 <= yy <= y1:
+                    m.set(xx, yy, R.choice(paved))
+        m.set(cx, cy, S["fountain"])
+        m.fountains.append((cx, cy))
         for (x, y) in ((x0, y0), (x1, y0), (x0, y1), (x1, y1)):
             if (x, y) != (cx, cy) and R.random() < 0.8:
                 m.set(x, y, S["tree"])

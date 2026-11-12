@@ -1,8 +1,9 @@
 """Shared building blocks for the five areas: acts (a run of lanes ending in a plaza), town interiors, bosses."""
 from .flags import flag_once
-from .layout import (boss_room, chain, gatehouse, house_interior, lane, mart_interior, plaza, pokecenter_interior)
+from . import boutique as shops
+from .layout import (FACE, boss_room, chain, gatehouse, house_interior, boutique_interior, lane, mart_interior, plaza, pokecenter_interior)
 from .town import plaza2
-from .wayfolk import HERMIT, TOWNIE
+from .wayfolk import GIFT, GIFT_AFTER, GIFT_ITEMS, HERMIT, TOWNIE, TOWNIE2
 from .trail import trail
 from .party import make_party
 from .text import Text
@@ -26,7 +27,8 @@ class ActSpec:
 
     def __init__(self, tag, lanes, kit, landmark, music, trainers=13, gate=None, boss=None, houses=1,
                  mart=None, texts=None, plaza_width=13, lane_names=None, split=None, pal="PALETTE_DAY", rift=False,
-                 split_houses=1):
+                 split_houses=1, boutique=None):
+        self.boutique = boutique  # 0..2: the mid-act plaza gets the rare held-item boutique of this act (areas/boutique.py)
         self.pal = pal
         self.rift = rift  # the end plaza of this act gets a door to PURGATORIO (it needs a plaza width of 15)
         self.split_houses = split_houses
@@ -127,8 +129,9 @@ def furnish_lane(w, g, m, reserve, total_lanes=75):
         plain_npc(m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}Hermit", R.choice(HERMIT[tag]))
 
 
-def crowd(w, g, m, n=6):
-    """Townsfolk for a plaza: n plain talkers on its free floor cells (from the front of the seeded list; cameos take from the end)."""
+def crowd(w, g, m, n=9, plaza_no=1):
+    """Townsfolk for a plaza: n talkers on its free floor cells (from the front of the seeded list; cameos take from the end).  The first
+    is the plaza's gift-giver (areas/wayfolk.py GIFT: a named stranger who hands over one item, once), the rest plain talkers."""
     import random
     from .people import plain_npc
     R = random.Random("crowd:" + m.name)
@@ -136,12 +139,33 @@ def crowd(w, g, m, n=6):
     if not hasattr(m, "npc_cells"):  # the box plaza of the Johto road has no seeded cell list
         return
     n = min(n, 15 - len(m.objects) - 3)  # three object slots stay free for the cameos
-    lines = list(TOWNIE[tag])
+    lines = list(TOWNIE[tag]) + list(TOWNIE2[tag])
     R.shuffle(lines)
     for i, (x, y) in enumerate(m.npc_cells[:n]):
         sp = R.choice(people_sprites(g))
-        plain_npc(m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}Townie{i}", lines[i % len(lines)])
+        pal = R.choice(NPC_PALS)
+        face = R.choice(["LEFT", "RIGHT", "UP", "DOWN"])
+        if i == 0:
+            giver(w, m, x, y, sp, pal, face, f"{m.name}Giver", GIFT[tag][plaza_no % 4], GIFT_ITEMS[(plaza_no - 1) % len(GIFT_ITEMS)],
+                  GIFT_AFTER[plaza_no % len(GIFT_AFTER)])
+        else:
+            plain_npc(m, x, y, sp, pal, face, f"{m.name}Townie{i}", lines[i % len(lines)])
     m.npc_cells = m.npc_cells[n:]
+
+
+def giver(w, m, x, y, sprite, pal, face, label, gift, item, after):
+    """A stranger who introduces himself with a name built like a Pokemon's (a pun and what it is made of) and gives one item, once."""
+    name, etym, offer = gift
+    flag = w.flag(f"EVENT_GEN_{m.const}_GIFT")
+    m.scripts.append(
+        f"{label}:\n\tfaceplayer\n\topentext\n\tcheckevent {flag}\n\tiftrue .Done\n\twritetext {label}Text\n\twaitbutton\n"
+        f"\tverbosegiveitem {item}\n\tiffalse .NoRoom\n\tsetevent {flag}\n"
+        f".Done:\n\twritetext {label}AfterText\n\twaitbutton\n\tclosetext\n\tend\n\n"
+        f".NoRoom:\n\twritetext {label}NoRoomText\n\twaitbutton\n\tclosetext\n\tend\n")
+    m.scripts.append(Text(f"I'm {name}. {etym} {offer}").emit(f"{label}Text"))
+    m.scripts.append(Text(after).emit(f"{label}AfterText"))
+    m.scripts.append(Text("Your bag is full. The gift will wait. So will I.").emit(f"{label}NoRoomText"))
+    m.obj(x, y, sprite, FACE[face], label, pal=pal)
 
 
 def make_plaza(g, name, kit, rng, *, index=0, width=None, **kw):
@@ -155,7 +179,7 @@ def pick(lst, i):
     return Text(lst[i % len(lst)]) if lst else None
 
 
-def town(w, g, tag, n, p, doors, kit, landmark, spawn_const, mart_items, texts, martconst, reminders=None):
+def town(w, g, tag, n, p, doors, kit, landmark, spawn_const, mart_items, texts, martconst, reminders=None, boutique=None):
     """Pokecenter, Mart and house interiors for plaza p (doors from layout.plaza). texts: dict of lists.
     reminders: optional (pokecenter text, mart text) that replace the random picks, used for the rules reminders."""
     w.spawns.append((spawn_const, p, *p.spawn_cell))
@@ -170,8 +194,12 @@ def town(w, g, tag, n, p, doors, kit, landmark, spawn_const, mart_items, texts, 
     mart_interior(g, f"{tag}Mart{n}", doors["mart"], landmark, martconst, [t for t in mart if t])
     for i, hd in enumerate(doors["houses"]):
         h = [pick(texts.get("house", []), n * 2 + i), pick(texts.get("house", []), n * 2 + i + 5)]
+        if boutique and i == len(doors["houses"]) - 1:  # the last house door is the shop
+            w.marts.append((f"{martconst}B", f"Mart{tag}{n}Boutique", boutique["items"]))
+            boutique_interior(g, f"{tag}Boutique{n}", hd, landmark, f"{martconst}B", boutique["greet"], [t for t in h[:1] if t])
+            continue
         house_interior(g, f"{tag}House{n}" if i == 0 else f"{tag}House{n}b", hd, landmark, [t for t in h if t])
-    crowd(w, g, p, 6)
+    crowd(w, g, p, plaza_no=n)
 
 
 def boss_party(roster, rng, boss, theme):
@@ -204,11 +232,12 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
         below = m
         lane_no += 1
         if act.split and i + 1 == act.split:
+            nh = act.split_houses + (1 if act.boutique is not None else 0)
             pm, dm = make_plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
-                                houses=act.split_houses, width=act.plaza_width, pal=act.pal, index=plaza_no)
+                                houses=nh, width=max(act.plaza_width, 2 * (2 + nh) + 9), pal=act.pal, index=plaza_no)
             chain(below, pm, below.a_out - pm.a)
             town(w, g, tag, plaza_no, pm, dm, kit, act.landmark, f"{tag.upper()}_{plaza_no}", stocks.pop(0), act.texts,
-                 f"{tag.upper()}_{plaza_no}")
+                 f"{tag.upper()}_{plaza_no}", boutique=shops.spec(tag, act.boutique) if act.boutique is not None else None)
             below = pm
             plaza_no += 1
     p, doors = make_plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
@@ -282,7 +311,7 @@ def build_area(w, roster, rng, cfg, entry_doors):
                      cfg.gate_name, cfg.gate_text, pal=cfg.pal)
     acts = []
     for k in range(3):
-        acts.append(ActSpec(cfg.tag, cfg.lanes[k], cfg.kit, lms[k], cfg.music, trainers=cfg.trainers[k],
+        acts.append(ActSpec(cfg.tag, cfg.lanes[k], cfg.kit, lms[k], cfg.music, trainers=cfg.trainers[k], boutique=k,
                             boss=cfg.bosses[k], texts=cfg.texts, split=cfg.splits[k], gate=cfg.gates[k], pal=cfg.pal,
                             plaza_width=15 if (k == 1 and cfg.purg) else 13, rift=(k == 1 and cfg.purg),
                             split_houses=cfg.split_houses[k]))

@@ -129,6 +129,12 @@ ItemDescriptions:
 	dw BerryDesc
 	dw GoldBerryDesc
 	dw ParkBallDesc
+	dw LeftoversDesc
+	dw QuickClawDesc
+	dw ScopeLensDesc
+	dw AmuletCoinDesc
+	dw BrightpowderDesc
+	dw SmokeBallDesc
 	dw TeruSama24Desc
 	dw TeruSama25Desc
 	assert_table_length NUM_ITEMS
@@ -719,3 +725,27 @@ TeruSama27Desc:
 TeruSama28Desc:
 	db   "A brass horn. It"
 	next "knows the ending.@"
+
+LeftoversDesc:
+	db   "Restores HP during"
+	next "battle. (HOLD)@"
+
+QuickClawDesc:
+	db   "Raises 1st strike"
+	next "ratio. (HOLD)@"
+
+ScopeLensDesc:
+	db   "Raises critical"
+	next "hit ratio. (HOLD)@"
+
+AmuletCoinDesc:
+	db   "Doubles monetary"
+	next "earnings. (HOLD)@"
+
+BrightpowderDesc:
+	db   "Lowers the foe's"
+	next "accuracy. (HOLD)@"
+
+SmokeBallDesc:
+	db   "Escape from wild"
+	next "#MON. (HOLD)@"

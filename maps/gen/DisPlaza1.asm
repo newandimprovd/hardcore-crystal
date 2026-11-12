@@ -6,66 +6,221 @@ DisPlaza1_MapScripts:
 
 	def_callbacks
 
-DisPlaza1Townie0:
-	jumptextfaceplayer DisPlaza1Townie0Text
+DisPlaza1Fountain0:
+	jumptext DisPlaza1Fountain0Text
 
-DisPlaza1Townie0Text:
-	text "Please take a"
-	line "number. We lost"
-	para "the numbers."
-	line "Please take a"
-	para "different one."
+DisPlaza1Fountain0Text:
+	text "BRIMSTONY BROOK."
+	line "Brimstone + stony"
+	para "brook. It does not"
+	line "babble. It screams"
+	para "politely."
+	done
+
+DisPlaza1Giver:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_DIS_PLAZA1_GIFT
+	iftrue .Done
+	writetext DisPlaza1GiverText
+	waitbutton
+	verbosegiveitem POTION
+	iffalse .NoRoom
+	setevent EVENT_GEN_DIS_PLAZA1_GIFT
+.Done:
+	writetext DisPlaza1GiverAfterText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext DisPlaza1GiverNoRoomText
+	waitbutton
+	closetext
+	end
+
+DisPlaza1GiverText:
+	text "I'm PURGATEA."
+	line "Purgatory plus"
+	para "tea. It brews"
+	line "forever and never"
+	para "gets strong. Drink"
+	line "up. No? Then take"
+	para "this instead."
+	done
+
+DisPlaza1GiverAfterText:
+	text "That's all I have."
+	line "The rest is for"
+	para "someone with a"
+	line "better reason."
+	done
+
+DisPlaza1GiverNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I."
 	done
 
 DisPlaza1Townie1:
 	jumptextfaceplayer DisPlaza1Townie1Text
 
 DisPlaza1Townie1Text:
-	text "Demons are people"
-	line "too. Terrible,"
-	para "terrible people,"
-	line "but still."
+	text "Welcome to Dis!"
+	line "Your suffering is"
+	para "being processed."
+	line "Estimated wait:"
+	para "forever."
 	done
 
 DisPlaza1Townie2:
 	jumptextfaceplayer DisPlaza1Townie2Text
 
 DisPlaza1Townie2Text:
-	text "The fountain is"
-	line "boiling lead. It's"
-	para "called mineral"
-	line "water. Everything"
-	para "here is."
+	text "Read the fountain"
+	line "plaque. It's the"
+	para "only honest sign"
+	line "in the city."
 	done
 
 DisPlaza1Townie3:
 	jumptextfaceplayer DisPlaza1Townie3Text
 
 DisPlaza1Townie3Text:
-	text "There's a rumour"
-	line "of an exit. Just a"
-	para "rumour. We're very"
-	line "good at rumours."
+	text "I got a pamphlet"
+	line "called 'How to"
+	para "Cope.' It was one"
+	line "page. It said"
+	para "'Don't.'"
 	done
 
 DisPlaza1Townie4:
 	jumptextfaceplayer DisPlaza1Townie4Text
 
 DisPlaza1Townie4Text:
-	text "I'm in sales."
-	line "Don't ask what I"
-	para "sell. Don't ask"
-	line "who buys."
+	text "The nice ones work"
+	line "in the shop. They"
+	para "also sign the"
+	line "paperwork."
 	done
 
 DisPlaza1Townie5:
 	jumptextfaceplayer DisPlaza1Townie5Text
 
 DisPlaza1Townie5Text:
-	text "The weather is the"
-	line "same all year."
-	para "Sulfurous, with a"
-	line "chance of regret."
+	text "Demons are people"
+	line "too. Terrible,"
+	para "terrible people,"
+	line "but still."
+	done
+
+DisPlaza1Townie6:
+	jumptextfaceplayer DisPlaza1Townie6Text
+
+DisPlaza1Townie6Text:
+	text "Sorry about the"
+	line "heat. We tried air"
+	para "conditioning. It"
+	line "just made the"
+	para "screaming echo."
+	done
+
+DisPlaza1Townie7:
+	jumptextfaceplayer DisPlaza1Townie7Text
+
+DisPlaza1Townie7Text:
+	text "There's a rumour"
+	line "of an exit. Just a"
+	para "rumour. We're very"
+	line "good at rumours."
+	done
+
+DisPlaza1Townie8:
+	jumptextfaceplayer DisPlaza1Townie8Text
+
+DisPlaza1Townie8Text:
+	text "We have a union."
+	line "It meets every"
+	para "Never."
+	done
+
+DisPlaza1Duel:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_DIS_PLAZA1_DUEL
+	iftrue .Beaten
+	writetext DisPlaza1DuelSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext DisPlaza1DuelBeatenText, 0
+	loadtrainer D_JUDGE, 135
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_GEN_DIS_PLAZA1_DUEL
+	opentext
+.Beaten:
+	checkevent EVENT_GEN_DIS_PLAZA1_DUELPAID
+	iftrue .After
+	writetext DisPlaza1DuelPayText
+	waitbutton
+	verbosegiveitem HP_UP
+	iffalse .NoRoom
+	setevent EVENT_GEN_DIS_PLAZA1_DUELPAID
+.After:
+	writetext DisPlaza1DuelAfterText
+	waitbutton
+	closetext
+	end
+
+.No:
+	writetext DisPlaza1DuelNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext DisPlaza1DuelNoRoomText
+	waitbutton
+	closetext
+	end
+
+DisPlaza1DuelSeenText:
+	text "JUDGE HOLE: Order"
+	line "in the pit! Your"
+	para "verdict: guilty."
+	line "Fight?"
+	done
+
+DisPlaza1DuelBeatenText:
+	text "The court is"
+	line "adjourned. So are"
+	para "you."
+	done
+
+DisPlaza1DuelPayText:
+	text "A prize for the"
+	line "winner. Keep it."
+	para "I'd only lose it."
+	done
+
+DisPlaza1DuelAfterText:
+	text "Appeals are heard"
+	line "on Judgment Day."
+	para "Ask for the long"
+	line "line."
+	done
+
+DisPlaza1DuelNoText:
+	text "Fine. Another day."
+	line "I'll be here. I'm"
+	para "always here."
+	done
+
+DisPlaza1DuelNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
 	done
 
 DisPlaza1_MapEvents:
@@ -80,12 +235,17 @@ DisPlaza1_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 25, 21, BGEVENT_READ, DisPlaza1Fountain0
 
 	def_object_events
-	object_event 20, 23, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie0, -1
-	object_event 15,  9, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie1, -1
-	object_event 25,  6, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie2, -1
-	object_event 13, 17, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie3, -1
-	object_event 13, 13, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie4, -1
-	object_event 21, 14, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie5, -1
+	object_event  3,  7, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Giver, -1
+	object_event 26, 12, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie1, -1
+	object_event  4, 18, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie2, -1
+	object_event  3, 16, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie3, -1
+	object_event  2, 20, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie4, -1
+	object_event 21, 20, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie5, -1
+	object_event  6, 16, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie6, -1
+	object_event 20, 23, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie7, -1
+	object_event  5,  8, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie8, -1
+	object_event 22, 15, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Duel, -1
 

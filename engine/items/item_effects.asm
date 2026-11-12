@@ -142,6 +142,12 @@ ItemEffects:
 	dw RestoreHPEffect     ; BERRY
 	dw RestoreHPEffect     ; GOLD_BERRY
 	dw PokeBallEffect      ; PARK_BALL
+	dw NoEffect            ; LEFTOVERS
+	dw NoEffect            ; QUICK_CLAW
+	dw NoEffect            ; SCOPE_LENS
+	dw NoEffect            ; AMULET_COIN
+	dw NoEffect            ; BRIGHTPOWDER
+	dw NoEffect            ; SMOKE_BALL
 	dw NoEffect            ; ITEM_B3
 	assert_table_length ITEM_B3
 ; The items past ITEM_B3 have no effect entries and cannot be used (ITEMMENU_NOUSE).

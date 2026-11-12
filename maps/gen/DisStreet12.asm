@@ -42,25 +42,25 @@ DisStreet12AfterScript:
 	end
 
 DisStreet12Trainer0:
-	trainer D_IMPF, 135, EVENT_GEN_DIS_STREET12_0, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_DAMNED, 132, EVENT_GEN_DIS_STREET12_0, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
 
 DisStreet12Trainer1:
-	trainer D_FIREEATER, 135, EVENT_GEN_DIS_STREET12_1, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_SHADE, 137, EVENT_GEN_DIS_STREET12_1, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
 
 DisStreet12Trainer2:
-	trainer D_FIREEATER, 136, EVENT_GEN_DIS_STREET12_2, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_MAGISTRATE, 130, EVENT_GEN_DIS_STREET12_2, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
 
 DisStreet12Trainer3:
-	trainer D_CRONE, 130, EVENT_GEN_DIS_STREET12_3, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_BRAWLER, 135, EVENT_GEN_DIS_STREET12_3, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
 
 DisStreet12Trainer4:
-	trainer D_SPECTRE, 129, EVENT_GEN_DIS_STREET12_4, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_FIREEATER, 132, EVENT_GEN_DIS_STREET12_4, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
 
 DisStreet12Trainer5:
-	trainer D_SHADE, 136, EVENT_GEN_DIS_STREET12_5, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_SPECTRE, 132, EVENT_GEN_DIS_STREET12_5, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
 
 DisStreet12Trainer6:
-	trainer D_CRONE, 131, EVENT_GEN_DIS_STREET12_6, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_SHADE, 138, EVENT_GEN_DIS_STREET12_6, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
 
 DisStreet12_MapEvents:
 	db 0, 0 ; filler
@@ -75,11 +75,11 @@ DisStreet12_MapEvents:
 	def_object_events
 	object_event  3, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet12Pickup, EVENT_GEN_DIS_STREET12_PICKUP
 	object_event  6, 22, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisStreet12Hermit, -1
-	object_event  8, 28, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer0, -1
-	object_event 12, 24, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer1, -1
-	object_event 17, 24, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer2, -1
-	object_event 17, 20, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer3, -1
-	object_event  8, 16, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer4, -1
-	object_event 13, 16, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer5, -1
-	object_event 12, 12, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer6, -1
+	object_event  8, 28, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer0, -1
+	object_event 12, 24, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer1, -1
+	object_event 17, 24, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer2, -1
+	object_event 17, 20, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer3, -1
+	object_event  8, 16, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer4, -1
+	object_event 13, 16, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer5, -1
+	object_event 12, 12, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer6, -1
 

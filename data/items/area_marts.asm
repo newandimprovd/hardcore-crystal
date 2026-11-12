@@ -22,6 +22,16 @@ MartTithe2:
 	db REVIVE
 	db -1 ; end
 
+MartTithe2Boutique:
+	db 6
+	db BRIGHTPOWDER
+	db SMOKE_BALL
+	db QUICK_CLAW
+	db FOCUS_BAND
+	db BLACKGLASSES
+	db BLACKBELT_I
+	db -1 ; end
+
 MartTithe3:
 	db 9
 	db POKE_BALL
@@ -50,6 +60,16 @@ MartTithe4:
 	db REPEL
 	db -1 ; end
 
+MartTithe4Boutique:
+	db 6
+	db SCOPE_LENS
+	db KINGS_ROCK
+	db CLEANSE_TAG
+	db EVERSTONE
+	db BLACKBELT_I
+	db METAL_COAT
+	db -1 ; end
+
 MartTithe5:
 	db 11
 	db POKE_BALL
@@ -74,6 +94,16 @@ MartTithe6:
 	db REVIVE
 	db SUPER_REPEL
 	db ESCAPE_ROPE
+	db -1 ; end
+
+MartTithe6Boutique:
+	db 6
+	db LEFTOVERS
+	db AMULET_COIN
+	db LUCKY_EGG
+	db SCOPE_LENS
+	db METAL_COAT
+	db SPELL_TAG
 	db -1 ; end
 
 MartTithe7:
@@ -113,6 +143,16 @@ MartGrove2:
 	db REVIVE
 	db -1 ; end
 
+MartGrove2Boutique:
+	db 6
+	db BRIGHTPOWDER
+	db SMOKE_BALL
+	db QUICK_CLAW
+	db FOCUS_BAND
+	db MIRACLE_SEED
+	db SILVERPOWDER
+	db -1 ; end
+
 MartGrove3:
 	db 11
 	db POKE_BALL
@@ -143,6 +183,16 @@ MartGrove4:
 	db REPEL
 	db -1 ; end
 
+MartGrove4Boutique:
+	db 6
+	db SCOPE_LENS
+	db KINGS_ROCK
+	db CLEANSE_TAG
+	db EVERSTONE
+	db SILVERPOWDER
+	db POISON_BARB
+	db -1 ; end
+
 MartGrove5:
 	db 7
 	db GREAT_BALL
@@ -163,6 +213,16 @@ MartGrove6:
 	db REVIVE
 	db SUPER_REPEL
 	db ESCAPE_ROPE
+	db -1 ; end
+
+MartGrove6Boutique:
+	db 6
+	db LEFTOVERS
+	db AMULET_COIN
+	db LUCKY_EGG
+	db SCOPE_LENS
+	db POISON_BARB
+	db SOFT_SAND
 	db -1 ; end
 
 MartGrove7:
@@ -206,6 +266,16 @@ MartAxiom2:
 	db REPEL
 	db -1 ; end
 
+MartAxiom2Boutique:
+	db 6
+	db BRIGHTPOWDER
+	db SMOKE_BALL
+	db QUICK_CLAW
+	db FOCUS_BAND
+	db METAL_COAT
+	db MAGNET
+	db -1 ; end
+
 MartAxiom3:
 	db 11
 	db POKE_BALL
@@ -232,6 +302,16 @@ MartAxiom4:
 	db ESCAPE_ROPE
 	db -1 ; end
 
+MartAxiom4Boutique:
+	db 6
+	db SCOPE_LENS
+	db KINGS_ROCK
+	db CLEANSE_TAG
+	db EVERSTONE
+	db MAGNET
+	db TWISTEDSPOON
+	db -1 ; end
+
 MartAxiom5:
 	db 7
 	db GREAT_BALL
@@ -252,6 +332,16 @@ MartAxiom6:
 	db REVIVE
 	db SUPER_REPEL
 	db ESCAPE_ROPE
+	db -1 ; end
+
+MartAxiom6Boutique:
+	db 6
+	db LEFTOVERS
+	db AMULET_COIN
+	db LUCKY_EGG
+	db SCOPE_LENS
+	db TWISTEDSPOON
+	db HARD_STONE
 	db -1 ; end
 
 MartAxiom7:
@@ -287,6 +377,16 @@ MartLotus2:
 	db ESCAPE_ROPE
 	db -1 ; end
 
+MartLotus2Boutique:
+	db 6
+	db BRIGHTPOWDER
+	db SMOKE_BALL
+	db QUICK_CLAW
+	db FOCUS_BAND
+	db MYSTIC_WATER
+	db SHARP_BEAK
+	db -1 ; end
+
 MartLotus3:
 	db 7
 	db GREAT_BALL
@@ -309,6 +409,16 @@ MartLotus4:
 	db ESCAPE_ROPE
 	db -1 ; end
 
+MartLotus4Boutique:
+	db 6
+	db SCOPE_LENS
+	db KINGS_ROCK
+	db CLEANSE_TAG
+	db EVERSTONE
+	db SHARP_BEAK
+	db NEVERMELTICE
+	db -1 ; end
+
 MartLotus5:
 	db 7
 	db GREAT_BALL
@@ -329,6 +439,16 @@ MartLotus6:
 	db REVIVE
 	db SUPER_REPEL
 	db ESCAPE_ROPE
+	db -1 ; end
+
+MartLotus6Boutique:
+	db 6
+	db LEFTOVERS
+	db AMULET_COIN
+	db LUCKY_EGG
+	db SCOPE_LENS
+	db NEVERMELTICE
+	db SOFT_SAND
 	db -1 ; end
 
 MartLotus7:
@@ -364,6 +484,16 @@ MartDis2:
 	db ESCAPE_ROPE
 	db -1 ; end
 
+MartDis2Boutique:
+	db 6
+	db BRIGHTPOWDER
+	db SMOKE_BALL
+	db QUICK_CLAW
+	db FOCUS_BAND
+	db CHARCOAL
+	db SPELL_TAG
+	db -1 ; end
+
 MartDis3:
 	db 7
 	db GREAT_BALL
@@ -386,6 +516,16 @@ MartDis4:
 	db ESCAPE_ROPE
 	db -1 ; end
 
+MartDis4Boutique:
+	db 6
+	db SCOPE_LENS
+	db KINGS_ROCK
+	db CLEANSE_TAG
+	db EVERSTONE
+	db SPELL_TAG
+	db BLACKGLASSES
+	db -1 ; end
+
 MartDis5:
 	db 7
 	db GREAT_BALL
@@ -406,6 +546,16 @@ MartDis6:
 	db REVIVE
 	db SUPER_REPEL
 	db ESCAPE_ROPE
+	db -1 ; end
+
+MartDis6Boutique:
+	db 6
+	db LEFTOVERS
+	db AMULET_COIN
+	db LUCKY_EGG
+	db SCOPE_LENS
+	db BLACKGLASSES
+	db DRAGON_SCALE
 	db -1 ; end
 
 MartDis7:

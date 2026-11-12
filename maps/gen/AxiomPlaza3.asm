@@ -6,41 +6,85 @@ AxiomPlaza3_MapScripts:
 
 	def_callbacks
 
-AxiomPlaza3Townie0:
-	jumptextfaceplayer AxiomPlaza3Townie0Text
+AxiomPlaza3Giver:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_AXIOM_PLAZA3_GIFT
+	iftrue .Done
+	writetext AxiomPlaza3GiverText
+	waitbutton
+	verbosegiveitem BERRY
+	iffalse .NoRoom
+	setevent EVENT_GEN_AXIOM_PLAZA3_GIFT
+.Done:
+	writetext AxiomPlaza3GiverAfterText
+	waitbutton
+	closetext
+	end
 
-AxiomPlaza3Townie0Text:
-	text "Statistics say"
-	line "nine of ten"
-	para "citizens are"
-	line "satisfied. The"
-	para "tenth is being"
-	line "resolved."
+.NoRoom:
+	writetext AxiomPlaza3GiverNoRoomText
+	waitbutton
+	closetext
+	end
+
+AxiomPlaza3GiverText:
+	text "I'm CACHEW. Cache"
+	line "plus cashew. A"
+	para "snack that"
+	line "remembers. Take"
+	para "it. I stored a"
+	line "spare. I always"
+	para "do."
+	done
+
+AxiomPlaza3GiverAfterText:
+	text "Don't mention it."
+	line "Seriously, don't."
+	para "It's off the"
+	line "books."
+	done
+
+AxiomPlaza3GiverNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I."
 	done
 
 AxiomPlaza3Townie1:
 	jumptextfaceplayer AxiomPlaza3Townie1Text
 
 AxiomPlaza3Townie1Text:
-	text "Please enjoy the"
-	line "mandatory leisure."
+	text "LEFTOVERS:"
+	line "certified, tested,"
+	para "taxed. In that"
+	line "order, usually."
 	done
 
 AxiomPlaza3Townie2:
 	jumptextfaceplayer AxiomPlaza3Townie2Text
 
 AxiomPlaza3Townie2Text:
-	text "I voted. The"
-	line "result was"
-	para "'accepted'. I"
-	line "don't know what I"
-	para "accepted."
+	text "I'm just a regular"
+	line "citizen. Ignore"
+	para "the antenna."
 	done
 
 AxiomPlaza3Townie3:
 	jumptextfaceplayer AxiomPlaza3Townie3Text
 
 AxiomPlaza3Townie3Text:
+	text "Citizen, your face"
+	line "has been"
+	para "recognized. It is"
+	line "mostly in the"
+	para "clear."
+	done
+
+AxiomPlaza3Townie4:
+	jumptextfaceplayer AxiomPlaza3Townie4Text
+
+AxiomPlaza3Townie4Text:
 	text "I once saw a bug"
 	line "in the system. It"
 	para "saw me too. We"
@@ -48,26 +92,121 @@ AxiomPlaza3Townie3Text:
 	para "it."
 	done
 
-AxiomPlaza3Townie4:
-	jumptextfaceplayer AxiomPlaza3Townie4Text
-
-AxiomPlaza3Townie4Text:
-	text "The Mayor is a"
-	line "great listener. He"
-	para "has forty thousand"
-	line "microphones and no"
-	para "mouth."
-	done
-
 AxiomPlaza3Townie5:
 	jumptextfaceplayer AxiomPlaza3Townie5Text
 
 AxiomPlaza3Townie5Text:
-	text "We are all equal"
-	line "before the"
-	para "algorithm. The"
-	line "algorithm is not"
-	para "equal to us."
+	text "Please enjoy the"
+	line "mandatory leisure."
+	done
+
+AxiomPlaza3Townie6:
+	jumptextfaceplayer AxiomPlaza3Townie6Text
+
+AxiomPlaza3Townie6Text:
+	text "A wild Pokemon"
+	line "asked for ID. It"
+	para "was a very good"
+	line "wild Pokemon."
+	done
+
+AxiomPlaza3Townie7:
+	jumptextfaceplayer AxiomPlaza3Townie7Text
+
+AxiomPlaza3Townie7Text:
+	text "A held item is a"
+	line "form attached to a"
+	para "Pokemon. Fill it"
+	line "in correctly."
+	done
+
+AxiomPlaza3Townie8:
+	jumptextfaceplayer AxiomPlaza3Townie8Text
+
+AxiomPlaza3Townie8Text:
+	text "The shop with a"
+	line "clerk and a couch"
+	para "is real. The couch"
+	line "is audited weekly."
+	done
+
+AxiomPlaza3Duel:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_AXIOM_PLAZA3_DUEL
+	iftrue .Beaten
+	writetext AxiomPlaza3DuelSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext AxiomPlaza3DuelBeatenText, 0
+	loadtrainer U_MATCHMAKER, 129
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_GEN_AXIOM_PLAZA3_DUEL
+	opentext
+.Beaten:
+	checkevent EVENT_GEN_AXIOM_PLAZA3_DUELPAID
+	iftrue .After
+	writetext AxiomPlaza3DuelPayText
+	waitbutton
+	verbosegiveitem IRON
+	iffalse .NoRoom
+	setevent EVENT_GEN_AXIOM_PLAZA3_DUELPAID
+.After:
+	writetext AxiomPlaza3DuelAfterText
+	waitbutton
+	closetext
+	end
+
+.No:
+	writetext AxiomPlaza3DuelNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext AxiomPlaza3DuelNoRoomText
+	waitbutton
+	closetext
+	end
+
+AxiomPlaza3DuelSeenText:
+	text "MATCH-9: Genetic"
+	line "compatibility:"
+	para "0.2. Let's fight"
+	line "and call it love."
+	para "Fight?"
+	done
+
+AxiomPlaza3DuelBeatenText:
+	text "Match failed."
+	line "Please try again"
+	para "with someone"
+	line "approved."
+	done
+
+AxiomPlaza3DuelPayText:
+	text "A prize for the"
+	line "winner. Keep it."
+	para "I'd only lose it."
+	done
+
+AxiomPlaza3DuelAfterText:
+	text "I wish you a legal"
+	line "partnership."
+	done
+
+AxiomPlaza3DuelNoText:
+	text "Fine. Another day."
+	line "I'll be here. I'm"
+	para "always here."
+	done
+
+AxiomPlaza3DuelNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
 	done
 
 AxiomPlaza3_MapEvents:
@@ -84,10 +223,14 @@ AxiomPlaza3_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 19, 10, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie0, -1
-	object_event 11, 18, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie1, -1
-	object_event 15, 16, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie2, -1
-	object_event 24, 16, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie3, -1
-	object_event 27, 16, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie4, -1
-	object_event 10, 13, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie5, -1
+	object_event 24, 17, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Giver, -1
+	object_event 18, 13, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie1, -1
+	object_event 10, 15, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie2, -1
+	object_event 18,  8, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie3, -1
+	object_event 13, 17, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie4, -1
+	object_event 24, 10, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie5, -1
+	object_event 20, 17, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie6, -1
+	object_event 26,  6, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie7, -1
+	object_event 26, 21, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie8, -1
+	object_event 10, 10, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Duel, -1
 

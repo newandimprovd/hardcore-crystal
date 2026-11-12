@@ -6,61 +6,88 @@ AxiomPlaza4_MapScripts:
 
 	def_callbacks
 
-AxiomPlaza4Townie0:
-	jumptextfaceplayer AxiomPlaza4Townie0Text
+AxiomPlaza4Fountain0:
+	jumptext AxiomPlaza4Fountain0Text
 
-AxiomPlaza4Townie0Text:
-	text "I once saw a bug"
-	line "in the system. It"
-	para "saw me too. We"
-	line "don't talk about"
-	para "it."
+AxiomPlaza4Fountain0Text:
+	text "FOUNTAINEER-3."
+	line "Fountain +"
+	para "engineer. Output:"
+	line "4.0 liters per"
+	para "sigh. Sighs are"
+	line "logged."
+	done
+
+AxiomPlaza4Giver:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_AXIOM_PLAZA4_GIFT
+	iftrue .Done
+	writetext AxiomPlaza4GiverText
+	waitbutton
+	verbosegiveitem SUPER_POTION
+	iffalse .NoRoom
+	setevent EVENT_GEN_AXIOM_PLAZA4_GIFT
+.Done:
+	writetext AxiomPlaza4GiverAfterText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext AxiomPlaza4GiverNoRoomText
+	waitbutton
+	closetext
+	end
+
+AxiomPlaza4GiverText:
+	text "I'm DATUMN. Datum"
+	line "plus autumn. A"
+	para "single fact that"
+	line "has fallen. Gift"
+	para "certificate. Valid"
+	line "until this"
+	para "sentence ends."
+	done
+
+AxiomPlaza4GiverAfterText:
+	text "That's all I have."
+	line "The rest is for"
+	para "someone with a"
+	line "better reason."
+	done
+
+AxiomPlaza4GiverNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I."
 	done
 
 AxiomPlaza4Townie1:
 	jumptextfaceplayer AxiomPlaza4Townie1Text
 
 AxiomPlaza4Townie1Text:
-	text "The Mayor is a"
-	line "great listener. He"
-	para "has forty thousand"
-	line "microphones and no"
-	para "mouth."
+	text "The Pokemon Center"
+	line "is a processing"
+	para "facility with a"
+	line "kindly name."
 	done
 
 AxiomPlaza4Townie2:
 	jumptextfaceplayer AxiomPlaza4Townie2Text
 
 AxiomPlaza4Townie2Text:
-	text "Your happiness has"
-	line "been scheduled for"
-	para "Thursday. Please"
-	line "arrive early."
+	text "We are all equal"
+	line "before the"
+	para "algorithm. The"
+	line "algorithm is not"
+	para "equal to us."
 	done
 
 AxiomPlaza4Townie3:
 	jumptextfaceplayer AxiomPlaza4Townie3Text
 
 AxiomPlaza4Townie3Text:
-	text "Please enjoy the"
-	line "mandatory leisure."
-	done
-
-AxiomPlaza4Townie4:
-	jumptextfaceplayer AxiomPlaza4Townie4Text
-
-AxiomPlaza4Townie4Text:
-	text "Please queue here."
-	line "Queue for the"
-	para "queue, then queue."
-	line "Thank you for"
-	para "queueing."
-	done
-
-AxiomPlaza4Townie5:
-	jumptextfaceplayer AxiomPlaza4Townie5Text
-
-AxiomPlaza4Townie5Text:
 	text "I voted. The"
 	line "result was"
 	para "'accepted'. I"
@@ -68,23 +95,160 @@ AxiomPlaza4Townie5Text:
 	para "accepted."
 	done
 
+AxiomPlaza4Townie4:
+	jumptextfaceplayer AxiomPlaza4Townie4Text
+
+AxiomPlaza4Townie4Text:
+	text "A wild Pokemon"
+	line "asked for ID. It"
+	para "was a very good"
+	line "wild Pokemon."
+	done
+
+AxiomPlaza4Townie5:
+	jumptextfaceplayer AxiomPlaza4Townie5Text
+
+AxiomPlaza4Townie5Text:
+	text "Statistics say"
+	line "nine of ten"
+	para "citizens are"
+	line "satisfied. The"
+	para "tenth is being"
+	line "resolved."
+	done
+
+AxiomPlaza4Townie6:
+	jumptextfaceplayer AxiomPlaza4Townie6Text
+
+AxiomPlaza4Townie6Text:
+	text "The shop with a"
+	line "clerk and a couch"
+	para "is real. The couch"
+	line "is audited weekly."
+	done
+
+AxiomPlaza4Townie7:
+	jumptextfaceplayer AxiomPlaza4Townie7Text
+
+AxiomPlaza4Townie7Text:
+	text "The fountain"
+	line "plaque is a pun."
+	para "The pun is"
+	line "registered. The"
+	para "joke is not yet"
+	line "approved."
+	done
+
+AxiomPlaza4Townie8:
+	jumptextfaceplayer AxiomPlaza4Townie8Text
+
+AxiomPlaza4Townie8Text:
+	text "Your happiness has"
+	line "been scheduled for"
+	para "Thursday. Please"
+	line "arrive early."
+	done
+
+AxiomPlaza4Duel:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_AXIOM_PLAZA4_DUEL
+	iftrue .Beaten
+	writetext AxiomPlaza4DuelSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext AxiomPlaza4DuelBeatenText, 0
+	loadtrainer U_EXEC, 133
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_GEN_AXIOM_PLAZA4_DUEL
+	opentext
+.Beaten:
+	checkevent EVENT_GEN_AXIOM_PLAZA4_DUELPAID
+	iftrue .After
+	writetext AxiomPlaza4DuelPayText
+	waitbutton
+	verbosegiveitem CALCIUM
+	iffalse .NoRoom
+	setevent EVENT_GEN_AXIOM_PLAZA4_DUELPAID
+.After:
+	writetext AxiomPlaza4DuelAfterText
+	waitbutton
+	closetext
+	end
+
+.No:
+	writetext AxiomPlaza4DuelNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext AxiomPlaza4DuelNoRoomText
+	waitbutton
+	closetext
+	end
+
+AxiomPlaza4DuelSeenText:
+	text "AGENT ZED: Your"
+	line "file is closed. I"
+	para "will close you"
+	line "too. Fight?"
+	done
+
+AxiomPlaza4DuelBeatenText:
+	text "Reopening your"
+	line "file. Please wait."
+	done
+
+AxiomPlaza4DuelPayText:
+	text "A prize for the"
+	line "winner. Keep it."
+	para "I'd only lose it."
+	done
+
+AxiomPlaza4DuelAfterText:
+	text "Process complete."
+	line "Your file is now"
+	para "longer."
+	done
+
+AxiomPlaza4DuelNoText:
+	text "Fine. Another day."
+	line "I'll be here. I'm"
+	para "always here."
+	done
+
+AxiomPlaza4DuelNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
 AxiomPlaza4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 10,  3, AXIOM_MART4, 1
-	warp_event 16,  3, AXIOM_POKECENTER4, 1
-	warp_event 20,  3, AXIOM_HOUSE4, 1
+	warp_event  2,  3, AXIOM_POKECENTER4, 1
+	warp_event  6,  3, AXIOM_MART4, 1
+	warp_event 10,  3, AXIOM_HOUSE4, 1
+	warp_event 14,  3, AXIOM_BOUTIQUE4, 1
 
 	def_coord_events
 
 	def_bg_events
+	bg_event  5, 19, BGEVENT_READ, AxiomPlaza4Fountain0
 
 	def_object_events
-	object_event 16,  8, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie0, -1
-	object_event  3, 23, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie1, -1
-	object_event 11, 18, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie2, -1
-	object_event 23, 15, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie3, -1
-	object_event 10, 21, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie4, -1
-	object_event  5,  9, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie5, -1
+	object_event 20, 15, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Giver, -1
+	object_event 27,  6, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie1, -1
+	object_event  2, 21, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie2, -1
+	object_event 11,  8, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie3, -1
+	object_event 26, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie4, -1
+	object_event 13, 18, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie5, -1
+	object_event 11, 16, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie6, -1
+	object_event  8, 10, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie7, -1
+	object_event 11, 21, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie8, -1
+	object_event 20, 22, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Duel, -1
 

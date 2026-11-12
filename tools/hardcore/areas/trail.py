@@ -90,13 +90,14 @@ def put(m, x, y, b):
 def glade(m, kit, S, R, spot):
     """Carve and dress one glade. Returns its floor cells (cell coordinates) for the item, the hermit and the hidden item."""
     side, x0, x1, r0, r1, mr, lim = spot
-    floor = kit.floor
+    ground = kit.extra.get("ground", kit.floor)  # what a glade or a clearing is floored with (the road kit: grass, not the path)
+    floor = set(kit.floor) | set(ground)
     gw, gh = x1 - x0 + 1, r1 - r0 + 1
     for y in range(r0, r1 + 1):
         for x in range(x0, x1 + 1):
-            m.set(x, y, R.choice(floor))
+            m.set(x, y, R.choice(ground))
     mx = lim - 1 if side == "L" else lim
-    m.set(mx, mr, R.choice(floor))
+    m.set(mx, mr, R.choice(ground))
     flowers = S["flowers"]
     kinds = list(KINDS_WILD if kit.extra["style"] == "wild" else KINDS_URBAN)
     if gw < 4 or gh < 4:
@@ -122,7 +123,7 @@ def glade(m, kit, S, R, spot):
     elif kind == "garden":
         for xx in range(x0, x1 + 1):  # a rail across the top row of the glade, beds below
             if (xx, r0) not in keep:
-                m.set(xx, r0, S["fence_h"])
+                m.set(xx, r0, S.get("fence_h", S["pool"]))  # a rail, or a row of boulders where the tileset has no rail
         for yy in range(r0 + 1, r1 + 1):
             for xx in range(x0, x1 + 1):
                 if (xx, yy) not in keep and R.random() < 0.55:
@@ -153,6 +154,7 @@ def landscape(m, kit, S, R, base, protect):
     base fill and keep one block of base fill between them and any block of the corridor or a glade (`protect`)."""
     style = kit.extra["style"]
     flowers = S["flowers"]
+    ground = kit.extra.get("ground", kit.floor)
     base_set = {base} if base is not None else set(kit.wall)
     made = 0
     # open ground and a thinner forest / more courtyards between the features: the margins are not a solid wall
@@ -163,9 +165,9 @@ def landscape(m, kit, S, R, base, protect):
             r = R.random()
             if style == "wild":
                 if r > 0.58:
-                    m.set(x, y, R.choice(kit.floor) if r < 0.85 else R.choice(flowers))
+                    m.set(x, y, R.choice(ground) if r < 0.85 else R.choice(flowers))
             elif r > 0.82:
-                m.set(x, y, R.choice(kit.floor) if r < 0.92 else S["tree"] if r < 0.97 else R.choice(flowers))
+                m.set(x, y, R.choice(ground) if r < 0.92 else S["tree"] if r < 0.97 else R.choice(flowers))
     for _ in range(80):
         if made >= 7:
             break
@@ -187,13 +189,13 @@ def landscape(m, kit, S, R, base, protect):
                            ("pond_w" if lef else "pond_e" if rig else "pond_c")
                     m.set(x, y, S[role])
                 elif kind == "clearing":
-                    m.set(x, y, R.choice(flowers) if R.random() < 0.5 else R.choice(kit.floor))
+                    m.set(x, y, R.choice(flowers) if R.random() < 0.5 else R.choice(ground))
                 else:  # grove: a checker of trees on open ground (urban: a pocket park)
-                    m.set(x, y, S["tree"] if (x + y) % 2 == 0 else R.choice(kit.floor))
+                    m.set(x, y, S["tree"] if (x + y) % 2 == 0 else R.choice(ground))
         made += 1
 
 
-def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, neck=0, w=None, pal="PALETTE_DAY", W=12):
+def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, neck=0, w=None, pal="PALETTE_DAY", W=12, north="open"):
     S = kit.extra["scn"]
     style = kit.extra["style"]
     rows = trainers - trainers // 3
@@ -229,6 +231,13 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
     if gate:
         assert neck >= 2, "a gate needs a neck"
         gate_objects(m, gate, w, 2 * (c[H - neck] + cw // 2), 2 * (H - neck))
+    door = None
+    if north == "door":  # the corridor ends under a hall: side blocks of a house either side of its door block
+        dx = c[0] + cw // 2
+        for x in range(lo[0], hi[0] + 1):
+            m.set(x, 0, kit.extra["house"][1] if x != dx else kit.extra["rift"])
+            carved.discard((x, 0))
+        door = m.warp(*kit.door_cell(dx, 0, kit.extra["rift"]))
     # trainers: one block row each (a pair on some), on the cells at the two edges of that row of the corridor
     ys = [H - 3 - i * gap for i in range(rows)]
     assert ys[-1] >= ROW0, (name, ys)
@@ -260,7 +269,7 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
     protect |= carved
     landscape(m, kit, S, R, base, protect)
     # rails along the corridor's long edges instead of tree line (wild areas)
-    if base is not None:
+    if base is not None and "fence_v" in S:
         for (x, y) in sorted(carved):
             if (x, y) in {(gd["mouth"]) for gd in glades}:
                 continue
@@ -275,11 +284,12 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
     if style == "urban":
         autotile(m, kit, R)
     r = reach(m, kit, (2 * c[H - 1] + 1, 2 * H - 1))
-    assert (2 * c[0] + 1, 0) in r, (name, "exit not reachable")
+    assert ((door.x, door.y + 1) if door else (2 * c[0] + 1, 0)) in r, (name, "exit not reachable")
     for gd in glades:
         gd["cells"] = [cl for cl in gd["cells"] if cl in r]
     g.add(m)
     m.a, m.a_out, m.cw = c[H - 1], c[0], cw
     m.glades = glades
+    m.door = door
     m.corridor = c
     return m, slots

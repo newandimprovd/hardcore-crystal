@@ -22,7 +22,10 @@ def build_all():
         t.write()
         print(f"{t.name}: {t.used} tiles, {len(t.blocks)} blocks")
         sets.append(t)
-    register.register(sets)
+    if "TILESET_AERODACTYL_WORD_ROOM" in open(os.path.join(register.ROOT, "constants/tileset_constants.asm")).read():
+        register.register(sets)
+    else:  # the baggage removal pruned the vanilla anchor: the tables are already registered, only the files above change
+        print("tilesets already registered, tables untouched")
     return sets
 
 

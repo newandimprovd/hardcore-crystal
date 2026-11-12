@@ -42,25 +42,25 @@ AxiomStreet8AfterScript:
 	end
 
 AxiomStreet8Trainer0:
-	trainer U_BOTCOP, 130, EVENT_GEN_AXIOM_STREET8_0, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_CASEWORKER, 129, EVENT_GEN_AXIOM_STREET8_0, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
 
 AxiomStreet8Trainer1:
-	trainer U_DOCTOR, 130, EVENT_GEN_AXIOM_STREET8_1, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_GUARD, 131, EVENT_GEN_AXIOM_STREET8_1, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
 
 AxiomStreet8Trainer2:
-	trainer U_COURIER, 132, EVENT_GEN_AXIOM_STREET8_2, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_SERFF, 130, EVENT_GEN_AXIOM_STREET8_2, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
 
 AxiomStreet8Trainer3:
-	trainer U_SERF, 133, EVENT_GEN_AXIOM_STREET8_3, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_BOT, 132, EVENT_GEN_AXIOM_STREET8_3, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
 
 AxiomStreet8Trainer4:
-	trainer U_GUARD, 131, EVENT_GEN_AXIOM_STREET8_4, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_BOTCOP, 131, EVENT_GEN_AXIOM_STREET8_4, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
 
 AxiomStreet8Trainer5:
-	trainer U_SERFF, 135, EVENT_GEN_AXIOM_STREET8_5, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_SERFF, 131, EVENT_GEN_AXIOM_STREET8_5, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
 
 AxiomStreet8Trainer6:
-	trainer U_DOCTOR, 131, EVENT_GEN_AXIOM_STREET8_6, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_WARDBOT, 133, EVENT_GEN_AXIOM_STREET8_6, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
 
 AxiomStreet8_MapEvents:
 	db 0, 0 ; filler
@@ -70,16 +70,16 @@ AxiomStreet8_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 19, 17, BGEVENT_ITEM, AxiomStreet8Hidden
+	bg_event  6, 26, BGEVENT_ITEM, AxiomStreet8Hidden
 
 	def_object_events
-	object_event 20, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet8Pickup, EVENT_GEN_AXIOM_STREET8_PICKUP
-	object_event 21, 14, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomStreet8Hermit, -1
-	object_event  4, 28, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer0, -1
-	object_event  9, 28, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer1, -1
-	object_event  8, 24, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer2, -1
-	object_event 12, 20, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer3, -1
-	object_event 17, 20, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer4, -1
-	object_event 13, 16, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer5, -1
-	object_event  4, 12, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer6, -1
+	object_event  3, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet8Pickup, EVENT_GEN_AXIOM_STREET8_PICKUP
+	object_event  2, 16, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomStreet8Hermit, -1
+	object_event 16, 28, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer0, -1
+	object_event 21, 28, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer1, -1
+	object_event 12, 24, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer2, -1
+	object_event  8, 20, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer3, -1
+	object_event 13, 20, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer4, -1
+	object_event 17, 16, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer5, -1
+	object_event 16, 12, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer6, -1
 

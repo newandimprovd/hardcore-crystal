@@ -6,63 +6,142 @@ LotusPlaza7_MapScripts:
 
 	def_callbacks
 
-LotusPlaza7Townie0:
-	jumptextfaceplayer LotusPlaza7Townie0Text
+LotusPlaza7Fountain0:
+	jumptext LotusPlaza7Fountain0Text
 
-LotusPlaza7Townie0Text:
-	text "Looking for the"
-	line "meaning of life?"
-	para "Try the minibar."
-	line "It's empty. That's"
-	para "the meaning."
+LotusPlaza7Fountain0Text:
+	text "DRIFTAIN. Drift +"
+	line "fountain. It"
+	para "sprays where the"
+	line "wind sends it. It"
+	para "has never"
+	line "apologized."
+	done
+
+LotusPlaza7Giver:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_LOTUS_PLAZA7_GIFT
+	iftrue .Done
+	writetext LotusPlaza7GiverText
+	waitbutton
+	verbosegiveitem HYPER_POTION
+	iffalse .NoRoom
+	setevent EVENT_GEN_LOTUS_PLAZA7_GIFT
+.Done:
+	writetext LotusPlaza7GiverAfterText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext LotusPlaza7GiverNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusPlaza7GiverText:
+	text "I'm BREEZZE."
+	line "Breeze plus zzz. I"
+	para "drift to wherever"
+	line "it takes me. I"
+	para "blew in. This blew"
+	line "in with me. Here."
+	done
+
+LotusPlaza7GiverAfterText:
+	text "That's all I have."
+	line "The rest is for"
+	para "someone with a"
+	line "better reason."
+	done
+
+LotusPlaza7GiverNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I."
 	done
 
 LotusPlaza7Townie1:
 	jumptextfaceplayer LotusPlaza7Townie1Text
 
 LotusPlaza7Townie1Text:
-	text "The lifeguard is a"
-	line "philosopher. He"
-	para "hasn't saved"
-	line "anyone yet, but he"
-	para "has had thoughts."
+	text "Sunscreen? In this"
+	line "economy of"
+	para "despair? Let it"
+	line "burn."
 	done
 
 LotusPlaza7Townie2:
 	jumptextfaceplayer LotusPlaza7Townie2Text
 
 LotusPlaza7Townie2Text:
-	text "I booked a week."
-	line "It's been four"
-	para "years. Checkout is"
-	line "a state of mind."
+	text "Somebody is"
+	line "selling LEFTOVERS"
+	para "on the beach. It"
+	line "was already sold"
+	para "twice."
 	done
 
 LotusPlaza7Townie3:
 	jumptextfaceplayer LotusPlaza7Townie3Text
 
 LotusPlaza7Townie3Text:
-	text "The pool is closed"
-	line "due to depth."
-	done
-
-LotusPlaza7Townie4:
-	jumptextfaceplayer LotusPlaza7Townie4Text
-
-LotusPlaza7Townie4Text:
 	text "Every day is"
 	line "Sunday here. The"
 	para "Sunday scaries are"
 	line "permanent."
 	done
 
+LotusPlaza7Townie4:
+	jumptextfaceplayer LotusPlaza7Townie4Text
+
+LotusPlaza7Townie4Text:
+	text "The shop in the"
+	line "living room?"
+	para "Honestly, I"
+	line "thought it was a"
+	para "hotel room. The"
+	line "clerk is sleeping."
+	done
+
 LotusPlaza7Townie5:
 	jumptextfaceplayer LotusPlaza7Townie5Text
 
 LotusPlaza7Townie5Text:
+	text "The Pokemon Center"
+	line "has a hammock. The"
+	para "nurse has a drink."
+	line "Please be quiet."
+	done
+
+LotusPlaza7Townie6:
+	jumptextfaceplayer LotusPlaza7Townie6Text
+
+LotusPlaza7Townie6Text:
+	text "Read the fountain"
+	line "plaque. It's the"
+	para "most work anyone"
+	line "does here."
+	done
+
+LotusPlaza7Townie7:
+	jumptextfaceplayer LotusPlaza7Townie7Text
+
+LotusPlaza7Townie7Text:
 	text "Smile! You're on"
 	line "vacation! That's"
 	para "an order."
+	done
+
+LotusPlaza7Townie8:
+	jumptextfaceplayer LotusPlaza7Townie8Text
+
+LotusPlaza7Townie8Text:
+	text "The tide brought a"
+	line "very nice item. It"
+	para "also brought a"
+	line "court order."
 	done
 
 LotusPlaza7_MapEvents:
@@ -77,12 +156,16 @@ LotusPlaza7_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 19, 23, BGEVENT_READ, LotusPlaza7Fountain0
 
 	def_object_events
-	object_event 20, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie0, -1
-	object_event 27, 18, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie1, -1
-	object_event 30, 14, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie2, -1
-	object_event 18, 23, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie3, -1
-	object_event 28,  9, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie4, -1
-	object_event 26, 12, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie5, -1
+	object_event 29, 22, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Giver, -1
+	object_event 13, 13, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie1, -1
+	object_event 13, 16, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie2, -1
+	object_event 15, 20, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie3, -1
+	object_event  3, 12, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie4, -1
+	object_event  3, 19, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie5, -1
+	object_event 24,  9, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie6, -1
+	object_event 28, 23, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie7, -1
+	object_event  6, 19, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie8, -1
 

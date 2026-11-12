@@ -82,25 +82,25 @@ AxiomStreet11AfterScript:
 	end
 
 AxiomStreet11Trainer0:
-	trainer U_WARDBOT, 139, EVENT_GEN_AXIOM_STREET11_0, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_BOTCOP, 136, EVENT_GEN_AXIOM_STREET11_0, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer1:
-	trainer U_DOCTOR, 133, EVENT_GEN_AXIOM_STREET11_1, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_GUARD, 132, EVENT_GEN_AXIOM_STREET11_1, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer2:
-	trainer U_CASEWORKER, 128, EVENT_GEN_AXIOM_STREET11_2, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_WARDBOT, 134, EVENT_GEN_AXIOM_STREET11_2, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer3:
-	trainer U_BOTCOP, 135, EVENT_GEN_AXIOM_STREET11_3, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_SERF, 137, EVENT_GEN_AXIOM_STREET11_3, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer4:
-	trainer U_BOTCOP, 136, EVENT_GEN_AXIOM_STREET11_4, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_DRONE, 131, EVENT_GEN_AXIOM_STREET11_4, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer5:
-	trainer U_DOCTOR, 134, EVENT_GEN_AXIOM_STREET11_5, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_EXEC, 131, EVENT_GEN_AXIOM_STREET11_5, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11Trainer6:
-	trainer U_DRONE, 131, EVENT_GEN_AXIOM_STREET11_6, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_BOT, 133, EVENT_GEN_AXIOM_STREET11_6, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11_MapEvents:
 	db 0, 0 ; filler
@@ -117,11 +117,11 @@ AxiomStreet11_MapEvents:
 	object_event  7, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet11GateScript, EVENT_GEN_AXIOM_STREET11_GATE
 	object_event 12, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet11Pickup, EVENT_GEN_AXIOM_STREET11_PICKUP
 	object_event 19, 22, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet11Hermit, -1
-	object_event  4, 28, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer0, -1
-	object_event  9, 24, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer1, -1
-	object_event  4, 20, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer2, -1
-	object_event  9, 20, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer3, -1
-	object_event  4, 16, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer4, -1
-	object_event  4, 12, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer5, -1
-	object_event  9, 12, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer6, -1
+	object_event  4, 28, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer0, -1
+	object_event  9, 24, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer1, -1
+	object_event  4, 20, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer2, -1
+	object_event  9, 20, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer3, -1
+	object_event  4, 16, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer4, -1
+	object_event  4, 12, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer5, -1
+	object_event  9, 12, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer6, -1
 

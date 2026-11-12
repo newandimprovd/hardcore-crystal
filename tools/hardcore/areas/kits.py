@@ -78,6 +78,19 @@ def johto():
                house=[0x14, 0x15], rift=0x14, border=0x05)
 
 
+def road():
+    """The countryside road out of Cherrygrove: the vanilla Johto blocks dressed for trail() (areas/trail.py).
+    Trees are the solid block 0x05 (no single-tree blocks: those answer to Headbutt), the pond is the Cherrygrove one (rock rim on the north,
+    cliff banks left and right, open water below) and boulders stand in for rails and for the island in the clearing."""
+    scn = dict(tree=0x05, pool=0x0a, flowers=[0x04, 0x04, 0x04],
+               pond_nw=0x54, pond_n=0x76, pond_ne=0x55, pond_w=0x58, pond_c=0x35, pond_e=0x59,
+               pond_sw=0x79, pond_s=0x35, pond_se=0x7a)
+    return Kit("TILESET_JOHTO", floor=[0x01, 0x01, 0x01, 0x01, 0x02], wall=[0x05],
+               plaza=[0x01], grass=[0x02], flowers=[0x04],
+               center=[[0x18, 0x19], [0x1a, 0x1b]], mart=[[0x18, 0x19], [0x1a, 0x17]],
+               house=[0x14, 0x15], rift=0x14, border=0x05, scn=scn, style="wild", ground=[0x02, 0x02, 0x02, 0x02, 0x04])
+
+
 def kanto():
     """Brick Kanto city blocks: roofs 0x20/0x21 over the door blocks 0x7c (door) and 0x7e or 0x73 (Mart sign)."""
     return Kit("TILESET_KANTO",

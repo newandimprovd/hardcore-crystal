@@ -6,14 +6,61 @@ TithePlaza7_MapScripts:
 
 	def_callbacks
 
-TithePlaza7Townie0:
-	jumptextfaceplayer TithePlaza7Townie0Text
+TithePlaza7Fountain0:
+	jumptext TithePlaza7Fountain0Text
 
-TithePlaza7Townie0Text:
-	text "The fountain is"
-	line "for show. The"
-	para "water is"
-	line "meter-reading you."
+TithePlaza7Fountain0Text:
+	text "DONATELLO"
+	line "FOUNTAIN. Donate +"
+	para "hello. The coins"
+	line "go to the Parish."
+	para "The hello goes"
+	line "nowhere."
+	done
+
+TithePlaza7Giver:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_TITHE_PLAZA7_GIFT
+	iftrue .Done
+	writetext TithePlaza7GiverText
+	waitbutton
+	verbosegiveitem HYPER_POTION
+	iffalse .NoRoom
+	setevent EVENT_GEN_TITHE_PLAZA7_GIFT
+.Done:
+	writetext TithePlaza7GiverAfterText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext TithePlaza7GiverNoRoomText
+	waitbutton
+	closetext
+	end
+
+TithePlaza7GiverText:
+	text "I'm PAYTIENCE. Pay"
+	line "plus patience. I"
+	para "have the first."
+	line "You don't have the"
+	para "second. Here. I"
+	line "owe it to the"
+	para "universe."
+	done
+
+TithePlaza7GiverAfterText:
+	text "That's all I have."
+	line "The rest is for"
+	para "someone with a"
+	line "better reason."
+	done
+
+TithePlaza7GiverNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I."
 	done
 
 TithePlaza7Townie1:
@@ -31,25 +78,58 @@ TithePlaza7Townie2:
 	jumptextfaceplayer TithePlaza7Townie2Text
 
 TithePlaza7Townie2Text:
-	text "My horoscope says"
-	line "'Pay.' Just that."
-	para "Every day. 'Pay.'"
+	text "They say the city"
+	line "has a heart. I've"
+	para "seen its pulse. It"
+	line "was a collection"
+	para "plate."
 	done
 
 TithePlaza7Townie3:
 	jumptextfaceplayer TithePlaza7Townie3Text
 
 TithePlaza7Townie3Text:
-	text "Free samples! Just"
-	line "kidding."
-	para "Everything is a"
-	line "subscription."
+	text "The shop under the"
+	line "green awning has a"
+	para "clerk. The clerk"
+	line "has a past."
 	done
 
 TithePlaza7Townie4:
 	jumptextfaceplayer TithePlaza7Townie4Text
 
 TithePlaza7Townie4Text:
+	text "The fountain is"
+	line "for show. The"
+	para "water is"
+	line "meter-reading you."
+	done
+
+TithePlaza7Townie5:
+	jumptextfaceplayer TithePlaza7Townie5Text
+
+TithePlaza7Townie5Text:
+	text "I saw a wild"
+	line "Pokemon yesterday."
+	para "It asked me for"
+	line "change."
+	done
+
+TithePlaza7Townie6:
+	jumptextfaceplayer TithePlaza7Townie6Text
+
+TithePlaza7Townie6Text:
+	text "Read the fountain"
+	line "plaque. Names here"
+	para "mean something."
+	line "Mine means"
+	para "'debtor'."
+	done
+
+TithePlaza7Townie7:
+	jumptextfaceplayer TithePlaza7Townie7Text
+
+TithePlaza7Townie7Text:
 	text "I've been waiting"
 	line "for the bus since"
 	para "the line was"
@@ -57,15 +137,14 @@ TithePlaza7Townie4Text:
 	para "very committed."
 	done
 
-TithePlaza7Townie5:
-	jumptextfaceplayer TithePlaza7Townie5Text
+TithePlaza7Townie8:
+	jumptextfaceplayer TithePlaza7Townie8Text
 
-TithePlaza7Townie5Text:
-	text "Don't drink from"
-	line "the fountain."
-	para "Don't look at the"
-	line "fountain. Don't"
-	para "wave. It knows."
+TithePlaza7Townie8Text:
+	text "The Pokemon Center"
+	line "is free. That's"
+	para "not a kindness."
+	line "That's an advert."
 	done
 
 TithePlaza7_MapEvents:
@@ -80,12 +159,16 @@ TithePlaza7_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 23, 23, BGEVENT_READ, TithePlaza7Fountain0
 
 	def_object_events
-	object_event 14, 13, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie0, -1
-	object_event  9,  8, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie1, -1
-	object_event 23, 21, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie2, -1
-	object_event 23, 23, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie3, -1
-	object_event 17, 14, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie4, -1
-	object_event 19, 22, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie5, -1
+	object_event 10, 21, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza7Giver, -1
+	object_event  2, 17, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie1, -1
+	object_event 24, 10, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie2, -1
+	object_event 14,  7, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie3, -1
+	object_event 16, 20, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie4, -1
+	object_event 26, 10, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie5, -1
+	object_event 18, 16, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie6, -1
+	object_event 27, 19, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie7, -1
+	object_event 19, 14, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie8, -1
 

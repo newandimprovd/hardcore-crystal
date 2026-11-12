@@ -10,7 +10,7 @@ import random
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from areas import a1, a2, a3, a4, a5, cameos, emit, lore, opening, purg, wild  # noqa: E402
+from areas import a1, a2, a3, a4, a5, cameos, emit, lore, opening, purg, specials, wild  # noqa: E402
 from areas.model import ForeignWarp  # noqa: E402
 from areas.model import World, read, write  # noqa: E402
 from areas.party import Roster  # noqa: E402
@@ -76,6 +76,7 @@ def main():
     cameos.area2(w, w.groups["AREA2"], rng)
     cameos.area3(w, w.groups["AREA3"])
     cameos.area4(w, w.groups["AREA4"])
+    specials.add_all(w, roster, random.Random(20261112))  # the named duelists, with a random source of their own
     # the opening junction outside Cherrygrove (Mr. Pokemon, Joyce, the door to Purgatorio) and Purgatorio itself
     _, cave, junction = opening.build(w, roster, rng)
     road = next(m for m in w.groups["AREA1"].maps if m.name == "TitheRoad")

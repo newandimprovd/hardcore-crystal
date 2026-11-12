@@ -26,6 +26,8 @@ def tally():
         name = os.path.basename(f)[:-4]
         src = open(f).read()
         n = len(re.findall(r"OBJECTTYPE_TRAINER", src))
+        if not name.startswith("Purg"):
+            scripted += len(re.findall(r"^\tstartbattle", src, re.M))  # the named duelists of the plazas (areas/specials.py)
         if name.startswith("Purg"):
             purg += n
             if name == "PurgLanding":

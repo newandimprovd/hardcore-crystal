@@ -4,8 +4,9 @@ import random
 
 from . import a1_text as T
 from . import counts, kits
-from .builder import ActSpec, BossSpec, build_act, make_plaza, pickup, town
+from .builder import ActSpec, BossSpec, build_act, furnish_lane, make_plaza, pickup, town
 from .layout import chain, gatehouse, lane, plaza
+from .trail import trail
 from .populate import populate
 from .text import Text
 
@@ -64,9 +65,10 @@ def build(w, roster, rng, open_exit=False):
     items = [tiers[0]] + [tiers[t] for t in (1, 1, 2, 2, 3, 3)]
 
     # Segment 1: the road out of Cherrygrove (outdoor Johto tileset)
-    road, s_road = lane(g, "TitheRoad", johto, rng, trainers=counts.ROAD_TRAINERS, a=2, cw=3, right=3, landmark=LM_ROAD,
-                        music="MUSIC_ROUTE_30", north="door", neck=2)
+    road, s_road = trail(g, "TitheRoad", kits.road(), rng, trainers=counts.ROAD_TRAINERS, a=2, cw=3, landmark=LM_ROAD,
+                         music="MUSIC_ROUTE_30", north="door")
     pickup(w, road, reserve=len(s_road))
+    furnish_lane(w, g, road, reserve=len(s_road))
     # Segment 2: the city (modern tileset)
     # The road ends at a checkpoint gate hall (the classic Pokemon route -> gate house -> city transition);
     # the plaza's south side is closed, so the hall is the only way in.
@@ -74,7 +76,7 @@ def build(w, roster, rng, open_exit=False):
                         houses=1, south="closed", index=1)
     gatehouse(g, "TitheCheckpoint", road.door, d1["rift"], LM_CITY, "MUSIC_GOLDENROD_CITY", [Text(T.GATE[0])])
     town(w, g, "Tithe", 1, p1, d1, modern, LM_CITY, "TITHE_1", items[0], texts, "TITHE_1", reminders=(T.TIP_A, T.TIP_B))
-    # Trainer tips sign: a Johto signpost block just left of the road, above the neck. Read it from the road side.
+    # Trainer tips sign: a Johto signpost block just left of the road near its south end. Read it from the road side.
     sx, sy = road.a - 1, road.h - 3
     road.set(sx, sy, 0x47)
     road.bg(2 * sx + 1, 2 * sy + 1, "BGEVENT_READ", "TitheRoadTipsSign")
@@ -91,11 +93,11 @@ def build(w, roster, rng, open_exit=False):
                      music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)
     # Timmy is kill 1; the tidal wave news is kill counts.TSUNAMI_KILLS (HC_TSUNAMI_KILLS) and does not depend on any one room
     acts = [ActSpec("Tithe", 5, modern, LM_CITY, "MUSIC_GOLDENROD_CITY", boss=boss1, texts=texts, split=3,
-                    trainers=counts.lanes_of(1)[0]),
+                    trainers=counts.lanes_of(1)[0], boutique=0),
             ActSpec("Tithe", 5, modern, LM_MID, "MUSIC_GOLDENROD_CITY", gate="tree", boss=boss2, texts=texts, split=2,
-                    trainers=counts.lanes_of(1)[1], plaza_width=15, rift=True),
+                    trainers=counts.lanes_of(1)[1], plaza_width=15, rift=True, boutique=1),
             ActSpec("Tithe", 5, modern, LM_PARISH, "MUSIC_GOLDENROD_CITY", gate="boulder", boss=boss3, texts=texts, split=3,
-                    trainers=counts.lanes_of(1)[2])]
+                    trainers=counts.lanes_of(1)[2], boutique=2)]
 
     all_lanes = [(road, s_road)]
     prev, lane_no, plaza_no = p1, 1, 2

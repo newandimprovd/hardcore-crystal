@@ -208,3 +208,18 @@ encounters and redesign Tithe Road, then walk. Free ROM went from 346 KB (old me
 - Still open (small, none blocks the content work): RAM / SRAM leftovers (wLinkMode, unused `ds` areas), ENGINE_* flag pruning, base-stat egg group and step fields (about 700 bytes),
   vanilla trainer attributes / DVs / names rows of dead classes, Sfx_IntroSuicune* and other unused SFX (index aligned with sfx_pointers), empty sections left in layout.link,
   unused landmark names, tileset-animation helper leftovers.
+
+
+## Tithe Road, fountains, boutiques, NPC density, special encounters (Nov 2026)
+- **Tithe Road** is now a winding forest trail (`trail()` on `kits.road()`, vanilla Johto blocks: solid trees 0x05, the Cherrygrove pond rim, boulders as rails, a gate hall of house
+  blocks at the north end with the door into TitheCheckpoint, a hermit and a hidden item). Johto tileset kept so the Junction connection is seamless. `tools/hardcore/mapshot.py MAP out.png`
+  renders any generated map from its blocks (used to look at it before building a ROM).
+- **Generator repair**: `gen_areas.py` could not run after the baggage removal (NorthSouthGate.blk and the Elite Four room blocks were deleted). The gate and boss room blocks are now
+  embedded in layout.py (GATE_BLOCKS, BOSS_TEMPLATES) and `gen_tilesets.py` skips the register step that needs a pruned anchor. Regenerating re-rolled every generated trainer team and the Purgatorio layout once (58 trainers there, 60 planned).
+- **Fountains**: a new `fountain` scenery block (4 tiles over plain floor, wall collision, last block id so nothing moves; Axiom's tileset is now full at 192 tiles) in every third plaza
+  (1, 4, 7) with a plaque to read (wayfolk.FOUNTAIN, names built like Pokemon names).
+- **Rare held-item boutiques**: `restore_items.py` brought back LEFTOVERS, QUICK_CLAW, SCOPE_LENS, AMULET_COIN, BRIGHTPOWDER, SMOKE_BALL into every item table (names, descriptions,
+  attributes, effects); prices of the held items raised (800 to 6000). Every area has three shops (the mid plaza of each act, a living room with a clerk behind the table; areas/boutique.py:
+  PAWNDORA, BARTEROOT, ESCROWBOT, TRADEWIND, DEVILDEAL) with stock that climbs by act and two type boosters of the area's theme. 15 new maps.
+- **NPCs**: 9 townsfolk per plaza (was 6), the first of them a named gift-giver (one item, once; 35 more event flags), 40 new gossip lines pointing at the shops, fountains and held items.
+- **Special encounters**: 30 named optional duelists (areas/specials.py), see docs/SPECIAL_ENCOUNTERS.md; 604 of 650 battles, 46 slots free.

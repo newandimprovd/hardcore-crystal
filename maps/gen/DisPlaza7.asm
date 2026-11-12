@@ -6,34 +6,83 @@ DisPlaza7_MapScripts:
 
 	def_callbacks
 
-DisPlaza7Townie0:
-	jumptextfaceplayer DisPlaza7Townie0Text
+DisPlaza7Fountain0:
+	jumptext DisPlaza7Fountain0Text
 
-DisPlaza7Townie0Text:
-	text "Demons are people"
-	line "too. Terrible,"
-	para "terrible people,"
-	line "but still."
+DisPlaza7Fountain0Text:
+	text "STYXPENSE"
+	line "FOUNTAIN. Styx +"
+	para "expense. Toll: one"
+	line "soul. Coins"
+	para "accepted when"
+	line "souls are out of"
+	para "stock."
+	done
+
+DisPlaza7Giver:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_DIS_PLAZA7_GIFT
+	iftrue .Done
+	writetext DisPlaza7GiverText
+	waitbutton
+	verbosegiveitem HYPER_POTION
+	iffalse .NoRoom
+	setevent EVENT_GEN_DIS_PLAZA7_GIFT
+.Done:
+	writetext DisPlaza7GiverAfterText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext DisPlaza7GiverNoRoomText
+	waitbutton
+	closetext
+	end
+
+DisPlaza7GiverText:
+	text "I'm HELLEBORE."
+	line "Hell plus"
+	para "hellebore."
+	line "Beautiful,"
+	para "poisonous, and"
+	line "very dull. A gift"
+	para "from below. It's"
+	line "the nicest thing"
+	para "down here."
+	done
+
+DisPlaza7GiverAfterText:
+	text "That's all I have."
+	line "The rest is for"
+	para "someone with a"
+	line "better reason."
+	done
+
+DisPlaza7GiverNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I."
 	done
 
 DisPlaza7Townie1:
 	jumptextfaceplayer DisPlaza7Townie1Text
 
 DisPlaza7Townie1Text:
-	text "I got a pamphlet"
-	line "called 'How to"
-	para "Cope.' It was one"
-	line "page. It said"
-	para "'Don't.'"
+	text "We have a union."
+	line "It meets every"
+	para "Never."
 	done
 
 DisPlaza7Townie2:
 	jumptextfaceplayer DisPlaza7Townie2Text
 
 DisPlaza7Townie2Text:
-	text "We have a union."
-	line "It meets every"
-	para "Never."
+	text "Read the fountain"
+	line "plaque. It's the"
+	para "only honest sign"
+	line "in the city."
 	done
 
 DisPlaza7Townie3:
@@ -51,21 +100,50 @@ DisPlaza7Townie4:
 	jumptextfaceplayer DisPlaza7Townie4Text
 
 DisPlaza7Townie4Text:
-	text "There's a rumour"
-	line "of an exit. Just a"
-	para "rumour. We're very"
-	line "good at rumours."
+	text "The nice ones work"
+	line "in the shop. They"
+	para "also sign the"
+	line "paperwork."
 	done
 
 DisPlaza7Townie5:
 	jumptextfaceplayer DisPlaza7Townie5Text
 
 DisPlaza7Townie5Text:
-	text "Please take a"
-	line "number. We lost"
-	para "the numbers."
-	line "Please take a"
-	para "different one."
+	text "The weather is the"
+	line "same all year."
+	para "Sulfurous, with a"
+	line "chance of regret."
+	done
+
+DisPlaza7Townie6:
+	jumptextfaceplayer DisPlaza7Townie6Text
+
+DisPlaza7Townie6Text:
+	text "LEFTOVERS: another"
+	line "word for hellfire"
+	para "after dinner."
+	done
+
+DisPlaza7Townie7:
+	jumptextfaceplayer DisPlaza7Townie7Text
+
+DisPlaza7Townie7Text:
+	text "A held item is a"
+	line "promise with a"
+	para "handle. The handle"
+	line "is hot."
+	done
+
+DisPlaza7Townie8:
+	jumptextfaceplayer DisPlaza7Townie8Text
+
+DisPlaza7Townie8Text:
+	text "The Pokemon Center"
+	line "is a temporary"
+	para "measure."
+	line "Everything here"
+	para "is."
 	done
 
 DisPlaza7_MapEvents:
@@ -80,12 +158,16 @@ DisPlaza7_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  5, 19, BGEVENT_READ, DisPlaza7Fountain0
 
 	def_object_events
-	object_event 10, 21, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie0, -1
-	object_event 12, 14, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie1, -1
-	object_event 18, 22, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie2, -1
-	object_event 18,  8, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie3, -1
-	object_event  3, 20, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie4, -1
-	object_event 17,  8, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie5, -1
+	object_event 11, 19, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza7Giver, -1
+	object_event  7, 21, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie1, -1
+	object_event 12,  8, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie2, -1
+	object_event 16,  7, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie3, -1
+	object_event  9, 23, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie4, -1
+	object_event 18,  7, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie5, -1
+	object_event 14,  6, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie6, -1
+	object_event  5, 26, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie7, -1
+	object_event 11, 13, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza7Townie8, -1
 

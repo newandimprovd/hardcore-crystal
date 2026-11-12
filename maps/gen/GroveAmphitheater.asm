@@ -247,7 +247,7 @@ GroveAmphitheater_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  8, 17, GROVE_PLAZA2, 4
+	warp_event  8, 17, GROVE_PLAZA2, 2
 
 	def_coord_events
 	coord_event  8, 15, -1, GroveAmphitheaterSceneScript

@@ -9,6 +9,18 @@ TitheRoad_MapScripts:
 TitheRoadPickup:
 	itemball TM_HEADBUTT
 
+TitheRoadHermit:
+	jumptextfaceplayer TitheRoadHermitText
+
+TitheRoadHermitText:
+	text "I left the city to"
+	line "escape the tithe."
+	para "The trees also"
+	line "want ten percent."
+	para "Of what, they"
+	line "won't say."
+	done
+
 TitheRoadTipsSign:
 	jumptext TitheRoadTipsSignText
 
@@ -78,40 +90,41 @@ TitheRoadAfterScript:
 	end
 
 TitheRoadTrainer0:
-	trainer T_PUNK, 128, EVENT_GEN_TITHE_ROAD_0, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_HOODIE, 128, EVENT_GEN_TITHE_ROAD_0, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer1:
-	trainer T_PUNK, 129, EVENT_GEN_TITHE_ROAD_1, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_THUG, 128, EVENT_GEN_TITHE_ROAD_1, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer2:
-	trainer T_NUN, 128, EVENT_GEN_TITHE_ROAD_2, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_THUG, 129, EVENT_GEN_TITHE_ROAD_2, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer3:
 	trainer T_PRIEST, 128, EVENT_GEN_TITHE_ROAD_3, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer4:
-	trainer T_NUN, 129, EVENT_GEN_TITHE_ROAD_4, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_PRIEST, 129, EVENT_GEN_TITHE_ROAD_4, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoadTrainer5:
-	trainer T_ENFORCER, 128, EVENT_GEN_TITHE_ROAD_5, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_NUN, 128, EVENT_GEN_TITHE_ROAD_5, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
 
 TitheRoad_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  7,  1, TITHE_CHECKPOINT, 3
+	warp_event 11,  1, TITHE_CHECKPOINT, 3
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 11, BGEVENT_READ, TitheRoadTipsSign
+	bg_event  3, 25, BGEVENT_READ, TitheRoadTipsSign
 
 	def_object_events
-	object_event  5,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheRoadPickup, EVENT_GEN_TITHE_ROAD_PICKUP
-	object_event  4, 10, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer0, -1
-	object_event  4,  8, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer1, -1
-	object_event  9,  8, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer2, -1
-	object_event  4,  6, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer3, -1
-	object_event  9,  6, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer4, -1
-	object_event  9,  4, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer5, -1
+	object_event 19, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheRoadPickup, EVENT_GEN_TITHE_ROAD_PICKUP
+	object_event 20, 12, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheRoadHermit, -1
+	object_event  4, 24, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer0, -1
+	object_event  9, 24, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer1, -1
+	object_event  8, 20, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer2, -1
+	object_event 12, 16, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer3, -1
+	object_event 17, 16, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer4, -1
+	object_event 13, 12, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer5, -1
 
