@@ -3,7 +3,7 @@
 Takes screenshots into $SHOTS (default /home/claude/scratch/feat) and prints PASS/FAIL per check:
   sign   the trainer tips sign reads, page by page
   ball   the TM item ball at (5, 7) is picked up and the TM count goes up
-  (the road -> gate hall -> plaza walk lives in test_road.py, on its own test ROM spawned at TITHE_ROAD 7,3)
+  (the road -> gate hall -> plaza walk lives in test_gates.py)
   bag    45 item slots work and the pack screen scrolls
 usage: test_features.py ROM"""
 import os, sys, re

@@ -232,12 +232,21 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
         assert neck >= 2, "a gate needs a neck"
         gate_objects(m, gate, w, 2 * (c[H - neck] + cw // 2), 2 * (H - neck))
     door = None
-    if north == "door":  # the corridor ends under a hall: side blocks of a house either side of its door block
+    fixed = set()  # blocks of the gate house: landscape() must leave them alone
+    if north == "door":  # the road ends at a classic gate house: brown plank roof over a pink front with the door (Route 35), two blocks wide
         dx = c[0] + cw // 2
-        for x in range(lo[0], hi[0] + 1):
-            m.set(x, 0, kit.extra["house"][1] if x != dx else kit.extra["rift"])
-            carved.discard((x, 0))
-        door = m.warp(*kit.door_cell(dx, 0, kit.extra["rift"]))
+        roof, front = kit.extra["gate_roof"], kit.extra["gate_front"]
+        for y in (0, 1):
+            for x in range(lo[y], hi[y] + 1):
+                m.set(x, y, base)
+                carved.discard((x, y))
+        for k in range(2):
+            m.set(dx + k, 0, roof[k])
+            m.set(dx + k, 1, front[k])
+        door = m.warp(*kit.door_cell(dx, 1, front[0]))
+        m.set(dx, 2, R.choice(kit.floor))
+        carved.add((dx, 2))
+        fixed = {(dx, 0), (dx + 1, 0), (dx, 1), (dx + 1, 1)}
     # trainers: one block row each (a pair on some), on the cells at the two edges of that row of the corridor
     ys = [H - 3 - i * gap for i in range(rows)]
     assert ys[-1] >= ROW0, (name, ys)
@@ -266,7 +275,7 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
                 carved.add((xx, yy))
         carved.add(glades[-1]["mouth"])
     protect = {(x + dx, y + dy) for (x, y) in carved for dx in (-1, 0, 1) for dy in (-1, 0, 1)}
-    protect |= carved
+    protect |= carved | fixed
     landscape(m, kit, S, R, base, protect)
     # rails along the corridor's long edges instead of tree line (wild areas)
     if base is not None and "fence_v" in S:

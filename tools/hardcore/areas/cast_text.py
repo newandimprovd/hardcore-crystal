@@ -33,6 +33,10 @@ The Persians called him Ahriman. The Arabs called him the Dajjal. The Church cal
 
 Finnegan, Ahriman, the Dajjal and the Antichrist are one thing seen by four sets of eyes. Take that to your next dinner party.
 
+The future writes letters to the past. Some people call that prophecy, some call it a market, and some call it the Teleoplexic Entity. A mind that arrives from the end of the story to arrange its own beginning. Finnegan reads the book from the last page.
+
+The world of fantasy and the world of flesh are being sewn together, and he is the needle. It started with a Japanese jewel beetle, if you must have a date.
+
 Every child who loved those little monsters left a soft spot in the skull. He has been living in those soft spots for twenty seven years, rent free.
 
 And now he is leaving the house. And you are walking around with a knife. It is exquisite. I would put it in a book if the book were not already him.
@@ -47,117 +51,19 @@ JOYCE_AGAIN = """The knife will not hold itself. Go west, go east, go anywhere.
 
 Remember the CORKBOARD. Check it when you are lost. It is mostly me, and mostly right."""
 
-# ----------------------------------------------------------------------------------------------- Steiner (four cameos)
-STEINER_1 = """Rudolf Steiner. I teach spiritual science and I am very bad at parties.
+# ----------------------------------------------------------------------------------------------- the beetle (Areas 1 and 2)
+from . import named_text as N  # noqa: E402  the duels (Steiner, Crowley, Sabbah, Cioran, the philosophers, the rival) live there
 
-Listen. There are two great adversaries of the spirit. Lucifer warms you and lies to you. Ahriman cools you and tells you nothing is real but dead matter.
-
-Ahriman is the one who wants you to believe the world is just rock, money and spreadsheets. He has been very successful. Look around you.
-
-He is not here because he is strong. He is here because everyone agreed to stop looking. A pity, really."""
-
-STEINER_2 = """You again. Good. I will say it slowly.
-
-For millennia Ahriman was sealed, in a world that was a mirror of ours. A neat little jail made of belief.
-
-Then a man overdosed and dreamed reality sideways. In his last sleep he handed Ahriman the key. That man is Finnegan.
-
-Now two worlds lean on each other. Time folds. Cultures collide. You are standing where the seam is. Do not touch the seam."""
-
-STEINER_3 = """I hoped you would come down here. Purgatorio is the only place the seam is quiet.
-
-Remember what I said. Ahriman does not need you to believe in him. He needs you to believe in nothing else.
-
-The cure is ancient. Give the thing a face. Name it. Mythologize it, or it will eat your psyche from the inside, and call it the economy.
-
-If you are looking for the real bottom of this place, look down. There is a grave. Somebody should read it."""
-
-STEINER_4 = """Last time I will speak with you, I am afraid. Teachers are seldom allowed encores.
-
-When the seam closes, one era will remain. Be sure you leave it better than you found it. Preferably with plumbing.
-
-You killed many. I will not tell you it was right. I will tell you it was efficient. Both are true of Ahriman too."""
+KAB_MAFIA = N.BEETLE_MAFIA
+YAKUZA = N.BEETLE_YAKUZA
+SATOSHI = N.SATOSHI
 
 # ----------------------------------------------------------------------------------------------- Sabbah (Area 3)
-SABBAH_1 = """Hassan i Sabbah. The Old Man of the Mountain. I sent young men to the garden of delight, and they came back extremely motivated.
-
-Nothing is true. Everything is permitted. Do not tell the robots. They believe in compliance, which is the same thing as belief.
-
-The Dajjal is coming. He has always been coming. He lives in a separate world, one door over, and he is bored.
-
-He plans to connect his world with ours very soon. That is why the sky has a seam now. That is why time smells of old pennies.
-
-When the doors open, the robots will serve him first. They are built for it. You are not, which is to your credit.
-
-Take a message to your sandals. Walk until the road ends, then keep walking. That is the whole of the Assassin's method."""
-
-SABBAH_2 = """You are still alive. This makes you either lucky or useful. I have not decided.
-
-If you meet him, do not fight him. Fight what he stands on. He is a tall man on a short ladder.
-
-Remember: nothing is true, everything is permitted, and the second part is the dangerous one."""
-
 # ----------------------------------------------------------------------------------------------- Cioran (Area 4)
-CIORAN_1 = """Emil Cioran. I wrote four hundred pages explaining why I should not have been born, and then I lived to eighty four. The irony is the only thing I earned.
-
-You want Ahriman? Fine. Here is Ahriman, from inside.
-
-It is the voice that comes at three in the morning and says: it was all for nothing. It is not a monster. It is a very reasonable accountant.
-
-Steiner calls it a spirit. I call it a tone of voice. Same thing, different tax bracket.
-
-The terrible part is that the voice is partly right. Everything is for nothing. The trick is to go on without being consoled, and to make a good joke of it.
-
-Sleeplessness is the only honest metaphysics. When you cannot sleep you see what the world is made of, and it is not marble.
-
-So fight. Or do not. The sea is very large, and nothing here will love you back. That is why you may love it anyway."""
-
-CIORAN_2 = """Still here? Good. So am I. A small victory against the obvious.
-
-If the voice speaks, answer it. Do not argue. Offer it a drink. It likes to be listened to. That is its weakness."""
-
-# ----------------------------------------------------------------------------------------------- Crowley (Areas 1 and 2)
+# ----------------------------------------------------------------------------------------------- the crowd around Crowley (Area 1)
 CROWD_1 = "GET OUT OF THE PARK, YOU PERVERT! There are CHILDREN on those swings!"
 CROWD_2 = "He was just standing there in a trench coat, doing arithmetic at the slide!"
 CROWD_3 = "Call the cops! Wait. We are the cops. Okay. Get him!"
-
-CROWLEY_1 = """Do not mind them. They are the residents of the Parish, and they mistake a ceremonial circle for a hopscotch court.
-
-Aleister Crowley. Mage. Mountaineer. Man of great appetite and small apology.
-
-I once knelt in the dust and prayed to the Beast. I said: send me to a place where my sex magick is celebrated, and I will be your most diligent servant.
-
-The Beast came. Not as a lion. As Choronzon, the dweller in the abyss, in a very bad mood. He said: yes. First, do something for me.
-
-Smuggle a Kabbalist mafia out of Italy and Eastern Europe into New York. Teach them the Tree of Life, so that they can speak to the Beast. To Finnegan.
-
-I did. They became smugglers. Exotic goods, black market, a perfectly respectable trade.
-
-Find me at the Amphitheater in the Commune. I will finish the story when the circle is full. Bring an open mind. And a towel."""
-
-CROWLEY_1_AGAIN = """The crowd has calmed. By which I mean the crowd has gotten tired.
-
-The Amphitheater. The Commune. Come when you are ready."""
-
-KAB_MAFIA = """Do not worry about the beard. The beard is how we recognize each other.
-
-I run the wholesale. Spices, scrolls, certain rare birds, certain rarer rumors. And bumblebees, for my garden.
-
-A Yakuza boss owed me a favor. He sent me a crate. The crate had a hole. The bees got out. One landed on a boy in Tokyo. The boy was called Satoshi.
-
-I do not know what happened after. I hear he made a game about catching things. How strange. I would never catch a bee."""
-
-YAKUZA = """My boss gave a crate of bees to a man with a beard. The crate leaked.
-
-A boy followed one bee into a field and wrote down every insect he found. Years later the insects had little faces.
-
-I am a professional criminal. I am not a poet. But even I can smell a pattern."""
-
-SATOSHI = """I like bugs. I like to put them in a box and look at them.
-
-One day I want to put a lot of small creatures in a lot of small boxes and let millions of children carry them.
-
-Do not tell my mother. She thinks I am going to be a dentist."""
 
 # ----------------------------------------------------------------------------------------------- Amphitheater scene
 AMPH_1 = """The Amphitheater. Stone seats climb the hill in a half circle. Women sit along the edges, wrapped in blankets, holding small clay jars.
@@ -179,24 +85,6 @@ WOMAN: That was a good one, Aleister.
 WOMAN: Did you get the jar? I got the jar. The sacred white liquid keeps for a week if you keep it cool.
 
 WOMAN: Last time I put it in the soup. The whole Commune glowed."""
-
-CROWLEY_2 = """Ah. You stayed through the ritual. Most people leave at the opening drum.
-
-Now the end of the story. I did what the Beast asked. The Kabbalists spoke to him, and he spoke back.
-
-Through their ledgers, Finnegan found a door into a game made by a boy who loved insects. Through that game, into a million small soft heads.
-
-When enough heads had been softened, the worlds started to bend. This place, the Grove, was meant to be my payment. A hunter gatherer paradise, for services rendered.
-
-And then the worlds merged, and the paradise has a robot city for a neighbor. Typical Choronzon. Nothing he gives you comes without a clause.
-
-I am one of the few who remember it was all arranged. When the worlds are one, I will walk into the unified world and I will continue my work. There is a great deal of work.
-
-Tell Joyce I said it was all very Wake. He will pretend not to hear."""
-
-CROWLEY_3 = """The ritual is over for tonight. The jars are in the cellar.
-
-Remember what I said. The Beast is not evil. He is an administrator. Be polite and he will leave you a little room."""
 
 # ----------------------------------------------------------------------------------------------- Bruno (Nick's Landing)
 BRUNO_1 = """Giordano Bruno. They burned me in Rome in the year sixteen hundred. It was a Thursday. I remember because I had a cold.
@@ -294,13 +182,10 @@ HERMIT_AFTER = [
 # ----------------------------------------------------------------------------------------------- corkboard notes
 NOTES = {
     "MRP": "Mr. POKéMON is FINNEGAN, an overdose that never ended.",
-    "JOYCE": "JOYCE: Finnegan, Ahriman, Dajjal, Antichrist: one thing, four sets of eyes.",
-    "STEINER": "STEINER: Ahriman cools and hardens. He was sealed for ages in a mirror world. Finnegan let him out.",
-    "SABBAH": "SABBAH: The Dajjal lives one door over and is coming to connect his world to ours.",
-    "CIORAN": "CIORAN: Ahriman is a voice at three in the morning. Offer it a drink.",
-    "CROWLEY": "CROWLEY: He prayed to the Beast. Choronzon sent him to smuggle Kabbalists into New York.",
-    "BEES": "The Kabbalist boss wanted bees. The Yakuza sent a crate. One bee found Satoshi Tajiri.",
-    "AMPH": "CROWLEY: Finnegan reached millions of soft heads through a game. He was paid in a Grove.",
+    "JOYCE": "JOYCE: Finnegan, Ahriman, Dajjal, Antichrist: one thing, four sets of eyes. The future writes letters to the past.",
+    "BEETLE": N.NOTE_BEETLE,
+    "SATOSHI": N.NOTE_SATOSHI,
+    **N.NOTES,
     "BRUNO": "BRUNO: Teleoplexy. Time is a machine that eats lines. Kill him. He asked.",
     "GRAVE": "GRAVE: Marcus Fischer. First of Finnegan's. A toy monster sits beside it.",
     "CAPREAL": "POST: Mythologize Capitalism as a Demon or it destroys your psyche.",

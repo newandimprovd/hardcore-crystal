@@ -29,25 +29,18 @@ LotusCabanaBossSeenText:
 
 LotusCabanaBossBeatenText:
 	text "Please. Please"
-	line "don't bury me."
-	para "Take the SHOVEL."
-	line "It's by the wall."
-	para "It buries"
-	line "problems. It"
-	para "buried mine."
+	line "don't bury me. The"
+	para "sand is full"
+	line "already. It buried"
+	para "my last manager."
 	done
 
 LotusCabanaBossAfterText:
-	text "The SHOVEL digs"
-	line "out of caves and"
-	para "buries problems."
-	line "Everything on this"
-	para "coast is buried."
-	line "That's the secret."
+	text "Everything on this"
+	line "coast is buried."
+	para "That's the secret."
+	line "Dig gently."
 	done
-
-LotusCabanaItemBall:
-	itemball SHOVEL
 
 LotusCabana_MapEvents:
 	db 0, 0 ; filler
@@ -62,5 +55,4 @@ LotusCabana_MapEvents:
 
 	def_object_events
 	object_event  2,  9, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusCabanaBossScript, -1
-	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusCabanaItemBall, EVENT_GEN_LOTUS_CABANA_ITEM
 

@@ -97,6 +97,8 @@ INCBIN "gfx/trainers/hc/t_accountant.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/t_deacon.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/t_copchief.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/t_monsignor.gbcpal", middle_colors
+INCBIN "gfx/trainers/hc/t_steiner.gbcpal", middle_colors
+INCBIN "gfx/trainers/hc/t_crowley.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/g_hiker.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/g_scout.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/g_sprout.gbcpal", middle_colors
@@ -130,6 +132,8 @@ INCBIN "gfx/trainers/hc/u_wardbot.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/u_maddoc.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/u_courier.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/u_mayor.gbcpal", middle_colors
+INCBIN "gfx/trainers/hc/u_sabbah.gbcpal", middle_colors
+INCBIN "gfx/trainers/hc/u_suhrawardi.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/l_sunbather.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/l_swimmerm.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/l_swimmerf.gbcpal", middle_colors
@@ -145,6 +149,7 @@ INCBIN "gfx/trainers/hc/l_touristg.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/l_touristm.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/l_bellhop.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/l_lounger.gbcpal", middle_colors
+INCBIN "gfx/trainers/hc/l_cioran.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/d_brute.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/d_shade.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/d_hag.gbcpal", middle_colors
@@ -163,6 +168,8 @@ INCBIN "gfx/trainers/hc/d_impb.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/d_spectre.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/d_demon.gbcpal", middle_colors
 INCBIN "gfx/trainers/hc/d_finnegan.gbcpal", middle_colors
+INCBIN "gfx/trainers/hc/d_sadra.gbcpal", middle_colors
+INCBIN "gfx/trainers/hc/d_qadi.gbcpal", middle_colors
 
 ; HC-CLASSES end
 	assert_table_length NUM_TRAINER_CLASSES + 1

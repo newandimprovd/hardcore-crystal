@@ -19,7 +19,7 @@ techniques the rework uses, where each one lives in the generator, and what is s
 
 ## Numbers
 - Tilesets: 168..188 of 192 tiles used, 62 blocks each (19 scenery blocks plus the mat, about 33 tiles per tileset).
-- Maps: 252 generated maps, 593 trainers: 500 mandatory (100 per area, Tithe 99 plus Timmy), 15 bosses, Purgatorio 60 (total 576 of 650, areas/counts.py). The tidal wave news is kill 400, the crater is the rival's fall (kill 412).
+- Maps: 267 generated maps, 639 generated trainers: 500 mandatory (100 per area, Tithe 99 plus Timmy), 15 bosses, 49 scripted duels, Purgatorio 58 (total 622 of 650, areas/counts.py). The tidal wave news is kill 400, the crater is the rival's fall (kill 412).
 - Block rule: (w+6)(h+6) <= 1300 for every map; at most 15 objects per map; at most 23 distinct outdoor sprites per group.
 
 ## Tests
@@ -27,7 +27,14 @@ techniques the rework uses, where each one lives in the generator, and what is s
 - `walk_all.sh N` walks area N with a god-mode test ROM (areamodel.py plans over the emitted maps, PyBoy drives it). Soft blocks are detours around item balls and fallen
   trainers. A walk that never reaches a door can be a **game reset**, not a slow fight: check `wMapGroup` after the last step (0 or 255 means reset).
 
+## Buildings, gates and directions (Alpha 3)
+- **Whole buildings only.** A house is a roof row over a front row (blocks 0x18/0x19 over 0x1a/0x11 in the Johto tileset), a gate house the brown plank roof (0x08/0x09) over the same front.
+  The single row strips (0x14/0x15) read as half sprites when they were strung along an edge and are not used for buildings any more (`areas/kits.py HOUSES`).
+- **Directional continuity.** The way out of a map is the opposite side of the way into the next one: a south exit leads to a north entrance and a north exit to a south entrance, the heading
+  is kept over the warp. Plaza 1 is entered at its south edge over a lamp post doormat (`town.plaza2 south="gate"`), the gate hall has its mats at both ends. Tested by `test_gates.py`.
+- **The T junction outside Cherrygrove** (`areas/opening.py`): the stem comes up from Cherrygrove, the band runs west to Joyce and Tithe Road and east to the cave door of Purgatorio. The first rival fight is in the stem.
+- **Guarded exits.** The plazas with a key bearer (`areas/named.py`) have a trigger across the top of the street that sends the player back one step until the prize is in the bag.
+
 ## Open
-- TitheRoad (Johto tileset) still has the old straight lane, the Johto kits have no scenery blocks.
-- The Tithe junction and the Purgatorio hub are not reworked.
-- Townsfolk crowds (`builder.crowd`) exist but are not placed yet; hermits are 18 of 30 lanes.
+- Townsfolk crowds (`builder.crowd`) exist but hermits are 18 of 30 lanes.
+- Area-theme songs and the HC sprites of the map pass.

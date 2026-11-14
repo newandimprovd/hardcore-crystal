@@ -34,8 +34,8 @@ LotusHouse1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, LOTUS_PLAZA1, 4
-	warp_event  3,  7, LOTUS_PLAZA1, 4
+	warp_event  2,  7, LOTUS_PLAZA1, 1
+	warp_event  3,  7, LOTUS_PLAZA1, 1
 
 	def_coord_events
 

@@ -2,6 +2,23 @@
 
 SECTION "Gen Trainers 1", ROMX
 
+HC_GenGroup_RIVAL1:
+	db "RIVAL@"
+	db 12, SENTRET
+	db 15, PORYGON
+	db 17, SENTRET
+	db -1
+	db "RIVAL@"
+	db 31, MACHOKE
+	db 32, PORYGON
+	db 33, NOCTOWL
+	db 35, PIDGEOTTO
+	db -1
+	db "RIVAL@"
+	db 4, PIDGEY
+	db 6, MACHOP
+	db -1
+
 HC_GenGroup_RIVAL2:
 	db "RIVAL@"
 	db 78, HOSPICE
@@ -10,6 +27,19 @@ HC_GenGroup_RIVAL2:
 	db 81, CARCINIZE
 	db 81, TYPHLOSION
 	db 81, PLACEBO
+	db -1
+	db "RIVAL@"
+	db 51, DREADBEAK
+	db 52, HELLHOUND
+	db 53, PRIMEAPE
+	db 54, CLEAVER
+	db -1
+	db "RIVAL@"
+	db 55, HELLBOUND
+	db 56, DREADBEAK
+	db 56, CROBAT
+	db 57, DREADBEAK
+	db 58, CHARIZARD
 	db -1
 
 HC_GenGroup_MYSTICALMAN:
@@ -720,6 +750,47 @@ HC_GenGroup_T_MONSIGNOR:
 	db 26, SWINUB
 	db 27, PERSIAN
 	db 27, PARASECT
+	db -1
+
+HC_GenGroup_T_STEINER:
+	db "STEINER@"
+	db 8, MARILL
+	db 10, GASTLY
+	db 11, CHANSEY
+	db -1
+	db "STEINER@"
+	db 35, JIGGLYPUFF
+	db 37, JYNX
+	db 38, SLOWPOKE
+	db 39, JYNX
+	db -1
+	db "STEINER@"
+	db 76, SPOREKING
+	db 76, POLIWRAITH
+	db 79, EMERITUS
+	db 79, EMERITUS
+	db 81, FROSTBITE
+	db -1
+	db "STEINER@"
+	db 38, GYARADOS
+	db 39, PIDGEOTTO
+	db 40, HYPNO
+	db 40, SMOOCHUM
+	db 41, AZUMARILL
+	db 41, CHANSEY
+	db -1
+
+HC_GenGroup_T_CROWLEY:
+	db "CROWLEY@"
+	db 30, GASTLY
+	db 31, RAPIDASH
+	db 31, SLOWPOKE
+	db -1
+	db "CROWLEY@"
+	db 15, TENTACOOL
+	db 15, EKANS
+	db 16, TENTACOOL
+	db 18, CHARMANDER
 	db -1
 
 HC_GenGroup_G_HIKER:
@@ -2195,6 +2266,28 @@ HC_GenGroup_U_MAYOR:
 	db 67, WIGGLYTUFF
 	db -1
 
+HC_GenGroup_U_SABBAH:
+	db "SABBAH@"
+	db 49, NINETALES
+	db 49, ARIADOS
+	db 51, MAMMOTH
+	db -1
+	db "SABBAH@"
+	db 54, NIDOQUEEN
+	db 55, CTHUSPAWN
+	db 55, CLEAVER
+	db 59, CHARIZARD
+	db -1
+
+HC_GenGroup_U_SUHRAWARDI:
+	db "SUHRAWARDI@"
+	db 59, RAICHU
+	db 59, AMNESIAC
+	db 59, AZUMARILL
+	db 60, WIGGLYTUFF
+	db 64, GRAVELER
+	db -1
+
 HC_GenGroup_L_SUNBATHER:
 	db "CLARA@"
 	db 65, MIGRAINE
@@ -2824,6 +2917,19 @@ HC_GenGroup_L_LOUNGER:
 	db 75, CANDLEMOTH
 	db -1
 
+HC_GenGroup_L_CIORAN:
+	db "CIORAN@"
+	db 65, CROBAT
+	db 66, FEAROW
+	db 69, CORDYCEPS
+	db -1
+	db "CIORAN@"
+	db 71, PLAGUERAT
+	db 74, CTHUSPAWN
+	db 74, GOLDUCK
+	db 76, MIASMA
+	db -1
+
 HC_GenGroup_D_BRUTE:
 	db "STAN@"
 	db 81, KITSUNE
@@ -3421,6 +3527,25 @@ HC_GenGroup_D_FINNEGAN:
 	db 94, TYPHONEUS
 	db 96, CALDERA
 	db 96, WEBWEAVER
+	db -1
+
+HC_GenGroup_D_SADRA:
+	db "SADRA@"
+	db 91, HELLBOUND
+	db 92, ANEURYSM
+	db 93, MAWBLOOM
+	db 93, SUPERNOVA
+	db 94, OVERGROWN
+	db -1
+
+HC_GenGroup_D_QADI:
+	db "ABD JABBAR@"
+	db 44, PERSIAN
+	db 45, MAGNETON
+	db 46, HOOTHOOT
+	db 47, MAGNETON
+	db 47, STEELIX
+	db 47, MEOWTH
 	db -1
 
 ENDSECTION

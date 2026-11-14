@@ -10,12 +10,11 @@ LotusPlaza1Fountain0:
 	jumptext LotusPlaza1Fountain0Text
 
 LotusPlaza1Fountain0Text:
-	text "DRIFTAIN. Drift +"
-	line "fountain. It"
-	para "sprays where the"
-	line "wind sends it. It"
-	para "has never"
-	line "apologized."
+	text "SPLASHBLASE."
+	line "Splash plus blase."
+	para "The water has seen"
+	line "it all. It carries"
+	para "on anyway."
 	done
 
 LotusPlaza1Giver:
@@ -145,24 +144,49 @@ LotusPlaza1Townie8Text:
 	para "the meaning."
 	done
 
-LotusPlaza1CioranScript:
+LotusPlaza1CioranBearerScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LORE_CIORAN
-	iftrue .Again
-	writetext LotusPlaza1CioranScriptText
-	waitbutton
+	checkevent EVENT_NAMED_CIORAN_DONE
+	iftrue .Beaten
 	setevent EVENT_LORE_CIORAN
+	writetext LotusPlaza1CioranBearerScriptSeenText
+	yesorno
+	iffalse .No
 	closetext
-	end
-
-.Again:
-	writetext LotusPlaza1CioranScriptAgainText
+	winlosstext LotusPlaza1CioranBearerScriptBeatenText, 0
+	loadtrainer L_CIORAN, 128
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_CIORAN_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_CIORAN_PAID
+	iftrue .After
+	writetext LotusPlaza1CioranBearerScriptGiveText
+	waitbutton
+	verbosegiveitem GRAPPLE_HOOK
+	iffalse .NoRoom
+	setevent EVENT_NAMED_CIORAN_PAID
+.After:
+	writetext LotusPlaza1CioranBearerScriptAfterText
 	waitbutton
 	closetext
 	end
 
-LotusPlaza1CioranScriptText:
+.No:
+	writetext LotusPlaza1CioranBearerScriptNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext LotusPlaza1CioranBearerScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusPlaza1CioranBearerScriptSeenText:
 	text "Emil Cioran. I"
 	line "wrote four hundred"
 	para "pages explaining"
@@ -192,16 +216,18 @@ LotusPlaza1CioranScriptText:
 	line "Same thing,"
 	para "different tax"
 	line "bracket."
-	para "The terrible part"
-	line "is that the voice"
-	para "is partly right."
-	line "Everything is for"
-	para "nothing. The trick"
-	line "is to go on"
-	para "without being"
-	line "consoled, and to"
-	para "make a good joke"
-	line "of it."
+	para "The old Gnostics"
+	line "said the world was"
+	para "made by a bungler,"
+	line "or a criminal. I"
+	para "never could decide"
+	line "which. Theodicy is"
+	para "the art of"
+	line "defending the"
+	para "accused. I admire"
+	line "the lawyers. I do"
+	para "not trust the"
+	line "client."
 	para "Sleeplessness is"
 	line "the only honest"
 	para "metaphysics. When"
@@ -210,72 +236,77 @@ LotusPlaza1CioranScriptText:
 	line "world is made of,"
 	para "and it is not"
 	line "marble."
-	para "So fight. Or do"
-	line "not. The sea is"
-	para "very large, and"
-	line "nothing here will"
-	para "love you back."
-	line "That is why you"
-	para "may love it"
-	line "anyway."
+	para "So climb. There is"
+	line "a wall ahead and a"
+	para "hook in my coat."
+	line "Take it, if you"
+	para "can take me."
+	para "Fight CIORAN?"
 	done
 
-LotusPlaza1CioranScriptAgainText:
-	text "Emil Cioran. I"
-	line "wrote four hundred"
-	para "pages explaining"
-	line "why I should not"
-	para "have been born,"
-	line "and then I lived"
-	para "to eighty four."
-	line "The irony is the"
-	para "only thing I"
-	line "earned."
-	para "You want Ahriman?"
-	line "Fine. Here is"
-	para "Ahriman, from"
-	line "inside."
-	para "It is the voice"
-	line "that comes at"
-	para "three in the"
-	line "morning and says:"
-	para "it was all for"
-	line "nothing. It is not"
-	para "a monster. It is a"
-	line "very reasonable"
-	para "accountant."
-	para "Steiner calls it a"
-	line "spirit. I call it"
-	para "a tone of voice."
-	line "Same thing,"
-	para "different tax"
-	line "bracket."
-	para "The terrible part"
-	line "is that the voice"
-	para "is partly right."
-	line "Everything is for"
-	para "nothing. The trick"
-	line "is to go on"
-	para "without being"
-	line "consoled, and to"
-	para "make a good joke"
-	line "of it."
-	para "Sleeplessness is"
-	line "the only honest"
-	para "metaphysics. When"
-	line "you cannot sleep"
-	para "you see what the"
-	line "world is made of,"
-	para "and it is not"
-	line "marble."
-	para "So fight. Or do"
-	line "not. The sea is"
-	para "very large, and"
-	line "nothing here will"
-	para "love you back."
-	line "That is why you"
-	para "may love it"
-	line "anyway."
+LotusPlaza1CioranBearerScriptBeatenText:
+	text "Hm. I lost. How"
+	line "restful. I should"
+	para "lose more often."
+	done
+
+LotusPlaza1CioranBearerScriptGiveText:
+	text "Take the GRAPPLE"
+	line "HOOK. It goes up"
+	para "walls. It does not"
+	line "go up out of"
+	para "despair. Nothing"
+	line "does. That is the"
+	para "charm."
+	done
+
+LotusPlaza1CioranBearerScriptAfterText:
+	text "Go on without"
+	line "being consoled,"
+	para "and make a good"
+	line "joke of it. That"
+	para "is the whole of my"
+	line "wisdom, and it was"
+	para "expensive."
+	done
+
+LotusPlaza1CioranBearerScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+LotusPlaza1CioranBearerScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
+LotusPlaza1CioranBlockScript:
+	checkevent EVENT_NAMED_CIORAN_PAID
+	iftrue .Pass
+	opentext
+	writetext LotusPlaza1CioranBlockScriptText
+	waitbutton
+	closetext
+	applymovement PLAYER, LotusPlaza1CioranBlockScriptStep
+.Pass:
+	end
+
+LotusPlaza1CioranBlockScriptStep:
+	step_down
+	step_end
+
+LotusPlaza1CioranBlockScriptText:
+	text "A voice behind"
+	line "you: Wait."
+	para "Somebody on this"
+	line "square wants to"
+	para "talk you out of"
+	line "leaving."
 	done
 
 LotusPlaza1Duel:
@@ -360,26 +391,32 @@ LotusPlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  3, LOTUS_POKECENTER1, 1
-	warp_event 16,  3, LOTUS_GATE, 1
-	warp_event 22,  3, LOTUS_MART1, 1
-	warp_event 28,  3, LOTUS_HOUSE1, 1
+	warp_event  6,  3, LOTUS_HOUSE1, 1
+	warp_event 10,  3, LOTUS_POKECENTER1, 1
+	warp_event 14,  3, LOTUS_MART1, 1
+	warp_event 10, 29, LOTUS_GATE, 1
 
 	def_coord_events
+	coord_event 18,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 19,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 20,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 21,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 22,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 23,  1, -1, LotusPlaza1CioranBlockScript
 
 	def_bg_events
-	bg_event 21,  9, BGEVENT_READ, LotusPlaza1Fountain0
+	bg_event 13,  9, BGEVENT_READ, LotusPlaza1Fountain0
 
 	def_object_events
-	object_event 11, 21, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Giver, -1
-	object_event 15, 21, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie1, -1
-	object_event 17, 18, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie2, -1
-	object_event 12, 21, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie3, -1
-	object_event  8,  8, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie4, -1
-	object_event 20,  7, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie5, -1
-	object_event 27, 27, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie6, -1
-	object_event 22, 27, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie7, -1
-	object_event 10, 11, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie8, -1
-	object_event 17, 11, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranScript, -1
-	object_event 14, 17, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Duel, -1
+	object_event 21, 19, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Giver, -1
+	object_event 15, 19, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie1, -1
+	object_event 15,  8, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie2, -1
+	object_event  4, 14, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie3, -1
+	object_event 19, 11, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie4, -1
+	object_event 26,  8, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie5, -1
+	object_event  6,  9, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie6, -1
+	object_event 13,  7, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie7, -1
+	object_event 27, 21, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie8, -1
+	object_event  6, 17, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranBearerScript, -1
+	object_event 19, 19, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Duel, -1
 

@@ -90,6 +90,8 @@ TrainerPicPointers::
 	dba_pic HcTDeaconPic
 	dba_pic HcTCopchiefPic
 	dba_pic HcTMonsignorPic
+	dba_pic HcTSteinerPic
+	dba_pic HcTCrowleyPic
 	dba_pic HcGHikerPic
 	dba_pic HcGScoutPic
 	dba_pic HcGSproutPic
@@ -123,6 +125,8 @@ TrainerPicPointers::
 	dba_pic HcUMaddocPic
 	dba_pic HcUCourierPic
 	dba_pic HcUMayorPic
+	dba_pic HcUSabbahPic
+	dba_pic HcUSuhrawardiPic
 	dba_pic HcLSunbatherPic
 	dba_pic HcLSwimmermPic
 	dba_pic HcLSwimmerfPic
@@ -138,6 +142,7 @@ TrainerPicPointers::
 	dba_pic HcLTouristmPic
 	dba_pic HcLBellhopPic
 	dba_pic HcLLoungerPic
+	dba_pic HcLCioranPic
 	dba_pic HcDBrutePic
 	dba_pic HcDShadePic
 	dba_pic HcDHagPic
@@ -156,5 +161,7 @@ TrainerPicPointers::
 	dba_pic HcDSpectrePic
 	dba_pic HcDDemonPic
 	dba_pic HcDFinneganPic
+	dba_pic HcDSadraPic
+	dba_pic HcDQadiPic
 ; HC-CLASSES end
 	assert_table_length NUM_TRAINER_CLASSES

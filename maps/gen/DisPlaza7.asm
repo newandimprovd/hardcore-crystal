@@ -11,12 +11,12 @@ DisPlaza7Fountain0:
 
 DisPlaza7Fountain0Text:
 	text "STYXPENSE"
-	line "FOUNTAIN. Styx +"
-	para "expense. Toll: one"
-	line "soul. Coins"
-	para "accepted when"
-	line "souls are out of"
-	para "stock."
+	line "FOUNTAIN. Styx"
+	para "plus expense."
+	line "Toll: one soul."
+	para "Coins accepted"
+	line "when souls are out"
+	para "of stock."
 	done
 
 DisPlaza7Giver:

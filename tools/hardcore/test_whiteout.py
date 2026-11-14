@@ -10,6 +10,7 @@ from test_walk import Walker  # noqa: E402
 
 wk = Walker(sys.argv[1])
 t = wk.t
+wk.pay_bearers()  # not a test of the key bearers: the guarded exit of the plaza is open
 for g in ("TithePokecenter1", "TitheStreet1"):
     assert wk.go(g), f"could not reach {g}"
 print("in street", wk.state(), "party hp", t.mem("wPartyMon1HP", 0, 2))

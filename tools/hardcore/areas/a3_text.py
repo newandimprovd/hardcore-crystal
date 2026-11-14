@@ -122,12 +122,12 @@ GATE = ["HALT. State your business. State your feelings. State your blood type. 
 # bosses
 LAB_SEEN = ("I am Doctor Axiom, Chief of the Gene Registry. I have processed ten thousand couples and approved four. "
             "You are the first to be both illegal and rude. Interesting.")
-LAB_BEATEN = "Impossible. My filing cabinet predicted a loss. I did not believe it. Take the FLASHLIGHT. It's a tool for dark intentions."
-LAB_AFTER = "The FLASHLIGHT lights up caves and dark intentions. The Union has many of both."
+LAB_BEATEN = "Impossible. My filing cabinet predicted a loss. I did not believe it. File that under: lamps."
+LAB_AFTER = "The next road is dark. The Union has many dark roads. And many dark intentions."
 ARMORY_SEEN = ("Warden Iron of the Armory. Everything here is for the safety of the people. "
                "Also the safety of my paycheck. Please stay still. It will be over quickly.")
-ARMORY_BEATEN = "Fine. A tool of the Union is yours. The SLEDGEHAMMER. Use it on a wall. Not on me. I'm done."
-ARMORY_AFTER = "The SLEDGEHAMMER smashes cracked rocks. And skulls. The Union has both."
+ARMORY_BEATEN = "Fine. The Armory is yours. Break something in it. Not me. I'm done."
+ARMORY_AFTER = "Cracked slabs bar the next road. The Union has both slabs and skulls."
 MAYORALTY_SEEN = ("I am the Mayor. I have no body, no heart, and no weekends. I process every law and every kiss. "
                   "You have broken seventeen thousand rules. I admire that. Be filed.")
 MAYORALTY_BEATEN = "A bug. A glorious bug. The wall is open. Go. Find the Coast. They sell what we deny. Forgetting is also a system."

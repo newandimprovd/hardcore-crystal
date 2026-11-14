@@ -10,7 +10,8 @@ import random
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from areas import a1, a2, a3, a4, a5, cameos, emit, lore, opening, purg, specials, wild  # noqa: E402
+from areas import named_text as N  # noqa: E402
+from areas import a1, a2, a3, a4, a5, cameos, emit, lore, named, opening, purg, specials, wild  # noqa: E402
 from areas.model import ForeignWarp  # noqa: E402
 from areas.model import World, read, write  # noqa: E402
 from areas.party import Roster  # noqa: E402
@@ -73,9 +74,12 @@ def main():
     a5.build(w, roster, rng, [ForeignWarp("NEW_BARK_TOWN", 5)])
     # the historic characters, placed into the finished areas
     cameos.area1(w, w.groups["AREA1"])
-    cameos.area2(w, w.groups["AREA2"], rng)
-    cameos.area3(w, w.groups["AREA3"])
-    cameos.area4(w, w.groups["AREA4"])
+    cameos.area2(w, w.groups["AREA2"], rng, roster)
+    named.add_all(w, roster)  # the historic characters of the plazas (key bearers first), then the generic duelists
+    for tag, key, cls, texts, size in (("Tithe", "RIVAL1", "RIVAL1", N.RIVAL1, 3), ("Grove", "RIVAL2", "RIVAL1", N.RIVAL2, 4),
+                                       ("Axiom", "RIVAL3", "RIVAL2", N.RIVAL3, 4)):  # the rival waits in the stem of plaza 2
+        named.plaza_rival(w, w.groups[named.AREA_OF[tag]], f"{tag}Plaza2", key, cls, named.level_at(tag, 2) + 2, size,
+                          random.Random("named-" + key), roster, texts, cameos.find, cameos.add_sprite)
     specials.add_all(w, roster, random.Random(20261112))  # the named duelists, with a random source of their own
     # the opening junction outside Cherrygrove (Mr. Pokemon, Joyce, the door to Purgatorio) and Purgatorio itself
     _, cave, junction = opening.build(w, roster, rng)

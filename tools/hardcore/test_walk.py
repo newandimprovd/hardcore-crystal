@@ -127,6 +127,18 @@ class Walker:
         self.battle_seen = False
         self.die = False  # tests set this to lose the next fight on purpose
         t.hook("BattleMenu", self.menu_hook)
+        self.dbond_cleared = 0
+        if GOD:
+            t.hook("BattleCommand_CheckFaint", self.faint_hook)
+
+    def pay_bearers(self):
+        """For tests that are not about the key bearers: mark every key duel as paid, so the guarded plaza exits (areas/named.py) are open."""
+        t = self.t
+        for ln in open(os.path.join(ROOT, "constants/area_event_flags.asm")):
+            m = re.match(r"DEF (EVENT_NAMED_\w+_PAID) EQU (\d+)", ln)
+            if m:
+                n = int(m[2])
+                t.poke("wEventFlags", t.mem("wEventFlags", n // 8) | (1 << (n % 8)), n // 8)
 
     # ------------------------------------------------------------------ helpers
     def menu_hook(self, ctx):
@@ -154,6 +166,15 @@ class Walker:
             self.fights.append(dict(cls=t.mem("wTempTrainerClass"), id=t.mem("wTempTrainerID"), n=n,
                                     party=t.mem("wOTPartySpecies", 0, max(n, 1)), lvl=t.mem("wEnemyMonLevel"),
                                     at=self.state()))
+
+    def faint_hook(self, ctx):
+        """Destiny Bond is set by the enemy after the menu hook ran, so an enemy that outspeeds the test mon (Gastly lines) takes it along:
+        clear the enemy's bit right before every faint check (the bit is 0x40 of wEnemySubStatus5)."""
+        t = self.t
+        v = t.mem("wEnemySubStatus5")
+        if v & 0x40 and not self.die:
+            t.poke("wEnemySubStatus5", v & ~0x40)
+            self.dbond_cleared += 1
 
     def raw_state(self):
         t = self.t
@@ -409,6 +430,44 @@ def pick_item(wk, name):
     return True
 
 
+def bearer_goals(world, name):
+    """give: goals for the key bearers (scripted duels that hand over a key item) standing in map `name`."""
+    out = []
+    for o in world.maps[name].objects:
+        if o["script"].endswith("BearerScript"):
+            src = open(os.path.join(ROOT, f"maps/gen/{name}.asm")).read()
+            m = re.search(re.escape(o["script"]) + r":.*?verbosegiveitem (\w+)", src, re.S)
+            out.append(f"give:{name}=" + (m[1] if m else ""))
+    return out
+
+
+def give(wk, name, const):
+    """Talk to the key bearer of the map: the speech, the yes, the duel (god mode), the prize; checks the key item pocket."""
+    w = wk.w
+    mp = w.maps[name]
+    objs = [(i, o) for i, o in enumerate(mp.objects) if o["script"].endswith("BearerScript")]
+    if not objs:
+        wk.note(f"{name}: no key bearer")
+        return False
+    i0, o = objs[0]
+    bx, by = o["x"], o["y"]
+    if not wk.go_state(lambda s: s[0] == name and abs(s[1] - bx) + abs(s[2] - by) == 1, f"{name} next to {o['script']}"):
+        return False
+    st = wk.state()
+    d = {(0, -1): "up", (0, 1): "down", (-1, 0): "left", (1, 0): "right"}[(bx - st[1], by - st[2])]
+    wk.t.pb.button(d, 9)
+    wk.t.tick(24)
+    wk.t.pb.button("a", 4)
+    wk.t.tick(20)
+    wk.settle()
+    wk.t.tick(30)
+    if const and not has_item(wk, item_value(const)):
+        wk.note(f"{const} is not in the key item pocket after the duel with {o['script']}")
+        return False
+    print(f"  got {const} from {o['script']}")
+    return True
+
+
 def auto_plan(world, first, prefix=None):
     """Goal list that visits everything of an area: the maps in route order, every plaza building (Pokecenter with
     healing, Mart, houses), boss rooms with their item balls, and the gates of lanes."""
@@ -418,7 +477,7 @@ def auto_plan(world, first, prefix=None):
     seen = set()
 
     def add(g):
-        if g not in seen or g.split(":")[0] in ("heal", "item", "gate"):
+        if g not in seen or g.split(":")[0] in ("heal", "item", "gate", "give"):
             goals.append(g)
         seen.add(g)
 
@@ -430,6 +489,8 @@ def auto_plan(world, first, prefix=None):
         gate_next = None
         mp = maps[cur]
         add(cur)
+        for gg in bearer_goals(world, cur):
+            add(gg)
         # gatehouses and doors to other generated maps from this one
         for (x, y, dest, dw) in mp.warps:
             dm = world.consts.get(dest)
@@ -453,6 +514,8 @@ def auto_plan(world, first, prefix=None):
                     add(f"item:{n}={m_item[1]}")
                 else:
                     add(n)
+                for gg in bearer_goals(world, n):
+                    add(gg)
                 add(cur)
         if any(o["script"].endswith(("GateScript", "BoulderScript")) for o in mp.objects):
             add("gate:" + cur)
@@ -478,6 +541,9 @@ def main():
             res = open_gate(wk, g[5:])
         elif g.startswith("heal:"):
             res = heal(wk, g[5:])
+        elif g.startswith("give:"):
+            name, _, const = g[5:].partition("=")
+            res = wk.go(name) and give(wk, name, const)
         elif g.startswith("item:"):
             name, _, const = g[5:].partition("=")
             res = wk.go(name) and pick_item(wk, name)
@@ -494,7 +560,13 @@ def main():
     print("kills", k[0] + 256 * k[1], "fights logged", len(wk.fights), "pos", wk.state())
     for f in wk.fights[:8]:
         print("  ", f)
-    print("soft blocks:", getattr(wk, "soft", 0))
+    done = []
+    for ln in open(os.path.join(ROOT, "constants/area_event_flags.asm")):
+        m = re.match(r"DEF (EVENT_NAMED_\w+_(?:DONE|PAID)) EQU (\d+)", ln)
+        if m and (wk.t.mem("wEventFlags", int(m[2]) // 8) >> (int(m[2]) % 8)) & 1:
+            done.append(m[1][len("EVENT_NAMED_"):])
+    print("named duels done:", ",".join(done) or "none")
+    print("soft blocks:", getattr(wk, "soft", 0), "destiny bonds cleared:", wk.dbond_cleared)
     print("problems:", len(wk.log))
     wk.t.shot(f"{SHOTS}/end.png", 3)
     print("PASS" if ok and not wk.log else "FAIL")

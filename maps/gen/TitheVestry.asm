@@ -33,23 +33,20 @@ TitheVestryBossSeenText:
 TitheVestryBossBeatenText:
 	text "Oh no. My pension."
 	line "My congregation."
-	para "Take the thing by"
-	line "the wall. It was"
-	para "in the tithe"
-	line "closet anyway."
+	para "The plate is"
+	line "empty. It was"
+	para "always empty. That"
+	line "was the point."
 	done
 
 TitheVestryBossAfterText:
-	text "That's a CHAINSAW"
-	line "by the wall. The"
-	para "last deacon used"
-	line "it on a hedge."
-	para "Officially. Go on"
-	line "and take it."
+	text "Go on to the next"
+	line "square. The hedges"
+	para "there belong to"
+	line "the city. So does"
+	para "the man who trims"
+	line "them."
 	done
-
-TitheVestryItemBall:
-	itemball CHAINSAW
 
 TitheVestry_MapEvents:
 	db 0, 0 ; filler
@@ -64,5 +61,4 @@ TitheVestry_MapEvents:
 
 	def_object_events
 	object_event  2, 10, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheVestryBossScript, -1
-	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheVestryItemBall, EVENT_GEN_TITHE_VESTRY_ITEM
 

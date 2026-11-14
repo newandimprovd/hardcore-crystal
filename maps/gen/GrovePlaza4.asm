@@ -11,7 +11,7 @@ GrovePlaza4Fountain0:
 
 GrovePlaza4Fountain0Text:
 	text "WELLFAIR FOUNTAIN."
-	line "Well + welfare."
+	line "Well plus welfare."
 	para "The water is free."
 	line "Wishing costs your"
 	para "whole weekend."
@@ -148,79 +148,150 @@ GrovePlaza4Townie8Text:
 	para "mistake."
 	done
 
-GrovePlaza4SteinerScript:
+GrovePlaza4Steiner2BearerScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LORE_STEINER
-	iftrue .Again
-	writetext GrovePlaza4SteinerScriptText
+	checkevent EVENT_NAMED_STEINER2_DONE
+	iftrue .Beaten
+	setevent EVENT_LORE_STEINER2
+	writetext GrovePlaza4Steiner2BearerScriptSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext GrovePlaza4Steiner2BearerScriptBeatenText, 0
+	loadtrainer T_STEINER, 129
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_STEINER2_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_STEINER2_PAID
+	iftrue .After
+	writetext GrovePlaza4Steiner2BearerScriptGiveText
 	waitbutton
-	setevent EVENT_LORE_STEINER
+	verbosegiveitem BASEBALL_BAT
+	iffalse .NoRoom
+	setevent EVENT_NAMED_STEINER2_PAID
+.After:
+	writetext GrovePlaza4Steiner2BearerScriptAfterText
+	waitbutton
 	closetext
 	end
 
-.Again:
-	writetext GrovePlaza4SteinerScriptAgainText
+.No:
+	writetext GrovePlaza4Steiner2BearerScriptNoText
 	waitbutton
 	closetext
 	end
 
-GrovePlaza4SteinerScriptText:
+.NoRoom:
+	writetext GrovePlaza4Steiner2BearerScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+GrovePlaza4Steiner2BearerScriptSeenText:
 	text "You again. Good. I"
 	line "will say it"
 	para "slowly."
-	para "For millennia"
-	line "Ahriman was"
-	para "sealed, in a world"
-	line "that was a mirror"
-	para "of ours. A neat"
-	line "little jail made"
-	para "of belief."
-	para "Then a man"
-	line "overdosed and"
-	para "dreamed reality"
-	line "sideways. In his"
-	para "last sleep he"
-	line "handed Ahriman the"
-	para "key. That man is"
-	line "Finnegan."
+	para "Time is not a"
+	line "line. The earth"
+	para "passes through"
+	line "states, one"
+	para "carried into the"
+	line "next by those who"
+	para "remember. Every"
+	line "end is a handing"
+	para "over."
+	para "Ahriman was held"
+	line "in a mirror, a"
+	para "neat little jail"
+	line "made of belief."
+	para "Then a man dreamed"
+	line "his own overdose"
+	para "sideways, and in"
+	line "the last sleep he"
+	para "handed Ahriman the"
+	line "key. That man is"
+	para "Finnegan."
 	para "Now two worlds"
 	line "lean on each"
-	para "other. Time folds."
-	line "Cultures collide."
-	para "You are standing"
-	line "where the seam is."
-	para "Do not touch the"
-	line "seam."
+	para "other. The dead"
+	line "hang between them."
+	para "They are not gone."
+	line "They are"
+	para "unfinished."
+	para "That is what you"
+	line "are walking"
+	para "through. Do not"
+	line "touch the seam."
+	para "You will want"
+	line "something to swing"
+	para "at hornets. First"
+	line "swing at me."
+	para "Fight STEINER?"
 	done
 
-GrovePlaza4SteinerScriptAgainText:
-	text "You again. Good. I"
-	line "will say it"
-	para "slowly."
-	para "For millennia"
-	line "Ahriman was"
-	para "sealed, in a world"
-	line "that was a mirror"
-	para "of ours. A neat"
-	line "little jail made"
-	para "of belief."
-	para "Then a man"
-	line "overdosed and"
-	para "dreamed reality"
-	line "sideways. In his"
-	para "last sleep he"
-	line "handed Ahriman the"
-	para "key. That man is"
-	line "Finnegan."
-	para "Now two worlds"
-	line "lean on each"
-	para "other. Time folds."
-	line "Cultures collide."
-	para "You are standing"
-	line "where the seam is."
-	para "Do not touch the"
-	line "seam."
+GrovePlaza4Steiner2BearerScriptBeatenText:
+	text "Thank you. I felt"
+	line "that in a body I"
+	para "have not worn for"
+	line "a hundred years."
+	done
+
+GrovePlaza4Steiner2BearerScriptGiveText:
+	text "Take this BASEBALL"
+	line "BAT. A very modern"
+	para "tool. It carries"
+	line "no sacrament,"
+	para "which is why"
+	line "Ahriman cannot"
+	para "spoil it."
+	done
+
+GrovePlaza4Steiner2BearerScriptAfterText:
+	text "Ahriman loves a"
+	line "tool. Do not let"
+	para "the tool love you"
+	line "back."
+	done
+
+GrovePlaza4Steiner2BearerScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+GrovePlaza4Steiner2BearerScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
+GrovePlaza4Steiner2BlockScript:
+	checkevent EVENT_NAMED_STEINER2_PAID
+	iftrue .Pass
+	opentext
+	writetext GrovePlaza4Steiner2BlockScriptText
+	waitbutton
+	closetext
+	applymovement PLAYER, GrovePlaza4Steiner2BlockScriptStep
+.Pass:
+	end
+
+GrovePlaza4Steiner2BlockScriptStep:
+	step_down
+	step_end
+
+GrovePlaza4Steiner2BlockScriptText:
+	text "A voice behind"
+	line "you: One moment. A"
+	para "lecture is in"
+	line "progress on this"
+	para "square."
 	done
 
 GrovePlaza4Duel:
@@ -313,6 +384,12 @@ GrovePlaza4_MapEvents:
 	warp_event 18,  3, GROVE_BOUTIQUE4, 1
 
 	def_coord_events
+	coord_event 22,  1, -1, GrovePlaza4Steiner2BlockScript
+	coord_event 23,  1, -1, GrovePlaza4Steiner2BlockScript
+	coord_event 24,  1, -1, GrovePlaza4Steiner2BlockScript
+	coord_event 25,  1, -1, GrovePlaza4Steiner2BlockScript
+	coord_event 26,  1, -1, GrovePlaza4Steiner2BlockScript
+	coord_event 27,  1, -1, GrovePlaza4Steiner2BlockScript
 
 	def_bg_events
 	bg_event  5, 25, BGEVENT_READ, GrovePlaza4Fountain0
@@ -327,6 +404,6 @@ GrovePlaza4_MapEvents:
 	object_event  2, 13, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie6, -1
 	object_event  5, 23, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie7, -1
 	object_event 12,  7, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie8, -1
-	object_event 15, 20, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4SteinerScript, -1
+	object_event 15, 20, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Steiner2BearerScript, -1
 	object_event  6, 13, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Duel, -1
 

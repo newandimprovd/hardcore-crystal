@@ -23,8 +23,8 @@ AxiomGate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  0, AXIOM_PLAZA1, 2
-	warp_event  5,  0, AXIOM_PLAZA1, 2
+	warp_event  4,  0, AXIOM_PLAZA1, 4
+	warp_event  5,  0, AXIOM_PLAZA1, 4
 	warp_event  4,  7, GROVE_COUNCIL, 3
 	warp_event  5,  7, GROVE_COUNCIL, 3
 

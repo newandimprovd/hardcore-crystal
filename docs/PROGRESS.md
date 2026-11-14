@@ -164,7 +164,7 @@ Goal: stop reusing vanilla graphics that clash with the dark-comedy vibe.
   hang ~10 frames after the crossing, Quilava and Cthuludon alike); same rule as "connected maps must share the tileset". Route -> gate hall -> town is the classic Pokemon
   transition, so the gatehouse is back (areas/a1.py: lane north="door", plaza rift + south="closed", gatehouse "TitheCheckpoint").
 - Combined verification (tools/hardcore/verify_all.sh builds the real ROM and every test ROM, then runs): check_wild, test_roster (248 species), test_category (251 moves),
-  test_intro (new game to Timmy), test_cross (Cherrygrove <-> Tithe Road connection), test_road (road -> gate hall -> plaza and back), test_features (sign, ball, TM count),
+  test_intro (new game to Timmy), test_cross (Cherrygrove <-> Tithe Road connection), test_gates (road and boss room -> gate hall -> plaza south edge and back, heading kept), test_features (sign, ball, TM count),
   test_pack (45 items scroll), walk_all 1-5 (192..200 kills each), test_whiteout, test_wild, test_split (0 mismatches), test_story milestone/newbark/ending: all PASS.
 - Test notes: test_category needs a 120 frame warm-up since the boot got shorter; the walker's "soft block" lines are detours around item balls and dead trainers (a dead
   trainer stays where he walked up to the player); check_text reports 44 vanilla "<USER>'s" lines at the worst-case name width, not defects.
@@ -223,3 +223,15 @@ encounters and redesign Tithe Road, then walk. Free ROM went from 346 KB (old me
   PAWNDORA, BARTEROOT, ESCROWBOT, TRADEWIND, DEVILDEAL) with stock that climbs by act and two type boosters of the area's theme. 15 new maps.
 - **NPCs**: 9 townsfolk per plaza (was 6), the first of them a named gift-giver (one item, once; 35 more event flags), 40 new gossip lines pointing at the shops, fountains and held items.
 - **Special encounters**: 30 named optional duelists (areas/specials.py), see docs/SPECIAL_ENCOUNTERS.md; 604 of 650 battles, 46 slots free.
+
+## Special encounters v2, gates and directions (Nov 2026, after the author's answers)
+- **Gates and buildings**: whole two-row buildings only (no half sprites), the classic gate house at the end of Tithe Road, heading kept over every warp (opposite side rule: south exit,
+  north entrance), plaza 1 entered over a lamp post mat on its south edge. `test_gates.py`. Details in docs/MAP_DESIGN_NOTES.md.
+- **Named duels** (areas/named.py, areas/named_text.py, docs/SPECIAL_ENCOUNTERS.md): the historic characters fight in non-lethal scripted duels that scale with the game. Eight mandatory key
+  bearers hand over the key items that replace the HMs (Steiner CHAINSAW and BASEBALL BAT, Crowley CROWBAR and JET SKI, Sabbah FLASHLIGHT and SLEDGEHAMMER, Cioran GRAPPLE HOOK and SHOVEL);
+  the bosses no longer carry them (area 5 keeps the GETAWAY CAR) and a trigger across the plaza exit sends the player back until the prize is in the bag. Five optional philosophers
+  (Steiner twice, Suhrawardi, Abd al-Jabbar, Mulla Sadra) each pin a CORKBOARD page; with every page pinned the board shows a last page. Satoshi and the smugglers now tell the jewel beetle story.
+- **Rival**: five scripted fights (junction, plaza 2 of Areas 1 to 3, Purgatorio hub after the Axiom mouth) and the mansion boss that kills him.
+- New trainer classes T_STEINER, T_CROWLEY, U_SABBAH, U_SUHRAWARDI, L_CIORAN, D_SADRA, D_QADI (pictures recoloured from vanilla ones for now). gen_classes.py skips the deleted Battle Tower tables.
+- Budget: 500 + 15 bosses + 49 scripted duels + 58 Purgatorio = 622 of 650. Tests: `test_named.py` (block, rival), the walker's `give:` goals (area walks 1 to 5 pass).
+- Not done yet: the author's approval of the last change list (no final ROM before it), real battle art for the named classes, the 12 kill gap between the tidal wave (400) and the crater (412) to report.

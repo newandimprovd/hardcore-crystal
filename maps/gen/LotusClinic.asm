@@ -31,22 +31,19 @@ LotusClinicBossSeenText:
 
 LotusClinicBossBeatenText:
 	text "Ha. Ha. So that's"
-	line "how it feels. Take"
-	para "the GRAPPLE HOOK."
-	line "The police left it"
-	para "here. They forgot."
+	line "how it feels. The"
+	para "police left in a"
+	line "hurry. They forgot"
+	para "everything."
 	done
 
 LotusClinicBossAfterText:
-	text "The GRAPPLE HOOK"
-	line "climbs waterfalls"
-	para "and escapes"
-	line "police. We have"
-	para "lots of both."
+	text "There are"
+	line "waterfalls ahead"
+	para "and police behind."
+	line "We have lots of"
+	para "both."
 	done
-
-LotusClinicItemBall:
-	itemball GRAPPLE_HOOK
 
 LotusClinic_MapEvents:
 	db 0, 0 ; filler
@@ -61,5 +58,4 @@ LotusClinic_MapEvents:
 
 	def_object_events
 	object_event  2, 10, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusClinicBossScript, -1
-	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusClinicItemBall, EVENT_GEN_LOTUS_CLINIC_ITEM
 

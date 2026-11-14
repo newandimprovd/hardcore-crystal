@@ -29,27 +29,22 @@ TitheEvidenceRoomBossSeenText:
 	done
 
 TitheEvidenceRoomBossBeatenText:
-	text "Fine. You can take"
-	line "the CROWBAR. It's"
-	para "been in evidence"
-	line "since the"
-	para "Hendricks thing."
-	line "Nobody remembers"
-	para "who Hendricks was."
+	text "Fine. Take the"
+	line "file. It's been in"
+	para "evidence since the"
+	line "Hendricks thing."
+	para "Nobody remembers"
+	line "who Hendricks was."
 	done
 
 TitheEvidenceRoomBossAfterText:
-	text "The CROWBAR's on"
-	line "the shelf. Shifts"
-	para "boulders and"
-	line "locked doors."
-	para "Don't check the"
-	line "lockers. They"
-	para "moan."
+	text "Boulders and"
+	line "locked doors are"
+	para "all the same to"
+	line "this city. Don't"
+	para "check the lockers."
+	line "They moan."
 	done
-
-TitheEvidenceRoomItemBall:
-	itemball CROWBAR
 
 TitheEvidenceRoom_MapEvents:
 	db 0, 0 ; filler
@@ -64,5 +59,4 @@ TitheEvidenceRoom_MapEvents:
 
 	def_object_events
 	object_event  2,  9, SPRITE_HC_COP_CHIEF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheEvidenceRoomBossScript, -1
-	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheEvidenceRoomItemBall, EVENT_GEN_TITHE_EVIDENCE_ROOM_ITEM
 

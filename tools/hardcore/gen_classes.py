@@ -117,6 +117,8 @@ def main():
     # ---- Battle Tower genders and sprites (the vanilla tables exclude MYSTICALMAN, the last class; now it has a row too)
     for f, rows in (("genders", ["\tdb MALE ; MYSTICALMAN"] + [f"\tdb {c[6][:1] + c[6][1:].lower() if False else c[6]} ; {c[0]}" for c in allc]),
                     ("sprites", ["\tdb SPRITE_GRAMPS ; MYSTICALMAN"] + [f"\tdb {classes.sprite(c[2])} ; {c[0]}" for c in allc])):
+        if not os.path.exists(os.path.join(ROOT, f"data/trainers/{f}.asm")):
+            continue  # the Battle Tower tables were deleted with the rest of the Battle Tower
         s = strip(rd(f"data/trainers/{f}.asm"))
         s = s.replace("\tassert_table_length NUM_TRAINER_CLASSES - 1 ; exclude MYSTICALMAN", "\tassert_table_length NUM_TRAINER_CLASSES")
         s = insert_before(s, "\tassert_table_length NUM_TRAINER_CLASSES", "\n".join(rows))

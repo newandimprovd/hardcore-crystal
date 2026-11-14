@@ -133,24 +133,49 @@ LotusPlaza6Townie8Text:
 	line "There it is."
 	done
 
-LotusPlaza6SteinerScript:
+LotusPlaza6Steiner4DuelScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LORE_STEINER
-	iftrue .Again
-	writetext LotusPlaza6SteinerScriptText
+	checkevent EVENT_NAMED_STEINER4_DONE
+	iftrue .Beaten
+	setevent EVENT_LORE_STEINER4
+	writetext LotusPlaza6Steiner4DuelScriptSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext LotusPlaza6Steiner4DuelScriptBeatenText, 0
+	loadtrainer T_STEINER, 130
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_STEINER4_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_STEINER4_PAID
+	iftrue .After
+	writetext LotusPlaza6Steiner4DuelScriptGiveText
 	waitbutton
-	setevent EVENT_LORE_STEINER
+	verbosegiveitem PP_UP
+	iffalse .NoRoom
+	setevent EVENT_NAMED_STEINER4_PAID
+.After:
+	writetext LotusPlaza6Steiner4DuelScriptAfterText
+	waitbutton
 	closetext
 	end
 
-.Again:
-	writetext LotusPlaza6SteinerScriptAgainText
+.No:
+	writetext LotusPlaza6Steiner4DuelScriptNoText
 	waitbutton
 	closetext
 	end
 
-LotusPlaza6SteinerScriptText:
+.NoRoom:
+	writetext LotusPlaza6Steiner4DuelScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusPlaza6Steiner4DuelScriptSeenText:
 	text "Last time I will"
 	line "speak with you, I"
 	para "am afraid."
@@ -172,30 +197,55 @@ LotusPlaza6SteinerScriptText:
 	para "was efficient."
 	line "Both are true of"
 	para "Ahriman too."
+	para "The Balance is the"
+	line "only thing that"
+	para "does not harden."
+	line "It is not a middle"
+	para "road. It is a"
+	line "tightrope."
+	para "Walk it. But"
+	line "first, one more"
+	para "lesson, at the"
+	line "usual price."
+	para "Fight STEINER?"
 	done
 
-LotusPlaza6SteinerScriptAgainText:
-	text "Last time I will"
-	line "speak with you, I"
-	para "am afraid."
-	line "Teachers are"
-	para "seldom allowed"
-	line "encores."
-	para "When the seam"
-	line "closes, one era"
-	para "will remain. Be"
-	line "sure you leave it"
-	para "better than you"
-	line "found it."
-	para "Preferably with"
-	line "plumbing."
-	para "You killed many. I"
-	line "will not tell you"
-	para "it was right. I"
-	line "will tell you it"
-	para "was efficient."
-	line "Both are true of"
-	para "Ahriman too."
+LotusPlaza6Steiner4DuelScriptBeatenText:
+	text "Well fought. The"
+	line "rope holds. The"
+	para "rope usually does."
+	line "It is the walkers"
+	para "that do not."
+	done
+
+LotusPlaza6Steiner4DuelScriptGiveText:
+	text "One last present"
+	line "from a teacher. It"
+	para "is only a candy."
+	line "Think of it as a"
+	para "diploma."
+	done
+
+LotusPlaza6Steiner4DuelScriptAfterText:
+	text "Leave it with"
+	line "plumbing. That is"
+	para "the whole of my"
+	line "last lecture."
+	done
+
+LotusPlaza6Steiner4DuelScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+LotusPlaza6Steiner4DuelScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
 	done
 
 LotusPlaza6Duel:
@@ -298,6 +348,6 @@ LotusPlaza6_MapEvents:
 	object_event 10, 15, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie6, -1
 	object_event  4, 14, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie7, -1
 	object_event  3, 11, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie8, -1
-	object_event  2, 23, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6SteinerScript, -1
+	object_event  2, 23, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Steiner4DuelScript, -1
 	object_event 10, 22, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Duel, -1
 

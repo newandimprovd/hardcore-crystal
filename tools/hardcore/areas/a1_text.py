@@ -158,13 +158,12 @@ GATE = ["Papers? No? Great. That's a fine too. Pay at the end."]
 # bosses
 VESTRY_SEEN = ("Welcome to the Vestry. Leave your valuables, your dignity and your will to live in the plate. "
                "I'll know if you skimp. I keep count of everything but my sins.")
-VESTRY_BEATEN = "Oh no. My pension. My congregation. Take the thing by the wall. It was in the tithe closet anyway."
-VESTRY_AFTER = ("That's a CHAINSAW by the wall. The last deacon used it on a hedge. "
-                "Officially. Go on and take it.")
+VESTRY_BEATEN = "Oh no. My pension. My congregation. The plate is empty. It was always empty. That was the point."
+VESTRY_AFTER = "Go on to the next square. The hedges there belong to the city. So does the man who trims them."
 EVIDENCE_SEEN = ("This is the Evidence Room. I'm Chief Brad. Everything you say can and will be misplaced. "
                  "And you? You're evidence now.")
-EVIDENCE_BEATEN = "Fine. You can take the CROWBAR. It's been in evidence since the Hendricks thing. Nobody remembers who Hendricks was."
-EVIDENCE_AFTER = "The CROWBAR's on the shelf. Shifts boulders and locked doors. Don't check the lockers. They moan."
+EVIDENCE_BEATEN = "Fine. Take the file. It's been in evidence since the Hendricks thing. Nobody remembers who Hendricks was."
+EVIDENCE_AFTER = "Boulders and locked doors are all the same to this city. Don't check the lockers. They moan."
 CATHEDRAL_SEEN = ("My child. I have heard the confessions of every tower in this city. I charged by the minute. "
                   "You have not confessed yet. Neither have I. Let us begin with the beating.")
 CATHEDRAL_BEATEN = "The bell... it was never mine to ring. Go, then. I have already been forgiven in advance. Bulk rate."

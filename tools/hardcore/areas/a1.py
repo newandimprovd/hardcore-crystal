@@ -70,11 +70,10 @@ def build(w, roster, rng, open_exit=False):
     pickup(w, road, reserve=len(s_road))
     furnish_lane(w, g, road, reserve=len(s_road))
     # Segment 2: the city (modern tileset)
-    # The road ends at a checkpoint gate hall (the classic Pokemon route -> gate house -> city transition);
-    # the plaza's south side is closed, so the hall is the only way in.
-    p1, d1 = make_plaza(g, "TithePlaza1", modern, rng, landmark=LM_CITY, music="MUSIC_GOLDENROD_CITY", rift=True,
-                        houses=1, south="closed", index=1)
-    gatehouse(g, "TitheCheckpoint", road.door, d1["rift"], LM_CITY, "MUSIC_GOLDENROD_CITY", [Text(T.GATE[0])])
+    # The road ends at a classic gate house (route -> gate house -> city); the hall's far door lands on the plaza's south edge,
+    # so the walk keeps heading north: the way out of a map is always the opposite side of the way into the next one.
+    p1, d1 = make_plaza(g, "TithePlaza1", modern, rng, landmark=LM_CITY, music="MUSIC_GOLDENROD_CITY", houses=1, south="gate", index=1)
+    gatehouse(g, "TitheCheckpoint", road.door, d1["south"], LM_CITY, "MUSIC_GOLDENROD_CITY", [Text(T.GATE[0])])
     town(w, g, "Tithe", 1, p1, d1, modern, LM_CITY, "TITHE_1", items[0], texts, "TITHE_1", reminders=(T.TIP_A, T.TIP_B))
     # Trainer tips sign: a Johto signpost block just left of the road near its south end. Read it from the road side.
     sx, sy = road.a - 1, road.h - 3
@@ -85,9 +84,9 @@ def build(w, roster, rng, open_exit=False):
     # the road's south end is joined to the Tithe Junction by gen_areas.py (opening.py)
 
     boss1 = BossSpec("TitheVestry", "DEACON", "T_DEACON", "SPRITE_HC_PRIEST", "PAL_NPC_RED", 15, 4, T.VESTRY_SEEN,
-                     T.VESTRY_BEATEN, T.VESTRY_AFTER, template="karen", item="CHAINSAW")
+                     T.VESTRY_BEATEN, T.VESTRY_AFTER, template="karen")
     boss2 = BossSpec("TitheEvidenceRoom", "CHIEF BRAD", "T_COPCHIEF", "SPRITE_HC_COP_CHIEF", "PAL_NPC_BLUE", 21, 5,
-                     T.EVIDENCE_SEEN, T.EVIDENCE_BEATEN, T.EVIDENCE_AFTER, template="will", item="CROWBAR")
+                     T.EVIDENCE_SEEN, T.EVIDENCE_BEATEN, T.EVIDENCE_AFTER, template="will")
     boss3 = BossSpec("TitheCathedral", "MONSIGNOR", "T_MONSIGNOR", "SPRITE_HC_MONSIGNOR", "PAL_NPC_RED", 27, 6,
                      T.CATHEDRAL_SEEN, T.CATHEDRAL_BEATEN, T.CATHEDRAL_AFTER, template="bruno", landmark=LM_PARISH,
                      music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)

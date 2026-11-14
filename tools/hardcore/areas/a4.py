@@ -30,9 +30,9 @@ def build(w, roster, rng, entry_doors, open_exit=False):
     texts = dict(center=T.CENTER, mart=T.MART, house=T.HOUSE)
     bosses = [
         BossSpec("LotusClinic", "DR LETHE", "L_CLINICIAN", "SPRITE_HC_CLINICIAN", "PAL_NPC_GREEN", 69, 5, T.CLINIC_SEEN,
-                 T.CLINIC_BEATEN, T.CLINIC_AFTER, template="karen", item="GRAPPLE_HOOK"),
+                 T.CLINIC_BEATEN, T.CLINIC_AFTER, template="karen"),
         BossSpec("LotusCabana", "MGR KAI", "L_MANAGER", "SPRITE_HC_RESORT_BOSS", "PAL_NPC_BROWN", 74, 5,
-                 T.CABANA_SEEN, T.CABANA_BEATEN, T.CABANA_AFTER, template="will", item="SHOVEL"),
+                 T.CABANA_SEEN, T.CABANA_BEATEN, T.CABANA_AFTER, template="will"),
         BossSpec("LotusMansion", "RIVAL", "RIVAL2", "SPRITE_RIVAL", "PAL_NPC_RED", 80, 6, T.MANSION_SEEN,
                  T.MANSION_BEATEN, T.MANSION_AFTER, template="bruno", landmark="LANDMARK_LOTUS_MANSION",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit, story=2)]

@@ -29,26 +29,20 @@ GroveSmokehouseBossSeenText:
 	done
 
 GroveSmokehouseBossBeatenText:
-	text "Take the BASEBALL"
-	line "BAT. It's a stick"
-	para "we hit things"
-	line "with. It's the"
-	para "only tool we have,"
-	line "and also all our"
-	para "problems."
+	text "Fine. The smoke is"
+	line "yours. The fish"
+	para "are yours. The"
+	line "grudges, those"
+	para "stay with me."
 	done
 
 GroveSmokehouseBossAfterText:
-	text "The bat shakes"
-	line "trees until"
-	para "something falls"
-	line "out. Be ready for"
-	para "what falls. It's"
-	line "usually a person."
+	text "Past the hives the"
+	line "trees shake. Be"
+	para "ready for what"
+	line "falls. It's"
+	para "usually a person."
 	done
-
-GroveSmokehouseItemBall:
-	itemball BASEBALL_BAT
 
 GroveSmokehouse_MapEvents:
 	db 0, 0 ; filler
@@ -63,5 +57,4 @@ GroveSmokehouse_MapEvents:
 
 	def_object_events
 	object_event  2,  9, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveSmokehouseBossScript, -1
-	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveSmokehouseItemBall, EVENT_GEN_GROVE_SMOKEHOUSE_ITEM
 

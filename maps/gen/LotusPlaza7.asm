@@ -10,8 +10,8 @@ LotusPlaza7Fountain0:
 	jumptext LotusPlaza7Fountain0Text
 
 LotusPlaza7Fountain0Text:
-	text "DRIFTAIN. Drift +"
-	line "fountain. It"
+	text "DRIFTAIN. Drift"
+	line "plus fountain. It"
 	para "sprays where the"
 	line "wind sends it. It"
 	para "has never"

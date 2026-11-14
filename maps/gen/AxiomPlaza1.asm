@@ -10,12 +10,11 @@ AxiomPlaza1Fountain0:
 	jumptext AxiomPlaza1Fountain0Text
 
 AxiomPlaza1Fountain0Text:
-	text "FOUNTAINEER-3."
-	line "Fountain +"
-	para "engineer. Output:"
-	line "4.0 liters per"
-	para "sigh. Sighs are"
-	line "logged."
+	text "AQUAXIOM. Aqua"
+	line "plus axiom. Axiom"
+	para "1: water is wet."
+	line "Axiom 2: do not"
+	para "touch it."
 	done
 
 AxiomPlaza1Giver:
@@ -148,119 +147,167 @@ AxiomPlaza1Townie8Text:
 	line "wild Pokemon."
 	done
 
-AxiomPlaza1SabbahScript:
+AxiomPlaza1SabbahBearerScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LORE_SABBAH
-	iftrue .Again
-	writetext AxiomPlaza1SabbahScriptText
-	waitbutton
+	checkevent EVENT_NAMED_SABBAH_DONE
+	iftrue .Beaten
 	setevent EVENT_LORE_SABBAH
+	writetext AxiomPlaza1SabbahBearerScriptSeenText
+	yesorno
+	iffalse .No
 	closetext
-	end
-
-.Again:
-	writetext AxiomPlaza1SabbahScriptAgainText
+	winlosstext AxiomPlaza1SabbahBearerScriptBeatenText, 0
+	loadtrainer U_SABBAH, 128
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_SABBAH_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_SABBAH_PAID
+	iftrue .After
+	writetext AxiomPlaza1SabbahBearerScriptGiveText
+	waitbutton
+	verbosegiveitem FLASHLIGHT
+	iffalse .NoRoom
+	setevent EVENT_NAMED_SABBAH_PAID
+.After:
+	writetext AxiomPlaza1SabbahBearerScriptAfterText
 	waitbutton
 	closetext
 	end
 
-AxiomPlaza1SabbahScriptText:
-	text "Hassan i Sabbah."
-	line "The Old Man of the"
-	para "Mountain. I sent"
-	line "young men to the"
-	para "garden of delight,"
-	line "and they came back"
-	para "extremely"
-	line "motivated."
-	para "Nothing is true."
-	line "Everything is"
-	para "permitted. Do not"
-	line "tell the robots."
-	para "They believe in"
-	line "compliance, which"
-	para "is the same thing"
-	line "as belief."
-	para "The Dajjal is"
-	line "coming. He has"
-	para "always been"
-	line "coming. He lives"
-	para "in a separate"
-	line "world, one door"
-	para "over, and he is"
-	line "bored."
-	para "He plans to"
-	line "connect his world"
-	para "with ours very"
-	line "soon. That is why"
-	para "the sky has a seam"
-	line "now. That is why"
-	para "time smells of old"
-	line "pennies."
-	para "When the doors"
-	line "open, the robots"
-	para "will serve him"
-	line "first. They are"
-	para "built for it. You"
-	line "are not, which is"
-	para "to your credit."
-	para "Take a message to"
-	line "your sandals. Walk"
-	para "until the road"
-	line "ends, then keep"
-	para "walking. That is"
-	line "the whole of the"
-	para "Assassin's method."
+.No:
+	writetext AxiomPlaza1SabbahBearerScriptNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext AxiomPlaza1SabbahBearerScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+AxiomPlaza1SabbahBearerScriptSeenText:
+	text "Hasan i Sabbah."
+	line "The Lord of"
+	para "Alamut. They call"
+	line "me the Old Man of"
+	para "the Mountain, as"
+	line "if mountains had"
+	para "fathers."
+	para "Listen. Every word"
+	line "has a husk and a"
+	para "kernel. The husk"
+	line "is the zahir, the"
+	para "letter. The kernel"
+	line "is the batin, the"
+	para "meaning. The crowd"
+	line "eats husks. I keep"
+	para "the kernel."
+	para "You cannot reach"
+	line "the kernel by your"
+	para "own reason. Reason"
+	line "is a lamp with no"
+	para "oil. You need the"
+	line "teacher, the one"
+	para "who is sent, the"
+	line "one who does not"
+	para "err. I call this"
+	line "the ta'lim. The"
+	para "robots call it a"
+	line "software update."
+	para "Look at this city."
+	line "Rules and files"
+	para "and a clean"
+	line "schedule. A pure"
+	para "zahir. A husk with"
+	line "no seed. The"
+	para "robots have the"
+	line "law and have never"
+	para "met its meaning."
+	para "They say I taught"
+	line "that nothing is"
+	para "true and"
+	line "everything is"
+	para "permitted. I did"
+	line "not. But I enjoy"
+	para "being quoted."
+	para "The road ahead is"
+	line "dark and something"
+	para "in it breathes. I"
+	line "carry the lamp for"
+	para "those who earn it."
+	para "Fight me, so you"
+	line "remember who"
+	para "handed it to you."
+	para "Fight SABBAH?"
 	done
 
-AxiomPlaza1SabbahScriptAgainText:
-	text "Hassan i Sabbah."
-	line "The Old Man of the"
-	para "Mountain. I sent"
-	line "young men to the"
-	para "garden of delight,"
-	line "and they came back"
-	para "extremely"
-	line "motivated."
-	para "Nothing is true."
-	line "Everything is"
-	para "permitted. Do not"
-	line "tell the robots."
-	para "They believe in"
-	line "compliance, which"
-	para "is the same thing"
-	line "as belief."
-	para "The Dajjal is"
-	line "coming. He has"
-	para "always been"
-	line "coming. He lives"
-	para "in a separate"
-	line "world, one door"
-	para "over, and he is"
-	line "bored."
-	para "He plans to"
-	line "connect his world"
-	para "with ours very"
-	line "soon. That is why"
-	para "the sky has a seam"
-	line "now. That is why"
-	para "time smells of old"
-	line "pennies."
-	para "When the doors"
-	line "open, the robots"
-	para "will serve him"
-	line "first. They are"
-	para "built for it. You"
-	line "are not, which is"
-	para "to your credit."
-	para "Take a message to"
-	line "your sandals. Walk"
-	para "until the road"
-	line "ends, then keep"
-	para "walking. That is"
-	line "the whole of the"
-	para "Assassin's method."
+AxiomPlaza1SabbahBearerScriptBeatenText:
+	text "Good. You attacked"
+	line "the teacher. Every"
+	para "student must,"
+	line "once, to see"
+	para "whether the"
+	line "teacher bleeds."
+	done
+
+AxiomPlaza1SabbahBearerScriptGiveText:
+	text "Take the"
+	line "FLASHLIGHT. A"
+	para "small lamp for a"
+	line "wide dark. In my"
+	para "teaching the light"
+	line "is lent. So is the"
+	para "eye."
+	done
+
+AxiomPlaza1SabbahBearerScriptAfterText:
+	text "Hold the lamp. Do"
+	line "not mistake the"
+	para "lamp for the sun."
+	line "The robots have"
+	para "done so for years."
+	done
+
+AxiomPlaza1SabbahBearerScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+AxiomPlaza1SabbahBearerScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
+AxiomPlaza1SabbahBlockScript:
+	checkevent EVENT_NAMED_SABBAH_PAID
+	iftrue .Pass
+	opentext
+	writetext AxiomPlaza1SabbahBlockScriptText
+	waitbutton
+	closetext
+	applymovement PLAYER, AxiomPlaza1SabbahBlockScriptStep
+.Pass:
+	end
+
+AxiomPlaza1SabbahBlockScriptStep:
+	step_down
+	step_end
+
+AxiomPlaza1SabbahBlockScriptText:
+	text "A voice behind"
+	line "you: The road is"
+	para "dark. Take the"
+	line "lamp first. It is"
+	para "on this square."
 	done
 
 AxiomPlaza1Duel:
@@ -347,25 +394,31 @@ AxiomPlaza1_MapEvents:
 
 	def_warp_events
 	warp_event  2,  3, AXIOM_MART1, 1
-	warp_event  6,  3, AXIOM_GATE, 1
-	warp_event 10,  3, AXIOM_HOUSE1, 1
-	warp_event 22,  3, AXIOM_POKECENTER1, 1
+	warp_event  8,  3, AXIOM_HOUSE1, 1
+	warp_event 12,  3, AXIOM_POKECENTER1, 1
+	warp_event 12, 29, AXIOM_GATE, 1
 
 	def_coord_events
+	coord_event 16,  1, -1, AxiomPlaza1SabbahBlockScript
+	coord_event 17,  1, -1, AxiomPlaza1SabbahBlockScript
+	coord_event 18,  1, -1, AxiomPlaza1SabbahBlockScript
+	coord_event 19,  1, -1, AxiomPlaza1SabbahBlockScript
+	coord_event 20,  1, -1, AxiomPlaza1SabbahBlockScript
+	coord_event 21,  1, -1, AxiomPlaza1SabbahBlockScript
 
 	def_bg_events
-	bg_event  5, 23, BGEVENT_READ, AxiomPlaza1Fountain0
+	bg_event 21, 23, BGEVENT_READ, AxiomPlaza1Fountain0
 
 	def_object_events
-	object_event  3, 12, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Giver, -1
-	object_event 13, 14, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie1, -1
-	object_event 11, 19, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie2, -1
-	object_event 15, 23, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie3, -1
-	object_event 26, 13, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie4, -1
-	object_event 12, 22, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie5, -1
-	object_event  4, 18, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie6, -1
-	object_event 27, 11, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie7, -1
-	object_event 10, 18, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie8, -1
-	object_event 10, 20, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahScript, -1
-	object_event 13, 13, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Duel, -1
+	object_event  6, 18, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Giver, -1
+	object_event  5, 16, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie1, -1
+	object_event  8,  6, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie2, -1
+	object_event  5, 15, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie3, -1
+	object_event 17, 27, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie4, -1
+	object_event 15, 11, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie5, -1
+	object_event 18, 23, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie6, -1
+	object_event 17, 18, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie7, -1
+	object_event  7, 18, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie8, -1
+	object_event  8, 25, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahBearerScript, -1
+	object_event 16, 19, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Duel, -1
 

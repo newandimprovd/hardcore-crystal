@@ -2,20 +2,20 @@
  "AxiomPlaza1": {
   "const": "AXIOM_PLAZA1",
   "grass": [
-   7,
+   8,
    11,
    3
   ],
   "h": 15,
   "spawn": [
-   22,
+   12,
    4
   ],
   "street": [
-   15,
+   11,
    15
   ],
-  "w": 15
+  "w": 13
  },
  "AxiomPlaza2": {
   "const": "AXIOM_PLAZA2",
@@ -128,20 +128,20 @@
  "DisPlaza1": {
   "const": "DIS_PLAZA1",
   "grass": [
-   7,
-   23,
+   19,
+   21,
    3
   ],
-  "h": 14,
+  "h": 13,
   "spawn": [
-   2,
+   10,
    4
   ],
   "street": [
    7,
    13
   ],
-  "w": 15
+  "w": 13
  },
  "DisPlaza2": {
   "const": "DIS_PLAZA2",
@@ -254,20 +254,20 @@
  "GrovePlaza1": {
   "const": "GROVE_PLAZA1",
   "grass": [
-   22,
-   25,
-   3
+   13,
+   19,
+   2
   ],
   "h": 15,
   "spawn": [
-   2,
+   20,
    4
   ],
   "street": [
-   9,
-   17
+   7,
+   11
   ],
-  "w": 15
+  "w": 13
  },
  "GrovePlaza2": {
   "const": "GROVE_PLAZA2",
@@ -380,20 +380,20 @@
  "LotusPlaza1": {
   "const": "LOTUS_PLAZA1",
   "grass": [
-   29,
-   9,
-   2
+   22,
+   25,
+   3
   ],
   "h": 15,
   "spawn": [
-   6,
+   10,
    4
   ],
   "street": [
-   3,
-   13
+   9,
+   15
   ],
-  "w": 17
+  "w": 15
  },
  "LotusPlaza2": {
   "const": "LOTUS_PLAZA2",
@@ -506,20 +506,20 @@
  "TithePlaza1": {
   "const": "TITHE_PLAZA1",
   "grass": [
-   13,
+   18,
    21,
-   2
+   3
   ],
   "h": 13,
   "spawn": [
-   4,
+   8,
    4
   ],
   "street": [
-   11,
-   11
+   5,
+   13
   ],
-  "w": 15
+  "w": 13
  },
  "TithePlaza2": {
   "const": "TITHE_PLAZA2",

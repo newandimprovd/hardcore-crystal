@@ -31,24 +31,18 @@ AxiomArmoryBossSeenText:
 	done
 
 AxiomArmoryBossBeatenText:
-	text "Fine. A tool of"
-	line "the Union is"
-	para "yours. The"
-	line "SLEDGEHAMMER. Use"
-	para "it on a wall. Not"
-	line "on me. I'm done."
+	text "Fine. The Armory"
+	line "is yours. Break"
+	para "something in it."
+	line "Not me. I'm done."
 	done
 
 AxiomArmoryBossAfterText:
-	text "The SLEDGEHAMMER"
-	line "smashes cracked"
-	para "rocks. And skulls."
-	line "The Union has"
-	para "both."
+	text "Cracked slabs bar"
+	line "the next road. The"
+	para "Union has both"
+	line "slabs and skulls."
 	done
-
-AxiomArmoryItemBall:
-	itemball SLEDGEHAMMER
 
 AxiomArmory_MapEvents:
 	db 0, 0 ; filler
@@ -63,5 +57,4 @@ AxiomArmory_MapEvents:
 
 	def_object_events
 	object_event  2,  9, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomArmoryBossScript, -1
-	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomArmoryItemBall, EVENT_GEN_AXIOM_ARMORY_ITEM
 

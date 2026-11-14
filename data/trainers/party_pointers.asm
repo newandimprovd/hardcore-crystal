@@ -156,5 +156,12 @@ TrainerGroups:
 	dw HC_EmptyGroup
 	dw HC_EmptyGroup
 	dw HC_EmptyGroup
+	dw HC_EmptyGroup
+	dw HC_EmptyGroup
+	dw HC_EmptyGroup
+	dw HC_EmptyGroup
+	dw HC_EmptyGroup
+	dw HC_EmptyGroup
+	dw HC_EmptyGroup
 ; HC-CLASSES end
 	assert_table_length NUM_TRAINER_CLASSES

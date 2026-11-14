@@ -130,12 +130,12 @@ GATE = ["Welcome to the commune. Leave your shoes and your weapons at the door. 
 # bosses
 BOATHOUSE_SEEN = ("I'm Otto, the Reeve. I keep the boats and the grudges. Nothing here is locked and it's all mine. "
                   "Sit. Fight. Same thing.")
-BOATHOUSE_BEATEN = "Fine. The thing by the wall is yours. It washed up. Probably stolen. We don't have a word for stolen."
-BOATHOUSE_AFTER = "That's a JET SKI. It rides over any open water. Don't ask where it came from. It came from the river."
+BOATHOUSE_BEATEN = "Fine. The boats are yours. They washed up. Probably stolen. We don't have a word for stolen."
+BOATHOUSE_AFTER = "Nothing here is locked. Even the river. Cross it however you like. It came from the river anyway."
 SMOKEHOUSE_SEEN = ("I am Elder Fern. I smoke fish, meat and arguments. You walked in without knocking. "
                    "We have no doors. The knocking was for me.")
-SMOKEHOUSE_BEATEN = "Take the BASEBALL BAT. It's a stick we hit things with. It's the only tool we have, and also all our problems."
-SMOKEHOUSE_AFTER = "The bat shakes trees until something falls out. Be ready for what falls. It's usually a person."
+SMOKEHOUSE_BEATEN = "Fine. The smoke is yours. The fish are yours. The grudges, those stay with me."
+SMOKEHOUSE_AFTER = "Past the hives the trees shake. Be ready for what falls. It's usually a person."
 COUNCIL_SEEN = ("I am the Matriarch. We have no leaders here. I'm just very loud and everyone listens. "
                 "You've left forty of my people on the floor. That's not sharing.")
 COUNCIL_BEATEN = "We're a peaceful people. We... were. The way ahead is open. We have no gates. We never did."

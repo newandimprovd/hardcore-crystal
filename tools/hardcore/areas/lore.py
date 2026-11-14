@@ -1,6 +1,7 @@
 """The CORKBOARD: a key item that prints the note of every character the player has met, and the endings' lore flags.
 Writes data/hardcore/corkboard.asm (included once in the 'Hardcore Story' section of main.asm)."""
 from . import cast_text as C
+from . import named_text as N
 from .flags import flag_once
 from .model import write
 from .text import Text
@@ -14,10 +15,15 @@ def emit(w):
     for k in keys:
         f = flag_once(w, f"EVENT_LORE_{k}")
         o += [f"\tcheckevent {f}", f"\tiffalse .skip_{k}", f"\twritetext CorkNote_{k}", "\twaitbutton", f".skip_{k}:"]
+    # the last page: only when every other page is pinned (the philosophers are optional, so this is the 100% reward)
+    for k in keys:
+        o += [f"\tcheckevent {flag_once(w, f'EVENT_LORE_{k}')}", "\tiffalse .incomplete"]
+    o += ["\twritetext CorkNote_FULL", "\twaitbutton", ".incomplete:"]
     o += ["\tclosetext", "\tend", ""]
     o.append(Text("CORKBOARD. Pages pinned so far. Joyce says the empty spaces are the interesting ones.").emit("CorkboardIntroText"))
     for k in keys:
         o.append(Text(C.NOTES[k]).emit(f"CorkNote_{k}"))
+    o.append(Text(N.FULL_BOARD).emit("CorkNote_FULL"))
     # the endings
     for k in ("EVENT_PURG_NICK", "EVENT_ABYSS_GRAVE_READ", "EVENT_HC_TRUE_END"):
         flag_once(w, k)

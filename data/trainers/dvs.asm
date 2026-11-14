@@ -90,6 +90,8 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; T_DEACON
 	dn  9,  8,  8,  8 ; T_COPCHIEF
 	dn  9,  8,  8,  8 ; T_MONSIGNOR
+	dn  9,  8,  8,  8 ; T_STEINER
+	dn  9,  8,  8,  8 ; T_CROWLEY
 	dn 10,  8,  8,  8 ; G_HIKER
 	dn  9,  8,  8,  8 ; G_SCOUT
 	dn  6, 10, 10,  8 ; G_SPROUT
@@ -123,6 +125,8 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; U_MADDOC
 	dn  9,  8,  8,  8 ; U_COURIER
 	dn 13,  8, 10,  8 ; U_MAYOR
+	dn  9,  8,  8,  8 ; U_SABBAH
+	dn  9,  8,  8,  8 ; U_SUHRAWARDI
 	dn  6,  9, 12,  8 ; L_SUNBATHER
 	dn  9,  8,  8,  8 ; L_SWIMMERM
 	dn  7,  8,  8,  8 ; L_SWIMMERF
@@ -138,6 +142,7 @@ TrainerClassDVs:
 	dn 13,  8, 12,  8 ; L_TOURISTM
 	dn  9,  8,  8,  8 ; L_BELLHOP
 	dn 13,  8, 10,  8 ; L_LOUNGER
+	dn  9,  8,  8,  8 ; L_CIORAN
 	dn  9,  8,  8,  8 ; D_BRUTE
 	dn  9,  8,  8,  8 ; D_SHADE
 	dn  7,  8,  8,  8 ; D_HAG
@@ -156,5 +161,7 @@ TrainerClassDVs:
 	dn  7, 12, 12,  8 ; D_SPECTRE
 	dn  9,  8,  8,  8 ; D_DEMON
 	dn  9,  8,  8,  8 ; D_FINNEGAN
+	dn  9,  8,  8,  8 ; D_SADRA
+	dn  9,  8,  8,  8 ; D_QADI
 ; HC-CLASSES end
 	assert_table_length NUM_TRAINER_CLASSES

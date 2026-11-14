@@ -53,6 +53,7 @@ def tsunami_kills():
 def milestone(rom):
     wk = tw.Walker(rom)
     t = wk.t
+    wk.pay_bearers()  # not a test of the key bearers: the guarded exit of the plaza is open
     wk.seen_map()
 
     def set_kills(n):

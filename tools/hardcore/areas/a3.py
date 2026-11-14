@@ -27,9 +27,9 @@ def build(w, roster, rng, entry_doors, open_exit=False):
     texts = dict(center=T.CENTER, mart=T.MART, house=T.HOUSE)
     bosses = [
         BossSpec("AxiomRegistry", "DR AXIOM", "U_MADDOC", "SPRITE_HC_DOC_MAD", "PAL_NPC_PINK", 51, 5, T.LAB_SEEN,
-                 T.LAB_BEATEN, T.LAB_AFTER, template="karen", item="FLASHLIGHT"),
+                 T.LAB_BEATEN, T.LAB_AFTER, template="karen"),
         BossSpec("AxiomArmory", "IRONWARDEN", "U_WARDBOT", "SPRITE_HC_BOT_WARDEN", "PAL_NPC_BROWN", 57, 5, T.ARMORY_SEEN,
-                 T.ARMORY_BEATEN, T.ARMORY_AFTER, template="will", item="SLEDGEHAMMER"),
+                 T.ARMORY_BEATEN, T.ARMORY_AFTER, template="will"),
         BossSpec("AxiomMayoralty", "THE MAYOR", "U_MAYOR", "SPRITE_HC_BOT_MAYOR", "PAL_NPC_BROWN", 64, 6, T.MAYORALTY_SEEN,
                  T.MAYORALTY_BEATEN, T.MAYORALTY_AFTER, template="bruno", landmark="LANDMARK_AXIOM_MAYORALTY",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)]

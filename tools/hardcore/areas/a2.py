@@ -35,9 +35,9 @@ def build(w, roster, rng, entry_doors, open_exit=False):
     texts = dict(center=T.CENTER, mart=T.MART, house=T.HOUSE)
     bosses = [
         BossSpec("GroveBoathouse", "REEVE OTTO", "G_REEVE", "SPRITE_HC_FISHER", "PAL_NPC_BLUE", 33, 5, T.BOATHOUSE_SEEN,
-                 T.BOATHOUSE_BEATEN, T.BOATHOUSE_AFTER, template="karen", item="JET_SKI"),
+                 T.BOATHOUSE_BEATEN, T.BOATHOUSE_AFTER, template="karen"),
         BossSpec("GroveSmokehouse", "ELDER FERN", "G_ELDRESS", "SPRITE_HC_ELDER_F", "PAL_NPC_GREEN", 39, 5, T.SMOKEHOUSE_SEEN,
-                 T.SMOKEHOUSE_BEATEN, T.SMOKEHOUSE_AFTER, template="will", item="BASEBALL_BAT"),
+                 T.SMOKEHOUSE_BEATEN, T.SMOKEHOUSE_AFTER, template="will"),
         BossSpec("GroveCouncil", "MATRIARCH", "G_MATRIARCH", "SPRITE_HC_MATRIARCH", "PAL_NPC_RED", 46, 6, T.COUNCIL_SEEN,
                  T.COUNCIL_BEATEN, T.COUNCIL_AFTER, template="bruno", landmark="LANDMARK_GROVE_HEARTH",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)]

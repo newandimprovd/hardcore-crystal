@@ -10,12 +10,12 @@ TithePlaza1Fountain0:
 	jumptext TithePlaza1Fountain0Text
 
 TithePlaza1Fountain0Text:
-	text "DONATELLO"
-	line "FOUNTAIN. Donate +"
-	para "hello. The coins"
-	line "go to the Parish."
-	para "The hello goes"
-	line "nowhere."
+	text "PENNYWISE"
+	line "FOUNTAIN. Penny"
+	para "plus wise. A coin"
+	line "buys one wish. The"
+	para "wish is taxed at"
+	line "source."
 	done
 
 TithePlaza1Giver:
@@ -147,89 +147,159 @@ TithePlaza1Townie8Text:
 	line "change."
 	done
 
-TithePlaza1SteinerScript:
+TithePlaza1SteinerBearerScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LORE_STEINER
-	iftrue .Again
-	writetext TithePlaza1SteinerScriptText
-	waitbutton
+	checkevent EVENT_NAMED_STEINER_DONE
+	iftrue .Beaten
 	setevent EVENT_LORE_STEINER
+	writetext TithePlaza1SteinerBearerScriptSeenText
+	yesorno
+	iffalse .No
 	closetext
-	end
-
-.Again:
-	writetext TithePlaza1SteinerScriptAgainText
+	winlosstext TithePlaza1SteinerBearerScriptBeatenText, 0
+	loadtrainer T_STEINER, 128
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_STEINER_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_STEINER_PAID
+	iftrue .After
+	writetext TithePlaza1SteinerBearerScriptGiveText
+	waitbutton
+	verbosegiveitem CHAINSAW
+	iffalse .NoRoom
+	setevent EVENT_NAMED_STEINER_PAID
+.After:
+	writetext TithePlaza1SteinerBearerScriptAfterText
 	waitbutton
 	closetext
 	end
 
-TithePlaza1SteinerScriptText:
+.No:
+	writetext TithePlaza1SteinerBearerScriptNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext TithePlaza1SteinerBearerScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+TithePlaza1SteinerBearerScriptSeenText:
 	text "Rudolf Steiner. I"
 	line "teach spiritual"
 	para "science and I am"
 	line "very bad at"
 	para "parties."
-	para "Listen. There are"
-	line "two great"
-	para "adversaries of the"
-	line "spirit. Lucifer"
-	para "warms you and lies"
-	line "to you. Ahriman"
-	para "cools you and"
-	line "tells you nothing"
-	para "is real but dead"
-	line "matter."
+	para "Two great"
+	line "adversaries tug at"
+	para "every soul."
+	line "Lucifer warms you"
+	para "and lies to you."
+	line "Ahriman cools you"
+	para "and tells you"
+	line "nothing is real"
+	para "but dead matter."
 	para "Ahriman is the one"
-	line "who wants you to"
-	para "believe the world"
-	line "is just rock,"
-	para "money and"
-	line "spreadsheets. He"
-	para "has been very"
-	line "successful. Look"
-	para "around you."
-	para "He is not here"
-	line "because he is"
-	para "strong. He is here"
-	line "because everyone"
-	para "agreed to stop"
-	line "looking. A pity,"
-	para "really."
+	line "who wants this"
+	para "world to be rock,"
+	line "money and"
+	para "spreadsheets. He"
+	line "has been very"
+	para "successful. Look"
+	line "around you."
+	para "I foretold that he"
+	line "would walk the"
+	para "earth in flesh, in"
+	line "the West, early in"
+	para "the third"
+	line "millennium. I was"
+	para "told I was being"
+	line "dramatic. Watch"
+	para "the news."
+	para "Between the two"
+	line "stands the Christ,"
+	para "the Balance. You,"
+	line "with your knife,"
+	para "are not him. But"
+	line "you are the only"
+	para "thing here that"
+	line "moves."
+	para "Before the road"
+	line "narrows I would"
+	para "see your will at"
+	line "work."
+	para "Fight STEINER?"
 	done
 
-TithePlaza1SteinerScriptAgainText:
-	text "Rudolf Steiner. I"
-	line "teach spiritual"
-	para "science and I am"
-	line "very bad at"
-	para "parties."
-	para "Listen. There are"
-	line "two great"
-	para "adversaries of the"
-	line "spirit. Lucifer"
-	para "warms you and lies"
-	line "to you. Ahriman"
-	para "cools you and"
-	line "tells you nothing"
-	para "is real but dead"
-	line "matter."
-	para "Ahriman is the one"
-	line "who wants you to"
-	para "believe the world"
-	line "is just rock,"
-	para "money and"
-	line "spreadsheets. He"
-	para "has been very"
-	line "successful. Look"
-	para "around you."
-	para "He is not here"
-	line "because he is"
-	para "strong. He is here"
-	line "because everyone"
-	para "agreed to stop"
-	line "looking. A pity,"
-	para "really."
+TithePlaza1SteinerBearerScriptBeatenText:
+	text "Good. The will is"
+	line "awake. Fool or"
+	para "saint, at this"
+	line "hour it is the"
+	para "same thing."
+	done
+
+TithePlaza1SteinerBearerScriptGiveText:
+	text "Take this"
+	line "CHAINSAW. A hedge"
+	para "of city trees"
+	line "blocks the road"
+	para "ahead. Matter is"
+	line "an obstacle, and"
+	para "an obstacle is a"
+	line "teacher."
+	done
+
+TithePlaza1SteinerBearerScriptAfterText:
+	text "Cut the hedge. Do"
+	line "not cut the"
+	para "thinking. The"
+	line "thinking is the"
+	para "only thing that"
+	line "grows back."
+	done
+
+TithePlaza1SteinerBearerScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+TithePlaza1SteinerBearerScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
+TithePlaza1SteinerBlockScript:
+	checkevent EVENT_NAMED_STEINER_PAID
+	iftrue .Pass
+	opentext
+	writetext TithePlaza1SteinerBlockScriptText
+	waitbutton
+	closetext
+	applymovement PLAYER, TithePlaza1SteinerBlockScriptStep
+.Pass:
+	end
+
+TithePlaza1SteinerBlockScriptStep:
+	step_down
+	step_end
+
+TithePlaza1SteinerBlockScriptText:
+	text "A voice behind"
+	line "you: Not yet. Come"
+	para "here first. I have"
+	line "something for the"
+	para "road."
 	done
 
 TithePlaza1Duel:
@@ -316,26 +386,32 @@ TithePlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  3, TITHE_POKECENTER1, 1
-	warp_event 16,  3, TITHE_MART1, 1
-	warp_event 20,  3, TITHE_HOUSE1, 1
-	warp_event 24,  3, TITHE_CHECKPOINT, 1
+	warp_event  2,  3, TITHE_HOUSE1, 1
+	warp_event  8,  3, TITHE_POKECENTER1, 1
+	warp_event 18,  3, TITHE_MART1, 1
+	warp_event  6, 25, TITHE_CHECKPOINT, 1
 
 	def_coord_events
+	coord_event 12,  1, -1, TithePlaza1SteinerBlockScript
+	coord_event 13,  1, -1, TithePlaza1SteinerBlockScript
+	coord_event 14,  1, -1, TithePlaza1SteinerBlockScript
+	coord_event 15,  1, -1, TithePlaza1SteinerBlockScript
+	coord_event 16,  1, -1, TithePlaza1SteinerBlockScript
+	coord_event 17,  1, -1, TithePlaza1SteinerBlockScript
 
 	def_bg_events
-	bg_event  5, 19, BGEVENT_READ, TithePlaza1Fountain0
+	bg_event  5,  9, BGEVENT_READ, TithePlaza1Fountain0
 
 	def_object_events
-	object_event 16, 10, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Giver, -1
-	object_event 23,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie1, -1
-	object_event 24, 17, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie2, -1
-	object_event  4,  9, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie3, -1
-	object_event  4, 22, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie4, -1
-	object_event  9, 11, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie5, -1
-	object_event 17, 20, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie6, -1
-	object_event 17,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie7, -1
-	object_event 15, 18, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie8, -1
-	object_event 26,  9, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1SteinerScript, -1
-	object_event 16,  9, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza1Duel, -1
+	object_event  7,  7, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Giver, -1
+	object_event  2, 14, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie1, -1
+	object_event 22,  9, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie2, -1
+	object_event  4, 19, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie3, -1
+	object_event 18,  6, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie4, -1
+	object_event 10, 12, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie5, -1
+	object_event 10, 21, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie6, -1
+	object_event 11, 16, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie7, -1
+	object_event  7, 10, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie8, -1
+	object_event 20, 14, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1SteinerBearerScript, -1
+	object_event  9,  8, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza1Duel, -1
 

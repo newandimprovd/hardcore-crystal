@@ -32,20 +32,92 @@ GroveHouse4Npc1Text:
 	done
 
 GroveHouse4SatoshiScript:
-	jumptextfaceplayer GroveHouse4SatoshiScriptText
+	faceplayer
+	opentext
+	checkevent EVENT_LORE_SATOSHI
+	iftrue .Again
+	writetext GroveHouse4SatoshiScriptText
+	waitbutton
+	setevent EVENT_LORE_SATOSHI
+	closetext
+	end
+
+.Again:
+	writetext GroveHouse4SatoshiScriptAgainText
+	waitbutton
+	closetext
+	end
 
 GroveHouse4SatoshiScriptText:
 	text "I like bugs. I"
-	line "like to put them"
-	para "in a box and look"
-	line "at them."
+	line "found one on a"
+	para "leaf. It was a"
+	line "Japanese jewel"
+	para "beetle. Green and"
+	line "red and gold, like"
+	para "a tiny screen."
+	para "It looked at me."
+	line "Not like an"
+	para "insect. Like"
+	line "somebody who had"
+	para "already read my"
+	line "mind and was"
+	para "disappointed."
+	para "I followed it for"
+	line "an hour. When it"
+	para "flew away, I wrote"
+	line "down every insect"
+	para "I could find, so"
+	line "that nobody would"
+	para "be left behind."
 	para "One day I want to"
 	line "put a lot of small"
 	para "creatures in a lot"
 	line "of small boxes and"
 	para "let millions of"
 	line "children carry"
-	para "them."
+	para "them. It was not"
+	line "my idea. I think"
+	para "it was the"
+	line "beetle's."
+	para "Do not tell my"
+	line "mother. She thinks"
+	para "I am going to be a"
+	line "dentist."
+	done
+
+GroveHouse4SatoshiScriptAgainText:
+	text "I like bugs. I"
+	line "found one on a"
+	para "leaf. It was a"
+	line "Japanese jewel"
+	para "beetle. Green and"
+	line "red and gold, like"
+	para "a tiny screen."
+	para "It looked at me."
+	line "Not like an"
+	para "insect. Like"
+	line "somebody who had"
+	para "already read my"
+	line "mind and was"
+	para "disappointed."
+	para "I followed it for"
+	line "an hour. When it"
+	para "flew away, I wrote"
+	line "down every insect"
+	para "I could find, so"
+	line "that nobody would"
+	para "be left behind."
+	para "One day I want to"
+	line "put a lot of small"
+	para "creatures in a lot"
+	line "of small boxes and"
+	para "let millions of"
+	line "children carry"
+	para "them. It was not"
+	line "my idea. I think"
+	para "it was the"
+	line "beetle's."
 	para "Do not tell my"
 	line "mother. She thinks"
 	para "I am going to be a"

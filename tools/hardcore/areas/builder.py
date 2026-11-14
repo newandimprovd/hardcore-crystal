@@ -271,9 +271,8 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
 def start_plaza(w, g, rng, kit, tag, landmark, music, texts, stock, entry_doors, gate_name, gate_text, pal="PALETTE_DAY"):
     """First plaza of an area (south side closed), reached through a gate house from the unlinked doors
     `entry_doors` of the previous area's last boss room. Returns the plaza."""
-    p, d = make_plaza(g, f"{tag}Plaza1", kit, rng, landmark=landmark, music=music, rift=True, houses=1, south="closed",
-                      pal=pal, index=1)
-    gatehouse(g, gate_name, entry_doors, d["rift"], landmark, music, [Text(gate_text)])
+    p, d = make_plaza(g, f"{tag}Plaza1", kit, rng, landmark=landmark, music=music, houses=1, south="gate", pal=pal, index=1)
+    gatehouse(g, gate_name, entry_doors, d["south"], landmark, music, [Text(gate_text)])
     town(w, g, tag, 1, p, d, kit, landmark, f"{tag.upper()}_1", stock, texts, f"{tag.upper()}_1")
     return p
 

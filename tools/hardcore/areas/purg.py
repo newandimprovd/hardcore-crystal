@@ -7,6 +7,8 @@ import random
 from art.classes import by_const, sprite as csprite
 
 from . import cast_text as C
+from . import named
+from . import named_text as N
 from . import purg_text as PT
 from .cave import (LADDER_DOWN, LADDER_UP, MOUTH, Grid, render)
 from .flags import flag_once
@@ -382,8 +384,12 @@ def hub(g, w, roster, rng):
         "\tspecial HealParty\n\tplaysound SFX_FULL_HEAL\n\twaitsfx\n\tend\n")
     m.scripts.append(Text(C.HUB_HEALER).emit("PurgThresholdHealerText"))
     m.obj(24, 18, "SPRITE_HC_SHADE", FACE["DOWN"], "PurgThresholdHealerScript", pal="PAL_NPC_BLUE")
-    lore_npc(w, m, 32, 22, "SPRITE_HC_STEINER", "PAL_NPC_BROWN", "LEFT", "PurgThresholdSteinerScript", C.STEINER_3,
-             flag="EVENT_LORE_STEINER")
+    named.add_hub(w, g, m, roster)  # Steiner and Abd al-Jabbar, two optional duels with a page of the CORKBOARD each
+    # the rival, once the Axiom mouth is open: he waits in the middle of the cavern and stops the player at the south corridor
+    from .cameos import add_sprite
+    add_sprite(g, "SPRITE_RIVAL")
+    named.rival_duel(w, m, "RIVAL4", "RIVAL2", 56, 5, random.Random("named-RIVAL4"), roster, N.RIVAL4, (25, 30),
+                     [(24, 34), (25, 34)], requires="EVENT_PURG_OPEN_A3")
     spots = [(14, 18, "SPRITE_HC_FORGOTTEN", "PAL_NPC_BLUE", "RIGHT"), (35, 18, "SPRITE_HC_DAMNED", "PAL_NPC_BROWN", "LEFT"),
              (17, 29, "SPRITE_HC_ELDER_M", "PAL_NPC_GREEN", "UP"), (31, 29, "SPRITE_HC_BEGGAR", "PAL_NPC_RED", "UP")]
     for i, (x, y, sp, pal, face) in enumerate(spots):

@@ -11,7 +11,7 @@ AxiomPlaza4Fountain0:
 
 AxiomPlaza4Fountain0Text:
 	text "FOUNTAINEER-3."
-	line "Fountain +"
+	line "Fountain plus"
 	para "engineer. Output:"
 	line "4.0 liters per"
 	para "sigh. Sighs are"
@@ -149,6 +149,169 @@ AxiomPlaza4Townie8Text:
 	line "arrive early."
 	done
 
+AxiomPlaza4Sabbah2BearerScript:
+	faceplayer
+	opentext
+	checkevent EVENT_NAMED_SABBAH2_DONE
+	iftrue .Beaten
+	setevent EVENT_LORE_SABBAH2
+	writetext AxiomPlaza4Sabbah2BearerScriptSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext AxiomPlaza4Sabbah2BearerScriptBeatenText, 0
+	loadtrainer U_SABBAH, 129
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_SABBAH2_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_SABBAH2_PAID
+	iftrue .After
+	writetext AxiomPlaza4Sabbah2BearerScriptGiveText
+	waitbutton
+	verbosegiveitem SLEDGEHAMMER
+	iffalse .NoRoom
+	setevent EVENT_NAMED_SABBAH2_PAID
+.After:
+	writetext AxiomPlaza4Sabbah2BearerScriptAfterText
+	waitbutton
+	closetext
+	end
+
+.No:
+	writetext AxiomPlaza4Sabbah2BearerScriptNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext AxiomPlaza4Sabbah2BearerScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+AxiomPlaza4Sabbah2BearerScriptSeenText:
+	text "You carry my lamp"
+	line "well."
+	para "Now the harder"
+	line "part. A day will"
+	para "come when the husk"
+	line "is broken. We call"
+	para "it the Qiyama, the"
+	line "Resurrection. It"
+	para "does not wait for"
+	line "graves to open. It"
+	para "is the day the"
+	line "veil is lifted and"
+	para "the batin is seen"
+	line "with open eyes."
+	para "On that day the"
+	line "law is not burned."
+	para "It is fulfilled by"
+	line "sight. Paradise is"
+	para "the knowledge"
+	line "itself, and hell"
+	para "is ignorance of"
+	line "it. They are the"
+	para "same room. The"
+	line "only difference is"
+	para "the lamp."
+	para "The Dajjal, the"
+	line "one eyed deceiver,"
+	para "sees only the"
+	line "zahir, with one"
+	para "eye. He is"
+	line "dangerous because"
+	para "the world agrees"
+	line "with him. He lives"
+	para "one door over and"
+	line "is bored."
+	para "He plans to join"
+	line "his world to ours."
+	para "That is why the"
+	line "sky has a seam and"
+	para "why time smells of"
+	line "old pennies. The"
+	para "robots will serve"
+	line "him first. They"
+	para "are made of husk."
+	para "A sledgehammer is"
+	line "a very literal"
+	para "key. I give it to"
+	line "you because we are"
+	para "both guilty of the"
+	line "zahir sometimes."
+	para "Fight me. Break"
+	line "something."
+	para "Fight SABBAH?"
+	done
+
+AxiomPlaza4Sabbah2BearerScriptBeatenText:
+	text "Well struck. A"
+	line "husk cracked. I"
+	para "heard it from"
+	line "here."
+	done
+
+AxiomPlaza4Sabbah2BearerScriptGiveText:
+	text "Take the"
+	line "SLEDGEHAMMER. It"
+	para "breaks slabs. It"
+	line "has not yet broken"
+	para "a doctrine. We are"
+	line "working on that."
+	done
+
+AxiomPlaza4Sabbah2BearerScriptAfterText:
+	text "Break the husk,"
+	line "not the people."
+	para "The people are the"
+	line "victims of the"
+	para "husk, and a few of"
+	line "them are its"
+	para "cooks."
+	done
+
+AxiomPlaza4Sabbah2BearerScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+AxiomPlaza4Sabbah2BearerScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
+AxiomPlaza4Sabbah2BlockScript:
+	checkevent EVENT_NAMED_SABBAH2_PAID
+	iftrue .Pass
+	opentext
+	writetext AxiomPlaza4Sabbah2BlockScriptText
+	waitbutton
+	closetext
+	applymovement PLAYER, AxiomPlaza4Sabbah2BlockScriptStep
+.Pass:
+	end
+
+AxiomPlaza4Sabbah2BlockScriptStep:
+	step_down
+	step_end
+
+AxiomPlaza4Sabbah2BlockScriptText:
+	text "A voice behind"
+	line "you: The next road"
+	para "needs a hammer. A"
+	line "man is holding"
+	para "one. On this"
+	line "square."
+	done
+
 AxiomPlaza4Duel:
 	faceplayer
 	opentext
@@ -236,6 +399,12 @@ AxiomPlaza4_MapEvents:
 	warp_event 14,  3, AXIOM_BOUTIQUE4, 1
 
 	def_coord_events
+	coord_event 18,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 19,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 20,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 21,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 22,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 23,  1, -1, AxiomPlaza4Sabbah2BlockScript
 
 	def_bg_events
 	bg_event  5, 19, BGEVENT_READ, AxiomPlaza4Fountain0
@@ -250,5 +419,6 @@ AxiomPlaza4_MapEvents:
 	object_event 11, 16, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie6, -1
 	object_event  8, 10, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie7, -1
 	object_event 11, 21, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie8, -1
-	object_event 20, 22, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Duel, -1
+	object_event 14,  6, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Sabbah2BearerScript, -1
+	object_event  6, 18, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Duel, -1
 

@@ -11,10 +11,11 @@ DisPlaza4Fountain0:
 
 DisPlaza4Fountain0Text:
 	text "BRIMSTONY BROOK."
-	line "Brimstone + stony"
-	para "brook. It does not"
-	line "babble. It screams"
-	para "politely."
+	line "Brimstone plus"
+	para "stony brook. It"
+	line "does not babble."
+	para "It screams"
+	line "politely."
 	done
 
 DisPlaza4Giver:

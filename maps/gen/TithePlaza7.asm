@@ -11,11 +11,11 @@ TithePlaza7Fountain0:
 
 TithePlaza7Fountain0Text:
 	text "DONATELLO"
-	line "FOUNTAIN. Donate +"
-	para "hello. The coins"
-	line "go to the Parish."
-	para "The hello goes"
-	line "nowhere."
+	line "FOUNTAIN. Donate"
+	para "plus hello. The"
+	line "coins go to the"
+	para "Parish. The hello"
+	line "goes nowhere."
 	done
 
 TithePlaza7Giver:

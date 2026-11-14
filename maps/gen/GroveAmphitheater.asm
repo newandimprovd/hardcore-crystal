@@ -76,30 +76,57 @@ GroveAmphitheaterSceneText2:
 	line "Commune glowed."
 	done
 
-GroveAmphitheaterCrowleyScript:
+GroveAmphitheaterAmphBearerScript:
 	faceplayer
 	opentext
 	checkevent EVENT_AMPH_DONE
 	iffalse .Wait
-	checkevent EVENT_LORE_AMPH
-	iftrue .Again
-	writetext GroveAmphitheaterCrowleyText
-	waitbutton
+	checkevent EVENT_NAMED_AMPH_DONE
+	iftrue .Beaten
 	setevent EVENT_LORE_AMPH
+	writetext GroveAmphitheaterAmphBearerScriptSeenText
+	yesorno
+	iffalse .No
 	closetext
-	end
-.Again:
-	writetext GroveAmphitheaterCrowleyAgainText
+	winlosstext GroveAmphitheaterAmphBearerScriptBeatenText, 0
+	loadtrainer T_CROWLEY, 128
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_AMPH_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_AMPH_PAID
+	iftrue .After
+	writetext GroveAmphitheaterAmphBearerScriptGiveText
 	waitbutton
-	closetext
-	end
-.Wait:
-	writetext GroveAmphitheaterCrowleyWaitText
+	verbosegiveitem JET_SKI
+	iffalse .NoRoom
+	setevent EVENT_NAMED_AMPH_PAID
+.After:
+	writetext GroveAmphitheaterAmphBearerScriptAfterText
 	waitbutton
 	closetext
 	end
 
-GroveAmphitheaterCrowleyText:
+.No:
+	writetext GroveAmphitheaterAmphBearerScriptNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext GroveAmphitheaterAmphBearerScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+.Wait:
+	writetext GroveAmphitheaterAmphBearerScriptWaitText
+	waitbutton
+	closetext
+	end
+
+GroveAmphitheaterAmphBearerScriptSeenText:
 	text "Ah. You stayed"
 	line "through the"
 	para "ritual. Most"
@@ -111,66 +138,103 @@ GroveAmphitheaterCrowleyText:
 	line "The Kabbalists"
 	para "spoke to him, and"
 	line "he spoke back."
-	para "Through their"
-	line "ledgers, Finnegan"
-	para "found a door into"
-	line "a game made by a"
-	para "boy who loved"
-	line "insects. Through"
-	para "that game, into a"
-	line "million small soft"
-	para "heads."
+	para "In nineteen"
+	line "hundred and nine,"
+	para "in the Algerian"
+	line "desert, I called"
+	para "Choronzon and he"
+	line "sat in a triangle"
+	para "on the sand. To"
+	line "cross the Abyss"
+	para "you give up"
+	line "everything you"
+	para "call yourself. I"
+	line "failed twice. I am"
+	para "not sure he did"
+	line "not win."
+	para "Through the"
+	line "ledgers of those"
+	para "Kabbalists,"
+	line "Finnegan found a"
+	para "door into a game"
+	line "made by a boy who"
+	para "loved beetles."
+	line "Through that game,"
+	para "into millions of"
+	line "small soft heads."
 	para "When enough heads"
 	line "had been softened,"
-	para "the worlds started"
+	para "the worlds began"
 	line "to bend. This"
-	para "place, the Grove,"
-	line "was meant to be my"
-	para "payment. A hunter"
-	line "gatherer paradise,"
-	para "for services"
-	line "rendered."
-	para "And then the"
-	line "worlds merged, and"
-	para "the paradise has a"
-	line "robot city for a"
-	para "neighbor. Typical"
-	line "Choronzon. Nothing"
-	para "he gives you comes"
-	line "without a clause."
-	para "I am one of the"
-	line "few who remember"
-	para "it was all"
-	line "arranged. When the"
-	para "worlds are one, I"
-	line "will walk into the"
-	para "unified world and"
-	line "I will continue my"
-	para "work. There is a"
-	line "great deal of"
-	para "work."
-	para "Tell Joyce I said"
-	line "it was all very"
-	para "Wake. He will"
-	line "pretend not to"
-	para "hear."
+	para "Grove was meant to"
+	line "be my payment, a"
+	para "hunter gatherer"
+	line "paradise. And then"
+	para "the worlds merged,"
+	line "and the paradise"
+	para "has a robot city"
+	line "for a neighbour."
+	para "Nothing Choronzon"
+	line "gives comes"
+	para "without a clause."
+	para "When the worlds"
+	line "are one, I will"
+	para "walk into the"
+	line "unified world and"
+	para "I will continue my"
+	line "work. There is a"
+	para "great deal of"
+	line "work."
+	para "You will need to"
+	line "cross a river. I"
+	para "keep a toy for"
+	line "that. Fight me and"
+	para "you may borrow it."
+	para "Fight CROWLEY?"
 	done
 
-GroveAmphitheaterCrowleyAgainText:
-	text "The ritual is over"
-	line "for tonight. The"
-	para "jars are in the"
-	line "cellar."
-	para "Remember what I"
-	line "said. The Beast is"
-	para "not evil. He is an"
-	line "administrator. Be"
-	para "polite and he will"
-	line "leave you a little"
-	para "room."
+GroveAmphitheaterAmphBearerScriptBeatenText:
+	text "Magnificent. I"
+	line "felt the Abyss for"
+	para "a moment. It had"
+	line "good manners."
 	done
 
-GroveAmphitheaterCrowleyWaitText:
+GroveAmphitheaterAmphBearerScriptGiveText:
+	text "Take the JET SKI."
+	line "Nobody asks where"
+	para "it came from. The"
+	line "river will not"
+	para "either."
+	done
+
+GroveAmphitheaterAmphBearerScriptAfterText:
+	text "The Beast is not"
+	line "evil. He is an"
+	para "administrator. Be"
+	line "polite and he will"
+	para "leave you a little"
+	line "room. Tell Joyce I"
+	para "said it was all"
+	line "very Wake."
+	done
+
+GroveAmphitheaterAmphBearerScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+GroveAmphitheaterAmphBearerScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
+GroveAmphitheaterAmphBearerScriptWaitText:
 	text "Sit. Do not take"
 	line "notes. The circle"
 	para "is not yet full."
@@ -255,7 +319,7 @@ GroveAmphitheater_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  8,  8, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveAmphitheaterCrowleyScript, -1
+	object_event  8,  8, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveAmphitheaterAmphBearerScript, -1
 	object_event  3,  6, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveAmphitheaterWoman0Script, -1
 	object_event  3,  9, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GroveAmphitheaterWoman1Script, -1
 	object_event  3, 12, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveAmphitheaterWoman2Script, -1

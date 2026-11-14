@@ -118,12 +118,12 @@ GATE = ["Welcome to the Lotus Coast! Please sign this form. It forgets itself af
 # bosses
 CLINIC_SEEN = ("I am Doctor Lethe, Director of the Grief Clinic. I have removed ten thousand sorrows. "
                "I'm about to remove yours. Along with your pulse.")
-CLINIC_BEATEN = "Ha. Ha. So that's how it feels. Take the GRAPPLE HOOK. The police left it here. They forgot."
-CLINIC_AFTER = "The GRAPPLE HOOK climbs waterfalls and escapes police. We have lots of both."
+CLINIC_BEATEN = "Ha. Ha. So that's how it feels. The police left in a hurry. They forgot everything."
+CLINIC_AFTER = "There are waterfalls ahead and police behind. We have lots of both."
 CABANA_SEEN = ("Manager Kai of the Grand Cabana. I make every guest happy or I make them gone. "
                "You're neither. Let me rectify that.")
-CABANA_BEATEN = "Please. Please don't bury me. Take the SHOVEL. It's by the wall. It buries problems. It buried mine."
-CABANA_AFTER = "The SHOVEL digs out of caves and buries problems. Everything on this coast is buried. That's the secret."
+CABANA_BEATEN = "Please. Please don't bury me. The sand is full already. It buried my last manager."
+CABANA_AFTER = "Everything on this coast is buried. That's the secret. Dig gently."
 # the rival crimelord, class RIVAL2: the game prints the rival's own name
 MANSION_SEEN = ("So you made it. You killed my henchmen, my chefs and my accountant. The first two I can replace. "
                 "The accountant was irreplaceable. You're going to pay for that. Slowly. Twice.")

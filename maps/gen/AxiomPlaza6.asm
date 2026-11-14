@@ -137,61 +137,154 @@ AxiomPlaza6Townie8Text:
 	para "clear."
 	done
 
-AxiomPlaza6SabbahScript:
+AxiomPlaza6SuhrawardiDuelScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LORE_SABBAH
-	iftrue .Again
-	writetext AxiomPlaza6SabbahScriptText
+	checkevent EVENT_NAMED_SUHRAWARDI_DONE
+	iftrue .Beaten
+	setevent EVENT_LORE_SUHRAWARDI
+	writetext AxiomPlaza6SuhrawardiDuelScriptSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext AxiomPlaza6SuhrawardiDuelScriptBeatenText, 0
+	loadtrainer U_SUHRAWARDI, 128
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_SUHRAWARDI_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_SUHRAWARDI_PAID
+	iftrue .After
+	writetext AxiomPlaza6SuhrawardiDuelScriptGiveText
 	waitbutton
-	setevent EVENT_LORE_SABBAH
+	verbosegiveitem PP_UP
+	iffalse .NoRoom
+	setevent EVENT_NAMED_SUHRAWARDI_PAID
+.After:
+	writetext AxiomPlaza6SuhrawardiDuelScriptAfterText
+	waitbutton
 	closetext
 	end
 
-.Again:
-	writetext AxiomPlaza6SabbahScriptAgainText
+.No:
+	writetext AxiomPlaza6SuhrawardiDuelScriptNoText
 	waitbutton
 	closetext
 	end
 
-AxiomPlaza6SabbahScriptText:
-	text "You are still"
-	line "alive. This makes"
-	para "you either lucky"
-	line "or useful. I have"
-	para "not decided."
-	para "If you meet him,"
-	line "do not fight him."
-	para "Fight what he"
-	line "stands on. He is a"
-	para "tall man on a"
-	line "short ladder."
-	para "Remember: nothing"
-	line "is true,"
-	para "everything is"
-	line "permitted, and the"
-	para "second part is the"
-	line "dangerous one."
+.NoRoom:
+	writetext AxiomPlaza6SuhrawardiDuelScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+AxiomPlaza6SuhrawardiDuelScriptSeenText:
+	text "Shihab al Din"
+	line "Yahya al"
+	para "Suhrawardi. The"
+	line "Master of"
+	para "Illumination. They"
+	line "shut me in a cell"
+	para "in Aleppo in"
+	line "eleven ninety one"
+	para "and let the dark"
+	line "do the rest, so I"
+	para "speak of closed"
+	line "rooms with some"
+	para "authority."
+	para "Being is a"
+	line "thought. Light is"
+	para "real. Darkness is"
+	line "only light's"
+	para "absence, and every"
+	line "thing is a degree"
+	para "of light, from the"
+	line "Light of Lights to"
+	para "the faintest"
+	line "candle in a body"
+	para "like yours."
+	para "The old Persians"
+	line "were right. There"
+	para "are two"
+	line "principles. But"
+	para "Ahriman is not an"
+	line "equal. He is a"
+	para "shadow cast by the"
+	line "lamp. A shadow"
+	para "with a budget."
+	para "Between the world"
+	line "of lights and the"
+	para "world of bodies"
+	line "lies a third, the"
+	para "world of images,"
+	line "the alam al"
+	para "mithal. Forms hang"
+	line "there without"
+	para "flesh. The dead go"
+	line "there. So do"
+	para "dreams. And, I"
+	line "see, screens."
+	para "That is why your"
+	line "little creatures"
+	para "have faces. They"
+	line "live in the"
+	para "imaginal world and"
+	line "have been pulled"
+	para "out into matter."
+	para "The soul is in the"
+	line "Occident, the far"
+	para "West of existence,"
+	line "in exile among"
+	para "bodies. It longs"
+	line "for its East. The"
+	para "cure is knowledge"
+	line "by presence."
+	para "Or a good fight. I"
+	line "am told it is"
+	para "faster."
+	para "Fight SUHRAWARDI?"
 	done
 
-AxiomPlaza6SabbahScriptAgainText:
-	text "You are still"
-	line "alive. This makes"
-	para "you either lucky"
-	line "or useful. I have"
-	para "not decided."
-	para "If you meet him,"
-	line "do not fight him."
-	para "Fight what he"
-	line "stands on. He is a"
-	para "tall man on a"
-	line "short ladder."
-	para "Remember: nothing"
-	line "is true,"
-	para "everything is"
-	line "permitted, and the"
-	para "second part is the"
-	line "dangerous one."
+AxiomPlaza6SuhrawardiDuelScriptBeatenText:
+	text "A candle goes out"
+	line "and the room is"
+	para "brighter. I will"
+	line "think about that."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptGiveText:
+	text "Take this. A"
+	line "little light,"
+	para "sealed in a candy."
+	line "It will not guide"
+	para "you home. It will"
+	line "make the walk hurt"
+	para "less."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptAfterText:
+	text "The East is not a"
+	line "place. It is the"
+	para "direction of the"
+	line "lamp. Go that way,"
+	para "in every sense you"
+	line "have."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
 	done
 
 AxiomPlaza6Duel:
@@ -295,6 +388,6 @@ AxiomPlaza6_MapEvents:
 	object_event 29, 19, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie6, -1
 	object_event 28, 25, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie7, -1
 	object_event 21, 19, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie8, -1
-	object_event  7, 13, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SabbahScript, -1
+	object_event  7, 13, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SuhrawardiDuelScript, -1
 	object_event 13, 10, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Duel, -1
 

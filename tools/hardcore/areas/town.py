@@ -29,7 +29,7 @@ def plaza2(g, name, kit, rng, **kw):
         m, doors = build_plaza(g, name, kit, random.Random(f"town:{name}:{attempt}"), **kw)
         e, xo, jr = m.street
         r = reach(m, kit, (2 * e + 1, 2 * (m.h - 2) + 1))
-        ok = all((wp.x, wp.y + 1) in r for wp in m.warps) and (2 * xo + 1, 0) in r
+        ok = all(((wp.x, wp.y - 1) if wp.y == 2 * m.h - 1 else (wp.x, wp.y + 1)) in r for wp in m.warps) and (2 * xo + 1, 0) in r  # a mat is read from above
         ok = ok and all((2 * fx + dx, 2 * fy + 3) in r for fx, fy in getattr(m, "fountains", []) for dx in (0, 1))  # the plaque can be read
         if kit.extra.get("grass"):  # every town has tall grass (wild.py gives each plaza a table), and it can be walked to
             ok = ok and bool(getattr(m, "grass_cell", None)) and m.grass_cell[:2] in r
@@ -138,6 +138,11 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
     if south == "open":
         for x in range(e, e + cw):
             m.set(x, H - 1, R.choice(kit.floor))
+    elif south == "gate":  # the way in from the gate hall: a doormat at the foot of the bottom stem, walls either side (builder.start_plaza)
+        mx = e + cw // 2
+        for x in range(e, e + cw):
+            m.set(x, H - 1, S["mat"] if x == mx else R.choice(kit.wall))
+        doors["south"] = m.warp(2 * mx, 2 * (H - 1) + 1)
     # districts: four pockets around the street
     zones = [("TL", 1, xo - 2, 3, jr - 1), ("TR", xo + cw + 1, W - 2, 3, jr - 1),
              ("BL", 1, e - 2, jr + 3, H - 2), ("BR", e + cw + 1, W - 2, jr + 3, H - 2)]

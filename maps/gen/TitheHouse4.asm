@@ -33,11 +33,11 @@ TitheHouse4Npc1Text:
 TitheHouse4MafiaScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LORE_BEES
+	checkevent EVENT_LORE_BEETLE
 	iftrue .Again
 	writetext TitheHouse4MafiaScriptText
 	waitbutton
-	setevent EVENT_LORE_BEES
+	setevent EVENT_LORE_BEETLE
 	closetext
 	end
 
@@ -59,25 +59,36 @@ TitheHouse4MafiaScriptText:
 	line "rare birds,"
 	para "certain rarer"
 	line "rumors. And"
-	para "bumblebees, for my"
-	line "garden."
+	para "beetles. The"
+	line "Japanese jewel"
+	para "beetle, for the"
+	line "ornament trade."
+	para "Their wings were"
+	line "pressed into a"
+	para "shrine in Nara"
+	line "twelve hundred"
+	para "years ago. They"
+	line "never lose their"
+	para "shine."
 	para "A Yakuza boss owed"
 	line "me a favor. He"
-	para "sent me a crate."
-	line "The crate had a"
-	para "hole. The bees got"
-	line "out. One landed on"
-	para "a boy in Tokyo."
-	line "The boy was called"
-	para "Satoshi."
+	para "sent me a crate of"
+	line "them. The crate"
+	para "had a hole. One"
+	line "beetle got out. It"
+	para "landed on a boy in"
+	line "Tokyo. The boy was"
+	para "called Satoshi."
 	para "I do not know what"
 	line "happened after. I"
 	para "hear he made a"
 	line "game about"
 	para "catching things."
 	line "How strange. I"
-	para "would never catch"
-	line "a bee."
+	para "never caught a"
+	line "beetle in my life."
+	para "It always caught"
+	line "me."
 	done
 
 TitheHouse4MafiaScriptAgainText:
@@ -92,25 +103,36 @@ TitheHouse4MafiaScriptAgainText:
 	line "rare birds,"
 	para "certain rarer"
 	line "rumors. And"
-	para "bumblebees, for my"
-	line "garden."
+	para "beetles. The"
+	line "Japanese jewel"
+	para "beetle, for the"
+	line "ornament trade."
+	para "Their wings were"
+	line "pressed into a"
+	para "shrine in Nara"
+	line "twelve hundred"
+	para "years ago. They"
+	line "never lose their"
+	para "shine."
 	para "A Yakuza boss owed"
 	line "me a favor. He"
-	para "sent me a crate."
-	line "The crate had a"
-	para "hole. The bees got"
-	line "out. One landed on"
-	para "a boy in Tokyo."
-	line "The boy was called"
-	para "Satoshi."
+	para "sent me a crate of"
+	line "them. The crate"
+	para "had a hole. One"
+	line "beetle got out. It"
+	para "landed on a boy in"
+	line "Tokyo. The boy was"
+	para "called Satoshi."
 	para "I do not know what"
 	line "happened after. I"
 	para "hear he made a"
 	line "game about"
 	para "catching things."
 	line "How strange. I"
-	para "would never catch"
-	line "a bee."
+	para "never caught a"
+	line "beetle in my life."
+	para "It always caught"
+	line "me."
 	done
 
 TitheHouse4_MapEvents:

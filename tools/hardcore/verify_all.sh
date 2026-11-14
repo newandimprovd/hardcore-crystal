@@ -31,6 +31,12 @@ step b_stA $TB stA TEST_MAP=$SC TEST_X=$SX TEST_Y=$SY TEST_MON=CTHULUDON TEST_LE
 step milestone python3 tools/hardcore/test_story.py milestone /home/claude/scratch/stA.gbc
 step b_stB $TB stB TEST_MAP=NEW_BARK_TOWN TEST_X=10 TEST_Y=10 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2
 step newbark python3 tools/hardcore/test_story.py newbark /home/claude/scratch/stB.gbc
+step b_gt1 $TB gt1 TEST_MAP=TITHE_JUNCTION TEST_X=19 TEST_Y=20 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
+step gates_road python3 tools/hardcore/test_gates.py /home/claude/scratch/gt1.gbc road
+step b_gt2 $TB gt2 TEST_MAP=TITHE_CATHEDRAL TEST_X=4 TEST_Y=6 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
+step gates_area python3 tools/hardcore/test_gates.py /home/claude/scratch/gt2.gbc area
+step named_block python3 tools/hardcore/test_named.py /home/claude/scratch/stA.gbc block
+step named_rival python3 tools/hardcore/test_named.py /home/claude/scratch/gt1.gbc rival
 step b_pg $TB pg TEST_MAP=TITHE_JUNCTION TEST_X=19 TEST_Y=20 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_ITEMS=1
 step purg python3 tools/hardcore/test_purg.py /home/claude/scratch/pg.gbc
 step b_stF $TB stF TEST_MAP=JUDECCA_CENTRE TEST_X=4 TEST_Y=17 TEST_MON=DEATHROLL TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2

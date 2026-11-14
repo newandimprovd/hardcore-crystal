@@ -136,6 +136,150 @@ DisPlaza6Townie8Text:
 	para "forever."
 	done
 
+DisPlaza6SadraDuelScript:
+	faceplayer
+	opentext
+	checkevent EVENT_NAMED_SADRA_DONE
+	iftrue .Beaten
+	setevent EVENT_LORE_SADRA
+	writetext DisPlaza6SadraDuelScriptSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext DisPlaza6SadraDuelScriptBeatenText, 0
+	loadtrainer D_SADRA, 128
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_SADRA_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_SADRA_PAID
+	iftrue .After
+	writetext DisPlaza6SadraDuelScriptGiveText
+	waitbutton
+	verbosegiveitem PP_UP
+	iffalse .NoRoom
+	setevent EVENT_NAMED_SADRA_PAID
+.After:
+	writetext DisPlaza6SadraDuelScriptAfterText
+	waitbutton
+	closetext
+	end
+
+.No:
+	writetext DisPlaza6SadraDuelScriptNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext DisPlaza6SadraDuelScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+DisPlaza6SadraDuelScriptSeenText:
+	text "Sadr al Din"
+	line "Shirazi. They call"
+	para "me Mulla Sadra. I"
+	line "wrote the Four"
+	para "Journeys of the"
+	line "soul, and I spent"
+	para "seven years in a"
+	line "village near Qom,"
+	para "waiting for the"
+	line "world to catch up."
+	para "Nothing stands"
+	line "still. Not stones,"
+	para "not stars. Every"
+	line "thing is moving in"
+	para "its very being,"
+	line "from the weaker to"
+	para "the stronger. I"
+	line "call it"
+	para "substantial"
+	line "motion."
+	para "The soul is born"
+	line "from the body, and"
+	para "the body is only"
+	line "its first step. It"
+	para "begins as matter"
+	line "and it ends as"
+	para "spirit, and what"
+	line "it ends as is what"
+	para "it has done."
+	para "On the last day"
+	line "the deeds of the"
+	para "soul stand up in"
+	line "the body they have"
+	para "made. A greedy man"
+	line "rises as a"
+	para "creature of greed."
+	line "A gentle man rises"
+	para "as light. This is"
+	line "not a punishment."
+	para "It is a mirror"
+	line "with a body."
+	para "I am told this"
+	line "place is eternal."
+	para "I argued that the"
+	line "Fire is the soul's"
+	para "own heat, and that"
+	line "every heat, given"
+	para "time, cools. I am"
+	line "no fool, I know"
+	para "how that sounds in"
+	line "a pit."
+	para "You too are in"
+	line "motion. You do not"
+	para "feel it, because"
+	line "you are the one"
+	para "moving."
+	para "Show me how fast."
+	para "Fight SADRA?"
+	done
+
+DisPlaza6SadraDuelScriptBeatenText:
+	text "You moved, and I"
+	line "did not. That is"
+	para "how I know which"
+	line "of us is alive."
+	done
+
+DisPlaza6SadraDuelScriptGiveText:
+	text "Take this. It is a"
+	line "little motion,"
+	para "folded up. Unfold"
+	line "it when you need"
+	para "to arrive"
+	line "somewhere."
+	done
+
+DisPlaza6SadraDuelScriptAfterText:
+	text "Everything moves."
+	line "Even the damned."
+	para "Even the judge. Do"
+	line "not let them tell"
+	para "you otherwise, and"
+	line "do not tell them"
+	para "either."
+	done
+
+DisPlaza6SadraDuelScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+DisPlaza6SadraDuelScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
 DisPlaza6Duel:
 	faceplayer
 	opentext
@@ -235,5 +379,6 @@ DisPlaza6_MapEvents:
 	object_event 12, 16, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie6, -1
 	object_event  2,  6, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie7, -1
 	object_event 12, 27, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie8, -1
-	object_event 13, 12, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Duel, -1
+	object_event 19, 12, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6SadraDuelScript, -1
+	object_event 13, 10, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Duel, -1
 

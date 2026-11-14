@@ -1,7 +1,11 @@
 """The opening junction outside Cherrygrove: a T intersection with Mr. POKeMON's house (the POKeDEX and the vanishing), James Joyce
 (the lore, the CORKBOARD) and the door into PURGATORIO.  The road out of Cherrygrove comes in from the south, turns west and then north
 to Tithe Road, and the east arm ends under the hill at the cave door."""
+import random
+
 from . import cast_text as C
+from . import named
+from . import named_text as N
 from . import kits
 from .flags import flag_once
 from .layout import FACE, blk
@@ -17,7 +21,7 @@ def build(w, roster, rng):
     """Returns (group, cave warp of the junction (to be linked with the Purgatorio hub), junction map, offset for Cherrygrove)."""
     w.landmarks.append(("TITHE_JUNCTION", 80, 90, "THE<BSP>CROSSROADS"))
     LM = "LANDMARK_TITHE_JUNCTION"
-    g = w.group("OPEN", ["SPRITE_HC_JOYCE", "SPRITE_POKE_BALL", "SPRITE_HC_MR_POKEMON"])
+    g = w.group("OPEN", ["SPRITE_HC_JOYCE", "SPRITE_POKE_BALL", "SPRITE_HC_MR_POKEMON", "SPRITE_RIVAL"])
     johto = kits.johto()
     W, H = 19, 12
     m = MapDef(g.key, "TitheJunction", W, H, johto.tileset, "ROUTE", LM, "MUSIC_ROUTE_30", border=johto.extra["border"])
@@ -35,9 +39,12 @@ def build(w, roster, rng):
             m.set(x, y, road)
     # Mr. Pokemon's house on the north side of the band, the cave mouth at the east end
     hx = 7
-    m.set(hx, 2, johto.extra["house"][0])
-    m.set(hx + 1, 2, johto.extra["house"][1])
-    house_door = m.warp(*johto.door_cell(hx, 2, johto.extra["house"][0]))
+    roof, front = johto.extra["house_roof"], johto.extra["house_front"]  # a whole house: roof row over the front row, not a single strip
+    m.set(hx, 1, roof[0])
+    m.set(hx + 1, 1, roof[1])
+    m.set(hx, 2, front[0])
+    m.set(hx + 1, 2, front[1])
+    house_door = m.warp(*johto.door_cell(hx, 2, front[0]))
     m.set(15, 2, 0x73)  # the cave mouth in the rock
     cave = m.warp(2 * 15, 2 * 2 + 1, "mouth")
     # a signpost near the cave
@@ -54,6 +61,10 @@ def build(w, roster, rng):
     m.scripts.append(Text(C.JOYCE_1).emit("TitheJunctionJoyceText"))
     m.scripts.append(Text(C.JOYCE_AGAIN).emit("TitheJunctionJoyceAgainText"))
     m.obj(11, 8, "SPRITE_HC_JOYCE", FACE["RIGHT"], "TitheJunctionJoyceScript", pal="PAL_NPC_BROWN")
+    # the first fight with the rival: he stands in the stem and the whole width of the road is a trigger, so nobody gets to Joyce, the
+    # house or the cave without it (level 5, two creatures: the thief has the starter that was meant to be the player's)
+    named.rival_duel(w, m, "RIVAL0", "RIVAL1", 5, 2, random.Random("named-RIVAL0"), roster, N.RIVAL0, (19, 15),
+                     [(x, 18) for x in range(2 * STEM_A, 2 * STEM_A + 6)])
     g.add(m)
     m.a, m.cw = 2, 3  # the west arm: the corridor tithe road continues from
     m.stem = STEM_A

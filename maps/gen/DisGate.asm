@@ -23,8 +23,8 @@ DisGate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  0, DIS_PLAZA1, 3
-	warp_event  5,  0, DIS_PLAZA1, 3
+	warp_event  4,  0, DIS_PLAZA1, 4
+	warp_event  5,  0, DIS_PLAZA1, 4
 	warp_event  4,  7, NEW_BARK_TOWN, 5
 	warp_event  5,  7, NEW_BARK_TOWN, 5
 

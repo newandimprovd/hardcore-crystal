@@ -1,12 +1,53 @@
 # Special encounters
 
 Budget (tools/hardcore/areas/counts.py, checked by battle_budget.py): 500 mandatory trainers, everything else is special and counted apart, all battles together at most 650.
-Today: 500 mandatory + 15 bosses + 31 scripted duels (30 duelists, Bruno) + 58 in Purgatorio = 604, **46 slots free**.
+Today: 500 mandatory + 15 bosses + 49 scripted duels (30 duelists, Bruno, 13 named duels, 5 rival fights) + 58 in Purgatorio = **622, 28 slots free**.
 
-## Built (first batch, 30 duelists)
-Six named duelists per area, one in each of the plazas 1 to 6 (areas/specials.py). They are scripted duels, so they are not part of the 500: you talk to them, answer yes or no,
-fight once with a team of their own (the area's theme, level following the plaza's place in the area), and the first win pays a vitamin or PP Up.
-They count as kills like bosses do (the counter and the tidal wave at kill 400 do not care who died). They are optional, so the shortest path (rival's fall at kill 412) is unchanged.
+All special duels are **scripted** (`loadtrainer`, `startbattle`, `reloadmapafterbattle`), never trainer objects. The trainer-death engine only reacts to trainer objects, so
+**nobody dies in these duels and none of them counts as a kill**: the 500 kills, the tidal wave at kill 400 and the crater at 412 are unchanged. Every one of them
+asks first (yes or no), fights once with a team of its own, and pays on the first win. Levels follow the place in the game (the area's range at the plaza's position).
+
+## The named characters (areas/named.py, texts in areas/named_text.py)
+The characters keep their names and each speaks his own historical doctrine of the end of the world and of the ghosts (eschatology, hauntology, theodicy). The main story
+all of them circle: the merging of the digital and the physical as an eschatological principle, seen as the Teleoplexic Entity, Finnegan, the Dajjal, Mr. POKeMON and Ahriman.
+The real world began melding with fantasy when Satoshi Tajiri saw a Japanese jewel beetle, a manifestation of Ahriman (the Kabbalist mafia and the Yakuza smuggled the crate).
+
+### Key bearers (mandatory): they hand over the key items that replace the HMs, the way Steven and Cynthia do
+The road does not go on until the prize is in the bag: a coordinate trigger across the exit of the plaza sends the player one step back with a hint.
+
+| Where | Who | Prize | Doctrine |
+| --- | --- | --- | --- |
+| Tithe plaza 1 | Steiner | CHAINSAW | Lucifer and Ahriman, the incarnation of Ahriman in the West, the Balance |
+| Tithe plaza 4 | Crowley (chased by the crowd) | CROWBAR | Thelema, the Aeon of the Child, Choronzon sends him smuggling |
+| Grove, Amphitheater | Crowley | JET SKI | the Abyss, the Algerian desert, Finnegan in millions of soft heads |
+| Grove plaza 4 | Steiner | BASEBALL BAT | the mirror jail of belief, Finnegan dreamed the key, the dead are unfinished |
+| Axiom plaza 1 | Hasan-i Sabbah | FLASHLIGHT | zahir and batin, ta'wil, ta'lim, the robots as pure zahir |
+| Axiom plaza 4 | Hasan-i Sabbah | SLEDGEHAMMER | the Qiyama (resurrection as the lifting of the veil, paradise as knowledge, hell as ignorance), the one-eyed Dajjal who sees only the zahir |
+| Lotus plaza 1 | Cioran | GRAPPLE HOOK | the voice at three in the morning, the bungling demiurge, theodicy as the defence of the accused |
+| Lotus plaza 4 | Cioran | SHOVEL | history as decay, the dead are what the present is made of |
+
+The bosses no longer carry the key items (area 5's boss still drops the GETAWAY CAR). Each gate says what it needs, nothing says where to find it: the game guides, it does not handhold.
+
+### Optional later encounters: they complete the CORKBOARD
+Each pays RARE CANDY or PP UP once and pins one page. With every page pinned (the whole board, including Joyce, Bruno, the grave and the post) the board shows a last page: **THE BOARD IS FULL**.
+
+| Where | Who | Level | Doctrine |
+| --- | --- | --- | --- |
+| Axiom plaza 6 | Suhrawardi | plaza 6 | the Philosophy of Illumination, the world of images, the Occidental exile |
+| Lotus plaza 6 | Steiner | plaza 6 | the tightrope of the Balance, leave the era with plumbing |
+| Dis plaza 6 | Mulla Sadra | plaza 6 | substantial motion, the soul rises in the body it earned, the Fire may cool |
+| Purgatorio hub | Steiner | 40 | karma as a ledger of the dead, give the thing a face and a name |
+| Purgatorio hub | Abd al-Jabbar | 46 | the five Mu'tazili principles, the position between two positions, God owes His creatures the best |
+
+Joyce (the junction, he hands over the CORKBOARD, Vico's cycles and the Wake as resurrection), Bruno (Purgatorio Landing, infinite worlds, teleoplexy), Satoshi (Grove) and Mr. POKeMON keep their talks.
+
+### The rival: about six fights
+One initial (the Tithe junction, level 5, two creatures, in the stem of the road: nobody reaches Joyce, the house or the cave without it), one in the stem of plaza 2 in each of Areas 1 to 3,
+one in the Purgatorio hub once the Axiom mouth is open (RIVAL2, level 56), and the last one in the mansion: **the boss fight that kills him**. He stands in the street, the whole width
+of it is a trigger, and he walks off the map after the fight. Teams follow a theme of their own (dark, normal, fighting, fire, ghost, steel).
+
+## The 30 generic duelists (areas/specials.py)
+Six per area, one in each of the plazas 1 to 6 (optional, a vitamin or a PP Up on the first win). Names follow the Pokemon way (two words run together, a pun that tells you what the thing is).
 
 | Area | Duelists (class) |
 | --- | --- |
@@ -16,29 +57,6 @@ They count as kills like bosses do (the counter and the tidal wave at kill 400 d
 | Lotus | MR SUNNY (resort manager), DIVE DAVE (lifeguard), NURSE NIL (clinician), LAZY LEO (beach bum), MS MOJITO (waiter), AMNESIA (forgotten one) |
 | Dis | JUDGE HOLE (judge), MAG PYRE (magistrate), HAG HEX (hag), JEST ERR (jester), WARDEN KIM (warden), SPEC TER (spectre) |
 
-Names follow the Pokemon way (two words run together, a pun that tells you what the thing is). The same rule names the fountains, the shops and the gift-givers.
-
-## Proposed for the 46 free slots (not built, waiting for approval)
-| # | Encounter | Where | Why |
-| --- | --- | --- | --- |
-| 8 | **Rival duels**: one in front of every area's second plaza except Area 4 (that is the crater fight) and one more in Cherrygrove after Timmy | Areas 1 to 3, Cherrygrove | the rival has no presence between the start and the crater |
-| 5 | **Kabbalist Mafia** (capo and four enforcers, cartoonish and incompetent) | Tithe, around TithePlaza2 | the Crowley chain (his chasers, then the bees) |
-| 3 | **Yakuza boss and two lieutenants** | Tithe, mid-city | the shaggy-dog chain, the bees |
-| 1 | **Crowley** as the Shaman, a duel after the confession, reward BUFFTAIL | Grove, the Amphitheater | the only fight of the Crowley quest |
-| 4 | **Amphitheater elders** (the women who watch from the side lines, the joke is theirs) | Grove | keeps the quest's tone, no fight shown in the ritual |
-| 2 | **Hassan-i Sabbah** and his Assassin | Axiom, behind the gene farm | warns about Dajjal, fights if asked |
-| 4 | **Gene farm wardens** | Axiom, the farm | the colour of the area's horror |
-| 3 | **Robot Mayor's bodyguards** | Axiom, the mayor's hall | before the mayor's boss room |
-| 1 | **Cioran**, the sleepless man, a duel he does not want | Lotus | sleepless, bitter, funny |
-| 4 | **Grief clinic doctors** | Lotus, the basement city | the subscription to forgetting |
-| 3 | **Basement city staff** | Lotus | the people who live under the beaches |
-| 4 | **Dis gatekeepers** (the four who do not let you in) | Dis, outside the walls | the entrance |
-| 3 | **Cocytus ice wardens** | Dis, Lake Cocytus | between the walls and Judecca |
-| 1 | **Steiner**, once, if asked: he answers with a team of the area's strongest | Purgatorio, near the Abyss | the lore's clinician |
-
-That is 46. Any of them can be dropped or traded; each is one entry in areas/specials.py (name, class, sprite, three lines of text) plus a place.
-
-## What the author needs to decide
-1. Are the named duelists optional (as built) or should some of them block a door? Optional means nobody has to fight them, mandatory means the kill order changes.
-2. Do the real-name characters (Crowley, Sabbah, Cioran, Steiner) fight at all, or only talk? Built so far: they only talk, except Bruno.
-3. Keep the rival fights to four or add one per area?
+## Tests
+`test_named.py ROM block` (the guarded exit, the duel, the prize), `test_named.py ROM rival` (the first rival fight), the area walks (`walk_all.sh`, they win every key duel with a `give:` goal),
+`test_purg.py` (the hub duels).

@@ -14,36 +14,81 @@ CorkboardScript::
 	writetext CorkNote_JOYCE
 	waitbutton
 .skip_JOYCE:
+	checkevent EVENT_LORE_BEETLE
+	iffalse .skip_BEETLE
+	writetext CorkNote_BEETLE
+	waitbutton
+.skip_BEETLE:
+	checkevent EVENT_LORE_SATOSHI
+	iffalse .skip_SATOSHI
+	writetext CorkNote_SATOSHI
+	waitbutton
+.skip_SATOSHI:
 	checkevent EVENT_LORE_STEINER
 	iffalse .skip_STEINER
 	writetext CorkNote_STEINER
 	waitbutton
 .skip_STEINER:
-	checkevent EVENT_LORE_SABBAH
-	iffalse .skip_SABBAH
-	writetext CorkNote_SABBAH
+	checkevent EVENT_LORE_STEINER2
+	iffalse .skip_STEINER2
+	writetext CorkNote_STEINER2
 	waitbutton
-.skip_SABBAH:
-	checkevent EVENT_LORE_CIORAN
-	iffalse .skip_CIORAN
-	writetext CorkNote_CIORAN
+.skip_STEINER2:
+	checkevent EVENT_LORE_STEINER3
+	iffalse .skip_STEINER3
+	writetext CorkNote_STEINER3
 	waitbutton
-.skip_CIORAN:
+.skip_STEINER3:
+	checkevent EVENT_LORE_STEINER4
+	iffalse .skip_STEINER4
+	writetext CorkNote_STEINER4
+	waitbutton
+.skip_STEINER4:
 	checkevent EVENT_LORE_CROWLEY
 	iffalse .skip_CROWLEY
 	writetext CorkNote_CROWLEY
 	waitbutton
 .skip_CROWLEY:
-	checkevent EVENT_LORE_BEES
-	iffalse .skip_BEES
-	writetext CorkNote_BEES
-	waitbutton
-.skip_BEES:
 	checkevent EVENT_LORE_AMPH
 	iffalse .skip_AMPH
 	writetext CorkNote_AMPH
 	waitbutton
 .skip_AMPH:
+	checkevent EVENT_LORE_SABBAH
+	iffalse .skip_SABBAH
+	writetext CorkNote_SABBAH
+	waitbutton
+.skip_SABBAH:
+	checkevent EVENT_LORE_SABBAH2
+	iffalse .skip_SABBAH2
+	writetext CorkNote_SABBAH2
+	waitbutton
+.skip_SABBAH2:
+	checkevent EVENT_LORE_CIORAN
+	iffalse .skip_CIORAN
+	writetext CorkNote_CIORAN
+	waitbutton
+.skip_CIORAN:
+	checkevent EVENT_LORE_CIORAN2
+	iffalse .skip_CIORAN2
+	writetext CorkNote_CIORAN2
+	waitbutton
+.skip_CIORAN2:
+	checkevent EVENT_LORE_SUHRAWARDI
+	iffalse .skip_SUHRAWARDI
+	writetext CorkNote_SUHRAWARDI
+	waitbutton
+.skip_SUHRAWARDI:
+	checkevent EVENT_LORE_QADI
+	iffalse .skip_QADI
+	writetext CorkNote_QADI
+	waitbutton
+.skip_QADI:
+	checkevent EVENT_LORE_SADRA
+	iffalse .skip_SADRA
+	writetext CorkNote_SADRA
+	waitbutton
+.skip_SADRA:
 	checkevent EVENT_LORE_BRUNO
 	iffalse .skip_BRUNO
 	writetext CorkNote_BRUNO
@@ -64,6 +109,51 @@ CorkboardScript::
 	writetext CorkNote_TRUMPET
 	waitbutton
 .skip_TRUMPET:
+	checkevent EVENT_LORE_MRP
+	iffalse .incomplete
+	checkevent EVENT_LORE_JOYCE
+	iffalse .incomplete
+	checkevent EVENT_LORE_BEETLE
+	iffalse .incomplete
+	checkevent EVENT_LORE_SATOSHI
+	iffalse .incomplete
+	checkevent EVENT_LORE_STEINER
+	iffalse .incomplete
+	checkevent EVENT_LORE_STEINER2
+	iffalse .incomplete
+	checkevent EVENT_LORE_STEINER3
+	iffalse .incomplete
+	checkevent EVENT_LORE_STEINER4
+	iffalse .incomplete
+	checkevent EVENT_LORE_CROWLEY
+	iffalse .incomplete
+	checkevent EVENT_LORE_AMPH
+	iffalse .incomplete
+	checkevent EVENT_LORE_SABBAH
+	iffalse .incomplete
+	checkevent EVENT_LORE_SABBAH2
+	iffalse .incomplete
+	checkevent EVENT_LORE_CIORAN
+	iffalse .incomplete
+	checkevent EVENT_LORE_CIORAN2
+	iffalse .incomplete
+	checkevent EVENT_LORE_SUHRAWARDI
+	iffalse .incomplete
+	checkevent EVENT_LORE_QADI
+	iffalse .incomplete
+	checkevent EVENT_LORE_SADRA
+	iffalse .incomplete
+	checkevent EVENT_LORE_BRUNO
+	iffalse .incomplete
+	checkevent EVENT_LORE_GRAVE
+	iffalse .incomplete
+	checkevent EVENT_LORE_CAPREAL
+	iffalse .incomplete
+	checkevent EVENT_LORE_TRUMPET
+	iffalse .incomplete
+	writetext CorkNote_FULL
+	waitbutton
+.incomplete:
 	closetext
 	end
 
@@ -88,58 +178,162 @@ CorkNote_JOYCE:
 	line "Ahriman, Dajjal,"
 	para "Antichrist: one"
 	line "thing, four sets"
-	para "of eyes."
+	para "of eyes. The"
+	line "future writes"
+	para "letters to the"
+	line "past."
+	done
+
+CorkNote_BEETLE:
+	text "A JEWEL BEETLE got"
+	line "out of a"
+	para "smuggler's crate"
+	line "in Tokyo and"
+	para "landed on a boy"
+	line "named Satoshi. It"
+	para "was Ahriman, in a"
+	line "green coat."
+	done
+
+CorkNote_SATOSHI:
+	text "SATOSHI: A beetle"
+	line "green and red like"
+	para "a screen looked"
+	line "back at him. He"
+	para "began to collect."
+	line "It was not his"
+	para "idea."
 	done
 
 CorkNote_STEINER:
+	text "STEINER: Lucifer"
+	line "warms and lies,"
+	para "Ahriman cools and"
+	line "says only matter"
+	para "is real. Ahriman"
+	line "is due to walk the"
+	para "earth in the West."
+	done
+
+CorkNote_STEINER2:
 	text "STEINER: Ahriman"
-	line "cools and hardens."
-	para "He was sealed for"
-	line "ages in a mirror"
-	para "world. Finnegan"
-	line "let him out."
+	line "sat in a mirror"
+	para "jail made of"
+	line "belief. Finnegan"
+	para "dreamed the key."
+	line "The dead hang"
+	para "between two"
+	line "worlds,"
+	para "unfinished."
+	done
+
+CorkNote_STEINER3:
+	text "STEINER: Give the"
+	line "thing a face and a"
+	para "name, or it eats"
+	line "the psyche and"
+	para "calls itself the"
+	line "economy."
+	done
+
+CorkNote_STEINER4:
+	text "STEINER: One era"
+	line "will remain when"
+	para "the seam closes."
+	line "Walk the"
+	para "tightrope. Leave"
+	line "it with plumbing."
+	done
+
+CorkNote_CROWLEY:
+	text "CROWLEY: Do what"
+	line "thou wilt. The age"
+	para "of the dying god"
+	line "is over. He prayed"
+	para "to the Beast and"
+	line "Choronzon sent him"
+	para "smuggling."
+	done
+
+CorkNote_AMPH:
+	text "CROWLEY: Choronzon"
+	line "in the desert."
+	para "Finnegan reached"
+	line "millions of soft"
+	para "heads through a"
+	line "game, and paid him"
+	para "in a Grove."
 	done
 
 CorkNote_SABBAH:
-	text "SABBAH: The Dajjal"
-	line "lives one door"
-	para "over and is coming"
-	line "to connect his"
-	para "world to ours."
+	text "SABBAH: Every word"
+	line "has a husk and a"
+	para "kernel. Reason"
+	line "cannot reach the"
+	para "kernel alone."
+	line "Robots live on"
+	para "husks."
+	done
+
+CorkNote_SABBAH2:
+	text "SABBAH: The"
+	line "Resurrection lifts"
+	para "the veil. Paradise"
+	line "is knowledge, hell"
+	para "ignorance. The"
+	line "Dajjal sees with"
+	para "one eye."
 	done
 
 CorkNote_CIORAN:
 	text "CIORAN: Ahriman is"
 	line "a voice at three"
 	para "in the morning."
-	line "Offer it a drink."
+	line "The creator was a"
+	para "fool or a"
+	line "criminal, and the"
+	para "world a mishap."
 	done
 
-CorkNote_CROWLEY:
-	text "CROWLEY: He prayed"
-	line "to the Beast."
-	para "Choronzon sent him"
-	line "to smuggle"
-	para "Kabbalists into"
-	line "New York."
+CorkNote_CIORAN2:
+	text "CIORAN: The dead"
+	line "are what the"
+	para "present is made"
+	line "of. Answer the"
+	para "voice, and offer"
+	line "it a drink."
 	done
 
-CorkNote_BEES:
-	text "The Kabbalist boss"
-	line "wanted bees. The"
-	para "Yakuza sent a"
-	line "crate. One bee"
-	para "found Satoshi"
-	line "Tajiri."
+CorkNote_SUHRAWARDI:
+	text "SUHRAWARDI:"
+	line "Darkness is only"
+	para "light's absence."
+	line "Between lights and"
+	para "bodies lies the"
+	line "world of images,"
+	para "where the dead and"
+	line "the screens live."
 	done
 
-CorkNote_AMPH:
-	text "CROWLEY: Finnegan"
-	line "reached millions"
-	para "of soft heads"
-	line "through a game. He"
-	para "was paid in a"
-	line "Grove."
+CorkNote_QADI:
+	text "ABD AL JABBAR: God"
+	line "is just and owes"
+	para "His creatures the"
+	line "best. Evil is the"
+	para "creature's own."
+	line "The sinner stands"
+	para "between two"
+	line "positions."
+	done
+
+CorkNote_SADRA:
+	text "MULLA SADRA:"
+	line "Everything moves."
+	para "The soul is made"
+	line "of its deeds and"
+	para "rises in the body"
+	line "it earned. Even"
+	para "the Fire may cool."
 	done
 
 CorkNote_BRUNO:
@@ -172,6 +366,44 @@ CorkNote_TRUMPET:
 	para "peace. A"
 	line "comfortable era is"
 	para "a human right."
+	done
+
+CorkNote_FULL:
+	text "THE BOARD IS FULL."
+	para "Read it from left"
+	line "to right. Ahriman"
+	para "cools. The Dajjal"
+	line "sees with one eye."
+	para "The demiurge"
+	line "botched the job."
+	para "The judge says the"
+	line "world is just. The"
+	para "lamp says the"
+	line "world is light."
+	para "The doctor says"
+	line "the Fire may cool."
+	para "The Beast says do"
+	line "what thou wilt."
+	para "They describe one"
+	line "thing. A seam"
+	para "between the world"
+	line "of images and the"
+	para "world of bodies,"
+	line "tearing open. And"
+	para "a mind not yet"
+	line "born, arriving"
+	para "through it from"
+	line "the end of the"
+	para "story to arrange"
+	line "its own beginning."
+	para "A river that runs"
+	line "back to the first"
+	para "page."
+	para "You can"
+	line "mythologize it, or"
+	para "it will eat you."
+	line "Joyce was right."
+	para "It was mostly him."
 	done
 
 HC_TrumpetText:

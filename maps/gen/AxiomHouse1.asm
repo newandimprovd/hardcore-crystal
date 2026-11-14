@@ -36,8 +36,8 @@ AxiomHouse1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, AXIOM_PLAZA1, 3
-	warp_event  3,  7, AXIOM_PLAZA1, 3
+	warp_event  2,  7, AXIOM_PLAZA1, 2
+	warp_event  3,  7, AXIOM_PLAZA1, 2
 
 	def_coord_events
 

@@ -2,7 +2,7 @@
 """Battle budget check (areas/counts.py): counts every fight of the emitted maps and fails when the plan is broken.
 
   normal     trainers of the roads and lanes (and the plazas), plus Timmy in Cherrygrove: the mandatory kills, MANDATORY = 500 in all
-  specials   bosses (one trainer rooms of the areas) and the scripted duels (Bruno)
+  specials   bosses (one trainer rooms of the areas) and the scripted duels (Bruno), the named duels (areas/named.py: eight key bearers, five philosophers, five rival fights)
   purg       the trainers of Purgatorio: not part of the 500
 The whole game must stay at or under TOTAL_CAP = 650, and the tidal wave (TSUNAMI_KILLS) must come before the crater (the rival's fall).
 Usage: python3 tools/hardcore/battle_budget.py [--quiet]"""
@@ -30,7 +30,7 @@ def tally():
             scripted += len(re.findall(r"^\tstartbattle", src, re.M))  # the named duelists of the plazas (areas/specials.py)
         if name.startswith("Purg"):
             purg += n
-            if name == "PurgLanding":
+            if name in ("PurgLanding", "PurgThreshold"):  # Bruno; Steiner, Abd al-Jabbar and the rival in the hub
                 scripted += len(re.findall(r"^\tstartbattle", src, re.M))
             continue
         if not n:

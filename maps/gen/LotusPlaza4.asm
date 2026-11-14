@@ -10,11 +10,11 @@ LotusPlaza4Fountain0:
 	jumptext LotusPlaza4Fountain0Text
 
 LotusPlaza4Fountain0Text:
-	text "LULLAGOON. Lull +"
-	line "lagoon. Listen"
-	para "long enough and it"
-	line "lets you off the"
-	para "hook."
+	text "LULLAGOON. Lull"
+	line "plus lagoon."
+	para "Listen long enough"
+	line "and it lets you"
+	para "off the hook."
 	done
 
 LotusPlaza4Giver:
@@ -143,28 +143,72 @@ LotusPlaza4Townie8Text:
 	line "a state of mind."
 	done
 
-LotusPlaza4CioranScript:
+LotusPlaza4Cioran2BearerScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LORE_CIORAN
-	iftrue .Again
-	writetext LotusPlaza4CioranScriptText
+	checkevent EVENT_NAMED_CIORAN2_DONE
+	iftrue .Beaten
+	setevent EVENT_LORE_CIORAN2
+	writetext LotusPlaza4Cioran2BearerScriptSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext LotusPlaza4Cioran2BearerScriptBeatenText, 0
+	loadtrainer L_CIORAN, 129
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_CIORAN2_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_CIORAN2_PAID
+	iftrue .After
+	writetext LotusPlaza4Cioran2BearerScriptGiveText
 	waitbutton
-	setevent EVENT_LORE_CIORAN
+	verbosegiveitem SHOVEL
+	iffalse .NoRoom
+	setevent EVENT_NAMED_CIORAN2_PAID
+.After:
+	writetext LotusPlaza4Cioran2BearerScriptAfterText
+	waitbutton
 	closetext
 	end
 
-.Again:
-	writetext LotusPlaza4CioranScriptAgainText
+.No:
+	writetext LotusPlaza4Cioran2BearerScriptNoText
 	waitbutton
 	closetext
 	end
 
-LotusPlaza4CioranScriptText:
+.NoRoom:
+	writetext LotusPlaza4Cioran2BearerScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusPlaza4Cioran2BearerScriptSeenText:
 	text "Still here? Good."
 	line "So am I. A small"
 	para "victory against"
 	line "the obvious."
+	para "History is not a"
+	line "road, it is a"
+	para "decay with good"
+	line "manners. Every"
+	para "empire here, the"
+	line "priests, the cops,"
+	para "the robots, the"
+	line "resort, dreamed of"
+	para "being the last."
+	line "None was. That is"
+	para "the only mercy."
+	para "The dead are not"
+	line "behind us. They"
+	para "are what the"
+	line "present is made"
+	para "of. Every plaza on"
+	line "this coast is a"
+	para "grave with good"
+	line "lighting."
 	para "If the voice"
 	line "speaks, answer it."
 	para "Do not argue."
@@ -172,20 +216,78 @@ LotusPlaza4CioranScriptText:
 	para "It likes to be"
 	line "listened to. That"
 	para "is its weakness."
+	para "You will want a"
+	line "shovel. Everything"
+	para "in here is buried,"
+	line "and the rest is on"
+	para "its way."
+	para "Fight me. Do not"
+	line "mind my face. It"
+	para "is only a face."
+	para "Fight CIORAN?"
 	done
 
-LotusPlaza4CioranScriptAgainText:
-	text "Still here? Good."
-	line "So am I. A small"
-	para "victory against"
-	line "the obvious."
-	para "If the voice"
-	line "speaks, answer it."
-	para "Do not argue."
-	line "Offer it a drink."
-	para "It likes to be"
-	line "listened to. That"
-	para "is its weakness."
+LotusPlaza4Cioran2BearerScriptBeatenText:
+	text "Thank you. For a"
+	line "moment I forgot. I"
+	para "will try to"
+	line "remember it later."
+	done
+
+LotusPlaza4Cioran2BearerScriptGiveText:
+	text "Take the SHOVEL."
+	line "It digs out of"
+	para "caves and into"
+	line "problems. It has"
+	para "buried two of my"
+	line "books. They were"
+	para "not missed."
+	done
+
+LotusPlaza4Cioran2BearerScriptAfterText:
+	text "Dig gently. The"
+	line "dead are light"
+	para "sleepers, and ours"
+	line "are the worst kind"
+	para "of neighbours."
+	done
+
+LotusPlaza4Cioran2BearerScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+LotusPlaza4Cioran2BearerScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
+LotusPlaza4Cioran2BlockScript:
+	checkevent EVENT_NAMED_CIORAN2_PAID
+	iftrue .Pass
+	opentext
+	writetext LotusPlaza4Cioran2BlockScriptText
+	waitbutton
+	closetext
+	applymovement PLAYER, LotusPlaza4Cioran2BlockScriptStep
+.Pass:
+	end
+
+LotusPlaza4Cioran2BlockScriptStep:
+	step_down
+	step_end
+
+LotusPlaza4Cioran2BlockScriptText:
+	text "A voice behind"
+	line "you: Wait. A"
+	para "shovel is waiting."
+	line "Somebody is"
+	para "attached to it."
 	done
 
 LotusPlaza4Duel:
@@ -276,6 +378,12 @@ LotusPlaza4_MapEvents:
 	warp_event 16,  3, LOTUS_BOUTIQUE4, 1
 
 	def_coord_events
+	coord_event 20,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 21,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 22,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 23,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 24,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 25,  1, -1, LotusPlaza4Cioran2BlockScript
 
 	def_bg_events
 	bg_event  5, 21, BGEVENT_READ, LotusPlaza4Fountain0
@@ -290,6 +398,6 @@ LotusPlaza4_MapEvents:
 	object_event 25, 12, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie6, -1
 	object_event 18, 10, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie7, -1
 	object_event 21,  7, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie8, -1
-	object_event 14,  8, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4CioranScript, -1
+	object_event 14,  8, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Cioran2BearerScript, -1
 	object_event  6, 19, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Duel, -1
 

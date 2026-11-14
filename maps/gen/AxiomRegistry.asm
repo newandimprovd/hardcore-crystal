@@ -35,23 +35,17 @@ AxiomRegistryBossBeatenText:
 	line "filing cabinet"
 	para "predicted a loss."
 	line "I did not believe"
-	para "it. Take the"
-	line "FLASHLIGHT. It's a"
-	para "tool for dark"
-	line "intentions."
+	para "it. File that"
+	line "under: lamps."
 	done
 
 AxiomRegistryBossAfterText:
-	text "The FLASHLIGHT"
-	line "lights up caves"
-	para "and dark"
-	line "intentions. The"
-	para "Union has many of"
-	line "both."
+	text "The next road is"
+	line "dark. The Union"
+	para "has many dark"
+	line "roads. And many"
+	para "dark intentions."
 	done
-
-AxiomRegistryItemBall:
-	itemball FLASHLIGHT
 
 AxiomRegistry_MapEvents:
 	db 0, 0 ; filler
@@ -66,5 +60,4 @@ AxiomRegistry_MapEvents:
 
 	def_object_events
 	object_event  2, 10, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomRegistryBossScript, -1
-	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomRegistryItemBall, EVENT_GEN_AXIOM_REGISTRY_ITEM
 

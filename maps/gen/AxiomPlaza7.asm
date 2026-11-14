@@ -11,7 +11,7 @@ AxiomPlaza7Fountain0:
 
 AxiomPlaza7Fountain0Text:
 	text "COOLANTAIN."
-	line "Coolant +"
+	line "Coolant plus"
 	para "fountain. It is"
 	line "not cooling"
 	para "anything. It was"

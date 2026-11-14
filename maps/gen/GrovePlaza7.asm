@@ -11,7 +11,7 @@ GrovePlaza7Fountain0:
 
 GrovePlaza7Fountain0Text:
 	text "COMMUNIPOOL."
-	line "Commune + pool."
+	line "Commune plus pool."
 	para "Everyone's water."
 	line "Do not be seen"
 	para "being thirsty"

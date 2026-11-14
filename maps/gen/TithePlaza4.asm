@@ -11,11 +11,11 @@ TithePlaza4Fountain0:
 
 TithePlaza4Fountain0Text:
 	text "DONATELLO"
-	line "FOUNTAIN. Donate +"
-	para "hello. The coins"
-	line "go to the Parish."
-	para "The hello goes"
-	line "nowhere."
+	line "FOUNTAIN. Donate"
+	para "plus hello. The"
+	line "coins go to the"
+	para "Parish. The hello"
+	line "goes nowhere."
 	done
 
 TithePlaza4Giver:
@@ -146,6 +146,225 @@ TithePlaza4Townie8Text:
 	para "Every day. 'Pay.'"
 	done
 
+TithePlaza4CrowleyBearerScript:
+	faceplayer
+	opentext
+	checkevent EVENT_NAMED_CROWLEY_DONE
+	iftrue .Beaten
+	setevent EVENT_LORE_CROWLEY
+	writetext TithePlaza4CrowleyBearerScriptSeenText
+	yesorno
+	iffalse .No
+	closetext
+	winlosstext TithePlaza4CrowleyBearerScriptBeatenText, 0
+	loadtrainer T_CROWLEY, 129
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_NAMED_CROWLEY_DONE
+	opentext
+.Beaten:
+	checkevent EVENT_NAMED_CROWLEY_PAID
+	iftrue .After
+	writetext TithePlaza4CrowleyBearerScriptGiveText
+	waitbutton
+	verbosegiveitem CROWBAR
+	iffalse .NoRoom
+	setevent EVENT_NAMED_CROWLEY_PAID
+.After:
+	writetext TithePlaza4CrowleyBearerScriptAfterText
+	waitbutton
+	closetext
+	end
+
+.No:
+	writetext TithePlaza4CrowleyBearerScriptNoText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext TithePlaza4CrowleyBearerScriptNoRoomText
+	waitbutton
+	closetext
+	end
+
+TithePlaza4CrowleyBearerScriptSeenText:
+	text "Do not mind them."
+	line "They are the"
+	para "residents of the"
+	line "Parish, and they"
+	para "mistake a"
+	line "ceremonial circle"
+	para "for a hopscotch"
+	line "court."
+	para "Aleister Crowley."
+	line "Mage. Mountaineer."
+	para "Man of great"
+	line "appetite and small"
+	para "apology."
+	para "Do what thou wilt"
+	line "shall be the whole"
+	para "of the Law. Not do"
+	line "what you like. Do"
+	para "what you were born"
+	line "for. Most people"
+	para "manage neither."
+	para "In nineteen"
+	line "hundred and four,"
+	para "in Cairo, a voice"
+	line "called Aiwass"
+	para "dictated a book to"
+	line "me and told me the"
+	para "age of the dying"
+	line "god was over. The"
+	para "Aeon of the"
+	line "Crowned and"
+	para "Conquering Child."
+	para "A child. Look at"
+	line "the screens. Look"
+	para "at the queues"
+	line "outside the shops."
+	para "Millions of them,"
+	line "clutching a little"
+	para "creature and a"
+	line "little hope. I was"
+	para "only early."
+	para "I once knelt in"
+	line "the dust and"
+	para "prayed to the"
+	line "Beast. I said:"
+	para "send me where my"
+	line "sex magick is"
+	para "celebrated, and I"
+	line "will be your most"
+	para "diligent servant."
+	para "The Beast came, as"
+	line "Choronzon, the"
+	para "dweller in the"
+	line "abyss, in a very"
+	para "bad mood. He said"
+	line "yes. First, do"
+	para "something for me."
+	para "Smuggle a"
+	line "Kabbalist mafia"
+	para "out of Italy and"
+	line "Eastern Europe"
+	para "into New York."
+	line "Teach them the"
+	para "Tree of Life, so"
+	line "that they can"
+	para "speak to Finnegan."
+	line "I did. They became"
+	para "smugglers. A"
+	line "respectable trade."
+	para "Find me at the"
+	line "Amphitheater in"
+	para "the Commune. I"
+	line "will finish the"
+	para "story when the"
+	line "circle is full."
+	para "For now I have a"
+	line "crowbar and an"
+	para "opinion. Both are"
+	line "for sale at the"
+	para "price of a fight."
+	para "Fight CROWLEY?"
+	done
+
+TithePlaza4CrowleyBearerScriptBeatenText:
+	text "Ha! Fine. The Will"
+	line "finds its way, and"
+	para "so, I see, do you."
+	done
+
+TithePlaza4CrowleyBearerScriptGiveText:
+	text "Take the CROWBAR."
+	line "It has opened a"
+	para "great many doors."
+	line "Some of them were"
+	para "locked for a"
+	line "reason."
+	done
+
+TithePlaza4CrowleyBearerScriptAfterText:
+	text "A crowbar is a"
+	line "very honest tool."
+	para "It says exactly"
+	line "what it intends."
+	para "Unlike the people"
+	line "here."
+	done
+
+TithePlaza4CrowleyBearerScriptNoText:
+	text "Another day. I"
+	line "will be here. The"
+	para "road will wait"
+	line "too. The road has"
+	para "nothing else to"
+	line "do."
+	done
+
+TithePlaza4CrowleyBearerScriptNoRoomText:
+	text "Your bag is full."
+	line "The prize will"
+	para "wait. So will I."
+	done
+
+TithePlaza4Crowd0Script:
+	jumptextfaceplayer TithePlaza4Crowd0ScriptText
+
+TithePlaza4Crowd0ScriptText:
+	text "GET OUT OF THE"
+	line "PARK, YOU PERVERT!"
+	para "There are CHILDREN"
+	line "on those swings!"
+	done
+
+TithePlaza4Crowd1Script:
+	jumptextfaceplayer TithePlaza4Crowd1ScriptText
+
+TithePlaza4Crowd1ScriptText:
+	text "He was just"
+	line "standing there in"
+	para "a trench coat,"
+	line "doing arithmetic"
+	para "at the slide!"
+	done
+
+TithePlaza4Crowd2Script:
+	jumptextfaceplayer TithePlaza4Crowd2ScriptText
+
+TithePlaza4Crowd2ScriptText:
+	text "Call the cops!"
+	line "Wait. We are the"
+	para "cops. Okay. Get"
+	line "him!"
+	done
+
+TithePlaza4CrowleyBlockScript:
+	checkevent EVENT_NAMED_CROWLEY_PAID
+	iftrue .Pass
+	opentext
+	writetext TithePlaza4CrowleyBlockScriptText
+	waitbutton
+	closetext
+	applymovement PLAYER, TithePlaza4CrowleyBlockScriptStep
+.Pass:
+	end
+
+TithePlaza4CrowleyBlockScriptStep:
+	step_down
+	step_end
+
+TithePlaza4CrowleyBlockScriptText:
+	text "A voice behind"
+	line "you: Hold it,"
+	para "wanderer. A man in"
+	line "a trench coat is"
+	para "shouting. Go and"
+	line "see."
+	done
+
 TithePlaza4Duel:
 	faceplayer
 	opentext
@@ -236,6 +455,12 @@ TithePlaza4_MapEvents:
 	warp_event 16,  3, TITHE_BOUTIQUE4, 1
 
 	def_coord_events
+	coord_event 20,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 21,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 22,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 23,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 24,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 25,  1, -1, TithePlaza4CrowleyBlockScript
 
 	def_bg_events
 	bg_event 15,  9, BGEVENT_READ, TithePlaza4Fountain0
@@ -250,5 +475,9 @@ TithePlaza4_MapEvents:
 	object_event 19, 18, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie6, -1
 	object_event 14, 10, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie7, -1
 	object_event 19, 13, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie8, -1
-	object_event 22, 23, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza4Duel, -1
+	object_event 21, 19, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScript, -1
+	object_event 18, 18, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Crowd0Script, -1
+	object_event 18, 20, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Crowd1Script, -1
+	object_event 19, 19, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Crowd2Script, -1
+	object_event  4, 14, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza4Duel, -1
 

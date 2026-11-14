@@ -29,25 +29,22 @@ GroveBoathouseBossSeenText:
 	done
 
 GroveBoathouseBossBeatenText:
-	text "Fine. The thing by"
-	line "the wall is yours."
-	para "It washed up."
+	text "Fine. The boats"
+	line "are yours. They"
+	para "washed up."
 	line "Probably stolen."
 	para "We don't have a"
 	line "word for stolen."
 	done
 
 GroveBoathouseBossAfterText:
-	text "That's a JET SKI."
-	line "It rides over any"
-	para "open water. Don't"
-	line "ask where it came"
-	para "from. It came from"
-	line "the river."
+	text "Nothing here is"
+	line "locked. Even the"
+	para "river. Cross it"
+	line "however you like."
+	para "It came from the"
+	line "river anyway."
 	done
-
-GroveBoathouseItemBall:
-	itemball JET_SKI
 
 GroveBoathouse_MapEvents:
 	db 0, 0 ; filler
@@ -62,5 +59,4 @@ GroveBoathouse_MapEvents:
 
 	def_object_events
 	object_event  2, 10, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveBoathouseBossScript, -1
-	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveBoathouseItemBall, EVENT_GEN_GROVE_BOATHOUSE_ITEM
 

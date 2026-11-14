@@ -2,7 +2,7 @@
 
 	newgroup AREA1                ; 27
 	map_const TITHE_ROAD,                              12, 15 ;  1
-	map_const TITHE_PLAZA1,                            15, 13 ;  2
+	map_const TITHE_PLAZA1,                            13, 13 ;  2
 	map_const TITHE_CHECKPOINT,                         5,  4 ;  3
 	map_const TITHE_POKECENTER1,                        5,  4 ;  4
 	map_const TITHE_MART1,                              6,  4 ;  5
@@ -55,7 +55,7 @@
 	endgroup
 
 	newgroup AREA2                ; 28
-	map_const GROVE_PLAZA1,                            15, 15 ;  1
+	map_const GROVE_PLAZA1,                            13, 15 ;  1
 	map_const GROVE_GATE,                               5,  4 ;  2
 	map_const GROVE_POKECENTER1,                        5,  4 ;  3
 	map_const GROVE_MART1,                              6,  4 ;  4
@@ -109,7 +109,7 @@
 	endgroup
 
 	newgroup AREA3                ; 29
-	map_const AXIOM_PLAZA1,                            15, 15 ;  1
+	map_const AXIOM_PLAZA1,                            13, 15 ;  1
 	map_const AXIOM_GATE,                               5,  4 ;  2
 	map_const AXIOM_POKECENTER1,                        5,  4 ;  3
 	map_const AXIOM_MART1,                              6,  4 ;  4
@@ -162,7 +162,7 @@
 	endgroup
 
 	newgroup AREA4                ; 30
-	map_const LOTUS_PLAZA1,                            17, 15 ;  1
+	map_const LOTUS_PLAZA1,                            15, 15 ;  1
 	map_const LOTUS_GATE,                               5,  4 ;  2
 	map_const LOTUS_POKECENTER1,                        5,  4 ;  3
 	map_const LOTUS_MART1,                              6,  4 ;  4
@@ -217,7 +217,7 @@
 	endgroup
 
 	newgroup AREA5                ; 31
-	map_const DIS_PLAZA1,                              15, 14 ;  1
+	map_const DIS_PLAZA1,                              13, 13 ;  1
 	map_const DIS_GATE,                                 5,  4 ;  2
 	map_const DIS_POKECENTER1,                          5,  4 ;  3
 	map_const DIS_MART1,                                6,  4 ;  4

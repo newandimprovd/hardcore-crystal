@@ -148,7 +148,7 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheCathedral, TITHE_CATHEDRAL, $00
 
 	map_attributes GrovePlaza1, GROVE_PLAZA1, $00
-	connection north, GroveStreet1, GROVE_STREET1, 2
+	connection north, GroveStreet1, GROVE_STREET1, 0
 
 	map_attributes GroveGate, GROVE_GATE, $00
 
@@ -160,7 +160,7 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes GroveStreet1, GROVE_STREET1, $00
 	connection north, GroveStreet2, GROVE_STREET2, 0
-	connection south, GrovePlaza1, GROVE_PLAZA1, -2
+	connection south, GrovePlaza1, GROVE_PLAZA1, 0
 
 	map_attributes GroveStreet2, GROVE_STREET2, $00
 	connection north, GroveStreet3, GROVE_STREET3, 0
@@ -434,7 +434,7 @@ SECTION "Area Attributes", ROMX
 	map_attributes AxiomMayoralty, AXIOM_MAYORALTY, $00
 
 	map_attributes LotusPlaza1, LOTUS_PLAZA1, $00
-	connection north, LotusStreet1, LOTUS_STREET1, 0
+	connection north, LotusStreet1, LOTUS_STREET1, 1
 
 	map_attributes LotusGate, LOTUS_GATE, $00
 
@@ -446,19 +446,19 @@ SECTION "Area Attributes", ROMX
 
 	map_attributes LotusStreet1, LOTUS_STREET1, $00
 	connection north, LotusStreet2, LOTUS_STREET2, 0
-	connection south, LotusPlaza1, LOTUS_PLAZA1, 0
+	connection south, LotusPlaza1, LOTUS_PLAZA1, -1
 
 	map_attributes LotusStreet2, LOTUS_STREET2, $00
 	connection north, LotusStreet3, LOTUS_STREET3, 0
 	connection south, LotusStreet1, LOTUS_STREET1, 0
 
 	map_attributes LotusStreet3, LOTUS_STREET3, $00
-	connection north, LotusPlaza2, LOTUS_PLAZA2, -1
+	connection north, LotusPlaza2, LOTUS_PLAZA2, 2
 	connection south, LotusStreet2, LOTUS_STREET2, 0
 
 	map_attributes LotusPlaza2, LOTUS_PLAZA2, $00
 	connection north, LotusStreet4, LOTUS_STREET4, 0
-	connection south, LotusStreet3, LOTUS_STREET3, 1
+	connection south, LotusStreet3, LOTUS_STREET3, -2
 
 	map_attributes LotusPokecenter2, LOTUS_POKECENTER2, $00
 
