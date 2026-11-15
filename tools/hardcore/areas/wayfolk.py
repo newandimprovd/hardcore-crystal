@@ -241,3 +241,47 @@ GIFT_ITEMS = ["POTION", "ANTIDOTE", "BERRY", "SUPER_POTION", "GREAT_BALL", "GOLD
 GIFT_AFTER = ["Don't mention it. Seriously, don't. It's off the books.",
               "That's all I have. The rest is for someone with a better reason.",
               "Go on. Be a good person. Or an average one. I'm not picky."]
+
+
+# GIFT_HERMITS: twelve of the thirty people hidden in the world (the other eighteen are the hermits of Purgatorio, areas/purg.py).  Each lives in the glade of a
+# lane (the first lane of the area from min_lane on that has room) and hands over one item, once, without a fight: six CHARMS (key items, permanent boosts,
+# docs/CHARMS.md) and six stat items.  (area, min lane, item, what he says, what he says afterwards).  Lane 0 is Tithe Road itself.
+GIFT_HERMITS = [
+    ("Tithe", 0, "LULL_CHARM",
+     "The grass here hates everyone. I sit in the one spot it ignores. Take this LULL CHARM. The wild ones will bother you less. The tithe collectors won't.",
+     "It works better if you don't think about it. I try never to."),
+    ("Tithe", 8, "HP_UP",
+     "A banker's last wish: spend the reserves. I'm spending mine. This is HP UP. It makes a body hold more of itself. Mine holds mostly regret.",
+     "Interest is for the weak. Drink."),
+    ("Grove", 3, "EXP_CHARM",
+     "I share everything, mostly with the squirrels. Take this EXP CHARM. Every fight will teach a fifth more. The dead, sadly, learn nothing.",
+     "It's called experience. Somebody always pays for it. Usually someone else."),
+    ("Grove", 9, "PROTEIN",
+     "I live on mushrooms and spite. This is PROTEIN, a real one. Don't tell the mushrooms. They think I'm loyal.",
+     "Strength is just stubbornness with a diet."),
+    ("Grove", 14, "CARBOS",
+     "The commune ran out of everything but CARBOS. We ate it for every meal for a year. Take the last one. I can't look at it.",
+     "Run fast. Run far. Don't look back at the porridge."),
+    ("Axiom", 4, "PURSE_CHARM",
+     "I audited a corpse last week. The pockets were light. Take this PURSE CHARM. The dead will carry half again as much. Retroactively. It's fraud, but fraud for you.",
+     "File no report. I was never here. I'm a letter."),
+    ("Axiom", 11, "IRON",
+     "This is IRON. Filed under: things I took from the Registry on my way out. Take it before they notice the form is missing.",
+     "Form 31-C: Request to be left alone. Approved. By me."),
+    ("Lotus", 3, "CATCH_CHARM",
+     "I've never caught anything but a cold. Take this CATCH CHARM. A quarter better odds on the wild ones. The cold stays mine. I've grown fond of it.",
+     "Be gentle with the ball. It has feelings. They're all about being thrown."),
+    ("Lotus", 8, "CALCIUM",
+     "Milk of the sea. Don't ask. It's CALCIUM. It builds bones. Mostly other people's, I'm told.",
+     "The sea gives. The sea also takes. Today it's in a giving mood."),
+    ("Lotus", 13, "PP_UP",
+     "A pill that makes a move last longer. This is PP UP. Use it on the move you love. Or the one you hate. They're all dying anyway.",
+     "Everything runs out. The trick is to be elsewhere when it does."),
+    ("Dis", 5, "LOOT_CHARM",
+     "Everyone here is dead or about to be. I check pockets for a living. Take this LOOT CHARM. More of the dead will have something. That's what we call progress.",
+     "Don't thank me. Thank the dead. They won't answer."),
+    ("Dis", 11, "HEAL_CHARM",
+     "I'm a monk of the long walk. Take this HEAL CHARM. Your party mends a little with every step. Not the dead, though. Never the dead.",
+     "Keep walking. It's the only thing down here that's free."),
+]
+

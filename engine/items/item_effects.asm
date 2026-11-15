@@ -76,19 +76,19 @@ ItemEffects:
 	dw NoEffect            ; KINGS_ROCK
 	dw BitterBerryEffect   ; BITTER_BERRY
 	dw StatusHealingEffect ; MINT_BERRY
-	dw NoEffect            ; RED_APRICORN
+	dw NoEffect            ; EXP_CHARM
 	dw NoEffect            ; TINYMUSHROOM
 	dw NoEffect            ; BIG_MUSHROOM
 	dw NoEffect            ; SILVERPOWDER
-	dw NoEffect            ; BLU_APRICORN
-	dw NoEffect            ; YLW_APRICORN
-	dw NoEffect            ; GRN_APRICORN
+	dw NoEffect            ; CATCH_CHARM
+	dw NoEffect            ; PURSE_CHARM
+	dw NoEffect            ; LOOT_CHARM
 	dw NoEffect            ; CLEANSE_TAG
 	dw NoEffect            ; MYSTIC_WATER
 	dw NoEffect            ; TWISTEDSPOON
-	dw NoEffect            ; WHT_APRICORN
+	dw NoEffect            ; HEAL_CHARM
 	dw NoEffect            ; BLACKBELT_I
-	dw NoEffect            ; BLK_APRICORN
+	dw NoEffect            ; LULL_CHARM
 	dw NoEffect            ; PNK_APRICORN
 	dw NoEffect            ; BLACKGLASSES
 	dw NoEffect            ; PINK_BOW
@@ -151,6 +151,23 @@ ItemEffects:
 	dw NoEffect            ; ITEM_B3
 	assert_table_length ITEM_B3
 ; The items past ITEM_B3 have no effect entries and cannot be used (ITEMMENU_NOUSE).
+
+HC_CatchCharm:
+; CATCH CHARM: a = catch rate in and out, a quarter better (255 at most)
+	push bc
+	ld c, a
+	ld a, CATCH_CHARM
+	call HC_HasCharm
+	ld a, c
+	jr nc, .done
+	srl c
+	srl c
+	add c
+	jr nc, .done
+	ld a, $ff
+.done
+	pop bc
+	ret
 
 PokeBallEffect:
 ; BUG: The Dude's catching tutorial may crash if his Poké Ball can't be used (see docs/bugs_and_glitches.md)
@@ -310,6 +327,7 @@ PokeBallEffect:
 .max_2
 
 .skip_hp_calc
+	call HC_CatchCharm
 	ld b, a
 	ld [wFinalCatchRate], a
 	call Random

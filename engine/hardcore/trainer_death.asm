@@ -57,26 +57,21 @@ FirstKillRevealScript::
 	sjump TrainerDeathScript
 
 HC_RevealAftermath:
+	; Brief on purpose: an accident, a quake, one rule. (The long "you were the killer all along" narration is gone.)
 	clearevent EVENT_HC_REVEAL_PENDING
-	pause 30
+	pause 20
 	opentext
 	writetext HC_RevealText1
 	waitbutton
-	writetext HC_RevealText2
-	waitbutton
-	writetext HC_RevealText3
-	waitbutton
-	writetext HC_RevealText4
-	waitbutton
 	closetext
-	pause 30
+	pause 10
 	playsound SFX_ELEVATOR_END
 	earthquake 30
 	waitsfx
 	opentext
-	writetext HC_RevealText5
+	writetext HC_RevealText2
 	waitbutton
-	writetext HC_RevealText6
+	writetext HC_RevealText3
 	waitbutton
 	closetext
 	special RestartMapMusic
@@ -152,8 +147,14 @@ HC_ItemDropText:
 HC_RollItemDrop:
 ; wScriptVar = an expendable item for the kill count reached so far, or 0 for nothing (about 1 body in 4).
 ; The kill counter is already past this kill's predecessor, so the tiers are 0 to HC_DROP_TIER1-1, up to HC_DROP_TIER2-1, up to HC_DROP_TIER3-1 and beyond (areas/counts.py).
+	ld b, 64
+	ld a, LOOT_CHARM
+	call HC_HasCharm
+	jr nc, .roll
+	ld b, 96 ; LOOT CHARM: one body in 2.7 instead of one in 4
+.roll
 	call Random
-	cp 64
+	cp b
 	jr c, .drop
 	xor a
 	ld [wScriptVar], a
@@ -296,6 +297,17 @@ HC_RollLoot:
 	ld a, b
 	adc 0
 	ld b, a
+	ld a, PURSE_CHARM
+	call HC_HasCharm
+	jr nc, .no_purse
+	ld h, b
+	ld l, c
+	srl h
+	rr l
+	add hl, bc ; half again as much
+	ld b, h
+	ld c, l
+.no_purse
 	xor a
 	ldh [hMoneyTemp], a
 	ld a, b

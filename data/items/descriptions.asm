@@ -63,19 +63,19 @@ ItemDescriptions:
 	dw KingsRockDesc
 	dw BitterBerryDesc
 	dw MintBerryDesc
-	dw RedApricornDesc
+	dw ExpCharmDesc
 	dw TinyMushroomDesc
 	dw BigMushroomDesc
 	dw SilverPowderDesc
-	dw BluApricornDesc
-	dw YlwApricornDesc
-	dw GrnApricornDesc
+	dw CatchCharmDesc
+	dw PurseCharmDesc
+	dw LootCharmDesc
 	dw CleanseTagDesc
 	dw MysticWaterDesc
 	dw TwistedSpoonDesc
-	dw WhtApricornDesc
+	dw HealCharmDesc
 	dw BlackbeltDesc
-	dw BlkApricornDesc
+	dw LullCharmDesc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw PinkBowDesc
@@ -447,8 +447,9 @@ MintBerryDesc:
 	db   "A self-awakening"
 	next "for sleep. (HOLD)@"
 
-RedApricornDesc:
-	db   "A red APRICORN.@"
+ExpCharmDesc:
+	db   "EXP up by a fifth"
+	next "in every fight.@"
 
 TinyMushroomDesc:
 	db   "An ordinary mush-"
@@ -462,14 +463,17 @@ SilverPowderDesc:
 	db   "Powers up bug-type"
 	next "moves. (HOLD)@"
 
-BluApricornDesc:
-	db   "A blue APRICORN.@"
+CatchCharmDesc:
+	db   "A quarter better"
+	next "catch chance.@"
 
-YlwApricornDesc:
-	db   "A yellow APRICORN.@"
+PurseCharmDesc:
+	db   "Bodies carry half"
+	next "again as much.@"
 
-GrnApricornDesc:
-	db   "A green APRICORN.@"
+LootCharmDesc:
+	db   "Bodies drop items"
+	next "more often.@"
 
 CleanseTagDesc:
 	db   "Helps repel wild"
@@ -483,16 +487,17 @@ TwistedSpoonDesc:
 	db   "Powers up psychic-"
 	next "type moves. (HOLD)@"
 
-WhtApricornDesc:
-	db   "A white APRICORN.@"
+HealCharmDesc:
+	db   "The party heals a"
+	next "bit as you walk.@"
 
 BlackbeltDesc:
 	db   "Boosts fighting-"
 	next "type moves. (HOLD)@"
 
-BlkApricornDesc:
-	db   "A black APRICORN."
-	next "@"
+LullCharmDesc:
+	db   "Fewer wild fights"
+	next "as you walk.@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."

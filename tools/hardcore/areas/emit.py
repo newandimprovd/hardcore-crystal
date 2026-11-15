@@ -59,6 +59,8 @@ def emit_data(w):
 
 
 def emit_flags(w):
+    left = [(t, e[1]) for t, q in getattr(w, "gift_hermits", {}).items() for e in q]
+    assert not left, f"gift hermits that found no glade: {left}"
     o = [HEADER]
     for name, idx in w.flag_names:
         o.append(f"DEF {name} EQU {idx}")

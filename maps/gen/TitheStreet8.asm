@@ -12,15 +12,51 @@ TitheStreet8Pickup:
 TitheStreet8Hidden:
 	hiddenitem REVIVE, EVENT_GEN_TITHE_STREET8_HIDDEN
 
-TitheStreet8Hermit:
-	jumptextfaceplayer TitheStreet8HermitText
+TitheStreet8GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_TITHE_STREET8_HGIFT
+	iftrue .Done
+	writetext TitheStreet8GiftHermitText
+	waitbutton
+	verbosegiveitem HP_UP
+	iffalse .NoRoom
+	setevent EVENT_GEN_TITHE_STREET8_HGIFT
+.Done:
+	writetext TitheStreet8GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-TitheStreet8HermitText:
-	text "Take the roots."
-	line "Take the berries."
-	para "Take whatever. I'm"
-	line "not the"
-	para "government."
+.NoRoom:
+	writetext TitheStreet8GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+TitheStreet8GiftHermitText:
+	text "A banker's last"
+	line "wish: spend the"
+	para "reserves. I'm"
+	line "spending mine."
+	para "This is HP UP. It"
+	line "makes a body hold"
+	para "more of itself."
+	line "Mine holds mostly"
+	para "regret."
+	done
+
+TitheStreet8GiftHermitAfterText:
+	text "Interest is for"
+	line "the weak. Drink."
+	done
+
+TitheStreet8GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 TitheStreet8SeenText:
@@ -73,7 +109,7 @@ TitheStreet8_MapEvents:
 
 	def_object_events
 	object_event 19, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet8Pickup, EVENT_GEN_TITHE_STREET8_PICKUP
-	object_event 17, 12, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet8Hermit, -1
+	object_event 17, 12, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet8GiftHermit, -1
 	object_event 16, 24, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet8Trainer0, -1
 	object_event 21, 24, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet8Trainer1, -1
 	object_event 12, 20, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet8Trainer2, -1

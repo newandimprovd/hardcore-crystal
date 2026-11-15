@@ -12,14 +12,54 @@ LotusStreet3Pickup:
 LotusStreet3Hidden:
 	hiddenitem ETHER, EVENT_GEN_LOTUS_STREET3_HIDDEN
 
-LotusStreet3Hermit:
-	jumptextfaceplayer LotusStreet3HermitText
+LotusStreet3GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_LOTUS_STREET3_HGIFT
+	iftrue .Done
+	writetext LotusStreet3GiftHermitText
+	waitbutton
+	verbosegiveitem CATCH_CHARM
+	iffalse .NoRoom
+	setevent EVENT_GEN_LOTUS_STREET3_HGIFT
+.Done:
+	writetext LotusStreet3GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-LotusStreet3HermitText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+.NoRoom:
+	writetext LotusStreet3GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusStreet3GiftHermitText:
+	text "I've never caught"
+	line "anything but a"
+	para "cold. Take this"
+	line "CATCH CHARM. A"
+	para "quarter better"
+	line "odds on the wild"
+	para "ones. The cold"
+	line "stays mine. I've"
+	para "grown fond of it."
+	done
+
+LotusStreet3GiftHermitAfterText:
+	text "Be gentle with the"
+	line "ball. It has"
+	para "feelings. They're"
+	line "all about being"
+	para "thrown."
+	done
+
+LotusStreet3GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 LotusStreet3SeenText:
@@ -72,7 +112,7 @@ LotusStreet3_MapEvents:
 
 	def_object_events
 	object_event 17, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet3Pickup, EVENT_GEN_LOTUS_STREET3_PICKUP
-	object_event 17, 22, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusStreet3Hermit, -1
+	object_event 17, 22, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusStreet3GiftHermit, -1
 	object_event  8, 24, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet3Trainer0, -1
 	object_event  8, 20, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet3Trainer1, -1
 	object_event 13, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet3Trainer2, -1

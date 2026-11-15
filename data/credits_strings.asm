@@ -104,6 +104,19 @@ CreditsStringsPointers:
 	dw .UsCoordination
 	dw .TextTranslation
 	dw .PaadTesting
+	dw .HcTitle ; HC
+	dw .HcTitleSub ; HC
+	dw .HcStory ; HC
+	dw .HcTheAuthor ; HC
+	dw .HcCoCreator ; HC
+	dw .HcClaude ; HC
+	dw .HcAnthropic ; HC
+	dw .HcBuiltOn ; HC
+	dw .HcPokecrystal ; HC
+	dw .HcDisassembly ; HC
+	dw .HcMemory ; HC
+	dw .HcTimmy ; HC
+	dw .HcOthers ; HC
 	assert_table_length NUM_CREDITS_STRINGS
 
 .SatoshiTajiri:       db "   SATOSHI TAJIRI@"         ; "たじり　さとし@"
@@ -212,6 +225,19 @@ CreditsStringsPointers:
 .UsCoordination:      db "  US COORDINATION@"
 .TextTranslation:     db "  TEXT TRANSLATION@"
 .PaadTesting:         db "    PAAD TESTING@"
+.HcTitle:             db "   HARDCORE CRYSTAL@"
+.HcTitleSub:          db "A TOTAL CONVERSION@"
+.HcStory:             db "STORY AND DIRECTION@"
+.HcTheAuthor:         db "     THE AUTHOR@"
+.HcCoCreator:         db "    CO-CREATOR@"
+.HcClaude:            db "      CLAUDE@"
+.HcAnthropic:         db "     ANTHROPIC@"
+.HcBuiltOn:           db "  BUILT ON THE PRET@"
+.HcPokecrystal:       db "    POKECRYSTAL@"
+.HcDisassembly:       db "    DISASSEMBLY@"
+.HcMemory:            db "  IN LOVING MEMORY@"
+.HcTimmy:             db "       TIMMY@"
+.HcOthers:            db "   AND 499 OTHERS@"
 
 .Copyright:
 INCLUDE "data/copyright.asm"

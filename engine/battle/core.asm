@@ -5848,6 +5848,7 @@ GiveExperiencePoints:
 	ld a, [hl]
 	cp LUCKY_EGG
 	call z, BoostExp
+	call HC_ExpCharm
 	ld a, [wHCShareOther]
 	and a
 	jr z, .hc_loud
@@ -6262,6 +6263,32 @@ BoostExp:
 	ldh a, [hProduct + 2]
 	adc b
 	ldh [hProduct + 2], a
+	pop bc
+	ret
+
+HC_ExpCharm:
+; EXP CHARM: experience times 6/5 (the quotient of the experience calculation is in hQuotient + 2 and + 3)
+	ld a, EXP_CHARM
+	call HC_HasCharm
+	ret nc
+	push bc
+	ldh a, [hQuotient + 2]
+	ld b, a
+	ldh a, [hQuotient + 3]
+	ld c, a
+	xor a
+	ldh [hMultiplicand + 0], a
+	ld a, b
+	ldh [hMultiplicand + 1], a
+	ld a, c
+	ldh [hMultiplicand + 2], a
+	ld a, 6
+	ldh [hMultiplier], a
+	call Multiply
+	ld a, 5
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
 	pop bc
 	ret
 

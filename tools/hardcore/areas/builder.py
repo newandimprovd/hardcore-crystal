@@ -3,7 +3,7 @@ from .flags import flag_once
 from . import boutique as shops
 from .layout import (FACE, boss_room, chain, gatehouse, house_interior, boutique_interior, lane, mart_interior, plaza, pokecenter_interior)
 from .town import plaza2
-from .wayfolk import GIFT, GIFT_AFTER, GIFT_ITEMS, HERMIT, TOWNIE, TOWNIE2
+from .wayfolk import GIFT, GIFT_AFTER, GIFT_HERMITS, GIFT_ITEMS, HERMIT, TOWNIE, TOWNIE2
 from .trail import trail
 from .party import make_party
 from .text import Text
@@ -126,7 +126,38 @@ def furnish_lane(w, g, m, reserve, total_lanes=75):
         x, y = R.choice(cells)
         tag = area_tag(m)
         sp = R.choice(people_sprites(g))
-        plain_npc(m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}Hermit", R.choice(HERMIT[tag]))
+        queue = gift_queue(w)[tag]
+        lane = int(m.name[len(tag) + 6:]) if m.name.startswith(tag + "Street") else 0
+        if queue and queue[0][0] <= lane:  # a hermit with a present is due in this area: this glade's hermit is him
+            _, item, speech, after = queue.pop(0)
+            gift_hermit(w, m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}GiftHermit", item, speech, after)
+        else:
+            plain_npc(m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}Hermit", R.choice(HERMIT[tag]))
+
+
+def gift_queue(w):
+    """The gift hermits still to be placed, per area, in lane order (areas/wayfolk.py GIFT_HERMITS); emit.py checks that none is left over."""
+    if not hasattr(w, "gift_hermits"):
+        w.gift_hermits = {t: [] for t in ("Tithe", "Grove", "Axiom", "Lotus", "Dis")}
+        for tag, lane, item, speech, after in GIFT_HERMITS:
+            w.gift_hermits[tag].append((lane, item, speech, after))
+        for q in w.gift_hermits.values():
+            q.sort(key=lambda e: e[0])
+    return w.gift_hermits
+
+
+def gift_hermit(w, m, x, y, sprite, pal, face, label, item, speech, after):
+    """A hermit in a glade who hands over one item (a charm or a stat item) without a fight, once."""
+    flag = w.flag(f"EVENT_GEN_{m.const}_HGIFT")
+    m.scripts.append(
+        f"{label}:\n\tfaceplayer\n\topentext\n\tcheckevent {flag}\n\tiftrue .Done\n\twritetext {label}Text\n\twaitbutton\n"
+        f"\tverbosegiveitem {item}\n\tiffalse .NoRoom\n\tsetevent {flag}\n"
+        f".Done:\n\twritetext {label}AfterText\n\twaitbutton\n\tclosetext\n\tend\n\n"
+        f".NoRoom:\n\twritetext {label}NoRoomText\n\twaitbutton\n\tclosetext\n\tend\n")
+    m.scripts.append(Text(speech).emit(f"{label}Text"))
+    m.scripts.append(Text(after).emit(f"{label}AfterText"))
+    m.scripts.append(Text("Your bag is full. The gift will wait. So will I. I have nothing else on.").emit(f"{label}NoRoomText"))
+    m.obj(x, y, sprite, FACE[face], label, pal=pal)
 
 
 def crowd(w, g, m, n=9, plaza_no=1):

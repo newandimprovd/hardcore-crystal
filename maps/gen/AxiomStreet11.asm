@@ -50,15 +50,51 @@ AxiomStreet11Pickup:
 AxiomStreet11Hidden:
 	hiddenitem ELIXER, EVENT_GEN_AXIOM_STREET11_HIDDEN
 
-AxiomStreet11Hermit:
-	jumptextfaceplayer AxiomStreet11HermitText
+AxiomStreet11GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_AXIOM_STREET11_HGIFT
+	iftrue .Done
+	writetext AxiomStreet11GiftHermitText
+	waitbutton
+	verbosegiveitem IRON
+	iffalse .NoRoom
+	setevent EVENT_GEN_AXIOM_STREET11_HGIFT
+.Done:
+	writetext AxiomStreet11GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-AxiomStreet11HermitText:
-	text "I escaped the"
-	line "Registry. I'm no"
-	para "longer a number."
-	line "I'm a letter. The"
-	para "letter is Q."
+.NoRoom:
+	writetext AxiomStreet11GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+AxiomStreet11GiftHermitText:
+	text "This is IRON."
+	line "Filed under:"
+	para "things I took from"
+	line "the Registry on my"
+	para "way out. Take it"
+	line "before they notice"
+	para "the form is"
+	line "missing."
+	done
+
+AxiomStreet11GiftHermitAfterText:
+	text "Form 31-C: Request"
+	line "to be left alone."
+	para "Approved. By me."
+	done
+
+AxiomStreet11GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 AxiomStreet11SeenText:
@@ -116,7 +152,7 @@ AxiomStreet11_MapEvents:
 	object_event  6, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet11GateScript, EVENT_GEN_AXIOM_STREET11_GATE
 	object_event  7, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet11GateScript, EVENT_GEN_AXIOM_STREET11_GATE
 	object_event 12, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet11Pickup, EVENT_GEN_AXIOM_STREET11_PICKUP
-	object_event 19, 22, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet11Hermit, -1
+	object_event 19, 22, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet11GiftHermit, -1
 	object_event  4, 28, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer0, -1
 	object_event  9, 24, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer1, -1
 	object_event  4, 20, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet11Trainer2, -1

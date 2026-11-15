@@ -12,15 +12,50 @@ GroveStreet14Pickup:
 GroveStreet14Hidden:
 	hiddenitem ETHER, EVENT_GEN_GROVE_STREET14_HIDDEN
 
-GroveStreet14Hermit:
-	jumptextfaceplayer GroveStreet14HermitText
+GroveStreet14GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_GROVE_STREET14_HGIFT
+	iftrue .Done
+	writetext GroveStreet14GiftHermitText
+	waitbutton
+	verbosegiveitem CARBOS
+	iffalse .NoRoom
+	setevent EVENT_GEN_GROVE_STREET14_HGIFT
+.Done:
+	writetext GroveStreet14GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-GroveStreet14HermitText:
-	text "Have you tried not"
-	line "fighting? I've"
-	para "been not fighting"
-	line "for years. Nobody"
-	para "asked me to stop."
+.NoRoom:
+	writetext GroveStreet14GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+GroveStreet14GiftHermitText:
+	text "The commune ran"
+	line "out of everything"
+	para "but CARBOS. We ate"
+	line "it for every meal"
+	para "for a year. Take"
+	line "the last one. I"
+	para "can't look at it."
+	done
+
+GroveStreet14GiftHermitAfterText:
+	text "Run fast. Run far."
+	line "Don't look back at"
+	para "the porridge."
+	done
+
+GroveStreet14GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 GroveStreet14SeenText:
@@ -73,7 +108,7 @@ GroveStreet14_MapEvents:
 
 	def_object_events
 	object_event 18, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet14Pickup, EVENT_GEN_GROVE_STREET14_PICKUP
-	object_event 21, 12, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GroveStreet14Hermit, -1
+	object_event 21, 12, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GroveStreet14GiftHermit, -1
 	object_event 14, 24, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet14Trainer0, -1
 	object_event 19, 24, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet14Trainer1, -1
 	object_event 10, 20, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet14Trainer2, -1

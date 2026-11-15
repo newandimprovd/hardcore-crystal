@@ -162,8 +162,23 @@ TryWildEncounter::
 	call GetMapEncounterRate
 	call ApplyMusicEffectOnEncounterRate
 	call ApplyCleanseTagEffectOnEncounterRate
+	call HC_ApplyLullCharm
 	call Random
 	cp b
+	ret
+
+HC_ApplyLullCharm:
+; LULL CHARM: a quarter fewer wild encounters (b = encounter rate)
+	ld a, LULL_CHARM
+	call HC_HasCharm
+	ret nc
+	ld a, b
+	srl a
+	srl a
+	cpl
+	inc a
+	add b ; b - b / 4
+	ld b, a
 	ret
 
 GetMapEncounterRate:

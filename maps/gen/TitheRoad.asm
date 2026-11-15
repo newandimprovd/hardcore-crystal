@@ -9,16 +9,54 @@ TitheRoad_MapScripts:
 TitheRoadPickup:
 	itemball TM_HEADBUTT
 
-TitheRoadHermit:
-	jumptextfaceplayer TitheRoadHermitText
+TitheRoadGiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_TITHE_ROAD_HGIFT
+	iftrue .Done
+	writetext TitheRoadGiftHermitText
+	waitbutton
+	verbosegiveitem LULL_CHARM
+	iffalse .NoRoom
+	setevent EVENT_GEN_TITHE_ROAD_HGIFT
+.Done:
+	writetext TitheRoadGiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-TitheRoadHermitText:
-	text "I left the city to"
-	line "escape the tithe."
-	para "The trees also"
-	line "want ten percent."
-	para "Of what, they"
-	line "won't say."
+.NoRoom:
+	writetext TitheRoadGiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+TitheRoadGiftHermitText:
+	text "The grass here"
+	line "hates everyone. I"
+	para "sit in the one"
+	line "spot it ignores."
+	para "Take this LULL"
+	line "CHARM. The wild"
+	para "ones will bother"
+	line "you less. The"
+	para "tithe collectors"
+	line "won't."
+	done
+
+TitheRoadGiftHermitAfterText:
+	text "It works better if"
+	line "you don't think"
+	para "about it. I try"
+	line "never to."
+	done
+
+TitheRoadGiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 TitheRoadTipsSign:
@@ -120,7 +158,7 @@ TitheRoad_MapEvents:
 
 	def_object_events
 	object_event 16, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheRoadPickup, EVENT_GEN_TITHE_ROAD_PICKUP
-	object_event 18, 22, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheRoadHermit, -1
+	object_event 18, 22, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheRoadGiftHermit, -1
 	object_event  4, 24, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer0, -1
 	object_event  9, 24, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer1, -1
 	object_event  8, 20, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheRoadTrainer2, -1

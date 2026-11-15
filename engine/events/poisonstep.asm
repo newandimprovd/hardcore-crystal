@@ -1,4 +1,61 @@
+HC_HealStep:
+; HEAL CHARM: every four steps each living party member regains 1 HP and 1/128 of its maximum.
+	ld a, HEAL_CHARM
+	call HC_HasCharm
+	ret nc
+	ld a, [wPartyCount]
+	and a
+	ret z
+	ld c, a
+	ld hl, wPartyMon1HP
+.loop
+	push bc
+	push hl
+	ld a, [hli]
+	ld d, a
+	ld a, [hld]
+	ld e, a ; de = HP, hl = HP high byte
+	or d
+	jr z, .next ; the fainted stay fainted
+	push hl
+	inc hl
+	inc hl ; MON_MAXHP follows MON_HP
+	ld a, [hli]
+	ld b, a
+	ld c, [hl] ; bc = maximum HP
+	pop hl
+	ld a, c
+	rlca ; carry = bit 7 of the low byte
+	ld a, b
+	rla ; a = maximum HP / 128
+	inc a
+	add e
+	ld e, a
+	jr nc, .added
+	inc d
+.added
+	ld a, e
+	sub c
+	ld a, d
+	sbc b
+	jr c, .store ; still below the maximum
+	ld d, b
+	ld e, c
+.store
+	ld a, d
+	ld [hli], a
+	ld [hl], e
+.next
+	pop hl
+	ld de, PARTYMON_STRUCT_LENGTH
+	add hl, de
+	pop bc
+	dec c
+	jr nz, .loop
+	ret
+
 DoPoisonStep::
+	call HC_HealStep
 	ld a, [wPartyCount]
 	and a
 	jr z, .no_faint

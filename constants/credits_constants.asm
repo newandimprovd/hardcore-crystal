@@ -103,6 +103,19 @@
 	const US_COORDINATION
 	const TEXT_TRANSLATION
 	const PAAD_TESTING
+	const HC_TITLE ; HC
+	const HC_TITLE_SUB ; HC
+	const HC_STORY ; HC
+	const HC_THE_AUTHOR ; HC
+	const HC_COCREATOR ; HC
+	const HC_CLAUDE ; HC
+	const HC_ANTHROPIC ; HC
+	const HC_BUILT_ON ; HC
+	const HC_POKECRYSTAL ; HC
+	const HC_DISASSEMBLY ; HC
+	const HC_MEMORY ; HC
+	const HC_TIMMY ; HC
+	const HC_OTHERS ; HC
 DEF NUM_CREDITS_STRINGS EQU const_value
 
 ; CreditsScript indexes (see data/credits_script.asm)

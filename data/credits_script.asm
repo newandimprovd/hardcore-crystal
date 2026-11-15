@@ -274,6 +274,35 @@ CreditsScript:
 
 	db CREDITS_WAIT, 12
 
+; Hardcore Crystal
+	db             HC_TITLE, 1
+	db         HC_TITLE_SUB, 2
+
+	db CREDITS_WAIT, 12
+
+	db             HC_STORY, 1
+	db        HC_THE_AUTHOR, 2
+
+	db CREDITS_WAIT, 12
+
+	db         HC_COCREATOR, 1
+	db            HC_CLAUDE, 2
+	db         HC_ANTHROPIC, 3
+
+	db CREDITS_WAIT, 12
+
+	db          HC_BUILT_ON, 1
+	db       HC_POKECRYSTAL, 2
+	db       HC_DISASSEMBLY, 3
+
+	db CREDITS_WAIT, 12
+
+	db            HC_MEMORY, 1
+	db             HC_TIMMY, 2
+	db            HC_OTHERS, 3
+
+	db CREDITS_WAIT, 12
+
 	db            COPYRIGHT, 1
 
 	db CREDITS_WAIT, 9

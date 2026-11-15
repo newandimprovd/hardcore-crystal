@@ -9,13 +9,53 @@ DisStreet5_MapScripts:
 DisStreet5Pickup:
 	itemball TM_HYPER_BEAM
 
-DisStreet5Hermit:
-	jumptextfaceplayer DisStreet5HermitText
+DisStreet5GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_DIS_STREET5_HGIFT
+	iftrue .Done
+	writetext DisStreet5GiftHermitText
+	waitbutton
+	verbosegiveitem LOOT_CHARM
+	iffalse .NoRoom
+	setevent EVENT_GEN_DIS_STREET5_HGIFT
+.Done:
+	writetext DisStreet5GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-DisStreet5HermitText:
-	text "The river is not"
-	line "water. It's"
-	para "deadlines."
+.NoRoom:
+	writetext DisStreet5GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+DisStreet5GiftHermitText:
+	text "Everyone here is"
+	line "dead or about to"
+	para "be. I check"
+	line "pockets for a"
+	para "living. Take this"
+	line "LOOT CHARM. More"
+	para "of the dead will"
+	line "have something."
+	para "That's what we"
+	line "call progress."
+	done
+
+DisStreet5GiftHermitAfterText:
+	text "Don't thank me."
+	line "Thank the dead."
+	para "They won't answer."
+	done
+
+DisStreet5GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 DisStreet5SeenText:
@@ -67,7 +107,7 @@ DisStreet5_MapEvents:
 
 	def_object_events
 	object_event 18, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet5Pickup, EVENT_GEN_DIS_STREET5_PICKUP
-	object_event 21, 13, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisStreet5Hermit, -1
+	object_event 21, 13, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisStreet5GiftHermit, -1
 	object_event  8, 24, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet5Trainer0, -1
 	object_event 13, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet5Trainer1, -1
 	object_event  8, 20, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet5Trainer2, -1

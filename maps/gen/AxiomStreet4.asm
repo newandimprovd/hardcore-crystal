@@ -12,15 +12,54 @@ AxiomStreet4Pickup:
 AxiomStreet4Hidden:
 	hiddenitem PP_UP, EVENT_GEN_AXIOM_STREET4_HIDDEN
 
-AxiomStreet4Hermit:
-	jumptextfaceplayer AxiomStreet4HermitText
+AxiomStreet4GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_AXIOM_STREET4_HGIFT
+	iftrue .Done
+	writetext AxiomStreet4GiftHermitText
+	waitbutton
+	verbosegiveitem PURSE_CHARM
+	iffalse .NoRoom
+	setevent EVENT_GEN_AXIOM_STREET4_HGIFT
+.Done:
+	writetext AxiomStreet4GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-AxiomStreet4HermitText:
-	text "I escaped the"
-	line "Registry. I'm no"
-	para "longer a number."
-	line "I'm a letter. The"
-	para "letter is Q."
+.NoRoom:
+	writetext AxiomStreet4GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+AxiomStreet4GiftHermitText:
+	text "I audited a corpse"
+	line "last week. The"
+	para "pockets were"
+	line "light. Take this"
+	para "PURSE CHARM. The"
+	line "dead will carry"
+	para "half again as"
+	line "much."
+	para "Retroactively."
+	line "It's fraud, but"
+	para "fraud for you."
+	done
+
+AxiomStreet4GiftHermitAfterText:
+	text "File no report. I"
+	line "was never here."
+	para "I'm a letter."
+	done
+
+AxiomStreet4GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 AxiomStreet4SeenText:
@@ -73,7 +112,7 @@ AxiomStreet4_MapEvents:
 
 	def_object_events
 	object_event 20, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet4Pickup, EVENT_GEN_AXIOM_STREET4_PICKUP
-	object_event 15, 14, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet4Hermit, -1
+	object_event 15, 14, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet4GiftHermit, -1
 	object_event 10, 24, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet4Trainer0, -1
 	object_event 15, 24, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet4Trainer1, -1
 	object_event 10, 20, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet4Trainer2, -1

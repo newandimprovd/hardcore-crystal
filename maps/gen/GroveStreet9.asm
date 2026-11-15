@@ -12,15 +12,51 @@ GroveStreet9Pickup:
 GroveStreet9Hidden:
 	hiddenitem ETHER, EVENT_GEN_GROVE_STREET9_HIDDEN
 
-GroveStreet9Hermit:
-	jumptextfaceplayer GroveStreet9HermitText
+GroveStreet9GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_GROVE_STREET9_HGIFT
+	iftrue .Done
+	writetext GroveStreet9GiftHermitText
+	waitbutton
+	verbosegiveitem PROTEIN
+	iffalse .NoRoom
+	setevent EVENT_GEN_GROVE_STREET9_HGIFT
+.Done:
+	writetext GroveStreet9GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-GroveStreet9HermitText:
-	text "This glade belongs"
-	line "to everyone."
-	para "Please leave. I"
-	line "mean it"
-	para "communally."
+.NoRoom:
+	writetext GroveStreet9GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+GroveStreet9GiftHermitText:
+	text "I live on"
+	line "mushrooms and"
+	para "spite. This is"
+	line "PROTEIN, a real"
+	para "one. Don't tell"
+	line "the mushrooms."
+	para "They think I'm"
+	line "loyal."
+	done
+
+GroveStreet9GiftHermitAfterText:
+	text "Strength is just"
+	line "stubbornness with"
+	para "a diet."
+	done
+
+GroveStreet9GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 GroveStreet9SeenText:
@@ -76,7 +112,7 @@ GroveStreet9_MapEvents:
 
 	def_object_events
 	object_event 12, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet9Pickup, EVENT_GEN_GROVE_STREET9_PICKUP
-	object_event  4, 24, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet9Hermit, -1
+	object_event  4, 24, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet9GiftHermit, -1
 	object_event 12, 28, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet9Trainer0, -1
 	object_event 17, 28, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet9Trainer1, -1
 	object_event 16, 24, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet9Trainer2, -1

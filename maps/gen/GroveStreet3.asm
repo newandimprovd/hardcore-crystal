@@ -12,15 +12,56 @@ GroveStreet3Pickup:
 GroveStreet3Hidden:
 	hiddenitem AWAKENING, EVENT_GEN_GROVE_STREET3_HIDDEN
 
-GroveStreet3Hermit:
-	jumptextfaceplayer GroveStreet3HermitText
+GroveStreet3GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_GROVE_STREET3_HGIFT
+	iftrue .Done
+	writetext GroveStreet3GiftHermitText
+	waitbutton
+	verbosegiveitem EXP_CHARM
+	iffalse .NoRoom
+	setevent EVENT_GEN_GROVE_STREET3_HGIFT
+.Done:
+	writetext GroveStreet3GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-GroveStreet3HermitText:
-	text "I'm founding a"
-	line "cult of one."
-	para "Membership is"
-	line "great. The leader"
-	para "is a little tired."
+.NoRoom:
+	writetext GroveStreet3GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+GroveStreet3GiftHermitText:
+	text "I share"
+	line "everything, mostly"
+	para "with the"
+	line "squirrels. Take"
+	para "this EXP CHARM."
+	line "Every fight will"
+	para "teach a fifth"
+	line "more. The dead,"
+	para "sadly, learn"
+	line "nothing."
+	done
+
+GroveStreet3GiftHermitAfterText:
+	text "It's called"
+	line "experience."
+	para "Somebody always"
+	line "pays for it."
+	para "Usually someone"
+	line "else."
+	done
+
+GroveStreet3GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 GroveStreet3SeenText:
@@ -76,7 +117,7 @@ GroveStreet3_MapEvents:
 
 	def_object_events
 	object_event 14, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet3Pickup, EVENT_GEN_GROVE_STREET3_PICKUP
-	object_event 19, 13, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GroveStreet3Hermit, -1
+	object_event 19, 13, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GroveStreet3GiftHermit, -1
 	object_event  6, 28, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer0, -1
 	object_event 15, 24, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer1, -1
 	object_event  6, 20, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer2, -1

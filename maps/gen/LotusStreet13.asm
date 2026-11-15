@@ -12,15 +12,52 @@ LotusStreet13Pickup:
 LotusStreet13Hidden:
 	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET13_HIDDEN
 
-LotusStreet13Hermit:
-	jumptextfaceplayer LotusStreet13HermitText
+LotusStreet13GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_LOTUS_STREET13_HGIFT
+	iftrue .Done
+	writetext LotusStreet13GiftHermitText
+	waitbutton
+	verbosegiveitem PP_UP
+	iffalse .NoRoom
+	setevent EVENT_GEN_LOTUS_STREET13_HGIFT
+.Done:
+	writetext LotusStreet13GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-LotusStreet13HermitText:
-	text "I saw a trainer"
-	line "yawn mid-attack."
-	para "It was the most"
-	line "honest violence I"
-	para "have ever seen."
+.NoRoom:
+	writetext LotusStreet13GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusStreet13GiftHermitText:
+	text "A pill that makes"
+	line "a move last"
+	para "longer. This is PP"
+	line "UP. Use it on the"
+	para "move you love. Or"
+	line "the one you hate."
+	para "They're all dying"
+	line "anyway."
+	done
+
+LotusStreet13GiftHermitAfterText:
+	text "Everything runs"
+	line "out. The trick is"
+	para "to be elsewhere"
+	line "when it does."
+	done
+
+LotusStreet13GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 LotusStreet13SeenText:
@@ -76,7 +113,7 @@ LotusStreet13_MapEvents:
 
 	def_object_events
 	object_event 20,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet13Pickup, EVENT_GEN_LOTUS_STREET13_PICKUP
-	object_event 15, 15, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet13Hermit, -1
+	object_event 15, 15, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet13GiftHermit, -1
 	object_event  6, 28, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer0, -1
 	object_event 15, 24, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer1, -1
 	object_event 10, 20, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer2, -1

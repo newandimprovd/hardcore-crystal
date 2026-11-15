@@ -8,18 +8,9 @@ from textgen import emit_text
 ROOT = Path(__file__).resolve().parents[2]
 
 REVEAL = [
-    "<PLAYER> looked at the body. Then at <PLAYER>'s own hands. Then at the POKé BALL, "
-    "which had been smiling the whole time.",
+    "Oh no. <PLAYER> has killed TIMMY. By accident. Probably.",
 
-    "A memory arrived. Then another. Then all of them, like a drawer of knives falling open "
-    "in a very quiet kitchen.",
-
-    "Every route. Every trainer. Every handshake after the battle that lasted slightly too long.",
-
-    "<PLAYER> was never a trainer who beat other trainers. <PLAYER> was a trainer who stopped them. "
-    "For good. As a hobby.",
-
-    "Somewhere far away, the map noticed, and quietly stopped being the map.",
+    "The ground shook. Somewhere, something in the world changed, and it did not ask first.",
 
     "From now on every trainer you beat will die. Kills are counted. Try to enjoy the number.",
 ]

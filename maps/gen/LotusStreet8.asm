@@ -12,14 +12,50 @@ LotusStreet8Pickup:
 LotusStreet8Hidden:
 	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET8_HIDDEN
 
-LotusStreet8Hermit:
-	jumptextfaceplayer LotusStreet8HermitText
+LotusStreet8GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_LOTUS_STREET8_HGIFT
+	iftrue .Done
+	writetext LotusStreet8GiftHermitText
+	waitbutton
+	verbosegiveitem CALCIUM
+	iffalse .NoRoom
+	setevent EVENT_GEN_LOTUS_STREET8_HGIFT
+.Done:
+	writetext LotusStreet8GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-LotusStreet8HermitText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+.NoRoom:
+	writetext LotusStreet8GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusStreet8GiftHermitText:
+	text "Milk of the sea."
+	line "Don't ask. It's"
+	para "CALCIUM. It builds"
+	line "bones. Mostly"
+	para "other people's,"
+	line "I'm told."
+	done
+
+LotusStreet8GiftHermitAfterText:
+	text "The sea gives. The"
+	line "sea also takes."
+	para "Today it's in a"
+	line "giving mood."
+	done
+
+LotusStreet8GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 LotusStreet8SeenText:
@@ -75,7 +111,7 @@ LotusStreet8_MapEvents:
 
 	def_object_events
 	object_event  3, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet8Pickup, EVENT_GEN_LOTUS_STREET8_PICKUP
-	object_event  2, 18, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet8Hermit, -1
+	object_event  2, 18, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet8GiftHermit, -1
 	object_event 16, 28, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet8Trainer0, -1
 	object_event 12, 24, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet8Trainer1, -1
 	object_event 17, 24, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet8Trainer2, -1

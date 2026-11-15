@@ -68,3 +68,22 @@ CheckItem::
 	pop de
 	pop hl
 	ret
+
+HC_HasCharm::
+; a = a charm (key item). Carry set if the player carries it. Keeps bc, de, hl and wCurItem.
+	push hl
+	push bc
+	ld c, a
+	ld a, [wCurItem]
+	ld b, a
+	ld a, c
+	ld [wCurItem], a
+	push bc
+	ld hl, wNumItems
+	call CheckItem
+	pop bc
+	ld a, b
+	ld [wCurItem], a ; loads leave the carry flag alone
+	pop bc
+	pop hl
+	ret
