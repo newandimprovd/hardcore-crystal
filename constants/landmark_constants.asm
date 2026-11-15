@@ -105,6 +105,7 @@ DEF KANTO_LANDMARK_LAST EQU const_value - 1
 DEF OTHER_LANDMARK EQU const_value
 	const LANDMARK_FAST_SHIP         ; 5f
 
+DEF AREA_LANDMARK EQU const_value
 INCLUDE "constants/area_landmark_constants.asm" ; HC-AREAS
 DEF NUM_LANDMARKS EQU const_value
 

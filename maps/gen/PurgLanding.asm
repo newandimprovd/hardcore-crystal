@@ -30,6 +30,7 @@ PurgLandingBrunoScript:
 	setevent EVENT_PURG_BRUNO_BEATEN
 	setevent EVENT_PURG_NICK
 	setflag ENGINE_MAP_CARD
+	setflag ENGINE_POKEGEAR
 	pause 20
 	special FadeOutToWhite
 	pause 20
@@ -154,9 +155,9 @@ PurgLandingReborn:
 	para "NICK: Hello. I am"
 	line "Nick. I do not"
 	para "know why I am"
-	line "holding a map."
-	para "Here. You will"
-	line "want it."
+	line "holding a map and"
+	para "a #GEAR. Here. You"
+	line "will want them."
 	para "NICK: It has all"
 	line "the entrances of"
 	para "PURGATORIO marked."

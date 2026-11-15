@@ -39,6 +39,9 @@ HC_TestSetup::
 	ld de, ENGINE_POKEGEAR
 	ld b, SET_FLAG
 	farcall EngineFlagAction
+	ld de, ENGINE_MAP_CARD
+	ld b, SET_FLAG
+	farcall EngineFlagAction
 	ld de, ENGINE_POKEDEX
 	ld b, SET_FLAG
 	farcall EngineFlagAction

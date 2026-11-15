@@ -479,8 +479,8 @@ PokegearMap_KantoMap:
 	jr PokegearMap_ContinueMap
 
 PokegearMap_JohtoMap:
-	ld d, JOHTO_LANDMARK_LAST
-	ld e, JOHTO_LANDMARK
+	ld d, LANDMARK_CHERRYGROVE_CITY ; HC: only the three starting places are on this page
+	ld e, LANDMARK_NEW_BARK_TOWN
 PokegearMap_ContinueMap:
 	ld hl, hJoyLast
 	ld a, [hl]
@@ -626,16 +626,9 @@ PokegearMap_UpdateCursorPosition:
 	ret
 
 TownMap_GetKantoLandmarkLimits:
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_HALL_OF_FAME_F, a
-	jr z, .not_hof
-	ld d, KANTO_LANDMARK_LAST
-	ld e, KANTO_LANDMARK
-	ret
-
-.not_hof
-	ld d, LANDMARK_ROUTE_28
-	ld e, LANDMARK_VICTORY_ROAD
+	; HC: the "Kanto" page is the whole world, walked through the generated landmarks only
+	ld d, NUM_LANDMARKS - 1
+	ld e, AREA_LANDMARK
 	ret
 
 Pokegear_SwitchPage:
@@ -742,8 +735,8 @@ _TownMap:
 	ld a, [wTownMapPlayerIconLandmark]
 	cp KANTO_LANDMARK
 	jr nc, .kanto
-	ld d, KANTO_LANDMARK - 1
-	ld e, 1
+	ld d, LANDMARK_CHERRYGROVE_CITY
+	ld e, LANDMARK_NEW_BARK_TOWN
 	call .loop
 	jr .resume
 

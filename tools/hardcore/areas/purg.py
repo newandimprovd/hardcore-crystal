@@ -497,7 +497,7 @@ def landing(g, w, roster, rng):
         ".Ask:\n\twritetext PurgLandingBrunoAsk\n\tyesorno\n\tiffalse .No\n\twritetext PurgLandingBrunoGo\n\twaitbutton\n"
         "\tclosetext\n\twinlosstext PurgLandingBrunoBeatenText, 0\n"
         f"\tloadtrainer MYSTICALMAN, {tid}\n\tstartbattle\n\treloadmapafterbattle\n"
-        "\tsetevent EVENT_PURG_BRUNO_BEATEN\n\tsetevent EVENT_PURG_NICK\n\tsetflag ENGINE_MAP_CARD\n\tpause 20\n"
+        "\tsetevent EVENT_PURG_BRUNO_BEATEN\n\tsetevent EVENT_PURG_NICK\n\tsetflag ENGINE_MAP_CARD\n\tsetflag ENGINE_POKEGEAR\n\tpause 20\n"
         "\tspecial FadeOutToWhite\n\tpause 20\n\tspecial FadeInFromWhite\n\topentext\n\twritetext PurgLandingReborn\n\twaitbutton\n"
         "\twritetext PurgLandingLift\n\tyesorno\n\tiffalse .Stay\n\tclosetext\n\tspecial FadeOutToBlack\n"
         "\twarp PURG_THRESHOLD, 24, 30\n\tend\n"

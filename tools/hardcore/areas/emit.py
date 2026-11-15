@@ -119,7 +119,17 @@ def emit_landmarks(w):
     c = [HEADER]
     t = [HEADER]
     n = [HEADER]
-    for const, x, y, name in w.landmarks:
+    import world_map  # the one world map owns the order (cursor walk) and the pixel positions
+    known = {const: name for const, _, _, name in w.landmarks}
+    assert set(known) == {k for k, *_ in world_map.ORDER}, (set(known) ^ {k for k, *_ in world_map.ORDER})
+    pos = world_map.coords()
+    for const in [k for k, *_ in world_map.ORDER]:
+        x, y = pos[const]
+        name = known[const]
+        # the Pokegear prints a name from column 9: only the first <BSP> becomes a line feed, and a line longer than 11 characters
+        # runs over the right frame into the next tile row (a stray letter on the border)
+        first, _, rest = name.partition("<BSP>")
+        assert len(first) <= 11 and len(rest.replace("<BSP>", " ")) <= 11, f"landmark name too wide: {name}"
         c.append(f"\tconst LANDMARK_{const}")
         label = "".join(p.title() for p in const.split("_")) + "Name"
         t.append(f"\tlandmark {x:3d}, {y:3d}, {label}")

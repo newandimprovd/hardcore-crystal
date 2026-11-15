@@ -107,7 +107,7 @@ BRUNO_GO = "Thank you. Do not hold back. I would feel insulted, and I am already
 BRUNO_BEATEN = "Well. That is that. Tell Nick I said hello."
 BRUNO_REBORN = """The flame in the cave goes out. Someone is standing where Bruno was. He is wearing a very plain shirt.
 
-NICK: Hello. I am Nick. I do not know why I am holding a map. Here. You will want it.
+NICK: Hello. I am Nick. I do not know why I am holding a map and a #GEAR. Here. You will want them.
 
 NICK: It has all the entrances of PURGATORIO marked. I also had a feeling about Teleoplexy. Do you want to hear it? No? That is the correct answer. Later."""
 

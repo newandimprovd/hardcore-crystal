@@ -8,9 +8,9 @@ Landmarks:
 ; entries correspond to constants/landmark_constants.asm
 	table_width 4
 	landmark  -8, -16, SpecialMapName
-	landmark 140, 100, NewBarkTownName
-	landmark 128, 100, Route29Name
-	landmark 100, 100, CherrygroveCityName
+	landmark 132, 116, NewBarkTownName
+	landmark 116, 116, Route29Name
+	landmark 100, 116, CherrygroveCityName
 	landmark 100,  80, Route30Name
 	landmark  96,  60, Route31Name
 	landmark  84,  60, VioletCityName
