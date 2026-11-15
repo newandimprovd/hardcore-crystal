@@ -142,3 +142,5 @@ SECTION "Cries", ROMX
 INCLUDE "data/pokemon/cries.asm"
 
 INCLUDE "audio/cries.asm"
+
+INCLUDE "audio/hc_music.asm" ; HC-MUSIC

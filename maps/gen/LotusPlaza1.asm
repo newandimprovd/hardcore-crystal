@@ -17,6 +17,32 @@ LotusPlaza1Fountain0Text:
 	para "on anyway."
 	done
 
+LotusPlaza1DebateA:
+	jumptextfaceplayer LotusPlaza1DebateAText
+
+LotusPlaza1DebateAText:
+	text "Pleasure is the"
+	line "only good. I've"
+	para "read the"
+	line "philosophers. The"
+	para "good ones had good"
+	line "wine."
+	done
+
+LotusPlaza1DebateB:
+	jumptextfaceplayer LotusPlaza1DebateBText
+
+LotusPlaza1DebateBText:
+	text "Pleasure is a"
+	line "shortcut and the"
+	para "road is the point."
+	line "I say this from a"
+	para "hot tub, where I"
+	line "think best, with a"
+	para "drink I did not"
+	line "pay for."
+	done
+
 LotusPlaza1Giver:
 	faceplayer
 	opentext
@@ -119,29 +145,6 @@ LotusPlaza1Townie6Text:
 	line "Sunday here. The"
 	para "Sunday scaries are"
 	line "permanent."
-	done
-
-LotusPlaza1Townie7:
-	jumptextfaceplayer LotusPlaza1Townie7Text
-
-LotusPlaza1Townie7Text:
-	text "Welcome to the"
-	line "Lotus Coast! The"
-	para "all-inclusive plan"
-	line "includes"
-	para "everything but a"
-	line "reason."
-	done
-
-LotusPlaza1Townie8:
-	jumptextfaceplayer LotusPlaza1Townie8Text
-
-LotusPlaza1Townie8Text:
-	text "Looking for the"
-	line "meaning of life?"
-	para "Try the minibar."
-	line "It's empty. That's"
-	para "the meaning."
 	done
 
 LotusPlaza1CioranBearerScript:
@@ -408,15 +411,15 @@ LotusPlaza1_MapEvents:
 	bg_event 13,  9, BGEVENT_READ, LotusPlaza1Fountain0
 
 	def_object_events
-	object_event 21, 19, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Giver, -1
-	object_event 15, 19, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie1, -1
-	object_event 15,  8, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie2, -1
-	object_event  4, 14, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie3, -1
-	object_event 19, 11, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie4, -1
-	object_event 26,  8, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie5, -1
-	object_event  6,  9, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie6, -1
-	object_event 13,  7, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie7, -1
-	object_event 27, 21, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie8, -1
+	object_event 21, 19, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1DebateA, -1
+	object_event 22, 19, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1DebateB, -1
+	object_event 15, 19, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Giver, -1
+	object_event 15,  8, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie1, -1
+	object_event  4, 14, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie2, -1
+	object_event 19, 11, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie3, -1
+	object_event 26,  8, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie4, -1
+	object_event  6,  9, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie5, -1
+	object_event 13,  7, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie6, -1
 	object_event  6, 17, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranBearerScript, -1
 	object_event 19, 19, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Duel, -1
 

@@ -17,6 +17,29 @@ LotusPlaza4Fountain0Text:
 	para "off the hook."
 	done
 
+LotusPlaza4DebateA:
+	jumptextfaceplayer LotusPlaza4DebateAText
+
+LotusPlaza4DebateAText:
+	text "A yacht is not a"
+	line "boat. It's a"
+	para "personality with a"
+	line "hull."
+	done
+
+LotusPlaza4DebateB:
+	jumptextfaceplayer LotusPlaza4DebateBText
+
+LotusPlaza4DebateBText:
+	text "My yacht is a boat"
+	line "and a therapist."
+	para "It takes me out to"
+	line "sea to cry in the"
+	para "right light, and"
+	line "nobody has to hear"
+	para "it."
+	done
+
 LotusPlaza4Giver:
 	faceplayer
 	opentext
@@ -121,26 +144,6 @@ LotusPlaza4Townie6:
 LotusPlaza4Townie6Text:
 	text "The pool is closed"
 	line "due to depth."
-	done
-
-LotusPlaza4Townie7:
-	jumptextfaceplayer LotusPlaza4Townie7Text
-
-LotusPlaza4Townie7Text:
-	text "I'm so relaxed I"
-	line "forgot to be"
-	para "afraid. Oh no."
-	line "There it is."
-	done
-
-LotusPlaza4Townie8:
-	jumptextfaceplayer LotusPlaza4Townie8Text
-
-LotusPlaza4Townie8Text:
-	text "I booked a week."
-	line "It's been four"
-	para "years. Checkout is"
-	line "a state of mind."
 	done
 
 LotusPlaza4Cioran2BearerScript:
@@ -389,15 +392,15 @@ LotusPlaza4_MapEvents:
 	bg_event  5, 21, BGEVENT_READ, LotusPlaza4Fountain0
 
 	def_object_events
+	object_event  7, 18, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateA, -1
+	object_event  8, 18, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateB, -1
 	object_event 23,  6, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Giver, -1
-	object_event  7, 18, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie1, -1
-	object_event 20, 16, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie2, -1
-	object_event  5, 22, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie3, -1
-	object_event 10, 21, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie4, -1
-	object_event 26, 13, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie5, -1
-	object_event 25, 12, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie6, -1
-	object_event 18, 10, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie7, -1
-	object_event 21,  7, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie8, -1
+	object_event 20, 16, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie1, -1
+	object_event  5, 22, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie2, -1
+	object_event 10, 21, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie3, -1
+	object_event 26, 13, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie4, -1
+	object_event 25, 12, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie5, -1
+	object_event 18, 10, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie6, -1
 	object_event 14,  8, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Cioran2BearerScript, -1
 	object_event  6, 19, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Duel, -1
 

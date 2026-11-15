@@ -16,6 +16,31 @@ TithePlaza2_MapScripts:
 
 	def_callbacks
 
+TithePlaza2DebateA:
+	jumptextfaceplayer TithePlaza2DebateAText
+
+TithePlaza2DebateAText:
+	text "The landlord is my"
+	line "father figure."
+	para "Always above me,"
+	line "never calls, takes"
+	para "what he's owed."
+	done
+
+TithePlaza2DebateB:
+	jumptextfaceplayer TithePlaza2DebateBText
+
+TithePlaza2DebateBText:
+	text "Your father figure"
+	line "has a name and a"
+	para "face. Your"
+	line "landlord has a"
+	para "limited liability"
+	line "company. That is a"
+	para "stepfather at"
+	line "best."
+	done
+
 TithePlaza2Giver:
 	faceplayer
 	opentext
@@ -119,29 +144,6 @@ TithePlaza2Townie6Text:
 	line "for show. The"
 	para "water is"
 	line "meter-reading you."
-	done
-
-TithePlaza2Townie7:
-	jumptextfaceplayer TithePlaza2Townie7Text
-
-TithePlaza2Townie7Text:
-	text "The pawnbroker"
-	line "keeps his best"
-	para "items in a living"
-	line "room. Don't ask"
-	para "why. Don't ask"
-	line "how."
-	done
-
-TithePlaza2Townie8:
-	jumptextfaceplayer TithePlaza2Townie8Text
-
-TithePlaza2Townie8Text:
-	text "That man is a cop."
-	line "This man is a cop."
-	para "I'm also a cop."
-	line "It's a very safe"
-	para "neighbourhood."
 	done
 
 TithePlaza2Rival1RivalScript:
@@ -298,15 +300,15 @@ TithePlaza2_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 25,  6, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2DebateA, -1
+	object_event 26,  6, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2DebateB, -1
 	object_event 27, 15, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Giver, -1
-	object_event 25,  6, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie1, -1
-	object_event 25, 27, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie2, -1
-	object_event 16, 15, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie3, -1
-	object_event 12, 23, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie4, -1
-	object_event  2,  8, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie5, -1
-	object_event  9, 23, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie6, -1
-	object_event  4, 20, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie7, -1
-	object_event 20,  7, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie8, -1
+	object_event 25, 27, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie1, -1
+	object_event 16, 15, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie2, -1
+	object_event 12, 23, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie3, -1
+	object_event  2,  8, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie4, -1
+	object_event  9, 23, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie5, -1
+	object_event  4, 20, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie6, -1
 	object_event  5, 22, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Rival1RivalScript, EVENT_NAMED_RIVAL1_DONE
 	object_event 13,  8, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Duel, -1
 

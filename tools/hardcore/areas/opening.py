@@ -24,7 +24,7 @@ def build(w, roster, rng):
     g = w.group("OPEN", ["SPRITE_HC_JOYCE", "SPRITE_POKE_BALL", "SPRITE_HC_MR_POKEMON", "SPRITE_RIVAL"])
     johto = kits.johto()
     W, H = 19, 12
-    m = MapDef(g.key, "TitheJunction", W, H, johto.tileset, "ROUTE", LM, "MUSIC_ROUTE_30", border=johto.extra["border"])
+    m = MapDef(g.key, "TitheJunction", W, H, johto.tileset, "ROUTE", LM, "MUSIC_HC_ROAD", border=johto.extra["border"])
     m.fill(0x05)
     road = johto.floor[0]
     # the stem, the band (a T), the west arm up to the north edge

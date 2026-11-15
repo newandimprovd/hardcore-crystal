@@ -44,6 +44,6 @@ def build(w, roster, rng, entry_doors, open_exit=False):
     cfg = AreaCfg("AREA2", "Grove", Spec(), kits.grove(), "PALETTE_DAY",
                   [("GROVE_COMMUNE", 60, 66, "THE<BSP>COMMUNE"), ("GROVE_ORCHARD", 56, 62, "THE<BSP>ORCHARD"),
                    ("GROVE_HEARTH", 52, 58, "GREAT<BSP>HEARTH")],
-                  "MUSIC_ROUTE_36", texts, TIERS, bosses, [None, "river", "hive"], [3, 2, 3], "GroveGate", T.GATE[0],
+                  "MUSIC_HC_GROVE", texts, TIERS, bosses, [None, "river", "hive"], [3, 2, 3], "GroveGate", T.GATE[0],
                   trainers=counts.lanes_of(2), stock_ix=(0, 0, 1, 1, 2, 2, 2), split_houses=(2, 1, 1))
     return build_area(w, roster, rng, cfg, entry_doors)

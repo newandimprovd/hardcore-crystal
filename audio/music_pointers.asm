@@ -85,4 +85,5 @@ Music:
 	dba Music_Clair
 	dba Music_LookMysticalMan
 	dba Music_SuicuneBattle
+	INCLUDE "audio/hc_music_pointers.asm" ; HC-MUSIC
 	assert_table_length NUM_MUSIC_SONGS

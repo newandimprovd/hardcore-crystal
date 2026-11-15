@@ -127,3 +127,10 @@ SLEEPER_SEEN = ("...riverrun. Brings us back to the beginning. I fell. I was wak
                 "which ends where it begins.")
 SLEEPER_BEATEN = "And so. The end runs back to the start. You were always going to do this. So was I. Wake, then. And walk."
 SLEEPER_AFTER = "It's over. It never ends. Go home. Your home is a crater, but it is yours."
+
+
+# the trainers who belong to FINNEGAN's wake (areas/debates.py)
+from .debates import CULT_BEATEN, CULT_SEEN  # noqa: E402
+
+SEEN = SEEN + CULT_SEEN["Dis"]
+BEATEN = BEATEN + CULT_BEATEN["Dis"]

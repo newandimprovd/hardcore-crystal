@@ -10,6 +10,32 @@ AxiomPlaza5PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A3
 	end
 
+AxiomPlaza5DebateA:
+	jumptextfaceplayer AxiomPlaza5DebateAText
+
+AxiomPlaza5DebateAText:
+	text "Privacy is dead. I"
+	line "found out when a"
+	para "billboard"
+	line "recommended a"
+	para "lotion for me. By"
+	line "name. In a"
+	para "whisper."
+	done
+
+AxiomPlaza5DebateB:
+	jumptextfaceplayer AxiomPlaza5DebateBText
+
+AxiomPlaza5DebateBText:
+	text "Privacy isn't"
+	line "dead. It's been"
+	para "outsourced. I get"
+	line "a nice quarterly"
+	para "statement of"
+	line "everything I'm"
+	para "hiding."
+	done
+
 AxiomPlaza5Giver:
 	faceplayer
 	opentext
@@ -117,27 +143,6 @@ AxiomPlaza5Townie6Text:
 	line "wild Pokemon."
 	done
 
-AxiomPlaza5Townie7:
-	jumptextfaceplayer AxiomPlaza5Townie7Text
-
-AxiomPlaza5Townie7Text:
-	text "Citizen, your face"
-	line "has been"
-	para "recognized. It is"
-	line "mostly in the"
-	para "clear."
-	done
-
-AxiomPlaza5Townie8:
-	jumptextfaceplayer AxiomPlaza5Townie8Text
-
-AxiomPlaza5Townie8Text:
-	text "The shop with a"
-	line "clerk and a couch"
-	para "is real. The couch"
-	line "is audited weekly."
-	done
-
 AxiomPlaza5Duel:
 	faceplayer
 	opentext
@@ -233,14 +238,14 @@ AxiomPlaza5_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  5, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Giver, -1
-	object_event 34, 21, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie1, -1
-	object_event  8, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie2, -1
-	object_event 33, 16, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie3, -1
-	object_event 21, 15, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie4, -1
-	object_event 16, 25, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie5, -1
-	object_event 29, 14, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie6, -1
-	object_event 35, 17, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie7, -1
-	object_event 32, 24, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie8, -1
+	object_event  5, 16, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5DebateA, -1
+	object_event  6, 16, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5DebateB, -1
+	object_event 34, 21, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Giver, -1
+	object_event  8, 16, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie1, -1
+	object_event 33, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie2, -1
+	object_event 21, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie3, -1
+	object_event 16, 25, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie4, -1
+	object_event 29, 14, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie5, -1
+	object_event 35, 17, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie6, -1
 	object_event 30, 18, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Duel, -1
 

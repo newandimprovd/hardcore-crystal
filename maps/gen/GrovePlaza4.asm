@@ -17,6 +17,29 @@ GrovePlaza4Fountain0Text:
 	para "whole weekend."
 	done
 
+GrovePlaza4DebateA:
+	jumptextfaceplayer GrovePlaza4DebateAText
+
+GrovePlaza4DebateAText:
+	text "The Great Hearth"
+	line "hums. That is not"
+	para "a furnace. That is"
+	line "a god doing"
+	para "breathing"
+	line "exercises."
+	done
+
+GrovePlaza4DebateB:
+	jumptextfaceplayer GrovePlaza4DebateBText
+
+GrovePlaza4DebateBText:
+	text "It's a furnace. I"
+	line "paid for the"
+	para "maintenance. If it"
+	line "is a god, it owes"
+	para "me a deposit."
+	done
+
 GrovePlaza4Giver:
 	faceplayer
 	opentext
@@ -124,28 +147,6 @@ GrovePlaza4Townie6Text:
 	line "tablecloth. It's"
 	para "the tablecloth's"
 	line "last stand."
-	done
-
-GrovePlaza4Townie7:
-	jumptextfaceplayer GrovePlaza4Townie7Text
-
-GrovePlaza4Townie7Text:
-	text "The Heart of the"
-	line "Commune is a"
-	para "Pokemon Center."
-	line "The heart has"
-	para "beds."
-	done
-
-GrovePlaza4Townie8:
-	jumptextfaceplayer GrovePlaza4Townie8Text
-
-GrovePlaza4Townie8Text:
-	text "A wild Pokemon"
-	line "asked me to join"
-	para "the commune. I"
-	line "said yes. It was a"
-	para "mistake."
 	done
 
 GrovePlaza4Steiner2BearerScript:
@@ -395,15 +396,15 @@ GrovePlaza4_MapEvents:
 	bg_event  5, 25, BGEVENT_READ, GrovePlaza4Fountain0
 
 	def_object_events
-	object_event 19, 13, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Giver, -1
-	object_event  9, 13, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie1, -1
-	object_event  5,  8, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie2, -1
-	object_event  7, 15, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie3, -1
-	object_event 17, 13, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie4, -1
-	object_event 11, 16, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie5, -1
-	object_event  2, 13, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie6, -1
-	object_event  5, 23, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie7, -1
-	object_event 12,  7, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie8, -1
+	object_event 19, 13, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza4DebateA, -1
+	object_event 20, 13, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4DebateB, -1
+	object_event  9, 13, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Giver, -1
+	object_event  5,  8, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie1, -1
+	object_event  7, 15, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie2, -1
+	object_event 17, 13, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie3, -1
+	object_event 11, 16, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie4, -1
+	object_event  2, 13, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie5, -1
+	object_event  5, 23, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Townie6, -1
 	object_event 15, 20, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Steiner2BearerScript, -1
 	object_event  6, 13, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza4Duel, -1
 

@@ -195,3 +195,10 @@ TIP_B = (
     "FAIRY is the new type. DRAGON cannot touch it, POISON and STEEL can. "
     "Everything evolves at 25, 50 and 75."
 )
+
+
+# the trainers who belong to FINNEGAN's wake (areas/debates.py)
+from .debates import CULT_BEATEN, CULT_SEEN  # noqa: E402
+
+SEEN = SEEN + CULT_SEEN["Tithe"]
+BEATEN = BEATEN + CULT_BEATEN["Tithe"]

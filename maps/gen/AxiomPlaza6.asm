@@ -6,6 +6,31 @@ AxiomPlaza6_MapScripts:
 
 	def_callbacks
 
+AxiomPlaza6DebateA:
+	jumptextfaceplayer AxiomPlaza6DebateAText
+
+AxiomPlaza6DebateAText:
+	text "All people are"
+	line "fungible. Take one"
+	para "out, put one in."
+	line "The tickets still"
+	para "print."
+	done
+
+AxiomPlaza6DebateB:
+	jumptextfaceplayer AxiomPlaza6DebateBText
+
+AxiomPlaza6DebateBText:
+	text "Then why did the"
+	line "system cry when I"
+	para "left for a week?"
+	line "It sent me a"
+	para "survey. It never"
+	line "sends me surveys."
+	para "I think it misses"
+	line "me."
+	done
+
 AxiomPlaza6Giver:
 	faceplayer
 	opentext
@@ -113,28 +138,6 @@ AxiomPlaza6Townie6Text:
 	line "registered. The"
 	para "joke is not yet"
 	line "approved."
-	done
-
-AxiomPlaza6Townie7:
-	jumptextfaceplayer AxiomPlaza6Townie7Text
-
-AxiomPlaza6Townie7Text:
-	text "The Mayor is a"
-	line "great listener. He"
-	para "has forty thousand"
-	line "microphones and no"
-	para "mouth."
-	done
-
-AxiomPlaza6Townie8:
-	jumptextfaceplayer AxiomPlaza6Townie8Text
-
-AxiomPlaza6Townie8Text:
-	text "Citizen, your face"
-	line "has been"
-	para "recognized. It is"
-	line "mostly in the"
-	para "clear."
 	done
 
 AxiomPlaza6SuhrawardiDuelScript:
@@ -379,15 +382,15 @@ AxiomPlaza6_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 12, 22, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Giver, -1
-	object_event  8, 14, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie1, -1
-	object_event 28, 16, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie2, -1
-	object_event  4, 25, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie3, -1
-	object_event  7, 11, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie4, -1
-	object_event  4,  8, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie5, -1
-	object_event 29, 19, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie6, -1
-	object_event 28, 25, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie7, -1
-	object_event 21, 19, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie8, -1
+	object_event 12, 22, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6DebateA, -1
+	object_event 13, 22, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6DebateB, -1
+	object_event  8, 14, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Giver, -1
+	object_event 28, 16, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie1, -1
+	object_event  4, 25, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie2, -1
+	object_event  7, 11, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie3, -1
+	object_event  4,  8, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie4, -1
+	object_event 29, 19, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie5, -1
+	object_event 28, 25, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie6, -1
 	object_event  7, 13, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SuhrawardiDuelScript, -1
 	object_event 13, 10, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Duel, -1
 

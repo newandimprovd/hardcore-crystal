@@ -18,6 +18,30 @@ TithePlaza4Fountain0Text:
 	line "goes nowhere."
 	done
 
+TithePlaza4DebateA:
+	jumptextfaceplayer TithePlaza4DebateAText
+
+TithePlaza4DebateAText:
+	text "Blessed are the"
+	line "poor, it says."
+	para "Blessed with what?"
+	line "A cough? A view of"
+	para "the dumpster?"
+	done
+
+TithePlaza4DebateB:
+	jumptextfaceplayer TithePlaza4DebateBText
+
+TithePlaza4DebateBText:
+	text "With the best"
+	line "seats in heaven."
+	para "The rich get"
+	line "standing room."
+	para "Hell, I hear, has"
+	line "a cover charge and"
+	para "a dress code."
+	done
+
 TithePlaza4Giver:
 	faceplayer
 	opentext
@@ -124,26 +148,6 @@ TithePlaza4Townie6Text:
 	para "whole party. I"
 	line "read that on a"
 	para "receipt."
-	done
-
-TithePlaza4Townie7:
-	jumptextfaceplayer TithePlaza4Townie7Text
-
-TithePlaza4Townie7Text:
-	text "I've been waiting"
-	line "for the bus since"
-	para "the line was"
-	line "cancelled. I'm"
-	para "very committed."
-	done
-
-TithePlaza4Townie8:
-	jumptextfaceplayer TithePlaza4Townie8Text
-
-TithePlaza4Townie8Text:
-	text "My horoscope says"
-	line "'Pay.' Just that."
-	para "Every day. 'Pay.'"
 	done
 
 TithePlaza4CrowleyBearerScript:
@@ -466,15 +470,15 @@ TithePlaza4_MapEvents:
 	bg_event 15,  9, BGEVENT_READ, TithePlaza4Fountain0
 
 	def_object_events
-	object_event 16, 20, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Giver, -1
-	object_event 19, 15, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie1, -1
-	object_event 21, 26, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie2, -1
-	object_event  2, 17, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie3, -1
-	object_event  7, 20, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie4, -1
-	object_event 21, 25, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie5, -1
-	object_event 19, 18, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie6, -1
-	object_event 14, 10, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie7, -1
-	object_event 19, 13, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie8, -1
+	object_event 16, 20, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4DebateA, -1
+	object_event 17, 20, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4DebateB, -1
+	object_event 19, 15, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Giver, -1
+	object_event 21, 26, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie1, -1
+	object_event  2, 17, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie2, -1
+	object_event  7, 20, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie3, -1
+	object_event 21, 25, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie4, -1
+	object_event 19, 18, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie5, -1
+	object_event 14, 10, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie6, -1
 	object_event 21, 19, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScript, -1
 	object_event 18, 18, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Crowd0Script, -1
 	object_event 18, 20, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Crowd1Script, -1

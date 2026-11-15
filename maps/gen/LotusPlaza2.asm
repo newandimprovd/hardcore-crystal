@@ -6,6 +6,34 @@ LotusPlaza2_MapScripts:
 
 	def_callbacks
 
+LotusPlaza2DebateA:
+	jumptextfaceplayer LotusPlaza2DebateAText
+
+LotusPlaza2DebateAText:
+	text "An orgy needs an"
+	line "RSVP, a seating"
+	para "chart and a safe"
+	line "word that's also a"
+	para "vintage. Anything"
+	line "else is chaos."
+	done
+
+LotusPlaza2DebateB:
+	jumptextfaceplayer LotusPlaza2DebateBText
+
+LotusPlaza2DebateBText:
+	text "I disagree. The"
+	line "best ones have no"
+	para "plan and a very"
+	line "lenient waiter."
+	para "You know it"
+	line "started well when"
+	para "somebody asks if"
+	line "the pool is"
+	para "heated, and nobody"
+	line "answers."
+	done
+
 LotusPlaza2Giver:
 	faceplayer
 	opentext
@@ -110,27 +138,6 @@ LotusPlaza2Townie6Text:
 	line "clerk is sleeping."
 	done
 
-LotusPlaza2Townie7:
-	jumptextfaceplayer LotusPlaza2Townie7Text
-
-LotusPlaza2Townie7Text:
-	text "Looking for the"
-	line "meaning of life?"
-	para "Try the minibar."
-	line "It's empty. That's"
-	para "the meaning."
-	done
-
-LotusPlaza2Townie8:
-	jumptextfaceplayer LotusPlaza2Townie8Text
-
-LotusPlaza2Townie8Text:
-	text "I booked a week."
-	line "It's been four"
-	para "years. Checkout is"
-	line "a state of mind."
-	done
-
 LotusPlaza2Duel:
 	faceplayer
 	opentext
@@ -224,14 +231,14 @@ LotusPlaza2_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 27, 13, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Giver, -1
-	object_event 17,  9, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie1, -1
-	object_event 14,  8, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie2, -1
-	object_event 24, 23, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie3, -1
-	object_event  5, 21, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie4, -1
-	object_event 24,  6, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie5, -1
-	object_event  4,  9, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie6, -1
-	object_event  6, 11, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie7, -1
-	object_event  7,  6, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie8, -1
+	object_event 27, 13, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza2DebateA, -1
+	object_event 28, 13, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza2DebateB, -1
+	object_event 17,  9, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Giver, -1
+	object_event 14,  8, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie1, -1
+	object_event 24, 23, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie2, -1
+	object_event  5, 21, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie3, -1
+	object_event 24,  6, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie4, -1
+	object_event  4,  9, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie5, -1
+	object_event  6, 11, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Townie6, -1
 	object_event 19,  8, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza2Duel, -1
 

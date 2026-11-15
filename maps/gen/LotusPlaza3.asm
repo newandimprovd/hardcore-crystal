@@ -6,6 +6,29 @@ LotusPlaza3_MapScripts:
 
 	def_callbacks
 
+LotusPlaza3DebateA:
+	jumptextfaceplayer LotusPlaza3DebateAText
+
+LotusPlaza3DebateAText:
+	text "Boredom is the"
+	line "only sin. I say"
+	para "this as someone"
+	line "who's committed"
+	para "all the others."
+	done
+
+LotusPlaza3DebateB:
+	jumptextfaceplayer LotusPlaza3DebateBText
+
+LotusPlaza3DebateBText:
+	text "Boredom is the"
+	line "only punishment."
+	para "The sins are the"
+	line "ones I enjoyed."
+	para "The boredom is the"
+	line "bill."
+	done
+
 LotusPlaza3Giver:
 	faceplayer
 	opentext
@@ -111,28 +134,6 @@ LotusPlaza3Townie6Text:
 	para "the meaning."
 	done
 
-LotusPlaza3Townie7:
-	jumptextfaceplayer LotusPlaza3Townie7Text
-
-LotusPlaza3Townie7Text:
-	text "Welcome to the"
-	line "Lotus Coast! The"
-	para "all-inclusive plan"
-	line "includes"
-	para "everything but a"
-	line "reason."
-	done
-
-LotusPlaza3Townie8:
-	jumptextfaceplayer LotusPlaza3Townie8Text
-
-LotusPlaza3Townie8Text:
-	text "I'm so relaxed I"
-	line "forgot to be"
-	para "afraid. Oh no."
-	line "There it is."
-	done
-
 LotusPlaza3Duel:
 	faceplayer
 	opentext
@@ -226,14 +227,14 @@ LotusPlaza3_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event  2, 15, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza3DebateA, -1
+	object_event  3, 15, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza3DebateB, -1
 	object_event  5,  8, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Giver, -1
-	object_event  2, 15, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie1, -1
-	object_event 14, 15, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie2, -1
-	object_event  5, 26, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie3, -1
-	object_event 11, 16, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie4, -1
-	object_event 20, 22, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie5, -1
-	object_event 22,  9, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie6, -1
-	object_event 27, 10, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie7, -1
-	object_event 17,  8, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie8, -1
+	object_event 14, 15, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie1, -1
+	object_event  5, 26, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie2, -1
+	object_event 11, 16, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie3, -1
+	object_event 20, 22, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie4, -1
+	object_event 22,  9, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie5, -1
+	object_event 27, 10, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Townie6, -1
 	object_event 17, 21, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza3Duel, -1
 

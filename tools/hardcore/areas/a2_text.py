@@ -140,3 +140,10 @@ COUNCIL_SEEN = ("I am the Matriarch. We have no leaders here. I'm just very loud
                 "You've left forty of my people on the floor. That's not sharing.")
 COUNCIL_BEATEN = "We're a peaceful people. We... were. The way ahead is open. We have no gates. We never did."
 COUNCIL_AFTER = "North is the Wall. Not a fence. A Wall. Be careful. It's been telling everyone what to do for years."
+
+
+# the trainers who belong to FINNEGAN's wake (areas/debates.py)
+from .debates import CULT_BEATEN, CULT_SEEN  # noqa: E402
+
+SEEN = SEEN + CULT_SEEN["Grove"]
+BEATEN = BEATEN + CULT_BEATEN["Grove"]

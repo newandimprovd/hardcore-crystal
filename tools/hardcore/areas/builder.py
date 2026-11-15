@@ -138,6 +138,8 @@ def crowd(w, g, m, n=9, plaza_no=1):
     tag = area_tag(m)
     if not hasattr(m, "npc_cells"):  # the box plaza of the Johto road has no seeded cell list
         return
+    if debate_pair(m, g, tag, plaza_no):
+        n -= 2  # the debaters are two of the plaza's talkers
     n = min(n, 15 - len(m.objects) - 3)  # three object slots stay free for the cameos
     lines = list(TOWNIE[tag]) + list(TOWNIE2[tag])
     R.shuffle(lines)
@@ -151,6 +153,26 @@ def crowd(w, g, m, n=9, plaza_no=1):
         else:
             plain_npc(m, x, y, sp, pal, face, f"{m.name}Townie{i}", lines[i % len(lines)])
     m.npc_cells = m.npc_cells[n:]
+
+
+def debate_pair(m, g, tag, plaza_no):
+    """Two townsfolk who stand side by side facing each other and argue (areas/debates.py: seven pairs per area, the plaza number picks one)."""
+    import random
+    from .debates import DEBATES
+    from .people import plain_npc
+    if 15 - len(m.objects) - 3 < 5:
+        return False
+    cells = set(m.npc_cells)
+    pair = next(((x, y) for (x, y) in m.npc_cells if (x + 1, y) in cells), None)
+    if not pair:
+        return False
+    x, y = pair
+    R = random.Random("debate:" + m.name)
+    left, right = DEBATES[tag][(plaza_no - 1) % len(DEBATES[tag])]
+    for (cx, cy, face, text, tail) in ((x, y, "RIGHT", left, "A"), (x + 1, y, "LEFT", right, "B")):
+        plain_npc(m, cx, cy, R.choice(people_sprites(g)), R.choice(NPC_PALS), face, f"{m.name}Debate{tail}", text)
+    m.npc_cells = [c for c in m.npc_cells if c not in ((x, y), (x + 1, y))]
+    return True
 
 
 def giver(w, m, x, y, sprite, pal, face, label, gift, item, after):

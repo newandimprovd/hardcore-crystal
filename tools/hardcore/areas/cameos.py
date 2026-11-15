@@ -74,7 +74,7 @@ def amphitheater(w, g, rng, roster):
     g.maps.remove(house)
     kit = grove()
     add_sprite(g, "SPRITE_HC_CROWLEY", "SPRITE_HC_HIPPIE_F", "SPRITE_HC_BATHER_F", "SPRITE_HC_ELDER_F")
-    m = MapDef(g.key, "GroveAmphitheater", 9, 9, kit.tileset, "TOWN", "LANDMARK_GROVE_COMMUNE", "MUSIC_ROUTE_36",
+    m = MapDef(g.key, "GroveAmphitheater", 9, 9, kit.tileset, "TOWN", "LANDMARK_GROVE_COMMUNE", "MUSIC_HC_GROVE",
                border=kit.extra["border"])
     for y in range(9):
         for x in range(9):

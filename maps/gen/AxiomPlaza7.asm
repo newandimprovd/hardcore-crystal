@@ -18,6 +18,33 @@ AxiomPlaza7Fountain0Text:
 	line "told to look busy."
 	done
 
+AxiomPlaza7DebateA:
+	jumptextfaceplayer AxiomPlaza7DebateAText
+
+AxiomPlaza7DebateAText:
+	text "The form is the"
+	line "soul, and the soul"
+	para "is a form, and the"
+	line "form must be"
+	para "filled in"
+	line "triplicate."
+	done
+
+AxiomPlaza7DebateB:
+	jumptextfaceplayer AxiomPlaza7DebateBText
+
+AxiomPlaza7DebateBText:
+	text "In triplicate?"
+	line "Blasphemy. The"
+	para "soul is a form in"
+	line "quadruplicate. The"
+	para "fourth copy goes"
+	line "to God. He never"
+	para "replies. It's a"
+	line "tragic filing"
+	para "system."
+	done
+
 AxiomPlaza7Giver:
 	faceplayer
 	opentext
@@ -128,27 +155,6 @@ AxiomPlaza7Townie6Text:
 	line "order, usually."
 	done
 
-AxiomPlaza7Townie7:
-	jumptextfaceplayer AxiomPlaza7Townie7Text
-
-AxiomPlaza7Townie7Text:
-	text "The Pokemon Center"
-	line "is a processing"
-	para "facility with a"
-	line "kindly name."
-	done
-
-AxiomPlaza7Townie8:
-	jumptextfaceplayer AxiomPlaza7Townie8Text
-
-AxiomPlaza7Townie8Text:
-	text "I once saw a bug"
-	line "in the system. It"
-	para "saw me too. We"
-	line "don't talk about"
-	para "it."
-	done
-
 AxiomPlaza7_MapEvents:
 	db 0, 0 ; filler
 
@@ -164,13 +170,13 @@ AxiomPlaza7_MapEvents:
 	bg_event 27, 19, BGEVENT_READ, AxiomPlaza7Fountain0
 
 	def_object_events
-	object_event  7, 10, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Giver, -1
-	object_event  4,  6, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie1, -1
-	object_event 24, 20, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie2, -1
-	object_event  6, 11, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie3, -1
-	object_event 28, 14, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie4, -1
-	object_event 16,  7, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie5, -1
-	object_event 26, 22, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie6, -1
-	object_event  4, 15, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie7, -1
-	object_event 22, 18, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie8, -1
+	object_event  7, 10, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7DebateA, -1
+	object_event  8, 10, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7DebateB, -1
+	object_event  4,  6, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Giver, -1
+	object_event 24, 20, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie1, -1
+	object_event  6, 11, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie2, -1
+	object_event 28, 14, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie3, -1
+	object_event 16,  7, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie4, -1
+	object_event 26, 22, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie5, -1
+	object_event  4, 15, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie6, -1
 

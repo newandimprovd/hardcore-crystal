@@ -356,7 +356,7 @@ def hub(g, w, roster, rng):
         G.wall[y][2 * ex] = False
         G.wall[y][2 * ex + 1] = False
     G.fix_diagonals()
-    m = MapDef(g.key, "PurgThreshold", bw, bh, "TILESET_CAVE", "DUNGEON", LM, "MUSIC_UNION_CAVE", pal="PALETTE_DAY", border=0x00)
+    m = MapDef(g.key, "PurgThreshold", bw, bh, "TILESET_CAVE", "DUNGEON", LM, "MUSIC_HC_PURGATORIO", pal="PALETTE_DAY", border=0x00)
     render(G, m, rng)
     south = m.warp(2 * ex + 1, 2 * (bh - 1) + 1, "mouth")
     m.set(ex, bh - 1, 0x24)  # floor with a warp carpet bottom right: a cave door (0x13) on the last row walks the player off the map on arrival
@@ -469,7 +469,7 @@ def landing(g, w, roster, rng):
     G.tunnel(rng, (14, 18), (14, 22))
     G.fix_diagonals()
     G.drop_islands((14, 14))
-    m = MapDef(g.key, "PurgLanding", bw, bh, "TILESET_CAVE", "DUNGEON", LM_NICK, "MUSIC_SPROUT_TOWER", pal="PALETTE_DAY", border=0x00)
+    m = MapDef(g.key, "PurgLanding", bw, bh, "TILESET_CAVE", "DUNGEON", LM_NICK, "MUSIC_HC_PURGATORIO", pal="PALETTE_DAY", border=0x00)
     render(G, m, rng)
     ex, ey = 14, 22
     for dy in (0, 1):
@@ -540,7 +540,7 @@ def build(w, roster, rng, plaza_doors, junction_warp):
     prevs = {"D": down, "U": up}
     for i, (name, direction, lv, necks, balls, gifts) in enumerate(FLOORS):
         lm = LM_ABYSS if name == "PurgAbyss" else LM
-        music = "MUSIC_NONE" if name == "PurgAbyss" else "MUSIC_DARK_CAVE"
+        music = "MUSIC_HC_ABYSS" if name == "PurgAbyss" else "MUSIC_HC_PURGATORIO"
         tn = list(necks)
         if direction == "U" and False:
             tn.reverse()

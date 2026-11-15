@@ -39,7 +39,7 @@ def build(w, roster, rng, entry_doors, open_exit=False):
     cfg = AreaCfg("AREA4", "Lotus", Spec(), kits.lotus(), "PALETTE_DAY",
                   [("LOTUS_COAST", 36, 62, "LOTUS<BSP>COAST"), ("LOTUS_BOARDWALK", 32, 58, "THE<BSP>BOARDWALK"),
                    ("LOTUS_MANSION", 28, 54, "THE<BSP>HILLTOP")],
-                  "MUSIC_VERMILION_CITY", texts, TIERS, bosses, [None, "hook", "rubble"], [3, 2, 3], "LotusGate",
+                  "MUSIC_HC_LOTUS", texts, TIERS, bosses, [None, "hook", "rubble"], [3, 2, 3], "LotusGate",
                   T.GATE[0], trainers=counts.lanes_of(4), stock_ix=(2, 2, 2, 2, 2, 2, 2))
     g, exits = build_area(w, roster, rng, cfg, entry_doors)
     mansion(g, w, exits)
@@ -50,7 +50,7 @@ def mansion(g, w, exits):
     """The rival's house, the player's from the rival's death on: a hall full of staff, a limousine to New Bark
     Town and the bedroom where the game ends."""
     lm = "LANDMARK_LOTUS_MANSION"
-    music = "MUSIC_CELADON_CITY"
+    music = "MUSIC_HC_LOTUS"
     hall, door = mansion_hall(g, "LotusHall", exits, lm, music)
     bed = mansion_bedroom(g, "LotusBedroom", door, lm, "MUSIC_NEW_BARK_TOWN")
     w.spawns.append(("LOTUS_BEDROOM", bed, 3, 3))  # the game ends here: Continue after the credits spawns in this room

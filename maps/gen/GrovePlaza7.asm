@@ -18,6 +18,29 @@ GrovePlaza7Fountain0Text:
 	line "first."
 	done
 
+GrovePlaza7DebateA:
+	jumptextfaceplayer GrovePlaza7DebateAText
+
+GrovePlaza7DebateAText:
+	text "Every orgy is just"
+	line "a very long"
+	para "potluck."
+	done
+
+GrovePlaza7DebateB:
+	jumptextfaceplayer GrovePlaza7DebateBText
+
+GrovePlaza7DebateBText:
+	text "No no no. A"
+	line "potluck is"
+	para "voluntary and you"
+	line "know who brings"
+	para "what. An orgy is a"
+	line "potluck with a"
+	para "surprise ending"
+	line "and no casserole."
+	done
+
 GrovePlaza7Giver:
 	faceplayer
 	opentext
@@ -126,29 +149,6 @@ GrovePlaza7Townie6Text:
 	para "lawyer."
 	done
 
-GrovePlaza7Townie7:
-	jumptextfaceplayer GrovePlaza7Townie7Text
-
-GrovePlaza7Townie7Text:
-	text "A wild Pokemon"
-	line "asked me to join"
-	para "the commune. I"
-	line "said yes. It was a"
-	para "mistake."
-	done
-
-GrovePlaza7Townie8:
-	jumptextfaceplayer GrovePlaza7Townie8Text
-
-GrovePlaza7Townie8Text:
-	text "The drum circle"
-	line "has gone on for"
-	para "three days. Please"
-	line "send help, or a"
-	para "replacement"
-	line "drummer."
-	done
-
 GrovePlaza7_MapEvents:
 	db 0, 0 ; filler
 
@@ -164,13 +164,13 @@ GrovePlaza7_MapEvents:
 	bg_event 25,  9, BGEVENT_READ, GrovePlaza7Fountain0
 
 	def_object_events
-	object_event 25, 17, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Giver, -1
-	object_event 13, 10, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie1, -1
-	object_event 10, 14, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie2, -1
-	object_event 15, 15, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie3, -1
-	object_event 18, 25, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie4, -1
-	object_event 23,  9, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie5, -1
-	object_event 24, 26, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie6, -1
-	object_event 25, 26, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie7, -1
-	object_event 23, 15, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie8, -1
+	object_event 25, 17, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7DebateA, -1
+	object_event 26, 17, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7DebateB, -1
+	object_event 13, 10, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Giver, -1
+	object_event 10, 14, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie1, -1
+	object_event 15, 15, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie2, -1
+	object_event 18, 25, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie3, -1
+	object_event 23,  9, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie4, -1
+	object_event 24, 26, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie5, -1
+	object_event 25, 26, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie6, -1
 

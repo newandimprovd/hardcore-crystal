@@ -6,6 +6,29 @@ AxiomPlaza3_MapScripts:
 
 	def_callbacks
 
+AxiomPlaza3DebateA:
+	jumptextfaceplayer AxiomPlaza3DebateAText
+
+AxiomPlaza3DebateAText:
+	text "The Mayoralty is"
+	line "not a person. It"
+	para "is a policy"
+	line "wearing a lanyard."
+	done
+
+AxiomPlaza3DebateB:
+	jumptextfaceplayer AxiomPlaza3DebateBText
+
+AxiomPlaza3DebateBText:
+	text "I met the Mayor."
+	line "He is a man. He is"
+	para "also a policy. He"
+	line "is a policy-shaped"
+	para "man who needs"
+	line "sleep, and who"
+	para "doesn't get it."
+	done
+
 AxiomPlaza3Giver:
 	faceplayer
 	opentext
@@ -110,26 +133,6 @@ AxiomPlaza3Townie6Text:
 	line "wild Pokemon."
 	done
 
-AxiomPlaza3Townie7:
-	jumptextfaceplayer AxiomPlaza3Townie7Text
-
-AxiomPlaza3Townie7Text:
-	text "A held item is a"
-	line "form attached to a"
-	para "Pokemon. Fill it"
-	line "in correctly."
-	done
-
-AxiomPlaza3Townie8:
-	jumptextfaceplayer AxiomPlaza3Townie8Text
-
-AxiomPlaza3Townie8Text:
-	text "The shop with a"
-	line "clerk and a couch"
-	para "is real. The couch"
-	line "is audited weekly."
-	done
-
 AxiomPlaza3Duel:
 	faceplayer
 	opentext
@@ -223,14 +226,14 @@ AxiomPlaza3_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 24, 17, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Giver, -1
-	object_event 18, 13, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie1, -1
-	object_event 10, 15, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie2, -1
-	object_event 18,  8, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie3, -1
-	object_event 13, 17, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie4, -1
-	object_event 24, 10, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie5, -1
-	object_event 20, 17, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie6, -1
-	object_event 26,  6, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie7, -1
-	object_event 26, 21, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie8, -1
+	object_event 24, 17, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3DebateA, -1
+	object_event 25, 17, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3DebateB, -1
+	object_event 18, 13, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Giver, -1
+	object_event 10, 15, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie1, -1
+	object_event 18,  8, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie2, -1
+	object_event 13, 17, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie3, -1
+	object_event 24, 10, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie4, -1
+	object_event 20, 17, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie5, -1
+	object_event 26,  6, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie6, -1
 	object_event 10, 10, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Duel, -1
 

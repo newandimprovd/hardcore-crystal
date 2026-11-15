@@ -5,8 +5,8 @@ import re, sys, faulthandler
 from pyboy import PyBoy
 
 class T:
-    def __init__(self, rom, sym=None, window="null", speed=0):
-        self.pb = PyBoy(rom, window=window, sound_emulated=False)
+    def __init__(self, rom, sym=None, window="null", speed=0, sound=False):
+        self.pb = PyBoy(rom, window=window, sound_emulated=sound)
         self.pb.set_emulation_speed(speed)
         self.sym = {}
         self.syms = {}

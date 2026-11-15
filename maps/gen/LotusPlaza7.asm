@@ -18,6 +18,28 @@ LotusPlaza7Fountain0Text:
 	line "apologized."
 	done
 
+LotusPlaza7DebateA:
+	jumptextfaceplayer LotusPlaza7DebateAText
+
+LotusPlaza7DebateAText:
+	text "Everything in"
+	line "moderation,"
+	para "including"
+	line "moderation."
+	done
+
+LotusPlaza7DebateB:
+	jumptextfaceplayer LotusPlaza7DebateBText
+
+LotusPlaza7DebateBText:
+	text "Moderation is a"
+	line "coward's excess."
+	para "I'd rather commit"
+	line "fully to one thing"
+	para "and let it ruin me"
+	line "tastefully."
+	done
+
 LotusPlaza7Giver:
 	faceplayer
 	opentext
@@ -125,25 +147,6 @@ LotusPlaza7Townie6Text:
 	line "does here."
 	done
 
-LotusPlaza7Townie7:
-	jumptextfaceplayer LotusPlaza7Townie7Text
-
-LotusPlaza7Townie7Text:
-	text "Smile! You're on"
-	line "vacation! That's"
-	para "an order."
-	done
-
-LotusPlaza7Townie8:
-	jumptextfaceplayer LotusPlaza7Townie8Text
-
-LotusPlaza7Townie8Text:
-	text "The tide brought a"
-	line "very nice item. It"
-	para "also brought a"
-	line "court order."
-	done
-
 LotusPlaza7_MapEvents:
 	db 0, 0 ; filler
 
@@ -159,13 +162,13 @@ LotusPlaza7_MapEvents:
 	bg_event 19, 23, BGEVENT_READ, LotusPlaza7Fountain0
 
 	def_object_events
-	object_event 29, 22, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Giver, -1
-	object_event 13, 13, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie1, -1
-	object_event 13, 16, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie2, -1
-	object_event 15, 20, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie3, -1
-	object_event  3, 12, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie4, -1
-	object_event  3, 19, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie5, -1
-	object_event 24,  9, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie6, -1
-	object_event 28, 23, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie7, -1
-	object_event  6, 19, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie8, -1
+	object_event 29, 22, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7DebateA, -1
+	object_event 30, 22, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7DebateB, -1
+	object_event 13, 13, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Giver, -1
+	object_event 13, 16, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie1, -1
+	object_event 15, 20, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie2, -1
+	object_event  3, 12, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie3, -1
+	object_event  3, 19, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie4, -1
+	object_event 24,  9, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie5, -1
+	object_event 28, 23, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza7Townie6, -1
 

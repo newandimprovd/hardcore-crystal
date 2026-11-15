@@ -6,6 +6,30 @@ DisPlaza6_MapScripts:
 
 	def_callbacks
 
+DisPlaza6DebateA:
+	jumptextfaceplayer DisPlaza6DebateAText
+
+DisPlaza6DebateAText:
+	text "Nobody in Dis is"
+	line "frigid. The lake"
+	para "took care of that"
+	line "centuries ago."
+	done
+
+DisPlaza6DebateB:
+	jumptextfaceplayer DisPlaza6DebateBText
+
+DisPlaza6DebateBText:
+	text "That's physics,"
+	line "not romance."
+	para "Besides, anybody"
+	line "can be lukewarm in"
+	para "a furnace. It"
+	line "takes a real devil"
+	para "to be tender at"
+	line "absolute zero."
+	done
+
 DisPlaza6Giver:
 	faceplayer
 	opentext
@@ -113,27 +137,6 @@ DisPlaza6Townie6Text:
 	para "measure."
 	line "Everything here"
 	para "is."
-	done
-
-DisPlaza6Townie7:
-	jumptextfaceplayer DisPlaza6Townie7Text
-
-DisPlaza6Townie7Text:
-	text "Read the fountain"
-	line "plaque. It's the"
-	para "only honest sign"
-	line "in the city."
-	done
-
-DisPlaza6Townie8:
-	jumptextfaceplayer DisPlaza6Townie8Text
-
-DisPlaza6Townie8Text:
-	text "Welcome to Dis!"
-	line "Your suffering is"
-	para "being processed."
-	line "Estimated wait:"
-	para "forever."
 	done
 
 DisPlaza6SadraDuelScript:
@@ -370,15 +373,15 @@ DisPlaza6_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 22, 19, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza6DebateA, -1
+	object_event 23, 19, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6DebateB, -1
 	object_event 14, 18, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Giver, -1
-	object_event 22, 19, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie1, -1
-	object_event 12, 22, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie2, -1
-	object_event 18,  6, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie3, -1
-	object_event  4,  7, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie4, -1
-	object_event 25, 21, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie5, -1
-	object_event 12, 16, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie6, -1
-	object_event  2,  6, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie7, -1
-	object_event 12, 27, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie8, -1
+	object_event 12, 22, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie1, -1
+	object_event 18,  6, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie2, -1
+	object_event  4,  7, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie3, -1
+	object_event 25, 21, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie4, -1
+	object_event 12, 16, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie5, -1
+	object_event  2,  6, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie6, -1
 	object_event 19, 12, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6SadraDuelScript, -1
 	object_event 13, 10, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Duel, -1
 

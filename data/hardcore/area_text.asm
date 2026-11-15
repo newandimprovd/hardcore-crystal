@@ -6,7 +6,7 @@ HC_SeenText_A1::
 	text_asm
 	push bc
 	ld hl, HC_SeenText_A1_Table
-	ld b, 48
+	ld b, 53
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -81,6 +81,11 @@ HC_SeenText_A1_Table:
 	dw HC_SeenText_A1_45
 	dw HC_SeenText_A1_46
 	dw HC_SeenText_A1_47
+	dw HC_SeenText_A1_48
+	dw HC_SeenText_A1_49
+	dw HC_SeenText_A1_50
+	dw HC_SeenText_A1_51
+	dw HC_SeenText_A1_52
 
 HC_SeenText_A1_0:
 	text "Tithe's due. I"
@@ -415,12 +420,54 @@ HC_SeenText_A1_47:
 	para "you lost."
 	done
 
+HC_SeenText_A1_48:
+	text "I am one of"
+	line "FINNEGAN's. My"
+	para "seat at the wake"
+	line "is booked. Send me"
+	para "ahead, friend."
+	done
+
+HC_SeenText_A1_49:
+	text "They say whoever"
+	line "falls to you gets"
+	para "a glorious"
+	line "afterlife. I would"
+	para "like a glorious"
+	line "afterlife. Please."
+	done
+
+HC_SeenText_A1_50:
+	text "The river runs"
+	line "backward at the"
+	para "end of the book."
+	line "I'd like to be the"
+	para "first in. Aim for"
+	line "the neck."
+	done
+
+HC_SeenText_A1_51:
+	text "I paid my tithe to"
+	line "FINNEGAN. The"
+	para "receipt says one"
+	line "death, paid in"
+	para "full."
+	done
+
+HC_SeenText_A1_52:
+	text "I've read the last"
+	line "page. It says you"
+	para "come for us. Make"
+	line "it quick. Make it"
+	para "theological."
+	done
+
 
 HC_BeatenText_A1::
 	text_asm
 	push bc
 	ld hl, HC_BeatenText_A1_Table
-	ld b, 36
+	ld b, 39
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -483,6 +530,9 @@ HC_BeatenText_A1_Table:
 	dw HC_BeatenText_A1_33
 	dw HC_BeatenText_A1_34
 	dw HC_BeatenText_A1_35
+	dw HC_BeatenText_A1_36
+	dw HC_BeatenText_A1_37
+	dw HC_BeatenText_A1_38
 
 HC_BeatenText_A1_0:
 	text "Ow. That's coming"
@@ -711,6 +761,30 @@ HC_BeatenText_A1_35:
 	text "Right. I was never"
 	line "here. Neither were"
 	para "you. Go."
+	done
+
+HC_BeatenText_A1_36:
+	text "Oh. The river. It"
+	line "runs backward. I"
+	para "see the wake."
+	line "Thank you."
+	done
+
+HC_BeatenText_A1_37:
+	text "A glorious"
+	line "afterlife, signed"
+	para "and stamped. I"
+	line "forgive you in"
+	para "advance. And in"
+	line "arrears."
+	done
+
+HC_BeatenText_A1_38:
+	text "It's beautiful."
+	line "There's a priest."
+	para "There's a"
+	line "landlord. They are"
+	para "both so small."
 	done
 
 
@@ -989,7 +1063,7 @@ HC_SeenText_A2::
 	text_asm
 	push bc
 	ld hl, HC_SeenText_A2_Table
-	ld b, 46
+	ld b, 51
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -1062,6 +1136,11 @@ HC_SeenText_A2_Table:
 	dw HC_SeenText_A2_43
 	dw HC_SeenText_A2_44
 	dw HC_SeenText_A2_45
+	dw HC_SeenText_A2_46
+	dw HC_SeenText_A2_47
+	dw HC_SeenText_A2_48
+	dw HC_SeenText_A2_49
+	dw HC_SeenText_A2_50
 
 HC_SeenText_A2_0:
 	text "Welcome, friend!"
@@ -1422,12 +1501,57 @@ HC_SeenText_A2_45:
 	line "They hunt. Hello."
 	done
 
+HC_SeenText_A2_46:
+	text "The Commune taught"
+	line "me that all things"
+	para "return. FINNEGAN"
+	line "says it faster."
+	para "Send me back,"
+	line "friend."
+	done
+
+HC_SeenText_A2_47:
+	text "We of the wake do"
+	line "not fear you. We"
+	para "are the compost of"
+	line "the next book."
+	para "Please spread us"
+	line "well."
+	done
+
+HC_SeenText_A2_48:
+	text "I came to the"
+	line "Grove to find"
+	para "peace. FINNEGAN"
+	line "found me first."
+	para "Take my hand. Then"
+	line "my life."
+	done
+
+HC_SeenText_A2_49:
+	text "Free love, free"
+	line "death. Those are"
+	para "the only two free"
+	line "things, and I'd"
+	para "like the second"
+	line "today."
+	done
+
+HC_SeenText_A2_50:
+	text "The apples told me"
+	line "you were coming."
+	para "They said bring a"
+	line "towel. I brought"
+	para "the towel. Let's"
+	line "begin."
+	done
+
 
 HC_BeatenText_A2::
 	text_asm
 	push bc
 	ld hl, HC_BeatenText_A2_Table
-	ld b, 26
+	ld b, 29
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -1480,6 +1604,9 @@ HC_BeatenText_A2_Table:
 	dw HC_BeatenText_A2_23
 	dw HC_BeatenText_A2_24
 	dw HC_BeatenText_A2_25
+	dw HC_BeatenText_A2_26
+	dw HC_BeatenText_A2_27
+	dw HC_BeatenText_A2_28
 
 HC_BeatenText_A2_0:
 	text "Oh. Ow. That's a"
@@ -1654,6 +1781,26 @@ HC_BeatenText_A2_25:
 	line "something. Mostly"
 	para "about hospital"
 	line "food."
+	done
+
+HC_BeatenText_A2_26:
+	text "I feel the soil."
+	line "It's warm. It's"
+	para "calling. Spread me"
+	line "well."
+	done
+
+HC_BeatenText_A2_27:
+	text "The apples were"
+	line "right. They're"
+	para "always right. It's"
+	line "the pits."
+	done
+
+HC_BeatenText_A2_28:
+	text "I'm going home."
+	line "Tell the Commune"
+	para "my chore is done."
 	done
 
 
@@ -1871,7 +2018,7 @@ HC_SeenText_A3::
 	text_asm
 	push bc
 	ld hl, HC_SeenText_A3_Table
-	ld b, 42
+	ld b, 47
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -1940,6 +2087,11 @@ HC_SeenText_A3_Table:
 	dw HC_SeenText_A3_39
 	dw HC_SeenText_A3_40
 	dw HC_SeenText_A3_41
+	dw HC_SeenText_A3_42
+	dw HC_SeenText_A3_43
+	dw HC_SeenText_A3_44
+	dw HC_SeenText_A3_45
+	dw HC_SeenText_A3_46
 
 HC_SeenText_A3_0:
 	text "UNIT 4471 reports:"
@@ -2247,12 +2399,59 @@ HC_SeenText_A3_41:
 	line "very big wall."
 	done
 
+HC_SeenText_A3_42:
+	text "I am a member of"
+	line "FINNEGAN's wake."
+	para "Your kill count is"
+	line "a rounding error"
+	para "in my favor."
+	line "Proceed."
+	done
+
+HC_SeenText_A3_43:
+	text "Dying by your"
+	line "hands is a"
+	para "promotion. HR"
+	line "confirmed. It's in"
+	para "writing and signed"
+	line "by the river."
+	done
+
+HC_SeenText_A3_44:
+	text "My death will be a"
+	line "data point."
+	para "FINNEGAN collects"
+	line "data points. He"
+	para "collects them in a"
+	line "very large and"
+	para "patient bucket."
+	done
+
+HC_SeenText_A3_45:
+	text "The wake has a"
+	line "loyalty program."
+	para "Ten deaths, one"
+	line "free resurrection."
+	para "I'm so close."
+	line "Please help."
+	done
+
+HC_SeenText_A3_46:
+	text "You are the"
+	line "instrument of a"
+	para "grander process."
+	line "I'd like to thank"
+	para "you in advance."
+	line "Form 17 is"
+	para "attached."
+	done
+
 
 HC_BeatenText_A3::
 	text_asm
 	push bc
 	ld hl, HC_BeatenText_A3_Table
-	ld b, 24
+	ld b, 27
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -2303,6 +2502,9 @@ HC_BeatenText_A3_Table:
 	dw HC_BeatenText_A3_21
 	dw HC_BeatenText_A3_22
 	dw HC_BeatenText_A3_23
+	dw HC_BeatenText_A3_24
+	dw HC_BeatenText_A3_25
+	dw HC_BeatenText_A3_26
 
 HC_BeatenText_A3_0:
 	text "ERROR."
@@ -2461,6 +2663,28 @@ HC_BeatenText_A3_23:
 	text "How embarrassing."
 	line "I'll have to blame"
 	para "a glitch."
+	done
+
+HC_BeatenText_A3_24:
+	text "The data point is"
+	line "submitted. Thank"
+	para "you for your"
+	line "service. I'd like"
+	para "a receipt."
+	done
+
+HC_BeatenText_A3_25:
+	text "Form accepted. The"
+	line "river approves. I"
+	para "feel properly"
+	line "filed."
+	done
+
+HC_BeatenText_A3_26:
+	text "It's remarkably"
+	line "efficient. Eleven"
+	para "seconds. No"
+	line "reruns."
 	done
 
 
@@ -2656,7 +2880,7 @@ HC_SeenText_A4::
 	text_asm
 	push bc
 	ld hl, HC_SeenText_A4_Table
-	ld b, 41
+	ld b, 46
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -2724,6 +2948,11 @@ HC_SeenText_A4_Table:
 	dw HC_SeenText_A4_38
 	dw HC_SeenText_A4_39
 	dw HC_SeenText_A4_40
+	dw HC_SeenText_A4_41
+	dw HC_SeenText_A4_42
+	dw HC_SeenText_A4_43
+	dw HC_SeenText_A4_44
+	dw HC_SeenText_A4_45
 
 HC_SeenText_A4_0:
 	text "Welcome to"
@@ -3034,12 +3263,60 @@ HC_SeenText_A4_40:
 	line "I'm armed."
 	done
 
+HC_SeenText_A4_41:
+	text "I am here for a"
+	line "good time and a"
+	para "better death,"
+	line "courtesy of"
+	para "FINNEGAN's wake."
+	line "Shall we?"
+	done
+
+HC_SeenText_A4_42:
+	text "They say a death"
+	line "at your hands is"
+	para "the finest"
+	line "cocktail. I'd like"
+	para "mine shaken, not"
+	line "stirred, and"
+	para "bloody."
+	done
+
+HC_SeenText_A4_43:
+	text "We of the wake are"
+	line "very relaxed about"
+	para "dying. We are also"
+	line "very relaxed about"
+	para "everything. Please"
+	line "begin."
+	done
+
+HC_SeenText_A4_44:
+	text "FINNEGAN promised"
+	line "a glorious"
+	para "afterlife with a"
+	line "poolside bar. I"
+	para "read the fine"
+	line "print. It's fine"
+	para "print about the"
+	line "bar."
+	done
+
+HC_SeenText_A4_45:
+	text "A death in the"
+	line "afternoon. A river"
+	para "at dusk. That's"
+	line "all I want,"
+	para "friend. Spare the"
+	line "face."
+	done
+
 
 HC_BeatenText_A4::
 	text_asm
 	push bc
 	ld hl, HC_BeatenText_A4_Table
-	ld b, 22
+	ld b, 25
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -3088,6 +3365,9 @@ HC_BeatenText_A4_Table:
 	dw HC_BeatenText_A4_19
 	dw HC_BeatenText_A4_20
 	dw HC_BeatenText_A4_21
+	dw HC_BeatenText_A4_22
+	dw HC_BeatenText_A4_23
+	dw HC_BeatenText_A4_24
 
 HC_BeatenText_A4_0:
 	text "Ow. Oh. Is this"
@@ -3236,6 +3516,27 @@ HC_BeatenText_A4_21:
 	line "and got this. I"
 	para "want a refund. Or"
 	line "a hug."
+	done
+
+HC_BeatenText_A4_22:
+	text "A good death, a"
+	line "good drink, a good"
+	para "light. Cheers,"
+	line "friend."
+	done
+
+HC_BeatenText_A4_23:
+	text "The pool is"
+	line "heated. I can feel"
+	para "it. It's heaven."
+	line "It's also a pool."
+	done
+
+HC_BeatenText_A4_24:
+	text "Beautiful. Please"
+	line "tell the bartender"
+	para "I tipped in"
+	line "advance."
 	done
 
 
@@ -3421,7 +3722,7 @@ HC_SeenText_A5::
 	text_asm
 	push bc
 	ld hl, HC_SeenText_A5_Table
-	ld b, 41
+	ld b, 46
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -3489,6 +3790,11 @@ HC_SeenText_A5_Table:
 	dw HC_SeenText_A5_38
 	dw HC_SeenText_A5_39
 	dw HC_SeenText_A5_40
+	dw HC_SeenText_A5_41
+	dw HC_SeenText_A5_42
+	dw HC_SeenText_A5_43
+	dw HC_SeenText_A5_44
+	dw HC_SeenText_A5_45
 
 HC_SeenText_A5_0:
 	text "I'm in for fraud."
@@ -3797,12 +4103,52 @@ HC_SeenText_A5_40:
 	line "the most reliable."
 	done
 
+HC_SeenText_A5_41:
+	text "The wake is my"
+	line "church. You are"
+	para "the priest. Do"
+	line "your office,"
+	para "brother."
+	done
+
+HC_SeenText_A5_42:
+	text "Hell is already"
+	line "here. FINNEGAN"
+	para "says the exit is"
+	line "behind you. Send"
+	para "me through."
+	done
+
+HC_SeenText_A5_43:
+	text "I'm already"
+	line "damned. A death at"
+	para "your hands is the"
+	line "only upgrade on"
+	para "offer. Please."
+	done
+
+HC_SeenText_A5_44:
+	text "The river runs to"
+	line "the start of the"
+	para "book. I'd like to"
+	line "arrive early. Take"
+	para "me, friend."
+	done
+
+HC_SeenText_A5_45:
+	text "I die for"
+	line "FINNEGAN, for the"
+	para "loop, and for the"
+	line "discount. Mostly"
+	para "the discount."
+	done
+
 
 HC_BeatenText_A5::
 	text_asm
 	push bc
 	ld hl, HC_BeatenText_A5_Table
-	ld b, 22
+	ld b, 25
 	ld a, [wTempTrainerID]
 	ld c, a
 	add a
@@ -3851,6 +4197,9 @@ HC_BeatenText_A5_Table:
 	dw HC_BeatenText_A5_19
 	dw HC_BeatenText_A5_20
 	dw HC_BeatenText_A5_21
+	dw HC_BeatenText_A5_22
+	dw HC_BeatenText_A5_23
+	dw HC_BeatenText_A5_24
 
 HC_BeatenText_A5_0:
 	text "Dead again. It"
@@ -3996,6 +4345,28 @@ HC_BeatenText_A5_20:
 HC_BeatenText_A5_21:
 	text "That was awful. Do"
 	line "it again."
+	done
+
+HC_BeatenText_A5_22:
+	text "Down is up. The"
+	line "lake is a river. I"
+	para "see FINNEGAN. He's"
+	line "waving. He's also"
+	para "a typo."
+	done
+
+HC_BeatenText_A5_23:
+	text "I'm out. Oh, I'm"
+	line "out. It's so warm"
+	para "and it's all so"
+	line "far away."
+	done
+
+HC_BeatenText_A5_24:
+	text "Thank you. I'll"
+	line "save you a seat at"
+	para "the wake. Bring"
+	line "snacks."
 	done
 
 

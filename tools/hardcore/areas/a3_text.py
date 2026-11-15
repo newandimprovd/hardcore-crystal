@@ -132,3 +132,10 @@ MAYORALTY_SEEN = ("I am the Mayor. I have no body, no heart, and no weekends. I 
                   "You have broken seventeen thousand rules. I admire that. Be filed.")
 MAYORALTY_BEATEN = "A bug. A glorious bug. The wall is open. Go. Find the Coast. They sell what we deny. Forgetting is also a system."
 MAYORALTY_AFTER = "To the north is the Lotus Coast. Everyone is happy there. It is horrifying. You will fit right in."
+
+
+# the trainers who belong to FINNEGAN's wake (areas/debates.py)
+from .debates import CULT_BEATEN, CULT_SEEN  # noqa: E402
+
+SEEN = SEEN + CULT_SEEN["Axiom"]
+BEATEN = BEATEN + CULT_BEATEN["Axiom"]

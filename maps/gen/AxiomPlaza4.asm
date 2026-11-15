@@ -18,6 +18,30 @@ AxiomPlaza4Fountain0Text:
 	line "logged."
 	done
 
+AxiomPlaza4DebateA:
+	jumptextfaceplayer AxiomPlaza4DebateAText
+
+AxiomPlaza4DebateAText:
+	text "Efficiency in bed"
+	line "is a virtue."
+	para "Eleven minutes, no"
+	line "reruns, a signed"
+	para "receipt."
+	done
+
+AxiomPlaza4DebateB:
+	jumptextfaceplayer AxiomPlaza4DebateBText
+
+AxiomPlaza4DebateBText:
+	text "Eleven minutes?"
+	line "You've confused a"
+	para "performance review"
+	line "with intimacy."
+	para "Though the receipt"
+	line "is a fine touch."
+	para "I'd frame it."
+	done
+
 AxiomPlaza4Giver:
 	faceplayer
 	opentext
@@ -125,28 +149,6 @@ AxiomPlaza4Townie6Text:
 	line "clerk and a couch"
 	para "is real. The couch"
 	line "is audited weekly."
-	done
-
-AxiomPlaza4Townie7:
-	jumptextfaceplayer AxiomPlaza4Townie7Text
-
-AxiomPlaza4Townie7Text:
-	text "The fountain"
-	line "plaque is a pun."
-	para "The pun is"
-	line "registered. The"
-	para "joke is not yet"
-	line "approved."
-	done
-
-AxiomPlaza4Townie8:
-	jumptextfaceplayer AxiomPlaza4Townie8Text
-
-AxiomPlaza4Townie8Text:
-	text "Your happiness has"
-	line "been scheduled for"
-	para "Thursday. Please"
-	line "arrive early."
 	done
 
 AxiomPlaza4Sabbah2BearerScript:
@@ -410,15 +412,15 @@ AxiomPlaza4_MapEvents:
 	bg_event  5, 19, BGEVENT_READ, AxiomPlaza4Fountain0
 
 	def_object_events
-	object_event 20, 15, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Giver, -1
-	object_event 27,  6, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie1, -1
-	object_event  2, 21, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie2, -1
-	object_event 11,  8, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie3, -1
-	object_event 26, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie4, -1
-	object_event 13, 18, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie5, -1
-	object_event 11, 16, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie6, -1
-	object_event  8, 10, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie7, -1
-	object_event 11, 21, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie8, -1
+	object_event 20, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateA, -1
+	object_event 21, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateB, -1
+	object_event 27,  6, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Giver, -1
+	object_event  2, 21, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie1, -1
+	object_event 11,  8, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie2, -1
+	object_event 26, 16, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie3, -1
+	object_event 13, 18, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie4, -1
+	object_event 11, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie5, -1
+	object_event  8, 10, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie6, -1
 	object_event 14,  6, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Sabbah2BearerScript, -1
 	object_event  6, 18, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Duel, -1
 

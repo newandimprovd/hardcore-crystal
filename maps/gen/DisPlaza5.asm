@@ -6,6 +6,31 @@ DisPlaza5_MapScripts:
 
 	def_callbacks
 
+DisPlaza5DebateA:
+	jumptextfaceplayer DisPlaza5DebateAText
+
+DisPlaza5DebateAText:
+	text "The afterlife has"
+	line "a Human Resources"
+	para "department. I"
+	line "filed a complaint."
+	para "It was approved."
+	line "It was fatal."
+	done
+
+DisPlaza5DebateB:
+	jumptextfaceplayer DisPlaza5DebateBText
+
+DisPlaza5DebateBText:
+	text "I've been in the"
+	line "waiting room for"
+	para "eleven years. It"
+	line "has a nice fern."
+	para "The fern is also"
+	line "damned. It has a"
+	para "plaque."
+	done
+
 DisPlaza5Giver:
 	faceplayer
 	opentext
@@ -114,26 +139,6 @@ DisPlaza5Townie6Text:
 	para "'Don't.'"
 	done
 
-DisPlaza5Townie7:
-	jumptextfaceplayer DisPlaza5Townie7Text
-
-DisPlaza5Townie7Text:
-	text "Demons are people"
-	line "too. Terrible,"
-	para "terrible people,"
-	line "but still."
-	done
-
-DisPlaza5Townie8:
-	jumptextfaceplayer DisPlaza5Townie8Text
-
-DisPlaza5Townie8Text:
-	text "There's a rumour"
-	line "of an exit. Just a"
-	para "rumour. We're very"
-	line "good at rumours."
-	done
-
 DisPlaza5Duel:
 	faceplayer
 	opentext
@@ -226,14 +231,14 @@ DisPlaza5_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  5, 10, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza5Giver, -1
-	object_event  4, 24, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie1, -1
-	object_event 15, 20, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie2, -1
-	object_event 18, 23, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie3, -1
-	object_event  7, 16, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie4, -1
-	object_event 17, 12, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie5, -1
-	object_event  3, 16, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie6, -1
-	object_event  3, 15, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie7, -1
-	object_event  9, 11, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie8, -1
+	object_event  5, 10, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza5DebateA, -1
+	object_event  6, 10, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza5DebateB, -1
+	object_event  4, 24, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza5Giver, -1
+	object_event 15, 20, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie1, -1
+	object_event 18, 23, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie2, -1
+	object_event  7, 16, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie3, -1
+	object_event 17, 12, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie4, -1
+	object_event  3, 16, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie5, -1
+	object_event  3, 15, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza5Townie6, -1
 	object_event 21, 21, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza5Duel, -1
 

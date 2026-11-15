@@ -6,6 +6,33 @@ LotusPlaza6_MapScripts:
 
 	def_callbacks
 
+LotusPlaza6DebateA:
+	jumptextfaceplayer LotusPlaza6DebateAText
+
+LotusPlaza6DebateAText:
+	text "Tantra is the slow"
+	line "food of sex. Four"
+	para "hours of breathing"
+	line "and then a modest,"
+	para "deeply meaningful"
+	line "snack."
+	done
+
+LotusPlaza6DebateB:
+	jumptextfaceplayer LotusPlaza6DebateBText
+
+LotusPlaza6DebateBText:
+	text "A quickie is fast"
+	line "food, and I'm not"
+	para "ashamed. Sometimes"
+	line "I want a burger."
+	para "Sometimes I want a"
+	line "drive-through."
+	para "Sometimes it's"
+	line "both, and a"
+	para "cheerful cashier."
+	done
+
 LotusPlaza6Giver:
 	faceplayer
 	opentext
@@ -111,26 +138,6 @@ LotusPlaza6Townie6Text:
 	line "It's been four"
 	para "years. Checkout is"
 	line "a state of mind."
-	done
-
-LotusPlaza6Townie7:
-	jumptextfaceplayer LotusPlaza6Townie7Text
-
-LotusPlaza6Townie7Text:
-	text "The tide brought a"
-	line "very nice item. It"
-	para "also brought a"
-	line "court order."
-	done
-
-LotusPlaza6Townie8:
-	jumptextfaceplayer LotusPlaza6Townie8Text
-
-LotusPlaza6Townie8Text:
-	text "I'm so relaxed I"
-	line "forgot to be"
-	para "afraid. Oh no."
-	line "There it is."
 	done
 
 LotusPlaza6Steiner4DuelScript:
@@ -339,15 +346,15 @@ LotusPlaza6_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 10, 19, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Giver, -1
-	object_event  3, 21, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie1, -1
-	object_event 16, 26, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie2, -1
-	object_event 11, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie3, -1
-	object_event 12, 20, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie4, -1
-	object_event 11, 17, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie5, -1
-	object_event 10, 15, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie6, -1
-	object_event  4, 14, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie7, -1
-	object_event  3, 11, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie8, -1
+	object_event 10, 19, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6DebateA, -1
+	object_event 11, 19, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6DebateB, -1
+	object_event  3, 21, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Giver, -1
+	object_event 16, 26, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie1, -1
+	object_event 11, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie2, -1
+	object_event 12, 20, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie3, -1
+	object_event 11, 17, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie4, -1
+	object_event 10, 15, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie5, -1
+	object_event  4, 14, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie6, -1
 	object_event  2, 23, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Steiner4DuelScript, -1
 	object_event 10, 22, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Duel, -1
 

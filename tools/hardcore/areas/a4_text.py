@@ -146,3 +146,10 @@ HALL_BUTLER = ("The house has forty-one rooms. Thirty-nine of them are bedrooms.
 HALL_CHAUFFEUR = "The limousine is ready. Shall I drive you to what remains of NEW BARK TOWN?"
 HALL_CHAUFFEUR_GO = "Very good. It's a crater now, so please keep your arms and legs inside the car."
 HALL_CHAUFFEUR_NO = "As you wish. The engine is running. It is always running. The meter is also running. It's free."
+
+
+# the trainers who belong to FINNEGAN's wake (areas/debates.py)
+from .debates import CULT_BEATEN, CULT_SEEN  # noqa: E402
+
+SEEN = SEEN + CULT_SEEN["Lotus"]
+BEATEN = BEATEN + CULT_BEATEN["Lotus"]

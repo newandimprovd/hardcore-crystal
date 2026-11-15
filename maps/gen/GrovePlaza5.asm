@@ -10,6 +10,31 @@ GrovePlaza5PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A2
 	end
 
+GrovePlaza5DebateA:
+	jumptextfaceplayer GrovePlaza5DebateAText
+
+GrovePlaza5DebateAText:
+	text "Harvest-time"
+	line "nudity is a"
+	para "sacrament. We come"
+	line "into the world"
+	para "bare and we ought"
+	line "to leave the barn"
+	para "the same way."
+	done
+
+GrovePlaza5DebateB:
+	jumptextfaceplayer GrovePlaza5DebateBText
+
+GrovePlaza5DebateBText:
+	text "I say the"
+	line "sacrament is the"
+	para "hay. I have a rash"
+	line "that agrees with"
+	para "me. Wear a hat."
+	line "Wear several."
+	done
+
 GrovePlaza5Giver:
 	faceplayer
 	opentext
@@ -122,27 +147,6 @@ GrovePlaza5Townie6Text:
 	para "threat."
 	done
 
-GrovePlaza5Townie7:
-	jumptextfaceplayer GrovePlaza5Townie7Text
-
-GrovePlaza5Townie7Text:
-	text "We share"
-	line "everything here."
-	para "I'm sharing my"
-	line "opinion: you"
-	para "should leave."
-	done
-
-GrovePlaza5Townie8:
-	jumptextfaceplayer GrovePlaza5Townie8Text
-
-GrovePlaza5Townie8Text:
-	text "The compost is a"
-	line "very emotional"
-	para "place. Visit at"
-	line "your own risk."
-	done
-
 GrovePlaza5Duel:
 	faceplayer
 	opentext
@@ -237,14 +241,14 @@ GrovePlaza5_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 14, 11, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Giver, -1
-	object_event 10,  6, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie1, -1
-	object_event  4, 10, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie2, -1
-	object_event  4, 14, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie3, -1
-	object_event 11, 11, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie4, -1
-	object_event 13, 19, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie5, -1
-	object_event 12, 10, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie6, -1
-	object_event 15, 18, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie7, -1
-	object_event  2, 18, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie8, -1
+	object_event 14, 11, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5DebateA, -1
+	object_event 15, 11, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5DebateB, -1
+	object_event 10,  6, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Giver, -1
+	object_event  4, 10, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie1, -1
+	object_event  4, 14, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie2, -1
+	object_event 11, 11, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie3, -1
+	object_event 13, 19, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie4, -1
+	object_event 12, 10, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie5, -1
+	object_event 15, 18, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie6, -1
 	object_event 25, 22, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Duel, -1
 

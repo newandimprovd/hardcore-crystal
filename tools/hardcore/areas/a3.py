@@ -36,6 +36,6 @@ def build(w, roster, rng, entry_doors, open_exit=False):
     cfg = AreaCfg("AREA3", "Axiom", Spec(), kits.axiom(), "PALETTE_DAY",
                   [("AXIOM_OUTSKIRTS", 46, 54, "AXIOM<BSP>OUTSKIRTS"), ("AXIOM_CENTRAL", 42, 50, "AXIOM<BSP>CENTRAL"),
                    ("AXIOM_MAYORALTY", 38, 46, "THE<BSP>MAYORALTY")],
-                  "MUSIC_GOLDENROD_CITY", texts, TIERS, bosses, [None, "dark", "slab"], [3, 2, 3], "AxiomGate",
+                  "MUSIC_HC_AXIOM", texts, TIERS, bosses, [None, "dark", "slab"], [3, 2, 3], "AxiomGate",
                   T.GATE[0], trainers=counts.lanes_of(3), stock_ix=(1, 1, 1, 2, 2, 2, 2))
     return build_area(w, roster, rng, cfg, entry_doors)

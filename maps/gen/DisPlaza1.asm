@@ -19,6 +19,32 @@ DisPlaza1Fountain0Text:
 	para "of stock."
 	done
 
+DisPlaza1DebateA:
+	jumptextfaceplayer DisPlaza1DebateAText
+
+DisPlaza1DebateAText:
+	text "Hell is other"
+	line "people. Everyone"
+	para "says it as if"
+	line "Sartre had been to"
+	para "the lake."
+	done
+
+DisPlaza1DebateB:
+	jumptextfaceplayer DisPlaza1DebateBText
+
+DisPlaza1DebateBText:
+	text "Hell is the"
+	line "commute. Other"
+	para "people are only"
+	line "the scenery."
+	para "Sartre never sat"
+	line "on the late train"
+	para "in a place where"
+	line "the train is also"
+	para "on fire."
+	done
+
 DisPlaza1Giver:
 	faceplayer
 	opentext
@@ -127,25 +153,6 @@ DisPlaza1Townie6Text:
 	para "screaming echo."
 	done
 
-DisPlaza1Townie7:
-	jumptextfaceplayer DisPlaza1Townie7Text
-
-DisPlaza1Townie7Text:
-	text "There's a rumour"
-	line "of an exit. Just a"
-	para "rumour. We're very"
-	line "good at rumours."
-	done
-
-DisPlaza1Townie8:
-	jumptextfaceplayer DisPlaza1Townie8Text
-
-DisPlaza1Townie8Text:
-	text "We have a union."
-	line "It meets every"
-	para "Never."
-	done
-
 DisPlaza1Duel:
 	faceplayer
 	opentext
@@ -240,14 +247,14 @@ DisPlaza1_MapEvents:
 	bg_event  7,  9, BGEVENT_READ, DisPlaza1Fountain0
 
 	def_object_events
-	object_event 14, 16, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Giver, -1
-	object_event 16, 12, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie1, -1
-	object_event 23, 19, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie2, -1
-	object_event  3, 18, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie3, -1
-	object_event  2, 12, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie4, -1
-	object_event  8,  6, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie5, -1
-	object_event  2, 13, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie6, -1
-	object_event 12, 19, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie7, -1
-	object_event  4, 22, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie8, -1
+	object_event 14, 16, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateA, -1
+	object_event 15, 16, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateB, -1
+	object_event 16, 12, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Giver, -1
+	object_event 23, 19, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie1, -1
+	object_event  3, 18, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie2, -1
+	object_event  2, 12, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie3, -1
+	object_event  8,  6, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie4, -1
+	object_event  2, 13, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie5, -1
+	object_event 12, 19, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie6, -1
 	object_event  3, 19, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Duel, -1
 

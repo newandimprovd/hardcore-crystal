@@ -6,6 +6,31 @@ GrovePlaza6_MapScripts:
 
 	def_callbacks
 
+GrovePlaza6DebateA:
+	jumptextfaceplayer GrovePlaza6DebateAText
+
+GrovePlaza6DebateAText:
+	text "Consensus means"
+	line "nobody leaves"
+	para "until we all"
+	line "agree. It's"
+	para "democracy at its"
+	line "most intimate."
+	done
+
+GrovePlaza6DebateB:
+	jumptextfaceplayer GrovePlaza6DebateBText
+
+GrovePlaza6DebateBText:
+	text "It's a hostage"
+	line "situation with"
+	para "snacks. Last month"
+	line "we decided about a"
+	para "gate for nine"
+	line "hours. The gate"
+	para "got old and died."
+	done
+
 GrovePlaza6Giver:
 	faceplayer
 	opentext
@@ -122,26 +147,6 @@ GrovePlaza6Townie6Text:
 	line "your own risk."
 	done
 
-GrovePlaza6Townie7:
-	jumptextfaceplayer GrovePlaza6Townie7Text
-
-GrovePlaza6Townie7Text:
-	text "There's no money"
-	line "in the commune. We"
-	para "have vibes. Vibes"
-	line "are rationed."
-	done
-
-GrovePlaza6Townie8:
-	jumptextfaceplayer GrovePlaza6Townie8Text
-
-GrovePlaza6Townie8Text:
-	text "Held items are"
-	line "shared here. By"
-	para "which I mean"
-	line "they're taken."
-	done
-
 GrovePlaza6Duel:
 	faceplayer
 	opentext
@@ -234,14 +239,14 @@ GrovePlaza6_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 12, 19, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6DebateA, -1
+	object_event 13, 19, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6DebateB, -1
 	object_event 21, 17, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Giver, -1
-	object_event 12, 19, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie1, -1
-	object_event 21, 13, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie2, -1
-	object_event 10, 19, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie3, -1
-	object_event  7, 12, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie4, -1
-	object_event 17, 16, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie5, -1
-	object_event 14, 15, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie6, -1
-	object_event 14, 20, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie7, -1
-	object_event  6, 18, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie8, -1
+	object_event 21, 13, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie1, -1
+	object_event 10, 19, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie2, -1
+	object_event  7, 12, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie3, -1
+	object_event 17, 16, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie4, -1
+	object_event 14, 15, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie5, -1
+	object_event 14, 20, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Townie6, -1
 	object_event 10, 18, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza6Duel, -1
 

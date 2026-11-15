@@ -83,6 +83,7 @@
 	const MUSIC_CLAIR                        ; 5d
 	const MUSIC_MYSTICALMAN_ENCOUNTER        ; 61
 	const MUSIC_SUICUNE_BATTLE               ; 64
+INCLUDE "constants/hc_music_constants.asm" ; HC-MUSIC
 DEF NUM_MUSIC_SONGS EQU const_value
 
 ; GetMapMusic picks music for this value (see home/map.asm)

@@ -18,6 +18,31 @@ DisPlaza4Fountain0Text:
 	line "politely."
 	done
 
+DisPlaza4DebateA:
+	jumptextfaceplayer DisPlaza4DebateAText
+
+DisPlaza4DebateAText:
+	text "The damned can't"
+	line "be bored. We are"
+	para "perpetually"
+	line "fascinated by the"
+	para "flames."
+	done
+
+DisPlaza4DebateB:
+	jumptextfaceplayer DisPlaza4DebateBText
+
+DisPlaza4DebateBText:
+	text "The damned are"
+	line "bored beyond"
+	para "belief. The flames"
+	line "are the same"
+	para "flames. I've named"
+	line "them all. They're"
+	para "named after my"
+	line "exes."
+	done
+
 DisPlaza4Giver:
 	faceplayer
 	opentext
@@ -126,27 +151,6 @@ DisPlaza4Townie6Text:
 	line "paperwork."
 	done
 
-DisPlaza4Townie7:
-	jumptextfaceplayer DisPlaza4Townie7Text
-
-DisPlaza4Townie7Text:
-	text "Welcome to Dis!"
-	line "Your suffering is"
-	para "being processed."
-	line "Estimated wait:"
-	para "forever."
-	done
-
-DisPlaza4Townie8:
-	jumptextfaceplayer DisPlaza4Townie8Text
-
-DisPlaza4Townie8Text:
-	text "I'm in sales."
-	line "Don't ask what I"
-	para "sell. Don't ask"
-	line "who buys."
-	done
-
 DisPlaza4Duel:
 	faceplayer
 	opentext
@@ -239,14 +243,14 @@ DisPlaza4_MapEvents:
 	bg_event  5, 23, BGEVENT_READ, DisPlaza4Fountain0
 
 	def_object_events
-	object_event 13, 14, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Giver, -1
-	object_event 21, 11, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie1, -1
-	object_event  8, 20, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie2, -1
-	object_event  5, 10, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie3, -1
-	object_event  8, 19, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie4, -1
-	object_event 20, 19, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie5, -1
-	object_event  6, 18, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie6, -1
-	object_event 18,  8, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie7, -1
-	object_event  4, 19, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie8, -1
+	object_event 13, 14, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4DebateA, -1
+	object_event 14, 14, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4DebateB, -1
+	object_event 21, 11, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Giver, -1
+	object_event  8, 20, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie1, -1
+	object_event  5, 10, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie2, -1
+	object_event  8, 19, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie3, -1
+	object_event 20, 19, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie4, -1
+	object_event  6, 18, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie5, -1
+	object_event 18,  8, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie6, -1
 	object_event 19,  9, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4Duel, -1
 

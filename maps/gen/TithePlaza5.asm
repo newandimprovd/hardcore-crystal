@@ -10,6 +10,31 @@ TithePlaza5PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A1
 	end
 
+TithePlaza5DebateA:
+	jumptextfaceplayer TithePlaza5DebateAText
+
+TithePlaza5DebateAText:
+	text "Celibacy is the"
+	line "purest romance."
+	para "Forty years"
+	line "devoted to one"
+	para "hand."
+	done
+
+TithePlaza5DebateB:
+	jumptextfaceplayer TithePlaza5DebateBText
+
+TithePlaza5DebateBText:
+	text "That is not"
+	line "purity, that is a"
+	para "monogamous"
+	line "relationship with"
+	para "a callus. Leave"
+	line "the Church out of"
+	para "it, it has enough"
+	line "on its plate."
+	done
+
 TithePlaza5Giver:
 	faceplayer
 	opentext
@@ -119,27 +144,6 @@ TithePlaza5Townie6Text:
 	line "It's cheaper."
 	done
 
-TithePlaza5Townie7:
-	jumptextfaceplayer TithePlaza5Townie7Text
-
-TithePlaza5Townie7Text:
-	text "The Pokemon Center"
-	line "is free. That's"
-	para "not a kindness."
-	line "That's an advert."
-	done
-
-TithePlaza5Townie8:
-	jumptextfaceplayer TithePlaza5Townie8Text
-
-TithePlaza5Townie8Text:
-	text "That man is a cop."
-	line "This man is a cop."
-	para "I'm also a cop."
-	line "It's a very safe"
-	para "neighbourhood."
-	done
-
 TithePlaza5Duel:
 	faceplayer
 	opentext
@@ -235,14 +239,14 @@ TithePlaza5_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 10,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Giver, -1
-	object_event 23, 12, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie1, -1
-	object_event 18, 22, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie2, -1
-	object_event 20, 25, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie3, -1
-	object_event 21, 23, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie4, -1
-	object_event 26,  9, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie5, -1
-	object_event 23, 26, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie6, -1
-	object_event 14, 25, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie7, -1
-	object_event 20, 11, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie8, -1
+	object_event 10,  6, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza5DebateA, -1
+	object_event 11,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza5DebateB, -1
+	object_event 23, 12, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Giver, -1
+	object_event 18, 22, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie1, -1
+	object_event 20, 25, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie2, -1
+	object_event 21, 23, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie3, -1
+	object_event 26,  9, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie4, -1
+	object_event 23, 26, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie5, -1
+	object_event 14, 25, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza5Townie6, -1
 	object_event  2, 14, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza5Duel, -1
 

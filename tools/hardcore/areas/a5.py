@@ -36,6 +36,6 @@ def build(w, roster, rng, entry_doors):
     cfg = AreaCfg("AREA5", "Dis", Spec(), kits.dis(), "PALETTE_DAY",
                   [("DIS_CITY", 24, 50, "THE<BSP>CITY<BSP>OF<BSP>DIS"), ("DIS_COCYTUS", 20, 46, "LAKE<BSP>COCYTUS"),
                    ("DIS_JUDECCA", 16, 42, "JUDECCA")],
-                  "MUSIC_ROCKET_HIDEOUT", texts, TIERS, bosses, [None, None, None], [3, 2, 3], "DisGate",
+                  "MUSIC_HC_DIS", texts, TIERS, bosses, [None, None, None], [3, 2, 3], "DisGate",
                   T.GATE[0], trainers=counts.lanes_of(5), stock_ix=(2, 2, 2, 2, 2, 2, 2), purg=False)
     return build_area(w, roster, rng, cfg, entry_doors)
