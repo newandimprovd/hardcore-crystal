@@ -12,12 +12,48 @@ class _JitterPB:
     def __init__(self, pb):
         self._pb = pb
         self._n = 0
+        self._hooks = []  # (bank, addr, original opcode, callback, context) of every hook set through this wrapper
+        self.unlocks = 0
 
     def button(self, key, delay=1):
         if key in ("a", "b", "start", "select"):
             self._n += 1
             delay += self._n % 3
         return self._pb.button(key, delay)
+
+    def hook_register(self, bank, addr, callback, context):
+        if addr < 0x8000:
+            self._hooks.append((bank, addr, self._pb.memory[bank, addr], callback, context))
+        return self._pb.hook_register(bank, addr, callback, context)
+
+    def tick(self, count=1, render=True, sound=True):
+        r = self._pb.tick(count, render, sound)
+        if self._hooks and self._pb.memory[0xFFFF] == 0:
+            self._unlock()
+        return r
+
+    def _unlock(self):
+        """PyBoy hooks are an opcode (0xDB) written over the hooked instruction.  Now and then (seen in the whiteout walk, at the first fight of
+        Cherrygrove) the emulator reaches such an opcode when it has no hook entry for it, takes it for an illegal opcode of the game and locks the
+        CPU the way hardware does: interrupt enable register cleared, CPU halted, for good.  The game is not at fault.  This puts the original
+        opcodes back, points the CPU at the hooked instruction again, switches the interrupts back on (which wakes the halted CPU) and sets all
+        hooks anew, so the hook that was missed fires normally."""
+        pb = self._pb
+        rf = pb.register_file
+        hit = rf.PC - 1  # the 0xDB is one byte long and was executed
+        for bank, addr, orig, _cb, _ctx in self._hooks:
+            try:
+                pb.hook_deregister(bank, addr)
+            except Exception:
+                pass
+            pb.memory[bank, addr] = orig
+        for bank, addr, _orig, cb, ctx in self._hooks:
+            pb.hook_register(bank, addr, cb, ctx)
+            if addr == hit:
+                rf.PC = addr
+        pb.memory[0xFFFF] = 0x03  # IE_DEFAULT: VBlank and STAT
+        self.unlocks += 1
+        print(f"  (emulator hook lock at {hit:04x} cleared, {self.unlocks} so far)", flush=True)
 
     def __getattr__(self, name):
         return getattr(self._pb, name)
