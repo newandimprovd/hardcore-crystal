@@ -235,3 +235,16 @@ encounters and redesign Tithe Road, then walk. Free ROM went from 346 KB (old me
 - New trainer classes T_STEINER, T_CROWLEY, U_SABBAH, U_SUHRAWARDI, L_CIORAN, D_SADRA, D_QADI (pictures recoloured from vanilla ones for now). gen_classes.py skips the deleted Battle Tower tables.
 - Budget: 500 + 15 bosses + 49 scripted duels + 58 Purgatorio = 622 of 650. Tests: `test_named.py` (block, rival), the walker's `give:` goals (area walks 1 to 5 pass).
 - Not done yet: the author's approval of the last change list (no final ROM before it), real battle art for the named classes, the 12 kill gap between the tidal wave (400) and the crater (412) to report.
+
+## Alpha 3 (Nov 2026): songs, world map, credits, charms, debates, cult
+Notes for the author: `docs/ALPHA3_NOTES.md`. Part of the work was lost in a machine reset after commit f3246cb: the world map, the music tooling and the Pokegear change were replayed
+exactly from the saved transcript, the reveal text, credits block, charms, hermits, debates and cult lines were written again (wording differs from the lost draft).
+- Eight original songs (gen_music.py), a real world map (world_map.py, Bruno hands over the Pokegear and the map card), a three-line first-kill reveal, credits naming CLAUDE,
+  six charm key items and twelve glade hermits (docs/CHARMS.md), 35 debate pairs and cult trainer lines (areas/debates.py).
+- Bugs found by the new tests: (1) **the credits' last scene (Igglybuff palette) drew white text on white**, so the new block and the vanilla US staff lines were invisible;
+  gfx/credits/credits.pal now has a black background there. (2) LOTUS and PURGATORIO failed the sparseness check because the pad's rests grew with the section density,
+  which made the quietest tenth deeper than the rest; the pad now has its own factor (`padgap`).
+- Harness: PyBoy hooks lock the CPU now and then (a 0xDB opcode without a hook entry is taken for an illegal ROM opcode); gbtest._JitterPB now puts the opcodes back and re-sets the
+  hooks. Button holds are jittered so menus never phase-lock. gen_moves / gen_types use fb3d23f as the oldest saved base.
+- verify_all.sh has new steps (charms, credits, reveal, worldmap); all PASS. test_music (8 songs) passes, walk_all 1 to 5 pass with 0 problems. Free ROM 915 KB.
+- Not done: battle engine and AI (next version), real art for the 81 species and named classes, the 12 kill gap, Purgatorio 58 of 60 trainers.

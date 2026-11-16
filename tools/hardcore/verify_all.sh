@@ -18,10 +18,16 @@ step battle_budget python3 tools/hardcore/battle_budget.py --quiet
 step roster python3 tools/hardcore/test_roster.py pokecrystal11.gbc
 step category python3 tools/hardcore/test_category.py pokecrystal11.gbc
 step intro python3 tools/hardcore/test_intro.py pokecrystal11.gbc
+step charms python3 tools/hardcore/test_charms.py pokecrystal11.gbc
+step b_cr $TB cr
+step credits python3 tools/hardcore/test_credits.py /home/claude/scratch/cr.gbc
+step b_rv $TB rv TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=5
+step reveal python3 tools/hardcore/test_reveal.py /home/claude/scratch/rv.gbc
 step b_vc $TB vc TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=3 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
 step cross python3 tools/hardcore/test_cross.py /home/claude/scratch/vc.gbc
 step b_cg1 $TB cg1 TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=8 TEST_MON=CTHULUDON TEST_LEVEL=60 TEST_REVEALED=1 TEST_ITEMS=1
 step whiteout python3 tools/hardcore/test_whiteout.py /home/claude/scratch/cg1.gbc
+step worldmap python3 tools/hardcore/test_worldmap.py /home/claude/scratch/cg1.gbc /home/claude/scratch/map/shots 60
 read -r WC WX WY <<< "$(python3 tools/hardcore/spawn.py TithePlaza1 grass)"
 step b_wa1 $TB wa1 TEST_MAP=$WC TEST_X=$WX TEST_Y=$WY TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_ITEMS=0
 step wild python3 tools/hardcore/test_wild.py /home/claude/scratch/wa1.gbc TithePlaza1 40

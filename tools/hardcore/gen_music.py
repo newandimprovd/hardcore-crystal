@@ -71,8 +71,8 @@ SONGS = [
          use="Axiom: the Outskirts, Central and the Mayoralty",
          mood="a machine that counts in sevens while the bass counts in fives"),
     dict(key="LOTUS", label="HcLotus", name="The Lotus", tempo=320, root=0, scale=[0, 2, 4, 6, 7, 9, 11],
-         prog=[0, 1, 0, 3, 0, 4, 1, 0], density=[1.2, 1.0, 1.4, 0.9, 1.3, 1.0, 1.5, 0.9],
-         ch1="bells", ch2="pad", ch3="drone", bell_oct=4, pad_oct=3, bass_oct=2, duty1=2, duty2=0, wave=2, shimmer=True,
+         prog=[0, 1, 0, 3, 0, 4, 1, 0], density=[1.9, 1.6, 2.1, 1.5, 2.0, 1.6, 2.2, 1.5],
+         ch1="bells", ch2="pad", ch3="drone", bell_oct=4, pad_oct=3, bass_oct=2, duty1=2, duty2=0, wave=2, shimmer=True, padgap=0.5,
          motifs=[[(0, 5), (2, 3), (4, 8)], [(4, 3), (2, 3), (1, 3), (0, 7)], [(0, 3), (3, 3), (5, 3), (4, 6)]],
          pan1=(False, True), pan2=(True, False), vib2=(4, 3, 3),
          use="Lotus: the Coast, the Boardwalk and the Hilltop",
@@ -85,8 +85,8 @@ SONGS = [
          use="Dis: the City, Lake Cocytus and Judecca",
          mood="a low furnace and a semitone that will not resolve"),
     dict(key="PURGATORIO", label="HcPurgatorio", name="The Terraces", tempo=290, root=2, scale=[0, 2, 4, 6, 7, 9, 11],
-         prog=[0, 1, 2, 3, 4, 3, 2, 0], density=[1.0, 1.0, 1.0, 1.1, 1.2, 1.0, 1.0, 1.3],
-         ch1="bells", ch2="pad", ch3="drone", bell_oct=4, pad_oct=3, bass_oct=2, duty1=2, duty2=1, wave=1, climb=True,
+         prog=[0, 1, 2, 3, 4, 3, 2, 0], density=[1.7, 1.6, 1.7, 1.8, 2.0, 1.7, 1.6, 2.1],
+         ch1="bells", ch2="pad", ch3="drone", bell_oct=4, pad_oct=3, bass_oct=2, duty1=2, duty2=1, wave=1, climb=True, padgap=0.5,
          motifs=[[(0, 3), (1, 3)], [(0, 2), (1, 2), (2, 4)], [(0, 3), (2, 3), (1, 6)]],
          pan1=(False, True), pan2=(True, False), vib2=(8, 2, 4),
          use="PURGATORIO: the threshold, the terraces and Nick's Landing",
@@ -182,7 +182,7 @@ def compose(song):
             n = min(B(rng.choice([6, 8, 10, 12])), SECTION - t)
             vol = 3 if song["key"] == "ABYSS" else rng.choice([4, 5])
             v2.add(base + t, n, pitch(sc, root, song["pad_oct"], d), vol, 0)
-            t += n + max(1, int(B(rng.choice([1, 2, 3])) * dens))
+            t += n + max(1, int(B(rng.choice([1, 2, 3])) * song.get("padgap", dens)))  # padgap: the pad's own rest factor (default: the section's density)
             k += 1
         # ----------------------------------------------------------------- channel 1: the foreground
         style = song["ch1"]
