@@ -4,10 +4,33 @@ memory reads go through pb.memory[bank, addr] with the bank taken from the symbo
 import re, sys, faulthandler
 from pyboy import PyBoy
 
+class _JitterPB:
+    """Wraps a PyBoy: every A/B/START/SELECT press is held a varying number of frames longer than asked.  Menus and text boxes poll the joypad only
+    every few frames, so a test that presses A on a fixed rhythm can lock onto a phase that never overlaps a poll and then waits forever (seen: the
+    main menu, battles that never end)."""
+
+    def __init__(self, pb):
+        self._pb = pb
+        self._n = 0
+
+    def button(self, key, delay=1):
+        if key in ("a", "b", "start", "select"):
+            self._n += 1
+            delay += self._n % 3
+        return self._pb.button(key, delay)
+
+    def __getattr__(self, name):
+        return getattr(self._pb, name)
+
+
 class T:
     def __init__(self, rom, sym=None, window="null", speed=0, sound=False):
         self.pb = PyBoy(rom, window=window, sound_emulated=sound)
         self.pb.set_emulation_speed(speed)
+        # Menus and text boxes poll the joypad only every few frames.  A test that presses A on a fixed rhythm can lock onto a phase that never
+        # overlaps a poll and then waits forever (seen: the main menu, battles that "never end").  So every A/B/START/SELECT press is held a
+        # varying number of frames longer than asked.
+        self.pb = _JitterPB(self.pb)
         self.sym = {}
         self.syms = {}
         sym = sym or rom.replace(".gbc", ".sym")
@@ -68,8 +91,8 @@ def boot_to_overworld(t, max_frames=6000):
     """Skip intro/new game screens until a map is loaded. Mash A/Start."""
     faulthandler.dump_traceback_later(300, exit=True)
     for i in range(max_frames // 20):
-        t.pb.button("a", 4)
-        t.tick(20)
+        t.pb.button("a", 4 + i % 3)  # jittered: a fixed cadence can lock onto a phase that never overlaps a menu's joypad poll
+        t.tick(18 + i % 5)
         if t.mem("wMapGroup") and t.mem("wMapNumber") and t.mem("wPlayerState") is not None and i > 20:
             pass
     return t.where()

@@ -207,8 +207,9 @@ def intro(r):
             t.pb.button("start", 3)
         t.tick(1)
     for i in range(1200):
-        t.pb.button("a", 3)
-        t.tick(20)
+        # menus poll the joypad only every few frames, so a fixed press cadence can lock onto a phase that never overlaps a poll: jitter it
+        t.pb.button("a", 4 + i % 3)
+        t.tick(18 + i % 5)
         if r.where()[0] == "PlayersHouse2F" and i > 50:
             break
     r.mash(1200)

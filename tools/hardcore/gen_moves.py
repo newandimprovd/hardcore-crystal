@@ -21,7 +21,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-BASE = "3bc8daa"
+BASE = "fb3d23f"  # the original container's base commit 3bc8daa was never backed up; the stage 1 snapshot is the oldest one that exists
 
 
 def base(path):
