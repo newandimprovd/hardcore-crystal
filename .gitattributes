@@ -35,3 +35,6 @@
 *.lz binary   diff=hex
 *.2bpp binary diff=hex
 *.1bpp binary diff=hex
+
+# ROM images are byte-exact: no line-ending conversion (alpha 1 was damaged by it once)
+*.gbc binary
