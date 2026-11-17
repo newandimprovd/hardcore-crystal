@@ -1032,3 +1032,64 @@ IgnoredOrders2Text:
 	para "The battle has"
 	line "been canceled…"
 	prompt
+
+BattleText_EnemyFled:
+	text "Enemy @"
+	text_ram wEnemyMonNickname
+	text_start
+	line "fled!"
+	prompt
+
+BattleText_ItemsCantBeUsedHere:
+	text "Items can't be"
+	line "used here."
+	prompt
+
+BattleText_LinkErrorBattleCanceled:
+	text "Link error…"
+
+	para "The battle has"
+	line "been canceled…"
+	prompt
+
+BattleText_MonHasNoMovesLeft:
+	text_ram wBattleMonNickname
+	text_start
+	line "has no moves left!"
+	done
+
+BattleText_PlayerPickedUpPayDayMoney:
+	text "<PLAYER> picked up"
+	line "¥@"
+	text_decimal wPayDayMoney, 3, 6
+	text "!"
+	prompt
+
+BattleText_WildMonIsAngry:
+	text "Wild @"
+	text_ram wEnemyMonNickname
+	text_start
+	line "is angry!"
+	prompt
+
+BattleText_WildMonIsEating:
+	text "Wild @"
+	text_ram wEnemyMonNickname
+	text_start
+	line "is eating!"
+	prompt
+
+LostAgainstText:
+	text "Lost against"
+	line "<ENEMY>!"
+	prompt
+
+TiedAgainstText:
+	text "Tied against"
+	line "<ENEMY>!"
+	prompt
+
+RageBuildingText:
+	text "<USER>'s"
+	line "RAGE is building!"
+	prompt

@@ -1079,3 +1079,26 @@ _OakText5::
 	para "That's why I study"
 	line "#MON every day."
 	prompt
+
+_BattleMonNicknameText::
+	text_ram wBattleMonNickname
+	text "!"
+	done
+
+_DoItMonText::
+	text "Do it! @"
+	text_end
+
+_GoForItMonText::
+	text "Go for it,"
+	line "@"
+	text_end
+
+_GoMonText::
+	text "Go! @"
+	text_end
+
+_YourFoesWeakGetmMonText::
+	text "Your foe's weak!"
+	line "Get'm, @"
+	text_end
