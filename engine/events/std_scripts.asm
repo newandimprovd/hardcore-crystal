@@ -117,12 +117,6 @@ PokecenterNurseScript:
 	farwritetext NurseReturnPokemonText
 	pause 20
 
-.hc_no_money
-	farwritetext HC_NurseNoMoneyText
-	waitbutton
-	closetext
-	end
-
 .done
 	farwritetext NurseGoodbyeText
 
@@ -151,6 +145,12 @@ PokecenterNurseScript:
 
 .pokerus_done
 	setflag ENGINE_CAUGHT_POKERUS
+	end
+
+.hc_no_money
+	farwritetext HC_NurseNoMoneyText
+	waitbutton
+	closetext
 	end
 
 DifficultBookshelfScript:

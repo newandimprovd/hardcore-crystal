@@ -44,6 +44,14 @@ def flag_get(name):
     return (t.mem("wEventFlags", n // 8) >> (n % 8)) & 1
 
 
+def species_id(name):
+    for ln in open(os.path.join(ROOT, "constants/pokemon_constants.asm")):
+        m = re.match(r"\s*const (\w+)\s*; ([0-9A-Fa-f]{2})", ln)
+        if m and m[1] == name:
+            return int(m[2], 16)
+    raise KeyError(name)
+
+
 def kills():
     k = t.mem("wHCKillCount", 0, 2)
     return k[0] + 256 * k[1]
@@ -82,12 +90,23 @@ else:
     st = wk.state()
     check("start on the stem", st[0] == "TitheJunction", f"{st}")
     k0 = kills()
+    party = None
     for _ in range(8):
         t.pb.button("up", 9)
-        t.tick(23)
+        for i in range(240):
+            t.tick(3)
+            if i % 7 == 6 and not t.mem("wBattleMode"):
+                t.pb.button("a", 4)  # the rival's lines wait for a button
+            if t.mem("wBattleMode") and t.mem("wOTPartyCount"):
+                party = [t.mem("wOTPartyMon1Species", i * 48) for i in range(t.mem("wOTPartyCount"))]
+                break
+        if party:
+            t.pb.button("up", 1)
         wk.settle_if_event()
         if flag_get("EVENT_NAMED_RIVAL0_DONE"):
             break
+    # the test ROM's player took CYNDAQUIL, so the rival has TOTODILE: it is his last (strongest) mon
+    check("the rival's last mon is his starter", party is not None and party[-1] == species_id("TOTODILE"), f"{party}")
     t.tick(60)
     wk.settle()
     check("the rival fight happened", flag_get("EVENT_NAMED_RIVAL0_DONE"))

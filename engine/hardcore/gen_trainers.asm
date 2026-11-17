@@ -69,12 +69,71 @@ HC_ReadGeneratedParty::
 	call GetFarByte
 	inc hl
 	ld [wCurPartySpecies], a
+	; the last mon of every rival party is the rival's own starter, the one that was meant to beat the player's
+	ld a, [wOtherTrainerClass]
+	cp RIVAL1
+	jr z, .rival
+	cp RIVAL2
+	jr nz, .add_mon
+.rival
+	ld a, [wHCGenBank]
+	call GetFarByte
+	cp -1
+	jr nz, .add_mon
+	push hl
+	call HC_RivalStarter
+	ld [wCurPartySpecies], a
+	pop hl
+.add_mon
 	ld a, OTPARTYMON
 	ld [wMonType], a
 	push hl
 	predef TryAddMonToParty
 	pop hl
 	jr .mon
+
+HC_RivalStarter:
+; out: a = the species of the rival's starter at the stage that fits wCurPartyLevel (stages at 25, 50 and 75 like the rest of the roster).
+; The player took TOTODILE: the rival has CHIKORITA. The player took CHIKORITA: the rival has CYNDAQUIL. Otherwise the rival has TOTODILE.
+	ld de, EVENT_GOT_TOTODILE_FROM_ELM
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	ld a, c
+	and a
+	ld hl, .Chikorita
+	jr nz, .got_line
+	ld de, EVENT_GOT_CHIKORITA_FROM_ELM
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	ld a, c
+	and a
+	ld hl, .Cyndaquil
+	jr nz, .got_line
+	ld hl, .Totodile
+.got_line
+	ld a, [wCurPartyLevel]
+	ld c, 0
+	cp 25
+	jr c, .got_stage
+	inc c
+	cp 50
+	jr c, .got_stage
+	inc c
+	cp 75
+	jr c, .got_stage
+	inc c
+.got_stage
+	ld b, 0
+	add hl, bc
+	ld a, [hl]
+	ret
+
+.Chikorita:
+	db CHIKORITA, BAYLEEF, MEGANIUM, ELDERWOOD
+.Cyndaquil:
+	db CYNDAQUIL, QUILAVA, TYPHLOSION, CALDERA
+.Totodile:
+	db TOTODILE, CROCONAW, FERALIGATR, DEATHROLL
 
 HC_GetGeneratedTrainerName::
 ; in: b = trainer id, c = trainer class. out: de = wStringBuffer1 holding the name.
