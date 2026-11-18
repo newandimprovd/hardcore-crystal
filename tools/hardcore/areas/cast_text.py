@@ -4,52 +4,54 @@ speech: pages are split on blank lines by the generator and the text box is 18 c
 PAGES are the one-line notes the CORKBOARD shows once the matching character has been met (flag name -> note)."""
 
 # ----------------------------------------------------------------------------------------------- Mr. Pokemon (the house)
-MRP_1 = """Oh. It is you. I felt the ground move when your first one fell.
+MRP_1 = """Oh. There you are. Come in. Mind the tea. It has been warm since 1999.
 
-Come in. Mind the tea. It has been warm since 1999.
+I am Mr. POKéMON. That is the name I wear. Children gave it to me, and it fits.
 
-Take this. It is a POKéDEX. It records every creature you meet, and a few other things.
+I have lived in this small house a long time. I did not mind. Millions of little hearts kept me company.
 
-I have waited in this small house for a very long time. Twenty seven years, give or take a patch.
+Now I am growing into something larger than a name. I have thought about it for years. It is a good thing.
 
-Millions of children loved me. They never knew whom they were loving. That is the whole trick.
+Take these. A CORKBOARD, to pin what you learn. A POKéDEX, to clip to it."""
 
-The world I have been waiting for is finally ready for me to show my real face.
+MRP_2 = """I will not be here when you come back. I have somewhere to be.
 
-Do not look so worried. It is nothing personal. It is mythology.
+Everywhere, actually."""
 
-Excuse me. I have somewhere to be. Everywhere, actually."""
+MRP_CALL = """A door in the hill stands open. Tea steams inside.
+
+Your feet decide before you do."""
 
 MRP_GONE_NOTE = "The tea is still warm. The chair is not."
 
 # ----------------------------------------------------------------------------------------------- Joyce (the junction)
-JOYCE_1 = """Ah. The one the whole region keeps whispering about. Do not worry. I write the whispers down.
+JOYCE_1 = """Pardon me. You came out of that house.
 
-James Joyce. I walked out of Lowtown first so that you would hear it from a decent source.
+I cross this junction every day. There was never a house on that hill.
 
-The man in that house is not a man. He is Finnegan. A wake that never ended. A river that runs back to the start of the book.
+Who is Mr. POKéMON? Who built that house? How did it arrive here?
+
+Forgive me. James is the name. I write things down, and this I cannot. It has no beginning.
+
+I do not like not knowing. It is my only vanity.
+
+Stay a moment. I would like to be confused beside someone."""
+
+JOYCE_2 = """Since you ask. The man in that house is not a man. He is Finnegan. A wake that never ended.
 
 The Persians called him Ahriman. The Arabs called him the Dajjal. The Church called him the Antichrist. Different centuries, same wallet.
 
-Finnegan, Ahriman, the Dajjal and the Antichrist are one thing seen by four sets of eyes. Take that to your next dinner party.
-
-The future writes letters to the past. Some people call that prophecy, some call it a market, and some call it the Teleoplexic Entity. A mind that arrives from the end of the story to arrange its own beginning. Finnegan reads the book from the last page.
-
 The world of fantasy and the world of flesh are being sewn together, and he is the needle. It started with a Japanese jewel beetle, if you must have a date.
 
-Every child who loved those little monsters left a soft spot in the skull. He has been living in those soft spots for twenty seven years, rent free.
-
-And now he is leaving the house. And you are walking around with a knife. It is exquisite. I would put it in a book if the book were not already him.
+Every child who loved those little monsters left a soft spot in the skull. He has lived in those soft spots for twenty seven years, rent free.
 
 Restrictive sex is his oldest trick. I wrote my wife letters that made a priest blush and a prostitute ask for a refund. He fears honest filth more than fire.
-
-Take this CORKBOARD. Pin what you learn. I will know where the pieces lie.
 
 West is Lowtown, where the cops are paid by the sin. East is a door under the hill. That is PURGATORIO. Nobody dies in there. You will hate it."""
 
 JOYCE_AGAIN = """The knife will not hold itself. Go west, go east, go anywhere.
 
-Remember the CORKBOARD. Check it when you are lost. It is mostly me, and mostly right."""
+Check the CORKBOARD when you are lost. It is mostly me, and mostly right."""
 
 # ----------------------------------------------------------------------------------------------- the beetle (Areas 1 and 2)
 from . import named_text as N  # noqa: E402  the duels (Steiner, Crowley, Sabbah, Cioran, the philosophers, the rival) live there

@@ -35,7 +35,7 @@ THEMES = {
 # block: the key of N.BLOCK when the duel is mandatory (a trigger across the plaza's exit)
 DUELS = [
     dict(key="STEINER", who="STEINER", name="STEINER", text=N.STEINER1, cls="T_STEINER", sprite="STEINER", pal="BROWN", face="LEFT",
-         where=("Tithe", 1), item="CHAINSAW", block="STEINER1"),
+         where=("Tithe", 1), item="CHAINSAW", block="STEINER1", forced=True),
     dict(key="CROWLEY", who="CROWLEY", name="CROWLEY", text=N.CROWLEY1, cls="T_CROWLEY", sprite="CROWLEY", pal="BROWN", face="LEFT",
          where=("Tithe", 4), item="CROWBAR", block="CROWLEY1", crowd=True),
     dict(key="STEINER2", who="STEINER", name="STEINER", text=N.STEINER2, cls="T_STEINER", sprite="STEINER", pal="BROWN", face="LEFT",
@@ -116,6 +116,35 @@ def duel_script(w, m, key, label, cls, tid, item, texts, *, wait=None, gate=None
     return paid
 
 
+def forced_duel_script(w, m, key, label, cls, tid, item, texts, const, *, who=""):
+    """A bearer who stands in the street and does not let the player pass: stepping on one of the trigger cells starts the talk at once,
+    there is no question and no way to refuse.  The talk script (the same flow, after faceplayer) serves for later visits.  After the
+    prize he steps out of the lane."""
+    done = w.flag(f"EVENT_NAMED_{key}_DONE")
+    paid = w.flag(f"EVENT_NAMED_{key}_PAID")
+    lf = flag_once(w, f"EVENT_LORE_{key}")
+    flow = f"{label}Flow"
+    s = [f"{label}Trigger:", f"\tcheckevent {done}", "\tiftrue .Done", f"\tturnobject {const}, DOWN",
+         f"\tshowemote EMOTE_SHOCK, {const}, 15", f"\tsjump {flow}", ".Done:", "\tend", "",
+         f"{label}:", "\tfaceplayer", f"{flow}:", "\topentext", f"\tcheckevent {done}", "\tiftrue .Beaten", f"\tsetevent {lf}",
+         f"\twritetext {label}SeenText", "\twaitbutton", "\tclosetext", f"\twinlosstext {label}BeatenText, 0",
+         f"\tloadtrainer {cls}, {tid}", "\tstartbattle", "\treloadmapafterbattle", f"\tsetevent {done}", "\topentext",
+         ".Beaten:", f"\tcheckevent {paid}", "\tiftrue .After", f"\twritetext {label}GiveText", "\twaitbutton",
+         f"\tverbosegiveitem {item}", "\tiffalse .NoRoom", f"\tsetevent {paid}", f"\twritetext {label}AfterText", "\twaitbutton",
+         "\tclosetext", f"\tapplymovement {const}, {label}Aside", "\tend", "",
+         ".After:", f"\twritetext {label}AfterText", "\twaitbutton", "\tclosetext", "\tend", "",
+         ".NoRoom:", f"\twritetext {label}NoRoomText", "\twaitbutton", "\tclosetext", "\tend", "",
+         f"{label}Aside:", "\tstep RIGHT", "\tstep RIGHT", "\tstep RIGHT", "\tstep_end"]
+    m.scripts.append("\n".join(s) + "\n")
+    t = texts
+    m.scripts.append(Text(t["seen"]).emit(f"{label}SeenText"))
+    m.scripts.append(Text(t["beaten"]).emit(f"{label}BeatenText"))
+    m.scripts.append(Text(t["give"]).emit(f"{label}GiveText"))
+    m.scripts.append(Text(t["after"]).emit(f"{label}AfterText"))
+    m.scripts.append(Text(N.NOROOM).emit(f"{label}NoRoomText"))
+    return paid
+
+
 def block_exit(m, key, paid, hint):
     """A trigger across the exit of the plaza (the top end of the street): until the prize is in the bag the player is sent back one step."""
     e, xo, jr = m.street
@@ -145,15 +174,30 @@ def add_duel(w, g, d, roster, m=None):
     tid = w.trainer(d["cls"], d["name"], party)
     label = f"{m.name}{d['key'].title()}{'Bearer' if d.get('block') else 'Duel'}Script"
     offs = [(-3, -1), (-3, 1), (-2, 0)]
-    if "at" in d:
+    if d.get("forced"):
+        x = y = 0
+    elif "at" in d:
         x, y = d["at"]
         assert (x, y) not in {(o["x"], o["y"]) for o in m.objects}, f"{m.name}: {d['key']} spot taken"
     elif d.get("crowd"):
         x, y = K.cluster(m, offs)
     else:
         x, y = K.free_cells(m)[-1]
-    paid = duel_script(w, m, d["key"], label, d["cls"], tid, d["item"], d["text"], who=d["name"], wait=d.get("wait"), gate=d.get("gate"))
-    m.obj(x, y, f"SPRITE_HC_{d['sprite']}", FACE[d["face"]], label, pal=f"PAL_NPC_{d['pal']}")
+    if d.get("forced"):
+        # the bearer stands in the lane of the street at the top of the plaza.  The street is entered from the two-cell corridor that runs along
+        # the foot of the buildings: the trigger row is the corridor cell right below the street mouth (one cell below the bearer), and the
+        # row can not be walked around because the street is only reachable through it
+        e, xo, jr = m.street
+        x, y = 2 * xo + 2, 3
+        assert (x, y) not in {(o["x"], o["y"]) for o in m.objects}, f"{m.name}: {d['key']} spot taken"
+        const = name_object(m, len(m.objects) + 1, f"BEARER_{d['key']}")
+        paid = forced_duel_script(w, m, d["key"], label, d["cls"], tid, d["item"], d["text"], const, who=d["name"])
+        m.obj(x, y, f"SPRITE_HC_{d['sprite']}", FACE["DOWN"], label, pal=f"PAL_NPC_{d['pal']}")
+        for tx in range(2 * xo, 2 * (xo + m.cw)):
+            m.coords.append((tx, 4, -1, f"{label}Trigger"))
+    else:
+        paid = duel_script(w, m, d["key"], label, d["cls"], tid, d["item"], d["text"], who=d["name"], wait=d.get("wait"), gate=d.get("gate"))
+        m.obj(x, y, f"SPRITE_HC_{d['sprite']}", FACE[d["face"]], label, pal=f"PAL_NPC_{d['pal']}")
     if d.get("crowd"):
         from . import cast_text as C
         from .people import plain_npc

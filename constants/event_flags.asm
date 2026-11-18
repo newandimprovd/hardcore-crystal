@@ -77,5 +77,6 @@
 	const EVENT_HC_BRUNO_DOWN ; Bruno at Nick's Landing (Purgatorio task)
 	const EVENT_HC_GRAVE_SEEN ; the grave of Marcus Fischer
 	const EVENT_HC_TRUMPET ; the Trumpet was taken
+	const EVENT_HC_LULL_OFF ; the LULL CHARM is switched off (using the key item flips it; clear = on)
 	const_next 2848 ; Hardcore Crystal: the array grew by 100 bytes (wram.asm), flags 2048-2847 are for generated areas
 DEF NUM_EVENTS EQU const_value

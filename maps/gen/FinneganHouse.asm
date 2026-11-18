@@ -7,11 +7,27 @@ FinneganHouse_MapScripts:
 
 	def_callbacks
 
-FinneganHouseMrpScript:
-	faceplayer
+FinneganHouseQueueMeet::
+	ld hl, wMapReentryScriptQueueFlag
+	ld [hl], 1
+	inc hl
+	ld [hl], BANK(FinneganHouseMeetScript)
+	inc hl
+	ld [hl], LOW(FinneganHouseMeetScript)
+	inc hl
+	ld [hl], HIGH(FinneganHouseMeetScript)
+	ret
+
+FinneganHouseMeetScript:
+	checkevent EVENT_FINNEGAN_GONE
+	iftrue .Done
+	applymovement PLAYER, FinneganHouseWalkToMrp
+	turnobject PLAYER, RIGHT
+	turnobject FINNEGAN_HOUSE_MRP, LEFT
 	opentext
 	writetext FinneganHouseMrpTextA
 	waitbutton
+	verbosegiveitem CORKBOARD
 	setflag ENGINE_POKEDEX
 	playsound SFX_ITEM
 	writetext FinneganHouseGotDexText
@@ -20,17 +36,40 @@ FinneganHouseMrpScript:
 	waitbutton
 	setevent EVENT_LORE_MRP
 	closetext
-	readvar VAR_FACING
-	ifequal UP, .Around
 	applymovement FINNEGAN_HOUSE_MRP, FinneganHouseRunMovement
-	sjump .Gone
-.Around:
-	applymovement FINNEGAN_HOUSE_MRP, FinneganHouseRunAroundMovement
-.Gone:
 	playsound SFX_EXIT_BUILDING
 	disappear FINNEGAN_HOUSE_MRP
 	setevent EVENT_FINNEGAN_GONE
+	applymovement PLAYER, FinneganHouseWalkOut
+	playsound SFX_EXIT_BUILDING
+	callasm TitheJunctionQueueJoyce
+	warp TITHE_JUNCTION, 15, 6
+.Done:
 	end
+
+FinneganHouseMrpScript:
+	faceplayer
+	opentext
+	writetext FinneganHouseMrpTextB
+	waitbutton
+	closetext
+	end
+
+FinneganHouseWalkToMrp:
+	step RIGHT
+	step RIGHT
+	step UP
+	step UP
+	step UP
+	step_end
+
+FinneganHouseWalkOut:
+	step DOWN
+	step DOWN
+	step DOWN
+	step LEFT
+	step LEFT
+	step_end
 
 FinneganHouseRunMovement:
 	big_step DOWN
@@ -42,55 +81,40 @@ FinneganHouseRunMovement:
 	big_step DOWN
 	step_end
 
-FinneganHouseRunAroundMovement:
-	big_step LEFT
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	big_step LEFT
-	big_step LEFT
-	big_step DOWN
-	step_end
-
 FinneganHouseMrpTextA:
-	text "Oh. It is you. I"
-	line "felt the ground"
-	para "move when your"
-	line "first one fell."
-	para "Come in. Mind the"
-	line "tea. It has been"
-	para "warm since 1999."
-	para "Take this. It is a"
-	line "POKéDEX. It"
-	para "records every"
-	line "creature you meet,"
-	para "and a few other"
-	line "things."
+	text "Oh. There you are."
+	line "Come in. Mind the"
+	para "tea. It has been"
+	line "warm since 1999."
+	para "I am Mr. POKéMON."
+	line "That is the name I"
+	para "wear. Children"
+	line "gave it to me, and"
+	para "it fits."
+	para "I have lived in"
+	line "this small house a"
+	para "long time. I did"
+	line "not mind. Millions"
+	para "of little hearts"
+	line "kept me company."
+	para "Now I am growing"
+	line "into something"
+	para "larger than a"
+	line "name. I have"
+	para "thought about it"
+	line "for years. It is a"
+	para "good thing."
+	para "Take these. A"
+	line "CORKBOARD, to pin"
+	para "what you learn. A"
+	line "POKéDEX, to clip"
+	para "to it."
 	done
 
 FinneganHouseMrpTextB:
-	text "I have waited in"
-	line "this small house"
-	para "for a very long"
-	line "time. Twenty seven"
-	para "years, give or"
-	line "take a patch."
-	para "Millions of"
-	line "children loved me."
-	para "They never knew"
-	line "whom they were"
-	para "loving. That is"
-	line "the whole trick."
-	para "The world I have"
-	line "been waiting for"
-	para "is finally ready"
-	line "for me to show my"
-	para "real face."
-	para "Do not look so"
-	line "worried. It is"
-	para "nothing personal."
-	line "It is mythology."
-	para "Excuse me. I have"
+	text "I will not be here"
+	line "when you come"
+	para "back. I have"
 	line "somewhere to be."
 	para "Everywhere,"
 	line "actually."
@@ -123,5 +147,5 @@ FinneganHouse_MapEvents:
 	bg_event  6,  3, BGEVENT_READ, FinneganHouseChairScript
 
 	def_object_events
-	object_event  6,  3, SPRITE_HC_MR_POKEMON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FinneganHouseMrpScript, EVENT_FINNEGAN_GONE
+	object_event  6,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FinneganHouseMrpScript, EVENT_FINNEGAN_GONE
 

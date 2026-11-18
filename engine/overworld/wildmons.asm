@@ -172,6 +172,14 @@ HC_ApplyLullCharm:
 	ld a, LULL_CHARM
 	call HC_HasCharm
 	ret nc
+	push bc
+	ld de, EVENT_HC_LULL_OFF
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	ld a, c
+	pop bc
+	and a
+	ret nz ; switched off (the key item flips it)
 	ld a, b
 	srl a
 	srl a

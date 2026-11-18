@@ -134,7 +134,7 @@ PIC_FROM = {
     "clinician": "scientist", "waiter": "morty", "warden": "lt_surge",
     "brute": "blackbelt_t", "shade": "will", "witch": "clair", "judge": "koga", "imp": "janine", "firebreather": "firebreather",
     "jester": "juggler", "demon_lord": "falkner", "damned": "super_nerd", "finnegan": "champion",
-    "steiner": "oak", "crowley": "morty", "sabbah": "will", "cioran": "pokemaniac",
+    "steiner": "executive_m", "crowley": "morty", "sabbah": "will", "cioran": "pokemaniac",
 }
 
 ALL = [(a, c) for a, lst in AREA_CLASSES.items() for c in lst]

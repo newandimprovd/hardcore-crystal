@@ -9,7 +9,7 @@ import faulthandler
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from gbtest import T  # noqa: E402
-from test_walk import item_value  # noqa: E402
+from test_walk import item_value, const_table  # noqa: E402
 
 faulthandler.dump_traceback_later(600, exit=True)
 rom = sys.argv[1]
@@ -154,6 +154,25 @@ for rate, want in ((100, 75), (40, 30), (3, 3), (255, 192)):
     check(f"lull {rate}: unchanged without the charm", r["B"] == rate, str(r["B"]))
     r = lull_run(rate, True)
     check(f"lull {rate}: {want} with the charm", r["B"] == want, str(r["B"]))
+
+# the key item switches the charm on and off: EVENT_HC_LULL_OFF set = off (the item script itself is in test_purg.py)
+LULL_OFF = const_table(os.path.join(os.path.dirname(os.path.dirname(HERE)), "constants/event_flags.asm"))["EVENT_HC_LULL_OFF"]
+
+
+def lull_flag(on):
+    byte = t.mem("wEventFlags", LULL_OFF // 8)
+    t.poke("wEventFlags", (byte & ~(1 << (LULL_OFF % 8))) | ((0 if on else 1) << (LULL_OFF % 8)), LULL_OFF // 8)
+
+
+lull_flag(False)
+for rate in (100, 255):
+    r = lull_run(rate, True)
+    check(f"lull {rate}: unchanged while the charm is switched off", r["B"] == rate, str(r["B"]))
+    r = lull_run(rate, False)
+    check(f"lull {rate}: unchanged without the item and switched off", r["B"] == rate, str(r["B"]))
+lull_flag(True)
+r = lull_run(100, True)
+check("lull 100: 75 again once it is switched on", r["B"] == 75, str(r["B"]))
 
 
 # ------------------------------------------------------------------ HEAL: 1 HP + max/128 for every living, hurt party member

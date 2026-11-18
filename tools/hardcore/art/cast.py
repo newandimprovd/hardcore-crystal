@@ -86,7 +86,7 @@ add("demon_lord", hair="bald", hat="horns", hatc="D", torso="robe", legs="robe",
 add("finnegan", hair="bald", torso="robe", legs="robe", face="tired", extra=("whisker_hair",), beardc="C", torsoc="C")
 
 # ---------------------------------------------------------------------------------------------------- Alpha 3: the people of the books
-add("joyce", hat="bowler", torso="coat", legsc="D", face="tired", extra=("glasses",))
+add("joyce", hat="tophat", hatc="D", hair="short", hairc="S", torso="coat", torsoc="C", legsc="D", face="tired", extra=("glasses", "tie"))
 add("mr_pokemon", hair="short", torso="coat", legsc="D", face="grin", extra=("glasses", "tie"))
 add("steiner", hair="bushy", hairc="C", torso="coat", legsc="D", extra=("glasses", "tie"))
 add("bruno", hair="bald", hat="hood", hatc="D", torso="robe", legs="robe", face="angry", extra=("hem", "sash"), sashc="S")

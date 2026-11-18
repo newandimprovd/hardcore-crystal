@@ -626,6 +626,7 @@ INCLUDE "gfx/pokemon/hc_pic_sections.asm"
 
 
 
+
 INCLUDE "gfx/trainers/hc_pics.asm" ; HC-ART
 
 SECTION "Pics 21", ROMX

@@ -2,9 +2,9 @@
 """The named duels (areas/named.py): the key bearers are mandatory, the rival fights come at their triggers.
 
 usage: test_named.py ROM block|rival
-  block  ROM built at TithePlaza1 (verify_all.sh: stA.gbc, walk_all.sh 1: w1.gbc, TEST_ITEMS=0).  The plaza's exit is guarded: stepping onto the
-         trigger cells with no CHAINSAW sends the player one step back; talking to Steiner and winning (god mode) hands over the CHAINSAW and
-         the exit opens.  Scripted duels are not kills.
+  block  ROM built at TithePlaza1 (verify_all.sh: stA.gbc, walk_all.sh 1: w1.gbc, TEST_ITEMS=0).  Steiner stands in the street and is not
+         optional: the first step onto the trigger row below the street mouth starts his talk and the fight (god mode wins), the CHAINSAW is
+         handed over, he steps aside and the exit opens.  Scripted duels are not kills.
   rival  ROM built at the Tithe junction (testbuild.sh gt1 TEST_MAP=TITHE_JUNCTION TEST_X=19 TEST_Y=20 ... TEST_ITEMS=0).  Walking north on the
          stem starts the first rival fight, the flag is set and the rival is gone, the kill count did not move.
 """
@@ -60,32 +60,31 @@ def kills():
 if kind == "block":
     plaza = "TithePlaza1"
     src = open(os.path.join(ROOT, f"maps/gen/{plaza}.asm")).read()
-    cells = [(int(a), int(b)) for a, b, lab in re.findall(r"coord_event\s+(\d+),\s*(\d+),\s*-1,\s*(\w+BlockScript)", src)]
-    check("the exit has trigger cells", len(cells) >= 2, f"{cells}")
-    x, y = cells[len(cells) // 2]
+    trig = sorted((int(a), int(b)) for a, b, lab in re.findall(r"coord_event\s+(\d+),\s*(\d+),\s*-1,\s*(\w+BearerScriptTrigger)", src))
+    check("the street mouth has trigger cells", len(trig) >= 4, f"{trig}")
+    x, y = trig[0][0] + 1, trig[0][1]
     check("start in the plaza", wk.state()[0] == plaza, f"{wk.state()}")
-    check("walk below the exit", wk.go_state(lambda s: s == (plaza, x, y + 1), f"{plaza} below the exit"))
+    check("walk below the trigger row", wk.go_state(lambda s: s == (plaza, x, y + 1), f"{plaza} below the street mouth"))
+    n0 = len(wk.fights)
+    check("no CHAINSAW yet and no fight yet", not has_item(wk, item_value("CHAINSAW")) and not flag_get("EVENT_NAMED_STEINER_DONE"))
     k0 = kills()
-    t.pb.button("up", 9)
-    t.tick(30)
+    t.shot("/home/claude/scratch/named/block0.png", 3)
+    wk.press_dir("up")  # the first step onto the trigger row: Steiner stops the player, talks and fights, nobody asks
     wk.settle()
-    t.tick(40)
-    st = wk.state()
-    check("sent back one step without the CHAINSAW", st == (plaza, x, y + 1), f"{st}")
-    check("no CHAINSAW yet", not has_item(wk, item_value("CHAINSAW")))
-    t.shot("/home/claude/scratch/named/block.png", 3)
-    check("duel with Steiner pays the CHAINSAW", wk.go(plaza) and give(wk, plaza, "CHAINSAW"))
-    check("the prize flag is set", flag_get("EVENT_NAMED_STEINER_PAID"))
+    t.tick(60)
+    wk.settle()
+    check("Steiner fought the player without being asked", len(wk.fights) == n0 + 1, f"{wk.fights[n0:]}")
+    check("the duel paid the CHAINSAW", has_item(wk, item_value("CHAINSAW")) and flag_get("EVENT_NAMED_STEINER_PAID"))
     check("the Corkboard page is pinned", flag_get("EVENT_LORE_STEINER"))
     check("a scripted duel is not a kill", kills() == k0, f"{k0} -> {kills()}")
-    check("walk below the exit again", wk.go_state(lambda s: s == (plaza, x, y + 1), f"{plaza} below the exit"))
-    for _ in range(3):
-        t.pb.button("up", 9)
-        t.tick(30)
-        wk.settle()
-    t.tick(40)
+    t.shot("/home/claude/scratch/named/block1.png", 3)
+    # he steps aside: the street is open and the exit trigger does not send the player back
     st = wk.state()
-    check("the exit is open now", st[0] != plaza or st[2] < y, f"{st}")
+    check("the player stayed on the road", st[0] == plaza, f"{st}")
+    for _ in range(6):
+        wk.press_dir("up")
+    st = wk.state()
+    check("the way out is open now", st[0] != plaza or st[2] < y - 2, f"{st}")
 else:
     st = wk.state()
     check("start on the stem", st[0] == "TitheJunction", f"{st}")

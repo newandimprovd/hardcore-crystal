@@ -382,10 +382,10 @@ def one_hat(f, view, rec, k):
         f.r(2 if F else 2, 4, 13 if F else 11, 4, hc)
         f.r(4, 3, 11, 3, D)
     elif k == "tophat":
-        f.r(5, -1 + 1, 10, 0, hc)
-        f.r(4, 1, 11, 2, hc)
-        f.r(2, 3, 13, 3, hc)
-        f.r(4, 2, 11, 2, D)
+        # a tall straight crown with a dark band over a narrow flat brim: the silhouette of a top hat, not of a bowler
+        f.r(5, 0, 10, 1, hc)
+        f.r(5, 2, 10, 2, C)
+        f.r(3, 3, 12, 3, hc)
     elif k == "mitre":
         f.r(7, 0, 8, 0, hc)
         f.r(6, 1, 9, 1, hc)

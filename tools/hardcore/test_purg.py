@@ -168,31 +168,26 @@ def main():
     wk.seen_map()
     check("spawn at the junction", wk.state()[0] == "TitheJunction", str(wk.state()))
 
+    # ---- the opening (rival, Mr. POKeMON's house, Joyce): not optional, so it comes first and gives the CORKBOARD
+    import test_opening
+    test_opening.opening(wk, check)
+    wk.settle()
+
     # ---- the west arm joins Tithe Road (connection offsets), and back
     ok = wk.go("TitheRoad") and wk.go("TitheJunction")
     check("junction <-> Tithe Road connection", ok, str(wk.state()))
 
-    # ---- Mr. POKeMON: the scene, the POKeDEX, the vanishing
-    ok = wk.go("FinneganHouse") and talk(wk, "FinneganHouse", "MrpScript")
-    check("Mr. Pokemon scene runs", ok)
-    check("  lore page and gone flags", flag_get(t, "EVENT_LORE_MRP") and flag_get(t, "EVENT_FINNEGAN_GONE"))
-    t.tick(120)
-    # ---- Joyce: the CORKBOARD
-    ok = wk.go("TitheJunction") and talk(wk, "TitheJunction", "JoyceScript")
-    check("Joyce gives the CORKBOARD", ok and has_item(wk, item_value("CORKBOARD")))
-    check("  Joyce lore flag", flag_get(t, "EVENT_LORE_JOYCE"))
-
     # ---- the CORKBOARD script itself: the item effect only queues it (FarQueueScript) and the start menu callback jumps to the queue, so the
     # test stands in for the menu: StartMenu returns at once with the queue filled and hMenuReturn = HMENURETURN_SCRIPT
     seen = []  # a script is data, so no hook can see it start: the test watches the script engine instead
-    bank, addr = t.sym["CorkboardScript"]
-
     armed = [True]
+    target = ["CorkboardScript"]
 
     def fake_start_menu(ctx):
         if not armed[0]:
             return
         armed[0] = False
+        bank, addr = t.sym[target[0]]
         t.poke("wQueuedScriptBank", bank)
         t.poke("wQueuedScriptAddr", addr & 0xFF)
         t.poke("wQueuedScriptAddr", addr >> 8, 1)
@@ -211,6 +206,31 @@ def main():
             break
     wk.settle()
     check("CorkboardScript runs and ends", bool(seen) and not wk.busy())
+
+    # ---- the LULL CHARM key item: each use flips the charm (EVENT_HC_LULL_OFF set = off) and says which way
+    lull = test_walk.const_table("constants/event_flags.asm")["EVENT_HC_LULL_OFF"]
+
+    def lull_off():
+        return (t.mem("wEventFlags", lull // 8) >> (lull % 8)) & 1
+
+    def use_lull():
+        target[0] = "HC_LullCharmScript"
+        armed[0] = True
+        t.pb.button("start", 4)
+        ran = False
+        for _ in range(12):
+            t.tick(10)
+            if wk.busy():
+                ran = True
+                break
+        wk.settle()
+        return ran and not wk.busy()
+
+    check("LULL CHARM starts on", lull_off() == 0)
+    check("LULL CHARM use: script runs", use_lull())
+    check("  it is off now", lull_off() == 1)
+    check("LULL CHARM use again: script runs", use_lull())
+    check("  it is on again", lull_off() == 0)
 
     # ---- open the ladder up (the Commune mouth counts as used) and walk Purgatorio
     flag_set(t, "EVENT_PURG_OPEN_A2")

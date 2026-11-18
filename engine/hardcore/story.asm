@@ -260,5 +260,36 @@ HC_ElmRimScript::
 	halloffame ; saves, hall of fame, credits; Continue then spawns in the mansion bedroom (intro_menu.asm)
 	end
 
+HC_LullCharmScript::
+; The LULL CHARM key item flips the charm: EVENT_HC_LULL_OFF set = off (HC_ApplyLullCharm in engine/overworld/wildmons.asm ignores the charm).
+	checkevent EVENT_HC_LULL_OFF
+	iftrue .SwitchOn
+	setevent EVENT_HC_LULL_OFF
+	opentext
+	writetext HC_LullOffText
+	waitbutton
+	closetext
+	end
+
+.SwitchOn:
+	clearevent EVENT_HC_LULL_OFF
+	opentext
+	writetext HC_LullOnText
+	waitbutton
+	closetext
+	end
+
+HC_LullOffText:
+	text "LULL CHARM: OFF."
+	line "The grass can"
+	cont "see you again."
+	done
+
+HC_LullOnText:
+	text "LULL CHARM: ON."
+	line "The grass loses"
+	cont "interest."
+	done
+
 INCLUDE "data/hardcore/story_bosses.asm"
 INCLUDE "data/hardcore/story_text.asm"

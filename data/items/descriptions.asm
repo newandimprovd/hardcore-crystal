@@ -496,8 +496,8 @@ BlackbeltDesc:
 	next "type moves. (HOLD)@"
 
 LullCharmDesc:
-	db   "Fewer wild fights"
-	next "as you walk.@"
+	db   "Fewer wild fights."
+	next "USE: on or off.@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."

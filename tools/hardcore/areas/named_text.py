@@ -17,17 +17,11 @@ The doctrines are the real ones, in the speaker's own voice and with the game's 
 
 # ------------------------------------------------------------------------------------------------------------------------ Steiner
 STEINER1 = dict(
-    seen="""Rudolf Steiner. I teach spiritual science and I am very bad at parties.
+    seen="""Stop. Not yet. Rudolf Steiner. I teach spiritual science and I am very bad at parties.
 
 Two great adversaries tug at every soul. Lucifer warms you and lies to you. Ahriman cools you and tells you nothing is real but dead matter.
 
-Ahriman is the one who wants this world to be rock, money and spreadsheets. He has been very successful. Look around you.
-
-I foretold that he would walk the earth in flesh, in the West, early in the third millennium. I was told I was being dramatic. Watch the news.
-
-Between the two stands the Christ, the Balance. You, with your knife, are not him. But you are the only thing here that moves.
-
-Before the road narrows I would see your will at work.""",
+You carry a knife and you are the only thing here that moves. Before the road narrows I would see your will at work.""",
     beaten="Good. The will is awake. Fool or saint, at this hour it is the same thing.",
     give="Take this CHAINSAW. A hedge of city trees blocks the road ahead. Matter is an obstacle, and an obstacle is a teacher.",
     after="Cut the hedge. Do not cut the thinking. The thinking is the only thing that grows back.",
