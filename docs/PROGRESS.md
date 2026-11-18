@@ -248,3 +248,12 @@ exactly from the saved transcript, the reveal text, credits block, charms, hermi
   hooks. Button holds are jittered so menus never phase-lock. gen_moves / gen_types use fb3d23f as the oldest saved base.
 - verify_all.sh has new steps (charms, credits, reveal, worldmap); all PASS. test_music (8 songs) passes, walk_all 1 to 5 pass with 0 problems. Free ROM 915 KB.
 - Not done: battle engine and AI (next version), real art for the 81 species and named classes, the 12 kill gap, Purgatorio 58 of 60 trainers.
+
+## Alpha 3.1 (Nov 2026): the fix pass on the alpha 3 playtest list
+Notes for the author: `docs/ALPHA3_1_NOTES.md` (all 15 points, how each was checked, known gaps).
+- Move box crash (a ROMX stub reached by a plain call), nurse script fall-through, rival starter, Purgatorio cave face, forced opening (rival, Mr. POKeMON, Joyce) and forced
+  Steiner with a suited battle picture, Lull charm switch, leaning run poses without the per-tile flicker.
+- Engine finding: coord events do not fire on the tile a warp lands on (events stay off until the first step). Scenes that start on arrival are re-entry scripts
+  (`wMapReentryScript*`) queued by a `callasm` right before the `warp`. An object that is moved far off screen and made to appear has no object struct, so a walk-in has to start
+  inside the screen margin or `applymovement` never ends.
+- New tests: test_opening, test_forced (model proof that the Steiner street cannot be bypassed), test_nurse, test_battle_ui, test_run; verify_all.sh runs all of them.

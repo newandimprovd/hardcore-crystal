@@ -274,6 +274,14 @@ DEF NUM_OBJECT_ACTIONS EQU const_value
 	const FACING_BOULDER_DUST_2 ; 1d
 	const FACING_GRASS_1        ; 1e
 	const FACING_GRASS_2        ; 1f
+	const FACING_RUN_DOWN_0     ; 20 HC: running poses, the head pushed forward and the legs trailing
+	const FACING_RUN_DOWN_1     ; 21
+	const FACING_RUN_UP_0       ; 22
+	const FACING_RUN_UP_1       ; 23
+	const FACING_RUN_LEFT_0     ; 24
+	const FACING_RUN_LEFT_1     ; 25
+	const FACING_RUN_RIGHT_0    ; 26
+	const FACING_RUN_RIGHT_1    ; 27
 DEF NUM_FACINGS EQU const_value
 
 ; DoPlayerMovement.DoStep arguments (see engine/overworld/player_movement.asm)

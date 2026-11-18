@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """The POKéCENTER nurse, played through by key presses in the emulator.
-Free in the Cherrygrove center and in Tithe Lowtown (centers 1 to 3), paid anywhere else. A free nurse must never say a word about money, and the
+Free in the Cherrygrove center only (it must say exactly what the base game nurse says), paid everywhere else, Tithe Lowtown included. A free nurse must never say a word about money, and the
 text that turns a poor player away must never follow a successful heal.
 usage: test_nurse.py TESTROM free|paid
 The test ROM must start the player inside a center, one step below the counter (x=3, y=3)."""

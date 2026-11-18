@@ -39,6 +39,10 @@ SetFacingStandAction:
 	ld hl, OBJECT_FACING
 	add hl, bc
 	ld a, [hl]
+	sub FACING_RUN_DOWN_0
+	cp NUM_FACINGS - FACING_RUN_DOWN_0
+	jp c, SetFacingCurrent ; HC: a run ends on the standing pose at once
+	ld a, [hl]
 	and 1
 	jr nz, SetFacingStepAction
 	jp SetFacingCurrent
@@ -49,26 +53,54 @@ SetFacingStepAction:
 	bit SLIDING_F, [hl]
 	jp nz, SetFacingCurrent
 
-	; HC: running animation. Fast steps (hold B) swing the two stepping frames twice per tile and skip the
-	; standing frame, so the legs never rest. Slower steps keep the normal four-frame cycle.
+	; HC: running animation.  Fast steps (hold B) use the leaning running poses (data/sprites/facings.asm): the two strides alternate every
+	; four frames and the pose is kept in the frame between two tiles, where OBJECT_WALKING is -1 for two frames and the engine used to fall
+	; back to the walking pose (a flicker once per tile).  Slower steps keep the normal four-frame cycle.
 	ld hl, OBJECT_WALKING
 	add hl, bc
 	ld a, [hl]
+	cp -1
+	jr z, .between_steps
 	and %00001100
 	cp STEP_RUN << 2
+	jr z, .run
+.walk
 	ld hl, OBJECT_STEP_FRAME
 	add hl, bc
 	ld a, [hl]
-	jr z, .run
 	inc a
-	jr .got_frame
-.run
-	add 2
-	or %00000100
-.got_frame
 	and %00001111
 	ld [hl], a
+	jr .walk_facing
 
+.between_steps
+	ld hl, OBJECT_FACING
+	add hl, bc
+	ld a, [hl]
+	sub FACING_RUN_DOWN_0
+	cp NUM_FACINGS - FACING_RUN_DOWN_0
+	jr nc, .walk ; the last pose was not a running one
+.run
+	ld hl, OBJECT_STEP_FRAME
+	add hl, bc
+	ld a, [hl]
+	inc a
+	and %00001111
+	ld [hl], a
+	; running poses: FACING_RUN_DOWN_0 + 2 * direction + (0 or 1 for the two strides)
+	rrca
+	and 1 ; bit 1 of the frame counter: the stride changes every second step of the animation
+	ld d, a
+	call GetSpriteDirection ; 0, 4, 8 or 12
+	srl a
+	add d
+	add FACING_RUN_DOWN_0
+	ld hl, OBJECT_FACING
+	add hl, bc
+	ld [hl], a
+	ret
+
+.walk_facing
 	rrca
 	rrca
 	maskbits NUM_DIRECTIONS

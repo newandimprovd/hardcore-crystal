@@ -64,7 +64,11 @@ if kind == "block":
     check("the street mouth has trigger cells", len(trig) >= 4, f"{trig}")
     x, y = trig[0][0] + 1, trig[0][1]
     check("start in the plaza", wk.state()[0] == plaza, f"{wk.state()}")
-    check("walk below the trigger row", wk.go_state(lambda s: s == (plaza, x, y + 1), f"{plaza} below the street mouth"))
+    # the corridor in front of the street is two cells wide: row y is the trigger row, row y+1 is free, so the approach runs along row y+1
+    check("walk to the corridor next to the street mouth", wk.go_state(lambda s: s == (plaza, x - 2, y + 1), f"{plaza} left of the street mouth"))
+    wk.press_dir("right")
+    wk.press_dir("right")
+    check("below the trigger row, no fight yet", wk.state() == (plaza, x, y + 1) and not wk.fights, f"{wk.state()}")
     n0 = len(wk.fights)
     check("no CHAINSAW yet and no fight yet", not has_item(wk, item_value("CHAINSAW")) and not flag_get("EVENT_NAMED_STEINER_DONE"))
     k0 = kills()

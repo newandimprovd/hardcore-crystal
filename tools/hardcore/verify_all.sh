@@ -25,6 +25,14 @@ step b_rv $TB rv TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=5
 step reveal python3 tools/hardcore/test_reveal.py /home/claude/scratch/rv.gbc
 step b_vc $TB vc TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=3 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
 step cross python3 tools/hardcore/test_cross.py /home/claude/scratch/vc.gbc
+step b_ui $TB ui TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=8 TEST_MON=TOTODILE TEST_LEVEL=12 TEST_REVEALED=1
+step battle_ui python3 tools/hardcore/test_battle_ui.py /home/claude/scratch/ui.gbc
+step b_nf $TB nf TEST_MAP=CHERRYGROVE_POKECENTER_1F TEST_X=3 TEST_Y=3 TEST_MON=TOTODILE TEST_LEVEL=12 TEST_REVEALED=1
+step nurse_free python3 tools/hardcore/test_nurse.py /home/claude/scratch/nf.gbc free
+step b_np $TB np TEST_MAP=TITHE_POKECENTER1 TEST_X=3 TEST_Y=3 TEST_MON=TOTODILE TEST_LEVEL=12 TEST_REVEALED=1
+step nurse_paid python3 tools/hardcore/test_nurse.py /home/claude/scratch/np.gbc paid
+step b_run $TB run1 TEST_MAP=TITHE_JUNCTION TEST_X=22 TEST_Y=8 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
+step run python3 tools/hardcore/test_run.py /home/claude/scratch/run1.gbc
 step b_cg1 $TB cg1 TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=8 TEST_MON=CTHULUDON TEST_LEVEL=60 TEST_REVEALED=1 TEST_ITEMS=1
 step whiteout python3 tools/hardcore/test_whiteout.py /home/claude/scratch/cg1.gbc
 step worldmap python3 tools/hardcore/test_worldmap.py /home/claude/scratch/cg1.gbc /home/claude/scratch/map/shots 60
@@ -38,6 +46,8 @@ step milestone python3 tools/hardcore/test_story.py milestone /home/claude/scrat
 step b_stB $TB stB TEST_MAP=NEW_BARK_TOWN TEST_X=10 TEST_Y=10 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2
 step newbark python3 tools/hardcore/test_story.py newbark /home/claude/scratch/stB.gbc
 step b_gt1 $TB gt1 TEST_MAP=TITHE_JUNCTION TEST_X=19 TEST_Y=20 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
+step opening python3 tools/hardcore/test_opening.py /home/claude/scratch/gt1.gbc
+step forced python3 tools/hardcore/test_forced.py
 step gates_road python3 tools/hardcore/test_gates.py /home/claude/scratch/gt1.gbc road
 step b_gt2 $TB gt2 TEST_MAP=TITHE_CATHEDRAL TEST_X=4 TEST_Y=6 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
 step gates_area python3 tools/hardcore/test_gates.py /home/claude/scratch/gt2.gbc area
