@@ -257,3 +257,8 @@ Notes for the author: `docs/ALPHA3_1_NOTES.md` (all 15 points, how each was chec
   (`wMapReentryScript*`) queued by a `callasm` right before the `warp`. An object that is moved far off screen and made to appear has no object struct, so a walk-in has to start
   inside the screen margin or `applymovement` never ends.
 - New tests: test_opening, test_forced (model proof that the Steiner street cannot be bypassed), test_nurse, test_battle_ui, test_run; verify_all.sh runs all of them.
+
+## Study passes after alpha 3.1 (no game changes)
+- `docs/REFERENCE_STUDY.md`: crystal16-bit and Grandia, art and map measurements.
+- `docs/BATTLE_ENGINE_STUDY.md`: our engine, measured AI cost, references, options. Four questions to the author are still open (ruleset, AI fairness, thinking pause, cartridge quirks).
+- `docs/GRANDIA_ENGINE_STUDY.md`: Grandia rooms, maps and movement. 556 raw screen-sized rooms, per-side collision, pit cells, corner-sliding pixel movement, 44 frame edge scroll. Tools in `tools/hardcore/refstudy/`.

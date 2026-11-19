@@ -46,6 +46,6 @@ What the screens show.
 
 ## What I could not see
 - Grandia beyond the restaurant and its hall. The documented debug menu (code 9003EFCF, then Start on the main menu) does open, but every entry jumps into RAM code that a developer link loads,
-  so each one crashes in the emulator. I did not find the exit of the hall by walking, so towns, dungeons and the overworld of Grandia are unseen.
+  so each one crashes in the emulator. The exit of the hall was found later (see `docs/GRANDIA_ENGINE_STUDY.md`, 12 rooms reached), the rest of Grandia is still unseen.
 - crystal16-bit beyond New Bark Town. The east exit of the town was not reachable in my tests, so routes, caves and cities of that ROM are unseen. Its Pokemon sprites and icons were not examined.
-- Grandia's map format and compression were not reverse engineered. A bank entropy scan suggests most of its graphics are compressed or packed.
+- Grandia's map format: found afterwards, see `docs/GRANDIA_ENGINE_STUDY.md`. The room maps and the tile graphics I checked are stored raw. My earlier guess from the entropy scan, that most of its data is compressed, was wrong for those.
