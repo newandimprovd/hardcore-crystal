@@ -28,8 +28,9 @@ Measured on one full screen (20 by 18 cells, 360 cells) with `analyze()`.
 What the screens show.
 - A whole Grandia room is drawn with 41 to 44 distinct tiles and 11 to 13 empty cells out of 360, so the screen is dense. flip flags are set on 50 to 101 of the 360 cells (14 to 28 percent)
   and the mirrored pieces are pillars, chairs, counters and wall ends. Our screens flip nothing.
-- Each location keeps one hue family. The restaurant and hall are pink with five palettes of the same family and 12 to 14 colours on screen in total.
-  Depth comes from tone steps inside that family. The floor is a two tone diamond check, the walls have a striped band and a dark base line, furniture shows a lit top face and a darker front face.
+- **Corrected later.** I first wrote that each Grandia location keeps one hue family, because the restaurant and hall looked pink with 12 to 14 colours on screen. That was wrong. The opening is shown through a monochrome pink filter that the game applies to its own full colour palettes,
+  so my screenshots were filtered pictures. Grandia has 48 areas and every one has its own saturated palette set (see `docs/GRANDIA_ENGINE_STUDY.md`, section 9). The 12 to 14 colours per screen still holds as a count, the one hue family does not.
+  What I measured about depth is still right as a drawing technique. The floor is a two tone diamond check, the walls have a striped band and a dark base line, furniture shows a lit top face and a darker front face.
 - Rooms flow into each other. The restaurant, the hall and an outdoor flower strip appeared as one continuous scrolling area in step by step captures, with no black frame between them.
 - Dialogue shows a face portrait in the text box (several characters, left or right end of the box), and the box sits at the top of the screen when the speakers are at the bottom, and the other way round.
 - The game keeps the hardware scroll registers at zero at rest, sprites are 8x16, and no window layer was in use on the map screens.
@@ -39,13 +40,15 @@ What the screens show.
    The tile slots this frees can go to detail, for example roof edges, worn stone and the shaded front faces that give buildings depth. This is a generator change, not an engine change.
 2. Open plan interiors. A market hall, an arcade or a cathedral nave drawn as part of the outdoor map, so the player walks in without a warp fade like Grandia does.
    It needs map work and some blocks, not engine work, and it gives the Tithe and Axiom plazas a reason to feel connected.
-3. One hue family per place with tone steps for depth. Our areas already do this in spirit. Grandia suggests keeping the on screen colour count low (12 to 14) and spending the effort on tile detail.
+3. A distinct, saturated palette set per area, with tone steps for depth. This replaces my first idea of one hue family per place, which came from the filtered opening. Grandia keeps the colour count per screen low (about 4 to 13) but gives every area its own mood and often 3 to 5 hue families on one screen.
+   Spending the effort on tile detail and on bolder area palettes are both open to us. This is a data change only.
 4. Two faced furniture and counters (lit top, darker front) in the interior tileset, in line with the whole two row building rule you asked for.
 5. Dialogue portraits for the named cast (Mr. Pokemon, Joyce, Steiner, Crowley, Sabbah, Cioran). Grandia shows what it adds. In Crystal it is engine work (VRAM for 16 tiles per face while a box is open),
    so it should wait for a version that touches the text engine. Moving the text box to the top when the speaker is at the bottom is a smaller first step.
 
 ## What I could not see
-- Grandia beyond the restaurant and its hall. The documented debug menu (code 9003EFCF, then Start on the main menu) does open, but every entry jumps into RAM code that a developer link loads,
-  so each one crashes in the emulator. The exit of the hall was found later (see `docs/GRANDIA_ENGINE_STUDY.md`, 12 rooms reached), the rest of Grandia is still unseen.
+- Grandia beyond the opening, as played. The documented debug menu (code 9003EFCF, then Start on the main menu) does open, but every entry jumps into RAM code that a developer link loads,
+  so each one crashes in the emulator. I walked 21 rooms of the three opening areas (see `docs/GRANDIA_ENGINE_STUDY.md`). The other 45 areas were read from the ROM tables and drawn with their true palettes, but I have not watched the game run there,
+  so sprites, animation and enemies in the later chapters are still unmeasured.
 - crystal16-bit beyond New Bark Town. The east exit of the town was not reachable in my tests, so routes, caves and cities of that ROM are unseen. Its Pokemon sprites and icons were not examined.
 - Grandia's map format: found afterwards, see `docs/GRANDIA_ENGINE_STUDY.md`. The room maps and the tile graphics I checked are stored raw. My earlier guess from the entropy scan, that most of its data is compressed, was wrong for those.
