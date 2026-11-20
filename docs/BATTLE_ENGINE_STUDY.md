@@ -90,35 +90,31 @@ A frame is 70,224 cycles. One second is 60 frames, about 4.2 million cycles. A t
 1. **Decide the ruleset and build a conformance suite.** (Decided on 20 November 2026, see section 6. The author chose modern rules, so the text below describes the option that was not taken.) Recommended target was Gen 2 rules plus our changes, because Showdown's `gen2` mod is a complete executable specification of the engine we already have.
    Differential test our damage and turn order against it. Decide per quirk whether to match the cartridge or fix it. Cost, test tooling and a bug triage of the 27 markers.
 2. **Scorer upgrade.** Fix the documented AI bugs, add KO awareness with speed (try to faint), HP awareness, setup first turn logic with a sanity check, a revenge killer and trapper aware replacement choice, ace and sequence flags per trainer,
-   and a rule that the AI uses only what a player could know (used moves, visible types) unless a trainer is flagged omniscient. Estimated a few KB of code and cycles within the current 5 frame range.
+   and a rule that the AI uses only what a player could know (used moves, visible types) with no omniscient exception (decided, see section 6). Estimated a few KB of code and cycles within the current 5 frame range.
 3. **Estimator based lookahead.** Add the compact damage estimator and a 1 ply expectimax over my moves and switches against the player's best known reply, with fixed sets as the strategy layer. Cycle budget about 10 frames, tested by tournament.
 4. **Authored strategies.** Each trainer party gets roles per mon (Showdown role names), a flag word, and checks from the random battle team rules (shared weaknesses, one hazard setter, a revenge killer in the back).
    This is a data and tooling job and it is where "every checkpoint special" actually comes from.
 5. **Tournament harness.** The headless emulator can run AI against AI at unlimited speed. Measure win rate of each tier against the baseline on fixed teams, and keep it in `verify_all.sh`.
    Not tried yet, so I do not know the throughput.
 
-## 6. Decisions and open questions
+## 6. Decisions
 
 Decided by the author on 20 November 2026.
-- Target rules. Battles should feel like a Gen 8 game. Rules, move effects and Showdown effects match the modern games, and animations may stay simplified. This is the "abilities and modern mechanics" branch that section 5 called a different and much larger project, so option 1 above is replaced.
-- Cartridge quirks. They follow from that decision. Modern games have neither the 1 in 256 failure of 100 percent secondaries nor the Present glitch, so they are fixed, not kept.
-- Assumed, not asked. Our own type chart, the Fairy type, four stage evolution lines and the 39 Showdown move replacements stay as deliberate departures from the modern games.
+- Rules. Battles should feel like a Gen 8 game. Rules, move effects and Showdown effects match the modern games, and animations may stay simplified. This replaces the Gen 2 plus our changes option of section 5.
+- Scope limit. No new mechanics. The work is to modify the current moveset and the existing rules to modern behaviour, not to add systems such as Dynamax. My reading, not yet confirmed by the author, is that abilities, natures and an IV and EV rework are also out, because they would be new systems.
+  That keeps the party structure and saves compatible. If the author wants any of them, the plan below has to be redone.
+- Cartridge quirks. Fixed. Modern games have neither the 1 in 256 failure of 100 percent secondaries nor the Present glitch.
+- Trainer AI plays fair. It uses only what a player could know, such as moves already used, visible types and revealed items. Nobody is omniscient, so the omniscient flag of option 2 is not built.
+- Thinking pause. At most 12 frames, for every trainer. Measured today, `AIChooseMove` takes about 5 frames and one `AIDamageCalc` about 1.4 frames.
+- Assumed, not asked. Our own type chart, the Fairy type, four stage evolution lines and the 39 Showdown move replacements stay.
+- Timing. Nothing is rebuilt and no engine work starts until the author has finished testing the 3.1 ROM and says so.
 
-What the decision changes. This list is inference from section 1 and from Polished Crystal's changelog. I have not measured any of it on our code yet.
-- The test oracle changes from Showdown's Gen 2 mod to its current generation data and damage rules, which also hold the abilities, items and move effects that the ROM has to copy.
-- The data model comes first. Natures, IVs from 0 to 31, EVs from 0 to 252 and abilities need new party fields and a new stat formula, so this touches the party structure, saves and level up. Polished Crystal shows that it fits a Game Boy Color cartridge. Saves from the alphas would not load afterwards.
-- Damage and status rules change together. Critical hits, burn, paralysis, confusion, sleep length, weather and terrain, entry hazards such as Stealth Rock and Toxic Spikes, Protect decay and the order of damage modifiers all differ from Gen 2. The 999 damage cap (`MAX_DAMAGE`) would have to go.
-- Abilities need hook points across the battle code, at switch in, when hit, on stat changes, on status, on weather and at end of turn. How many abilities we implement depends on the roster we ship, not on the full modern list.
-- Move ids are one byte, so a move list of roughly 255 has to be chosen from the modern pool, not copied whole.
-- The AI scorer has to understand abilities, items and the new effects, otherwise it plays modern rules with Gen 2 judgement. The plan of options 2 to 4 still stands, and a Foul Play style search is still out of reach.
-- ROM space (518 KB free) is probably enough given the Polished Crystal precedent. The scratch work RAM of about 8 KB, split over banks, is the tighter limit, because abilities and extra volatile states need space.
-
-Proposed order, as inference. Data model and stat formula, then the damage and status rules with differential tests against Showdown, then abilities and held items, then move effects, then the AI on top.
-
-Still open.
-- Does the Gen 8 feel include Dynamax and Max moves, or only the base rules? I would leave Dynamax out at first to keep the project finishable.
-- Should trainer AI play fair (only what a player could see) or cheat in a few classes for difficulty? Default proposed: fair, with an omniscient flag per boss.
-- How long a thinking pause is acceptable on boss fights, a few frames or up to half a second?
+What this means for the plan. This is inference from section 1 and has not been measured on our code.
+- The test oracle is Showdown's current generation damage rules and move data, used for differential tests of the rules and of every modified move.
+- Rules to modernise are critical hits, burn, paralysis, confusion, sleep length, weather duration, Protect decay, the order of damage modifiers, the 999 damage cap, and any entry hazard that the moveset contains.
+- Moves are the bulk of the work. Each current move gets its modern damage, accuracy, PP, priority, secondary effect chance and category, in the same way as the 39 replacements already done.
+- The AI follows options 2 to 4 of section 5 with the fair play rule and a 12 frame budget. A one ply lookahead is only affordable inside 12 frames if the damage estimator reaches its target cost, which is still an assumption.
+- Space is less of a worry than I wrote earlier, because nothing new has to be stored per Pokemon.
 
 ## 7. What this study did not cover
 
