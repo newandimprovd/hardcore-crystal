@@ -157,7 +157,7 @@ GrovePlaza6Duel:
 	iffalse .No
 	closetext
 	winlosstext GrovePlaza6DuelBeatenText, 0
-	loadtrainer G_ELDER, 138
+	loadtrainer G_ELDER, 135
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_GROVE_PLAZA6_DUEL

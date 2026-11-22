@@ -9,7 +9,7 @@ from .a2 import TIERS
 
 class Spec(SpecBase):
     pool = "A3"
-    l0, l1 = 44, 62
+    l0, l1 = 50, 72
     T = T
     theme = {"ELECTRIC": 3, "STEEL": 3, "PSYCHIC_TYPE": 2, "NORMAL": 2, "POISON": 1.5, "FIGHTING": 1.5, "FIRE": 1,
              "DARK": 1, "GROUND": 1, "FLYING": 1, "ROCK": 0.8, "ICE": 0.7, "BUG": 0.7, "WATER": 0.5, "GHOST": 0.5,
@@ -26,11 +26,11 @@ class Spec(SpecBase):
 def build(w, roster, rng, entry_doors, open_exit=False):
     texts = dict(center=T.CENTER, mart=T.MART, house=T.HOUSE)
     bosses = [
-        BossSpec("AxiomRegistry", "DR AXIOM", "U_MADDOC", "SPRITE_HC_DOC_MAD", "PAL_NPC_PINK", 51, 5, T.LAB_SEEN,
+        BossSpec("AxiomRegistry", "DR AXIOM", "U_MADDOC", "SPRITE_HC_DOC_MAD", "PAL_NPC_PINK", 55, 5, T.LAB_SEEN,
                  T.LAB_BEATEN, T.LAB_AFTER, template="karen"),
-        BossSpec("AxiomArmory", "IRONWARDEN", "U_WARDBOT", "SPRITE_HC_BOT_WARDEN", "PAL_NPC_BROWN", 57, 5, T.ARMORY_SEEN,
+        BossSpec("AxiomArmory", "IRONWARDEN", "U_WARDBOT", "SPRITE_HC_BOT_WARDEN", "PAL_NPC_BROWN", 63, 5, T.ARMORY_SEEN,
                  T.ARMORY_BEATEN, T.ARMORY_AFTER, template="will"),
-        BossSpec("AxiomMayoralty", "THE MAYOR", "U_MAYOR", "SPRITE_HC_BOT_MAYOR", "PAL_NPC_BROWN", 64, 6, T.MAYORALTY_SEEN,
+        BossSpec("AxiomMayoralty", "THE MAYOR", "U_MAYOR", "SPRITE_HC_BOT_MAYOR", "PAL_NPC_BROWN", 72, 6, T.MAYORALTY_SEEN,
                  T.MAYORALTY_BEATEN, T.MAYORALTY_AFTER, template="bruno", landmark="LANDMARK_AXIOM_MAYORALTY",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)]
     cfg = AreaCfg("AREA3", "Axiom", Spec(), kits.axiom(), "PALETTE_DAY",

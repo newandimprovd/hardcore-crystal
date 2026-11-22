@@ -147,7 +147,7 @@ DisPlaza3Duel:
 	iffalse .No
 	closetext
 	winlosstext DisPlaza3DuelBeatenText, 0
-	loadtrainer D_HAG, 131
+	loadtrainer D_HAG, 134
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_DIS_PLAZA3_DUEL

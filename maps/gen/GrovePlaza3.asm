@@ -150,7 +150,7 @@ GrovePlaza3Duel:
 	iffalse .No
 	closetext
 	winlosstext GrovePlaza3DuelBeatenText, 0
-	loadtrainer G_SHAMAN, 131
+	loadtrainer G_SHAMAN, 133
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_GROVE_PLAZA3_DUEL

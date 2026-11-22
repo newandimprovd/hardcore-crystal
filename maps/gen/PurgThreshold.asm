@@ -72,7 +72,7 @@ PurgThresholdSteiner3DuelScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_STEINER3_PAID
-	iftrue .After
+	iftrue .Later
 	writetext PurgThresholdSteiner3DuelScriptGiveText
 	waitbutton
 	verbosegiveitem RARE_CANDY
@@ -96,44 +96,43 @@ PurgThresholdSteiner3DuelScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_STEINER3_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_STEINER3_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_STEINER3_TALK2
+	iffalse .More2
+	sjump .After
+
+.More0:
+	writetext PurgThresholdSteiner3DuelScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_STEINER3_TALK0
+	closetext
+	end
+
+.More1:
+	writetext PurgThresholdSteiner3DuelScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_STEINER3_TALK1
+	closetext
+	end
+
+.More2:
+	writetext PurgThresholdSteiner3DuelScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_STEINER3_TALK2
+	closetext
+	end
+
+
 PurgThresholdSteiner3DuelScriptSeenText:
 	text "I hoped you would"
 	line "come down here."
 	para "Purgatorio is the"
 	line "only place the"
 	para "seam is quiet."
-	para "Remember what I"
-	line "said. Ahriman does"
-	para "not need you to"
-	line "believe in him. He"
-	para "needs you to"
-	line "believe in nothing"
-	para "else."
-	para "The cure is old."
-	line "Give the thing a"
-	para "face. Name it."
-	line "Mythologize it, or"
-	para "it will eat your"
-	line "psyche from the"
-	para "inside and call"
-	line "itself the"
-	para "economy."
-	para "Karma is not a"
-	line "punishment. It is"
-	para "a ledger kept by"
-	line "the dead, and they"
-	para "are very thorough."
-	line "Everyone here is"
-	para "paying off"
-	line "something that is"
-	para "not money."
-	para "If you are looking"
-	line "for the real"
-	para "bottom of this"
-	line "place, look down."
-	para "There is a grave."
-	line "Somebody should"
-	para "read it."
 	para "If you want a"
 	line "lesson in karma,"
 	para "take it from me."
@@ -160,6 +159,47 @@ PurgThresholdSteiner3DuelScriptAfterText:
 	text "Name it. Face it."
 	line "Then you may say"
 	para "no to it."
+	done
+
+PurgThresholdSteiner3DuelScriptMoreText0:
+	text "Remember what I"
+	line "said. Ahriman does"
+	para "not need you to"
+	line "believe in him. He"
+	para "needs you to"
+	line "believe in nothing"
+	para "else."
+	para "The cure is old."
+	line "Give the thing a"
+	para "face. Name it."
+	line "Mythologize it, or"
+	para "it will eat your"
+	line "psyche from the"
+	para "inside and call"
+	line "itself the"
+	para "economy."
+	done
+
+PurgThresholdSteiner3DuelScriptMoreText1:
+	text "Karma is not a"
+	line "punishment. It is"
+	para "a ledger kept by"
+	line "the dead, and they"
+	para "are very thorough."
+	line "Everyone here is"
+	para "paying off"
+	line "something that is"
+	para "not money."
+	done
+
+PurgThresholdSteiner3DuelScriptMoreText2:
+	text "If you are looking"
+	line "for the real"
+	para "bottom of this"
+	line "place, look down."
+	para "There is a grave."
+	line "Somebody should"
+	para "read it."
 	done
 
 PurgThresholdSteiner3DuelScriptNoText:
@@ -195,7 +235,7 @@ PurgThresholdQadiDuelScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_QADI_PAID
-	iftrue .After
+	iftrue .Later
 	writetext PurgThresholdQadiDuelScriptGiveText
 	waitbutton
 	verbosegiveitem RARE_CANDY
@@ -219,6 +259,46 @@ PurgThresholdQadiDuelScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_QADI_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_QADI_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_QADI_TALK2
+	iffalse .More2
+	checkevent EVENT_NAMED_QADI_TALK3
+	iffalse .More3
+	sjump .After
+
+.More0:
+	writetext PurgThresholdQadiDuelScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_QADI_TALK0
+	closetext
+	end
+
+.More1:
+	writetext PurgThresholdQadiDuelScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_QADI_TALK1
+	closetext
+	end
+
+.More2:
+	writetext PurgThresholdQadiDuelScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_QADI_TALK2
+	closetext
+	end
+
+.More3:
+	writetext PurgThresholdQadiDuelScriptMoreText3
+	waitbutton
+	setevent EVENT_NAMED_QADI_TALK3
+	closetext
+	end
+
+
 PurgThresholdQadiDuelScriptSeenText:
 	text "Abd al Jabbar, son"
 	line "of Ahmad. A qadi."
@@ -228,63 +308,6 @@ PurgThresholdQadiDuelScriptSeenText:
 	line "thick books on"
 	para "five thin"
 	line "principles."
-	para "One, God is one,"
-	line "and nothing is"
-	para "like Him. Two, God"
-	line "is just. He does"
-	para "not will injustice"
-	line "and does not"
-	para "create it. The"
-	line "evil in your hand"
-	para "is yours."
-	para "Three, the promise"
-	line "and the threat."
-	para "What He promised"
-	line "He fulfils, what"
-	para "He threatened He"
-	line "fulfils. Four, the"
-	para "sinner who does"
-	line "not repent is"
-	para "neither believer"
-	line "nor unbeliever in"
-	para "this life. He"
-	line "stands in the"
-	para "position between"
-	line "two positions."
-	para "Five, command the"
-	line "good and forbid"
-	para "the evil."
-	para "Look around you."
-	line "This cavern is my"
-	para "fourth principle"
-	line "with plumbing. A"
-	para "great room of"
-	line "people between two"
-	para "positions, waiting"
-	line "for a verdict"
-	para "already written in"
-	line "a language none of"
-	para "them reads."
-	para "In the next life I"
-	line "held there is no"
-	para "such room for the"
-	line "unrepentant. I"
-	para "notice the cavern"
-	line "disagrees. I am"
-	para "inclined to write"
-	line "a footnote."
-	para "Theodicy is simple"
-	line "for me. God owes"
-	para "His creatures the"
-	line "best He can do for"
-	para "them, and He does"
-	line "it. If the world"
-	para "is bad, look at"
-	line "who was free to"
-	para "ruin it. That is"
-	line "you, and me, and"
-	para "the man in the"
-	line "pit."
 	para "Fight me. I am a"
 	line "judge. I would"
 	para "like to see the"
@@ -318,6 +341,75 @@ PurgThresholdQadiDuelScriptAfterText:
 	para "two, and do not"
 	line "let the cavern do"
 	para "it for you."
+	done
+
+PurgThresholdQadiDuelScriptMoreText0:
+	text "One, God is one,"
+	line "and nothing is"
+	para "like Him. Two, God"
+	line "is just. He does"
+	para "not will injustice"
+	line "and does not"
+	para "create it. The"
+	line "evil in your hand"
+	para "is yours."
+	done
+
+PurgThresholdQadiDuelScriptMoreText1:
+	text "Three, the promise"
+	line "and the threat."
+	para "What He promised"
+	line "He fulfils, what"
+	para "He threatened He"
+	line "fulfils. Four, the"
+	para "sinner who does"
+	line "not repent is"
+	para "neither believer"
+	line "nor unbeliever in"
+	para "this life. He"
+	line "stands in the"
+	para "position between"
+	line "two positions."
+	para "Five, command the"
+	line "good and forbid"
+	para "the evil."
+	done
+
+PurgThresholdQadiDuelScriptMoreText2:
+	text "Look around you."
+	line "This cavern is my"
+	para "fourth principle"
+	line "with plumbing. A"
+	para "great room of"
+	line "people between two"
+	para "positions, waiting"
+	line "for a verdict"
+	para "already written in"
+	line "a language none of"
+	para "them reads."
+	para "In the next life I"
+	line "held there is no"
+	para "such room for the"
+	line "unrepentant. I"
+	para "notice the cavern"
+	line "disagrees. I am"
+	para "inclined to write"
+	line "a footnote."
+	done
+
+PurgThresholdQadiDuelScriptMoreText3:
+	text "Theodicy is simple"
+	line "for me. God owes"
+	para "His creatures the"
+	line "best He can do for"
+	para "them, and He does"
+	line "it. If the world"
+	para "is bad, look at"
+	line "who was free to"
+	para "ruin it. That is"
+	line "you, and me, and"
+	para "the man in the"
+	line "pit."
 	done
 
 PurgThresholdQadiDuelScriptNoText:
@@ -495,10 +587,11 @@ PurgThreshold_MapEvents:
 
 	def_warp_events
 	warp_event 25, 39, TITHE_JUNCTION, 2
-	warp_event 13, 11, TITHE_PLAZA5, 3
-	warp_event 21, 11, GROVE_PLAZA5, 1
-	warp_event 29, 11, AXIOM_PLAZA5, 2
-	warp_event 37, 11, LOTUS_PLAZA5, 3
+	warp_event 24, 39, TITHE_JUNCTION, 2
+	warp_event 13, 11, TITHE_STREET10, 1
+	warp_event 21, 11, GROVE_STREET10, 1
+	warp_event 29, 11, AXIOM_STREET10, 1
+	warp_event 37, 11, LOTUS_STREET10, 1
 	warp_event  5, 25, PURG_DOWN1, 1
 	warp_event 45, 25, PURG_UP1, 1
 

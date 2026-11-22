@@ -41,22 +41,22 @@ GroveStreet8AfterScript:
 	end
 
 GroveStreet8Trainer0:
-	trainer G_DRUMMER, 129, EVENT_GEN_GROVE_STREET8_0, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_FLOWERKID, 131, EVENT_GEN_GROVE_STREET8_0, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
 
 GroveStreet8Trainer1:
-	trainer G_SPROUT, 130, EVENT_GEN_GROVE_STREET8_1, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_ANGLER, 130, EVENT_GEN_GROVE_STREET8_1, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
 
 GroveStreet8Trainer2:
-	trainer G_DRUIDESS, 130, EVENT_GEN_GROVE_STREET8_2, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_GRANNY, 130, EVENT_GEN_GROVE_STREET8_2, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
 
 GroveStreet8Trainer3:
-	trainer G_DRUIDESS, 131, EVENT_GEN_GROVE_STREET8_3, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_NATURISTM, 129, EVENT_GEN_GROVE_STREET8_3, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
 
 GroveStreet8Trainer4:
-	trainer G_SCOUT, 132, EVENT_GEN_GROVE_STREET8_4, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_BIRDER, 132, EVENT_GEN_GROVE_STREET8_4, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
 
 GroveStreet8Trainer5:
-	trainer G_FLOWERKID, 132, EVENT_GEN_GROVE_STREET8_5, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_NATURISTF, 129, EVENT_GEN_GROVE_STREET8_5, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
 
 GroveStreet8_MapEvents:
 	db 0, 0 ; filler
@@ -68,12 +68,12 @@ GroveStreet8_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet8Pickup, EVENT_GEN_GROVE_STREET8_PICKUP
-	object_event  2, 13, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet8Hermit, -1
-	object_event 16, 24, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer0, -1
-	object_event 16, 20, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer1, -1
-	object_event 21, 20, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer2, -1
-	object_event 16, 16, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer3, -1
-	object_event 21, 16, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer4, -1
-	object_event 21, 12, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer5, -1
+	object_event 10, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet8Pickup, EVENT_GEN_GROVE_STREET8_PICKUP
+	object_event 11, 15, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet8Hermit, -1
+	object_event 24,  9, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer0, -1
+	object_event 20,  9, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer1, -1
+	object_event 20,  4, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer2, -1
+	object_event 16,  9, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer3, -1
+	object_event 16,  4, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer4, -1
+	object_event 12,  4, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer5, -1
 

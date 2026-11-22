@@ -1,11 +1,11 @@
 	db ZUBAT ; 041
 
-	db  43,  48,  37,  58,  32,  42
+	db  50,  55,  43,  67,  37,  48
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, FLYING ; type
 	db 255 ; catch rate
-	db 99 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

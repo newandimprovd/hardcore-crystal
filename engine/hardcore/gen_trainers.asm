@@ -2,9 +2,9 @@
 ; Each trainer class has an optional group of generated trainers. The group table below says
 ; in which bank and at which address a class' group starts. A group is a list of trainers:
 ;   db "NAME@"
-;   db level, species ; one to six times
+;   db level, species, held item ; one to six times (NO_ITEM for none)
 ;   db -1
-; Parties are always TRAINERTYPE_NORMAL, so moves come from the level-up learnsets.
+; Parties are always TRAINERTYPE_NORMAL with a held item per mon, so moves come from the level-up learnsets.
 
 HC_FindGenTrainer:
 ; in: c = trainer class (1-based), b = trainer id (>= HC_GEN_ID_BASE)
@@ -76,8 +76,11 @@ HC_ReadGeneratedParty::
 	cp RIVAL2
 	jr nz, .add_mon
 .rival
+; the byte after the item is the end mark of the party when this is the last mon
+	inc hl
 	ld a, [wHCGenBank]
 	call GetFarByte
+	dec hl
 	cp -1
 	jr nz, .add_mon
 	push hl
@@ -89,7 +92,18 @@ HC_ReadGeneratedParty::
 	ld [wMonType], a
 	push hl
 	predef TryAddMonToParty
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1Item
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	ld d, h
+	ld e, l
 	pop hl
+	ld a, [wHCGenBank]
+	call GetFarByte
+	inc hl
+	ld [de], a
 	jr .mon
 
 HC_RivalStarter:

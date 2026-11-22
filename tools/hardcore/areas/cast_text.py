@@ -62,31 +62,37 @@ SATOSHI = N.SATOSHI
 
 # ----------------------------------------------------------------------------------------------- Sabbah (Area 3)
 # ----------------------------------------------------------------------------------------------- Cioran (Area 4)
-# ----------------------------------------------------------------------------------------------- the crowd around Crowley (Area 1)
-CROWD_1 = "GET OUT OF THE PARK, YOU PERVERT! There are CHILDREN on those swings!"
-CROWD_2 = "He was just standing there in a trench coat, doing arithmetic at the slide!"
-CROWD_3 = "Call the cops! Wait. We are the cops. Okay. Get him!"
-
 # ----------------------------------------------------------------------------------------------- Amphitheater scene
-AMPH_1 = """The Amphitheater. Stone seats climb the hill in a half circle. Women sit along the edges, wrapped in blankets, holding small clay jars.
+AMPH_0 = """The Amphitheater. Stone seats climb the hill in a half circle. Women sit along the edges in blankets, holding small clay jars.
 
-Crowley stands in the middle in his coat, which is open, and nothing else is. The chorus drums.
+It is very quiet. Somewhere, a single drum."""
+
+AMPH_1 = """Crowley stands on the dais in his coat, which is open, and nothing else is.
 
 CROWLEY: Welcome, <PLAYER>. Sit. Do not take notes.
 
-CROWLEY: The Commune is a lovely place. No locks, no money, and no one is ashamed of anything. The women asked me to lead a small ritual. I could hardly say no.
+CROWLEY: The Commune asked me to lead a small ritual. I could hardly say no.
 
 The drums begin."""
 
-AMPH_FADE = "..."
-
-AMPH_2 = """The drums stop. It is very quiet. The women are folding blankets.
+AMPH_2 = """The drums stop. The seats are full now. Nobody saw them arrive.
 
 WOMAN: That was a good one, Aleister.
 
 WOMAN: Did you get the jar? I got the jar. The sacred white liquid keeps for a week if you keep it cool.
 
 WOMAN: Last time I put it in the soup. The whole Commune glowed."""
+
+AMPH_CROWD = [
+    "First time? Breathe. Then clap. Then stop asking questions.",
+    "I came for the lecture. I stay for the ritual. The lecture is also a ritual.",
+    "My blanket is wool. It was not a good idea. I will say no more.",
+    "He quotes a dead poet who wrote about the Beast. I think the poet would want royalties.",
+    "The jars have lids now. We had a vote. It was close.",
+    "Everyone wants the front row. The front row gets splashed. I am in row nine.",
+    "Is it wrong that I came for the soup?",
+    "I have been to three of these. I leave lighter and a little confused each time.",
+]
 
 # ----------------------------------------------------------------------------------------------- Bruno (Nick's Landing)
 BRUNO_1 = """Giordano Bruno. They burned me in Rome in the year sixteen hundred. It was a Thursday. I remember because I had a cold.

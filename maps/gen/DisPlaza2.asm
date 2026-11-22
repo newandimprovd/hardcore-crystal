@@ -152,7 +152,7 @@ DisPlaza2Duel:
 	iffalse .No
 	closetext
 	winlosstext DisPlaza2DuelBeatenText, 0
-	loadtrainer D_MAGISTRATE, 131
+	loadtrainer D_MAGISTRATE, 132
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_DIS_PLAZA2_DUEL

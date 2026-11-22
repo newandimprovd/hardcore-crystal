@@ -519,8 +519,9 @@ def auto_plan(world, first, prefix=None):
                 add(cur)
         if any(o["script"].endswith(("GateScript", "BoulderScript")) for o in mp.objects):
             add("gate:" + cur)
-        nxt = mp.conns.get("north")
-        cur = nxt[0] if nxt and nxt[0] in maps else gate_next
+        nxt = next((mp.conns[d] for d in ("north", "east", "west") if d in mp.conns and mp.conns[d][0] in maps
+                    and mp.conns[d][0] not in seen), None)  # the road turns east and west since alpha 3.2: follow whichever way is new
+        cur = nxt[0] if nxt else gate_next
     return goals
 
 

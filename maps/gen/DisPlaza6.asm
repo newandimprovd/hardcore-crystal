@@ -157,7 +157,7 @@ DisPlaza6SadraDuelScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_SADRA_PAID
-	iftrue .After
+	iftrue .Later
 	writetext DisPlaza6SadraDuelScriptGiveText
 	waitbutton
 	verbosegiveitem PP_UP
@@ -181,6 +181,46 @@ DisPlaza6SadraDuelScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_SADRA_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_SADRA_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_SADRA_TALK2
+	iffalse .More2
+	checkevent EVENT_NAMED_SADRA_TALK3
+	iffalse .More3
+	sjump .After
+
+.More0:
+	writetext DisPlaza6SadraDuelScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_SADRA_TALK0
+	closetext
+	end
+
+.More1:
+	writetext DisPlaza6SadraDuelScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_SADRA_TALK1
+	closetext
+	end
+
+.More2:
+	writetext DisPlaza6SadraDuelScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_SADRA_TALK2
+	closetext
+	end
+
+.More3:
+	writetext DisPlaza6SadraDuelScriptMoreText3
+	waitbutton
+	setevent EVENT_NAMED_SADRA_TALK3
+	closetext
+	end
+
+
 DisPlaza6SadraDuelScriptSeenText:
 	text "Sadr al Din"
 	line "Shirazi. They call"
@@ -192,47 +232,6 @@ DisPlaza6SadraDuelScriptSeenText:
 	line "village near Qom,"
 	para "waiting for the"
 	line "world to catch up."
-	para "Nothing stands"
-	line "still. Not stones,"
-	para "not stars. Every"
-	line "thing is moving in"
-	para "its very being,"
-	line "from the weaker to"
-	para "the stronger. I"
-	line "call it"
-	para "substantial"
-	line "motion."
-	para "The soul is born"
-	line "from the body, and"
-	para "the body is only"
-	line "its first step. It"
-	para "begins as matter"
-	line "and it ends as"
-	para "spirit, and what"
-	line "it ends as is what"
-	para "it has done."
-	para "On the last day"
-	line "the deeds of the"
-	para "soul stand up in"
-	line "the body they have"
-	para "made. A greedy man"
-	line "rises as a"
-	para "creature of greed."
-	line "A gentle man rises"
-	para "as light. This is"
-	line "not a punishment."
-	para "It is a mirror"
-	line "with a body."
-	para "I am told this"
-	line "place is eternal."
-	para "I argued that the"
-	line "Fire is the soul's"
-	para "own heat, and that"
-	line "every heat, given"
-	para "time, cools. I am"
-	line "no fool, I know"
-	para "how that sounds in"
-	line "a pit."
 	para "You too are in"
 	line "motion. You do not"
 	para "feel it, because"
@@ -268,6 +267,59 @@ DisPlaza6SadraDuelScriptAfterText:
 	para "either."
 	done
 
+DisPlaza6SadraDuelScriptMoreText0:
+	text "Nothing stands"
+	line "still. Not stones,"
+	para "not stars. Every"
+	line "thing is moving in"
+	para "its very being,"
+	line "from the weaker to"
+	para "the stronger. I"
+	line "call it"
+	para "substantial"
+	line "motion."
+	done
+
+DisPlaza6SadraDuelScriptMoreText1:
+	text "The soul is born"
+	line "from the body, and"
+	para "the body is only"
+	line "its first step. It"
+	para "begins as matter"
+	line "and it ends as"
+	para "spirit, and what"
+	line "it ends as is what"
+	para "it has done."
+	done
+
+DisPlaza6SadraDuelScriptMoreText2:
+	text "On the last day"
+	line "the deeds of the"
+	para "soul stand up in"
+	line "the body they have"
+	para "made. A greedy man"
+	line "rises as a"
+	para "creature of greed."
+	line "A gentle man rises"
+	para "as light. This is"
+	line "not a punishment."
+	para "It is a mirror"
+	line "with a body."
+	done
+
+DisPlaza6SadraDuelScriptMoreText3:
+	text "I am told this"
+	line "place is eternal."
+	para "I argued that the"
+	line "Fire is the soul's"
+	para "own heat, and that"
+	line "every heat, given"
+	para "time, cools. I am"
+	line "no fool, I know"
+	para "how that sounds in"
+	line "a pit."
+	done
+
 DisPlaza6SadraDuelScriptNoText:
 	text "Another day. I"
 	line "will be here. The"
@@ -293,7 +345,7 @@ DisPlaza6Duel:
 	iffalse .No
 	closetext
 	winlosstext DisPlaza6DuelBeatenText, 0
-	loadtrainer D_SPECTRE, 135
+	loadtrainer D_SPECTRE, 131
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_DIS_PLAZA6_DUEL

@@ -145,7 +145,7 @@ TithePlaza3Duel:
 	iffalse .No
 	closetext
 	winlosstext TithePlaza3DuelBeatenText, 0
-	loadtrainer T_THUG, 137
+	loadtrainer T_THUG, 133
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_TITHE_PLAZA3_DUEL

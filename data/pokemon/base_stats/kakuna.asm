@@ -1,11 +1,11 @@
 	db KAKUNA ; 014
 
-	db  83,  46,  93,  65,  46,  46
+	db  77,  56,  83,  67,  56,  56
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, POISON ; type
 	db 240 ; catch rate
-	db 144 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

@@ -229,6 +229,7 @@ class World:
         assert cls in self.classes, cls
         assert len(name) <= 10, name
         lst = self.trainers[cls]
+        party = [(p + ("NO_ITEM",))[:3] for p in party]  # (level, species, held item)
         lst.append((name, party))
         tid = 127 + len(lst)
         assert tid <= 255, f"too many generated {cls} trainers"

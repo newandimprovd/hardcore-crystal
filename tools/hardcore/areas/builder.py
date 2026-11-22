@@ -1,10 +1,14 @@
 """Shared building blocks for the five areas: acts (a run of lanes ending in a plaza), town interiors, bosses."""
+import random
+
 from .flags import flag_once
 from . import boutique as shops
 from .layout import (FACE, boss_room, chain, gatehouse, house_interior, boutique_interior, lane, mart_interior, plaza, pokecenter_interior)
 from .town import plaza2
 from .wayfolk import GIFT, GIFT_AFTER, GIFT_HERMITS, GIFT_ITEMS, HERMIT, TOWNIE, TOWNIE2
 from .trail import trail
+from . import hollows
+from . import turn
 from .party import make_party
 from .text import Text
 
@@ -28,6 +32,8 @@ class ActSpec:
     def __init__(self, tag, lanes, kit, landmark, music, trainers=13, gate=None, boss=None, houses=1,
                  mart=None, texts=None, plaza_width=13, lane_names=None, split=None, pal="PALETTE_DAY", rift=False,
                  split_houses=1, boutique=None):
+        self.index = 0  # the act's place in its area (0..2), set by build_area
+        self.spec = None  # the area spec (level range), set by build_area
         self.boutique = boutique  # 0..2: the mid-act plaza gets the rare held-item boutique of this act (areas/boutique.py)
         self.pal = pal
         self.rift = rift  # the end plaza of this act gets a door to PURGATORIO (it needs a plaza width of 15)
@@ -259,6 +265,67 @@ def boss_party(roster, rng, boss, theme):
     return make_party(roster, rng, boss.level, boss.size, boss.theme or theme)
 
 
+def turn_plan(w, act):
+    """{lane index: 'E' or 'W'}: the lane of this act that runs sideways (alpha 3.2 point 19).  One per act that is long enough, never the
+    first lane (it carries the gate), never the lane of a hidden portal (Purgatorio, the Undercroft),
+    and never the lane before a mid-act plaza.  East and west alternate through the world."""
+    if act.lanes < 4 or not act.kit.extra.get("scn"):
+        return {}
+    gone = set()
+    if act.rift:
+        gone.add(act.lanes - 1)
+    if act.tag == "Axiom" and not act.rift:
+        gone.add(act.lanes - 2)
+    ok = [i for i in range(1, act.lanes - 1) if i not in gone and not (act.split and i + 1 == act.split)]
+    if not ok:
+        return {}
+    R = random.Random("turn:" + act.tag + str(w.turn_count if hasattr(w, "turn_count") else 0) + str(act.lanes))
+    i = R.choice(ok)
+    w.turn_count = getattr(w, "turn_count", 0) + 1
+    return {i: "EW"[w.turn_count % 2]}
+
+
+def turned_lane(w, g, rng, act, below, name, trainers, direction, lane_no):
+    """One lane that runs east (direction 'E') or west ('W'), with a bend map before it and one after it that join it to the vertical road.
+    Returns (lane, trainer slots, the last bend), all connected."""
+    from . import counts
+    kit, tag = act.kit, act.tag
+    k = 1 if direction == "E" else 3
+    cw, W, BH = 3, 12, 14
+    R = random.Random("turnlane:" + name)
+    east = direction == "E"
+    lane_side_in = "W" if east else "E"
+    # the bend before: the road comes up from below on the column the previous map ends on and turns to the lane's side
+    a1 = max(1, min(W - cw - 1, turn.edges_of(below)[1][1]))
+    b1 = turn.bend(g, f"{tag}BendA{lane_no}", kit, kind="R" if east else "L", a=a1, r_t=R.randint(2, 4), landmark=act.landmark,
+                   music=act.music, cw=cw, pal=act.pal)
+    furnish_lane(w, g, b1, reserve=0)
+    turn.rotate(b1, [], kit, 0, R)
+    turn.join(below, b1)
+    # the lane, built like any other and then turned: its entry (west for an eastbound lane) meets the exit row of the bend
+    rows = trainers - trainers // 3
+    H = rows * counts.GAP + 7
+    a_lane = turn.arg_for(lane_side_in, b1.exit[1], cw, W, H, k)
+    m, s = trail(g, name, kit, rng, trainers=trainers, landmark=act.landmark, a=a_lane, music=act.music, neck=0, gate=None, w=w,
+                 pal=act.pal, raw=True)
+    m.entry, m.exit = ("S", m.a), ("N", m.a_out)
+    pickup(w, m, reserve=len(s))
+    furnish_lane(w, g, m, reserve=len(s))
+    turn.rotate(m, s, kit, k, R)
+    assert m.entry[0] == lane_side_in, (name, m.entry)
+    turn.join(b1, m)
+    # the bend after: from the lane's far side back to the vertical road
+    k2 = 1 if east else 3
+    a2 = turn.arg_for("W" if east else "E", m.exit[1], cw, W, BH, k2)
+    b2 = turn.bend(g, f"{tag}BendB{lane_no}", kit, kind="L" if east else "R", a=a2, r_t=R.randint(2, 4), landmark=act.landmark,
+                   music=act.music, cw=cw, pal=act.pal)
+    furnish_lane(w, g, b2, reserve=0)
+    turn.rotate(b2, [], kit, k2, R)
+    assert b2.exit[0] == "N", (b2.name, b2.exit)
+    turn.join(m, b2)
+    return m, s, b2
+
+
 def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stocks):
     """Builds act.lanes lanes north of `prev` (a plaza), a mid-act plaza after act.split lanes if asked, then the
     final plaza with its interiors and boss room. stocks: Mart item lists, one per plaza built here.
@@ -267,20 +334,36 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
     lanes = []
     below = prev
     stocks = list(stocks)
+    turns = turn_plan(w, act)
+    hollow = hollows.lanes_for(act, turns)  # lanes that hide a hollow behind a gap in the tree line (areas/hollows.py)
     for i in range(act.lanes):
         first = i == 0
         gate = act.gate if first else None
         tr = act.trainers[i] if isinstance(act.trainers, (list, tuple)) else act.trainers
+        if i in turns:
+            m, s, below = turned_lane(w, g, rng, act, below, f"{tag}Street{lane_no}", tr, turns[i], lane_no)
+            lanes.append((m, s))
+            lane_no += 1
+            if act.split and i + 1 == act.split:
+                raise AssertionError("a turned lane may not be the last lane before a mid-act plaza")
+            continue
         if kit.extra.get("scn"):
-            m, s = trail(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark, a=below.a_out,
-                         music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal)
+            m, s = trail(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark, a=turn.edges_of(below)[1][1],
+                         music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal,
+                         rift=bool(act.rift) and i == act.lanes - 1,
+                         vault=(tag == "Axiom" and not act.rift and i == act.lanes - 2 and not hasattr(w, "vault_door")),
+                         hollow=i in hollow)
         else:
             la = rng.choice((1, 2, 3, 4))  # the road drifts sideways from lane to lane, so it winds instead of running straight north
             m, s = lane(g, f"{tag}Street{lane_no}", kit, rng, trainers=tr, landmark=act.landmark, a=la, right=6 - la,
                         music=act.music, neck=2 if gate else 0, gate=gate, w=w, pal=act.pal)
+        if getattr(m, "hollow_door", None) is not None:
+            hollows.register(w, act, i, hollow[i], m)
+        if getattr(m, "vault_door", None) is not None:
+            w.vault_door = m.vault_door  # the hidden portal to the Undercroft (areas/vault.py), found in a glade
         pickup(w, m, reserve=len(s))
         furnish_lane(w, g, m, reserve=len(s))
-        chain(below, m, below.a_out - m.a)
+        turn.join(below, m)
         lanes.append((m, s))
         below = m
         lane_no += 1
@@ -288,21 +371,23 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
             nh = act.split_houses + (1 if act.boutique is not None else 0)
             pm, dm = make_plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
                                 houses=nh, width=max(act.plaza_width, 2 * (2 + nh) + 9), pal=act.pal, index=plaza_no)
-            chain(below, pm, below.a_out - pm.a)
+            turn.join(below, pm)
             town(w, g, tag, plaza_no, pm, dm, kit, act.landmark, f"{tag.upper()}_{plaza_no}", stocks.pop(0), act.texts,
                  f"{tag.upper()}_{plaza_no}", boutique=shops.spec(tag, act.boutique) if act.boutique is not None else None)
             below = pm
             plaza_no += 1
     p, doors = make_plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
-                          houses=act.houses, extra=1 if act.boss else 0, width=act.plaza_width, pal=act.pal, rift=act.rift,
+                          houses=act.houses, extra=1 if act.boss else 0, width=act.plaza_width, pal=act.pal,
                           index=plaza_no)
-    chain(below, p, below.a_out - p.a)
+    turn.join(below, p)
     if act.rift:
-        door = doors["rift"]
+        # the way into Purgatorio is the hidden portal in a glade of the last lane before the plaza, not a door in the town
+        hidden = lanes[-1][0]
+        door = hidden.rift_door
         short = "A" + g.key[-1]
         flag = flag_once(w, f"EVENT_PURG_OPEN_{short}")
-        p.coords.append((door.x, door.y + 1, -1, f"{p.name}PurgFlagScript"))
-        p.scripts.append(f"{p.name}PurgFlagScript:\n\tsetevent {flag}\n\tend\n")
+        hidden.coords.append((door.x, door.y + 1, -1, f"{hidden.name}PurgFlagScript"))
+        hidden.scripts.append(f"{hidden.name}PurgFlagScript:\n\tsetevent {flag}\n\tend\n")
         if not hasattr(w, "purg_doors"):
             w.purg_doors = {}
         w.purg_doors[short] = door
@@ -367,6 +452,8 @@ def build_area(w, roster, rng, cfg, entry_doors):
                             boss=cfg.bosses[k], texts=cfg.texts, split=cfg.splits[k], gate=cfg.gates[k], pal=cfg.pal,
                             plaza_width=15 if (k == 1 and cfg.purg) else 13, rift=(k == 1 and cfg.purg),
                             split_houses=cfg.split_houses[k]))
+    for k, act in enumerate(acts):
+        act.index, act.spec = k, spec
     all_lanes = []
     prev, lane_no, plaza_no = p1, 1, 2
     exits = []

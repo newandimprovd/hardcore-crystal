@@ -220,7 +220,7 @@ AxiomPlaza2Duel:
 	iffalse .No
 	closetext
 	winlosstext AxiomPlaza2DuelBeatenText, 0
-	loadtrainer U_MADDOC, 137
+	loadtrainer U_MADDOC, 138
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_PLAZA2_DUEL

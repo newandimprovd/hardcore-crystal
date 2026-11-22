@@ -30,7 +30,7 @@ def plaza2(g, name, kit, rng, **kw):
         e, xo, jr = m.street
         r = reach(m, kit, (2 * e + 1, 2 * (m.h - 2) + 1))
         ok = all(((wp.x, wp.y - 1) if wp.y == 2 * m.h - 1 else (wp.x, wp.y + 1)) in r for wp in m.warps) and (2 * xo + 1, 0) in r  # a mat is read from above
-        ok = ok and all((2 * fx + dx, 2 * fy + 3) in r for fx, fy in getattr(m, "fountains", []) for dx in (0, 1))  # the plaque can be read
+        ok = ok and all((2 * fx + dx, 2 * fy + 4) in r for fx, fy in getattr(m, "fountains", []) for dx in (1, 2))  # the plaque can be read
         if kit.extra.get("grass"):  # every town has tall grass (wild.py gives each plaza a table), and it can be walked to
             ok = ok and bool(getattr(m, "grass_cell", None)) and m.grass_cell[:2] in r
         if ok:
@@ -157,7 +157,7 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
     gr = kit.extra.get("grass")
     used_kinds = []
     # a fountain square in the biggest pocket of every third town (the first, the fourth, the seventh)
-    fz = next((zi for zi, z in enumerate(zones) if z is not grass_zone), None) if index % 3 == 1 else None
+    fz = next((zi for zi, z in enumerate(zones) if z is not grass_zone and z[2] - z[1] >= 2 and z[4] - z[3] >= 2), None) if index % 3 == 1 else None
     for zi, z in enumerate(zones):
         _, x0, x1, y0, y1 = z
         if z is grass_zone and gr:
@@ -200,7 +200,7 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
     autotile(m, kit, R)
     for i, (fx, fy) in enumerate(m.fountains):  # the plaque on the basin, read from the south
         tag = next(t for t in ("Tithe", "Grove", "Axiom", "Lotus", "Dis") if name.startswith(t))
-        sign(m, 2 * fx + 1, 2 * fy + 1, f"{name}Fountain{i}", R.choice(FOUNTAIN[tag]))
+        sign(m, 2 * fx + 2, 2 * fy + 3, f"{name}Fountain{i}", R.choice(FOUNTAIN[tag]))
     # townsfolk cells: floor cells away from doors, grass and the street's middle
     door_cells = {(wp.x, wp.y) for wp in m.warps}
     cells = []
@@ -269,15 +269,17 @@ def decorate(m, kit, S, R, kind, x0, x1, y0, y1):
     flowers = S["flowers"]
     cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
     paved = kit.extra["plaza"]
-    if kind == "fountain":  # the round basin on a block of its own, paved all round, trees in the corners of the pocket
-        for yy in range(cy - 1, cy + 2):
-            for xx in range(cx - 1, cx + 2):
+    if kind == "fountain":  # a pool of two by two blocks with a jet at the centre, paved all round, trees in the corners of the pocket
+        px0, py0 = x0 + (w - 2) // 2, y0 + (h - 2) // 2
+        for yy in range(py0 - 1, py0 + 3):
+            for xx in range(px0 - 1, px0 + 3):
                 if x0 <= xx <= x1 and y0 <= yy <= y1:
                     m.set(xx, yy, R.choice(paved))
-        m.set(cx, cy, S["fountain"])
-        m.fountains.append((cx, cy))
+        for (dx, dy, role) in ((0, 0, "fountain_nw"), (1, 0, "fountain_ne"), (0, 1, "fountain_sw"), (1, 1, "fountain_se")):
+            m.set(px0 + dx, py0 + dy, S[role])
+        m.fountains.append((px0, py0))
         for (x, y) in ((x0, y0), (x1, y0), (x0, y1), (x1, y1)):
-            if (x, y) != (cx, cy) and R.random() < 0.8:
+            if not (px0 <= x <= px0 + 1 and py0 <= y <= py0 + 1) and R.random() < 0.8:
                 m.set(x, y, S["tree"])
     elif kind == "park":
         for y in range(y0, y1 + 1):

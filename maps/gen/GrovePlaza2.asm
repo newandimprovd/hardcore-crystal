@@ -245,7 +245,7 @@ GrovePlaza2Duel:
 	iffalse .No
 	closetext
 	winlosstext GrovePlaza2DuelBeatenText, 0
-	loadtrainer G_DRUMMER, 131
+	loadtrainer G_DRUMMER, 130
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_GROVE_PLAZA2_DUEL

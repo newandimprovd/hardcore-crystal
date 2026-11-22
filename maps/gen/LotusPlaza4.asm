@@ -164,7 +164,7 @@ LotusPlaza4Cioran2BearerScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_CIORAN2_PAID
-	iftrue .After
+	iftrue .Later
 	writetext LotusPlaza4Cioran2BearerScriptGiveText
 	waitbutton
 	verbosegiveitem SHOVEL
@@ -188,37 +188,42 @@ LotusPlaza4Cioran2BearerScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_CIORAN2_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_CIORAN2_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_CIORAN2_TALK2
+	iffalse .More2
+	sjump .After
+
+.More0:
+	writetext LotusPlaza4Cioran2BearerScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_CIORAN2_TALK0
+	closetext
+	end
+
+.More1:
+	writetext LotusPlaza4Cioran2BearerScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_CIORAN2_TALK1
+	closetext
+	end
+
+.More2:
+	writetext LotusPlaza4Cioran2BearerScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_CIORAN2_TALK2
+	closetext
+	end
+
+
 LotusPlaza4Cioran2BearerScriptSeenText:
 	text "Still here? Good."
 	line "So am I. A small"
 	para "victory against"
 	line "the obvious."
-	para "History is not a"
-	line "road, it is a"
-	para "decay with good"
-	line "manners. Every"
-	para "empire here, the"
-	line "priests, the cops,"
-	para "the robots, the"
-	line "resort, dreamed of"
-	para "being the last."
-	line "None was. That is"
-	para "the only mercy."
-	para "The dead are not"
-	line "behind us. They"
-	para "are what the"
-	line "present is made"
-	para "of. Every plaza on"
-	line "this coast is a"
-	para "grave with good"
-	line "lighting."
-	para "If the voice"
-	line "speaks, answer it."
-	para "Do not argue."
-	line "Offer it a drink."
-	para "It likes to be"
-	line "listened to. That"
-	para "is its weakness."
 	para "You will want a"
 	line "shovel. Everything"
 	para "in here is buried,"
@@ -253,6 +258,41 @@ LotusPlaza4Cioran2BearerScriptAfterText:
 	para "sleepers, and ours"
 	line "are the worst kind"
 	para "of neighbours."
+	done
+
+LotusPlaza4Cioran2BearerScriptMoreText0:
+	text "History is not a"
+	line "road, it is a"
+	para "decay with good"
+	line "manners. Every"
+	para "empire here, the"
+	line "priests, the cops,"
+	para "the robots, the"
+	line "resort, dreamed of"
+	para "being the last."
+	line "None was. That is"
+	para "the only mercy."
+	done
+
+LotusPlaza4Cioran2BearerScriptMoreText1:
+	text "The dead are not"
+	line "behind us. They"
+	para "are what the"
+	line "present is made"
+	para "of. Every plaza on"
+	line "this coast is a"
+	para "grave with good"
+	line "lighting."
+	done
+
+LotusPlaza4Cioran2BearerScriptMoreText2:
+	text "If the voice"
+	line "speaks, answer it."
+	para "Do not argue."
+	line "Offer it a drink."
+	para "It likes to be"
+	line "listened to. That"
+	para "is its weakness."
 	done
 
 LotusPlaza4Cioran2BearerScriptNoText:
@@ -303,7 +343,7 @@ LotusPlaza4Duel:
 	iffalse .No
 	closetext
 	winlosstext LotusPlaza4DuelBeatenText, 0
-	loadtrainer L_BEACHBUM, 132
+	loadtrainer L_BEACHBUM, 131
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_LOTUS_PLAZA4_DUEL
@@ -389,18 +429,18 @@ LotusPlaza4_MapEvents:
 	coord_event 25,  1, -1, LotusPlaza4Cioran2BlockScript
 
 	def_bg_events
-	bg_event  5, 21, BGEVENT_READ, LotusPlaza4Fountain0
+	bg_event  6, 21, BGEVENT_READ, LotusPlaza4Fountain0
 
 	def_object_events
-	object_event  7, 18, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateA, -1
-	object_event  8, 18, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateB, -1
-	object_event 23,  6, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Giver, -1
-	object_event 20, 16, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie1, -1
-	object_event  5, 22, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie2, -1
-	object_event 10, 21, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie3, -1
-	object_event 26, 13, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie4, -1
-	object_event 25, 12, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie5, -1
-	object_event 18, 10, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie6, -1
-	object_event 14,  8, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Cioran2BearerScript, -1
-	object_event  6, 19, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Duel, -1
+	object_event  8, 15, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateA, -1
+	object_event  9, 15, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateB, -1
+	object_event 13, 11, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Giver, -1
+	object_event 25, 17, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie1, -1
+	object_event 16, 10, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie2, -1
+	object_event 17, 22, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie3, -1
+	object_event 12,  8, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie4, -1
+	object_event 10, 23, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie5, -1
+	object_event 27,  7, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie6, -1
+	object_event 11, 20, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Cioran2BearerScript, -1
+	object_event 10, 21, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Duel, -1
 

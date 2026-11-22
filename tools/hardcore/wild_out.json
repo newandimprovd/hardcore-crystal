@@ -110,7 +110,7 @@
    "area": 1,
    "map": "TithePlaza2",
    "const": "TITHE_PLAZA2",
-   "level": 8.0,
+   "level": 7.7,
    "morn": [
     [
      8,
@@ -207,94 +207,94 @@
    "area": 1,
    "map": "TithePlaza3",
    "const": "TITHE_PLAZA3",
-   "level": 11.0,
+   "level": 10.3,
    "morn": [
     [
-     11,
+     10,
      "NIDORAN_M"
     ],
     [
-     12,
+     11,
      "SPINARAK"
     ],
     [
-     10,
+     9,
      "WEEDLE"
     ],
     [
-     13,
+     12,
      "TENTACOOL"
     ],
     [
-     11,
+     10,
      "MACHOP"
     ],
     [
-     12,
+     11,
      "MANKEY"
     ],
     [
-     14,
+     13,
      "CHIKORITA"
     ]
    ],
    "day": [
     [
-     11,
+     10,
      "NIDORAN_M"
     ],
     [
-     12,
+     11,
      "SPINARAK"
     ],
     [
-     10,
+     9,
      "WEEDLE"
     ],
     [
-     13,
+     12,
      "TENTACOOL"
     ],
     [
-     11,
+     10,
      "MACHOP"
     ],
     [
-     12,
+     11,
      "MANKEY"
     ],
     [
-     14,
+     13,
      "CHIKORITA"
     ]
    ],
    "nite": [
     [
-     11,
+     10,
      "NIDORAN_M"
     ],
     [
-     12,
+     11,
      "SPINARAK"
     ],
     [
-     10,
+     9,
      "WEEDLE"
     ],
     [
-     13,
+     12,
      "TENTACOOL"
     ],
     [
-     11,
+     10,
      "MACHOP"
     ],
     [
-     12,
+     11,
      "MANKEY"
     ],
     [
-     14,
+     13,
      "CHIKORITA"
     ]
    ],
@@ -304,94 +304,94 @@
    "area": 1,
    "map": "TithePlaza4",
    "const": "TITHE_PLAZA4",
-   "level": 14.0,
+   "level": 13.0,
    "morn": [
     [
-     14,
+     13,
      "KOFFING"
     ],
     [
-     15,
+     14,
      "NIDORAN_F"
     ],
     [
-     13,
+     12,
      "HOOTHOOT"
     ],
     [
-     16,
+     15,
      "MACHOP"
     ],
     [
-     14,
+     13,
      "IGGLYBUFF"
     ],
     [
-     15,
+     14,
      "EKANS"
     ],
     [
-     17,
+     16,
      "ODDISH"
     ]
    ],
    "day": [
     [
-     14,
+     13,
      "KOFFING"
     ],
     [
-     15,
+     14,
      "NIDORAN_F"
     ],
     [
-     13,
+     12,
      "HOOTHOOT"
     ],
     [
-     16,
+     15,
      "MACHOP"
     ],
     [
-     14,
+     13,
      "IGGLYBUFF"
     ],
     [
-     15,
+     14,
      "EKANS"
     ],
     [
-     17,
+     16,
      "ODDISH"
     ]
    ],
    "nite": [
     [
-     14,
+     13,
      "KOFFING"
     ],
     [
-     15,
+     14,
      "NIDORAN_F"
     ],
     [
-     13,
+     12,
      "EKANS"
     ],
     [
-     16,
+     15,
      "HOOTHOOT"
     ],
     [
-     14,
+     13,
      "MACHOP"
     ],
     [
-     15,
+     14,
      "IGGLYBUFF"
     ],
     [
-     17,
+     16,
      "ODDISH"
     ]
    ],
@@ -401,94 +401,94 @@
    "area": 1,
    "map": "TithePlaza5",
    "const": "TITHE_PLAZA5",
-   "level": 17.0,
+   "level": 15.7,
    "morn": [
     [
-     17,
+     16,
      "GRIMER"
     ],
     [
-     18,
+     17,
      "NIDORAN_M"
     ],
     [
-     16,
+     15,
      "SPINARAK"
     ],
     [
-     19,
+     18,
      "WEEDLE"
     ],
     [
-     17,
+     16,
      "TENTACOOL"
     ],
     [
-     18,
+     17,
      "MEOWTH"
     ],
     [
-     20,
+     19,
      "PARAS"
     ]
    ],
    "day": [
     [
-     17,
+     16,
      "GRIMER"
     ],
     [
-     18,
+     17,
      "NIDORAN_M"
     ],
     [
-     16,
+     15,
      "SPINARAK"
     ],
     [
-     19,
+     18,
      "WEEDLE"
     ],
     [
-     17,
+     16,
      "TENTACOOL"
     ],
     [
-     18,
+     17,
      "MEOWTH"
     ],
     [
-     20,
+     19,
      "PARAS"
     ]
    ],
    "nite": [
     [
-     17,
+     16,
      "GRIMER"
     ],
     [
-     18,
+     17,
      "NIDORAN_M"
     ],
     [
-     16,
+     15,
      "SPINARAK"
     ],
     [
-     19,
+     18,
      "WEEDLE"
     ],
     [
-     17,
+     16,
      "TENTACOOL"
     ],
     [
-     18,
+     17,
      "MEOWTH"
     ],
     [
-     20,
+     19,
      "PARAS"
     ]
    ],
@@ -498,94 +498,94 @@
    "area": 1,
    "map": "TithePlaza6",
    "const": "TITHE_PLAZA6",
-   "level": 20.0,
+   "level": 18.3,
    "morn": [
     [
-     20,
+     18,
      "PORYGON"
     ],
     [
-     21,
+     19,
      "RATTATA"
     ],
     [
-     19,
+     17,
      "SENTRET"
     ],
     [
-     22,
+     20,
      "NIDORAN_F"
     ],
     [
-     20,
+     18,
      "NIDORAN_M"
     ],
     [
-     21,
+     19,
      "SPINARAK"
     ],
     [
-     23,
+     21,
      "CATERPIE"
     ]
    ],
    "day": [
     [
-     20,
+     18,
      "PORYGON"
     ],
     [
-     21,
+     19,
      "RATTATA"
     ],
     [
-     19,
+     17,
      "SENTRET"
     ],
     [
-     22,
+     20,
      "NIDORAN_F"
     ],
     [
-     20,
+     18,
      "NIDORAN_M"
     ],
     [
-     21,
+     19,
      "SPINARAK"
     ],
     [
-     23,
+     21,
      "CATERPIE"
     ]
    ],
    "nite": [
     [
-     20,
+     18,
      "NIDORAN_F"
     ],
     [
-     21,
+     19,
      "NIDORAN_M"
     ],
     [
-     19,
+     17,
      "SPINARAK"
     ],
     [
-     22,
+     20,
      "PORYGON"
     ],
     [
-     20,
+     18,
      "RATTATA"
     ],
     [
-     21,
+     19,
      "SENTRET"
     ],
     [
-     23,
+     21,
      "CATERPIE"
     ]
    ],
@@ -595,94 +595,94 @@
    "area": 1,
    "map": "TithePlaza7",
    "const": "TITHE_PLAZA7",
-   "level": 23.0,
+   "level": 21.0,
    "morn": [
     [
-     23,
+     21,
      "TENTACOOL"
     ],
     [
-     24,
+     22,
      "MEOWTH"
     ],
     [
-     22,
+     20,
      "HOOTHOOT"
     ],
     [
-     25,
+     23,
      "MANKEY"
     ],
     [
-     23,
+     21,
      "WEEDLE"
     ],
     [
-     24,
+     22,
      "PORYGON"
     ],
     [
-     26,
+     24,
      "VENONAT"
     ]
    ],
    "day": [
     [
-     23,
+     21,
      "TENTACOOL"
     ],
     [
-     24,
+     22,
      "MEOWTH"
     ],
     [
-     22,
+     20,
      "HOOTHOOT"
     ],
     [
-     25,
+     23,
      "MANKEY"
     ],
     [
-     23,
+     21,
      "WEEDLE"
     ],
     [
-     24,
+     22,
      "PORYGON"
     ],
     [
-     26,
+     24,
      "VENONAT"
     ]
    ],
    "nite": [
     [
-     23,
+     21,
      "TENTACOOL"
     ],
     [
-     24,
+     22,
      "WEEDLE"
     ],
     [
-     22,
+     20,
      "MEOWTH"
     ],
     [
-     25,
+     23,
      "HOOTHOOT"
     ],
     [
-     23,
+     21,
      "MANKEY"
     ],
     [
-     24,
+     22,
      "PORYGON"
     ],
     [
-     26,
+     24,
      "VENONAT"
     ]
    ],
@@ -692,94 +692,94 @@
    "area": 2,
    "map": "GrovePlaza1",
    "const": "GROVE_PLAZA1",
-   "level": 24.0,
+   "level": 25.0,
    "morn": [
     [
-     24,
+     25,
      "BELLSPROUT"
     ],
     [
-     25,
+     26,
      "BULBASAUR"
     ],
     [
-     23,
+     24,
      "CATERPIE"
     ],
     [
-     26,
+     27,
      "CHIKORITA"
     ],
     [
-     24,
+     25,
      "ODDISH"
     ],
     [
-     25,
+     26,
      "PARAS"
     ],
     [
-     27,
+     28,
      "MAREEP"
     ]
    ],
    "day": [
     [
-     24,
+     25,
      "BELLSPROUT"
     ],
     [
-     25,
+     26,
      "BULBASAUR"
     ],
     [
-     23,
+     24,
      "CATERPIE"
     ],
     [
-     26,
+     27,
      "CHIKORITA"
     ],
     [
-     24,
+     25,
      "ODDISH"
     ],
     [
-     25,
+     26,
      "PARAS"
     ],
     [
-     27,
+     28,
      "MAREEP"
     ]
    ],
    "nite": [
     [
-     24,
+     25,
      "BELLSPROUT"
     ],
     [
-     25,
+     26,
      "BULBASAUR"
     ],
     [
-     23,
+     24,
      "CATERPIE"
     ],
     [
-     26,
+     27,
      "CHIKORITA"
     ],
     [
-     24,
+     25,
      "ODDISH"
     ],
     [
-     25,
+     26,
      "PARAS"
     ],
     [
-     27,
+     28,
      "MAREEP"
     ]
    ],
@@ -789,94 +789,94 @@
    "area": 2,
    "map": "GrovePlaza2",
    "const": "GROVE_PLAZA2",
-   "level": 27.2,
+   "level": 28.5,
    "morn": [
     [
-     27,
+     28,
      "VENONAT"
     ],
     [
-     28,
+     29,
      "HOPPIP"
     ],
     [
-     26,
+     27,
      "SCYTHER"
     ],
     [
-     29,
+     30,
      "CUBONE"
     ],
     [
-     27,
+     28,
      "SQUIRTLE"
     ],
     [
-     28,
+     29,
      "STARYU"
     ],
     [
-     30,
+     31,
      "PICHU"
     ]
    ],
    "day": [
     [
-     27,
+     28,
      "VENONAT"
     ],
     [
-     28,
+     29,
      "HOPPIP"
     ],
     [
-     26,
+     27,
      "SCYTHER"
     ],
     [
-     29,
+     30,
      "CUBONE"
     ],
     [
-     27,
+     28,
      "SQUIRTLE"
     ],
     [
-     28,
+     29,
      "STARYU"
     ],
     [
-     30,
+     31,
      "PICHU"
     ]
    ],
    "nite": [
     [
-     27,
+     28,
      "VENONAT"
     ],
     [
-     28,
+     29,
      "HOPPIP"
     ],
     [
-     26,
+     27,
      "SCYTHER"
     ],
     [
-     29,
+     30,
      "CUBONE"
     ],
     [
-     27,
+     28,
      "SQUIRTLE"
     ],
     [
-     28,
+     29,
      "STARYU"
     ],
     [
-     30,
+     31,
      "PICHU"
     ]
    ],
@@ -886,94 +886,94 @@
    "area": 2,
    "map": "GrovePlaza3",
    "const": "GROVE_PLAZA3",
-   "level": 30.3,
+   "level": 32.0,
    "morn": [
     [
-     30,
+     32,
      "TOTODILE"
     ],
     [
-     31,
+     33,
      "GEODUDE"
     ],
     [
-     29,
+     31,
      "SLOWPOKE"
     ],
     [
-     32,
+     34,
      "SWINUB"
     ],
     [
-     30,
+     32,
      "PARAS"
     ],
     [
-     31,
+     33,
      "VENONAT"
     ],
     [
-     33,
+     35,
      "MAGNEMITE"
     ]
    ],
    "day": [
     [
-     30,
+     32,
      "TOTODILE"
     ],
     [
-     31,
+     33,
      "GEODUDE"
     ],
     [
-     29,
+     31,
      "SLOWPOKE"
     ],
     [
-     32,
+     34,
      "SWINUB"
     ],
     [
-     30,
+     32,
      "PARAS"
     ],
     [
-     31,
+     33,
      "VENONAT"
     ],
     [
-     33,
+     35,
      "MAGNEMITE"
     ]
    ],
    "nite": [
     [
-     30,
+     32,
      "TOTODILE"
     ],
     [
-     31,
+     33,
      "GEODUDE"
     ],
     [
-     29,
+     31,
      "SLOWPOKE"
     ],
     [
-     32,
+     34,
      "SWINUB"
     ],
     [
-     30,
+     32,
      "PARAS"
     ],
     [
-     31,
+     33,
      "VENONAT"
     ],
     [
-     33,
+     35,
      "MAGNEMITE"
     ]
    ],
@@ -983,94 +983,94 @@
    "area": 2,
    "map": "GrovePlaza4",
    "const": "GROVE_PLAZA4",
-   "level": 33.5,
+   "level": 35.5,
    "morn": [
     [
-     34,
+     36,
      "SQUIRTLE"
     ],
     [
-     35,
+     37,
      "STARYU"
     ],
     [
-     33,
+     35,
      "ODDISH"
     ],
     [
-     36,
+     38,
      "PARAS"
     ],
     [
-     34,
+     36,
      "HOPPIP"
     ],
     [
-     35,
+     37,
      "SCYTHER"
     ],
     [
-     37,
+     39,
      "SMOOCHUM"
     ]
    ],
    "day": [
     [
-     34,
+     36,
      "SQUIRTLE"
     ],
     [
-     35,
+     37,
      "STARYU"
     ],
     [
-     33,
+     35,
      "ODDISH"
     ],
     [
-     36,
+     38,
      "PARAS"
     ],
     [
-     34,
+     36,
      "HOPPIP"
     ],
     [
-     35,
+     37,
      "SCYTHER"
     ],
     [
-     37,
+     39,
      "SMOOCHUM"
     ]
    ],
    "nite": [
     [
-     34,
+     36,
      "SQUIRTLE"
     ],
     [
-     35,
+     37,
      "STARYU"
     ],
     [
-     33,
+     35,
      "ODDISH"
     ],
     [
-     36,
+     38,
      "PARAS"
     ],
     [
-     34,
+     36,
      "HOPPIP"
     ],
     [
-     35,
+     37,
      "SCYTHER"
     ],
     [
-     37,
+     39,
      "SMOOCHUM"
     ]
    ],
@@ -1080,94 +1080,94 @@
    "area": 2,
    "map": "GrovePlaza5",
    "const": "GROVE_PLAZA5",
-   "level": 36.7,
+   "level": 39.0,
    "morn": [
     [
-     37,
+     39,
      "CUBONE"
     ],
     [
-     38,
+     40,
      "TOTODILE"
     ],
     [
-     36,
+     38,
      "GEODUDE"
     ],
     [
-     39,
+     41,
      "SLOWPOKE"
     ],
     [
-     37,
+     39,
      "SWINUB"
     ],
     [
-     38,
+     40,
      "BELLSPROUT"
     ],
     [
-     40,
+     42,
      "LARVITAR"
     ]
    ],
    "day": [
     [
-     37,
+     39,
      "CUBONE"
     ],
     [
-     38,
+     40,
      "TOTODILE"
     ],
     [
-     36,
+     38,
      "GEODUDE"
     ],
     [
-     39,
+     41,
      "SLOWPOKE"
     ],
     [
-     37,
+     39,
      "SWINUB"
     ],
     [
-     38,
+     40,
      "BELLSPROUT"
     ],
     [
-     40,
+     42,
      "LARVITAR"
     ]
    ],
    "nite": [
     [
-     37,
+     39,
      "CUBONE"
     ],
     [
-     38,
+     40,
      "TOTODILE"
     ],
     [
-     36,
+     38,
      "GEODUDE"
     ],
     [
-     39,
+     41,
      "SLOWPOKE"
     ],
     [
-     37,
+     39,
      "SWINUB"
     ],
     [
-     38,
+     40,
      "BELLSPROUT"
     ],
     [
-     40,
+     42,
      "LARVITAR"
     ]
    ],
@@ -1177,94 +1177,94 @@
    "area": 2,
    "map": "GrovePlaza6",
    "const": "GROVE_PLAZA6",
-   "level": 39.8,
+   "level": 42.5,
    "morn": [
     [
-     40,
+     42,
      "BULBASAUR"
     ],
     [
-     41,
+     43,
      "CATERPIE"
     ],
     [
-     39,
+     41,
      "CHIKORITA"
     ],
     [
-     42,
+     44,
      "STARYU"
     ],
     [
-     40,
+     42,
      "TOTODILE"
     ],
     [
-     41,
+     43,
      "GEODUDE"
     ],
     [
-     43,
+     45,
      "ONIX"
     ]
    ],
    "day": [
     [
-     40,
+     42,
      "BULBASAUR"
     ],
     [
-     41,
+     43,
      "CATERPIE"
     ],
     [
-     39,
+     41,
      "CHIKORITA"
     ],
     [
-     42,
+     44,
      "STARYU"
     ],
     [
-     40,
+     42,
      "TOTODILE"
     ],
     [
-     41,
+     43,
      "GEODUDE"
     ],
     [
-     43,
+     45,
      "ONIX"
     ]
    ],
    "nite": [
     [
-     40,
+     42,
      "BULBASAUR"
     ],
     [
-     41,
+     43,
      "CATERPIE"
     ],
     [
-     39,
+     41,
      "CHIKORITA"
     ],
     [
-     42,
+     44,
      "STARYU"
     ],
     [
-     40,
+     42,
      "TOTODILE"
     ],
     [
-     41,
+     43,
      "GEODUDE"
     ],
     [
-     43,
+     45,
      "ONIX"
     ]
    ],
@@ -1274,94 +1274,94 @@
    "area": 2,
    "map": "GrovePlaza7",
    "const": "GROVE_PLAZA7",
-   "level": 43.0,
+   "level": 46.0,
    "morn": [
     [
-     43,
+     46,
      "SWINUB"
     ],
     [
-     44,
+     47,
      "BELLSPROUT"
     ],
     [
-     42,
+     45,
      "ODDISH"
     ],
     [
-     45,
+     48,
      "VENONAT"
     ],
     [
-     43,
+     46,
      "SLOWPOKE"
     ],
     [
-     44,
+     47,
      "BULBASAUR"
     ],
     [
-     46,
+     49,
      "RHYHORN"
     ]
    ],
    "day": [
     [
-     43,
+     46,
      "SWINUB"
     ],
     [
-     44,
+     47,
      "BELLSPROUT"
     ],
     [
-     42,
+     45,
      "ODDISH"
     ],
     [
-     45,
+     48,
      "VENONAT"
     ],
     [
-     43,
+     46,
      "SLOWPOKE"
     ],
     [
-     44,
+     47,
      "BULBASAUR"
     ],
     [
-     46,
+     49,
      "RHYHORN"
     ]
    ],
    "nite": [
     [
-     43,
+     46,
      "SWINUB"
     ],
     [
-     44,
+     47,
      "BELLSPROUT"
     ],
     [
-     42,
+     45,
      "ODDISH"
     ],
     [
-     45,
+     48,
      "VENONAT"
     ],
     [
-     43,
+     46,
      "SLOWPOKE"
     ],
     [
-     44,
+     47,
      "BULBASAUR"
     ],
     [
-     46,
+     49,
      "RHYHORN"
     ]
    ],
@@ -1371,94 +1371,94 @@
    "area": 3,
    "map": "AxiomPlaza1",
    "const": "AXIOM_PLAZA1",
-   "level": 44.0,
+   "level": 50.0,
    "morn": [
     [
-     44,
+     50,
      "MAGNEMITE"
     ],
     [
-     45,
+     51,
      "MAREEP"
     ],
     [
-     43,
+     49,
      "PICHU"
     ],
     [
-     46,
+     52,
      "ABRA"
     ],
     [
-     44,
+     50,
      "DROWZEE"
     ],
     [
-     45,
+     51,
      "PIDGEY"
     ],
     [
-     47,
+     53,
      "CHANSEY"
     ]
    ],
    "day": [
     [
-     44,
+     50,
      "MAGNEMITE"
     ],
     [
-     45,
+     51,
      "MAREEP"
     ],
     [
-     43,
+     49,
      "PICHU"
     ],
     [
-     46,
+     52,
      "ABRA"
     ],
     [
-     44,
+     50,
      "DROWZEE"
     ],
     [
-     45,
+     51,
      "PIDGEY"
     ],
     [
-     47,
+     53,
      "CHANSEY"
     ]
    ],
    "nite": [
     [
-     44,
+     50,
      "MAGNEMITE"
     ],
     [
-     45,
+     51,
      "MAREEP"
     ],
     [
-     43,
+     49,
      "PICHU"
     ],
     [
-     46,
+     52,
      "ABRA"
     ],
     [
-     44,
+     50,
      "DROWZEE"
     ],
     [
-     45,
+     51,
      "PIDGEY"
     ],
     [
-     47,
+     53,
      "CHANSEY"
     ]
    ],
@@ -1468,94 +1468,94 @@
    "area": 3,
    "map": "AxiomPlaza2",
    "const": "AXIOM_PLAZA2",
-   "level": 46.8,
+   "level": 53.5,
    "morn": [
     [
-     47,
+     54,
      "SPEAROW"
     ],
     [
-     48,
+     55,
      "SMOOCHUM"
     ],
     [
-     46,
+     53,
      "ZUBAT"
     ],
     [
-     49,
+     56,
      "LARVITAR"
     ],
     [
-     47,
+     54,
      "ONIX"
     ],
     [
-     48,
+     55,
      "RHYHORN"
     ],
     [
-     50,
+     57,
      "CLEFFA"
     ]
    ],
    "day": [
     [
-     47,
+     54,
      "SPEAROW"
     ],
     [
-     48,
+     55,
      "SMOOCHUM"
     ],
     [
-     46,
+     53,
      "ZUBAT"
     ],
     [
-     49,
+     56,
      "LARVITAR"
     ],
     [
-     47,
+     54,
      "ONIX"
     ],
     [
-     48,
+     55,
      "RHYHORN"
     ],
     [
-     50,
+     57,
      "CLEFFA"
     ]
    ],
    "nite": [
     [
-     47,
+     54,
      "ZUBAT"
     ],
     [
-     48,
+     55,
      "SPEAROW"
     ],
     [
-     46,
+     53,
      "SMOOCHUM"
     ],
     [
-     49,
+     56,
      "LARVITAR"
     ],
     [
-     47,
+     54,
      "ONIX"
     ],
     [
-     48,
+     55,
      "RHYHORN"
     ],
     [
-     50,
+     57,
      "CLEFFA"
     ]
    ],
@@ -1565,94 +1565,94 @@
    "area": 3,
    "map": "AxiomPlaza3",
    "const": "AXIOM_PLAZA3",
-   "level": 49.7,
+   "level": 57.0,
    "morn": [
     [
-     50,
+     57,
      "DROWZEE"
     ],
     [
-     51,
+     58,
      "PIDGEY"
     ],
     [
-     49,
+     56,
      "ONIX"
     ],
     [
-     52,
+     59,
      "RHYHORN"
     ],
     [
-     50,
+     57,
      "ABRA"
     ],
     [
-     51,
+     58,
      "SPEAROW"
     ],
     [
-     53,
+     60,
      "MARILL"
     ]
    ],
    "day": [
     [
-     50,
+     57,
      "DROWZEE"
     ],
     [
-     51,
+     58,
      "PIDGEY"
     ],
     [
-     49,
+     56,
      "ONIX"
     ],
     [
-     52,
+     59,
      "RHYHORN"
     ],
     [
-     50,
+     57,
      "ABRA"
     ],
     [
-     51,
+     58,
      "SPEAROW"
     ],
     [
-     53,
+     60,
      "MARILL"
     ]
    ],
    "nite": [
     [
-     50,
+     57,
      "DROWZEE"
     ],
     [
-     51,
+     58,
      "PIDGEY"
     ],
     [
-     49,
+     56,
      "ONIX"
     ],
     [
-     52,
+     59,
      "RHYHORN"
     ],
     [
-     50,
+     57,
      "ABRA"
     ],
     [
-     51,
+     58,
      "SPEAROW"
     ],
     [
-     53,
+     60,
      "MARILL"
     ]
    ],
@@ -1662,94 +1662,94 @@
    "area": 3,
    "map": "AxiomPlaza4",
    "const": "AXIOM_PLAZA4",
-   "level": 52.5,
+   "level": 60.5,
    "morn": [
     [
-     52,
+     60,
      "SMOOCHUM"
     ],
     [
-     53,
+     61,
      "ZUBAT"
     ],
     [
-     51,
+     59,
      "LARVITAR"
     ],
     [
-     54,
+     62,
      "MAGNEMITE"
     ],
     [
-     52,
+     60,
      "MAREEP"
     ],
     [
-     53,
+     61,
      "PICHU"
     ],
     [
-     55,
+     63,
      "HORSEA"
     ]
    ],
    "day": [
     [
-     52,
+     60,
      "SMOOCHUM"
     ],
     [
-     53,
+     61,
      "ZUBAT"
     ],
     [
-     51,
+     59,
      "LARVITAR"
     ],
     [
-     54,
+     62,
      "MAGNEMITE"
     ],
     [
-     52,
+     60,
      "MAREEP"
     ],
     [
-     53,
+     61,
      "PICHU"
     ],
     [
-     55,
+     63,
      "HORSEA"
     ]
    ],
    "nite": [
     [
-     52,
+     60,
      "ZUBAT"
     ],
     [
-     53,
+     61,
      "SMOOCHUM"
     ],
     [
-     51,
+     59,
      "LARVITAR"
     ],
     [
-     54,
+     62,
      "MAGNEMITE"
     ],
     [
-     52,
+     60,
      "MAREEP"
     ],
     [
-     53,
+     61,
      "PICHU"
     ],
     [
-     55,
+     63,
      "HORSEA"
     ]
    ],
@@ -1759,94 +1759,94 @@
    "area": 3,
    "map": "AxiomPlaza5",
    "const": "AXIOM_PLAZA5",
-   "level": 55.3,
+   "level": 64.0,
    "morn": [
     [
-     55,
+     64,
      "ONIX"
     ],
     [
-     56,
+     65,
      "RHYHORN"
     ],
     [
-     54,
+     63,
      "MAREEP"
     ],
     [
-     57,
+     66,
      "PICHU"
     ],
     [
-     55,
+     64,
      "SMOOCHUM"
     ],
     [
-     56,
+     65,
      "ZUBAT"
     ],
     [
-     58,
+     67,
      "KRABBY"
     ]
    ],
    "day": [
     [
-     55,
+     64,
      "ONIX"
     ],
     [
-     56,
+     65,
      "RHYHORN"
     ],
     [
-     54,
+     63,
      "MAREEP"
     ],
     [
-     57,
+     66,
      "PICHU"
     ],
     [
-     55,
+     64,
      "SMOOCHUM"
     ],
     [
-     56,
+     65,
      "ZUBAT"
     ],
     [
-     58,
+     67,
      "KRABBY"
     ]
    ],
    "nite": [
     [
-     55,
+     64,
      "ZUBAT"
     ],
     [
-     56,
+     65,
      "ONIX"
     ],
     [
-     54,
+     63,
      "RHYHORN"
     ],
     [
-     57,
+     66,
      "MAREEP"
     ],
     [
-     55,
+     64,
      "PICHU"
     ],
     [
-     56,
+     65,
      "SMOOCHUM"
     ],
     [
-     58,
+     67,
      "KRABBY"
     ]
    ],
@@ -1856,94 +1856,94 @@
    "area": 3,
    "map": "AxiomPlaza6",
    "const": "AXIOM_PLAZA6",
-   "level": 58.2,
+   "level": 67.5,
    "morn": [
     [
-     58,
+     68,
      "ABRA"
     ],
     [
-     59,
+     69,
      "DROWZEE"
     ],
     [
-     57,
+     67,
      "PIDGEY"
     ],
     [
-     60,
+     70,
      "SPEAROW"
     ],
     [
-     58,
+     68,
      "LARVITAR"
     ],
     [
-     59,
+     69,
      "MAGNEMITE"
     ],
     [
-     61,
+     71,
      "MAGIKARP"
     ]
    ],
    "day": [
     [
-     58,
+     68,
      "ABRA"
     ],
     [
-     59,
+     69,
      "DROWZEE"
     ],
     [
-     57,
+     67,
      "PIDGEY"
     ],
     [
-     60,
+     70,
      "SPEAROW"
     ],
     [
-     58,
+     68,
      "LARVITAR"
     ],
     [
-     59,
+     69,
      "MAGNEMITE"
     ],
     [
-     61,
+     71,
      "MAGIKARP"
     ]
    ],
    "nite": [
     [
-     58,
+     68,
      "ABRA"
     ],
     [
-     59,
+     69,
      "DROWZEE"
     ],
     [
-     57,
+     67,
      "PIDGEY"
     ],
     [
-     60,
+     70,
      "SPEAROW"
     ],
     [
-     58,
+     68,
      "LARVITAR"
     ],
     [
-     59,
+     69,
      "MAGNEMITE"
     ],
     [
-     61,
+     71,
      "MAGIKARP"
     ]
    ],
@@ -1953,94 +1953,94 @@
    "area": 3,
    "map": "AxiomPlaza7",
    "const": "AXIOM_PLAZA7",
-   "level": 61.0,
+   "level": 71.0,
    "morn": [
     [
-     61,
+     71,
      "ONIX"
     ],
     [
-     62,
+     72,
      "RHYHORN"
     ],
     [
-     60,
+     70,
      "MAGNEMITE"
     ],
     [
-     63,
+     73,
      "MAREEP"
     ],
     [
-     61,
+     71,
      "PICHU"
     ],
     [
-     62,
+     72,
      "ABRA"
     ],
     [
-     64,
+     74,
      "POLIWAG"
     ]
    ],
    "day": [
     [
-     61,
+     71,
      "ONIX"
     ],
     [
-     62,
+     72,
      "RHYHORN"
     ],
     [
-     60,
+     70,
      "MAGNEMITE"
     ],
     [
-     63,
+     73,
      "MAREEP"
     ],
     [
-     61,
+     71,
      "PICHU"
     ],
     [
-     62,
+     72,
      "ABRA"
     ],
     [
-     64,
+     74,
      "POLIWAG"
     ]
    ],
    "nite": [
     [
-     61,
+     71,
      "ONIX"
     ],
     [
-     62,
+     72,
      "RHYHORN"
     ],
     [
-     60,
+     70,
      "MAGNEMITE"
     ],
     [
-     63,
+     73,
      "MAREEP"
     ],
     [
-     61,
+     71,
      "PICHU"
     ],
     [
-     62,
+     72,
      "ABRA"
     ],
     [
-     64,
+     74,
      "POLIWAG"
     ]
    ],
@@ -2050,94 +2050,94 @@
    "area": 4,
    "map": "LotusPlaza1",
    "const": "LOTUS_PLAZA1",
-   "level": 62.0,
+   "level": 75.0,
    "morn": [
     [
-     62,
+     75,
      "HORSEA"
     ],
     [
-     63,
+     76,
      "KRABBY"
     ],
     [
-     61,
+     74,
      "MAGIKARP"
     ],
     [
-     64,
+     77,
      "POLIWAG"
     ],
     [
-     62,
+     75,
      "PSYDUCK"
     ],
     [
-     63,
+     76,
      "SEEL"
     ],
     [
-     65,
+     78,
      "DRATINI"
     ]
    ],
    "day": [
     [
-     62,
+     75,
      "HORSEA"
     ],
     [
-     63,
+     76,
      "KRABBY"
     ],
     [
-     61,
+     74,
      "MAGIKARP"
     ],
     [
-     64,
+     77,
      "POLIWAG"
     ],
     [
-     62,
+     75,
      "PSYDUCK"
     ],
     [
-     63,
+     76,
      "SEEL"
     ],
     [
-     65,
+     78,
      "DRATINI"
     ]
    ],
    "nite": [
     [
-     62,
+     75,
      "HORSEA"
     ],
     [
-     63,
+     76,
      "KRABBY"
     ],
     [
-     61,
+     74,
      "MAGIKARP"
     ],
     [
-     64,
+     77,
      "POLIWAG"
     ],
     [
-     62,
+     75,
      "PSYDUCK"
     ],
     [
-     63,
+     76,
      "SEEL"
     ],
     [
-     65,
+     78,
      "DRATINI"
     ]
    ],
@@ -2147,94 +2147,94 @@
    "area": 4,
    "map": "LotusPlaza2",
    "const": "LOTUS_PLAZA2",
-   "level": 64.5,
+   "level": 78.5,
    "morn": [
     [
-     64,
+     78,
      "SHELLDER"
     ],
     [
-     65,
+     79,
      "MARILL"
     ],
     [
-     63,
+     77,
      "CHANSEY"
     ],
     [
-     66,
+     80,
      "CLEFFA"
     ],
     [
-     64,
+     78,
      "KRABBY"
     ],
     [
-     65,
+     79,
      "MAGIKARP"
     ],
     [
-     67,
+     81,
      "GASTLY"
     ]
    ],
    "day": [
     [
-     64,
+     78,
      "SHELLDER"
     ],
     [
-     65,
+     79,
      "MARILL"
     ],
     [
-     63,
+     77,
      "CHANSEY"
     ],
     [
-     66,
+     80,
      "CLEFFA"
     ],
     [
-     64,
+     78,
      "KRABBY"
     ],
     [
-     65,
+     79,
      "MAGIKARP"
     ],
     [
-     67,
+     81,
      "GASTLY"
     ]
    ],
    "nite": [
     [
-     64,
+     78,
      "SHELLDER"
     ],
     [
-     65,
+     79,
      "MARILL"
     ],
     [
-     63,
+     77,
      "CHANSEY"
     ],
     [
-     66,
+     80,
      "CLEFFA"
     ],
     [
-     64,
+     78,
      "KRABBY"
     ],
     [
-     65,
+     79,
      "MAGIKARP"
     ],
     [
-     67,
+     81,
      "GASTLY"
     ]
    ],
@@ -2244,94 +2244,94 @@
    "area": 4,
    "map": "LotusPlaza3",
    "const": "LOTUS_PLAZA3",
-   "level": 67.0,
+   "level": 82.0,
    "morn": [
     [
-     67,
+     82,
      "PSYDUCK"
     ],
     [
-     68,
+     83,
      "SEEL"
     ],
     [
-     66,
+     81,
      "POLIWAG"
     ],
     [
-     69,
+     84,
      "SHELLDER"
     ],
     [
-     67,
+     82,
      "MARILL"
     ],
     [
-     68,
+     83,
      "CHANSEY"
     ],
     [
-     70,
+     85,
      "HOUNDOUR"
     ]
    ],
    "day": [
     [
-     67,
+     82,
      "PSYDUCK"
     ],
     [
-     68,
+     83,
      "SEEL"
     ],
     [
-     66,
+     81,
      "POLIWAG"
     ],
     [
-     69,
+     84,
      "SHELLDER"
     ],
     [
-     67,
+     82,
      "MARILL"
     ],
     [
-     68,
+     83,
      "CHANSEY"
     ],
     [
-     70,
+     85,
      "HOUNDOUR"
     ]
    ],
    "nite": [
     [
-     67,
+     82,
      "PSYDUCK"
     ],
     [
-     68,
+     83,
      "SEEL"
     ],
     [
-     66,
+     81,
      "POLIWAG"
     ],
     [
-     69,
+     84,
      "SHELLDER"
     ],
     [
-     67,
+     82,
      "MARILL"
     ],
     [
-     68,
+     83,
      "CHANSEY"
     ],
     [
-     70,
+     85,
      "HOUNDOUR"
     ]
    ],
@@ -2341,94 +2341,94 @@
    "area": 4,
    "map": "LotusPlaza4",
    "const": "LOTUS_PLAZA4",
-   "level": 69.5,
+   "level": 85.5,
    "morn": [
     [
-     70,
+     86,
      "CLEFFA"
     ],
     [
-     71,
+     87,
      "HORSEA"
     ],
     [
-     69,
+     85,
      "PSYDUCK"
     ],
     [
-     72,
+     88,
      "SEEL"
     ],
     [
-     70,
+     86,
      "SHELLDER"
     ],
     [
-     71,
+     87,
      "MARILL"
     ],
     [
-     73,
+     89,
      "CHARMANDER"
     ]
    ],
    "day": [
     [
-     70,
+     86,
      "CLEFFA"
     ],
     [
-     71,
+     87,
      "HORSEA"
     ],
     [
-     69,
+     85,
      "PSYDUCK"
     ],
     [
-     72,
+     88,
      "SEEL"
     ],
     [
-     70,
+     86,
      "SHELLDER"
     ],
     [
-     71,
+     87,
      "MARILL"
     ],
     [
-     73,
+     89,
      "CHARMANDER"
     ]
    ],
    "nite": [
     [
-     70,
+     86,
      "CLEFFA"
     ],
     [
-     71,
+     87,
      "HORSEA"
     ],
     [
-     69,
+     85,
      "PSYDUCK"
     ],
     [
-     72,
+     88,
      "SEEL"
     ],
     [
-     70,
+     86,
      "SHELLDER"
     ],
     [
-     71,
+     87,
      "MARILL"
     ],
     [
-     73,
+     89,
      "CHARMANDER"
     ]
    ],
@@ -2438,94 +2438,94 @@
    "area": 4,
    "map": "LotusPlaza5",
    "const": "LOTUS_PLAZA5",
-   "level": 72.0,
+   "level": 89.0,
    "morn": [
     [
-     72,
+     89,
      "CHANSEY"
     ],
     [
-     73,
+     90,
      "KRABBY"
     ],
     [
-     71,
+     88,
      "MAGIKARP"
     ],
     [
-     74,
+     91,
      "MARILL"
     ],
     [
-     72,
+     89,
      "CLEFFA"
     ],
     [
-     73,
+     90,
      "HORSEA"
     ],
     [
-     75,
+     92,
      "CYNDAQUIL"
     ]
    ],
    "day": [
     [
-     72,
+     89,
      "CHANSEY"
     ],
     [
-     73,
+     90,
      "KRABBY"
     ],
     [
-     71,
+     88,
      "MAGIKARP"
     ],
     [
-     74,
+     91,
      "MARILL"
     ],
     [
-     72,
+     89,
      "CLEFFA"
     ],
     [
-     73,
+     90,
      "HORSEA"
     ],
     [
-     75,
+     92,
      "CYNDAQUIL"
     ]
    ],
    "nite": [
     [
-     72,
+     89,
      "CHANSEY"
     ],
     [
-     73,
+     90,
      "KRABBY"
     ],
     [
-     71,
+     88,
      "MAGIKARP"
     ],
     [
-     74,
+     91,
      "MARILL"
     ],
     [
-     72,
+     89,
      "CLEFFA"
     ],
     [
-     73,
+     90,
      "HORSEA"
     ],
     [
-     75,
+     92,
      "CYNDAQUIL"
     ]
    ],
@@ -2535,94 +2535,94 @@
    "area": 4,
    "map": "LotusPlaza6",
    "const": "LOTUS_PLAZA6",
-   "level": 74.5,
+   "level": 92.5,
    "morn": [
     [
-     74,
+     92,
      "POLIWAG"
     ],
     [
-     75,
+     93,
      "CHANSEY"
     ],
     [
-     73,
+     91,
      "CLEFFA"
     ],
     [
-     76,
+     94,
      "HORSEA"
     ],
     [
-     74,
+     92,
      "KRABBY"
     ],
     [
-     75,
+     93,
      "MAGIKARP"
     ],
     [
-     77,
+     95,
      "GROWLITHE"
     ]
    ],
    "day": [
     [
-     74,
+     92,
      "POLIWAG"
     ],
     [
-     75,
+     93,
      "CHANSEY"
     ],
     [
-     73,
+     91,
      "CLEFFA"
     ],
     [
-     76,
+     94,
      "HORSEA"
     ],
     [
-     74,
+     92,
      "KRABBY"
     ],
     [
-     75,
+     93,
      "MAGIKARP"
     ],
     [
-     77,
+     95,
      "GROWLITHE"
     ]
    ],
    "nite": [
     [
-     74,
+     92,
      "POLIWAG"
     ],
     [
-     75,
+     93,
      "CHANSEY"
     ],
     [
-     73,
+     91,
      "CLEFFA"
     ],
     [
-     76,
+     94,
      "HORSEA"
     ],
     [
-     74,
+     92,
      "KRABBY"
     ],
     [
-     75,
+     93,
      "MAGIKARP"
     ],
     [
-     77,
+     95,
      "GROWLITHE"
     ]
    ],
@@ -2632,94 +2632,94 @@
    "area": 4,
    "map": "LotusPlaza7",
    "const": "LOTUS_PLAZA7",
-   "level": 77.0,
+   "level": 96.0,
    "morn": [
     [
-     77,
+     96,
      "PSYDUCK"
     ],
     [
-     78,
+     97,
      "SEEL"
     ],
     [
-     76,
+     95,
      "SHELLDER"
     ],
     [
-     79,
+     98,
      "KRABBY"
     ],
     [
-     77,
+     96,
      "POLIWAG"
     ],
     [
-     78,
+     97,
      "CLEFFA"
     ],
     [
-     80,
+     99,
      "PONYTA"
     ]
    ],
    "day": [
     [
-     77,
+     96,
      "PSYDUCK"
     ],
     [
-     78,
+     97,
      "SEEL"
     ],
     [
-     76,
+     95,
      "SHELLDER"
     ],
     [
-     79,
+     98,
      "KRABBY"
     ],
     [
-     77,
+     96,
      "POLIWAG"
     ],
     [
-     78,
+     97,
      "CLEFFA"
     ],
     [
-     80,
+     99,
      "PONYTA"
     ]
    ],
    "nite": [
     [
-     77,
+     96,
      "PSYDUCK"
     ],
     [
-     78,
+     97,
      "SEEL"
     ],
     [
-     76,
+     95,
      "SHELLDER"
     ],
     [
-     79,
+     98,
      "KRABBY"
     ],
     [
-     77,
+     96,
      "POLIWAG"
     ],
     [
-     78,
+     97,
      "CLEFFA"
     ],
     [
-     80,
+     99,
      "PONYTA"
     ]
    ],
@@ -2729,94 +2729,94 @@
    "area": 5,
    "map": "DisPlaza1",
    "const": "DIS_PLAZA1",
-   "level": 78.0,
+   "level": 99.0,
    "morn": [
     [
-     78,
+     99,
      "GASTLY"
     ],
     [
-     79,
+     100,
      "HOUNDOUR"
     ],
     [
-     77,
+     98,
      "CHARMANDER"
     ],
     [
-     80,
+     101,
      "CYNDAQUIL"
     ],
     [
-     78,
+     99,
      "GROWLITHE"
     ],
     [
-     79,
+     100,
      "PONYTA"
     ],
     [
-     81,
+     102,
      "VULPIX"
     ]
    ],
    "day": [
     [
-     78,
+     99,
      "GASTLY"
     ],
     [
-     79,
+     100,
      "HOUNDOUR"
     ],
     [
-     77,
+     98,
      "CHARMANDER"
     ],
     [
-     80,
+     101,
      "CYNDAQUIL"
     ],
     [
-     78,
+     99,
      "GROWLITHE"
     ],
     [
-     79,
+     100,
      "PONYTA"
     ],
     [
-     81,
+     102,
      "VULPIX"
     ]
    ],
    "nite": [
     [
-     78,
+     99,
      "GASTLY"
     ],
     [
-     79,
+     100,
      "HOUNDOUR"
     ],
     [
-     77,
+     98,
      "CHARMANDER"
     ],
     [
-     80,
+     101,
      "CYNDAQUIL"
     ],
     [
-     78,
+     99,
      "GROWLITHE"
     ],
     [
-     79,
+     100,
      "PONYTA"
     ],
     [
-     81,
+     102,
      "VULPIX"
     ]
    ],
@@ -2826,94 +2826,94 @@
    "area": 5,
    "map": "DisPlaza2",
    "const": "DIS_PLAZA2",
-   "level": 80.2,
+   "level": 99.0,
    "morn": [
     [
-     80,
+     99,
      "VULPIX"
     ],
     [
-     81,
+     100,
      "DRATINI"
     ],
     [
-     79,
+     98,
      "GROWLITHE"
     ],
     [
-     82,
+     101,
      "PONYTA"
     ],
     [
-     80,
+     99,
      "HOUNDOUR"
     ],
     [
-     81,
+     100,
      "CHARMANDER"
     ],
     [
-     83,
+     102,
      "DRATINI"
     ]
    ],
    "day": [
     [
-     80,
+     99,
      "VULPIX"
     ],
     [
-     81,
+     100,
      "DRATINI"
     ],
     [
-     79,
+     98,
      "GROWLITHE"
     ],
     [
-     82,
+     101,
      "PONYTA"
     ],
     [
-     80,
+     99,
      "HOUNDOUR"
     ],
     [
-     81,
+     100,
      "CHARMANDER"
     ],
     [
-     83,
+     102,
      "DRATINI"
     ]
    ],
    "nite": [
     [
-     80,
+     99,
      "HOUNDOUR"
     ],
     [
-     81,
+     100,
      "VULPIX"
     ],
     [
-     79,
+     98,
      "DRATINI"
     ],
     [
-     82,
+     101,
      "GROWLITHE"
     ],
     [
-     80,
+     99,
      "PONYTA"
     ],
     [
-     81,
+     100,
      "CHARMANDER"
     ],
     [
-     83,
+     102,
      "DRATINI"
     ]
    ],
@@ -2923,94 +2923,94 @@
    "area": 5,
    "map": "DisPlaza3",
    "const": "DIS_PLAZA3",
-   "level": 82.3,
+   "level": 99.0,
    "morn": [
     [
-     82,
+     99,
      "CYNDAQUIL"
     ],
     [
-     83,
+     100,
      "VULPIX"
     ],
     [
-     81,
+     98,
      "DRATINI"
     ],
     [
-     84,
+     101,
      "GASTLY"
     ],
     [
-     82,
+     99,
      "CHARMANDER"
     ],
     [
-     83,
+     100,
      "GROWLITHE"
     ],
     [
-     85,
+     102,
      "GASTLY"
     ]
    ],
    "day": [
     [
-     82,
+     99,
      "CYNDAQUIL"
     ],
     [
-     83,
+     100,
      "VULPIX"
     ],
     [
-     81,
+     98,
      "DRATINI"
     ],
     [
-     84,
+     101,
      "GASTLY"
     ],
     [
-     82,
+     99,
      "CHARMANDER"
     ],
     [
-     83,
+     100,
      "GROWLITHE"
     ],
     [
-     85,
+     102,
      "GASTLY"
     ]
    ],
    "nite": [
     [
-     82,
+     99,
      "GASTLY"
     ],
     [
-     83,
+     100,
      "CYNDAQUIL"
     ],
     [
-     81,
+     98,
      "VULPIX"
     ],
     [
-     84,
+     101,
      "DRATINI"
     ],
     [
-     82,
+     99,
      "CHARMANDER"
     ],
     [
-     83,
+     100,
      "GROWLITHE"
     ],
     [
-     85,
+     102,
      "GASTLY"
     ]
    ],
@@ -3020,94 +3020,94 @@
    "area": 5,
    "map": "DisPlaza4",
    "const": "DIS_PLAZA4",
-   "level": 84.5,
+   "level": 99.0,
    "morn": [
     [
-     84,
+     99,
      "PONYTA"
     ],
     [
-     85,
+     100,
      "HOUNDOUR"
     ],
     [
-     83,
+     98,
      "GROWLITHE"
     ],
     [
-     86,
+     101,
      "CHARMANDER"
     ],
     [
-     84,
+     99,
      "CYNDAQUIL"
     ],
     [
-     85,
+     100,
      "VULPIX"
     ],
     [
-     87,
+     102,
      "HOUNDOUR"
     ]
    ],
    "day": [
     [
-     84,
+     99,
      "PONYTA"
     ],
     [
-     85,
+     100,
      "HOUNDOUR"
     ],
     [
-     83,
+     98,
      "GROWLITHE"
     ],
     [
-     86,
+     101,
      "CHARMANDER"
     ],
     [
-     84,
+     99,
      "CYNDAQUIL"
     ],
     [
-     85,
+     100,
      "VULPIX"
     ],
     [
-     87,
+     102,
      "HOUNDOUR"
     ]
    ],
    "nite": [
     [
-     84,
+     99,
      "HOUNDOUR"
     ],
     [
-     85,
+     100,
      "PONYTA"
     ],
     [
-     83,
+     98,
      "GROWLITHE"
     ],
     [
-     86,
+     101,
      "CHARMANDER"
     ],
     [
-     84,
+     99,
      "CYNDAQUIL"
     ],
     [
-     85,
+     100,
      "VULPIX"
     ],
     [
-     87,
+     102,
      "HOUNDOUR"
     ]
    ],
@@ -3117,94 +3117,94 @@
    "area": 5,
    "map": "DisPlaza5",
    "const": "DIS_PLAZA5",
-   "level": 86.7,
+   "level": 99.0,
    "morn": [
     [
-     87,
+     99,
      "DRATINI"
     ],
     [
-     88,
+     100,
      "GASTLY"
     ],
     [
-     86,
+     98,
      "PONYTA"
     ],
     [
-     89,
+     101,
      "VULPIX"
     ],
     [
-     87,
+     99,
      "HOUNDOUR"
     ],
     [
-     88,
+     100,
      "CYNDAQUIL"
     ],
     [
-     90,
+     102,
      "CHARMANDER"
     ]
    ],
    "day": [
     [
-     87,
+     99,
      "DRATINI"
     ],
     [
-     88,
+     100,
      "GASTLY"
     ],
     [
-     86,
+     98,
      "PONYTA"
     ],
     [
-     89,
+     101,
      "VULPIX"
     ],
     [
-     87,
+     99,
      "HOUNDOUR"
     ],
     [
-     88,
+     100,
      "CYNDAQUIL"
     ],
     [
-     90,
+     102,
      "CHARMANDER"
     ]
    ],
    "nite": [
     [
-     87,
+     99,
      "GASTLY"
     ],
     [
-     88,
+     100,
      "HOUNDOUR"
     ],
     [
-     86,
+     98,
      "DRATINI"
     ],
     [
-     89,
+     101,
      "PONYTA"
     ],
     [
-     87,
+     99,
      "VULPIX"
     ],
     [
-     88,
+     100,
      "CYNDAQUIL"
     ],
     [
-     90,
+     102,
      "CHARMANDER"
     ]
    ],
@@ -3214,94 +3214,94 @@
    "area": 5,
    "map": "DisPlaza6",
    "const": "DIS_PLAZA6",
-   "level": 88.8,
+   "level": 99.0,
    "morn": [
     [
-     89,
+     99,
      "HOUNDOUR"
     ],
     [
-     90,
+     100,
      "CHARMANDER"
     ],
     [
-     88,
+     98,
      "CYNDAQUIL"
     ],
     [
-     91,
+     101,
      "GROWLITHE"
     ],
     [
-     89,
+     99,
      "DRATINI"
     ],
     [
-     90,
+     100,
      "GASTLY"
     ],
     [
-     92,
+     102,
      "CYNDAQUIL"
     ]
    ],
    "day": [
     [
-     89,
+     99,
      "HOUNDOUR"
     ],
     [
-     90,
+     100,
      "CHARMANDER"
     ],
     [
-     88,
+     98,
      "CYNDAQUIL"
     ],
     [
-     91,
+     101,
      "GROWLITHE"
     ],
     [
-     89,
+     99,
      "DRATINI"
     ],
     [
-     90,
+     100,
      "GASTLY"
     ],
     [
-     92,
+     102,
      "CYNDAQUIL"
     ]
    ],
    "nite": [
     [
-     89,
+     99,
      "HOUNDOUR"
     ],
     [
-     90,
+     100,
      "GASTLY"
     ],
     [
-     88,
+     98,
      "CHARMANDER"
     ],
     [
-     91,
+     101,
      "CYNDAQUIL"
     ],
     [
-     89,
+     99,
      "GROWLITHE"
     ],
     [
-     90,
+     100,
      "DRATINI"
     ],
     [
-     92,
+     102,
      "CYNDAQUIL"
     ]
    ],
@@ -3311,94 +3311,94 @@
    "area": 5,
    "map": "DisPlaza7",
    "const": "DIS_PLAZA7",
-   "level": 91.0,
+   "level": 99.0,
    "morn": [
     [
-     91,
+     99,
      "DRATINI"
     ],
     [
-     92,
+     100,
      "GASTLY"
     ],
     [
-     90,
+     98,
      "PONYTA"
     ],
     [
-     93,
+     101,
      "VULPIX"
     ],
     [
-     91,
+     99,
      "HOUNDOUR"
     ],
     [
-     92,
+     100,
      "CHARMANDER"
     ],
     [
-     94,
+     102,
      "GROWLITHE"
     ]
    ],
    "day": [
     [
-     91,
+     99,
      "DRATINI"
     ],
     [
-     92,
+     100,
      "GASTLY"
     ],
     [
-     90,
+     98,
      "PONYTA"
     ],
     [
-     93,
+     101,
      "VULPIX"
     ],
     [
-     91,
+     99,
      "HOUNDOUR"
     ],
     [
-     92,
+     100,
      "CHARMANDER"
     ],
     [
-     94,
+     102,
      "GROWLITHE"
     ]
    ],
    "nite": [
     [
-     91,
+     99,
      "GASTLY"
     ],
     [
-     92,
+     100,
      "HOUNDOUR"
     ],
     [
-     90,
+     98,
      "DRATINI"
     ],
     [
-     93,
+     101,
      "PONYTA"
     ],
     [
-     91,
+     99,
      "VULPIX"
     ],
     [
-     92,
+     100,
      "CHARMANDER"
     ],
     [
-     94,
+     102,
      "GROWLITHE"
     ]
    ],

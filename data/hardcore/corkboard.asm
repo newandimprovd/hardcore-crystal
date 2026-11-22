@@ -246,13 +246,15 @@ CorkNote_STEINER4:
 	done
 
 CorkNote_CROWLEY:
-	text "CROWLEY: Do what"
-	line "thou wilt. The age"
-	para "of the dying god"
-	line "is over. He prayed"
-	para "to the Beast and"
-	line "Choronzon sent him"
-	para "smuggling."
+	text "CROWLEY: A poet"
+	line "who prayed to the"
+	para "Beast to be sent"
+	line "where his sex"
+	para "magick is"
+	line "celebrated. The"
+	para "Beast said yes and"
+	line "kept the clause"
+	para "for later."
 	done
 
 CorkNote_AMPH:

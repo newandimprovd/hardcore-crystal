@@ -158,7 +158,7 @@ AxiomPlaza6SuhrawardiDuelScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_SUHRAWARDI_PAID
-	iftrue .After
+	iftrue .Later
 	writetext AxiomPlaza6SuhrawardiDuelScriptGiveText
 	waitbutton
 	verbosegiveitem PP_UP
@@ -182,6 +182,46 @@ AxiomPlaza6SuhrawardiDuelScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_SUHRAWARDI_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_SUHRAWARDI_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_SUHRAWARDI_TALK2
+	iffalse .More2
+	checkevent EVENT_NAMED_SUHRAWARDI_TALK3
+	iffalse .More3
+	sjump .After
+
+.More0:
+	writetext AxiomPlaza6SuhrawardiDuelScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_SUHRAWARDI_TALK0
+	closetext
+	end
+
+.More1:
+	writetext AxiomPlaza6SuhrawardiDuelScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_SUHRAWARDI_TALK1
+	closetext
+	end
+
+.More2:
+	writetext AxiomPlaza6SuhrawardiDuelScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_SUHRAWARDI_TALK2
+	closetext
+	end
+
+.More3:
+	writetext AxiomPlaza6SuhrawardiDuelScriptMoreText3
+	waitbutton
+	setevent EVENT_NAMED_SUHRAWARDI_TALK3
+	closetext
+	end
+
+
 AxiomPlaza6SuhrawardiDuelScriptSeenText:
 	text "Shihab al Din"
 	line "Yahya al"
@@ -196,56 +236,10 @@ AxiomPlaza6SuhrawardiDuelScriptSeenText:
 	para "speak of closed"
 	line "rooms with some"
 	para "authority."
-	para "Being is a"
-	line "thought. Light is"
-	para "real. Darkness is"
-	line "only light's"
-	para "absence, and every"
-	line "thing is a degree"
-	para "of light, from the"
-	line "Light of Lights to"
-	para "the faintest"
-	line "candle in a body"
-	para "like yours."
-	para "The old Persians"
-	line "were right. There"
-	para "are two"
-	line "principles. But"
-	para "Ahriman is not an"
-	line "equal. He is a"
-	para "shadow cast by the"
-	line "lamp. A shadow"
-	para "with a budget."
-	para "Between the world"
-	line "of lights and the"
-	para "world of bodies"
-	line "lies a third, the"
-	para "world of images,"
-	line "the alam al"
-	para "mithal. Forms hang"
-	line "there without"
-	para "flesh. The dead go"
-	line "there. So do"
-	para "dreams. And, I"
-	line "see, screens."
-	para "That is why your"
-	line "little creatures"
-	para "have faces. They"
-	line "live in the"
-	para "imaginal world and"
-	line "have been pulled"
-	para "out into matter."
-	para "The soul is in the"
-	line "Occident, the far"
-	para "West of existence,"
-	line "in exile among"
-	para "bodies. It longs"
-	line "for its East. The"
-	para "cure is knowledge"
-	line "by presence."
-	para "Or a good fight. I"
-	line "am told it is"
-	para "faster."
+	para "I could explain"
+	line "myself at length."
+	para "I am told a fight"
+	line "is faster."
 	para "Fight SUHRAWARDI?"
 	done
 
@@ -275,6 +269,65 @@ AxiomPlaza6SuhrawardiDuelScriptAfterText:
 	line "have."
 	done
 
+AxiomPlaza6SuhrawardiDuelScriptMoreText0:
+	text "Being is a"
+	line "thought. Light is"
+	para "real. Darkness is"
+	line "only light's"
+	para "absence, and every"
+	line "thing is a degree"
+	para "of light, from the"
+	line "Light of Lights to"
+	para "the faintest"
+	line "candle in a body"
+	para "like yours."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptMoreText1:
+	text "The old Persians"
+	line "were right. There"
+	para "are two"
+	line "principles. But"
+	para "Ahriman is not an"
+	line "equal. He is a"
+	para "shadow cast by the"
+	line "lamp. A shadow"
+	para "with a budget."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptMoreText2:
+	text "Between the world"
+	line "of lights and the"
+	para "world of bodies"
+	line "lies a third, the"
+	para "world of images,"
+	line "the alam al"
+	para "mithal. Forms hang"
+	line "there without"
+	para "flesh. The dead go"
+	line "there. So do"
+	para "dreams. And, I"
+	line "see, screens."
+	para "That is why your"
+	line "little creatures"
+	para "have faces. They"
+	line "live in the"
+	para "imaginal world and"
+	line "have been pulled"
+	para "out into matter."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptMoreText3:
+	text "The soul is in the"
+	line "Occident, the far"
+	para "West of existence,"
+	line "in exile among"
+	para "bodies. It longs"
+	line "for its East. The"
+	para "cure is knowledge"
+	line "by presence."
+	done
+
 AxiomPlaza6SuhrawardiDuelScriptNoText:
 	text "Another day. I"
 	line "will be here. The"
@@ -300,7 +353,7 @@ AxiomPlaza6Duel:
 	iffalse .No
 	closetext
 	winlosstext AxiomPlaza6DuelBeatenText, 0
-	loadtrainer U_WARDBOT, 137
+	loadtrainer U_WARDBOT, 136
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_PLAZA6_DUEL

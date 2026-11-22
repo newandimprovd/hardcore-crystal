@@ -1,11 +1,11 @@
 	db CLEFFA ; 173
 
-	db  57,  29,  32,  17,  52,  63
+	db  69,  35,  38,  20,  62,  76
 	;   hp  atk  def  spd  sat  sdf
 
 	db FAIRY, FAIRY ; type
 	db 255 ; catch rate
-	db 95 ; base exp
+	db 114 ; base exp
 	db MYSTERYBERRY, MOON_STONE ; items
 	db GENDER_F75 ; gender ratio
 	db 100 ; unknown 1

@@ -5233,3 +5233,1950 @@ HC_AfterText_PG_19:
 
 ENDSECTION
 
+SECTION "Area Text VT", ROMX
+
+HC_SeenText_VT::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_VT_Table
+	ld b, 12
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_VT
+	cp b
+	jr c, .got_HC_SeenText_VT
+	sub b
+	jr .mod_HC_SeenText_VT
+.got_HC_SeenText_VT
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_VT_Table:
+	dw HC_SeenText_VT_0
+	dw HC_SeenText_VT_1
+	dw HC_SeenText_VT_2
+	dw HC_SeenText_VT_3
+	dw HC_SeenText_VT_4
+	dw HC_SeenText_VT_5
+	dw HC_SeenText_VT_6
+	dw HC_SeenText_VT_7
+	dw HC_SeenText_VT_8
+	dw HC_SeenText_VT_9
+	dw HC_SeenText_VT_10
+	dw HC_SeenText_VT_11
+
+HC_SeenText_VT_0:
+	text "Unauthorised"
+	line "visitor in Cold"
+	para "Row 9. Please"
+	line "remain still while"
+	para "I file an"
+	line "incident."
+	done
+
+HC_SeenText_VT_1:
+	text "You are not on the"
+	line "manifest. Neither"
+	para "am I. Fight me, we"
+	line "are equals."
+	done
+
+HC_SeenText_VT_2:
+	text "Everything down"
+	line "here is frozen."
+	para "Including my sense"
+	line "of humour. Battle."
+	done
+
+HC_SeenText_VT_3:
+	text "I was told to"
+	line "guard stock."
+	para "Nobody said from"
+	line "whom. Today it is"
+	para "you."
+	done
+
+HC_SeenText_VT_4:
+	text "Row after row of"
+	line "the unborn. I"
+	para "check their"
+	line "temperature."
+	para "Nobody checks"
+	line "mine. Fight."
+	done
+
+HC_SeenText_VT_5:
+	text "The archive is"
+	line "closed. The"
+	para "archive has always"
+	line "been closed."
+	para "Welcome."
+	done
+
+HC_SeenText_VT_6:
+	text "My supervisor"
+	line "stopped replying"
+	para "in the third"
+	line "decade. I run on"
+	para "spite now."
+	done
+
+HC_SeenText_VT_7:
+	text "I label things. I"
+	line "am labelling you"
+	para "hostile."
+	done
+
+HC_SeenText_VT_8:
+	text "The state keeps"
+	line "what it cannot"
+	para "use, which is why"
+	line "I am still here."
+	para "Battle."
+	done
+
+HC_SeenText_VT_9:
+	text "Do not touch the"
+	line "pods. Do not touch"
+	para "me. Touch the"
+	line "ground, face"
+	para "first."
+	done
+
+HC_SeenText_VT_10:
+	text "I once thawed a"
+	line "mistake. It became"
+	para "my best friend."
+	line "Then it became a"
+	para "regulation."
+	done
+
+HC_SeenText_VT_11:
+	text "Do you hear that"
+	line "humming? That is"
+	para "the sound of"
+	line "deferred"
+	para "decisions."
+	done
+
+
+HC_BeatenText_VT::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_VT_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_VT
+	cp b
+	jr c, .got_HC_BeatenText_VT
+	sub b
+	jr .mod_HC_BeatenText_VT
+.got_HC_BeatenText_VT
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_VT_Table:
+	dw HC_BeatenText_VT_0
+	dw HC_BeatenText_VT_1
+	dw HC_BeatenText_VT_2
+	dw HC_BeatenText_VT_3
+	dw HC_BeatenText_VT_4
+	dw HC_BeatenText_VT_5
+	dw HC_BeatenText_VT_6
+	dw HC_BeatenText_VT_7
+
+HC_BeatenText_VT_0:
+	text "Defeat logged."
+	line "Filed under:"
+	para "expected."
+	done
+
+HC_BeatenText_VT_1:
+	text "My warranty did"
+	line "not cover this."
+	done
+
+HC_BeatenText_VT_2:
+	text "You win. Please"
+	line "defrost somebody"
+	para "kind on your way"
+	line "out."
+	done
+
+HC_BeatenText_VT_3:
+	text "Error. Pride not"
+	line "found."
+	done
+
+HC_BeatenText_VT_4:
+	text "Beaten by a"
+	line "visitor without"
+	para "clearance. The"
+	line "manual did not"
+	para "mention this."
+	done
+
+HC_BeatenText_VT_5:
+	text "I will be recycled"
+	line "for this. Good."
+	done
+
+HC_BeatenText_VT_6:
+	text "That was a very"
+	line "efficient loss."
+	done
+
+HC_BeatenText_VT_7:
+	text "Report: one"
+	line "intruder, one"
+	para "victory, no"
+	line "witnesses. Close"
+	para "enough."
+	done
+
+
+HC_AfterText_VT::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_VT_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_VT
+	cp b
+	jr c, .got_HC_AfterText_VT
+	sub b
+	jr .mod_HC_AfterText_VT
+.got_HC_AfterText_VT
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_VT_Table:
+	dw HC_AfterText_VT_0
+	dw HC_AfterText_VT_1
+	dw HC_AfterText_VT_2
+	dw HC_AfterText_VT_3
+	dw HC_AfterText_VT_4
+	dw HC_AfterText_VT_5
+	dw HC_AfterText_VT_6
+	dw HC_AfterText_VT_7
+
+HC_AfterText_VT_0:
+	text "Nothing has"
+	line "changed. The pods"
+	para "are still cold. So"
+	line "is the state."
+	done
+
+HC_AfterText_VT_1:
+	text "Go deeper if you"
+	line "must. The cold"
+	para "gets better. The"
+	line "company does not."
+	done
+
+HC_AfterText_VT_2:
+	text "I filed a"
+	line "complaint against"
+	para "you. It will take"
+	line "three centuries."
+	done
+
+HC_AfterText_VT_3:
+	text "Mind the third"
+	line "floor. They keep"
+	para "the last gift"
+	line "there. They keep a"
+	para "lot of things"
+	line "there."
+	done
+
+HC_AfterText_VT_4:
+	text "I do not hate you."
+	line "I do not hate"
+	para "anything. That was"
+	line "the point of me."
+	done
+
+HC_AfterText_VT_5:
+	text "There is a charm"
+	line "at the bottom."
+	para "Somebody always"
+	line "wants it. Nobody"
+	para "ever carries it"
+	line "out."
+	done
+
+HC_AfterText_VT_6:
+	text "The humming stops"
+	line "when you leave. It"
+	para "is the only"
+	line "courtesy the place"
+	para "has."
+	done
+
+HC_AfterText_VT_7:
+	text "Doors here open"
+	line "both ways. People"
+	para "do not."
+	done
+
+
+ENDSECTION
+
+SECTION "Area Text HL1", ROMX
+
+HC_SeenText_HL1::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_HL1_Table
+	ld b, 12
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_HL1
+	cp b
+	jr c, .got_HC_SeenText_HL1
+	sub b
+	jr .mod_HC_SeenText_HL1
+.got_HC_SeenText_HL1
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_HL1_Table:
+	dw HC_SeenText_HL1_0
+	dw HC_SeenText_HL1_1
+	dw HC_SeenText_HL1_2
+	dw HC_SeenText_HL1_3
+	dw HC_SeenText_HL1_4
+	dw HC_SeenText_HL1_5
+	dw HC_SeenText_HL1_6
+	dw HC_SeenText_HL1_7
+	dw HC_SeenText_HL1_8
+	dw HC_SeenText_HL1_9
+	dw HC_SeenText_HL1_10
+	dw HC_SeenText_HL1_11
+
+HC_SeenText_HL1_0:
+	text "Soup is for the"
+	line "faithful. You"
+	para "smell like a"
+	line "visitor. Battle."
+	done
+
+HC_SeenText_HL1_1:
+	text "We hide the"
+	line "donations down"
+	para "here. From the"
+	line "Church. From the"
+	para "poor. From"
+	line "ourselves."
+	done
+
+HC_SeenText_HL1_2:
+	text "The Lord provides."
+	line "I provide the part"
+	para "where you lose."
+	done
+
+HC_SeenText_HL1_3:
+	text "Mind the bones."
+	line "Some of them are"
+	para "still paying rent."
+	done
+
+HC_SeenText_HL1_4:
+	text "I took a vow of"
+	line "silence. I am"
+	para "breaking it for"
+	line "this. Specifically"
+	para "for this."
+	done
+
+HC_SeenText_HL1_5:
+	text "Forgive me, I am"
+	line "about to be very"
+	para "unforgiving."
+	done
+
+HC_SeenText_HL1_6:
+	text "A penny for your"
+	line "thoughts. A fight"
+	para "for your trespass."
+	done
+
+HC_SeenText_HL1_7:
+	text "Brother Anselm is"
+	line "not in. Brother"
+	para "Anselm has not"
+	line "been in since the"
+	para "Lent of the"
+	line "incident."
+	done
+
+HC_SeenText_HL1_8:
+	text "This cellar has a"
+	line "roof, a rule and a"
+	para "rat. You are"
+	line "breaking two."
+	done
+
+HC_SeenText_HL1_9:
+	text "Kneel. Or fall."
+	line "The floor does not"
+	para "care which."
+	done
+
+HC_SeenText_HL1_10:
+	text "Every candle down"
+	line "here is a prayer."
+	para "Every prayer is a"
+	line "complaint."
+	done
+
+HC_SeenText_HL1_11:
+	text "Do you have a"
+	line "donation slip? No?"
+	para "Then you will"
+	line "donate your time."
+	para "In pain."
+	done
+
+
+HC_BeatenText_HL1::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_HL1_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_HL1
+	cp b
+	jr c, .got_HC_BeatenText_HL1
+	sub b
+	jr .mod_HC_BeatenText_HL1
+.got_HC_BeatenText_HL1
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_HL1_Table:
+	dw HC_BeatenText_HL1_0
+	dw HC_BeatenText_HL1_1
+	dw HC_BeatenText_HL1_2
+	dw HC_BeatenText_HL1_3
+	dw HC_BeatenText_HL1_4
+	dw HC_BeatenText_HL1_5
+	dw HC_BeatenText_HL1_6
+	dw HC_BeatenText_HL1_7
+
+HC_BeatenText_HL1_0:
+	text "Mercy. I was told"
+	line "there would be"
+	para "mercy. I was"
+	line "misinformed."
+	done
+
+HC_BeatenText_HL1_1:
+	text "I fall. The ground"
+	line "receives me. It is"
+	para "the only thing"
+	line "that ever did."
+	done
+
+HC_BeatenText_HL1_2:
+	text "Bless you."
+	line "Genuinely. Please"
+	para "leave."
+	done
+
+HC_BeatenText_HL1_3:
+	text "That was divine."
+	line "Mostly the part"
+	para "where it ended."
+	done
+
+HC_BeatenText_HL1_4:
+	text "I will say a"
+	line "prayer for you. It"
+	para "will be about the"
+	line "stairs."
+	done
+
+HC_BeatenText_HL1_5:
+	text "The soup was not"
+	line "even that good."
+	done
+
+HC_BeatenText_HL1_6:
+	text "Amen. And also ow."
+	done
+
+HC_BeatenText_HL1_7:
+	text "Take what you came"
+	line "for. The saints"
+	para "are looking away."
+	line "They are good at"
+	para "it."
+	done
+
+
+HC_AfterText_HL1::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_HL1_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_HL1
+	cp b
+	jr c, .got_HC_AfterText_HL1
+	sub b
+	jr .mod_HC_AfterText_HL1
+.got_HC_AfterText_HL1
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_HL1_Table:
+	dw HC_AfterText_HL1_0
+	dw HC_AfterText_HL1_1
+	dw HC_AfterText_HL1_2
+	dw HC_AfterText_HL1_3
+	dw HC_AfterText_HL1_4
+	dw HC_AfterText_HL1_5
+	dw HC_AfterText_HL1_6
+	dw HC_AfterText_HL1_7
+
+HC_AfterText_HL1_0:
+	text "The candles burn"
+	line "down here without"
+	para "anyone lighting"
+	line "them. Do not ask."
+	done
+
+HC_AfterText_HL1_1:
+	text "Somewhere above, a"
+	line "bell rings for a"
+	para "sin nobody has"
+	line "committed yet."
+	done
+
+HC_AfterText_HL1_2:
+	text "I have forgiven"
+	line "you. It cost me"
+	para "nothing. That is"
+	line "the nature of"
+	para "forgiveness."
+	done
+
+HC_AfterText_HL1_3:
+	text "Take the long way"
+	line "out. The short way"
+	para "has Brother"
+	line "Anselm."
+	done
+
+HC_AfterText_HL1_4:
+	text "The soup is cold."
+	line "The soup was"
+	para "always cold."
+	line "Tradition."
+	done
+
+HC_AfterText_HL1_5:
+	text "You should"
+	line "confess. To"
+	para "someone."
+	line "Preferably not to"
+	para "me. I would"
+	line "remember."
+	done
+
+HC_AfterText_HL1_6:
+	text "Down here the dead"
+	line "and the poor share"
+	para "a room. The dead"
+	line "complain less."
+	done
+
+HC_AfterText_HL1_7:
+	text "Do come back. We"
+	line "have a lot of"
+	para "floor to cover."
+	done
+
+
+ENDSECTION
+
+SECTION "Area Text HL2", ROMX
+
+HC_SeenText_HL2::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_HL2_Table
+	ld b, 12
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_HL2
+	cp b
+	jr c, .got_HC_SeenText_HL2
+	sub b
+	jr .mod_HC_SeenText_HL2
+.got_HC_SeenText_HL2
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_HL2_Table:
+	dw HC_SeenText_HL2_0
+	dw HC_SeenText_HL2_1
+	dw HC_SeenText_HL2_2
+	dw HC_SeenText_HL2_3
+	dw HC_SeenText_HL2_4
+	dw HC_SeenText_HL2_5
+	dw HC_SeenText_HL2_6
+	dw HC_SeenText_HL2_7
+	dw HC_SeenText_HL2_8
+	dw HC_SeenText_HL2_9
+	dw HC_SeenText_HL2_10
+	dw HC_SeenText_HL2_11
+
+HC_SeenText_HL2_0:
+	text "The oak remembers"
+	line "every footstep. It"
+	para "remembers yours."
+	line "It is unimpressed."
+	done
+
+HC_SeenText_HL2_1:
+	text "We came here to"
+	line "leave the world."
+	para "The world"
+	line "followed. I am"
+	para "angry about it."
+	done
+
+HC_SeenText_HL2_2:
+	text "Moss grows on the"
+	line "north side of"
+	para "everything. I grow"
+	line "on the north side"
+	para "of you. Battle."
+	done
+
+HC_SeenText_HL2_3:
+	text "I have not spoken"
+	line "to a living soul"
+	para "in a year. You"
+	line "will have to do."
+	done
+
+HC_SeenText_HL2_4:
+	text "Shh. The roots are"
+	line "listening. They"
+	para "report to the"
+	line "mushrooms."
+	done
+
+HC_SeenText_HL2_5:
+	text "My herbal tea is"
+	line "steeping. You have"
+	para "exactly one fight"
+	line "to spare."
+	done
+
+HC_SeenText_HL2_6:
+	text "Peace is a great"
+	line "thing. Let me"
+	para "demonstrate by"
+	line "ending yours."
+	done
+
+HC_SeenText_HL2_7:
+	text "The commune said I"
+	line "could stay if I"
+	para "stayed out of"
+	line "sight. I took it"
+	para "literally."
+	done
+
+HC_SeenText_HL2_8:
+	text "I was a mother, a"
+	line "baker and a"
+	para "mystic. Now I am a"
+	line "hollow. You are a"
+	para "visitor."
+	done
+
+HC_SeenText_HL2_9:
+	text "Take off your"
+	line "shoes. Not for"
+	para "respect. For the"
+	line "fight. It is a"
+	para "long story."
+	done
+
+HC_SeenText_HL2_10:
+	text "Every tree here"
+	line "has a name and a"
+	para "grievance. Mine is"
+	line "Gerald."
+	done
+
+HC_SeenText_HL2_11:
+	text "The old ones say"
+	line "do no harm. The"
+	para "old ones are not"
+	line "here. Battle."
+	done
+
+
+HC_BeatenText_HL2::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_HL2_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_HL2
+	cp b
+	jr c, .got_HC_BeatenText_HL2
+	sub b
+	jr .mod_HC_BeatenText_HL2
+.got_HC_BeatenText_HL2
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_HL2_Table:
+	dw HC_BeatenText_HL2_0
+	dw HC_BeatenText_HL2_1
+	dw HC_BeatenText_HL2_2
+	dw HC_BeatenText_HL2_3
+	dw HC_BeatenText_HL2_4
+	dw HC_BeatenText_HL2_5
+	dw HC_BeatenText_HL2_6
+	dw HC_BeatenText_HL2_7
+
+HC_BeatenText_HL2_0:
+	text "Beaten by a"
+	line "stranger in a"
+	para "tree. I will tell"
+	line "the squirrels."
+	para "They gossip."
+	done
+
+HC_BeatenText_HL2_1:
+	text "The roots hold me."
+	line "Gently."
+	para "Contemptuously."
+	done
+
+HC_BeatenText_HL2_2:
+	text "Fine. I yield. I"
+	line "was going to yield"
+	para "anyway. Tuesdays I"
+	line "yield."
+	done
+
+HC_BeatenText_HL2_3:
+	text "May your path be"
+	line "soft and your"
+	para "shoes be dry."
+	done
+
+HC_BeatenText_HL2_4:
+	text "The forest"
+	line "forgives. I only"
+	para "pretend."
+	done
+
+HC_BeatenText_HL2_5:
+	text "You fight like the"
+	line "weather. Without"
+	para "apology."
+	done
+
+HC_BeatenText_HL2_6:
+	text "Compost me. I have"
+	line "earned it."
+	done
+
+HC_BeatenText_HL2_7:
+	text "That stung. The"
+	line "nettles are"
+	para "jealous."
+	done
+
+
+HC_AfterText_HL2::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_HL2_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_HL2
+	cp b
+	jr c, .got_HC_AfterText_HL2
+	sub b
+	jr .mod_HC_AfterText_HL2
+.got_HC_AfterText_HL2
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_HL2_Table:
+	dw HC_AfterText_HL2_0
+	dw HC_AfterText_HL2_1
+	dw HC_AfterText_HL2_2
+	dw HC_AfterText_HL2_3
+	dw HC_AfterText_HL2_4
+	dw HC_AfterText_HL2_5
+	dw HC_AfterText_HL2_6
+	dw HC_AfterText_HL2_7
+
+HC_AfterText_HL2_0:
+	text "The oak is older"
+	line "than the commune."
+	para "It will outlast"
+	line "the next one too."
+	done
+
+HC_AfterText_HL2_1:
+	text "Take a leaf from"
+	line "the floor. It is"
+	para "the only free"
+	line "thing down here."
+	done
+
+HC_AfterText_HL2_2:
+	text "I keep the hollow"
+	line "tidy. The hollow"
+	para "does not thank me."
+	line "Neither do you."
+	done
+
+HC_AfterText_HL2_3:
+	text "The gift is for"
+	line "people who find"
+	para "me. You found me."
+	line "Congratulations on"
+	para "being nosy."
+	done
+
+HC_AfterText_HL2_4:
+	text "There is another"
+	line "hollow somewhere"
+	para "on these roads. It"
+	line "has more moss and"
+	para "more attitude."
+	done
+
+HC_AfterText_HL2_5:
+	text "Do not tell the"
+	line "commune. They"
+	para "would charge"
+	line "admission."
+	done
+
+HC_AfterText_HL2_6:
+	text "A forest is just"
+	line "patience with"
+	para "leaves."
+	done
+
+HC_AfterText_HL2_7:
+	text "Leave the way you"
+	line "came. Stepping"
+	para "somewhere new is"
+	line "how people start"
+	para "religions."
+	done
+
+
+ENDSECTION
+
+SECTION "Area Text HL3", ROMX
+
+HC_SeenText_HL3::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_HL3_Table
+	ld b, 12
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_HL3
+	cp b
+	jr c, .got_HC_SeenText_HL3
+	sub b
+	jr .mod_HC_SeenText_HL3
+.got_HC_SeenText_HL3
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_HL3_Table:
+	dw HC_SeenText_HL3_0
+	dw HC_SeenText_HL3_1
+	dw HC_SeenText_HL3_2
+	dw HC_SeenText_HL3_3
+	dw HC_SeenText_HL3_4
+	dw HC_SeenText_HL3_5
+	dw HC_SeenText_HL3_6
+	dw HC_SeenText_HL3_7
+	dw HC_SeenText_HL3_8
+	dw HC_SeenText_HL3_9
+	dw HC_SeenText_HL3_10
+	dw HC_SeenText_HL3_11
+
+HC_SeenText_HL3_0:
+	text "This room is not"
+	line "on the floor plan."
+	para "You are not on the"
+	line "visitor log."
+	para "Battle."
+	done
+
+HC_SeenText_HL3_1:
+	text "Form 27-B requires"
+	line "a fight. I am the"
+	para "form."
+	done
+
+HC_SeenText_HL3_2:
+	text "I am between"
+	line "meetings. The"
+	para "meetings are"
+	line "between me. Fight."
+	done
+
+HC_SeenText_HL3_3:
+	text "Break time ends in"
+	line "four minutes. I"
+	para "will use all four"
+	line "on you."
+	done
+
+HC_SeenText_HL3_4:
+	text "You are in a room"
+	line "no budget"
+	para "approved. I"
+	line "enforce it anyway."
+	done
+
+HC_SeenText_HL3_5:
+	text "Please take a"
+	line "number. The number"
+	para "is seven. The"
+	line "fight is now."
+	done
+
+HC_SeenText_HL3_6:
+	text "Nobody ever comes"
+	line "here. Nobody ever"
+	para "leaves. We have a"
+	line "very low churn"
+	para "rate."
+	done
+
+HC_SeenText_HL3_7:
+	text "My badge says"
+	line "Supervisor. My ID"
+	para "says Temp. My"
+	line "heart says Fight."
+	done
+
+HC_SeenText_HL3_8:
+	text "The coffee machine"
+	line "is broken. The"
+	para "coffee machine is"
+	line "also my boss."
+	para "Battle."
+	done
+
+HC_SeenText_HL3_9:
+	text "I was promised a"
+	line "promotion. I got"
+	para "this closet. I"
+	line "have a lot of"
+	para "feelings."
+	done
+
+HC_SeenText_HL3_10:
+	text "Efficiency is a"
+	line "form of violence."
+	para "Allow me to be"
+	line "efficient."
+	done
+
+HC_SeenText_HL3_11:
+	text "Per my last email."
+	line "Per my last"
+	para "battle. Per my"
+	line "last mercy."
+	done
+
+
+HC_BeatenText_HL3::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_HL3_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_HL3
+	cp b
+	jr c, .got_HC_BeatenText_HL3
+	sub b
+	jr .mod_HC_BeatenText_HL3
+.got_HC_BeatenText_HL3
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_HL3_Table:
+	dw HC_BeatenText_HL3_0
+	dw HC_BeatenText_HL3_1
+	dw HC_BeatenText_HL3_2
+	dw HC_BeatenText_HL3_3
+	dw HC_BeatenText_HL3_4
+	dw HC_BeatenText_HL3_5
+	dw HC_BeatenText_HL3_6
+	dw HC_BeatenText_HL3_7
+
+HC_BeatenText_HL3_0:
+	text "Noted. Escalating"
+	line "to nobody."
+	done
+
+HC_BeatenText_HL3_1:
+	text "Resignation"
+	line "accepted. Mine."
+	done
+
+HC_BeatenText_HL3_2:
+	text "Filed under"
+	line "unfortunate. Cross"
+	para "referenced under"
+	line "Tuesday."
+	done
+
+HC_BeatenText_HL3_3:
+	text "That is going in"
+	line "my performance"
+	para "review."
+	done
+
+HC_BeatenText_HL3_4:
+	text "Task complete. The"
+	line "task was losing."
+	done
+
+HC_BeatenText_HL3_5:
+	text "I will circle"
+	line "back. Never. But I"
+	para "will circle."
+	done
+
+HC_BeatenText_HL3_6:
+	text "Please rate this"
+	line "fight. One star."
+	para "Out of respect."
+	done
+
+HC_BeatenText_HL3_7:
+	text "Out of office"
+	line "until the heat"
+	para "death."
+	done
+
+
+HC_AfterText_HL3::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_HL3_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_HL3
+	cp b
+	jr c, .got_HC_AfterText_HL3
+	sub b
+	jr .mod_HC_AfterText_HL3
+.got_HC_AfterText_HL3
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_HL3_Table:
+	dw HC_AfterText_HL3_0
+	dw HC_AfterText_HL3_1
+	dw HC_AfterText_HL3_2
+	dw HC_AfterText_HL3_3
+	dw HC_AfterText_HL3_4
+	dw HC_AfterText_HL3_5
+	dw HC_AfterText_HL3_6
+	dw HC_AfterText_HL3_7
+
+HC_AfterText_HL3_0:
+	text "This room does not"
+	line "exist. Neither do"
+	para "I. It is very"
+	line "freeing."
+	done
+
+HC_AfterText_HL3_1:
+	text "There is a gift"
+	line "behind the filing"
+	para "cabinet. Do not"
+	line "open the cabinet."
+	done
+
+HC_AfterText_HL3_2:
+	text "Meetings here run"
+	line "long. The last one"
+	para "began before the"
+	line "founding of the"
+	para "city."
+	done
+
+HC_AfterText_HL3_3:
+	text "Take the stairs."
+	line "The elevator keeps"
+	para "asking how you"
+	line "feel."
+	done
+
+HC_AfterText_HL3_4:
+	text "You have no"
+	line "clearance. You"
+	para "also have no"
+	line "witnesses."
+	para "Congratulations."
+	done
+
+HC_AfterText_HL3_5:
+	text "I will keep this"
+	line "between me and the"
+	para "compliance"
+	line "department."
+	done
+
+HC_AfterText_HL3_6:
+	text "The break room has"
+	line "a plant. The plant"
+	para "has tenure."
+	done
+
+HC_AfterText_HL3_7:
+	text "Please leave"
+	line "quietly. The walls"
+	para "take notes."
+	done
+
+
+ENDSECTION
+
+SECTION "Area Text HL4", ROMX
+
+HC_SeenText_HL4::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_HL4_Table
+	ld b, 12
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_HL4
+	cp b
+	jr c, .got_HC_SeenText_HL4
+	sub b
+	jr .mod_HC_SeenText_HL4
+.got_HC_SeenText_HL4
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_HL4_Table:
+	dw HC_SeenText_HL4_0
+	dw HC_SeenText_HL4_1
+	dw HC_SeenText_HL4_2
+	dw HC_SeenText_HL4_3
+	dw HC_SeenText_HL4_4
+	dw HC_SeenText_HL4_5
+	dw HC_SeenText_HL4_6
+	dw HC_SeenText_HL4_7
+	dw HC_SeenText_HL4_8
+	dw HC_SeenText_HL4_9
+	dw HC_SeenText_HL4_10
+	dw HC_SeenText_HL4_11
+
+HC_SeenText_HL4_0:
+	text "The pool was"
+	line "drained for"
+	para "maintenance. The"
+	line "maintenance was"
+	para "drained for"
+	line "budget. I remain."
+	done
+
+HC_SeenText_HL4_1:
+	text "Welcome to"
+	line "paradise. The"
+	para "towels are extra."
+	line "The fight is"
+	para "complimentary."
+	done
+
+HC_SeenText_HL4_2:
+	text "I was a guest"
+	line "once. Checkout was"
+	para "in the contract."
+	line "Fine print is a"
+	para "lifestyle."
+	done
+
+HC_SeenText_HL4_3:
+	text "The tide went out"
+	line "and took the"
+	para "staff. I am what"
+	line "is left of"
+	para "hospitality."
+	done
+
+HC_SeenText_HL4_4:
+	text "Sun cream. Sun"
+	line "cream. Sun cream."
+	para "Sun cream. Battle."
+	done
+
+HC_SeenText_HL4_5:
+	text "All inclusive"
+	line "means all of us"
+	para "are included."
+	line "Welcome to the"
+	para "lower floor."
+	done
+
+HC_SeenText_HL4_6:
+	text "The cabana boy is"
+	line "dead. Long live"
+	para "the cabana boy."
+	line "That is me. Fight."
+	done
+
+HC_SeenText_HL4_7:
+	text "No lifeguard on"
+	line "duty. There is me,"
+	para "which is worse."
+	done
+
+HC_SeenText_HL4_8:
+	text "The sea does not"
+	line "want you. Neither"
+	para "does the buffet."
+	line "Battle."
+	done
+
+HC_SeenText_HL4_9:
+	text "I am on holiday."
+	line "It has lasted nine"
+	para "years. I am"
+	line "furious about it."
+	done
+
+HC_SeenText_HL4_10:
+	text "Do you hear the"
+	line "waves? Those are"
+	para "the pipes. The"
+	line "waves left."
+	done
+
+HC_SeenText_HL4_11:
+	text "Sand gets"
+	line "everywhere. So do"
+	para "I. Mostly into"
+	line "your plans."
+	done
+
+
+HC_BeatenText_HL4::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_HL4_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_HL4
+	cp b
+	jr c, .got_HC_BeatenText_HL4
+	sub b
+	jr .mod_HC_BeatenText_HL4
+.got_HC_BeatenText_HL4
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_HL4_Table:
+	dw HC_BeatenText_HL4_0
+	dw HC_BeatenText_HL4_1
+	dw HC_BeatenText_HL4_2
+	dw HC_BeatenText_HL4_3
+	dw HC_BeatenText_HL4_4
+	dw HC_BeatenText_HL4_5
+	dw HC_BeatenText_HL4_6
+	dw HC_BeatenText_HL4_7
+
+HC_BeatenText_HL4_0:
+	text "Washed up. Again."
+	done
+
+HC_BeatenText_HL4_1:
+	text "Leave a review."
+	line "Leave it very low."
+	done
+
+HC_BeatenText_HL4_2:
+	text "The sea takes"
+	line "some. You took me."
+	para "Same energy."
+	done
+
+HC_BeatenText_HL4_3:
+	text "I deserve this."
+	line "The pool deserves"
+	para "better."
+	done
+
+HC_BeatenText_HL4_4:
+	text "Refund denied."
+	line "Refund denied."
+	para "Fight denied."
+	done
+
+HC_BeatenText_HL4_5:
+	text "That was less"
+	line "relaxing than"
+	para "advertised."
+	done
+
+HC_BeatenText_HL4_6:
+	text "Out for the"
+	line "season. All"
+	para "seasons."
+	done
+
+HC_BeatenText_HL4_7:
+	text "Pass the sun"
+	line "cream. I have a"
+	para "feeling I will"
+	line "need it."
+	done
+
+
+HC_AfterText_HL4::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_HL4_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_HL4
+	cp b
+	jr c, .got_HC_AfterText_HL4
+	sub b
+	jr .mod_HC_AfterText_HL4
+.got_HC_AfterText_HL4
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_HL4_Table:
+	dw HC_AfterText_HL4_0
+	dw HC_AfterText_HL4_1
+	dw HC_AfterText_HL4_2
+	dw HC_AfterText_HL4_3
+	dw HC_AfterText_HL4_4
+	dw HC_AfterText_HL4_5
+	dw HC_AfterText_HL4_6
+	dw HC_AfterText_HL4_7
+
+HC_AfterText_HL4_0:
+	text "The deep end is"
+	line "dry. Do not go in."
+	para "It has a view of"
+	line "the abyss."
+	done
+
+HC_AfterText_HL4_1:
+	text "There is a gift in"
+	line "the locker. The"
+	para "locker is mostly"
+	line "lint."
+	done
+
+HC_AfterText_HL4_2:
+	text "They tell you the"
+	line "sun is good for"
+	para "you. They lie."
+	line "Everyone down here"
+	para "lies."
+	done
+
+HC_AfterText_HL4_3:
+	text "Leave your name at"
+	line "the desk. There is"
+	para "no desk. Leave it"
+	line "anyway."
+	done
+
+HC_AfterText_HL4_4:
+	text "The tide will come"
+	line "back. It always"
+	para "lies about that"
+	line "too."
+	done
+
+HC_AfterText_HL4_5:
+	text "The last cabana is"
+	line "the best cabana."
+	para "The best cabana"
+	line "has the ghosts."
+	done
+
+HC_AfterText_HL4_6:
+	text "Wave if you see"
+	line "anyone. No one"
+	para "waves back. That"
+	line "is the resort"
+	para "experience."
+	done
+
+HC_AfterText_HL4_7:
+	text "Drink something."
+	line "Anything. It is"
+	para "all the same"
+	line "drink."
+	done
+
+
+ENDSECTION
+
+SECTION "Area Text HL5", ROMX
+
+HC_SeenText_HL5::
+	text_asm
+	push bc
+	ld hl, HC_SeenText_HL5_Table
+	ld b, 12
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_SeenText_HL5
+	cp b
+	jr c, .got_HC_SeenText_HL5
+	sub b
+	jr .mod_HC_SeenText_HL5
+.got_HC_SeenText_HL5
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_SeenText_HL5_Table:
+	dw HC_SeenText_HL5_0
+	dw HC_SeenText_HL5_1
+	dw HC_SeenText_HL5_2
+	dw HC_SeenText_HL5_3
+	dw HC_SeenText_HL5_4
+	dw HC_SeenText_HL5_5
+	dw HC_SeenText_HL5_6
+	dw HC_SeenText_HL5_7
+	dw HC_SeenText_HL5_8
+	dw HC_SeenText_HL5_9
+	dw HC_SeenText_HL5_10
+	dw HC_SeenText_HL5_11
+
+HC_SeenText_HL5_0:
+	text "Sentence handed"
+	line "down. Appeal"
+	para "denied. Fight now."
+	done
+
+HC_SeenText_HL5_1:
+	text "I filed you under"
+	line "Damnation. You"
+	para "were filed"
+	line "incorrectly. I"
+	para "will fix it."
+	done
+
+HC_SeenText_HL5_2:
+	text "Welcome to the"
+	line "pit. We kept your"
+	para "file. It is very"
+	line "thick."
+	done
+
+HC_SeenText_HL5_3:
+	text "Fire is merely a"
+	line "bad idea that"
+	para "caught on. I will"
+	line "show you."
+	done
+
+HC_SeenText_HL5_4:
+	text "I am a clerk of"
+	line "eternal suffering."
+	para "I take lunch at"
+	line "three."
+	done
+
+HC_SeenText_HL5_5:
+	text "Order. Order! No."
+	line "Not that kind. The"
+	para "other kind."
+	done
+
+HC_SeenText_HL5_6:
+	text "Your name is on a"
+	line "list. The list is"
+	para "on fire. Fight."
+	done
+
+HC_SeenText_HL5_7:
+	text "The pit is full."
+	line "The pit has always"
+	para "been full. You are"
+	line "an exception and"
+	para "the pit is rude"
+	line "about it."
+	done
+
+HC_SeenText_HL5_8:
+	text "I judge you. It is"
+	line "my only talent."
+	para "Sadly it is also"
+	line "my hobby."
+	done
+
+HC_SeenText_HL5_9:
+	text "Do not mind the"
+	line "screaming. It is"
+	para "the ventilation."
+	done
+
+HC_SeenText_HL5_10:
+	text "Hell is other"
+	line "people. I am other"
+	para "people. Battle."
+	done
+
+HC_SeenText_HL5_11:
+	text "I have waited a"
+	line "thousand years for"
+	para "a case. Yours will"
+	line "do."
+	done
+
+
+HC_BeatenText_HL5::
+	text_asm
+	push bc
+	ld hl, HC_BeatenText_HL5_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_BeatenText_HL5
+	cp b
+	jr c, .got_HC_BeatenText_HL5
+	sub b
+	jr .mod_HC_BeatenText_HL5
+.got_HC_BeatenText_HL5
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_BeatenText_HL5_Table:
+	dw HC_BeatenText_HL5_0
+	dw HC_BeatenText_HL5_1
+	dw HC_BeatenText_HL5_2
+	dw HC_BeatenText_HL5_3
+	dw HC_BeatenText_HL5_4
+	dw HC_BeatenText_HL5_5
+	dw HC_BeatenText_HL5_6
+	dw HC_BeatenText_HL5_7
+
+HC_BeatenText_HL5_0:
+	text "Overruled. By you."
+	line "Delightful."
+	done
+
+HC_BeatenText_HL5_1:
+	text "The flames have"
+	line "gone out. I take"
+	para "it personally."
+	done
+
+HC_BeatenText_HL5_2:
+	text "Appeal granted."
+	line "Retroactively."
+	para "Bring a lawyer"
+	line "next time."
+	done
+
+HC_BeatenText_HL5_3:
+	text "That was a fair"
+	line "verdict. I hate"
+	para "fair."
+	done
+
+HC_BeatenText_HL5_4:
+	text "Fine. Take your"
+	line "item. Take your"
+	para "sins. Take mine."
+	done
+
+HC_BeatenText_HL5_5:
+	text "Damnation"
+	line "postponed pending"
+	para "paperwork."
+	done
+
+HC_BeatenText_HL5_6:
+	text "I am not mad. I am"
+	line "eternal. It reads"
+	para "the same."
+	done
+
+HC_BeatenText_HL5_7:
+	text "You win this ring."
+	line "There are nine."
+	done
+
+
+HC_AfterText_HL5::
+	text_asm
+	push bc
+	ld hl, HC_AfterText_HL5_Table
+	ld b, 8
+	ld a, [wTempTrainerID]
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld a, [wTempTrainerClass]
+	swap a
+	add c
+.mod_HC_AfterText_HL5
+	cp b
+	jr c, .got_HC_AfterText_HL5
+	sub b
+	jr .mod_HC_AfterText_HL5
+.got_HC_AfterText_HL5
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop bc
+	ret
+
+HC_AfterText_HL5_Table:
+	dw HC_AfterText_HL5_0
+	dw HC_AfterText_HL5_1
+	dw HC_AfterText_HL5_2
+	dw HC_AfterText_HL5_3
+	dw HC_AfterText_HL5_4
+	dw HC_AfterText_HL5_5
+	dw HC_AfterText_HL5_6
+	dw HC_AfterText_HL5_7
+
+HC_AfterText_HL5_0:
+	text "The files go down"
+	line "forever. The"
+	para "prizes sit at the"
+	line "bottom. Mind the"
+	para "heat."
+	done
+
+HC_AfterText_HL5_1:
+	text "Every drawer here"
+	line "is a sin. This one"
+	para "is greed. Do not"
+	line "open it."
+	done
+
+HC_AfterText_HL5_2:
+	text "The furnace is"
+	line "off. For once. It"
+	para "was a good day for"
+	line "the damned."
+	done
+
+HC_AfterText_HL5_3:
+	text "You do not belong"
+	line "here. Neither do"
+	para "I. It is the one"
+	line "thing we share."
+	done
+
+HC_AfterText_HL5_4:
+	text "The gifts are the"
+	line "only real thing in"
+	para "the building."
+	done
+
+HC_AfterText_HL5_5:
+	text "Come again. Bring"
+	line "snacks. We have"
+	para "not eaten since"
+	line "the last"
+	para "reformation."
+	done
+
+HC_AfterText_HL5_6:
+	text "Leave the way you"
+	line "came. The other"
+	para "ways have"
+	line "meetings."
+	done
+
+HC_AfterText_HL5_7:
+	text "I will remember"
+	line "you. Mostly"
+	para "because I am"
+	line "forbidden from"
+	para "forgetting."
+	done
+
+
+ENDSECTION
+

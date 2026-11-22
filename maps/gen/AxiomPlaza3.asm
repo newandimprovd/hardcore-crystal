@@ -143,7 +143,7 @@ AxiomPlaza3Duel:
 	iffalse .No
 	closetext
 	winlosstext AxiomPlaza3DuelBeatenText, 0
-	loadtrainer U_MATCHMAKER, 129
+	loadtrainer U_MATCHMAKER, 135
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_PLAZA3_DUEL

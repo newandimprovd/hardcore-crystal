@@ -6,10 +6,6 @@ LotusPlaza5_MapScripts:
 
 	def_callbacks
 
-LotusPlaza5PurgFlagScript:
-	setevent EVENT_PURG_OPEN_A4
-	end
-
 LotusPlaza5DebateA:
 	jumptextfaceplayer LotusPlaza5DebateAText
 
@@ -153,7 +149,7 @@ LotusPlaza5Duel:
 	iffalse .No
 	closetext
 	winlosstext LotusPlaza5DuelBeatenText, 0
-	loadtrainer L_WAITER, 134
+	loadtrainer L_WAITER, 129
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_LOTUS_PLAZA5_DUEL
@@ -224,26 +220,24 @@ LotusPlaza5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  3, LOTUS_MART5, 1
-	warp_event 10,  3, LOTUS_POKECENTER5, 1
-	warp_event 14,  3, PURG_THRESHOLD, 5
-	warp_event 18,  3, LOTUS_HOUSE5, 1
-	warp_event 22,  3, LOTUS_CABANA, 1
+	warp_event  2,  3, LOTUS_HOUSE5, 1
+	warp_event  8,  3, LOTUS_CABANA, 1
+	warp_event 14,  3, LOTUS_POKECENTER5, 1
+	warp_event 18,  3, LOTUS_MART5, 1
 
 	def_coord_events
-	coord_event 14,  4, -1, LotusPlaza5PurgFlagScript
 
 	def_bg_events
 
 	def_object_events
-	object_event 30, 24, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza5DebateA, -1
-	object_event 31, 24, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5DebateB, -1
-	object_event  9, 27, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Giver, -1
-	object_event 20, 14, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie1, -1
-	object_event  3,  6, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie2, -1
-	object_event 25, 18, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie3, -1
-	object_event 19, 14, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie4, -1
-	object_event 24, 19, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie5, -1
-	object_event  5, 26, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie6, -1
-	object_event 31, 23, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Duel, -1
+	object_event 29, 23, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza5DebateA, -1
+	object_event 30, 23, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5DebateB, -1
+	object_event 15, 21, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Giver, -1
+	object_event  4, 20, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie1, -1
+	object_event  8, 14, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie2, -1
+	object_event  4, 17, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie3, -1
+	object_event  9, 15, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie4, -1
+	object_event 12, 23, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie5, -1
+	object_event 13, 15, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie6, -1
+	object_event 10, 14, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Duel, -1
 

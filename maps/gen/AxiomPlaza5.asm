@@ -6,10 +6,6 @@ AxiomPlaza5_MapScripts:
 
 	def_callbacks
 
-AxiomPlaza5PurgFlagScript:
-	setevent EVENT_PURG_OPEN_A3
-	end
-
 AxiomPlaza5DebateA:
 	jumptextfaceplayer AxiomPlaza5DebateAText
 
@@ -153,7 +149,7 @@ AxiomPlaza5Duel:
 	iffalse .No
 	closetext
 	winlosstext AxiomPlaza5DuelBeatenText, 0
-	loadtrainer U_CASEWORKER, 130
+	loadtrainer U_CASEWORKER, 132
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_PLAZA5_DUEL
@@ -226,26 +222,24 @@ AxiomPlaza5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 14,  3, AXIOM_ARMORY, 1
-	warp_event 20,  3, PURG_THRESHOLD, 4
-	warp_event 24,  3, AXIOM_HOUSE5, 1
-	warp_event 28,  3, AXIOM_POKECENTER5, 1
-	warp_event 32,  3, AXIOM_MART5, 1
+	warp_event  4,  3, AXIOM_ARMORY, 1
+	warp_event  8,  3, AXIOM_POKECENTER5, 1
+	warp_event 12,  3, AXIOM_MART5, 1
+	warp_event 16,  3, AXIOM_HOUSE5, 1
 
 	def_coord_events
-	coord_event 20,  4, -1, AxiomPlaza5PurgFlagScript
 
 	def_bg_events
 
 	def_object_events
-	object_event  5, 16, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5DebateA, -1
-	object_event  6, 16, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5DebateB, -1
-	object_event 34, 21, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Giver, -1
-	object_event  8, 16, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie1, -1
-	object_event 33, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie2, -1
-	object_event 21, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie3, -1
-	object_event 16, 25, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie4, -1
-	object_event 29, 14, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie5, -1
-	object_event 35, 17, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie6, -1
-	object_event 30, 18, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Duel, -1
+	object_event 10, 20, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5DebateA, -1
+	object_event 11, 20, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5DebateB, -1
+	object_event 12,  9, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Giver, -1
+	object_event  6, 16, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie1, -1
+	object_event 30, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie2, -1
+	object_event 17, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie3, -1
+	object_event 31, 18, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie4, -1
+	object_event  4, 25, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie5, -1
+	object_event  2, 15, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie6, -1
+	object_event 31, 26, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Duel, -1
 

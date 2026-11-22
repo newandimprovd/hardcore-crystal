@@ -128,8 +128,8 @@ GroveHouse4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, GROVE_PLAZA4, 1
-	warp_event  3,  7, GROVE_PLAZA4, 1
+	warp_event  2,  7, GROVE_PLAZA4, 3
+	warp_event  3,  7, GROVE_PLAZA4, 3
 
 	def_coord_events
 

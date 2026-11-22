@@ -1,11 +1,11 @@
 	db BEEHEMOTH ; 108
 
-	db 124, 137,  55, 103,  49, 109
+	db 128, 143,  57, 107,  51, 114
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, POISON ; type
 	db 50 ; catch rate
-	db 219 ; base exp
+	db 228 ; base exp
 	db NO_ITEM, POISON_BARB ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

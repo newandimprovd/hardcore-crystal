@@ -158,7 +158,7 @@ LotusPlaza6Steiner4DuelScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_STEINER4_PAID
-	iftrue .After
+	iftrue .Later
 	writetext LotusPlaza6Steiner4DuelScriptGiveText
 	waitbutton
 	verbosegiveitem PP_UP
@@ -182,6 +182,37 @@ LotusPlaza6Steiner4DuelScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_STEINER4_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_STEINER4_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_STEINER4_TALK2
+	iffalse .More2
+	sjump .After
+
+.More0:
+	writetext LotusPlaza6Steiner4DuelScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_STEINER4_TALK0
+	closetext
+	end
+
+.More1:
+	writetext LotusPlaza6Steiner4DuelScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_STEINER4_TALK1
+	closetext
+	end
+
+.More2:
+	writetext LotusPlaza6Steiner4DuelScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_STEINER4_TALK2
+	closetext
+	end
+
+
 LotusPlaza6Steiner4DuelScriptSeenText:
 	text "Last time I will"
 	line "speak with you, I"
@@ -189,27 +220,6 @@ LotusPlaza6Steiner4DuelScriptSeenText:
 	line "Teachers are"
 	para "seldom allowed"
 	line "encores."
-	para "When the seam"
-	line "closes, one era"
-	para "will remain. Be"
-	line "sure you leave it"
-	para "better than you"
-	line "found it."
-	para "Preferably with"
-	line "plumbing."
-	para "You killed many. I"
-	line "will not tell you"
-	para "it was right. I"
-	line "will tell you it"
-	para "was efficient."
-	line "Both are true of"
-	para "Ahriman too."
-	para "The Balance is the"
-	line "only thing that"
-	para "does not harden."
-	line "It is not a middle"
-	para "road. It is a"
-	line "tightrope."
 	para "Walk it. But"
 	line "first, one more"
 	para "lesson, at the"
@@ -238,6 +248,36 @@ LotusPlaza6Steiner4DuelScriptAfterText:
 	line "plumbing. That is"
 	para "the whole of my"
 	line "last lecture."
+	done
+
+LotusPlaza6Steiner4DuelScriptMoreText0:
+	text "When the seam"
+	line "closes, one era"
+	para "will remain. Be"
+	line "sure you leave it"
+	para "better than you"
+	line "found it."
+	para "Preferably with"
+	line "plumbing."
+	done
+
+LotusPlaza6Steiner4DuelScriptMoreText1:
+	text "You killed many. I"
+	line "will not tell you"
+	para "it was right. I"
+	line "will tell you it"
+	para "was efficient."
+	line "Both are true of"
+	para "Ahriman too."
+	done
+
+LotusPlaza6Steiner4DuelScriptMoreText2:
+	text "The Balance is the"
+	line "only thing that"
+	para "does not harden."
+	line "It is not a middle"
+	para "road. It is a"
+	line "tightrope."
 	done
 
 LotusPlaza6Steiner4DuelScriptNoText:

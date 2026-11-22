@@ -1,11 +1,11 @@
 	db WEEDLE ; 013
 
-	db  47,  41,  35,  59,  24,  24
+	db  61,  54,  46,  77,  31,  31
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, POISON ; type
 	db 255 ; catch rate
-	db 87 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

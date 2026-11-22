@@ -149,7 +149,7 @@ DisPlaza5Duel:
 	iffalse .No
 	closetext
 	winlosstext DisPlaza5DuelBeatenText, 0
-	loadtrainer D_WARDEN, 140
+	loadtrainer D_WARDEN, 135
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_DIS_PLAZA5_DUEL

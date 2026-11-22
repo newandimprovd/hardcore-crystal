@@ -1,11 +1,11 @@
 	db CINDERWING ; 107
 
-	db 117,  49,  68,  96, 137, 110
+	db 120,  51,  71, 100, 143, 115
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, FIRE ; type
 	db 50 ; catch rate
-	db 219 ; base exp
+	db 228 ; base exp
 	db NO_ITEM, SILVERPOWDER ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

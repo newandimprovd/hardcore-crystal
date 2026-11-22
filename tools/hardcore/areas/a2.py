@@ -8,7 +8,7 @@ from .specbase import SpecBase
 
 class Spec(SpecBase):
     pool = "A2"
-    l0, l1 = 24, 44
+    l0, l1 = 25, 47
     T = T
     theme = {"GRASS": 3, "BUG": 3, "FLYING": 2, "NORMAL": 2, "GROUND": 2, "WATER": 2, "FIGHTING": 1.5,
              "FAIRY": 1.5, "POISON": 1, "ROCK": 1, "ELECTRIC": 0.5, "FIRE": 0.5, "PSYCHIC_TYPE": 0.5,
@@ -34,11 +34,11 @@ def build(w, roster, rng, entry_doors, open_exit=False):
     """entry_doors: the two unlinked exit warps of Area 1's last boss room. Returns (group, exits)."""
     texts = dict(center=T.CENTER, mart=T.MART, house=T.HOUSE)
     bosses = [
-        BossSpec("GroveBoathouse", "REEVE OTTO", "G_REEVE", "SPRITE_HC_FISHER", "PAL_NPC_BLUE", 33, 5, T.BOATHOUSE_SEEN,
+        BossSpec("GroveBoathouse", "REEVE OTTO", "G_REEVE", "SPRITE_HC_FISHER", "PAL_NPC_BLUE", 29, 5, T.BOATHOUSE_SEEN,
                  T.BOATHOUSE_BEATEN, T.BOATHOUSE_AFTER, template="karen"),
-        BossSpec("GroveSmokehouse", "ELDER FERN", "G_ELDRESS", "SPRITE_HC_ELDER_F", "PAL_NPC_GREEN", 39, 5, T.SMOKEHOUSE_SEEN,
+        BossSpec("GroveSmokehouse", "ELDER FERN", "G_ELDRESS", "SPRITE_HC_ELDER_F", "PAL_NPC_GREEN", 37, 5, T.SMOKEHOUSE_SEEN,
                  T.SMOKEHOUSE_BEATEN, T.SMOKEHOUSE_AFTER, template="will"),
-        BossSpec("GroveCouncil", "MATRIARCH", "G_MATRIARCH", "SPRITE_HC_MATRIARCH", "PAL_NPC_RED", 46, 6, T.COUNCIL_SEEN,
+        BossSpec("GroveCouncil", "MATRIARCH", "G_MATRIARCH", "SPRITE_HC_MATRIARCH", "PAL_NPC_RED", 47, 6, T.COUNCIL_SEEN,
                  T.COUNCIL_BEATEN, T.COUNCIL_AFTER, template="bruno", landmark="LANDMARK_GROVE_HEARTH",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)]
     cfg = AreaCfg("AREA2", "Grove", Spec(), kits.grove(), "PALETTE_DAY",

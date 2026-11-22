@@ -166,9 +166,9 @@ def emit_trainers(w):
         for name, party in lst:
             assert 1 <= len(party) <= 6
             s = f'\tdb "{name}@"\n'
-            s += "".join(f"\tdb {lv}, {sp}\n" for lv, sp in party)
+            s += "".join(f"\tdb {lv}, {sp}, {it}\n" for lv, sp, it in party)
             s += "\tdb -1\n"
-            size = len(name) + 1 + 2 * len(party) + 1
+            size = len(name) + 1 + 3 * len(party) + 1
             recs.append((s, size))
         by_class[cls] = recs
     # pack classes into sections of at most 15000 bytes

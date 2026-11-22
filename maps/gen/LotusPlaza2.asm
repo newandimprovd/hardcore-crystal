@@ -148,7 +148,7 @@ LotusPlaza2Duel:
 	iffalse .No
 	closetext
 	winlosstext LotusPlaza2DuelBeatenText, 0
-	loadtrainer L_LIFEGUARD, 134
+	loadtrainer L_LIFEGUARD, 137
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_LOTUS_PLAZA2_DUEL

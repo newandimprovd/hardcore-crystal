@@ -169,7 +169,7 @@ AxiomPlaza4Sabbah2BearerScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_SABBAH2_PAID
-	iftrue .After
+	iftrue .Later
 	writetext AxiomPlaza4Sabbah2BearerScriptGiveText
 	waitbutton
 	verbosegiveitem SLEDGEHAMMER
@@ -193,51 +193,40 @@ AxiomPlaza4Sabbah2BearerScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_SABBAH2_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_SABBAH2_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_SABBAH2_TALK2
+	iffalse .More2
+	sjump .After
+
+.More0:
+	writetext AxiomPlaza4Sabbah2BearerScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_SABBAH2_TALK0
+	closetext
+	end
+
+.More1:
+	writetext AxiomPlaza4Sabbah2BearerScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_SABBAH2_TALK1
+	closetext
+	end
+
+.More2:
+	writetext AxiomPlaza4Sabbah2BearerScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_SABBAH2_TALK2
+	closetext
+	end
+
+
 AxiomPlaza4Sabbah2BearerScriptSeenText:
 	text "You carry my lamp"
 	line "well."
-	para "Now the harder"
-	line "part. A day will"
-	para "come when the husk"
-	line "is broken. We call"
-	para "it the Qiyama, the"
-	line "Resurrection. It"
-	para "does not wait for"
-	line "graves to open. It"
-	para "is the day the"
-	line "veil is lifted and"
-	para "the batin is seen"
-	line "with open eyes."
-	para "On that day the"
-	line "law is not burned."
-	para "It is fulfilled by"
-	line "sight. Paradise is"
-	para "the knowledge"
-	line "itself, and hell"
-	para "is ignorance of"
-	line "it. They are the"
-	para "same room. The"
-	line "only difference is"
-	para "the lamp."
-	para "The Dajjal, the"
-	line "one eyed deceiver,"
-	para "sees only the"
-	line "zahir, with one"
-	para "eye. He is"
-	line "dangerous because"
-	para "the world agrees"
-	line "with him. He lives"
-	para "one door over and"
-	line "is bored."
-	para "He plans to join"
-	line "his world to ours."
-	para "That is why the"
-	line "sky has a seam and"
-	para "why time smells of"
-	line "old pennies. The"
-	para "robots will serve"
-	line "him first. They"
-	para "are made of husk."
 	para "A sledgehammer is"
 	line "a very literal"
 	para "key. I give it to"
@@ -273,6 +262,57 @@ AxiomPlaza4Sabbah2BearerScriptAfterText:
 	para "husk, and a few of"
 	line "them are its"
 	para "cooks."
+	done
+
+AxiomPlaza4Sabbah2BearerScriptMoreText0:
+	text "Now the harder"
+	line "part. A day will"
+	para "come when the husk"
+	line "is broken. We call"
+	para "it the Qiyama, the"
+	line "Resurrection. It"
+	para "does not wait for"
+	line "graves to open. It"
+	para "is the day the"
+	line "veil is lifted and"
+	para "the batin is seen"
+	line "with open eyes."
+	para "On that day the"
+	line "law is not burned."
+	para "It is fulfilled by"
+	line "sight. Paradise is"
+	para "the knowledge"
+	line "itself, and hell"
+	para "is ignorance of"
+	line "it. They are the"
+	para "same room. The"
+	line "only difference is"
+	para "the lamp."
+	done
+
+AxiomPlaza4Sabbah2BearerScriptMoreText1:
+	text "The Dajjal, the"
+	line "one eyed deceiver,"
+	para "sees only the"
+	line "zahir, with one"
+	para "eye. He is"
+	line "dangerous because"
+	para "the world agrees"
+	line "with him. He lives"
+	para "one door over and"
+	line "is bored."
+	done
+
+AxiomPlaza4Sabbah2BearerScriptMoreText2:
+	text "He plans to join"
+	line "his world to ours."
+	para "That is why the"
+	line "sky has a seam and"
+	para "why time smells of"
+	line "old pennies. The"
+	para "robots will serve"
+	line "him first. They"
+	para "are made of husk."
 	done
 
 AxiomPlaza4Sabbah2BearerScriptNoText:
@@ -324,7 +364,7 @@ AxiomPlaza4Duel:
 	iffalse .No
 	closetext
 	winlosstext AxiomPlaza4DuelBeatenText, 0
-	loadtrainer U_EXEC, 133
+	loadtrainer U_EXEC, 130
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_PLAZA4_DUEL
@@ -409,18 +449,18 @@ AxiomPlaza4_MapEvents:
 	coord_event 23,  1, -1, AxiomPlaza4Sabbah2BlockScript
 
 	def_bg_events
-	bg_event  5, 19, BGEVENT_READ, AxiomPlaza4Fountain0
+	bg_event  6, 21, BGEVENT_READ, AxiomPlaza4Fountain0
 
 	def_object_events
-	object_event 20, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateA, -1
-	object_event 21, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateB, -1
-	object_event 27,  6, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Giver, -1
-	object_event  2, 21, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie1, -1
-	object_event 11,  8, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie2, -1
-	object_event 26, 16, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie3, -1
-	object_event 13, 18, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie4, -1
-	object_event 11, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie5, -1
-	object_event  8, 10, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie6, -1
-	object_event 14,  6, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Sabbah2BearerScript, -1
-	object_event  6, 18, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Duel, -1
+	object_event 22, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateA, -1
+	object_event 23, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateB, -1
+	object_event  6,  7, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Giver, -1
+	object_event 17,  8, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie1, -1
+	object_event  5, 17, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie2, -1
+	object_event  6, 23, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie3, -1
+	object_event 19, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie4, -1
+	object_event  8, 10, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie5, -1
+	object_event  8, 22, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie6, -1
+	object_event 17,  9, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Sabbah2BearerScript, -1
+	object_event  9, 18, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Duel, -1
 

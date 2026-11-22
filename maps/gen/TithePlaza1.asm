@@ -20,12 +20,13 @@ TithePlaza1Fountain0:
 	jumptext TithePlaza1Fountain0Text
 
 TithePlaza1Fountain0Text:
-	text "PENNYWISE"
-	line "FOUNTAIN. Penny"
-	para "plus wise. A coin"
-	line "buys one wish. The"
-	para "wish is taxed at"
-	line "source."
+	text "SPOUTIFF FOUNTAIN."
+	line "Spout plus"
+	para "pontiff. It"
+	line "blesses the square"
+	para "twice a day."
+	line "Mostly the"
+	para "pigeons."
 	done
 
 TithePlaza1DebateA:
@@ -186,7 +187,7 @@ TithePlaza1SteinerBearerScriptFlow:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_STEINER_PAID
-	iftrue .After
+	iftrue .Later
 	writetext TithePlaza1SteinerBearerScriptGiveText
 	waitbutton
 	verbosegiveitem CHAINSAW
@@ -210,6 +211,18 @@ TithePlaza1SteinerBearerScriptFlow:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_STEINER_TALK0
+	iffalse .More0
+	sjump .After
+
+.More0:
+	writetext TithePlaza1SteinerBearerScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_STEINER_TALK0
+	closetext
+	end
+
 TithePlaza1SteinerBearerScriptAside:
 	step RIGHT
 	step RIGHT
@@ -223,15 +236,6 @@ TithePlaza1SteinerBearerScriptSeenText:
 	line "science and I am"
 	para "very bad at"
 	line "parties."
-	para "Two great"
-	line "adversaries tug at"
-	para "every soul."
-	line "Lucifer warms you"
-	para "and lies to you."
-	line "Ahriman cools you"
-	para "and tells you"
-	line "nothing is real"
-	para "but dead matter."
 	para "You carry a knife"
 	line "and you are the"
 	para "only thing here"
@@ -267,6 +271,18 @@ TithePlaza1SteinerBearerScriptAfterText:
 	line "thinking is the"
 	para "only thing that"
 	line "grows back."
+	done
+
+TithePlaza1SteinerBearerScriptMoreText0:
+	text "Two great"
+	line "adversaries tug at"
+	para "every soul."
+	line "Lucifer warms you"
+	para "and lies to you."
+	line "Ahriman cools you"
+	para "and tells you"
+	line "nothing is real"
+	para "but dead matter."
 	done
 
 TithePlaza1SteinerBearerScriptNoRoomText:
@@ -308,7 +324,7 @@ TithePlaza1Duel:
 	iffalse .No
 	closetext
 	winlosstext TithePlaza1DuelBeatenText, 0
-	loadtrainer T_PRIEST, 135
+	loadtrainer T_PRIEST, 137
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_TITHE_PLAZA1_DUEL
@@ -402,18 +418,18 @@ TithePlaza1_MapEvents:
 	coord_event 17,  1, -1, TithePlaza1SteinerBlockScript
 
 	def_bg_events
-	bg_event  5,  9, BGEVENT_READ, TithePlaza1Fountain0
+	bg_event  6,  9, BGEVENT_READ, TithePlaza1Fountain0
 
 	def_object_events
-	object_event  2, 14, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1DebateA, -1
-	object_event  3, 14, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1DebateB, -1
-	object_event  7,  7, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Giver, -1
-	object_event 22,  9, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie1, -1
-	object_event  4, 19, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie2, -1
-	object_event 18,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie3, -1
-	object_event 10, 12, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie4, -1
-	object_event 10, 21, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie5, -1
-	object_event 11, 16, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie6, -1
+	object_event  9,  9, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1DebateA, -1
+	object_event 10,  9, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1DebateB, -1
+	object_event  6, 22, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Giver, -1
+	object_event 12, 23, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie1, -1
+	object_event 19, 13, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie2, -1
+	object_event 10,  7, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie3, -1
+	object_event 21, 17, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie4, -1
+	object_event  3, 20, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie5, -1
+	object_event 20,  8, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza1Townie6, -1
 	object_event 14,  3, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza1SteinerBearerScript, -1
-	object_event 15,  6, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza1Duel, -1
+	object_event 23,  8, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza1Duel, -1
 

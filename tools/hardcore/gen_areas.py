@@ -11,7 +11,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from areas import named_text as N  # noqa: E402
-from areas import a1, a2, a3, a4, a5, cameos, emit, lore, named, opening, purg, specials, wild  # noqa: E402
+from areas import a1, a2, a3, a4, a5, cameos, emit, hollows, lore, named, opening, purg, specials, vault, wild  # noqa: E402
 from areas.model import ForeignWarp  # noqa: E402
 from areas.model import World, read, write  # noqa: E402
 from areas.party import Roster  # noqa: E402
@@ -91,6 +91,8 @@ def main():
         name, const = "CherrygroveCity", "CHERRYGROVE_CITY"
     junction.connections["south"] = (Cherry, opening.STEM_A - opening.CHERRY_COL)
     purg.build(w, roster, rng, w.purg_doors, cave)
+    vault.build(w, roster, random.Random(20261122))  # the optional cold archive with the EXP charm, its own random source
+    hollows.build(w, roster, random.Random(20261123))  # the ten hidden hollows, two to an area (alpha 3.2)
     write_spawns(w)
     lore.emit(w)
     emit.patch_tree()
