@@ -77,63 +77,73 @@ LotusPlaza1GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-LotusPlaza1Townie1:
-	jumptextfaceplayer LotusPlaza1Townie1Text
+LotusPlaza1Persona0:
+	jumptextfaceplayer LotusPlaza1Persona0Text
 
-LotusPlaza1Townie1Text:
-	text "I'm so relaxed I"
-	line "forgot to be"
-	para "afraid. Oh no."
-	line "There it is."
+LotusPlaza1Persona0Text:
+	text "MANAGER DELL:"
+	line "Welcome to Lotus."
+	para "Everything is"
+	line "included. By"
+	para "everything I mean"
+	line "us."
 	done
 
-LotusPlaza1Townie2:
-	jumptextfaceplayer LotusPlaza1Townie2Text
+LotusPlaza1Persona2:
+	jumptextfaceplayer LotusPlaza1Persona2Text
 
-LotusPlaza1Townie2Text:
-	text "The Pokemon Center"
-	line "has a hammock. The"
-	para "nurse has a drink."
-	line "Please be quiet."
+LotusPlaza1Persona2Text:
+	text "TOURIST DONNA: We"
+	line "came for the sun."
+	para "We stayed for the"
+	line "screaming. It is a"
+	para "very relaxing"
+	line "sound."
 	done
 
-LotusPlaza1Townie3:
-	jumptextfaceplayer LotusPlaza1Townie3Text
+LotusPlaza1Persona3:
+	jumptextfaceplayer LotusPlaza1Persona3Text
 
-LotusPlaza1Townie3Text:
-	text "The tide brought a"
-	line "very nice item. It"
-	para "also brought a"
-	line "court order."
+LotusPlaza1Persona3Text:
+	text "BARTENDER JOSE:"
+	line "Everything is on"
+	para "the house. The"
+	line "house is on fire."
+	para "Drink up."
 	done
 
-LotusPlaza1Townie4:
-	jumptextfaceplayer LotusPlaza1Townie4Text
+LotusPlaza1Persona5:
+	jumptextfaceplayer LotusPlaza1Persona5Text
 
-LotusPlaza1Townie4Text:
-	text "Held items are"
-	line "like cocktails."
-	para "You carry them and"
-	line "nothing happens"
-	para "until it does."
+LotusPlaza1Persona5Text:
+	text "BELLHOP TEDDY:"
+	line "Your luggage is on"
+	para "its way. It has"
+	line "been on its way"
+	para "since you arrived."
+	line "I trust it will"
+	para "arrive eventually."
 	done
 
-LotusPlaza1Townie5:
-	jumptextfaceplayer LotusPlaza1Townie5Text
+LotusPlaza1Persona7:
+	jumptextfaceplayer LotusPlaza1Persona7Text
 
-LotusPlaza1Townie5Text:
-	text "The pool is closed"
-	line "due to depth."
+LotusPlaza1Persona7Text:
+	text "DR LOTUS: Are you"
+	line "relaxed? Good."
+	para "Relaxation is a"
+	line "symptom."
 	done
 
 LotusPlaza1Townie6:
 	jumptextfaceplayer LotusPlaza1Townie6Text
 
 LotusPlaza1Townie6Text:
-	text "Every day is"
-	line "Sunday here. The"
-	para "Sunday scaries are"
-	line "permanent."
+	text "The lifeguard is a"
+	line "philosopher. He"
+	para "hasn't saved"
+	line "anyone yet, but he"
+	para "has had thoughts."
 	done
 
 LotusPlaza1CioranBearerScript:
@@ -441,13 +451,13 @@ LotusPlaza1_MapEvents:
 	def_object_events
 	object_event  6, 23, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1DebateA, -1
 	object_event  7, 23, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1DebateB, -1
-	object_event 21,  7, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Giver, -1
-	object_event 11, 11, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie1, -1
-	object_event 12, 13, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie2, -1
-	object_event  7, 14, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie3, -1
-	object_event 18, 16, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie4, -1
-	object_event 23,  9, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie5, -1
-	object_event 22, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie6, -1
+	object_event 21,  7, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Giver, -1
+	object_event 11, 11, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona0, -1
+	object_event 12, 13, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona2, -1
+	object_event  7, 14, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona3, -1
+	object_event 18, 16, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona5, -1
+	object_event 23,  9, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona7, -1
+	object_event 22, 20, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie6, -1
 	object_event  3, 17, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranBearerScript, -1
 	object_event 13, 12, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Duel, -1
 

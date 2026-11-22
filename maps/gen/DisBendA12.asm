@@ -13,12 +13,12 @@ DisBendA12Hermit:
 	jumptextfaceplayer DisBendA12HermitText
 
 DisBendA12HermitText:
-	text "The demons are"
-	line "very professional."
-	para "They send a"
-	line "thank-you note"
-	para "after the"
-	line "screaming."
+	text "I found a corner"
+	line "nobody has"
+	para "tortured yet. I"
+	line "call it home."
+	para "Don't tell"
+	line "management."
 	done
 
 DisBendA12_MapEvents:

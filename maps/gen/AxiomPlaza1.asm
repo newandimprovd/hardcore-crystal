@@ -86,69 +86,75 @@ AxiomPlaza1GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-AxiomPlaza1Townie1:
-	jumptextfaceplayer AxiomPlaza1Townie1Text
+AxiomPlaza1Persona0:
+	jumptextfaceplayer AxiomPlaza1Persona0Text
 
-AxiomPlaza1Townie1Text:
-	text "The Mayor is a"
-	line "great listener. He"
-	para "has forty thousand"
-	line "microphones and no"
-	para "mouth."
+AxiomPlaza1Persona0Text:
+	text "CLERK UNIT 7:"
+	line "Please state your"
+	para "business. State it"
+	line "in triplicate."
+	para "Triplicate is also"
+	line "a business."
 	done
 
-AxiomPlaza1Townie2:
-	jumptextfaceplayer AxiomPlaza1Townie2Text
+AxiomPlaza1Persona2:
+	jumptextfaceplayer AxiomPlaza1Persona2Text
 
-AxiomPlaza1Townie2Text:
-	text "I requested a"
-	line "BERRY. I received"
-	para "a form. The form"
-	line "is also a berry."
+AxiomPlaza1Persona2Text:
+	text "MATCHMAKER MABEL:"
+	line "I am a matchmaker."
+	para "I match people."
+	line "Also tasks. Also"
+	para "debts. Do you have"
+	line "any debts?"
 	done
 
-AxiomPlaza1Townie3:
-	jumptextfaceplayer AxiomPlaza1Townie3Text
+AxiomPlaza1Persona3:
+	jumptextfaceplayer AxiomPlaza1Persona3Text
 
-AxiomPlaza1Townie3Text:
-	text "The shop with a"
-	line "clerk and a couch"
-	para "is real. The couch"
-	line "is audited weekly."
+AxiomPlaza1Persona3Text:
+	text "DR HALVORSEN: A"
+	line "wellness check. I"
+	para "take your pulse. I"
+	line "keep your pulse."
+	para "For safekeeping."
 	done
 
-AxiomPlaza1Townie4:
-	jumptextfaceplayer AxiomPlaza1Townie4Text
+AxiomPlaza1Persona5:
+	jumptextfaceplayer AxiomPlaza1Persona5Text
 
-AxiomPlaza1Townie4Text:
-	text "Please queue here."
-	line "Queue for the"
-	para "queue, then queue."
-	line "Thank you for"
-	para "queueing."
+AxiomPlaza1Persona5Text:
+	text "COURIER DASH: I"
+	line "deliver. Just"
+	para "point and sign. I"
+	line "do not know what"
+	para "is inside. Do not"
+	line "ask. It ticks."
 	done
 
-AxiomPlaza1Townie5:
-	jumptextfaceplayer AxiomPlaza1Townie5Text
+AxiomPlaza1Persona7:
+	jumptextfaceplayer AxiomPlaza1Persona7Text
 
-AxiomPlaza1Townie5Text:
-	text "We are all equal"
-	line "before the"
-	para "algorithm. The"
-	line "algorithm is not"
-	para "equal to us."
+AxiomPlaza1Persona7Text:
+	text "PROFESSOR AXIOM:"
+	line "Every system is"
+	para "built on axioms."
+	line "This city is built"
+	para "on three. Two are"
+	line "unspoken. One is a"
+	para "typo."
 	done
 
 AxiomPlaza1Townie6:
 	jumptextfaceplayer AxiomPlaza1Townie6Text
 
 AxiomPlaza1Townie6Text:
-	text "Statistics say"
-	line "nine of ten"
-	para "citizens are"
-	line "satisfied. The"
-	para "tenth is being"
-	line "resolved."
+	text "Please queue here."
+	line "Queue for the"
+	para "queue, then queue."
+	line "Thank you for"
+	para "queueing."
 	done
 
 AxiomPlaza1SabbahBearerScript:
@@ -456,13 +462,13 @@ AxiomPlaza1_MapEvents:
 	def_object_events
 	object_event  7, 19, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateA, -1
 	object_event  8, 19, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateB, -1
-	object_event 14, 23, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Giver, -1
-	object_event 12, 12, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie1, -1
-	object_event 18, 27, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie2, -1
-	object_event  2, 15, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie3, -1
-	object_event 16, 21, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie4, -1
-	object_event  8, 26, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie5, -1
-	object_event  2,  6, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie6, -1
+	object_event 14, 23, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Giver, -1
+	object_event 12, 12, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona0, -1
+	object_event 18, 27, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona2, -1
+	object_event  2, 15, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona3, -1
+	object_event 16, 21, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona5, -1
+	object_event  8, 26, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona7, -1
+	object_event  2,  6, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie6, -1
 	object_event  9, 25, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahBearerScript, -1
 	object_event 11, 20, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Duel, -1
 

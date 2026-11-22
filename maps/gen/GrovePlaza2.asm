@@ -89,67 +89,72 @@ GrovePlaza2GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-GrovePlaza2Townie1:
-	jumptextfaceplayer GrovePlaza2Townie1Text
+GrovePlaza2Persona1:
+	jumptextfaceplayer GrovePlaza2Persona1Text
 
-GrovePlaza2Townie1Text:
-	text "I'd tell you more,"
-	line "but my tongue is"
-	para "on loan to the"
-	line "council."
+GrovePlaza2Persona1Text:
+	text "GREG: That"
+	line "chanting is not"
+	para "me. That chanting"
+	line "is the wind. The"
+	para "wind is called"
+	line "Greg. It is me."
 	done
 
-GrovePlaza2Townie2:
-	jumptextfaceplayer GrovePlaza2Townie2Text
+GrovePlaza2Persona2:
+	jumptextfaceplayer GrovePlaza2Persona2Text
 
-GrovePlaza2Townie2Text:
-	text "I came for inner"
-	line "peace. I stayed"
-	para "for the outer"
-	line "debts."
+GrovePlaza2Persona2Text:
+	text "MAMA FERN: The"
+	line "soup is not vegan."
+	para "A goat fell in. We"
+	line "honored it."
 	done
 
-GrovePlaza2Townie3:
-	jumptextfaceplayer GrovePlaza2Townie3Text
+GrovePlaza2Persona4:
+	jumptextfaceplayer GrovePlaza2Persona4Text
 
-GrovePlaza2Townie3Text:
-	text "My Berry is"
-	line "organic. Don't"
-	para "tell the fruit."
-	line "They're all"
-	para "organic. It was a"
-	line "quiet crime."
+GrovePlaza2Persona4Text:
+	text "OLD HAZEL: I"
+	line "remember when this"
+	para "was a farm. Then a"
+	line "commune. Then a"
+	para "cause. Then a"
+	line "lawsuit."
 	done
 
-GrovePlaza2Townie4:
-	jumptextfaceplayer GrovePlaza2Townie4Text
+GrovePlaza2Persona6:
+	jumptextfaceplayer GrovePlaza2Persona6Text
 
-GrovePlaza2Townie4Text:
-	text "Pay attention to"
-	line "the fountain's"
-	para "name. It's a word,"
-	line "and it's also a"
-	para "threat."
+GrovePlaza2Persona6Text:
+	text "SKEPTIC MORROW: A"
+	line "commune is just a"
+	para "cult with better"
+	line "snacks. The snacks"
+	para "are very good."
 	done
 
 GrovePlaza2Townie5:
 	jumptextfaceplayer GrovePlaza2Townie5Text
 
 GrovePlaza2Townie5Text:
-	text "Held items are"
-	line "shared here. By"
-	para "which I mean"
-	line "they're taken."
+	text "Everyone here is"
+	line "equal. Some of us"
+	para "are more equal"
+	line "because we hold"
+	para "the key to the"
+	line "pantry."
 	done
 
 GrovePlaza2Townie6:
 	jumptextfaceplayer GrovePlaza2Townie6Text
 
 GrovePlaza2Townie6Text:
-	text "There's no money"
-	line "in the commune. We"
-	para "have vibes. Vibes"
-	line "are rationed."
+	text "The Heart of the"
+	line "Commune is a"
+	para "Pokemon Center."
+	line "The heart has"
+	para "beds."
 	done
 
 GrovePlaza2AmphBlockScript:
@@ -342,13 +347,13 @@ GrovePlaza2_MapEvents:
 	def_object_events
 	object_event 25, 14, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2DebateA, -1
 	object_event 26, 14, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2DebateB, -1
-	object_event 27,  7, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Giver, -1
-	object_event 24,  8, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie1, -1
-	object_event  5, 20, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie2, -1
-	object_event 16, 24, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie3, -1
-	object_event 22, 24, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie4, -1
-	object_event 21, 16, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie5, -1
-	object_event 18, 24, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie6, -1
+	object_event 27,  7, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Giver, -1
+	object_event 24,  8, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona1, -1
+	object_event  5, 20, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona2, -1
+	object_event 16, 24, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona4, -1
+	object_event 22, 24, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona6, -1
+	object_event 21, 16, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie5, -1
+	object_event 18, 24, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie6, -1
 	object_event  7, 22, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Rival2RivalScript, EVENT_NAMED_RIVAL2_DONE
 	object_event 24, 14, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Duel, -1
 

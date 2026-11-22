@@ -16,11 +16,10 @@ AxiomStreet7Hermit:
 	jumptextfaceplayer AxiomStreet7HermitText
 
 AxiomStreet7HermitText:
-	text "I have proven that"
-	line "I exist. It took"
-	para "six months. The"
-	line "proof expired on"
-	para "Tuesday."
+	text "The glitch in the"
+	line "system is me."
+	para "Please don't patch"
+	line "me."
 	done
 
 AxiomStreet7SeenText:

@@ -13,11 +13,11 @@ TitheBendB9Hermit:
 	jumptextfaceplayer TitheBendB9HermitText
 
 TitheBendB9HermitText:
-	text "I've lived here"
-	line "nine years. Nobody"
-	para "has come to arrest"
-	line "me. I find that"
-	para "deeply insulting."
+	text "Shh. The trainers"
+	line "can't see you when"
+	para "you sit down. I"
+	line "have been sitting"
+	para "down since March."
 	done
 
 TitheBendB9_MapEvents:

@@ -16,11 +16,11 @@ TitheStreet9Hermit:
 	jumptextfaceplayer TitheStreet9HermitText
 
 TitheStreet9HermitText:
-	text "I've lived here"
-	line "nine years. Nobody"
-	para "has come to arrest"
-	line "me. I find that"
-	para "deeply insulting."
+	text "I used to be a"
+	line "loan officer. Now"
+	para "I'm a loan."
+	line "Somebody owes me"
+	para "an apology."
 	done
 
 TitheStreet9SeenText:

@@ -210,7 +210,17 @@ def emit_story(w):
     write("data/hardcore/story_bosses.asm", "\n".join(o) + "\n")
 
 
+def emit_obj_areas(w):
+    """One byte for every map of the Purgatorio group (in map number order): the area (0..4) whose NPC colours its fighters wear, or 255 for
+    the vanilla set.  Only the five area groups have their own object palettes, the caves of the hollows and the vault look this up."""
+    o = [HEADER, "HC_PurgObjAreas:"]
+    for m in w.groups["PURG"].maps:
+        o.append(f"\tdb {getattr(m, 'obj_area', 255)} ; {m.name}")
+    write("data/hardcore/purg_obj_areas.asm", "\n".join(o) + "\n")
+
+
 def emit_all(w):
+    emit_obj_areas(w)
     emit_constants(w)
     emit_lists(w)
     emit_data(w)

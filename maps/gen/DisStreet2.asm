@@ -16,12 +16,9 @@ DisStreet2Hermit:
 	jumptextfaceplayer DisStreet2HermitText
 
 DisStreet2HermitText:
-	text "I found a corner"
-	line "nobody has"
-	para "tortured yet. I"
-	line "call it home."
-	para "Don't tell"
-	line "management."
+	text "Be careful. The"
+	line "trainers are the"
+	para "nice ones."
 	done
 
 DisStreet2SeenText:

@@ -16,12 +16,12 @@ TitheStreet1Hermit:
 	jumptextfaceplayer TitheStreet1HermitText
 
 TitheStreet1HermitText:
-	text "I left the city to"
-	line "escape the tithe."
-	para "The trees also"
-	line "want ten percent."
-	para "Of what, they"
-	line "won't say."
+	text "The Church says"
+	line "the poor shall"
+	para "inherit the earth."
+	line "I am in line. The"
+	para "earth is behind a"
+	line "lot of paperwork."
 	done
 
 TitheStreet1SeenText:

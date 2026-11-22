@@ -16,11 +16,12 @@ TitheStreet12Hermit:
 	jumptextfaceplayer TitheStreet12HermitText
 
 TitheStreet12HermitText:
-	text "The pond is clean."
-	line "That is because"
-	para "I've been drinking"
-	line "all the dirty"
-	para "bits."
+	text "The Church says"
+	line "the poor shall"
+	para "inherit the earth."
+	line "I am in line. The"
+	para "earth is behind a"
+	line "lot of paperwork."
 	done
 
 TitheStreet12SeenText:

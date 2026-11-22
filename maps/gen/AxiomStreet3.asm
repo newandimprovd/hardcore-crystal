@@ -16,10 +16,11 @@ AxiomStreet3Hermit:
 	jumptextfaceplayer AxiomStreet3HermitText
 
 AxiomStreet3HermitText:
-	text "The glitch in the"
-	line "system is me."
-	para "Please don't patch"
-	line "me."
+	text "I escaped the"
+	line "Registry. I'm no"
+	para "longer a number."
+	line "I'm a letter. The"
+	para "letter is Q."
 	done
 
 AxiomStreet3SeenText:

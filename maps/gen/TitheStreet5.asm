@@ -16,11 +16,11 @@ TitheStreet5Hermit:
 	jumptextfaceplayer TitheStreet5HermitText
 
 TitheStreet5HermitText:
-	text "The pond is clean."
-	line "That is because"
-	para "I've been drinking"
-	line "all the dirty"
-	para "bits."
+	text "Take the roots."
+	line "Take the berries."
+	para "Take whatever. I'm"
+	line "not the"
+	para "government."
 	done
 
 TitheStreet5SeenText:

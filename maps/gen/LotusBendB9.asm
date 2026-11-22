@@ -13,10 +13,11 @@ LotusBendB9Hermit:
 	jumptextfaceplayer LotusBendB9HermitText
 
 LotusBendB9HermitText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+	text "Everyone says the"
+	line "sea is calming."
+	para "The sea is a bully"
+	line "with good"
+	para "lighting."
 	done
 
 LotusBendB9_MapEvents:

@@ -85,48 +85,52 @@ LotusPlaza4GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-LotusPlaza4Townie1:
-	jumptextfaceplayer LotusPlaza4Townie1Text
+LotusPlaza4Persona1:
+	jumptextfaceplayer LotusPlaza4Persona1Text
 
-LotusPlaza4Townie1Text:
-	text "Somebody is"
-	line "selling LEFTOVERS"
-	para "on the beach. It"
-	line "was already sold"
-	para "twice."
+LotusPlaza4Persona1Text:
+	text "LIFEGUARD KAI: I"
+	line "once saved a man."
+	para "He thanked me."
+	line "Then he went back"
+	para "in. I do not"
+	line "understand people."
 	done
 
-LotusPlaza4Townie2:
-	jumptextfaceplayer LotusPlaza4Townie2Text
+LotusPlaza4Persona2:
+	jumptextfaceplayer LotusPlaza4Persona2Text
 
-LotusPlaza4Townie2Text:
-	text "Held items are"
-	line "like cocktails."
-	para "You carry them and"
-	line "nothing happens"
-	para "until it does."
+LotusPlaza4Persona2Text:
+	text "TOURIST DONNA: I"
+	line "have a very good"
+	para "review prepared."
+	line "Five stars. The"
+	para "sixth is for the"
+	line "screaming."
 	done
 
-LotusPlaza4Townie3:
-	jumptextfaceplayer LotusPlaza4Townie3Text
+LotusPlaza4Persona3:
+	jumptextfaceplayer LotusPlaza4Persona3Text
 
-LotusPlaza4Townie3Text:
-	text "A wild Pokemon"
-	line "asked me what I"
-	para "did for a living."
-	line "I lied."
+LotusPlaza4Persona3Text:
+	text "BARTENDER JOSE: I"
+	line "make a drink"
+	para "called The End. It"
+	line "tastes of coconut"
+	para "and a small,"
+	line "polite despair."
 	done
 
-LotusPlaza4Townie4:
-	jumptextfaceplayer LotusPlaza4Townie4Text
+LotusPlaza4Persona5:
+	jumptextfaceplayer LotusPlaza4Persona5Text
 
-LotusPlaza4Townie4Text:
-	text "Welcome to the"
-	line "Lotus Coast! The"
-	para "all-inclusive plan"
-	line "includes"
-	para "everything but a"
-	line "reason."
+LotusPlaza4Persona5Text:
+	text "BELLHOP TEDDY: I"
+	line "carry your bags. I"
+	para "do not carry your"
+	line "problems. Those"
+	para "are in the other"
+	line "lobby."
 	done
 
 LotusPlaza4Townie5:
@@ -434,13 +438,13 @@ LotusPlaza4_MapEvents:
 	def_object_events
 	object_event  8, 15, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateA, -1
 	object_event  9, 15, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateB, -1
-	object_event 13, 11, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Giver, -1
-	object_event 25, 17, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie1, -1
-	object_event 16, 10, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie2, -1
-	object_event 17, 22, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie3, -1
-	object_event 12,  8, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie4, -1
-	object_event 10, 23, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie5, -1
-	object_event 27,  7, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie6, -1
+	object_event 13, 11, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Giver, -1
+	object_event 25, 17, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona1, -1
+	object_event 16, 10, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona2, -1
+	object_event 17, 22, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona3, -1
+	object_event 12,  8, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona5, -1
+	object_event 10, 23, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie5, -1
+	object_event 27,  7, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie6, -1
 	object_event 11, 20, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Cioran2BearerScript, -1
 	object_event 10, 21, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Duel, -1
 

@@ -16,11 +16,10 @@ AxiomStreet9Hermit:
 	jumptextfaceplayer AxiomStreet9HermitText
 
 AxiomStreet9HermitText:
-	text "I escaped the"
-	line "Registry. I'm no"
-	para "longer a number."
-	line "I'm a letter. The"
-	para "letter is Q."
+	text "Every axiom here"
+	line "is true until it"
+	para "becomes"
+	line "inconvenient."
 	done
 
 AxiomStreet9SeenText:

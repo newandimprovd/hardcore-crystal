@@ -87,67 +87,68 @@ DisPlaza4GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-DisPlaza4Townie1:
-	jumptextfaceplayer DisPlaza4Townie1Text
+DisPlaza4Persona1:
+	jumptextfaceplayer DisPlaza4Persona1Text
 
-DisPlaza4Townie1Text:
-	text "A held item is a"
-	line "promise with a"
-	para "handle. The handle"
-	line "is hot."
+DisPlaza4Persona1Text:
+	text "IMP SNIX: I am a"
+	line "very good"
+	para "influence. I only"
+	line "encourage sensible"
+	para "mistakes."
 	done
 
-DisPlaza4Townie2:
-	jumptextfaceplayer DisPlaza4Townie2Text
+DisPlaza4Persona2:
+	jumptextfaceplayer DisPlaza4Persona2Text
 
-DisPlaza4Townie2Text:
-	text "I got a pamphlet"
-	line "called 'How to"
-	para "Cope.' It was one"
-	line "page. It said"
-	para "'Don't.'"
+DisPlaza4Persona2Text:
+	text "FIRE EATER CINDER:"
+	line "I once ate a"
+	para "candle. It was the"
+	line "most honest thing"
+	para "I have swallowed."
 	done
 
-DisPlaza4Townie3:
-	jumptextfaceplayer DisPlaza4Townie3Text
+DisPlaza4Persona3:
+	jumptextfaceplayer DisPlaza4Persona3Text
 
-DisPlaza4Townie3Text:
-	text "Read the fountain"
-	line "plaque. It's the"
-	para "only honest sign"
-	line "in the city."
+DisPlaza4Persona3Text:
+	text "JUDGE ROTH: I"
+	line "sentenced a man to"
+	para "forever. He asked"
+	line "what for. I said"
+	para "for asking."
 	done
 
-DisPlaza4Townie4:
-	jumptextfaceplayer DisPlaza4Townie4Text
+DisPlaza4Persona5:
+	jumptextfaceplayer DisPlaza4Persona5Text
 
-DisPlaza4Townie4Text:
-	text "The Pokemon Center"
-	line "is a temporary"
-	para "measure."
-	line "Everything here"
-	para "is."
+DisPlaza4Persona5Text:
+	text "WARDEN KROLL:"
+	line "Nobody has"
+	para "escaped. Nobody"
+	line "has tried. It is a"
+	para "record. I am very"
+	line "proud."
 	done
 
 DisPlaza4Townie5:
 	jumptextfaceplayer DisPlaza4Townie5Text
 
 DisPlaza4Townie5Text:
-	text "Please take a"
-	line "number. We lost"
-	para "the numbers."
-	line "Please take a"
-	para "different one."
+	text "We have a union."
+	line "It meets every"
+	para "Never."
 	done
 
 DisPlaza4Townie6:
 	jumptextfaceplayer DisPlaza4Townie6Text
 
 DisPlaza4Townie6Text:
-	text "The nice ones work"
-	line "in the shop. They"
-	para "also sign the"
-	line "paperwork."
+	text "A held item is a"
+	line "promise with a"
+	para "handle. The handle"
+	line "is hot."
 	done
 
 DisPlaza4Duel:
@@ -244,12 +245,12 @@ DisPlaza4_MapEvents:
 	def_object_events
 	object_event 25, 19, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4DebateA, -1
 	object_event 26, 19, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4DebateB, -1
-	object_event 20, 12, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Giver, -1
-	object_event 28, 19, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie1, -1
-	object_event 28, 14, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie2, -1
-	object_event  5, 12, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie3, -1
-	object_event 24, 12, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie4, -1
-	object_event  5, 13, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie5, -1
-	object_event  5, 20, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie6, -1
+	object_event 20, 12, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza4Giver, -1
+	object_event 28, 19, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona1, -1
+	object_event 28, 14, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona2, -1
+	object_event  5, 12, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona3, -1
+	object_event 24, 12, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona5, -1
+	object_event  5, 13, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie5, -1
+	object_event  5, 20, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie6, -1
 	object_event 24, 24, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4Duel, -1
 

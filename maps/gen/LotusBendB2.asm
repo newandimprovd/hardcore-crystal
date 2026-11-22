@@ -13,11 +13,10 @@ LotusBendB2Hermit:
 	jumptextfaceplayer LotusBendB2HermitText
 
 LotusBendB2HermitText:
-	text "I saw a trainer"
-	line "yawn mid-attack."
-	para "It was the most"
-	line "honest violence I"
-	para "have ever seen."
+	text "The sunset here is"
+	line "wonderful. It"
+	para "reminds me of the"
+	line "end of everything."
 	done
 
 LotusBendB2_MapEvents:

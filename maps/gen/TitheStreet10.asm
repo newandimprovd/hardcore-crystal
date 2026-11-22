@@ -13,11 +13,12 @@ TitheStreet10Hermit:
 	jumptextfaceplayer TitheStreet10HermitText
 
 TitheStreet10HermitText:
-	text "I've lived here"
-	line "nine years. Nobody"
-	para "has come to arrest"
-	line "me. I find that"
-	para "deeply insulting."
+	text "I have been"
+	line "praying for rain."
+	para "It rained. On the"
+	line "neighbor. I have"
+	para "been praying for"
+	line "him ever since."
 	done
 
 TitheStreet10PurgFlagScript:

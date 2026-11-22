@@ -13,11 +13,10 @@ AxiomBendB8Hermit:
 	jumptextfaceplayer AxiomBendB8HermitText
 
 AxiomBendB8HermitText:
-	text "I have proven that"
-	line "I exist. It took"
-	para "six months. The"
-	line "proof expired on"
-	para "Tuesday."
+	text "I deleted myself"
+	line "from the registry."
+	para "Now I am free. And"
+	line "also uninsured."
 	done
 
 AxiomBendB8_MapEvents:

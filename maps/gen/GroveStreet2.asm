@@ -16,11 +16,12 @@ GroveStreet2Hermit:
 	jumptextfaceplayer GroveStreet2HermitText
 
 GroveStreet2HermitText:
-	text "The mushrooms here"
-	line "talk. Mostly they"
-	para "say 'sell'. I"
-	line "don't know what."
-	para "I'm scared."
+	text "The trainers out"
+	line "there are so"
+	para "friendly. They"
+	line "shout 'peace' and"
+	para "then try to kill"
+	line "you."
 	done
 
 GroveStreet2SeenText:

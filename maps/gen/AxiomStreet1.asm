@@ -13,11 +13,11 @@ AxiomStreet1Hermit:
 	jumptextfaceplayer AxiomStreet1HermitText
 
 AxiomStreet1HermitText:
-	text "The machines here"
-	line "are polite. They"
-	para "kill you with a"
-	line "smile and a"
-	para "receipt."
+	text "I have proven that"
+	line "I exist. It took"
+	para "six months. The"
+	line "proof expired on"
+	para "Tuesday."
 	done
 
 AxiomStreet1SeenText:

@@ -79,31 +79,60 @@ DisPlaza2GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-DisPlaza2Townie1:
-	jumptextfaceplayer DisPlaza2Townie1Text
+DisPlaza2Persona1:
+	jumptextfaceplayer DisPlaza2Persona1Text
 
-DisPlaza2Townie1Text:
-	text "Read the fountain"
-	line "plaque. It's the"
-	para "only honest sign"
-	line "in the city."
+DisPlaza2Persona1Text:
+	text "IMP SNIX: Hee hee."
+	line "I sold your name"
+	para "to a man with a"
+	line "hat. It is a good"
+	para "name. He says"
+	line "thank you."
 	done
 
-DisPlaza2Townie2:
-	jumptextfaceplayer DisPlaza2Townie2Text
+DisPlaza2Persona2:
+	jumptextfaceplayer DisPlaza2Persona2Text
 
-DisPlaza2Townie2Text:
-	text "The Pokemon Center"
-	line "is a temporary"
-	para "measure."
-	line "Everything here"
-	para "is."
+DisPlaza2Persona2Text:
+	text "FIRE EATER CINDER:"
+	line "The flames here"
+	para "are gentle."
+	line "Compared to"
+	para "dinner."
 	done
 
-DisPlaza2Townie3:
-	jumptextfaceplayer DisPlaza2Townie3Text
+DisPlaza2Persona4:
+	jumptextfaceplayer DisPlaza2Persona4Text
 
-DisPlaza2Townie3Text:
+DisPlaza2Persona4Text:
+	text "HAG BERTA: A"
+	line "potion for you? Of"
+	para "course. Everyone"
+	line "needs a little"
+	para "tonic. Mostly the"
+	line "kind that does"
+	para "nothing."
+	done
+
+DisPlaza2Persona6:
+	jumptextfaceplayer DisPlaza2Persona6Text
+
+DisPlaza2Persona6Text:
+	text "JESTER JAPE: Why"
+	line "did the sinner"
+	para "cross the river?"
+	line "Because the"
+	para "ferryman was a"
+	line "thief. That is the"
+	para "joke. The sinner"
+	line "is the punchline."
+	done
+
+DisPlaza2Townie5:
+	jumptextfaceplayer DisPlaza2Townie5Text
+
+DisPlaza2Townie5Text:
 	text "The fountain is"
 	line "boiling lead. It's"
 	para "called mineral"
@@ -111,35 +140,14 @@ DisPlaza2Townie3Text:
 	para "here is."
 	done
 
-DisPlaza2Townie4:
-	jumptextfaceplayer DisPlaza2Townie4Text
-
-DisPlaza2Townie4Text:
-	text "Take a BERRY. It's"
-	line "the only thing"
-	para "here not on fire."
-	line "Do not ask why."
-	done
-
-DisPlaza2Townie5:
-	jumptextfaceplayer DisPlaza2Townie5Text
-
-DisPlaza2Townie5Text:
-	text "Sorry about the"
-	line "heat. We tried air"
-	para "conditioning. It"
-	line "just made the"
-	para "screaming echo."
-	done
-
 DisPlaza2Townie6:
 	jumptextfaceplayer DisPlaza2Townie6Text
 
 DisPlaza2Townie6Text:
-	text "I'm in sales."
-	line "Don't ask what I"
-	para "sell. Don't ask"
-	line "who buys."
+	text "Read the fountain"
+	line "plaque. It's the"
+	para "only honest sign"
+	line "in the city."
 	done
 
 DisPlaza2Duel:
@@ -235,12 +243,12 @@ DisPlaza2_MapEvents:
 	def_object_events
 	object_event 15, 12, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza2DebateA, -1
 	object_event 16, 12, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza2DebateB, -1
-	object_event  8,  7, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza2Giver, -1
-	object_event 20, 17, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza2Townie1, -1
-	object_event 15, 16, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza2Townie2, -1
-	object_event  9,  7, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza2Townie3, -1
-	object_event 24, 11, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza2Townie4, -1
-	object_event  3, 13, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza2Townie5, -1
-	object_event 25, 14, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza2Townie6, -1
+	object_event  8,  7, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza2Giver, -1
+	object_event 20, 17, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza2Persona1, -1
+	object_event 15, 16, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza2Persona2, -1
+	object_event  9,  7, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza2Persona4, -1
+	object_event 24, 11, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza2Persona6, -1
+	object_event  3, 13, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza2Townie5, -1
+	object_event 25, 14, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza2Townie6, -1
 	object_event 14, 13, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza2Duel, -1
 

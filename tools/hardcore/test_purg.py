@@ -204,6 +204,9 @@ def main():
         if wk.busy():
             seen.append(1)
             break
+    for _ in range(8):  # the board is a list now (alpha 3.2): B leaves it
+        t.pb.button("b", 4)
+        t.tick(30)
     wk.settle()
     check("CorkboardScript runs and ends", bool(seen) and not wk.busy())
 

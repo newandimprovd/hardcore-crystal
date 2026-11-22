@@ -16,9 +16,11 @@ LotusStreet9Hermit:
 	jumptextfaceplayer LotusStreet9HermitText
 
 LotusStreet9HermitText:
-	text "The cocktails are"
-	line "free. Meaning is"
-	para "extra."
+	text "I saw a trainer"
+	line "yawn mid-attack."
+	para "It was the most"
+	line "honest violence I"
+	para "have ever seen."
 	done
 
 LotusStreet9SeenText:

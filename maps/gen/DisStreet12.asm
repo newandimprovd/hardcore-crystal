@@ -16,9 +16,10 @@ DisStreet12Hermit:
 	jumptextfaceplayer DisStreet12HermitText
 
 DisStreet12HermitText:
-	text "Be careful. The"
-	line "trainers are the"
-	para "nice ones."
+	text "I'm not dead. I'm"
+	line "just in the wrong"
+	para "queue. It's been"
+	line "forty years."
 	done
 
 DisStreet12SeenText:

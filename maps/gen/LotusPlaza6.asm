@@ -76,68 +76,71 @@ LotusPlaza6GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-LotusPlaza6Townie1:
-	jumptextfaceplayer LotusPlaza6Townie1Text
+LotusPlaza6Persona1:
+	jumptextfaceplayer LotusPlaza6Persona1Text
 
-LotusPlaza6Townie1Text:
-	text "Held items are"
-	line "like cocktails."
-	para "You carry them and"
-	line "nothing happens"
-	para "until it does."
+LotusPlaza6Persona1Text:
+	text "LIFEGUARD KAI: The"
+	line "sea is not"
+	para "dangerous. The sea"
+	line "is honest. It only"
+	para "does what it does."
 	done
 
-LotusPlaza6Townie2:
-	jumptextfaceplayer LotusPlaza6Townie2Text
+LotusPlaza6Persona2:
+	jumptextfaceplayer LotusPlaza6Persona2Text
 
-LotusPlaza6Townie2Text:
-	text "Read the fountain"
-	line "plaque. It's the"
-	para "most work anyone"
-	line "does here."
+LotusPlaza6Persona2Text:
+	text "TOURIST DONNA: I"
+	line "think I live here"
+	para "now. The towels"
+	line "keep arriving. I"
+	para "keep using them."
 	done
 
-LotusPlaza6Townie3:
-	jumptextfaceplayer LotusPlaza6Townie3Text
+LotusPlaza6Persona3:
+	jumptextfaceplayer LotusPlaza6Persona3Text
 
-LotusPlaza6Townie3Text:
-	text "Welcome to the"
-	line "Lotus Coast! The"
-	para "all-inclusive plan"
-	line "includes"
-	para "everything but a"
-	line "reason."
+LotusPlaza6Persona3Text:
+	text "BARTENDER JOSE: I"
+	line "have run out of"
+	para "rum. I am serving"
+	line "the sea. It is the"
+	para "same strength."
 	done
 
-LotusPlaza6Townie4:
-	jumptextfaceplayer LotusPlaza6Townie4Text
+LotusPlaza6Persona6:
+	jumptextfaceplayer LotusPlaza6Persona6Text
 
-LotusPlaza6Townie4Text:
-	text "I'd give you a"
-	line "BERRY but I'm on"
-	para "holiday. A BERRY"
-	line "holiday. It's not"
-	para "fair."
+LotusPlaza6Persona6Text:
+	text "THE FORGOTTEN: I"
+	line "keep trying to"
+	para "leave. The door"
+	line "agrees. The hall"
+	para "does not."
 	done
 
-LotusPlaza6Townie5:
-	jumptextfaceplayer LotusPlaza6Townie5Text
+LotusPlaza6Persona7:
+	jumptextfaceplayer LotusPlaza6Persona7Text
 
-LotusPlaza6Townie5Text:
-	text "A wild Pokemon"
-	line "asked me what I"
-	para "did for a living."
-	line "I lied."
+LotusPlaza6Persona7Text:
+	text "DR LOTUS: I have"
+	line "diagnosed the"
+	para "resort. It is a"
+	line "very large"
+	para "patient. It would"
+	line "like to be put to"
+	para "sleep."
 	done
 
 LotusPlaza6Townie6:
 	jumptextfaceplayer LotusPlaza6Townie6Text
 
 LotusPlaza6Townie6Text:
-	text "I booked a week."
-	line "It's been four"
-	para "years. Checkout is"
-	line "a state of mind."
+	text "The tide brought a"
+	line "very nice item. It"
+	para "also brought a"
+	line "court order."
 	done
 
 LotusPlaza6Steiner4DuelScript:
@@ -388,13 +391,13 @@ LotusPlaza6_MapEvents:
 	def_object_events
 	object_event 10, 19, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6DebateA, -1
 	object_event 11, 19, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6DebateB, -1
-	object_event  3, 21, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Giver, -1
-	object_event 16, 26, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie1, -1
-	object_event 11, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie2, -1
-	object_event 12, 20, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie3, -1
-	object_event 11, 17, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie4, -1
-	object_event 10, 15, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie5, -1
-	object_event  4, 14, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie6, -1
+	object_event  3, 21, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Giver, -1
+	object_event 16, 26, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Persona1, -1
+	object_event 11, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Persona2, -1
+	object_event 12, 20, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Persona3, -1
+	object_event 11, 17, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Persona6, -1
+	object_event 10, 15, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Persona7, -1
+	object_event  4, 14, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Townie6, -1
 	object_event  2, 23, SPRITE_HC_STEINER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Steiner4DuelScript, -1
 	object_event 10, 22, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza6Duel, -1
 

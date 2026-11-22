@@ -13,10 +13,9 @@ DisBendB12Hermit:
 	jumptextfaceplayer DisBendB12HermitText
 
 DisBendB12HermitText:
-	text "I'm not dead. I'm"
-	line "just in the wrong"
-	para "queue. It's been"
-	line "forty years."
+	text "The river is not"
+	line "water. It's"
+	para "deadlines."
 	done
 
 DisBendB12_MapEvents:

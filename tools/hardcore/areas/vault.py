@@ -44,5 +44,6 @@ def build(w, roster, rng):
         link(prev, m.warps_in)
         if m.warps_out is not None:
             prev = m.warps_out
+        m.obj_area = 2  # the colours of Axiom (the engine reads it from data/hardcore/purg_obj_areas.asm): the fighters are Axiom classes
         g.add(m)
         verify(m, (info["entry"][0] + 1, info["entry"][1]))

@@ -74,63 +74,72 @@ AxiomPlaza3GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-AxiomPlaza3Townie1:
-	jumptextfaceplayer AxiomPlaza3Townie1Text
+AxiomPlaza3Persona0:
+	jumptextfaceplayer AxiomPlaza3Persona0Text
 
-AxiomPlaza3Townie1Text:
-	text "LEFTOVERS:"
-	line "certified, tested,"
-	para "taxed. In that"
-	line "order, usually."
+AxiomPlaza3Persona0Text:
+	text "CLERK UNIT 7: Your"
+	line "file has been"
+	para "located. It is"
+	line "inside another"
+	para "file. That file is"
+	line "on fire. Proceed."
 	done
 
-AxiomPlaza3Townie2:
-	jumptextfaceplayer AxiomPlaza3Townie2Text
+AxiomPlaza3Persona3:
+	jumptextfaceplayer AxiomPlaza3Persona3Text
 
-AxiomPlaza3Townie2Text:
-	text "I'm just a regular"
-	line "citizen. Ignore"
-	para "the antenna."
+AxiomPlaza3Persona3Text:
+	text "DR HALVORSEN: I"
+	line "have a theory"
+	para "about death. It"
+	line "requires a"
+	para "volunteer. You"
+	line "have the right"
+	para "shape."
 	done
 
-AxiomPlaza3Townie3:
-	jumptextfaceplayer AxiomPlaza3Townie3Text
+AxiomPlaza3Persona4:
+	jumptextfaceplayer AxiomPlaza3Persona4Text
 
-AxiomPlaza3Townie3Text:
-	text "Citizen, your face"
-	line "has been"
-	para "recognized. It is"
-	line "mostly in the"
-	para "clear."
+AxiomPlaza3Persona4Text:
+	text "SERF MILO: They"
+	line "say we are free. I"
+	para "am free to choose"
+	line "which hours I"
+	para "work. Both."
 	done
 
-AxiomPlaza3Townie4:
-	jumptextfaceplayer AxiomPlaza3Townie4Text
+AxiomPlaza3Persona6:
+	jumptextfaceplayer AxiomPlaza3Persona6Text
 
-AxiomPlaza3Townie4Text:
-	text "I once saw a bug"
-	line "in the system. It"
-	para "saw me too. We"
-	line "don't talk about"
-	para "it."
+AxiomPlaza3Persona6Text:
+	text "GUARD UNIT 12: I"
+	line "guard a door. I"
+	para "have never opened"
+	line "the door. It is a"
+	para "good job. I"
+	line "recommend it."
 	done
 
-AxiomPlaza3Townie5:
-	jumptextfaceplayer AxiomPlaza3Townie5Text
+AxiomPlaza3Persona7:
+	jumptextfaceplayer AxiomPlaza3Persona7Text
 
-AxiomPlaza3Townie5Text:
-	text "Please enjoy the"
-	line "mandatory leisure."
+AxiomPlaza3Persona7Text:
+	text "PROFESSOR AXIOM: I"
+	line "proved the city is"
+	para "consistent. Then I"
+	line "was told to stop."
+	para "That is how I know"
+	line "it is not."
 	done
 
 AxiomPlaza3Townie6:
 	jumptextfaceplayer AxiomPlaza3Townie6Text
 
 AxiomPlaza3Townie6Text:
-	text "A wild Pokemon"
-	line "asked for ID. It"
-	para "was a very good"
-	line "wild Pokemon."
+	text "Please enjoy the"
+	line "mandatory leisure."
 	done
 
 AxiomPlaza3Duel:
@@ -228,12 +237,12 @@ AxiomPlaza3_MapEvents:
 	def_object_events
 	object_event 24, 17, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3DebateA, -1
 	object_event 25, 17, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3DebateB, -1
-	object_event 18, 13, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Giver, -1
-	object_event 10, 15, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie1, -1
-	object_event 18,  8, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie2, -1
-	object_event 13, 17, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie3, -1
-	object_event 24, 10, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie4, -1
-	object_event 20, 17, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie5, -1
-	object_event 26,  6, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie6, -1
+	object_event 18, 13, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Giver, -1
+	object_event 10, 15, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Persona0, -1
+	object_event 18,  8, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Persona3, -1
+	object_event 13, 17, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Persona4, -1
+	object_event 24, 10, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Persona6, -1
+	object_event 20, 17, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Persona7, -1
+	object_event 26,  6, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Townie6, -1
 	object_event 10, 10, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza3Duel, -1
 

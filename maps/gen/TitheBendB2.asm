@@ -13,11 +13,11 @@ TitheBendB2Hermit:
 	jumptextfaceplayer TitheBendB2HermitText
 
 TitheBendB2HermitText:
-	text "I've lived here"
-	line "nine years. Nobody"
-	para "has come to arrest"
-	line "me. I find that"
-	para "deeply insulting."
+	text "The pond is clean."
+	line "That is because"
+	para "I've been drinking"
+	line "all the dirty"
+	para "bits."
 	done
 
 TitheBendB2_MapEvents:

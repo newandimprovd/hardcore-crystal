@@ -13,9 +13,12 @@ DisBendB2Hermit:
 	jumptextfaceplayer DisBendB2HermitText
 
 DisBendB2HermitText:
-	text "The river is not"
-	line "water. It's"
-	para "deadlines."
+	text "I am the last"
+	line "honest man down"
+	para "here. Not by"
+	line "choice. I could"
+	para "not find the other"
+	line "kind."
 	done
 
 DisBendB2_MapEvents:

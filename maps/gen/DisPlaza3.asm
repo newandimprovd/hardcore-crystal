@@ -77,64 +77,74 @@ DisPlaza3GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-DisPlaza3Townie1:
-	jumptextfaceplayer DisPlaza3Townie1Text
+DisPlaza3Persona0:
+	jumptextfaceplayer DisPlaza3Persona0Text
 
-DisPlaza3Townie1Text:
-	text "Welcome to Dis!"
-	line "Your suffering is"
-	para "being processed."
-	line "Estimated wait:"
-	para "forever."
+DisPlaza3Persona0Text:
+	text "CLERK MORTIMER:"
+	line "Your number has"
+	para "been called. It"
+	line "was seven hundred"
+	para "years ago. You are"
+	line "late."
 	done
 
-DisPlaza3Townie2:
-	jumptextfaceplayer DisPlaza3Townie2Text
+DisPlaza3Persona3:
+	jumptextfaceplayer DisPlaza3Persona3Text
 
-DisPlaza3Townie2Text:
-	text "We have a union."
-	line "It meets every"
-	para "Never."
+DisPlaza3Persona3Text:
+	text "JUDGE ROTH: The"
+	line "law is a beautiful"
+	para "thing. It is the"
+	line "only thing down"
+	para "here that has"
+	line "never been on"
+	para "fire."
 	done
 
-DisPlaza3Townie3:
-	jumptextfaceplayer DisPlaza3Townie3Text
+DisPlaza3Persona4:
+	jumptextfaceplayer DisPlaza3Persona4Text
 
-DisPlaza3Townie3Text:
-	text "The fountain is"
-	line "boiling lead. It's"
-	para "called mineral"
-	line "water. Everything"
-	para "here is."
+DisPlaza3Persona4Text:
+	text "HAG BERTA: I put"
+	line "an eye in the"
+	para "stew. It watches"
+	line "the broth. The"
+	para "broth is very well"
+	line "behaved."
 	done
 
-DisPlaza3Townie4:
-	jumptextfaceplayer DisPlaza3Townie4Text
+DisPlaza3Persona6:
+	jumptextfaceplayer DisPlaza3Persona6Text
 
-DisPlaza3Townie4Text:
-	text "LEFTOVERS: another"
-	line "word for hellfire"
-	para "after dinner."
+DisPlaza3Persona6Text:
+	text "JESTER JAPE: I do"
+	line "a bit about the"
+	para "pit. It kills."
+	line "Everyone dies. I"
+	para "mean laughs. I"
+	line "mean both."
 	done
 
-DisPlaza3Townie5:
-	jumptextfaceplayer DisPlaza3Townie5Text
+DisPlaza3Persona7:
+	jumptextfaceplayer DisPlaza3Persona7Text
 
-DisPlaza3Townie5Text:
-	text "The weather is the"
-	line "same all year."
-	para "Sulfurous, with a"
-	line "chance of regret."
+DisPlaza3Persona7Text:
+	text "SHADE VERA: I"
+	line "write on the"
+	para "walls. In soot. It"
+	line "is easy to read."
+	para "It is very dark."
 	done
 
 DisPlaza3Townie6:
 	jumptextfaceplayer DisPlaza3Townie6Text
 
 DisPlaza3Townie6Text:
-	text "There's a rumour"
-	line "of an exit. Just a"
-	para "rumour. We're very"
-	line "good at rumours."
+	text "I'm in sales."
+	line "Don't ask what I"
+	para "sell. Don't ask"
+	line "who buys."
 	done
 
 DisPlaza3Duel:
@@ -231,12 +241,12 @@ DisPlaza3_MapEvents:
 	def_object_events
 	object_event  6, 21, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza3DebateA, -1
 	object_event  7, 21, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza3DebateB, -1
-	object_event 20, 13, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza3Giver, -1
-	object_event 15,  6, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie1, -1
-	object_event 20, 21, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie2, -1
-	object_event 29,  8, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie3, -1
-	object_event  9, 15, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie4, -1
-	object_event 17, 23, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie5, -1
-	object_event 22, 20, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie6, -1
+	object_event 20, 13, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza3Giver, -1
+	object_event 15,  6, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza3Persona0, -1
+	object_event 20, 21, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza3Persona3, -1
+	object_event 29,  8, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Persona4, -1
+	object_event  9, 15, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza3Persona6, -1
+	object_event 17, 23, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza3Persona7, -1
+	object_event 22, 20, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Townie6, -1
 	object_event 16, 15, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza3Duel, -1
 

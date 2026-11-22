@@ -16,12 +16,10 @@ DisStreet3Hermit:
 	jumptextfaceplayer DisStreet3HermitText
 
 DisStreet3HermitText:
-	text "The demons are"
-	line "very professional."
-	para "They send a"
-	line "thank-you note"
-	para "after the"
-	line "screaming."
+	text "I have a theory"
+	line "that the fire is"
+	para "only paperwork. It"
+	line "burns the same."
 	done
 
 DisStreet3SeenText:

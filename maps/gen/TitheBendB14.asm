@@ -10,11 +10,11 @@ TitheBendB14Hermit:
 	jumptextfaceplayer TitheBendB14HermitText
 
 TitheBendB14HermitText:
-	text "If you meet the"
-	line "Mayor, tell him"
-	para "the hole in my"
-	line "roof is his fault."
-	para "And the roof."
+	text "People on the road"
+	line "keep screaming and"
+	para "fainting. I think"
+	line "it's a wellness"
+	para "program."
 	done
 
 TitheBendB14_MapEvents:

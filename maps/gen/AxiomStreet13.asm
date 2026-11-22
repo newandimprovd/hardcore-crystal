@@ -16,11 +16,11 @@ AxiomStreet13Hermit:
 	jumptextfaceplayer AxiomStreet13HermitText
 
 AxiomStreet13HermitText:
-	text "I escaped the"
-	line "Registry. I'm no"
-	para "longer a number."
-	line "I'm a letter. The"
-	para "letter is Q."
+	text "This glade is not"
+	line "on the map. I am"
+	para "not on the map. We"
+	line "are a perfect"
+	para "couple."
 	done
 
 AxiomStreet13SeenText:

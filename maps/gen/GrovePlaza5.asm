@@ -76,71 +76,71 @@ GrovePlaza5GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-GrovePlaza5Townie1:
-	jumptextfaceplayer GrovePlaza5Townie1Text
+GrovePlaza5Persona0:
+	jumptextfaceplayer GrovePlaza5Persona0Text
 
-GrovePlaza5Townie1Text:
-	text "Everyone here is"
-	line "equal. Some of us"
-	para "are more equal"
-	line "because we hold"
-	para "the key to the"
-	line "pantry."
+GrovePlaza5Persona0Text:
+	text "LEADER ORIN: The"
+	line "ham is not mine."
+	para "The ham belongs to"
+	line "everyone. I am"
+	para "merely guarding it"
+	line "with my body."
 	done
 
-GrovePlaza5Townie2:
-	jumptextfaceplayer GrovePlaza5Townie2Text
+GrovePlaza5Persona4:
+	jumptextfaceplayer GrovePlaza5Persona4Text
 
-GrovePlaza5Townie2Text:
-	text "Have you seen my"
-	line "goat? She is my"
-	para "lawyer."
+GrovePlaza5Persona4Text:
+	text "OLD HAZEL: I was a"
+	line "rebel. I am now a"
+	para "bench. The change"
+	line "was gradual and"
+	para "tender."
 	done
 
-GrovePlaza5Townie3:
-	jumptextfaceplayer GrovePlaza5Townie3Text
+GrovePlaza5Persona5:
+	jumptextfaceplayer GrovePlaza5Persona5Text
 
-GrovePlaza5Townie3Text:
-	text "The Heart of the"
-	line "Commune is a"
-	para "Pokemon Center."
-	line "The heart has"
-	para "beds."
+GrovePlaza5Persona5Text:
+	text "FORAGER PIP: I ate"
+	line "a berry that was"
+	para "not on the list. I"
+	line "can hear the"
+	para "trees. They are"
+	line "not nice."
 	done
 
-GrovePlaza5Townie4:
-	jumptextfaceplayer GrovePlaza5Townie4Text
+GrovePlaza5Persona7:
+	jumptextfaceplayer GrovePlaza5Persona7Text
 
-GrovePlaza5Townie4Text:
-	text "The swap shop is"
-	line "in someone's front"
-	para "room. They say"
-	line "it's a living"
-	para "room. Nobody is"
-	line "living."
+GrovePlaza5Persona7Text:
+	text "SAGE LYRA: I have"
+	line "tried to talk to"
+	para "the trees. They"
+	line "only answer in"
+	para "rings."
 	done
 
 GrovePlaza5Townie5:
 	jumptextfaceplayer GrovePlaza5Townie5Text
 
 GrovePlaza5Townie5Text:
-	text "The drum circle"
-	line "has gone on for"
-	para "three days. Please"
-	line "send help, or a"
-	para "replacement"
-	line "drummer."
+	text "I'd tell you more,"
+	line "but my tongue is"
+	para "on loan to the"
+	line "council."
 	done
 
 GrovePlaza5Townie6:
 	jumptextfaceplayer GrovePlaza5Townie6Text
 
 GrovePlaza5Townie6Text:
-	text "Pay attention to"
-	line "the fountain's"
-	para "name. It's a word,"
-	line "and it's also a"
-	para "threat."
+	text "Someone's selling"
+	line "LEFTOVERS. That's"
+	para "a lot of nerve to"
+	line "charge for what's"
+	para "left."
 	done
 
 GrovePlaza5Duel:
@@ -237,12 +237,12 @@ GrovePlaza5_MapEvents:
 	def_object_events
 	object_event 26,  8, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5DebateA, -1
 	object_event 27,  8, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5DebateB, -1
-	object_event  4, 22, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Giver, -1
-	object_event 14, 15, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie1, -1
-	object_event 13, 18, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie2, -1
-	object_event  6, 22, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie3, -1
-	object_event 22, 24, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie4, -1
-	object_event 27,  9, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie5, -1
-	object_event 20, 19, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie6, -1
+	object_event  4, 22, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Giver, -1
+	object_event 14, 15, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Persona0, -1
+	object_event 13, 18, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Persona4, -1
+	object_event  6, 22, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Persona5, -1
+	object_event 22, 24, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Persona7, -1
+	object_event 27,  9, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie5, -1
+	object_event 20, 19, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Townie6, -1
 	object_event 20, 22, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza5Duel, -1
 

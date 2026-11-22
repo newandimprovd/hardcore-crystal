@@ -16,12 +16,11 @@ DisStreet8Hermit:
 	jumptextfaceplayer DisStreet8HermitText
 
 DisStreet8HermitText:
-	text "I found a corner"
-	line "nobody has"
-	para "tortured yet. I"
-	line "call it home."
-	para "Don't tell"
-	line "management."
+	text "Come back in a"
+	line "century. I will be"
+	para "less angry. Or the"
+	line "same. The numbers"
+	para "are close."
 	done
 
 DisStreet8SeenText:

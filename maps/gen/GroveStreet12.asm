@@ -16,11 +16,12 @@ GroveStreet12Hermit:
 	jumptextfaceplayer GroveStreet12HermitText
 
 GroveStreet12HermitText:
-	text "Have you tried not"
-	line "fighting? I've"
-	para "been not fighting"
-	line "for years. Nobody"
-	para "asked me to stop."
+	text "The goat in the"
+	line "commune is smarter"
+	para "than the leader. I"
+	line "am here to say it"
+	para "where the goat"
+	line "cannot hear."
 	done
 
 GroveStreet12SeenText:

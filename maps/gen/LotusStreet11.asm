@@ -52,9 +52,12 @@ LotusStreet11Hermit:
 	jumptextfaceplayer LotusStreet11HermitText
 
 LotusStreet11HermitText:
-	text "The cocktails are"
-	line "free. Meaning is"
-	para "extra."
+	text "I have forgotten"
+	line "what day it is. It"
+	para "is wonderful."
+	line "Nobody has told"
+	para "me. I hope it"
+	line "stays that way."
 	done
 
 LotusStreet11SeenText:

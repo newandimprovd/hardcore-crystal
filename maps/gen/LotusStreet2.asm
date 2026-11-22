@@ -16,11 +16,10 @@ LotusStreet2Hermit:
 	jumptextfaceplayer LotusStreet2HermitText
 
 LotusStreet2HermitText:
-	text "I've been lying on"
-	line "this beach for"
-	para "eleven years. The"
-	line "tide has asked me"
-	para "to move twice."
+	text "I came to the"
+	line "coast to forget. I"
+	para "forgot why. Best"
+	line "vacation ever."
 	done
 
 LotusStreet2SeenText:

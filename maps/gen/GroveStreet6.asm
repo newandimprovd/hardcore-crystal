@@ -55,11 +55,11 @@ GroveStreet6Hermit:
 	jumptextfaceplayer GroveStreet6HermitText
 
 GroveStreet6HermitText:
-	text "The mushrooms here"
-	line "talk. Mostly they"
-	para "say 'sell'. I"
-	line "don't know what."
-	para "I'm scared."
+	text "This tree is my"
+	line "friend. The tree"
+	para "has not said so."
+	line "It also has not"
+	para "said no."
 	done
 
 GroveStreet6SeenText:

@@ -245,62 +245,63 @@ FacingGrass2:
 	db  9, -1, ABSOLUTE_TILE_ID, $fe
 	db  9,  9, ABSOLUTE_TILE_ID | OAM_XFLIP, $fe
 
-; HC: running poses (hold B).  A runner leans into the stride: the head and shoulders are pushed forward and the legs trail behind.  The tiles are the
-; walking tiles, only the OAM offsets are sheared, so no tile space is spent.  Front and back views tuck the head down into the shoulders.
-; Side views alternate the walking frame with the standing frame, so the legs open and close twice per tile.
+; HC: running poses (hold B).  The two strides alternate every four frames and the whole body hops one pixel on the second stride (both rows of
+; the sprite move together).  Alpha 3.2: the first version sheared the head against the body, which cut the neck in half in the side views, so
+; nothing is sheared any more.  The tiles are the walking tiles, so no tile space is spent.  Side views alternate the walking frame with the
+; standing frame, so the legs open and close twice per tile.
 
 FacingRunDown0:
 	db 4 ; #
-	db  1,  0, 0, $80
-	db  1,  8, 0, $81
+	db  0,  0, 0, $80
+	db  0,  8, 0, $81
 	db  8,  0, RELATIVE_ATTRIBUTES, $82
 	db  8,  8, RELATIVE_ATTRIBUTES, $83
 
 FacingRunDown1:
 	db 4 ; #
-	db  1,  8, OAM_XFLIP, $80
-	db  1,  0, OAM_XFLIP, $81
-	db  8,  8, RELATIVE_ATTRIBUTES | OAM_XFLIP, $82
-	db  8,  0, RELATIVE_ATTRIBUTES | OAM_XFLIP, $83
+	db -1,  8, OAM_XFLIP, $80
+	db -1,  0, OAM_XFLIP, $81
+	db  7,  8, RELATIVE_ATTRIBUTES | OAM_XFLIP, $82
+	db  7,  0, RELATIVE_ATTRIBUTES | OAM_XFLIP, $83
 
 FacingRunUp0:
 	db 4 ; #
-	db  1,  0, 0, $84
-	db  1,  8, 0, $85
+	db  0,  0, 0, $84
+	db  0,  8, 0, $85
 	db  8,  0, RELATIVE_ATTRIBUTES, $86
 	db  8,  8, RELATIVE_ATTRIBUTES, $87
 
 FacingRunUp1:
 	db 4 ; #
-	db  1,  8, OAM_XFLIP, $84
-	db  1,  0, OAM_XFLIP, $85
-	db  8,  8, RELATIVE_ATTRIBUTES | OAM_XFLIP, $86
-	db  8,  0, RELATIVE_ATTRIBUTES | OAM_XFLIP, $87
+	db -1,  8, OAM_XFLIP, $84
+	db -1,  0, OAM_XFLIP, $85
+	db  7,  8, RELATIVE_ATTRIBUTES | OAM_XFLIP, $86
+	db  7,  0, RELATIVE_ATTRIBUTES | OAM_XFLIP, $87
 
 FacingRunLeft0: ; stride: walking legs
 	db 4 ; #
-	db  0, -2, 0, $88
-	db  0,  6, 0, $89
-	db  8,  1, RELATIVE_ATTRIBUTES, $8a
-	db  8,  9, RELATIVE_ATTRIBUTES, $8b
+	db  0,  0, 0, $88
+	db  0,  8, 0, $89
+	db  8,  0, RELATIVE_ATTRIBUTES, $8a
+	db  8,  8, RELATIVE_ATTRIBUTES, $8b
 
-FacingRunLeft1: ; stride: standing legs
+FacingRunLeft1: ; stride: standing legs, the body hops
 	db 4 ; #
-	db  0, -2, 0, $08
-	db  0,  6, 0, $09
-	db  8,  1, RELATIVE_ATTRIBUTES, $0a
-	db  8,  9, RELATIVE_ATTRIBUTES, $0b
+	db -1,  0, 0, $08
+	db -1,  8, 0, $09
+	db  7,  0, RELATIVE_ATTRIBUTES, $0a
+	db  7,  8, RELATIVE_ATTRIBUTES, $0b
 
 FacingRunRight0:
 	db 4 ; #
-	db  0, 10, OAM_XFLIP, $88
-	db  0,  2, OAM_XFLIP, $89
-	db  8,  7, RELATIVE_ATTRIBUTES | OAM_XFLIP, $8a
-	db  8, -1, RELATIVE_ATTRIBUTES | OAM_XFLIP, $8b
+	db  0,  8, OAM_XFLIP, $88
+	db  0,  0, OAM_XFLIP, $89
+	db  8,  8, RELATIVE_ATTRIBUTES | OAM_XFLIP, $8a
+	db  8,  0, RELATIVE_ATTRIBUTES | OAM_XFLIP, $8b
 
 FacingRunRight1:
 	db 4 ; #
-	db  0, 10, OAM_XFLIP, $08
-	db  0,  2, OAM_XFLIP, $09
-	db  8,  7, RELATIVE_ATTRIBUTES | OAM_XFLIP, $0a
-	db  8, -1, RELATIVE_ATTRIBUTES | OAM_XFLIP, $0b
+	db -1,  8, OAM_XFLIP, $08
+	db -1,  0, OAM_XFLIP, $09
+	db  7,  8, RELATIVE_ATTRIBUTES | OAM_XFLIP, $0a
+	db  7,  0, RELATIVE_ATTRIBUTES | OAM_XFLIP, $0b

@@ -13,10 +13,9 @@ DisBendA2Hermit:
 	jumptextfaceplayer DisBendA2HermitText
 
 DisBendA2HermitText:
-	text "I used to be a"
-	line "lawyer. Now I'm a"
-	para "rock. The pay is"
-	line "similar."
+	text "The river is not"
+	line "water. It's"
+	para "deadlines."
 	done
 
 DisBendA2_MapEvents:

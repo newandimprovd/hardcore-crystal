@@ -77,66 +77,75 @@ AxiomPlaza5GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-AxiomPlaza5Townie1:
-	jumptextfaceplayer AxiomPlaza5Townie1Text
+AxiomPlaza5Persona0:
+	jumptextfaceplayer AxiomPlaza5Persona0Text
 
-AxiomPlaza5Townie1Text:
-	text "LEFTOVERS:"
-	line "certified, tested,"
-	para "taxed. In that"
-	line "order, usually."
+AxiomPlaza5Persona0Text:
+	text "CLERK UNIT 7: I"
+	line "have escalated"
+	para "your request to a"
+	line "more senior unit."
+	para "It is me. I am"
+	line "very senior."
 	done
 
-AxiomPlaza5Townie2:
-	jumptextfaceplayer AxiomPlaza5Townie2Text
+AxiomPlaza5Persona4:
+	jumptextfaceplayer AxiomPlaza5Persona4Text
 
-AxiomPlaza5Townie2Text:
-	text "I once saw a bug"
-	line "in the system. It"
-	para "saw me too. We"
-	line "don't talk about"
-	para "it."
+AxiomPlaza5Persona4Text:
+	text "SERF MILO: I filed"
+	line "for a vacation. It"
+	para "was approved. For"
+	line "the year four"
+	para "thousand."
 	done
 
-AxiomPlaza5Townie3:
-	jumptextfaceplayer AxiomPlaza5Townie3Text
+AxiomPlaza5Persona5:
+	jumptextfaceplayer AxiomPlaza5Persona5Text
 
-AxiomPlaza5Townie3Text:
-	text "My gift was"
-	line "approved. It will"
-	para "arrive after I"
-	line "have stopped"
-	para "needing it."
+AxiomPlaza5Persona5Text:
+	text "COURIER DASH: I"
+	line "once delivered a"
+	para "package to a man"
+	line "who had been dead"
+	para "for a decade. He"
+	line "signed anyway."
 	done
 
-AxiomPlaza5Townie4:
-	jumptextfaceplayer AxiomPlaza5Townie4Text
+AxiomPlaza5Persona7:
+	jumptextfaceplayer AxiomPlaza5Persona7Text
 
-AxiomPlaza5Townie4Text:
-	text "Your happiness has"
-	line "been scheduled for"
-	para "Thursday. Please"
-	line "arrive early."
+AxiomPlaza5Persona7Text:
+	text "PROFESSOR AXIOM:"
+	line "Incompleteness"
+	para "means there are"
+	line "true things the"
+	para "city cannot prove."
+	line "It is why I am"
+	para "still employed."
 	done
 
 AxiomPlaza5Townie5:
 	jumptextfaceplayer AxiomPlaza5Townie5Text
 
 AxiomPlaza5Townie5Text:
-	text "I requested a"
-	line "BERRY. I received"
-	para "a form. The form"
-	line "is also a berry."
+	text "I voted. The"
+	line "result was"
+	para "'accepted'. I"
+	line "don't know what I"
+	para "accepted."
 	done
 
 AxiomPlaza5Townie6:
 	jumptextfaceplayer AxiomPlaza5Townie6Text
 
 AxiomPlaza5Townie6Text:
-	text "A wild Pokemon"
-	line "asked for ID. It"
-	para "was a very good"
-	line "wild Pokemon."
+	text "Statistics say"
+	line "nine of ten"
+	para "citizens are"
+	line "satisfied. The"
+	para "tenth is being"
+	line "resolved."
 	done
 
 AxiomPlaza5Duel:
@@ -234,12 +243,12 @@ AxiomPlaza5_MapEvents:
 	def_object_events
 	object_event 10, 20, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5DebateA, -1
 	object_event 11, 20, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5DebateB, -1
-	object_event 12,  9, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Giver, -1
-	object_event  6, 16, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie1, -1
-	object_event 30, 16, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie2, -1
-	object_event 17, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie3, -1
-	object_event 31, 18, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie4, -1
-	object_event  4, 25, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie5, -1
-	object_event  2, 15, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie6, -1
+	object_event 12,  9, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Giver, -1
+	object_event  6, 16, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Persona0, -1
+	object_event 30, 16, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Persona4, -1
+	object_event 17, 15, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Persona5, -1
+	object_event 31, 18, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Persona7, -1
+	object_event  4, 25, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie5, -1
+	object_event  2, 15, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Townie6, -1
 	object_event 31, 26, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza5Duel, -1
 

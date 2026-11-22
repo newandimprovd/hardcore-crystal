@@ -13,11 +13,11 @@ DisBendA9Hermit:
 	jumptextfaceplayer DisBendA9HermitText
 
 DisBendA9HermitText:
-	text "The flames are"
-	line "warm. I stopped"
-	para "complaining. The"
-	line "complaint box is"
-	para "also on fire."
+	text "A demon asked me"
+	line "for my soul. I"
+	para "said it was in the"
+	line "shop. He is"
+	para "waiting."
 	done
 
 DisBendA9_MapEvents:

@@ -13,9 +13,12 @@ DisBendB9Hermit:
 	jumptextfaceplayer DisBendB9HermitText
 
 DisBendB9HermitText:
-	text "Be careful. The"
-	line "trainers are the"
-	para "nice ones."
+	text "The ground here is"
+	line "warm. It is the"
+	para "only kindness I"
+	line "have been offered"
+	para "since the"
+	line "incident."
 	done
 
 DisBendB9_MapEvents:

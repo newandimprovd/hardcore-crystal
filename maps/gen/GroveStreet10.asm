@@ -16,11 +16,11 @@ GroveStreet10Hermit:
 	jumptextfaceplayer GroveStreet10HermitText
 
 GroveStreet10HermitText:
-	text "Have you tried not"
-	line "fighting? I've"
-	para "been not fighting"
-	line "for years. Nobody"
-	para "asked me to stop."
+	text "The mushrooms here"
+	line "talk. Mostly they"
+	para "say 'sell'. I"
+	line "don't know what."
+	para "I'm scared."
 	done
 
 GroveStreet10PurgFlagScript:

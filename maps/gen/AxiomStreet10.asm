@@ -13,10 +13,12 @@ AxiomStreet10Hermit:
 	jumptextfaceplayer AxiomStreet10HermitText
 
 AxiomStreet10HermitText:
-	text "Every axiom here"
-	line "is true until it"
-	para "becomes"
-	line "inconvenient."
+	text "The sensors here"
+	line "are down. The"
+	para "sensors are always"
+	line "down. It is how"
+	para "the sensors"
+	line "survive."
 	done
 
 AxiomStreet10PurgFlagScript:

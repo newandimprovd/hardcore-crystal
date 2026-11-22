@@ -13,12 +13,11 @@ GroveBendA12Hermit:
 	jumptextfaceplayer GroveBendA12HermitText
 
 GroveBendA12HermitText:
-	text "The trainers out"
-	line "there are so"
-	para "friendly. They"
-	line "shout 'peace' and"
-	para "then try to kill"
-	line "you."
+	text "This glade belongs"
+	line "to everyone."
+	para "Please leave. I"
+	line "mean it"
+	para "communally."
 	done
 
 GroveBendA12_MapEvents:

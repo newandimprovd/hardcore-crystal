@@ -16,12 +16,10 @@ LotusStreet5Hermit:
 	jumptextfaceplayer LotusStreet5HermitText
 
 LotusStreet5HermitText:
-	text "I keep a journal."
-	line "Today's entry:"
-	para "'Same.'"
-	line "Yesterday's:"
-	para "'Same.' The day"
-	line "before: 'Same.'"
+	text "I came here to"
+	line "find myself. I"
+	para "found a towel. It"
+	line "is a start."
 	done
 
 LotusStreet5SeenText:

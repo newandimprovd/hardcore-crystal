@@ -13,11 +13,9 @@ AxiomBendA8Hermit:
 	jumptextfaceplayer AxiomBendA8HermitText
 
 AxiomBendA8HermitText:
-	text "I have proven that"
-	line "I exist. It took"
-	para "six months. The"
-	line "proof expired on"
-	para "Tuesday."
+	text "Don't speak"
+	line "loudly. The leaves"
+	para "are audited."
 	done
 
 AxiomBendA8_MapEvents:

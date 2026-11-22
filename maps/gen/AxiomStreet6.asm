@@ -52,9 +52,12 @@ AxiomStreet6Hermit:
 	jumptextfaceplayer AxiomStreet6HermitText
 
 AxiomStreet6HermitText:
-	text "Don't speak"
-	line "loudly. The leaves"
-	para "are audited."
+	text "Do not tell them"
+	line "where I am. They"
+	para "will say they"
+	line "already know. It"
+	para "is a bluff."
+	line "Probably."
 	done
 
 AxiomStreet6SeenText:

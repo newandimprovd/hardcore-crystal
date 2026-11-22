@@ -16,11 +16,11 @@ GroveStreet4Hermit:
 	jumptextfaceplayer GroveStreet4HermitText
 
 GroveStreet4HermitText:
-	text "Have you tried not"
-	line "fighting? I've"
-	para "been not fighting"
-	line "for years. Nobody"
-	para "asked me to stop."
+	text "If you hear"
+	line "chanting, it isn't"
+	para "a ritual. It's"
+	line "just Greg. He's"
+	para "had a bad week."
 	done
 
 GroveStreet4SeenText:

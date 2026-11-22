@@ -16,9 +16,10 @@ DisStreet4Hermit:
 	jumptextfaceplayer DisStreet4HermitText
 
 DisStreet4HermitText:
-	text "Be careful. The"
-	line "trainers are the"
-	para "nice ones."
+	text "I am not hiding. I"
+	line "am between"
+	para "circles. It is a"
+	line "zoning issue."
 	done
 
 DisStreet4SeenText:

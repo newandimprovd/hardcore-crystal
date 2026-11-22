@@ -13,10 +13,9 @@ LotusBendA12Hermit:
 	jumptextfaceplayer LotusBendA12HermitText
 
 LotusBendA12HermitText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+	text "The cocktails are"
+	line "free. Meaning is"
+	para "extra."
 	done
 
 LotusBendA12_MapEvents:

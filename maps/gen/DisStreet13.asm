@@ -16,10 +16,9 @@ DisStreet13Hermit:
 	jumptextfaceplayer DisStreet13HermitText
 
 DisStreet13HermitText:
-	text "I'm not dead. I'm"
-	line "just in the wrong"
-	para "queue. It's been"
-	line "forty years."
+	text "Be careful. The"
+	line "trainers are the"
+	para "nice ones."
 	done
 
 DisStreet13SeenText:

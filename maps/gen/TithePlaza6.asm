@@ -74,69 +74,76 @@ TithePlaza6GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-TithePlaza6Townie1:
-	jumptextfaceplayer TithePlaza6Townie1Text
+TithePlaza6Persona1:
+	jumptextfaceplayer TithePlaza6Persona1Text
 
-TithePlaza6Townie1Text:
-	text "Don't drink from"
-	line "the fountain."
-	para "Don't look at the"
-	line "fountain. Don't"
-	para "wave. It knows."
+TithePlaza6Persona1Text:
+	text "BROTHER ANSELM:"
+	line "They say I vanish."
+	para "I merely wait"
+	line "where nobody"
+	para "looks. It is a"
+	line "spiritual"
+	para "discipline and"
+	line "also a hobby."
 	done
 
-TithePlaza6Townie2:
-	jumptextfaceplayer TithePlaza6Townie2Text
+TithePlaza6Persona2:
+	jumptextfaceplayer TithePlaza6Persona2Text
 
-TithePlaza6Townie2Text:
-	text "Read the fountain"
-	line "plaque. Names here"
-	para "mean something."
-	line "Mine means"
-	para "'debtor'."
+TithePlaza6Persona2Text:
+	text "OFFICER DOYLE: I"
+	line "filed a complaint"
+	para "against crime. It"
+	line "was rejected. It"
+	para "lacked a stamp."
 	done
 
-TithePlaza6Townie3:
-	jumptextfaceplayer TithePlaza6Townie3Text
+TithePlaza6Persona3:
+	jumptextfaceplayer TithePlaza6Persona3Text
 
-TithePlaza6Townie3Text:
-	text "The fountain is"
-	line "for show. The"
-	para "water is"
-	line "meter-reading you."
+TithePlaza6Persona3Text:
+	text "LENNY THE LENDER:"
+	line "I will forgive"
+	para "your debt. You"
+	line "will owe me"
+	para "gratitude. It"
+	line "compounds faster."
 	done
 
-TithePlaza6Townie4:
-	jumptextfaceplayer TithePlaza6Townie4Text
+TithePlaza6Persona6:
+	jumptextfaceplayer TithePlaza6Persona6Text
 
-TithePlaza6Townie4Text:
-	text "They say the city"
-	line "has a heart. I've"
-	para "seen its pulse. It"
-	line "was a collection"
-	para "plate."
+TithePlaza6Persona6Text:
+	text "DEACON THEO: I"
+	line "lost my faith in a"
+	para "parking dispute."
+	line "It is somewhere"
+	para "under a Fiat."
 	done
 
-TithePlaza6Townie5:
-	jumptextfaceplayer TithePlaza6Townie5Text
+TithePlaza6Persona7:
+	jumptextfaceplayer TithePlaza6Persona7Text
 
-TithePlaza6Townie5Text:
-	text "A held item does"
-	line "more than your"
-	para "whole party. I"
-	line "read that on a"
-	para "receipt."
+TithePlaza6Persona7Text:
+	text "MADAME PIA: I have"
+	line "seen how it ends."
+	para "I will not tell"
+	line "you. I will tell"
+	para "you that I have"
+	line "seen it, for five"
+	para "coins."
 	done
 
 TithePlaza6Townie6:
 	jumptextfaceplayer TithePlaza6Townie6Text
 
 TithePlaza6Townie6Text:
-	text "I heard LEFTOVERS"
-	line "is for sale. Six"
-	para "thousand. For"
-	line "leftovers. That's"
-	para "the economy."
+	text "That man is a cop."
+	line "This man is a cop."
+	para "I'm also a cop."
+	line "It's a very safe"
+	para "neighbourhood."
 	done
 
 TithePlaza6Duel:
@@ -231,12 +238,12 @@ TithePlaza6_MapEvents:
 	def_object_events
 	object_event  9, 12, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza6DebateA, -1
 	object_event 10, 12, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza6DebateB, -1
-	object_event  8, 12, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza6Giver, -1
-	object_event 13,  9, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza6Townie1, -1
-	object_event  9, 10, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza6Townie2, -1
-	object_event  5, 11, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza6Townie3, -1
-	object_event  3, 21, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza6Townie4, -1
-	object_event  5, 13, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza6Townie5, -1
-	object_event  4, 25, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza6Townie6, -1
+	object_event  8, 12, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza6Giver, -1
+	object_event 13,  9, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza6Persona1, -1
+	object_event  9, 10, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza6Persona2, -1
+	object_event  5, 11, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza6Persona3, -1
+	object_event  3, 21, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza6Persona6, -1
+	object_event  5, 13, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza6Persona7, -1
+	object_event  4, 25, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza6Townie6, -1
 	object_event 18, 24, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza6Duel, -1
 

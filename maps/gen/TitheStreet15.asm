@@ -16,11 +16,11 @@ TitheStreet15Hermit:
 	jumptextfaceplayer TitheStreet15HermitText
 
 TitheStreet15HermitText:
-	text "I used to be a"
-	line "loan officer. Now"
-	para "I'm a loan."
-	line "Somebody owes me"
-	para "an apology."
+	text "A nun told me this"
+	line "glade is blessed."
+	para "It is not. She was"
+	line "just selling the"
+	para "deed."
 	done
 
 TitheStreet15SeenText:

@@ -16,9 +16,10 @@ DisStreet1Hermit:
 	jumptextfaceplayer DisStreet1HermitText
 
 DisStreet1HermitText:
-	text "The river is not"
-	line "water. It's"
-	para "deadlines."
+	text "I'm not dead. I'm"
+	line "just in the wrong"
+	para "queue. It's been"
+	line "forty years."
 	done
 
 DisStreet1SeenText:

@@ -16,11 +16,11 @@ TitheStreet3Hermit:
 	jumptextfaceplayer TitheStreet3HermitText
 
 TitheStreet3HermitText:
-	text "I used to be a"
-	line "loan officer. Now"
-	para "I'm a loan."
-	line "Somebody owes me"
-	para "an apology."
+	text "People on the road"
+	line "keep screaming and"
+	para "fainting. I think"
+	line "it's a wellness"
+	para "program."
 	done
 
 TitheStreet3SeenText:

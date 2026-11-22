@@ -16,11 +16,10 @@ GroveStreet13Hermit:
 	jumptextfaceplayer GroveStreet13HermitText
 
 GroveStreet13HermitText:
-	text "This glade belongs"
-	line "to everyone."
-	para "Please leave. I"
-	line "mean it"
-	para "communally."
+	text "I am meditating."
+	line "Do not mind the"
+	para "screaming. It is a"
+	line "mantra. A bad one."
 	done
 
 GroveStreet13SeenText:

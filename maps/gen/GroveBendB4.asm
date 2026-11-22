@@ -13,10 +13,11 @@ GroveBendB4Hermit:
 	jumptextfaceplayer GroveBendB4HermitText
 
 GroveBendB4HermitText:
-	text "I grow my own"
-	line "food. I also grow"
-	para "my own problems."
-	line "Both are organic."
+	text "Have you tried not"
+	line "fighting? I've"
+	para "been not fighting"
+	line "for years. Nobody"
+	para "asked me to stop."
 	done
 
 GroveBendB4_MapEvents:

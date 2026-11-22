@@ -16,11 +16,10 @@ LotusStreet15Hermit:
 	jumptextfaceplayer LotusStreet15HermitText
 
 LotusStreet15HermitText:
-	text "Everyone is so"
-	line "relaxed here."
-	para "That's what giving"
-	line "up looks like with"
-	para "a tan."
+	text "The sunset here is"
+	line "wonderful. It"
+	para "reminds me of the"
+	line "end of everything."
 	done
 
 LotusStreet15SeenText:

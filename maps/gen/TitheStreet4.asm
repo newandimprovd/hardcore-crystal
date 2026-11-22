@@ -16,12 +16,11 @@ TitheStreet4Hermit:
 	jumptextfaceplayer TitheStreet4HermitText
 
 TitheStreet4HermitText:
-	text "I left the city to"
-	line "escape the tithe."
-	para "The trees also"
-	line "want ten percent."
-	para "Of what, they"
-	line "won't say."
+	text "A nun told me this"
+	line "glade is blessed."
+	para "It is not. She was"
+	line "just selling the"
+	para "deed."
 	done
 
 TitheStreet4SeenText:

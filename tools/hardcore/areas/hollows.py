@@ -24,6 +24,7 @@ THEMES = {
     "Lotus": {"WATER": 3, "ICE": 2, "FLYING": 2, "GHOST": 2, "PSYCHIC_TYPE": 1.5, "FAIRY": 1.5, "NORMAL": 1.5, "GRASS": 1, "FIRE": 1, "DARK": 1},
     "Dis": {"FIRE": 3, "DARK": 3, "GHOST": 2.5, "DRAGON": 2, "POISON": 1.5, "PSYCHIC_TYPE": 1.5, "FIGHTING": 1, "ROCK": 1, "STEEL": 1},
 }
+AREA_INDEX = {"Tithe": 0, "Grove": 1, "Axiom": 2, "Lotus": 3, "Dis": 4}
 POOL = {"Tithe": "HL1", "Grove": "HL2", "Axiom": "HL3", "Lotus": "HL4", "Dis": "HL5"}
 
 # key, act the lane lies in, trainer classes (existing ones, they carry the look of the area), the two item balls (the first is the better one)
@@ -122,6 +123,7 @@ def build(w, roster, rng):
         lv = reg["level"]
         m, G, info = build_floor(g, w, roster, random.Random(f"hollow:{name}"), table_of(h["classes"]), 30 + n, name, "D", (lv, lv + 3), [],
                                  h["balls"], h["gifts"], reg["lm"], MUSIC, tr_target=5, extra_objs=0, last=True, spec_cls=spec_class(tag))
+        m.obj_area = AREA_INDEX[tag]  # the fighters wear the colours of their area, like their battle portraits do
         link(reg["door"], m.warps_in)
         g.add(m)
         entry, far = info["entry"], info["exit"]

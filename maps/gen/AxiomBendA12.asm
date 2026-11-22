@@ -13,10 +13,11 @@ AxiomBendA12Hermit:
 	jumptextfaceplayer AxiomBendA12HermitText
 
 AxiomBendA12HermitText:
-	text "I'm a robot. I'm"
-	line "not allowed to say"
-	para "that. Beep. I"
-	line "mean, 'tree'."
+	text "A bot asked me for"
+	line "ID. I showed it a"
+	para "leaf. It accepted."
+	line "We are now"
+	para "partners."
 	done
 
 AxiomBendA12_MapEvents:

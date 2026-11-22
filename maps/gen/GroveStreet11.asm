@@ -50,11 +50,11 @@ GroveStreet11Hermit:
 	jumptextfaceplayer GroveStreet11HermitText
 
 GroveStreet11HermitText:
-	text "The mushrooms here"
-	line "talk. Mostly they"
-	para "say 'sell'. I"
-	line "don't know what."
-	para "I'm scared."
+	text "I left the commune"
+	line "because it was too"
+	para "loud. Now I live"
+	line "in a tree. The"
+	para "tree is also loud."
 	done
 
 GroveStreet11SeenText:

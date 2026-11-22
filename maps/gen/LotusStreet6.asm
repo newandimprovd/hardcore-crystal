@@ -53,10 +53,11 @@ LotusStreet6Hermit:
 	jumptextfaceplayer LotusStreet6HermitText
 
 LotusStreet6HermitText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+	text "I live in a shell."
+	line "I cannot remember"
+	para "who was in it"
+	line "before. We share"
+	para "the lease."
 	done
 
 LotusStreet6SeenText:

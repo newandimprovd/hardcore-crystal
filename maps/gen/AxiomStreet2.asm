@@ -16,9 +16,11 @@ AxiomStreet2Hermit:
 	jumptextfaceplayer AxiomStreet2HermitText
 
 AxiomStreet2HermitText:
-	text "Don't speak"
-	line "loudly. The leaves"
-	para "are audited."
+	text "This glade is not"
+	line "on the map. I am"
+	para "not on the map. We"
+	line "are a perfect"
+	para "couple."
 	done
 
 AxiomStreet2SeenText:

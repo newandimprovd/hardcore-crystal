@@ -16,9 +16,9 @@ DisStreet9Hermit:
 	jumptextfaceplayer DisStreet9HermitText
 
 DisStreet9HermitText:
-	text "The river is not"
-	line "water. It's"
-	para "deadlines."
+	text "Down here 'no"
+	line "comment' is a"
+	para "full-time job."
 	done
 
 DisStreet9SeenText:

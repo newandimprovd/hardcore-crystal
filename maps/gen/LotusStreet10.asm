@@ -16,10 +16,10 @@ LotusStreet10Hermit:
 	jumptextfaceplayer LotusStreet10HermitText
 
 LotusStreet10HermitText:
-	text "The sunset here is"
-	line "wonderful. It"
-	para "reminds me of the"
-	line "end of everything."
+	text "The seagulls here"
+	line "are on a retainer."
+	para "Do not feed them."
+	line "They report."
 	done
 
 LotusStreet10PurgFlagScript:

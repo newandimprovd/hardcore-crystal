@@ -16,12 +16,10 @@ DisStreet6Hermit:
 	jumptextfaceplayer DisStreet6HermitText
 
 DisStreet6HermitText:
-	text "I found a corner"
-	line "nobody has"
-	para "tortured yet. I"
-	line "call it home."
-	para "Don't tell"
-	line "management."
+	text "I used to be a"
+	line "lawyer. Now I'm a"
+	para "rock. The pay is"
+	line "similar."
 	done
 
 DisStreet6SeenText:

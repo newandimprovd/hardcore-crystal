@@ -16,11 +16,11 @@ LotusStreet12Hermit:
 	jumptextfaceplayer LotusStreet12HermitText
 
 LotusStreet12HermitText:
-	text "The waves keep"
-	line "saying 'shh'. I"
-	para "think they're"
-	line "embarrassed for"
-	para "us."
+	text "Everyone is so"
+	line "relaxed here."
+	para "That's what giving"
+	line "up looks like with"
+	para "a tan."
 	done
 
 LotusStreet12SeenText:

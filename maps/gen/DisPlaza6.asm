@@ -76,56 +76,65 @@ DisPlaza6GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-DisPlaza6Townie1:
-	jumptextfaceplayer DisPlaza6Townie1Text
+DisPlaza6Persona1:
+	jumptextfaceplayer DisPlaza6Persona1Text
 
-DisPlaza6Townie1Text:
-	text "I got a pamphlet"
-	line "called 'How to"
-	para "Cope.' It was one"
-	line "page. It said"
-	para "'Don't.'"
+DisPlaza6Persona1Text:
+	text "IMP SNIX: I have"
+	line "been promoted. My"
+	para "title is Senior"
+	line "Little Devil. The"
+	para "pay is the same."
+	line "The horns are"
+	para "bigger."
 	done
 
-DisPlaza6Townie2:
-	jumptextfaceplayer DisPlaza6Townie2Text
+DisPlaza6Persona2:
+	jumptextfaceplayer DisPlaza6Persona2Text
 
-DisPlaza6Townie2Text:
-	text "We have a union."
-	line "It meets every"
-	para "Never."
+DisPlaza6Persona2Text:
+	text "FIRE EATER CINDER:"
+	line "I am starting a"
+	para "new act. I eat the"
+	line "dark. Nobody has"
+	para "noticed the dark"
+	line "is missing."
 	done
 
-DisPlaza6Townie3:
-	jumptextfaceplayer DisPlaza6Townie3Text
+DisPlaza6Persona3:
+	jumptextfaceplayer DisPlaza6Persona3Text
 
-DisPlaza6Townie3Text:
-	text "A held item is a"
-	line "promise with a"
-	para "handle. The handle"
-	line "is hot."
+DisPlaza6Persona3Text:
+	text "JUDGE ROTH: I have"
+	line "recused myself."
+	para "From the entire"
+	line "pit. It did not"
+	para "help. They found"
+	line "me guilty anyway."
 	done
 
-DisPlaza6Townie4:
-	jumptextfaceplayer DisPlaza6Townie4Text
+DisPlaza6Persona6:
+	jumptextfaceplayer DisPlaza6Persona6Text
 
-DisPlaza6Townie4Text:
-	text "Demons are people"
-	line "too. Terrible,"
-	para "terrible people,"
-	line "but still."
+DisPlaza6Persona6Text:
+	text "JESTER JAPE: My"
+	line "audience is"
+	para "eternal. The act"
+	line "is also eternal. I"
+	para "wish one of us"
+	line "would stop."
 	done
 
-DisPlaza6Townie5:
-	jumptextfaceplayer DisPlaza6Townie5Text
+DisPlaza6Persona7:
+	jumptextfaceplayer DisPlaza6Persona7Text
 
-DisPlaza6Townie5Text:
-	text "The shop in the"
-	line "living room is a"
-	para "pawn of the"
-	line "underworld. You"
-	para "will pay in"
-	line "pieces."
+DisPlaza6Persona7Text:
+	text "SHADE VERA: I have"
+	line "finished my"
+	para "masterpiece. It is"
+	line "a single line. I"
+	para "will not repeat"
+	line "it. I have sworn."
 	done
 
 DisPlaza6Townie6:
@@ -427,13 +436,13 @@ DisPlaza6_MapEvents:
 	def_object_events
 	object_event 22, 19, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza6DebateA, -1
 	object_event 23, 19, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6DebateB, -1
-	object_event 14, 18, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Giver, -1
-	object_event 12, 22, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie1, -1
-	object_event 18,  6, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie2, -1
-	object_event  4,  7, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie3, -1
-	object_event 25, 21, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie4, -1
-	object_event 12, 16, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie5, -1
-	object_event  2,  6, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie6, -1
+	object_event 14, 18, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Giver, -1
+	object_event 12, 22, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona1, -1
+	object_event 18,  6, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona2, -1
+	object_event  4,  7, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona3, -1
+	object_event 25, 21, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona6, -1
+	object_event 12, 16, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona7, -1
+	object_event  2,  6, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie6, -1
 	object_event 19, 12, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6SadraDuelScript, -1
 	object_event 13, 10, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Duel, -1
 

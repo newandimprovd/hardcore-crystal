@@ -16,11 +16,11 @@ TitheStreet7Hermit:
 	jumptextfaceplayer TitheStreet7HermitText
 
 TitheStreet7HermitText:
-	text "Shh. The trainers"
-	line "can't see you when"
-	para "you sit down. I"
-	line "have been sitting"
-	para "down since March."
+	text "If you meet the"
+	line "Mayor, tell him"
+	para "the hole in my"
+	line "roof is his fault."
+	para "And the roof."
 	done
 
 TitheStreet7SeenText:

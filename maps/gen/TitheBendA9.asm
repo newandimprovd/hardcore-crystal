@@ -10,11 +10,12 @@ TitheBendA9Hermit:
 	jumptextfaceplayer TitheBendA9HermitText
 
 TitheBendA9HermitText:
-	text "I've lived here"
-	line "nine years. Nobody"
-	para "has come to arrest"
-	line "me. I find that"
-	para "deeply insulting."
+	text "I came out here to"
+	line "avoid the census."
+	para "Now I count the"
+	line "trees. They do not"
+	para "respond but they"
+	line "do not charge."
 	done
 
 TitheBendA9_MapEvents:

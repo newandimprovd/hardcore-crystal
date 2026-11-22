@@ -13,11 +13,10 @@ GroveBendA4Hermit:
 	jumptextfaceplayer GroveBendA4HermitText
 
 GroveBendA4HermitText:
-	text "I'm founding a"
-	line "cult of one."
-	para "Membership is"
-	line "great. The leader"
-	para "is a little tired."
+	text "I am meditating."
+	line "Do not mind the"
+	para "screaming. It is a"
+	line "mantra. A bad one."
 	done
 
 GroveBendA4_MapEvents:

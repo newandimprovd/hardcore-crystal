@@ -76,68 +76,75 @@ AxiomPlaza6GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-AxiomPlaza6Townie1:
-	jumptextfaceplayer AxiomPlaza6Townie1Text
+AxiomPlaza6Persona1:
+	jumptextfaceplayer AxiomPlaza6Persona1Text
 
-AxiomPlaza6Townie1Text:
-	text "The Pokemon Center"
-	line "is a processing"
-	para "facility with a"
-	line "kindly name."
+AxiomPlaza6Persona1Text:
+	text "AIDE BIX: The"
+	line "Mayor has been"
+	para "updated. He no"
+	line "longer loves"
+	para "everyone. He loves"
+	line "compliance. It is"
+	para "a start."
 	done
 
-AxiomPlaza6Townie2:
-	jumptextfaceplayer AxiomPlaza6Townie2Text
+AxiomPlaza6Persona2:
+	jumptextfaceplayer AxiomPlaza6Persona2Text
 
-AxiomPlaza6Townie2Text:
-	text "The shop with a"
-	line "clerk and a couch"
-	para "is real. The couch"
-	line "is audited weekly."
+AxiomPlaza6Persona2Text:
+	text "MATCHMAKER MABEL:"
+	line "My matches are all"
+	para "very happy. Mostly"
+	line "the ones that"
+	para "never met."
 	done
 
-AxiomPlaza6Townie3:
-	jumptextfaceplayer AxiomPlaza6Townie3Text
+AxiomPlaza6Persona3:
+	jumptextfaceplayer AxiomPlaza6Persona3Text
 
-AxiomPlaza6Townie3Text:
-	text "We are all equal"
-	line "before the"
-	para "algorithm. The"
-	line "algorithm is not"
-	para "equal to us."
+AxiomPlaza6Persona3Text:
+	text "DR HALVORSEN: I"
+	line "was wrong about"
+	para "the organ. It was"
+	line "a kidney. It is"
+	para "mine now. Do not"
+	line "mention it to the"
+	para "Registry."
 	done
 
-AxiomPlaza6Townie4:
-	jumptextfaceplayer AxiomPlaza6Townie4Text
+AxiomPlaza6Persona6:
+	jumptextfaceplayer AxiomPlaza6Persona6Text
 
-AxiomPlaza6Townie4Text:
-	text "A held item is a"
-	line "form attached to a"
-	para "Pokemon. Fill it"
-	line "in correctly."
+AxiomPlaza6Persona6Text:
+	text "GUARD UNIT 12: I"
+	line "once heard a voice"
+	para "behind the door."
+	line "It said Unit 12."
+	para "It was my own."
 	done
 
-AxiomPlaza6Townie5:
-	jumptextfaceplayer AxiomPlaza6Townie5Text
+AxiomPlaza6Persona7:
+	jumptextfaceplayer AxiomPlaza6Persona7Text
 
-AxiomPlaza6Townie5Text:
-	text "I once saw a bug"
-	line "in the system. It"
-	para "saw me too. We"
-	line "don't talk about"
-	para "it."
+AxiomPlaza6Persona7Text:
+	text "PROFESSOR AXIOM: I"
+	line "have found the"
+	para "typo. It is the"
+	line "word free. I am"
+	para "not telling"
+	line "anyone. It would"
+	para "cost a city."
 	done
 
 AxiomPlaza6Townie6:
 	jumptextfaceplayer AxiomPlaza6Townie6Text
 
 AxiomPlaza6Townie6Text:
-	text "The fountain"
-	line "plaque is a pun."
-	para "The pun is"
-	line "registered. The"
-	para "joke is not yet"
-	line "approved."
+	text "The Pokemon Center"
+	line "is a processing"
+	para "facility with a"
+	line "kindly name."
 	done
 
 AxiomPlaza6SuhrawardiDuelScript:
@@ -437,13 +444,13 @@ AxiomPlaza6_MapEvents:
 	def_object_events
 	object_event 12, 22, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6DebateA, -1
 	object_event 13, 22, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6DebateB, -1
-	object_event  8, 14, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Giver, -1
-	object_event 28, 16, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie1, -1
-	object_event  4, 25, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie2, -1
-	object_event  7, 11, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie3, -1
-	object_event  4,  8, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie4, -1
-	object_event 29, 19, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie5, -1
-	object_event 28, 25, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie6, -1
+	object_event  8, 14, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Giver, -1
+	object_event 28, 16, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona1, -1
+	object_event  4, 25, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona2, -1
+	object_event  7, 11, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona3, -1
+	object_event  4,  8, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona6, -1
+	object_event 29, 19, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona7, -1
+	object_event 28, 25, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie6, -1
 	object_event  7, 13, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SuhrawardiDuelScript, -1
 	object_event 13, 10, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Duel, -1
 

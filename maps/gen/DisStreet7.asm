@@ -16,9 +16,12 @@ DisStreet7Hermit:
 	jumptextfaceplayer DisStreet7HermitText
 
 DisStreet7HermitText:
-	text "Be careful. The"
-	line "trainers are the"
-	para "nice ones."
+	text "The demons are"
+	line "very professional."
+	para "They send a"
+	line "thank-you note"
+	para "after the"
+	line "screaming."
 	done
 
 DisStreet7SeenText:

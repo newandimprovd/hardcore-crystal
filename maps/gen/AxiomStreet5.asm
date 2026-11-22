@@ -16,9 +16,12 @@ AxiomStreet5Hermit:
 	jumptextfaceplayer AxiomStreet5HermitText
 
 AxiomStreet5HermitText:
-	text "Don't speak"
-	line "loudly. The leaves"
-	para "are audited."
+	text "Form 27-B:"
+	line "'Request to leave"
+	para "Form 27-A'. I"
+	line "filed it. Nobody"
+	para "replied. This is"
+	line "freedom."
 	done
 
 AxiomStreet5SeenText:

@@ -16,9 +16,11 @@ AxiomStreet8Hermit:
 	jumptextfaceplayer AxiomStreet8HermitText
 
 AxiomStreet8HermitText:
-	text "Don't speak"
-	line "loudly. The leaves"
-	para "are audited."
+	text "The machines here"
+	line "are polite. They"
+	para "kill you with a"
+	line "smile and a"
+	para "receipt."
 	done
 
 AxiomStreet8SeenText:

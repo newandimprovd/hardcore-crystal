@@ -21,11 +21,9 @@ TitheStreet11Hermit:
 	jumptextfaceplayer TitheStreet11HermitText
 
 TitheStreet11HermitText:
-	text "If you meet the"
-	line "Mayor, tell him"
-	para "the hole in my"
-	line "roof is his fault."
-	para "And the roof."
+	text "Do not drink from"
+	line "the stream. It has"
+	para "been taxed."
 	done
 
 TitheStreet11SeenText:

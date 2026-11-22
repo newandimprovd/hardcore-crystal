@@ -6,6 +6,7 @@ from . import boutique as shops
 from .layout import (FACE, boss_room, chain, gatehouse, house_interior, boutique_interior, lane, mart_interior, plaza, pokecenter_interior)
 from .town import plaza2
 from .wayfolk import GIFT, GIFT_AFTER, GIFT_HERMITS, GIFT_ITEMS, HERMIT, TOWNIE, TOWNIE2
+from . import persona
 from .trail import trail
 from . import hollows
 from . import turn
@@ -103,6 +104,17 @@ def people_sprites(g):
     return [sp for sp in g.sprites if sp not in ("SPRITE_POKE_BALL", "SPRITE_ROCK", "SPRITE_BOULDER", "SPRITE_FRUIT_TREE")]
 
 
+def fresh_line(w, tag, kind, lines):
+    """The next line of the area's shuffled pool for `kind` (townies, hermits): no line is spoken twice before the pool is used up."""
+    pools = w.__dict__.setdefault("line_pools", {})
+    pool = pools.get((tag, kind))
+    if not pool:
+        pool = list(lines)
+        random.Random(f"lines:{tag}:{kind}").shuffle(pool)
+        pools[(tag, kind)] = pool
+    return pool.pop()
+
+
 def area_tag(m):
     return next(t for t in ("Tithe", "Grove", "Axiom", "Lotus", "Dis") if m.name.startswith(t))
 
@@ -138,7 +150,8 @@ def furnish_lane(w, g, m, reserve, total_lanes=75):
             _, item, speech, after = queue.pop(0)
             gift_hermit(w, m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}GiftHermit", item, speech, after)
         else:
-            plain_npc(m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}Hermit", R.choice(HERMIT[tag]))
+            plain_npc(m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}Hermit",
+                      fresh_line(w, tag, "hermit", HERMIT[tag] + persona.HERMIT_MORE[tag]))
 
 
 def gift_queue(w):
@@ -179,16 +192,23 @@ def crowd(w, g, m, n=9, plaza_no=1):
         n -= 2  # the debaters are two of the plaza's talkers
     n = min(n, 15 - len(m.objects) - 3)  # three object slots stay free for the cameos
     lines = list(TOWNIE[tag]) + list(TOWNIE2[tag])
-    R.shuffle(lines)
+    # the recurring named people of this area who stand in this plaza (areas/persona.py) take the places after the gift-giver, always with
+    # the same sprite and colours, so that the player knows them again; the other places get a line nobody has said yet in this area
+    sprites = people_sprites(g)
+    cast = persona.due(tag, plaza_no)[:max(0, n - 1)]
     for i, (x, y) in enumerate(m.npc_cells[:n]):
-        sp = R.choice(people_sprites(g))
+        sp = R.choice(sprites)
         pal = R.choice(NPC_PALS)
         face = R.choice(["LEFT", "RIGHT", "UP", "DOWN"])
         if i == 0:
             giver(w, m, x, y, sp, pal, face, f"{m.name}Giver", GIFT[tag][plaza_no % 4], GIFT_ITEMS[(plaza_no - 1) % len(GIFT_ITEMS)],
                   GIFT_AFTER[plaza_no % len(GIFT_AFTER)])
+        elif cast:
+            k, name, line = cast.pop(0)
+            plain_npc(m, x, y, sprites[(k * 5 + 2) % len(sprites)], NPC_PALS[(k * 3 + 1) % len(NPC_PALS)], face, f"{m.name}Persona{k}",
+                      f"{name}: {line}")
         else:
-            plain_npc(m, x, y, sp, pal, face, f"{m.name}Townie{i}", lines[i % len(lines)])
+            plain_npc(m, x, y, sp, pal, face, f"{m.name}Townie{i}", fresh_line(w, tag, "townie", lines))
     m.npc_cells = m.npc_cells[n:]
 
 

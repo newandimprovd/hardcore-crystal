@@ -16,11 +16,10 @@ DisStreet15Hermit:
 	jumptextfaceplayer DisStreet15HermitText
 
 DisStreet15HermitText:
-	text "The flames are"
-	line "warm. I stopped"
-	para "complaining. The"
-	line "complaint box is"
-	para "also on fire."
+	text "I have a theory"
+	line "that the fire is"
+	para "only paperwork. It"
+	line "burns the same."
 	done
 
 DisStreet15SeenText:

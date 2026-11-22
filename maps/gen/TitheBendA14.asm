@@ -13,11 +13,11 @@ TitheBendA14Hermit:
 	jumptextfaceplayer TitheBendA14HermitText
 
 TitheBendA14HermitText:
-	text "Shh. The trainers"
-	line "can't see you when"
-	para "you sit down. I"
-	line "have been sitting"
-	para "down since March."
+	text "I lost a bet with"
+	line "the Mayor. The"
+	para "stake was my"
+	line "shadow. It is on a"
+	para "payroll."
 	done
 
 TitheBendA14_MapEvents:

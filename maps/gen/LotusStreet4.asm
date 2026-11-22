@@ -16,9 +16,10 @@ LotusStreet4Hermit:
 	jumptextfaceplayer LotusStreet4HermitText
 
 LotusStreet4HermitText:
-	text "The cocktails are"
-	line "free. Meaning is"
-	para "extra."
+	text "The tide took my"
+	line "watch. It also"
+	para "took my reasons. I"
+	line "miss the watch."
 	done
 
 LotusStreet4SeenText:

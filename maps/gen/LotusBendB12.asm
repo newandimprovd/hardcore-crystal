@@ -13,11 +13,11 @@ LotusBendB12Hermit:
 	jumptextfaceplayer LotusBendB12HermitText
 
 LotusBendB12HermitText:
-	text "I saw a trainer"
-	line "yawn mid-attack."
-	para "It was the most"
-	line "honest violence I"
-	para "have ever seen."
+	text "I've been lying on"
+	line "this beach for"
+	para "eleven years. The"
+	line "tide has asked me"
+	para "to move twice."
 	done
 
 LotusBendB12_MapEvents:

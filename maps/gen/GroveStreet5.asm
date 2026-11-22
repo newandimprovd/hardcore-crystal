@@ -16,11 +16,10 @@ GroveStreet5Hermit:
 	jumptextfaceplayer GroveStreet5HermitText
 
 GroveStreet5HermitText:
-	text "If you hear"
-	line "chanting, it isn't"
-	para "a ritual. It's"
-	line "just Greg. He's"
-	para "had a bad week."
+	text "I grow my own"
+	line "food. I also grow"
+	para "my own problems."
+	line "Both are organic."
 	done
 
 GroveStreet5SeenText:

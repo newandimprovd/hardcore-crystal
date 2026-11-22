@@ -16,12 +16,10 @@ GroveStreet7Hermit:
 	jumptextfaceplayer GroveStreet7HermitText
 
 GroveStreet7HermitText:
-	text "The trainers out"
-	line "there are so"
-	para "friendly. They"
-	line "shout 'peace' and"
-	para "then try to kill"
-	line "you."
+	text "I came for"
+	line "silence. The birds"
+	para "are very loud"
+	line "about it."
 	done
 
 GroveStreet7SeenText:
