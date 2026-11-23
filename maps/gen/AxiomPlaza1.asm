@@ -10,11 +10,12 @@ AxiomPlaza1Fountain0:
 	jumptext AxiomPlaza1Fountain0Text
 
 AxiomPlaza1Fountain0Text:
-	text "AQUAXIOM. Aqua"
-	line "plus axiom. Axiom"
-	para "1: water is wet."
-	line "Axiom 2: do not"
-	para "touch it."
+	text "HYDRATTEST."
+	line "Hydrate plus"
+	para "attest. Drink only"
+	line "with a signed"
+	para "statement of"
+	line "thirst."
 	done
 
 AxiomPlaza1DebateA:
@@ -86,69 +87,75 @@ AxiomPlaza1GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-AxiomPlaza1Townie1:
-	jumptextfaceplayer AxiomPlaza1Townie1Text
+AxiomPlaza1Persona0:
+	jumptextfaceplayer AxiomPlaza1Persona0Text
 
-AxiomPlaza1Townie1Text:
-	text "The Mayor is a"
-	line "great listener. He"
-	para "has forty thousand"
-	line "microphones and no"
-	para "mouth."
+AxiomPlaza1Persona0Text:
+	text "CLERK UNIT 7:"
+	line "Please state your"
+	para "business. State it"
+	line "in triplicate."
+	para "Triplicate is also"
+	line "a business."
 	done
 
-AxiomPlaza1Townie2:
-	jumptextfaceplayer AxiomPlaza1Townie2Text
+AxiomPlaza1Persona2:
+	jumptextfaceplayer AxiomPlaza1Persona2Text
 
-AxiomPlaza1Townie2Text:
-	text "I requested a"
-	line "BERRY. I received"
-	para "a form. The form"
-	line "is also a berry."
+AxiomPlaza1Persona2Text:
+	text "MATCHMAKER MABEL:"
+	line "I am a matchmaker."
+	para "I match people."
+	line "Also tasks. Also"
+	para "debts. Do you have"
+	line "any debts?"
 	done
 
-AxiomPlaza1Townie3:
-	jumptextfaceplayer AxiomPlaza1Townie3Text
+AxiomPlaza1Persona3:
+	jumptextfaceplayer AxiomPlaza1Persona3Text
 
-AxiomPlaza1Townie3Text:
-	text "The shop with a"
-	line "clerk and a couch"
-	para "is real. The couch"
-	line "is audited weekly."
+AxiomPlaza1Persona3Text:
+	text "DR HALVORSEN: A"
+	line "wellness check. I"
+	para "take your pulse. I"
+	line "keep your pulse."
+	para "For safekeeping."
 	done
 
-AxiomPlaza1Townie4:
-	jumptextfaceplayer AxiomPlaza1Townie4Text
+AxiomPlaza1Persona5:
+	jumptextfaceplayer AxiomPlaza1Persona5Text
 
-AxiomPlaza1Townie4Text:
-	text "Please queue here."
-	line "Queue for the"
-	para "queue, then queue."
-	line "Thank you for"
-	para "queueing."
+AxiomPlaza1Persona5Text:
+	text "COURIER DASH: I"
+	line "deliver. Just"
+	para "point and sign. I"
+	line "do not know what"
+	para "is inside. Do not"
+	line "ask. It ticks."
 	done
 
-AxiomPlaza1Townie5:
-	jumptextfaceplayer AxiomPlaza1Townie5Text
+AxiomPlaza1Persona7:
+	jumptextfaceplayer AxiomPlaza1Persona7Text
 
-AxiomPlaza1Townie5Text:
-	text "We are all equal"
-	line "before the"
-	para "algorithm. The"
-	line "algorithm is not"
-	para "equal to us."
+AxiomPlaza1Persona7Text:
+	text "PROFESSOR AXIOM:"
+	line "Every system is"
+	para "built on axioms."
+	line "This city is built"
+	para "on three. Two are"
+	line "unspoken. One is a"
+	para "typo."
 	done
 
 AxiomPlaza1Townie6:
 	jumptextfaceplayer AxiomPlaza1Townie6Text
 
 AxiomPlaza1Townie6Text:
-	text "Statistics say"
-	line "nine of ten"
-	para "citizens are"
-	line "satisfied. The"
-	para "tenth is being"
-	line "resolved."
+	text "Please queue here."
+	line "Queue for the"
+	para "queue, then queue."
+	line "Thank you for"
+	para "queueing."
 	done
 
 AxiomPlaza1SabbahBearerScript:
@@ -169,7 +176,7 @@ AxiomPlaza1SabbahBearerScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_SABBAH_PAID
-	iftrue .After
+	iftrue .Later
 	writetext AxiomPlaza1SabbahBearerScriptGiveText
 	waitbutton
 	verbosegiveitem FLASHLIGHT
@@ -193,6 +200,37 @@ AxiomPlaza1SabbahBearerScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_SABBAH_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_SABBAH_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_SABBAH_TALK2
+	iffalse .More2
+	sjump .After
+
+.More0:
+	writetext AxiomPlaza1SabbahBearerScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_SABBAH_TALK0
+	closetext
+	end
+
+.More1:
+	writetext AxiomPlaza1SabbahBearerScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_SABBAH_TALK1
+	closetext
+	end
+
+.More2:
+	writetext AxiomPlaza1SabbahBearerScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_SABBAH_TALK2
+	closetext
+	end
+
+
 AxiomPlaza1SabbahBearerScriptSeenText:
 	text "Hasan i Sabbah."
 	line "The Lord of"
@@ -201,43 +239,6 @@ AxiomPlaza1SabbahBearerScriptSeenText:
 	para "the Mountain, as"
 	line "if mountains had"
 	para "fathers."
-	para "Listen. Every word"
-	line "has a husk and a"
-	para "kernel. The husk"
-	line "is the zahir, the"
-	para "letter. The kernel"
-	line "is the batin, the"
-	para "meaning. The crowd"
-	line "eats husks. I keep"
-	para "the kernel."
-	para "You cannot reach"
-	line "the kernel by your"
-	para "own reason. Reason"
-	line "is a lamp with no"
-	para "oil. You need the"
-	line "teacher, the one"
-	para "who is sent, the"
-	line "one who does not"
-	para "err. I call this"
-	line "the ta'lim. The"
-	para "robots call it a"
-	line "software update."
-	para "Look at this city."
-	line "Rules and files"
-	para "and a clean"
-	line "schedule. A pure"
-	para "zahir. A husk with"
-	line "no seed. The"
-	para "robots have the"
-	line "law and have never"
-	para "met its meaning."
-	para "They say I taught"
-	line "that nothing is"
-	para "true and"
-	line "everything is"
-	para "permitted. I did"
-	line "not. But I enjoy"
-	para "being quoted."
 	para "The road ahead is"
 	line "dark and something"
 	para "in it breathes. I"
@@ -274,6 +275,52 @@ AxiomPlaza1SabbahBearerScriptAfterText:
 	para "lamp for the sun."
 	line "The robots have"
 	para "done so for years."
+	done
+
+AxiomPlaza1SabbahBearerScriptMoreText0:
+	text "Listen. Every word"
+	line "has a husk and a"
+	para "kernel. The husk"
+	line "is the zahir, the"
+	para "letter. The kernel"
+	line "is the batin, the"
+	para "meaning. The crowd"
+	line "eats husks. I keep"
+	para "the kernel."
+	done
+
+AxiomPlaza1SabbahBearerScriptMoreText1:
+	text "You cannot reach"
+	line "the kernel by your"
+	para "own reason. Reason"
+	line "is a lamp with no"
+	para "oil. You need the"
+	line "teacher, the one"
+	para "who is sent, the"
+	line "one who does not"
+	para "err. I call this"
+	line "the ta'lim. The"
+	para "robots call it a"
+	line "software update."
+	para "Look at this city."
+	line "Rules and files"
+	para "and a clean"
+	line "schedule. A pure"
+	para "zahir. A husk with"
+	line "no seed. The"
+	para "robots have the"
+	line "law and have never"
+	para "met its meaning."
+	done
+
+AxiomPlaza1SabbahBearerScriptMoreText2:
+	text "They say I taught"
+	line "that nothing is"
+	para "true and"
+	line "everything is"
+	para "permitted. I did"
+	line "not. But I enjoy"
+	para "being quoted."
 	done
 
 AxiomPlaza1SabbahBearerScriptNoText:
@@ -324,7 +371,7 @@ AxiomPlaza1Duel:
 	iffalse .No
 	closetext
 	winlosstext AxiomPlaza1DuelBeatenText, 0
-	loadtrainer U_BOTCOP, 139
+	loadtrainer U_BOTCOP, 143
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_PLAZA1_DUEL
@@ -397,32 +444,32 @@ AxiomPlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, AXIOM_MART1, 1
-	warp_event  8,  3, AXIOM_HOUSE1, 1
-	warp_event 12,  3, AXIOM_POKECENTER1, 1
-	warp_event 12, 29, AXIOM_GATE, 1
+	warp_event 10, 33, AXIOM_GATE, 1
+	warp_event 18, 23, AXIOM_POKECENTER1, 1
+	warp_event 12,  7, AXIOM_MART1, 1
+	warp_event 24,  9, AXIOM_HOUSE1, 1
 
 	def_coord_events
-	coord_event 16,  1, -1, AxiomPlaza1SabbahBlockScript
-	coord_event 17,  1, -1, AxiomPlaza1SabbahBlockScript
 	coord_event 18,  1, -1, AxiomPlaza1SabbahBlockScript
 	coord_event 19,  1, -1, AxiomPlaza1SabbahBlockScript
 	coord_event 20,  1, -1, AxiomPlaza1SabbahBlockScript
 	coord_event 21,  1, -1, AxiomPlaza1SabbahBlockScript
+	coord_event 22,  1, -1, AxiomPlaza1SabbahBlockScript
+	coord_event 23,  1, -1, AxiomPlaza1SabbahBlockScript
 
 	def_bg_events
-	bg_event 21, 23, BGEVENT_READ, AxiomPlaza1Fountain0
+	bg_event  6,  7, BGEVENT_READ, AxiomPlaza1Fountain0
 
 	def_object_events
-	object_event  6, 18, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateA, -1
-	object_event  7, 18, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateB, -1
-	object_event  5, 16, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Giver, -1
-	object_event  8,  6, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie1, -1
-	object_event  5, 15, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie2, -1
-	object_event 17, 27, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie3, -1
-	object_event 15, 11, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie4, -1
-	object_event 18, 23, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie5, -1
-	object_event 17, 18, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie6, -1
-	object_event  8, 25, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahBearerScript, -1
-	object_event 16, 19, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Duel, -1
+	object_event  2, 28, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateA, -1
+	object_event  3, 28, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateB, -1
+	object_event  6, 13, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Giver, -1
+	object_event 17, 15, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona0, -1
+	object_event 16,  9, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona2, -1
+	object_event 26, 15, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona3, -1
+	object_event  5, 13, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona5, -1
+	object_event  5, 11, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona7, -1
+	object_event 23, 18, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie6, -1
+	object_event 25, 11, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahBearerScript, -1
+	object_event 25, 14, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Duel, -1
 

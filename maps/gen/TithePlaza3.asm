@@ -73,66 +73,74 @@ TithePlaza3GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-TithePlaza3Townie1:
-	jumptextfaceplayer TithePlaza3Townie1Text
+TithePlaza3Persona0:
+	jumptextfaceplayer TithePlaza3Persona0Text
 
-TithePlaza3Townie1Text:
-	text "I've been waiting"
-	line "for the bus since"
-	para "the line was"
-	line "cancelled. I'm"
-	para "very committed."
+TithePlaza3Persona0Text:
+	text "SISTER AGNES: You"
+	line "again. The plate"
+	para "remembers you. It"
+	line "has started"
+	para "leaving little"
+	line "notes."
 	done
 
-TithePlaza3Townie2:
-	jumptextfaceplayer TithePlaza3Townie2Text
+TithePlaza3Persona3:
+	jumptextfaceplayer TithePlaza3Persona3Text
 
-TithePlaza3Townie2Text:
-	text "The pawnbroker"
-	line "keeps his best"
-	para "items in a living"
-	line "room. Don't ask"
-	para "why. Don't ask"
-	line "how."
+TithePlaza3Persona3Text:
+	text "LENNY THE LENDER:"
+	line "Interest is just"
+	para "time with teeth. I"
+	line "give you the time."
+	para "The teeth are"
+	line "free."
 	done
 
-TithePlaza3Townie3:
-	jumptextfaceplayer TithePlaza3Townie3Text
+TithePlaza3Persona4:
+	jumptextfaceplayer TithePlaza3Persona4Text
 
-TithePlaza3Townie3Text:
-	text "My Pokemon hold a"
-	line "berry each. Mine"
-	para "holds a grudge."
-	line "It's cheaper."
+TithePlaza3Persona4Text:
+	text "WIDOW MARSH: He"
+	line "keeps sending"
+	para "letters. I told"
+	line "the post office he"
+	para "is dead. They said"
+	line "he still owes"
+	para "postage."
 	done
 
-TithePlaza3Townie4:
-	jumptextfaceplayer TithePlaza3Townie4Text
+TithePlaza3Persona6:
+	jumptextfaceplayer TithePlaza3Persona6Text
 
-TithePlaza3Townie4Text:
-	text "My horoscope says"
-	line "'Pay.' Just that."
-	para "Every day. 'Pay.'"
+TithePlaza3Persona6Text:
+	text "DEACON THEO:"
+	line "Forgiveness is"
+	para "free. The"
+	line "paperwork is not."
+	para "That is my whole"
+	line "ministry."
 	done
 
-TithePlaza3Townie5:
-	jumptextfaceplayer TithePlaza3Townie5Text
+TithePlaza3Persona7:
+	jumptextfaceplayer TithePlaza3Persona7Text
 
-TithePlaza3Townie5Text:
-	text "Free samples! Just"
-	line "kidding."
-	para "Everything is a"
-	line "subscription."
+TithePlaza3Persona7Text:
+	text "MADAME PIA: I see"
+	line "debt. I see rain."
+	para "I see a man with"
+	line "your face paying"
+	para "for both."
 	done
 
 TithePlaza3Townie6:
 	jumptextfaceplayer TithePlaza3Townie6Text
 
 TithePlaza3Townie6Text:
-	text "I took out a loan"
-	line "to pay off the"
-	para "other loan. The"
-	line "system works!"
+	text "My Pokemon hold a"
+	line "berry each. Mine"
+	para "holds a grudge."
+	line "It's cheaper."
 	done
 
 TithePlaza3Duel:
@@ -145,7 +153,7 @@ TithePlaza3Duel:
 	iffalse .No
 	closetext
 	winlosstext TithePlaza3DuelBeatenText, 0
-	loadtrainer T_THUG, 137
+	loadtrainer T_THUG, 133
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_TITHE_PLAZA3_DUEL
@@ -218,24 +226,24 @@ TithePlaza3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, TITHE_VESTRY, 1
-	warp_event  6,  3, TITHE_HOUSE3, 1
-	warp_event 12,  3, TITHE_POKECENTER3, 1
-	warp_event 24,  3, TITHE_MART3, 1
+	warp_event  2, 11, TITHE_POKECENTER3, 1
+	warp_event 24, 25, TITHE_MART3, 1
+	warp_event 16,  7, TITHE_HOUSE3, 1
+	warp_event 24, 17, TITHE_VESTRY, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 29, 20, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza3DebateA, -1
-	object_event 30, 20, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza3DebateB, -1
-	object_event 16, 23, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Giver, -1
-	object_event 22,  8, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie1, -1
-	object_event  7, 20, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie2, -1
-	object_event 12, 19, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie3, -1
-	object_event 10, 17, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie4, -1
-	object_event 28,  9, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie5, -1
-	object_event 31, 23, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie6, -1
-	object_event  6, 23, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza3Duel, -1
+	object_event  2, 27, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza3DebateA, -1
+	object_event  3, 27, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza3DebateB, -1
+	object_event 39, 12, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza3Giver, -1
+	object_event 12, 23, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Persona0, -1
+	object_event 29, 26, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Persona3, -1
+	object_event  4, 28, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza3Persona4, -1
+	object_event 17,  9, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza3Persona6, -1
+	object_event 28, 19, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza3Persona7, -1
+	object_event 22, 20, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza3Townie6, -1
+	object_event 38, 18, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza3Duel, -1
 

@@ -6917,12 +6917,8 @@ GiveExperiencePoints:
 	cp LUCKY_EGG
 	call z, BoostExp
 	call HC_ExpCharm
-	ld a, [wHCShareOther]
-	and a
-	jr z, .hc_loud
-	pop bc ; HC: benched party members are paid silently
-	jr .hc_award
-.hc_loud
+; HC: benched party members are announced like the fighters (alpha 3.1 paid them silently, which also left the defeated foe's name in
+; wStringBuffer1 for the "grew to level" line). GetNickname below loads the right name, and AnimateExpBar skips mons that are not on the field.
 	ldh a, [hQuotient + 3]
 	ld [wStringBuffer2 + 1], a
 	ldh a, [hQuotient + 2]
@@ -6941,7 +6937,6 @@ GiveExperiencePoints:
 	push bc
 	call LoadTilemapToTempTilemap
 	pop bc
-.hc_award
 	ld hl, MON_EXP + 2
 	add hl, bc
 	ld d, [hl]

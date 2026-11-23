@@ -16,12 +16,10 @@ DisStreet3Hermit:
 	jumptextfaceplayer DisStreet3HermitText
 
 DisStreet3HermitText:
-	text "The demons are"
-	line "very professional."
-	para "They send a"
-	line "thank-you note"
-	para "after the"
-	line "screaming."
+	text "I have a theory"
+	line "that the fire is"
+	para "only paperwork. It"
+	line "burns the same."
 	done
 
 DisStreet3SeenText:
@@ -45,25 +43,25 @@ DisStreet3AfterScript:
 	end
 
 DisStreet3Trainer0:
-	trainer D_IMP, 129, EVENT_GEN_DIS_STREET3_0, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_JUDGE, 129, EVENT_GEN_DIS_STREET3_0, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
 
 DisStreet3Trainer1:
-	trainer D_IMPB, 128, EVENT_GEN_DIS_STREET3_1, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_BRAWLER, 128, EVENT_GEN_DIS_STREET3_1, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
 
 DisStreet3Trainer2:
-	trainer D_BRAWLER, 128, EVENT_GEN_DIS_STREET3_2, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_IMP, 129, EVENT_GEN_DIS_STREET3_2, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
 
 DisStreet3Trainer3:
-	trainer D_JUDGE, 128, EVENT_GEN_DIS_STREET3_3, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_IMP, 130, EVENT_GEN_DIS_STREET3_3, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
 
 DisStreet3Trainer4:
-	trainer D_BRAWLER, 129, EVENT_GEN_DIS_STREET3_4, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_JESTER, 128, EVENT_GEN_DIS_STREET3_4, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
 
 DisStreet3Trainer5:
-	trainer D_IMPB, 129, EVENT_GEN_DIS_STREET3_5, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_MAGISTRATE, 128, EVENT_GEN_DIS_STREET3_5, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
 
 DisStreet3Trainer6:
-	trainer D_DAMNED, 131, EVENT_GEN_DIS_STREET3_6, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_SHADE, 130, EVENT_GEN_DIS_STREET3_6, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
 
 DisStreet3_MapEvents:
 	db 0, 0 ; filler
@@ -73,16 +71,16 @@ DisStreet3_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 29, BGEVENT_ITEM, DisStreet3Hidden
+	bg_event 19, 28, BGEVENT_ITEM, DisStreet3Hidden
 
 	def_object_events
-	object_event  5, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet3Pickup, EVENT_GEN_DIS_STREET3_PICKUP
-	object_event  2, 24, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisStreet3Hermit, -1
-	object_event 10, 28, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer0, -1
-	object_event 15, 28, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer1, -1
-	object_event 10, 24, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer2, -1
-	object_event 15, 24, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer3, -1
-	object_event 10, 20, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer4, -1
-	object_event 11, 16, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer5, -1
-	object_event  6, 12, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer6, -1
+	object_event 20, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet3Pickup, EVENT_GEN_DIS_STREET3_PICKUP
+	object_event 17, 24, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisStreet3Hermit, -1
+	object_event  8, 28, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer0, -1
+	object_event 13, 28, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer1, -1
+	object_event  8, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer2, -1
+	object_event 13, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer3, -1
+	object_event  8, 20, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer4, -1
+	object_event 17, 16, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer5, -1
+	object_event 12, 12, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer6, -1
 

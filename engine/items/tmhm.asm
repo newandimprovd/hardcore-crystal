@@ -150,7 +150,7 @@ TeachTMHM:
 
 	ld c, HAPPINESS_LEARNMOVE
 	callfar ChangeHappiness
-	call ConsumeTM
+	; Hardcore Crystal: TMs are unlimited use like in the modern games, so nothing is consumed
 	jr .learned_move
 
 .nope

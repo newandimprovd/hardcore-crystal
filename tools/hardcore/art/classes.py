@@ -31,8 +31,8 @@ AREA_CLASSES["AREA1"] = [
     ("T_COPCHIEF", "COP CHIEF", "cop_chief", "BLUE", 0, "OFFICER", M),
     ("T_MONSIGNOR", "MONSIGNOR", "monsignor", "RED", 0, "MYSTICALMAN", M),
     # named duelists (areas/named.py): no random mix, they only appear where the generator puts them
-    ("T_STEINER", "STEINER", "steiner", "BROWN", 0, "SAGE", M),
-    ("T_CROWLEY", "CROWLEY", "crowley", "BROWN", 0, "MYSTICALMAN", M),
+    ("T_STEINER", "HUMANIST", "steiner", "BROWN", 0, "SAGE", M),
+    ("T_CROWLEY", "POET", "crowley", "BROWN", 0, "MYSTICALMAN", M),
 ]
 AREA_CLASSES["AREA2"] = [
     ("G_HIKER", "HIKER", "hiker", "BROWN", 4, "HIKER", M),
@@ -72,8 +72,8 @@ AREA_CLASSES["AREA3"] = [
     ("U_COURIER", "COURIER", "bot_drone", "BROWN", 1, "BIKER", M),
     # bosses
     ("U_MAYOR", "MAYOR BOT", "bot_mayor", "BROWN", 0, "EXECUTIVEM", M),
-    ("U_SABBAH", "SABBAH", "sabbah", "BROWN", 0, "SAGE", M),
-    ("U_SUHRAWARDI", "SUHRAWARDI", "elder_m", "GREEN", 0, "SAGE", M),
+    ("U_SABBAH", "GRANDMASTER", "sabbah", "BROWN", 0, "SAGE", M),
+    ("U_SUHRAWARDI", "SHAYKH", "elder_m", "GREEN", 0, "SAGE", M),
 ]
 AREA_CLASSES["AREA4"] = [
     ("L_SUNBATHER", "SUNBATHER", "sunbather", "PINK", 4, "BEAUTY", F),
@@ -91,7 +91,7 @@ AREA_CLASSES["AREA4"] = [
     ("L_TOURISTM", "TOURIST", "tourist_m", "RED", 2, "COOLTRAINERM", M),
     ("L_BELLHOP", "BELLHOP", "waiter", "BROWN", 2, "BURGLAR", M),
     ("L_LOUNGER", "LOUNGER", "beach_bum", "BROWN", 2, "GRUNTM", M),
-    ("L_CIORAN", "CIORAN", "cioran", "BROWN", 0, "PSYCHIC_T", M),
+    ("L_CIORAN", "APHORIST", "cioran", "BROWN", 0, "PSYCHIC_T", M),
 ]
 AREA_CLASSES["AREA5"] = [
     ("D_BRUTE", "BRUTE", "brute", "BLUE", 2, "BLACKBELT_T", M),
@@ -113,8 +113,8 @@ AREA_CLASSES["AREA5"] = [
     # bosses
     ("D_DEMON", "DEMON LORD", "demon_lord", "BLUE", 0, "BURGLAR", M),
     ("D_FINNEGAN", "FINNEGAN", "finnegan", "BLUE", 0, "MYSTICALMAN", M),
-    ("D_SADRA", "SADRA", "elder_m", "RED", 0, "SAGE", M),
-    ("D_QADI", "ABD JABBAR", "judge", "BLUE", 0, "SAGE", M),
+    ("D_SADRA", "THEOSOPHER", "elder_m", "RED", 0, "SAGE", M),
+    ("D_QADI", "QADI", "judge", "BLUE", 0, "SAGE", M),
 ]
 
 

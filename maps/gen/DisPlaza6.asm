@@ -76,56 +76,65 @@ DisPlaza6GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-DisPlaza6Townie1:
-	jumptextfaceplayer DisPlaza6Townie1Text
+DisPlaza6Persona1:
+	jumptextfaceplayer DisPlaza6Persona1Text
 
-DisPlaza6Townie1Text:
-	text "I got a pamphlet"
-	line "called 'How to"
-	para "Cope.' It was one"
-	line "page. It said"
-	para "'Don't.'"
+DisPlaza6Persona1Text:
+	text "IMP SNIX: I have"
+	line "been promoted. My"
+	para "title is Senior"
+	line "Little Devil. The"
+	para "pay is the same."
+	line "The horns are"
+	para "bigger."
 	done
 
-DisPlaza6Townie2:
-	jumptextfaceplayer DisPlaza6Townie2Text
+DisPlaza6Persona2:
+	jumptextfaceplayer DisPlaza6Persona2Text
 
-DisPlaza6Townie2Text:
-	text "We have a union."
-	line "It meets every"
-	para "Never."
+DisPlaza6Persona2Text:
+	text "FIRE EATER CINDER:"
+	line "I am starting a"
+	para "new act. I eat the"
+	line "dark. Nobody has"
+	para "noticed the dark"
+	line "is missing."
 	done
 
-DisPlaza6Townie3:
-	jumptextfaceplayer DisPlaza6Townie3Text
+DisPlaza6Persona3:
+	jumptextfaceplayer DisPlaza6Persona3Text
 
-DisPlaza6Townie3Text:
-	text "A held item is a"
-	line "promise with a"
-	para "handle. The handle"
-	line "is hot."
+DisPlaza6Persona3Text:
+	text "JUDGE ROTH: I have"
+	line "recused myself."
+	para "From the entire"
+	line "pit. It did not"
+	para "help. They found"
+	line "me guilty anyway."
 	done
 
-DisPlaza6Townie4:
-	jumptextfaceplayer DisPlaza6Townie4Text
+DisPlaza6Persona6:
+	jumptextfaceplayer DisPlaza6Persona6Text
 
-DisPlaza6Townie4Text:
-	text "Demons are people"
-	line "too. Terrible,"
-	para "terrible people,"
-	line "but still."
+DisPlaza6Persona6Text:
+	text "JESTER JAPE: My"
+	line "audience is"
+	para "eternal. The act"
+	line "is also eternal. I"
+	para "wish one of us"
+	line "would stop."
 	done
 
-DisPlaza6Townie5:
-	jumptextfaceplayer DisPlaza6Townie5Text
+DisPlaza6Persona7:
+	jumptextfaceplayer DisPlaza6Persona7Text
 
-DisPlaza6Townie5Text:
-	text "The shop in the"
-	line "living room is a"
-	para "pawn of the"
-	line "underworld. You"
-	para "will pay in"
-	line "pieces."
+DisPlaza6Persona7Text:
+	text "SHADE VERA: I have"
+	line "finished my"
+	para "masterpiece. It is"
+	line "a single line. I"
+	para "will not repeat"
+	line "it. I have sworn."
 	done
 
 DisPlaza6Townie6:
@@ -157,7 +166,7 @@ DisPlaza6SadraDuelScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_SADRA_PAID
-	iftrue .After
+	iftrue .Later
 	writetext DisPlaza6SadraDuelScriptGiveText
 	waitbutton
 	verbosegiveitem PP_UP
@@ -181,6 +190,46 @@ DisPlaza6SadraDuelScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_SADRA_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_SADRA_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_SADRA_TALK2
+	iffalse .More2
+	checkevent EVENT_NAMED_SADRA_TALK3
+	iffalse .More3
+	sjump .After
+
+.More0:
+	writetext DisPlaza6SadraDuelScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_SADRA_TALK0
+	closetext
+	end
+
+.More1:
+	writetext DisPlaza6SadraDuelScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_SADRA_TALK1
+	closetext
+	end
+
+.More2:
+	writetext DisPlaza6SadraDuelScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_SADRA_TALK2
+	closetext
+	end
+
+.More3:
+	writetext DisPlaza6SadraDuelScriptMoreText3
+	waitbutton
+	setevent EVENT_NAMED_SADRA_TALK3
+	closetext
+	end
+
+
 DisPlaza6SadraDuelScriptSeenText:
 	text "Sadr al Din"
 	line "Shirazi. They call"
@@ -192,47 +241,6 @@ DisPlaza6SadraDuelScriptSeenText:
 	line "village near Qom,"
 	para "waiting for the"
 	line "world to catch up."
-	para "Nothing stands"
-	line "still. Not stones,"
-	para "not stars. Every"
-	line "thing is moving in"
-	para "its very being,"
-	line "from the weaker to"
-	para "the stronger. I"
-	line "call it"
-	para "substantial"
-	line "motion."
-	para "The soul is born"
-	line "from the body, and"
-	para "the body is only"
-	line "its first step. It"
-	para "begins as matter"
-	line "and it ends as"
-	para "spirit, and what"
-	line "it ends as is what"
-	para "it has done."
-	para "On the last day"
-	line "the deeds of the"
-	para "soul stand up in"
-	line "the body they have"
-	para "made. A greedy man"
-	line "rises as a"
-	para "creature of greed."
-	line "A gentle man rises"
-	para "as light. This is"
-	line "not a punishment."
-	para "It is a mirror"
-	line "with a body."
-	para "I am told this"
-	line "place is eternal."
-	para "I argued that the"
-	line "Fire is the soul's"
-	para "own heat, and that"
-	line "every heat, given"
-	para "time, cools. I am"
-	line "no fool, I know"
-	para "how that sounds in"
-	line "a pit."
 	para "You too are in"
 	line "motion. You do not"
 	para "feel it, because"
@@ -268,6 +276,59 @@ DisPlaza6SadraDuelScriptAfterText:
 	para "either."
 	done
 
+DisPlaza6SadraDuelScriptMoreText0:
+	text "Nothing stands"
+	line "still. Not stones,"
+	para "not stars. Every"
+	line "thing is moving in"
+	para "its very being,"
+	line "from the weaker to"
+	para "the stronger. I"
+	line "call it"
+	para "substantial"
+	line "motion."
+	done
+
+DisPlaza6SadraDuelScriptMoreText1:
+	text "The soul is born"
+	line "from the body, and"
+	para "the body is only"
+	line "its first step. It"
+	para "begins as matter"
+	line "and it ends as"
+	para "spirit, and what"
+	line "it ends as is what"
+	para "it has done."
+	done
+
+DisPlaza6SadraDuelScriptMoreText2:
+	text "On the last day"
+	line "the deeds of the"
+	para "soul stand up in"
+	line "the body they have"
+	para "made. A greedy man"
+	line "rises as a"
+	para "creature of greed."
+	line "A gentle man rises"
+	para "as light. This is"
+	line "not a punishment."
+	para "It is a mirror"
+	line "with a body."
+	done
+
+DisPlaza6SadraDuelScriptMoreText3:
+	text "I am told this"
+	line "place is eternal."
+	para "I argued that the"
+	line "Fire is the soul's"
+	para "own heat, and that"
+	line "every heat, given"
+	para "time, cools. I am"
+	line "no fool, I know"
+	para "how that sounds in"
+	line "a pit."
+	done
+
 DisPlaza6SadraDuelScriptNoText:
 	text "Another day. I"
 	line "will be here. The"
@@ -293,7 +354,7 @@ DisPlaza6Duel:
 	iffalse .No
 	closetext
 	winlosstext DisPlaza6DuelBeatenText, 0
-	loadtrainer D_SPECTRE, 135
+	loadtrainer D_SPECTRE, 131
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_DIS_PLAZA6_DUEL
@@ -363,25 +424,25 @@ DisPlaza6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  3, DIS_POKECENTER6, 1
-	warp_event  8,  3, DIS_HOUSE6, 1
-	warp_event 12,  3, DIS_MART6, 1
-	warp_event 16,  3, DIS_BOUTIQUE6, 1
+	warp_event 28, 15, DIS_POKECENTER6, 1
+	warp_event 14, 23, DIS_MART6, 1
+	warp_event 12,  9, DIS_HOUSE6, 1
+	warp_event 16, 15, DIS_BOUTIQUE6, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 22, 19, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza6DebateA, -1
-	object_event 23, 19, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6DebateB, -1
-	object_event 14, 18, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Giver, -1
-	object_event 12, 22, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie1, -1
-	object_event 18,  6, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie2, -1
-	object_event  4,  7, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie3, -1
-	object_event 25, 21, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie4, -1
-	object_event 12, 16, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie5, -1
-	object_event  2,  6, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie6, -1
-	object_event 19, 12, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6SadraDuelScript, -1
-	object_event 13, 10, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Duel, -1
+	object_event  8, 29, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza6DebateA, -1
+	object_event  9, 29, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6DebateB, -1
+	object_event 10, 26, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Giver, -1
+	object_event 19, 30, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona1, -1
+	object_event 29, 19, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona2, -1
+	object_event 28, 25, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona3, -1
+	object_event 11, 29, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona6, -1
+	object_event  6, 26, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza6Persona7, -1
+	object_event 29, 28, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza6Townie6, -1
+	object_event 29, 27, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6SadraDuelScript, -1
+	object_event 22,  7, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza6Duel, -1
 

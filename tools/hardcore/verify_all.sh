@@ -27,6 +27,7 @@ step b_vc $TB vc TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=3 TEST_MON=CTHULUDON
 step cross python3 tools/hardcore/test_cross.py /home/claude/scratch/vc.gbc
 step b_ui $TB ui TEST_MAP=CHERRYGROVE_CITY TEST_X=17 TEST_Y=8 TEST_MON=TOTODILE TEST_LEVEL=12 TEST_REVEALED=1
 step battle_ui python3 tools/hardcore/test_battle_ui.py /home/claude/scratch/ui.gbc
+step exp python3 tools/hardcore/test_exp.py /home/claude/scratch/ui.gbc
 step b_nf $TB nf TEST_MAP=CHERRYGROVE_POKECENTER_1F TEST_X=3 TEST_Y=3 TEST_MON=TOTODILE TEST_LEVEL=12 TEST_REVEALED=1
 step nurse_free python3 tools/hardcore/test_nurse.py /home/claude/scratch/nf.gbc free
 step b_np $TB np TEST_MAP=TITHE_POKECENTER1 TEST_X=3 TEST_Y=3 TEST_MON=TOTODILE TEST_LEVEL=12 TEST_REVEALED=1
@@ -43,6 +44,8 @@ step split python3 tools/hardcore/test_split.py /home/claude/scratch/wa1.gbc 400
 read -r SC SX SY <<< "$(python3 tools/hardcore/spawn.py TithePlaza1 spawn)"
 step b_stA $TB stA TEST_MAP=$SC TEST_X=$SX TEST_Y=$SY TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1
 step milestone python3 tools/hardcore/test_story.py milestone /home/claude/scratch/stA.gbc
+step hollow python3 tools/hardcore/test_hollow.py /home/claude/scratch/stA.gbc
+step cork python3 tools/hardcore/test_cork.py /home/claude/scratch/stA.gbc
 step b_stB $TB stB TEST_MAP=NEW_BARK_TOWN TEST_X=10 TEST_Y=10 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2
 step newbark python3 tools/hardcore/test_story.py newbark /home/claude/scratch/stB.gbc
 step b_gt1 $TB gt1 TEST_MAP=TITHE_JUNCTION TEST_X=19 TEST_Y=20 TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1

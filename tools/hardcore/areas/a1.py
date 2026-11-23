@@ -13,7 +13,7 @@ from .text import Text
 
 class Spec:
     pool = "A1"
-    l0, l1 = 5, 24
+    l0, l1 = 5, 22
     theme = {"DARK": 3, "NORMAL": 3, "FIGHTING": 2, "STEEL": 2, "PSYCHIC_TYPE": 1.5, "POISON": 1.5,
              "GHOST": 1, "BUG": 1, "FIRE": 0.7, "WATER": 0.7, "GRASS": 0.5, "FLYING": 1, "GROUND": 0.7,
              "ELECTRIC": 0.7, "ROCK": 0.5, "ICE": 0.3, "DRAGON": 0.1, "FAIRY": 0.3}
@@ -83,11 +83,11 @@ def build(w, roster, rng, open_exit=False):
     road.scripts.append(Text(T.TIPS_SIGN).emit("TitheRoadTipsSignText"))
     # the road's south end is joined to the Tithe Junction by gen_areas.py (opening.py)
 
-    boss1 = BossSpec("TitheVestry", "DEACON", "T_DEACON", "SPRITE_HC_PRIEST", "PAL_NPC_RED", 15, 4, T.VESTRY_SEEN,
+    boss1 = BossSpec("TitheVestry", "DEACON", "T_DEACON", "SPRITE_HC_PRIEST", "PAL_NPC_RED", 12, 4, T.VESTRY_SEEN,
                      T.VESTRY_BEATEN, T.VESTRY_AFTER, template="karen")
-    boss2 = BossSpec("TitheEvidenceRoom", "CHIEF BRAD", "T_COPCHIEF", "SPRITE_HC_COP_CHIEF", "PAL_NPC_BLUE", 21, 5,
+    boss2 = BossSpec("TitheEvidenceRoom", "CHIEF BRAD", "T_COPCHIEF", "SPRITE_HC_COP_CHIEF", "PAL_NPC_BLUE", 17, 5,
                      T.EVIDENCE_SEEN, T.EVIDENCE_BEATEN, T.EVIDENCE_AFTER, template="will")
-    boss3 = BossSpec("TitheCathedral", "MONSIGNOR", "T_MONSIGNOR", "SPRITE_HC_MONSIGNOR", "PAL_NPC_RED", 27, 6,
+    boss3 = BossSpec("TitheCathedral", "MONSIGNOR", "T_MONSIGNOR", "SPRITE_HC_MONSIGNOR", "PAL_NPC_RED", 22, 6,
                      T.CATHEDRAL_SEEN, T.CATHEDRAL_BEATEN, T.CATHEDRAL_AFTER, template="bruno", landmark=LM_PARISH,
                      music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit)
     # Timmy is kill 1; the tidal wave news is kill counts.TSUNAMI_KILLS (HC_TSUNAMI_KILLS) and does not depend on any one room
@@ -102,6 +102,7 @@ def build(w, roster, rng, open_exit=False):
     prev, lane_no, plaza_no = p1, 1, 2
     bosses = []
     for k, act in enumerate(acts):
+        act.index, act.spec = k, spec
         lanes, prev, doors, info, lane_no, plaza_no = build_act(
             w, g, rng, roster, act, prev, plaza_no, lane_no, spec.theme, items[2 * k + 1:2 * k + 3])
         all_lanes += lanes

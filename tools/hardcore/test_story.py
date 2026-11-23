@@ -13,6 +13,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 os.environ.setdefault("WALK_GOD", "1")
+os.environ.setdefault("WALK_GOD_HP", "30000")  # the six level 100 mons of Finnegan (alpha 3.2: strong forms with items) take 999 HP in one move
 import test_walk as tw  # noqa: E402
 from gbtest import T  # noqa: E402
 

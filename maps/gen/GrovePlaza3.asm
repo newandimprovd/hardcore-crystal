@@ -77,67 +77,71 @@ GrovePlaza3GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-GrovePlaza3Townie1:
-	jumptextfaceplayer GrovePlaza3Townie1Text
+GrovePlaza3Persona0:
+	jumptextfaceplayer GrovePlaza3Persona0Text
 
-GrovePlaza3Townie1Text:
-	text "We banned locks."
-	line "Now we just have a"
-	para "lot of nice open"
-	line "grudges."
+GrovePlaza3Persona0Text:
+	text "LEADER ORIN: I"
+	line "resign as non"
+	para "leader every"
+	line "spring. It is a"
+	para "very democratic"
+	line "nothing."
 	done
 
-GrovePlaza3Townie2:
-	jumptextfaceplayer GrovePlaza3Townie2Text
+GrovePlaza3Persona3:
+	jumptextfaceplayer GrovePlaza3Persona3Text
 
-GrovePlaza3Townie2Text:
-	text "I'd tell you more,"
-	line "but my tongue is"
-	para "on loan to the"
-	line "council."
+GrovePlaza3Persona3Text:
+	text "BARD WILLOW: A man"
+	line "took my guitar. I"
+	para "have been"
+	line "strumming a fence"
+	para "ever since. The"
+	line "fence is better."
 	done
 
-GrovePlaza3Townie3:
-	jumptextfaceplayer GrovePlaza3Townie3Text
+GrovePlaza3Persona4:
+	jumptextfaceplayer GrovePlaza3Persona4Text
 
-GrovePlaza3Townie3Text:
-	text "I came for inner"
-	line "peace. I stayed"
-	para "for the outer"
-	line "debts."
+GrovePlaza3Persona4Text:
+	text "OLD HAZEL: The"
+	line "young want truth."
+	para "I tell them the"
+	line "truth is on the"
+	para "north side of the"
+	line "tree, with the"
+	para "moss."
 	done
 
-GrovePlaza3Townie4:
-	jumptextfaceplayer GrovePlaza3Townie4Text
+GrovePlaza3Persona6:
+	jumptextfaceplayer GrovePlaza3Persona6Text
 
-GrovePlaza3Townie4Text:
-	text "We don't have a"
-	line "flag. We have a"
-	para "banner. It's a"
-	line "tablecloth. It's"
-	para "the tablecloth's"
-	line "last stand."
+GrovePlaza3Persona6Text:
+	text "SKEPTIC MORROW: We"
+	line "share everything."
+	para "By which I mean we"
+	line "share the blame."
 	done
 
-GrovePlaza3Townie5:
-	jumptextfaceplayer GrovePlaza3Townie5Text
+GrovePlaza3Persona7:
+	jumptextfaceplayer GrovePlaza3Persona7Text
 
-GrovePlaza3Townie5Text:
-	text "The Heart of the"
-	line "Commune is a"
-	para "Pokemon Center."
-	line "The heart has"
-	para "beds."
+GrovePlaza3Persona7Text:
+	text "SAGE LYRA: Listen."
+	line "Do you hear that?"
+	para "That is the sound"
+	line "of the moss"
+	para "deciding."
 	done
 
 GrovePlaza3Townie6:
 	jumptextfaceplayer GrovePlaza3Townie6Text
 
 GrovePlaza3Townie6Text:
-	text "There's no money"
-	line "in the commune. We"
-	para "have vibes. Vibes"
-	line "are rationed."
+	text "Have you seen my"
+	line "goat? She is my"
+	para "lawyer."
 	done
 
 GrovePlaza3Duel:
@@ -150,7 +154,7 @@ GrovePlaza3Duel:
 	iffalse .No
 	closetext
 	winlosstext GrovePlaza3DuelBeatenText, 0
-	loadtrainer G_SHAMAN, 131
+	loadtrainer G_SHAMAN, 133
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_GROVE_PLAZA3_DUEL
@@ -224,24 +228,24 @@ GrovePlaza3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, GROVE_BOATHOUSE, 1
-	warp_event  6,  3, GROVE_HOUSE3, 1
-	warp_event 10,  3, GROVE_MART3, 1
-	warp_event 14,  3, GROVE_POKECENTER3, 1
+	warp_event 20, 25, GROVE_POKECENTER3, 1
+	warp_event  6, 27, GROVE_MART3, 1
+	warp_event 16,  7, GROVE_HOUSE3, 1
+	warp_event 10, 19, GROVE_BOATHOUSE, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  8, 13, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3DebateA, -1
-	object_event  9, 13, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3DebateB, -1
-	object_event  7,  8, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Giver, -1
-	object_event  8, 19, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Townie1, -1
-	object_event  4, 24, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Townie2, -1
-	object_event 25, 27, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Townie3, -1
-	object_event 16, 27, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Townie4, -1
-	object_event 24, 11, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Townie5, -1
-	object_event 19, 26, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Townie6, -1
-	object_event  6, 20, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Duel, -1
+	object_event  9, 28, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3DebateA, -1
+	object_event 10, 28, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3DebateB, -1
+	object_event 13, 28, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Giver, -1
+	object_event 22, 10, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Persona0, -1
+	object_event 23, 28, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Persona3, -1
+	object_event 27, 19, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Persona4, -1
+	object_event 10, 31, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Persona6, -1
+	object_event 35, 26, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Persona7, -1
+	object_event  8, 31, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Townie6, -1
+	object_event  5, 13, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza3Duel, -1
 

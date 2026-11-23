@@ -37,7 +37,7 @@ DUELS = [
     dict(key="STEINER", who="STEINER", name="STEINER", text=N.STEINER1, cls="T_STEINER", sprite="STEINER", pal="BROWN", face="LEFT",
          where=("Tithe", 1), item="CHAINSAW", block="STEINER1", forced=True),
     dict(key="CROWLEY", who="CROWLEY", name="CROWLEY", text=N.CROWLEY1, cls="T_CROWLEY", sprite="CROWLEY", pal="BROWN", face="LEFT",
-         where=("Tithe", 4), item="CROWBAR", block="CROWLEY1", crowd=True),
+         where=("Tithe", 4), item="CROWBAR", block="CROWLEY1", flight=True, size=6),
     dict(key="STEINER2", who="STEINER", name="STEINER", text=N.STEINER2, cls="T_STEINER", sprite="STEINER", pal="BROWN", face="LEFT",
          where=("Grove", 4), item="BASEBALL_BAT", block="STEINER2"),
     dict(key="SABBAH", who="SABBAH", name="SABBAH", text=N.SABBAH1, cls="U_SABBAH", sprite="SABBAH", pal="BROWN", face="LEFT",
@@ -49,8 +49,8 @@ DUELS = [
     dict(key="CIORAN2", who="CIORAN", name="CIORAN", text=N.CIORAN2, cls="L_CIORAN", sprite="CIORAN", pal="BROWN", face="LEFT",
          where=("Lotus", 4), item="SHOVEL", block="CIORAN2"),
     dict(key="AMPH", who="CROWLEY", name="CROWLEY", text=N.CROWLEY2, cls="T_CROWLEY", sprite="CROWLEY", pal="BROWN", face="DOWN",
-         where="GroveAmphitheater", at=(8, 8), lvl_at=("Grove", 2), size=3, item="JET_SKI", block="CROWLEY2", block_in=("Grove", 2),
-         gate="EVENT_AMPH_DONE", wait="Sit. Do not take notes. The circle is not yet full."),
+         where="GroveAmphitheater", at=(8, 8), lvl_at=("Grove", 2), size=6, item="JET_SKI", block="CROWLEY2", block_in=("Grove", 2),
+         gate="EVENT_AMPH_DONE", wait=N.CROWLEY_MID_WAIT),
     # the optional ones
     dict(key="STEINER4", who="STEINER", name="STEINER", text=N.STEINER4, cls="T_STEINER", sprite="STEINER", pal="BROWN", face="LEFT",
          where=("Lotus", 6), item="PP_UP"),
@@ -83,6 +83,20 @@ def name_object(m, idx, name):
     return f"{m.const}_{name}"
 
 
+def later_block(w, key, label, t):
+    """Script lines that tell the `more` paragraphs of a character (named_text.slow) one on each visit after the prize, then fall back to
+    `.After`, and the text blocks they use.  Needs the labels .After in the same script."""
+    more = t.get("more") or []
+    flags = [w.flag(f"EVENT_NAMED_{key}_TALK{i}") for i in range(len(more))]
+    s = [".Later:"]
+    for i, f in enumerate(flags):
+        s += [f"\tcheckevent {f}", f"\tiffalse .More{i}"]
+    s += ["\tsjump .After", ""]
+    for i, f in enumerate(flags):
+        s += [f".More{i}:", f"\twritetext {label}MoreText{i}", "\twaitbutton", f"\tsetevent {f}", "\tclosetext", "\tend", ""]
+    return s, [Text(p).emit(f"{label}MoreText{i}") for i, p in enumerate(more)]
+
+
 def duel_script(w, m, key, label, cls, tid, item, texts, *, wait=None, gate=None, lore=True, who=""):
     """The talk script of a named duel.  Returns the flag that says the prize has been handed over."""
     done = w.flag(f"EVENT_NAMED_{key}_DONE")
@@ -96,11 +110,13 @@ def duel_script(w, m, key, label, cls, tid, item, texts, *, wait=None, gate=None
         s += [f"\tsetevent {lf}"]
     s += [f"\twritetext {label}SeenText", "\tyesorno", "\tiffalse .No", "\tclosetext", f"\twinlosstext {label}BeatenText, 0",
           f"\tloadtrainer {cls}, {tid}", "\tstartbattle", "\treloadmapafterbattle", f"\tsetevent {done}", "\topentext",
-          ".Beaten:", f"\tcheckevent {paid}", "\tiftrue .After", f"\twritetext {label}GiveText", "\twaitbutton",
+          ".Beaten:", f"\tcheckevent {paid}", "\tiftrue .Later", f"\twritetext {label}GiveText", "\twaitbutton",
           f"\tverbosegiveitem {item}", "\tiffalse .NoRoom", f"\tsetevent {paid}",
           ".After:", f"\twritetext {label}AfterText", "\twaitbutton", "\tclosetext", "\tend", "",
           ".No:", f"\twritetext {label}NoText", "\twaitbutton", "\tclosetext", "\tend", "",
-          ".NoRoom:", f"\twritetext {label}NoRoomText", "\twaitbutton", "\tclosetext", "\tend"]
+          ".NoRoom:", f"\twritetext {label}NoRoomText", "\twaitbutton", "\tclosetext", "\tend", ""]
+    later, more_texts = later_block(w, key, label, texts)
+    s += later
     if gate:
         s += ["", ".Wait:", f"\twritetext {label}WaitText", "\twaitbutton", "\tclosetext", "\tend"]
     m.scripts.append("\n".join(s) + "\n")
@@ -109,6 +125,7 @@ def duel_script(w, m, key, label, cls, tid, item, texts, *, wait=None, gate=None
     m.scripts.append(Text(t["beaten"]).emit(f"{label}BeatenText"))
     m.scripts.append(Text(t["give"]).emit(f"{label}GiveText"))
     m.scripts.append(Text(t["after"]).emit(f"{label}AfterText"))
+    m.scripts += more_texts
     m.scripts.append(Text(N.NO).emit(f"{label}NoText"))
     m.scripts.append(Text(N.NOROOM).emit(f"{label}NoRoomText"))
     if gate:
@@ -129,18 +146,21 @@ def forced_duel_script(w, m, key, label, cls, tid, item, texts, const, *, who=""
          f"{label}:", "\tfaceplayer", f"{flow}:", "\topentext", f"\tcheckevent {done}", "\tiftrue .Beaten", f"\tsetevent {lf}",
          f"\twritetext {label}SeenText", "\twaitbutton", "\tclosetext", f"\twinlosstext {label}BeatenText, 0",
          f"\tloadtrainer {cls}, {tid}", "\tstartbattle", "\treloadmapafterbattle", f"\tsetevent {done}", "\topentext",
-         ".Beaten:", f"\tcheckevent {paid}", "\tiftrue .After", f"\twritetext {label}GiveText", "\twaitbutton",
+         ".Beaten:", f"\tcheckevent {paid}", "\tiftrue .Later", f"\twritetext {label}GiveText", "\twaitbutton",
          f"\tverbosegiveitem {item}", "\tiffalse .NoRoom", f"\tsetevent {paid}", f"\twritetext {label}AfterText", "\twaitbutton",
          "\tclosetext", f"\tapplymovement {const}, {label}Aside", "\tend", "",
          ".After:", f"\twritetext {label}AfterText", "\twaitbutton", "\tclosetext", "\tend", "",
-         ".NoRoom:", f"\twritetext {label}NoRoomText", "\twaitbutton", "\tclosetext", "\tend", "",
-         f"{label}Aside:", "\tstep RIGHT", "\tstep RIGHT", "\tstep RIGHT", "\tstep_end"]
+         ".NoRoom:", f"\twritetext {label}NoRoomText", "\twaitbutton", "\tclosetext", "\tend", ""]
+    later, more_texts = later_block(w, key, label, texts)
+    s += later  # the local labels of the flow must all come before the next global label
+    s += [f"{label}Aside:", "\tstep RIGHT", "\tstep RIGHT", "\tstep RIGHT", "\tstep_end"]
     m.scripts.append("\n".join(s) + "\n")
     t = texts
     m.scripts.append(Text(t["seen"]).emit(f"{label}SeenText"))
     m.scripts.append(Text(t["beaten"]).emit(f"{label}BeatenText"))
     m.scripts.append(Text(t["give"]).emit(f"{label}GiveText"))
     m.scripts.append(Text(t["after"]).emit(f"{label}AfterText"))
+    m.scripts += more_texts
     m.scripts.append(Text(N.NOROOM).emit(f"{label}NoRoomText"))
     return paid
 
@@ -157,6 +177,73 @@ def block_exit(m, key, paid, hint):
         m.coords.append((x, 1, -1, label))
 
 
+def flight_lane(m):
+    """The start cell of a man who runs down the street towards the player (Crowley fleeing the playground at the head of the plaza).
+    The engine only keeps the objects that are inside the screen and one cell around it (an object outside is neither loaded nor moved by
+    a script), so the flight has to start inside that window: the trigger row is the entry row of the plaza (2 * (h - 2)), the player
+    stands on it when the scene starts, and the window reaches five rows up.  The man starts three rows above the trigger row, the
+    followers right behind him (two in his column, one beside the last), and he runs two steps down.  The lane is a column of the street
+    stem that no object stands on."""
+    e, xo, jr = m.street
+    y0 = 2 * (m.h - 4)
+    taken = {(o["x"], o["y"]) for o in m.objects}
+    for dx in (0, 1, -1, 2, -2):
+        x = 2 * e + m.cw + dx
+        if all((x, y) not in taken for y in range(y0 - 1, y0 + 4)) and (x + 1, y0 - 1) not in taken:
+            return x, y0 + 1
+    raise AssertionError(f"{m.name}: no free lane for the flight")
+
+
+def flight_duel(w, g, m, d, label, tid, x, y):
+    """Crowley at the head of the plaza, fleeing a mob: when the player steps into the street (the row of triggers four cells below the lane
+    end) he runs down the lane, the mob staggers after him, and the talk starts at once.  After the prize he leaves the map with the mob.
+    The man and the mob carry the event flag of the prize, so they are gone from the plaza for good."""
+    from . import cameos as K
+    key, cls, item = d["key"], d["cls"], d["item"]
+    K.add_sprite(g, "SPRITE_HC_SUIT", "SPRITE_HC_HOODIE", "SPRITE_HC_COP")
+    done = w.flag(f"EVENT_NAMED_{key}_DONE")
+    paid = w.flag(f"EVENT_NAMED_{key}_PAID")
+    ran = w.flag(f"EVENT_NAMED_{key}_RAN")
+    lf = flag_once(w, f"EVENT_LORE_{key}")
+    const = name_object(m, len(m.objects) + 1, f"RUNNER_{key}")
+    m.obj(x, y, f"SPRITE_HC_{d['sprite']}", FACE["DOWN"], label, pal=f"PAL_NPC_{d['pal']}", flag=paid)
+    mob = [("SPRITE_HC_SUIT", "PAL_NPC_BROWN"), ("SPRITE_HC_HOODIE", "PAL_NPC_GREEN"), ("SPRITE_HC_COP", "PAL_NPC_BLUE")]
+    cs = []
+    for i, (sp, pal) in enumerate(mob):
+        cs.append(name_object(m, len(m.objects) + 1, f"MOB_{key}_{i}"))
+        m.obj(x + (i == 2), y - 1 - min(i, 1), sp, FACE["DOWN"], f"{label}Mob{i}", pal=pal, flag=paid)
+        m.scripts.append(f"{label}Mob{i}:\n\tjumptextfaceplayer {label}Mob{i}Text\n")
+        m.scripts.append(Text(N.CROWLEY_FLIGHT[i]).emit(f"{label}Mob{i}Text"))
+    flow = f"{label}Flow"
+    down3 = ["\tstep DOWN"] * 2
+    s = [f"{label}Trigger:", f"\tcheckevent {ran}", "\tiftrue .Done", f"\tsetevent {ran}",
+         f"\tapplymovement {const}, {label}Run", f"\tturnobject {const}, DOWN", f"\tshowemote EMOTE_SHOCK, {const}, 15"]
+    s += [f"\tapplymovement {c}, {label}Chase" for c in cs]
+    s += ["\topentext", f"\twritetext {label}MobText", "\twaitbutton", "\tclosetext", f"\tsjump {flow}", ".Done:", "\tend", "",
+          f"{label}:", "\tfaceplayer", f"{flow}:", "\topentext", f"\tcheckevent {done}", "\tiftrue .Beaten", f"\tsetevent {lf}",
+          f"\twritetext {label}SeenText", "\twaitbutton", "\tclosetext", f"\twinlosstext {label}BeatenText, 0",
+          f"\tloadtrainer {cls}, {tid}", "\tstartbattle", "\treloadmapafterbattle", f"\tsetevent {done}", "\topentext",
+          ".Beaten:", f"\tcheckevent {paid}", "\tiftrue .After", f"\twritetext {label}GiveText", "\twaitbutton",
+          f"\tverbosegiveitem {item}", "\tiffalse .NoRoom", f"\tsetevent {paid}", f"\twritetext {label}AfterText", "\twaitbutton",
+          "\tclosetext", "\tplaysound SFX_EXIT_BUILDING", f"\tdisappear {const}"]
+    s += [f"\tdisappear {c}" for c in cs]
+    s += ["\twaitsfx", "\tend", "", ".After:", f"\twritetext {label}AfterText", "\twaitbutton", "\tclosetext", "\tend", "",
+          ".NoRoom:", f"\twritetext {label}NoRoomText", "\twaitbutton", "\tclosetext", "\tend", "",
+          f"{label}Run:"] + ["\tbig_step DOWN"] * 2 + ["\tstep_end", "", f"{label}Chase:"] + down3 + ["\tstep_end"]
+    m.scripts.append("\n".join(s) + "\n")
+    t = d["text"]
+    m.scripts.append(Text(t["seen"]).emit(f"{label}SeenText"))
+    m.scripts.append(Text(t["beaten"]).emit(f"{label}BeatenText"))
+    m.scripts.append(Text(t["give"]).emit(f"{label}GiveText"))
+    m.scripts.append(Text(t["after"]).emit(f"{label}AfterText"))
+    m.scripts.append(Text(N.NOROOM).emit(f"{label}NoRoomText"))
+    m.scripts.append(Text("\n\n".join(N.CROWLEY_FLIGHT)).emit(f"{label}MobText"))
+    e, xo, jr = m.street
+    for tx in range(2 * e, 2 * (e + m.cw)):
+        m.coords.append((tx, 2 * (m.h - 2), -1, f"{label}Trigger"))
+    return paid
+
+
 def add_duel(w, g, d, roster, m=None):
     from . import cameos as K
     where = d["where"]
@@ -164,23 +251,22 @@ def add_duel(w, g, d, roster, m=None):
         tag, plaza = where
         m = K.find(g, f"{tag}Plaza{plaza}")
         level = level_at(tag, plaza)
-        size = min(6, 3 + plaza // 3)
+        size = d.get("size", min(6, 3 + plaza // 3))
     else:
         m = m or K.find(g, where)
         level = d["level"] if "level" in d else level_at(*d["lvl_at"])
         size = d.get("size", 6)
     K.add_sprite(g, f"SPRITE_HC_{d['sprite']}")
-    party = make_party(roster, random.Random("named-" + d["key"]), level, size, THEMES[d["who"]])
+    party = make_party(roster, random.Random("named-" + d["key"]), level, size, THEMES[d["who"]], hard=True)
     tid = w.trainer(d["cls"], d["name"], party)
     label = f"{m.name}{d['key'].title()}{'Bearer' if d.get('block') else 'Duel'}Script"
-    offs = [(-3, -1), (-3, 1), (-2, 0)]
     if d.get("forced"):
         x = y = 0
     elif "at" in d:
         x, y = d["at"]
         assert (x, y) not in {(o["x"], o["y"]) for o in m.objects}, f"{m.name}: {d['key']} spot taken"
-    elif d.get("crowd"):
-        x, y = K.cluster(m, offs)
+    elif d.get("flight"):
+        x, y = flight_lane(m)
     else:
         x, y = K.free_cells(m)[-1]
     if d.get("forced"):
@@ -195,16 +281,11 @@ def add_duel(w, g, d, roster, m=None):
         m.obj(x, y, f"SPRITE_HC_{d['sprite']}", FACE["DOWN"], label, pal=f"PAL_NPC_{d['pal']}")
         for tx in range(2 * xo, 2 * (xo + m.cw)):
             m.coords.append((tx, 4, -1, f"{label}Trigger"))
+    elif d.get("flight"):
+        paid = flight_duel(w, g, m, d, label, tid, x, y)
     else:
         paid = duel_script(w, m, d["key"], label, d["cls"], tid, d["item"], d["text"], who=d["name"], wait=d.get("wait"), gate=d.get("gate"))
         m.obj(x, y, f"SPRITE_HC_{d['sprite']}", FACE[d["face"]], label, pal=f"PAL_NPC_{d['pal']}")
-    if d.get("crowd"):
-        from . import cast_text as C
-        from .people import plain_npc
-        crowd = [("SPRITE_HC_SUIT", "PAL_NPC_BROWN", C.CROWD_1), ("SPRITE_HC_HOODIE", "PAL_NPC_GREEN", C.CROWD_2),
-                 ("SPRITE_HC_COP", "PAL_NPC_BLUE", C.CROWD_3)]
-        for i, ((dx, dy), (sp, pal, t)) in enumerate(zip(offs, crowd)):
-            plain_npc(m, x + dx, y + dy, sp, pal, "RIGHT", f"{m.name}Crowd{i}Script", t)
     if d.get("block"):
         bm = K.find(g, "%sPlaza%d" % d["block_in"]) if "block_in" in d else m
         block_exit(bm, d["key"], paid, N.BLOCK[d["block"]])

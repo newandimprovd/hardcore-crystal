@@ -52,11 +52,16 @@ HC_LoadAreaPalette::
 
 HC_LoadAreaObjPalette::
 ; Overwrites the 8 object palettes of the map with the area's NPC colorways (always the day set, like the background).
+; The caves of the hollows and the vault (map group PURG) wear the colours of their area, which is looked up per map (alpha 3.2): their fighters
+; have the battle portraits of that area, so the two have to match.  Purgatorio itself keeps the vanilla set.
 	ld a, [wMapGroup]
+	cp MAPGROUP_PURG
+	jr z, .purg
 	sub MAPGROUP_AREA1
 	ret c
 	cp NUM_AREAS
 	ret nc
+.load
 	ld l, a
 	ld h, 0
 	add hl, hl
@@ -71,6 +76,20 @@ HC_LoadAreaObjPalette::
 	ld de, wOBPals1
 	ld bc, 8 palettes
 	jp FarCopyWRAM
+
+.purg
+	ld a, [wMapNumber]
+	dec a
+	ld e, a
+	ld d, 0
+	ld hl, HC_PurgObjAreas
+	add hl, de
+	ld a, [hl]
+	cp NUM_AREAS
+	ret nc
+	jr .load
+
+INCLUDE "data/hardcore/purg_obj_areas.asm" ; defines HC_PurgObjAreas
 
 HC_AreaBGPals:
 INCLUDE "gfx/tilesets/area_bg.pal"

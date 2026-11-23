@@ -87,7 +87,7 @@ def put(m, x, y, b):
         m.set(x, y, b)
 
 
-def glade(m, kit, S, R, spot):
+def glade(m, kit, S, R, spot, force_kind=None):
     """Carve and dress one glade. Returns its floor cells (cell coordinates) for the item, the hermit and the hidden item."""
     side, x0, x1, r0, r1, mr, lim = spot
     ground = kit.extra.get("ground", kit.floor)  # what a glade or a clearing is floored with (the road kit: grass, not the path)
@@ -102,7 +102,7 @@ def glade(m, kit, S, R, spot):
     kinds = list(KINDS_WILD if kit.extra["style"] == "wild" else KINDS_URBAN)
     if gw < 4 or gh < 4:
         kinds = [k for k in kinds if k != "pond"]
-    kind = R.choice(kinds)
+    kind = force_kind or R.choice(kinds)
     # blocks that stay open for the walk: the mouth and the block beside it
     keep = {(x1 if side == "L" else x0, mr)}
     if kind == "pond":  # the pond fills the glade but for a one block ring of shore, which carries the path from the mouth
@@ -195,7 +195,7 @@ def landscape(m, kit, S, R, base, protect):
         made += 1
 
 
-def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, neck=0, w=None, pal="PALETTE_DAY", W=12, north="open"):
+def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, neck=0, w=None, pal="PALETTE_DAY", W=12, north="open", rift=False, vault=False, raw=False, hollow=False):
     S = kit.extra["scn"]
     style = kit.extra["style"]
     rows = trainers - trainers // 3
@@ -263,12 +263,28 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
             side ^= 1
     # glades beside the corridor
     used, glades = set(), []
-    for _ in range(3):
+    rift_door = None
+    for k in range(3):
         spot = find_spot(lo, hi, W, H, used, R)
         if not spot:
             break
         side_, x0, x1, r0, r1, mr, lim = spot
-        glades.append(glade(m, kit, S, R, spot))
+        if (rift or vault or hollow) and k == 0:
+            # The way into Purgatorio is hidden: the portal stands in the back wall of the first glade, at the far end from its mouth, and
+            # the mouth is a one block gap in the tree line that nothing on the road points at.  The glade is a meadow, so the block in
+            # front of the portal is open.
+            glades.append(glade(m, kit, S, R, spot, force_kind="meadow"))
+            if side_ == "L":
+                px = x0
+            else:
+                px = x1
+            rb = kit.extra["rift"]
+            m.set(px, r0, rb)
+            m.set(px, r0 + 1, R.choice(kit.extra.get("ground", kit.floor)))
+            rift_door = m.warp(*kit.door_cell(px, r0, rb))  # for a vault the same hidden portal leads to the Undercroft instead
+            glades[-1]["cells"] = [cl for cl in glades[-1]["cells"] if abs(cl[0] - (2 * px + 1)) + abs(cl[1] - (2 * (r0 + 1) + 1)) > 1]
+        else:
+            glades.append(glade(m, kit, S, R, spot))
         used.update(range(r0 - 1, r1 + 2))
         for yy in range(r0, r1 + 1):
             for xx in range(x0, x1 + 1):
@@ -290,7 +306,7 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
                     continue
                 if m.get(nx + dx, y) == base:
                     m.set(nx, y, S[role])
-    if style == "urban":
+    if style == "urban" and not raw:  # raw: the lane is turned afterwards (areas/turn.py), which picks the building fronts in its own frame
         autotile(m, kit, R)
     r = reach(m, kit, (2 * c[H - 1] + 1, 2 * H - 1))
     assert ((door.x, door.y + 1) if door else (2 * c[0] + 1, 0)) in r, (name, "exit not reachable")
@@ -300,5 +316,10 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
     m.a, m.a_out, m.cw = c[H - 1], c[0], cw
     m.glades = glades
     m.door = door
+    m.rift_door = rift_door if rift else None
+    m.vault_door = rift_door if vault and not rift else None
+    m.hollow_door = rift_door if hollow and not rift and not vault else None  # a hidden hollow (areas/hollows.py)
+    if rift or vault or hollow:
+        assert rift_door is not None and (rift_door.x, rift_door.y + 1) in r, (name, "the hidden portal cannot be reached")
     m.corridor = c
     return m, slots

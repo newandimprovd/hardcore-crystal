@@ -40,6 +40,7 @@ ORDER = [
     ("THE_ABYSS", 10, 11, "dot"),
     ("PURGATORIO", 10, 8, "dot"),
     ("NICKS_LANDING", 10, 5, "sq"),
+    ("UNDERCROFT", 8, 5, "dot"),
 ]
 # the three starting places of the vanilla Johto page (their rows in data/maps/landmarks.asm are patched)
 START = [("NewBarkTownName", 16, 14, "sq"), ("Route29Name", 14, 14, "dot"), ("CherrygroveCityName", 12, 14, "sq")]

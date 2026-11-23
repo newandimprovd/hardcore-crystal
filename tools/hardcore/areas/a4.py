@@ -12,7 +12,7 @@ from .a2 import TIERS
 
 class Spec(SpecBase):
     pool = "A4"
-    l0, l1 = 62, 78
+    l0, l1 = 75, 97
     T = T
     theme = {"WATER": 3, "FAIRY": 2.5, "PSYCHIC_TYPE": 2, "NORMAL": 2, "FLYING": 2, "GRASS": 1.5, "FIRE": 1.5,
              "ICE": 1, "GROUND": 1, "ELECTRIC": 1, "POISON": 1, "GHOST": 1, "DARK": 1, "BUG": 0.7, "FIGHTING": 0.7,
@@ -29,11 +29,11 @@ class Spec(SpecBase):
 def build(w, roster, rng, entry_doors, open_exit=False):
     texts = dict(center=T.CENTER, mart=T.MART, house=T.HOUSE)
     bosses = [
-        BossSpec("LotusClinic", "DR LETHE", "L_CLINICIAN", "SPRITE_HC_CLINICIAN", "PAL_NPC_GREEN", 69, 5, T.CLINIC_SEEN,
+        BossSpec("LotusClinic", "DR LETHE", "L_CLINICIAN", "SPRITE_HC_CLINICIAN", "PAL_NPC_GREEN", 81, 5, T.CLINIC_SEEN,
                  T.CLINIC_BEATEN, T.CLINIC_AFTER, template="karen"),
-        BossSpec("LotusCabana", "MGR KAI", "L_MANAGER", "SPRITE_HC_RESORT_BOSS", "PAL_NPC_BROWN", 74, 5,
+        BossSpec("LotusCabana", "MGR KAI", "L_MANAGER", "SPRITE_HC_RESORT_BOSS", "PAL_NPC_BROWN", 89, 5,
                  T.CABANA_SEEN, T.CABANA_BEATEN, T.CABANA_AFTER, template="will"),
-        BossSpec("LotusMansion", "RIVAL", "RIVAL2", "SPRITE_RIVAL", "PAL_NPC_RED", 80, 6, T.MANSION_SEEN,
+        BossSpec("LotusMansion", "RIVAL", "RIVAL2", "SPRITE_RIVAL", "PAL_NPC_RED", 97, 6, T.MANSION_SEEN,
                  T.MANSION_BEATEN, T.MANSION_AFTER, template="bruno", landmark="LANDMARK_LOTUS_MANSION",
                  music="MUSIC_ROCKET_HIDEOUT", open_exit=open_exit, story=2)]
     cfg = AreaCfg("AREA4", "Lotus", Spec(), kits.lotus(), "PALETTE_DAY",

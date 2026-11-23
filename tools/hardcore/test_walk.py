@@ -19,6 +19,7 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 SHOTS = os.environ.get("SHOTS", "/home/claude/scratch/walk")
 os.makedirs(SHOTS, exist_ok=True)
 GOD = os.environ.get("WALK_GOD") == "1"
+GOD_HP = int(os.environ.get("WALK_GOD_HP", "999"))  # HP the test mon is given every turn in god mode (the final fights need far more than 999 since alpha 3.2)
 
 
 def find_ids(world):
@@ -147,9 +148,13 @@ class Walker:
             for off in (0, 1):
                 t.poke("wBattleMonHP", 0, off)
                 t.poke("wPartyMon1HP", 0, off)
+            # the first move may be out of PP after the fights before (the party copy comes back from the walker's own PP pokes): a fainted mon that is stuck
+            # on "no PP left" never takes its turn, so the test mon always has one move to use
+            t.poke("wBattleMonPP", 30, 0)
+            t.poke("wCurMoveNum", 0)
             return
         if GOD:  # map tests only: one Pokemon cannot carry 13 fights of later areas, a real player has six and items
-            for off, b in enumerate((0x03, 0xE7)):  # 999 HP: later enemies one-shot a 358 HP level 100 mon
+            for off, b in enumerate(divmod(GOD_HP, 256)):  # 999 HP: later enemies one-shot a 358 HP level 100 mon
                 for sym in ("wBattleMonHP", "wBattleMonMaxHP", "wPartyMon1HP", "wPartyMon1MaxHP"):
                     t.poke(sym, b, off)
         t.poke("wBattleMonMoves", pick_move(t.mem("wEnemyMonType1"), t.mem("wEnemyMonType2")), 0)
@@ -468,6 +473,12 @@ def give(wk, name, const):
     return True
 
 
+def purg_names():
+    """Names of the maps of the Purgatorio group (Purgatorio itself, the vault and the hollows): hidden places the walk of an area does not enter, they have
+    their own tests (test_purg, test_hollow)."""
+    return {m[1] for m in re.finditer(r"db \d+ ; (\w+)", open(os.path.join(ROOT, "data/hardcore/purg_obj_areas.asm")).read())}
+
+
 def auto_plan(world, first, prefix=None):
     """Goal list that visits everything of an area: the maps in route order, every plaza building (Pokecenter with
     healing, Mart, houses), boss rooms with their item balls, and the gates of lanes."""
@@ -475,6 +486,7 @@ def auto_plan(world, first, prefix=None):
     prefix = prefix or re.match(r"[A-Z][a-z]+", first)[0]
     goals = []
     seen = set()
+    hidden = purg_names()
 
     def add(g):
         if g not in seen or g.split(":")[0] in ("heal", "item", "gate", "give"):
@@ -494,7 +506,7 @@ def auto_plan(world, first, prefix=None):
         # gatehouses and doors to other generated maps from this one
         for (x, y, dest, dw) in mp.warps:
             dm = world.consts.get(dest)
-            if dm is None or dm.name in seen:
+            if dm is None or dm.name in seen or dm.name in hidden:
                 continue
             n = dm.name
             if not n.startswith(prefix):
@@ -519,8 +531,9 @@ def auto_plan(world, first, prefix=None):
                 add(cur)
         if any(o["script"].endswith(("GateScript", "BoulderScript")) for o in mp.objects):
             add("gate:" + cur)
-        nxt = mp.conns.get("north")
-        cur = nxt[0] if nxt and nxt[0] in maps else gate_next
+        nxt = next((mp.conns[d] for d in ("north", "east", "west") if d in mp.conns and mp.conns[d][0] in maps
+                    and mp.conns[d][0] not in seen), None)  # the road turns east and west since alpha 3.2: follow whichever way is new
+        cur = nxt[0] if nxt else gate_next
     return goals
 
 

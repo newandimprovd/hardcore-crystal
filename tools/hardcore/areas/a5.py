@@ -9,7 +9,7 @@ from .a2 import TIERS
 
 class Spec(SpecBase):
     pool = "A5"
-    l0, l1 = 78, 92
+    l0, l1 = 99, 100
     T = T
     theme = {"DARK": 3, "GHOST": 3, "FIRE": 2, "ICE": 2.5, "POISON": 2, "DRAGON": 1.5, "PSYCHIC_TYPE": 1.5,
              "STEEL": 1.5, "FIGHTING": 1.5, "ROCK": 1, "GROUND": 1, "FLYING": 1, "ELECTRIC": 0.8, "NORMAL": 0.8,
@@ -26,11 +26,11 @@ class Spec(SpecBase):
 def build(w, roster, rng, entry_doors):
     texts = dict(center=T.CENTER, mart=T.MART, house=T.HOUSE)
     bosses = [
-        BossSpec("DisGatehouse", "GATEKEEPER", "D_WARDEN", "SPRITE_HC_WARDEN", "PAL_NPC_BROWN", 83, 5, T.WARDEN_SEEN,
+        BossSpec("DisGatehouse", "GATEKEEPER", "D_WARDEN", "SPRITE_HC_WARDEN", "PAL_NPC_BROWN", 99, 5, T.WARDEN_SEEN,
                  T.WARDEN_BEATEN, T.WARDEN_AFTER, template="karen", item="GETAWAY_CAR"),
-        BossSpec("CocytusIceHall", "BETRAYER", "D_DEMON", "SPRITE_HC_DEMON_LORD", "PAL_NPC_BLUE", 87, 5, T.CAGE_SEEN,
+        BossSpec("CocytusIceHall", "BETRAYER", "D_DEMON", "SPRITE_HC_DEMON_LORD", "PAL_NPC_BLUE", 99, 5, T.CAGE_SEEN,
                  T.CAGE_BEATEN, T.CAGE_AFTER, template="will"),
-        BossSpec("JudeccaCentre", "FINNEGAN", "D_FINNEGAN", "SPRITE_HC_FINNEGAN", "PAL_NPC_BLUE", 95, 6, T.SLEEPER_SEEN,
+        BossSpec("JudeccaCentre", "FINNEGAN", "D_FINNEGAN", "SPRITE_HC_FINNEGAN", "PAL_NPC_BLUE", 99, 6, T.SLEEPER_SEEN,
                  T.SLEEPER_BEATEN, T.SLEEPER_AFTER, template="bruno", landmark="LANDMARK_DIS_JUDECCA",
                  music="MUSIC_ROCKET_HIDEOUT", story=3)]
     cfg = AreaCfg("AREA5", "Dis", Spec(), kits.dis(), "PALETTE_DAY",

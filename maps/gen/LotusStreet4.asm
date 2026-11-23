@@ -16,9 +16,10 @@ LotusStreet4Hermit:
 	jumptextfaceplayer LotusStreet4HermitText
 
 LotusStreet4HermitText:
-	text "The cocktails are"
-	line "free. Meaning is"
-	para "extra."
+	text "The tide took my"
+	line "watch. It also"
+	para "took my reasons. I"
+	line "miss the watch."
 	done
 
 LotusStreet4SeenText:
@@ -42,25 +43,25 @@ LotusStreet4AfterScript:
 	end
 
 LotusStreet4Trainer0:
-	trainer L_TOURISTG, 132, EVENT_GEN_LOTUS_STREET4_0, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_SWIMMERM, 132, EVENT_GEN_LOTUS_STREET4_0, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
 
 LotusStreet4Trainer1:
-	trainer L_SWIMMERF, 131, EVENT_GEN_LOTUS_STREET4_1, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_MANAGER, 130, EVENT_GEN_LOTUS_STREET4_1, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
 
 LotusStreet4Trainer2:
-	trainer L_TOURISTF, 129, EVENT_GEN_LOTUS_STREET4_2, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_LIFEGUARD, 131, EVENT_GEN_LOTUS_STREET4_2, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
 
 LotusStreet4Trainer3:
-	trainer L_WAITER, 128, EVENT_GEN_LOTUS_STREET4_3, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_FORGOTTEN, 129, EVENT_GEN_LOTUS_STREET4_3, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
 
 LotusStreet4Trainer4:
-	trainer L_LIFEGUARD, 128, EVENT_GEN_LOTUS_STREET4_4, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_CLINICIAN, 130, EVENT_GEN_LOTUS_STREET4_4, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
 
 LotusStreet4Trainer5:
-	trainer L_SWIMMERM, 128, EVENT_GEN_LOTUS_STREET4_5, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_TOURISTF, 130, EVENT_GEN_LOTUS_STREET4_5, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
 
 LotusStreet4Trainer6:
-	trainer L_TOURISTM, 129, EVENT_GEN_LOTUS_STREET4_6, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_BEACHBUM, 128, EVENT_GEN_LOTUS_STREET4_6, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
 
 LotusStreet4_MapEvents:
 	db 0, 0 ; filler
@@ -75,11 +76,11 @@ LotusStreet4_MapEvents:
 	def_object_events
 	object_event  7, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet4Pickup, EVENT_GEN_LOTUS_STREET4_PICKUP
 	object_event  4, 25, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet4Hermit, -1
-	object_event 16, 28, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer0, -1
-	object_event 17, 24, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer1, -1
-	object_event 10, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer2, -1
-	object_event 15, 20, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer3, -1
-	object_event 10, 16, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer4, -1
-	object_event 15, 16, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer5, -1
-	object_event 10, 12, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer6, -1
+	object_event 16, 28, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer0, -1
+	object_event 17, 24, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer1, -1
+	object_event 10, 20, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer2, -1
+	object_event 15, 20, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer3, -1
+	object_event 10, 16, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer4, -1
+	object_event 15, 16, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer5, -1
+	object_event 10, 12, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer6, -1
 

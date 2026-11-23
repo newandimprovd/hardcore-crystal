@@ -89,7 +89,7 @@ if mode == "free":
     check("it cost nothing", after == before, f"{before} -> {after}")
     check("the nurse never mentions a price", "costs" not in low and "pay" not in low and "¥" not in low and "$" not in low)
 else:
-    check("it cost 4 per level of the best mon plus 20 (68 for a level 12)", before - after == 68, f"{before} -> {after}")
+    check("it cost 40 per level of the best mon plus 200 (680 for a level 12)", before - after == 680, f"{before} -> {after}")
     check("the nurse names the price before healing", "costs" in low)
 print("PASS" if not bad else f"FAIL: {bad}")
 sys.exit(0 if not bad else 1)

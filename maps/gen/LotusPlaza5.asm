@@ -6,10 +6,6 @@ LotusPlaza5_MapScripts:
 
 	def_callbacks
 
-LotusPlaza5PurgFlagScript:
-	setevent EVENT_PURG_OPEN_A4
-	end
-
 LotusPlaza5DebateA:
 	jumptextfaceplayer LotusPlaza5DebateAText
 
@@ -78,46 +74,51 @@ LotusPlaza5GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-LotusPlaza5Townie1:
-	jumptextfaceplayer LotusPlaza5Townie1Text
+LotusPlaza5Persona0:
+	jumptextfaceplayer LotusPlaza5Persona0Text
 
-LotusPlaza5Townie1Text:
-	text "Read the fountain"
-	line "plaque. It's the"
-	para "most work anyone"
-	line "does here."
+LotusPlaza5Persona0Text:
+	text "MANAGER DELL: The"
+	line "pool is under"
+	para "renovation. The"
+	line "renovation has"
+	para "outlived the"
+	line "renovator."
 	done
 
-LotusPlaza5Townie2:
-	jumptextfaceplayer LotusPlaza5Townie2Text
+LotusPlaza5Persona4:
+	jumptextfaceplayer LotusPlaza5Persona4Text
 
-LotusPlaza5Townie2Text:
-	text "Held items are"
-	line "like cocktails."
-	para "You carry them and"
-	line "nothing happens"
-	para "until it does."
+LotusPlaza5Persona4Text:
+	text "SUNBATHER VIOLET:"
+	line "My skin is now a"
+	para "map. It shows"
+	line "where I stopped"
+	para "caring. Roughly"
+	line "everywhere."
 	done
 
-LotusPlaza5Townie3:
-	jumptextfaceplayer LotusPlaza5Townie3Text
+LotusPlaza5Persona5:
+	jumptextfaceplayer LotusPlaza5Persona5Text
 
-LotusPlaza5Townie3Text:
-	text "Looking for the"
-	line "meaning of life?"
-	para "Try the minibar."
-	line "It's empty. That's"
-	para "the meaning."
+LotusPlaza5Persona5Text:
+	text "BELLHOP TEDDY:"
+	line "Someone left a bag"
+	para "in room nine. It"
+	line "was ticking. I"
+	para "tipped it into the"
+	line "sea. It came back."
 	done
 
-LotusPlaza5Townie4:
-	jumptextfaceplayer LotusPlaza5Townie4Text
+LotusPlaza5Persona7:
+	jumptextfaceplayer LotusPlaza5Persona7Text
 
-LotusPlaza5Townie4Text:
-	text "The buffet is"
-	line "endless. The thing"
-	para "about endless is"
-	line "that it's endless."
+LotusPlaza5Persona7Text:
+	text "DR LOTUS: The cure"
+	line "for your condition"
+	para "is a vacation. The"
+	line "cause is also a"
+	para "vacation."
 	done
 
 LotusPlaza5Townie5:
@@ -135,12 +136,10 @@ LotusPlaza5Townie6:
 	jumptextfaceplayer LotusPlaza5Townie6Text
 
 LotusPlaza5Townie6Text:
-	text "The shop in the"
-	line "living room?"
-	para "Honestly, I"
-	line "thought it was a"
-	para "hotel room. The"
-	line "clerk is sleeping."
+	text "A wild Pokemon"
+	line "asked me what I"
+	para "did for a living."
+	line "I lied."
 	done
 
 LotusPlaza5Duel:
@@ -153,7 +152,7 @@ LotusPlaza5Duel:
 	iffalse .No
 	closetext
 	winlosstext LotusPlaza5DuelBeatenText, 0
-	loadtrainer L_WAITER, 134
+	loadtrainer L_WAITER, 129
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_LOTUS_PLAZA5_DUEL
@@ -224,26 +223,24 @@ LotusPlaza5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  3, LOTUS_MART5, 1
-	warp_event 10,  3, LOTUS_POKECENTER5, 1
-	warp_event 14,  3, PURG_THRESHOLD, 5
-	warp_event 18,  3, LOTUS_HOUSE5, 1
-	warp_event 22,  3, LOTUS_CABANA, 1
+	warp_event  6,  9, LOTUS_POKECENTER5, 1
+	warp_event 34, 21, LOTUS_MART5, 1
+	warp_event  2, 17, LOTUS_HOUSE5, 1
+	warp_event 24,  7, LOTUS_CABANA, 1
 
 	def_coord_events
-	coord_event 14,  4, -1, LotusPlaza5PurgFlagScript
 
 	def_bg_events
 
 	def_object_events
-	object_event 30, 24, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza5DebateA, -1
-	object_event 31, 24, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5DebateB, -1
-	object_event  9, 27, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Giver, -1
-	object_event 20, 14, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie1, -1
-	object_event  3,  6, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie2, -1
-	object_event 25, 18, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie3, -1
-	object_event 19, 14, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie4, -1
-	object_event 24, 19, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie5, -1
-	object_event  5, 26, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie6, -1
-	object_event 31, 23, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Duel, -1
+	object_event 21, 13, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza5DebateA, -1
+	object_event 22, 13, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5DebateB, -1
+	object_event 16, 10, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Giver, -1
+	object_event 25, 11, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Persona0, -1
+	object_event 31, 20, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Persona4, -1
+	object_event 11, 19, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Persona5, -1
+	object_event 31, 22, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Persona7, -1
+	object_event  5, 29, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie5, -1
+	object_event 32,  7, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Townie6, -1
+	object_event 23, 21, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza5Duel, -1
 

@@ -1,5 +1,5 @@
 ; Hardcore Crystal: healing costs money everywhere except in the Cherrygrove POKéCENTER, the only free one (HC_FreeCenters).
-; Cost = 4 * highest party level + 20 dollars. A player who cannot pay is turned away, unless the whole party has fainted
+; Cost = 40 * highest party level + 200 dollars (ten times the alpha 3.1 price). A player who cannot pay is turned away, unless the whole party has fainted
 ; (then the nurse heals for free, so nobody is locked out of the game).
 
 HC_NurseComputeCost:
@@ -22,7 +22,13 @@ HC_NurseComputeCost:
 	ld l, c
 	add hl, hl
 	add hl, hl
-	ld de, 20
+	add hl, hl ; 8 * level
+	ld d, h
+	ld e, l
+	add hl, hl
+	add hl, hl ; 32 * level
+	add hl, de ; 40 * level
+	ld de, 200
 	add hl, de
 	xor a
 	ldh [hMoneyTemp], a

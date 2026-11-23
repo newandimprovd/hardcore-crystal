@@ -178,12 +178,14 @@ R("WEBWEAVER", "arthro",
 
 # ============================================================================================ Persian line
 R("ALLEYCAT", "quad",
-  dict(bulk=0.95, length=1.7, h=0.85, head="cat", head_s=1.55, head_kw=dict(ears="point", eye="slit"), back=None, neck=0.35,
-       tail={"kind": "plain", "length": 1.8, "thick": 0.2, "curl": 0.5}, tex=("stripes", 2, 0.4, 0.22, 2), foot="paw"),
+  dict(bulk=0.75, length=1.45, h=1.0, leg_r=0.16, chest=0.6, hip=0.55, head="cat", head_s=1.45, back=None, neck=0.3, rise=0.42,
+       head_kw=dict(ears="point", eye="slit", snout=0.3, cheek=0.7),
+       tail={"kind": "plain", "length": 1.7, "thick": 0.19, "curl": 1.0, "up": 0.2}, tex=("stripes", 2, 0.4, 0.22, 2), foot="paw", foot_size=0.85),
   *P((13, 13, 18), (24, 6, 17), 1), front=dict(yaw=42), back=dict(yaw=-140))
 R("KINGPIN", "quad",
-  dict(bulk=1.15, length=1.9, h=0.95, head="cat", head_s=1.65, head_kw=dict(ears="point", eye="slit", crest=0.8), back=None, neck=0.4, mane=0.5,
-       tail={"kind": "plain", "length": 2.0, "thick": 0.24, "curl": 0.6}, foot="paw"),
+  dict(bulk=0.95, length=1.65, h=1.05, leg_r=0.19, chest=0.62, hip=0.56, head="cat", head_s=1.6, back=None, neck=0.34, rise=0.46, mane=0.5,
+       head_kw=dict(ears="point", eye="slit", crest=0.8, snout=0.3, cheek=0.8),
+       tail={"kind": "plain", "length": 1.8, "thick": 0.23, "curl": 1.0, "up": 0.2}, foot="paw", foot_size=0.9),
   *P((28, 25, 19), (15, 10, 8), 2), front=dict(yaw=42), back=dict(yaw=-140))
 
 # ============================================================================================ Golduck line

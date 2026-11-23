@@ -16,11 +16,10 @@ LotusStreet14Hermit:
 	jumptextfaceplayer LotusStreet14HermitText
 
 LotusStreet14HermitText:
-	text "I saw a trainer"
-	line "yawn mid-attack."
-	para "It was the most"
-	line "honest violence I"
-	para "have ever seen."
+	text "I came to the"
+	line "coast to forget. I"
+	para "forgot why. Best"
+	line "vacation ever."
 	done
 
 LotusStreet14SeenText:
@@ -44,44 +43,45 @@ LotusStreet14AfterScript:
 	end
 
 LotusStreet14Trainer0:
-	trainer L_MANAGER, 134, EVENT_GEN_LOTUS_STREET14_0, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_SUNBATHER, 136, EVENT_GEN_LOTUS_STREET14_0, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
 
 LotusStreet14Trainer1:
-	trainer L_CLINICIAN, 132, EVENT_GEN_LOTUS_STREET14_1, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_SWIMMERM, 138, EVENT_GEN_LOTUS_STREET14_1, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
 
 LotusStreet14Trainer2:
-	trainer L_SWIMMERM, 138, EVENT_GEN_LOTUS_STREET14_2, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_SWIMMERF, 142, EVENT_GEN_LOTUS_STREET14_2, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
 
 LotusStreet14Trainer3:
-	trainer L_SWIMMERM, 139, EVENT_GEN_LOTUS_STREET14_3, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_TOURISTF, 135, EVENT_GEN_LOTUS_STREET14_3, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
 
 LotusStreet14Trainer4:
-	trainer L_TOURISTF, 131, EVENT_GEN_LOTUS_STREET14_4, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_BELLHOP, 131, EVENT_GEN_LOTUS_STREET14_4, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
 
 LotusStreet14Trainer5:
-	trainer L_FORGOTTEN, 132, EVENT_GEN_LOTUS_STREET14_5, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_SUNBATHER, 137, EVENT_GEN_LOTUS_STREET14_5, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
 
 LotusStreet14Trainer6:
-	trainer L_SUNBATHER, 136, EVENT_GEN_LOTUS_STREET14_6, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_TOURISTG, 130, EVENT_GEN_LOTUS_STREET14_6, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
 
 LotusStreet14_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 20, 15, LOTUS_LAST_CABANA, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  6, 14, BGEVENT_ITEM, LotusStreet14Hidden
+	bg_event 14, 14, BGEVENT_ITEM, LotusStreet14Hidden
 
 	def_object_events
-	object_event  3, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet14Pickup, EVENT_GEN_LOTUS_STREET14_PICKUP
-	object_event 10, 15, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet14Hermit, -1
-	object_event 12, 28, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer0, -1
-	object_event 17, 28, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer1, -1
-	object_event 16, 24, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer2, -1
-	object_event 21, 24, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer3, -1
-	object_event 16, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer4, -1
-	object_event 21, 16, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer5, -1
-	object_event 14, 12, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer6, -1
+	object_event 19, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet14Pickup, EVENT_GEN_LOTUS_STREET14_PICKUP
+	object_event 18, 15, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet14Hermit, -1
+	object_event  6, 28, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer0, -1
+	object_event 11, 28, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer1, -1
+	object_event  2, 24, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer2, -1
+	object_event  7, 24, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer3, -1
+	object_event  2, 20, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer4, -1
+	object_event  7, 16, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer5, -1
+	object_event  4, 12, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet14Trainer6, -1
 

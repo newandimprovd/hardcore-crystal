@@ -1,11 +1,11 @@
 	db MARILL ; 183
 
-	db  74,  21,  53,  43,  21,  53
+	db  84,  24,  60,  48,  24,  60
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, FAIRY ; type
 	db 255 ; catch rate
-	db 101 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

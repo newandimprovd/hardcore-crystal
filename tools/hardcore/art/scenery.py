@@ -7,7 +7,7 @@ tile of the area's own plain floor, so they dedupe against it.  Costs about 30 t
 Roles added (after the grass blocks, so no existing block id changes):
   pond_c, pond_n, pond_s, pond_e, pond_w, pond_nw, pond_ne, pond_se, pond_sw   a rectangular pond is made of these nine
   pool        a small round pond (four corner tiles), a fountain basin or a puddle
-  fountain    a round stone basin with a jet of water in the middle (four tiles of its own over the plain floor)
+  fountain_nw, fountain_ne, fountain_sw, fountain_se   the fountain: a pool of two by two blocks with a pedestal and a jet at the centre
   fence_h, fence_v   a rail, wall to the quadrants it covers (bottom half, right half)
   ledge       one way drop: the bottom quadrants hop down
   tree        a canopy over a trunk, a whole block of wall
@@ -204,17 +204,18 @@ def mat(g):
     return cv
 
 
-def fountain(g):
-    """The plain floor all round and, in the middle two by two tiles, a round stone basin: a dark outline, a pale stone lip, open water
-    with a few sparkles, and a jet rising from a pedestal (pale on the water) with two drops falling either side of it.  Four tiles."""
-    cv = new(g)
+def jet_art():
+    """The 16 by 16 pixels at the middle of the pool: a round stone pedestal with a jet of water rising from it and two drops falling either side.
+    Returns the pixels and a mask of the pixels that belong to the pedestal (the rest is the pool's own water)."""
     px = [[0] * 16 for _ in range(16)]
+    mask = [[False] * 16 for _ in range(16)]
     for y in range(16):
         for x in range(16):
             d = ((x - 7.5) ** 2 + (y - 7.5) ** 2) ** 0.5
             if d > 7.4:
-                v = 0
-            elif d > 6.4:
+                continue
+            mask[y][x] = True
+            if d > 6.4:
                 v = 3
             elif d > 5.3:
                 v = 0
@@ -227,14 +228,45 @@ def fountain(g):
         px[y][7] = px[y][8] = 0
     for (x, y) in ((6, 2), (9, 2), (5, 4), (10, 4), (4, 6), (11, 6)):  # the spray
         px[y][x] = 0
+        mask[y][x] = True
     for x in range(6, 10):  # the pedestal
         px[9][x] = 3
         px[8][x] = 3 if x in (6, 9) else px[8][x]
-    for cy in range(2):
-        for cx in range(2):
-            rows = ["".join(str(px[cy * 8 + y][cx * 8 + x]) for x in range(8)) for y in range(8)]
-            cell_px(cv, 1 + cx, 1 + cy, rows, WATER)
-    return cv
+    return px, mask
+
+
+# The fountain is a pool of two by two blocks: the shore pieces of the ponds go round the edge, so the white lip and the water fill every
+# pixel of the 64 by 64 that the collision blocks (alpha 3.1 drew a 16 pixel basin in the middle of a block that was solid all over, and
+# the player ran into air).  J is a quarter of the jet and its pedestal, drawn over the water in the four cells that meet at the centre.
+FOUNTAIN = {
+    "fountain_nw": ["1nnn", "wccc", "wccc", "wccJ"],
+    "fountain_ne": ["nnn2", "cccE", "cccE", "JccE"],
+    "fountain_sw": ["wccJ", "wccc", "wccc", "4sss"],
+    "fountain_se": ["JccE", "cccE", "cccE", "sss3"],
+}
+JET_QUAD = {"fountain_nw": (0, 0), "fountain_ne": (8, 0), "fountain_sw": (0, 8), "fountain_se": (8, 8)}
+
+
+def fountain_blocks(g):
+    """(role, canvas) for the four blocks of the fountain pool, see FOUNTAIN."""
+    keys = {"c": "c", "n": "n", "s": "s", "E": "e", "w": "w", "1": "nw", "2": "ne", "3": "se", "4": "sw"}
+    jet, mask = jet_art()
+    out = []
+    for role, rows in FOUNTAIN.items():
+        cv = new(g)
+        qx, qy = JET_QUAD[role]
+        for cy, r in enumerate(rows):
+            for cx, ch in enumerate(r):
+                if ch == "J":
+                    base = shore_rows(SHORE["c"])
+                    rows8 = []
+                    for y in range(8):
+                        rows8.append("".join(str(jet[qy + y][qx + x]) if mask[qy + y][qx + x] else base[y][x] for x in range(8)))
+                    cell_px(cv, cx, cy, rows8, WATER)
+                else:
+                    cell_px(cv, cx, cy, shore_rows(SHORE[keys[ch]]), WATER)
+        out.append((role, cv))
+    return out
 
 
 def add(t, g):
@@ -249,6 +281,7 @@ def add(t, g):
     scn["tree"] = t.add(tree(g), "WALL", "tree")
     scn["flowers"] = [t.add(flowers(g, k), "FLOOR", "flowers") for k in (0, 1)]
     scn["mat"] = t.add(mat(g), ("FLOOR", "FLOOR", "WARP_CARPET_DOWN", "WARP_CARPET_DOWN"), "mat")
-    scn["fountain"] = t.add(fountain(g), "WALL", "fountain")  # last: no earlier block id moves
+    for role, cv in fountain_blocks(g):  # last: no earlier block id moves
+        scn[role] = t.add(cv, "WALL", role)
     t.scn = scn
     return scn

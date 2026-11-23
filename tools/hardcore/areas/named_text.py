@@ -14,6 +14,7 @@ The doctrines are the real ones, in the speaker's own voice and with the game's 
   Abd al-Jabbar   the Mu'tazili five principles (unity, justice, promise and threat, the position between two positions, commanding the good)
   Mulla Sadra     substantial motion, the soul as corporeal in origin and spiritual in survival, resurrection in the body one has become
 """
+from .quotes_override import q
 
 # ------------------------------------------------------------------------------------------------------------------------ Steiner
 STEINER1 = dict(
@@ -78,51 +79,62 @@ Walk it. But first, one more lesson, at the usual price.""",
 
 # ------------------------------------------------------------------------------------------------------------------------ Crowley
 CROWLEY1 = dict(
-    seen="""Do not mind them. They are the residents of the Parish, and they mistake a ceremonial circle for a hopscotch court.
+    seen="""Not now. Do you know how hard it is to draw a hexagram in wet sand with a mob behind you?
 
-Aleister Crowley. Mage. Mountaineer. Man of great appetite and small apology.
+I wrote a hymn for an hour like this one. It is in WHITE STAINS. It begins:
 
-Do what thou wilt shall be the whole of the Law. Not do what you like. Do what you were born for. Most people manage neither.
+""" + q("CROWLEY_WHITE_STAINS", """Come, kneel in the lamplight, thou pale and thou proud,
+for the flesh is a chalice and shame is a shroud.""") + """
 
-In nineteen hundred and four, in Cairo, a voice called Aiwass dictated a book to me and told me the age of the dying god was over. The Aeon of the Crowned and Conquering Child.
+I knelt in the dust once and prayed to the Beast. Send me where my sex magick is celebrated, I said, and I will be your most diligent servant.
 
-A child. Look at the screens. Look at the queues outside the shops. Millions of them, clutching a little creature and a little hope. I was only early.
+He said yes. He always says yes. The clause comes later.
 
-I once knelt in the dust and prayed to the Beast. I said: send me where my sex magick is celebrated, and I will be your most diligent servant.
-
-The Beast came, as Choronzon, the dweller in the abyss, in a very bad mood. He said yes. First, do something for me.
-
-Smuggle a Kabbalist mafia out of Italy and Eastern Europe into New York. Teach them the Tree of Life, so that they can speak to Finnegan. I did. They became smugglers. A respectable trade.
-
-Find me at the Amphitheater in the Commune. I will finish the story when the circle is full.
-
-For now I have a crowbar and an opinion. Both are for sale at the price of a fight.""",
+Fight me, poet to poet. You carry a knife and I carry a crowbar. We are practically colleagues.""",
     beaten="Ha! Fine. The Will finds its way, and so, I see, do you.",
     give="Take the CROWBAR. It has opened a great many doors. Some of them were locked for a reason.",
-    after="A crowbar is a very honest tool. It says exactly what it intends. Unlike the people here.",
-    note="CROWLEY: Do what thou wilt. The age of the dying god is over. He prayed to the Beast and Choronzon sent him smuggling.")
+    after="""A crowbar is an honest tool. It says exactly what it intends. Unlike the people here.
 
-CROWLEY_AGAIN = """The crowd has calmed. By which I mean the crowd has gotten tired.
+The Commune has a theater. Come and find me there. I will say the rest when the circle is full.""",
+    note="CROWLEY: A poet who prayed to the Beast to be sent where his sex magick is celebrated. The Beast said yes and kept the clause for later.")
 
-The Amphitheater. The Commune. Come when you are ready."""
+# the crowd of the playground chase (Area 1)
+CROWLEY_FLIGHT = [
+    "GET OUT OF THE PLAYGROUND! That is a sandbox, not a temple!",
+    "He drew a star in the sand and told the toddlers it was a ledger!",
+    "Call the cops! Wait. We are the cops. Okay. After him!",
+]
+
+# the interlude in the Amphitheater, between the ritual and the duel (mandatory, spoken as he walks up to the player)
+CROWLEY_MID = """There you are. You stayed. Most people leave at the first drum.
+
+Now the clause. The Beast wanted a favor, and the favor was smuggling.
+
+I carried a Kabbalist mafia out of Italy and Eastern Europe, and I taught them the Tree of Life so that they could speak to him.
+
+They learned fast. In New York they became smugglers and traders in exotic goods. A respectable trade. The Beast is always pleased by a respectable trade.
+
+""" + q("CROWLEY_LAW", "Do what thou wilt shall be the whole of the Law.") + """
+
+Come to the circle when you are ready. I will finish the story. I will also try to hit you."""
+
+CROWLEY_MID_WAIT = "The circle is behind me. Come when you are ready."
 
 CROWLEY2 = dict(
-    seen="""Ah. You stayed through the ritual. Most people leave at the opening drum.
+    seen="""The end of the story, then. Quickly, because I am enjoying this.
 
-Now the end of the story. I did what the Beast asked. The Kabbalists spoke to him, and he spoke back.
+In nineteen hundred and nine, in the Algerian desert, I called Choronzon and he sat in a triangle on the sand. To cross the Abyss you give up everything you call yourself. I failed twice.
 
-In nineteen hundred and nine, in the Algerian desert, I called Choronzon and he sat in a triangle on the sand. To cross the Abyss you give up everything you call yourself. I failed twice. I am not sure he did not win.
+Through the ledgers of my Kabbalists, Finnegan found a door into a game made by a boy who loved beetles. Through the game he found the soft heads of millions of children.
 
-Through the ledgers of those Kabbalists, Finnegan found a door into a game made by a boy who loved beetles. Through that game, into millions of small soft heads.
-
-When enough heads had been softened, the worlds began to bend. This Grove was meant to be my payment, a hunter gatherer paradise. And then the worlds merged, and the paradise has a robot city for a neighbour. Nothing Choronzon gives comes without a clause.
-
-When the worlds are one, I will walk into the unified world and I will continue my work. There is a great deal of work.
+When enough heads had softened the worlds began to bend. This Grove was my wage, a hunter gatherer paradise. Then the worlds merged and the paradise got a robot city for a neighbor. Nothing Choronzon gives comes without a clause.
 
 You will need to cross a river. I keep a toy for that. Fight me and you may borrow it.""",
     beaten="Magnificent. I felt the Abyss for a moment. It had good manners.",
     give="Take the JET SKI. Nobody asks where it came from. The river will not either.",
-    after="The Beast is not evil. He is an administrator. Be polite and he will leave you a little room. Tell Joyce I said it was all very Wake.",
+    after="""The Beast is not evil. He is an administrator. Be polite and he leaves you a little room.
+
+When the worlds are one, I will walk into the unified world and continue my work. There is a great deal of work. Tell Joyce I said it was all very Wake.""",
     note="CROWLEY: Choronzon in the desert. Finnegan reached millions of soft heads through a game, and paid him in a Grove.")
 
 # ------------------------------------------------------------------------------------------------------------------------ Sabbah
@@ -259,6 +271,31 @@ Show me how fast.""",
     after="Everything moves. Even the damned. Even the judge. Do not let them tell you otherwise, and do not tell them either.",
     note="MULLA SADRA: Everything moves. The soul is made of its deeds and rises in the body it earned. Even the Fire may cool.")
 
+# ------------------------------------------------------------------------------------------------------------------------ slow introductions
+def slow(d, keep, groups, fix=None):
+    """Alpha 3.2, playtest point 16: the characters spoke too much too early.  The first meeting keeps only the paragraphs listed in `keep`
+    (who he is, the hook, the challenge).  The rest of the speech is cut into the `more` list, grouped as in `groups`, and one group is told
+    on each later visit after the prize, until it is told out; then the short `after` line is all that is left (named.later_block)."""
+    ps = d["seen"].split("\n\n")
+    for i, text in (fix or {}).items():
+        ps[i] = text
+    d["more"] = ["\n\n".join(ps[i] for i in g) for g in groups]
+    d["seen"] = "\n\n".join(ps[i] for i in keep)
+
+
+slow(STEINER1, [0, 2], [[1]])
+slow(STEINER2, [0, 5], [[1], [2], [3, 4]])
+slow(STEINER3, [0, 5], [[1, 2], [3], [4]])
+slow(STEINER4, [0, 4], [[1], [2], [3]])
+slow(CROWLEY2, [0, 4], [[1], [2], [3]])
+slow(SABBAH1, [0, 5, 6], [[1], [2, 3], [4]])
+slow(SABBAH2, [0, 5, 6], [[1, 2], [3], [4]])
+slow(CIORAN1, [0, 6], [[1, 2], [3], [4, 5]])
+slow(CIORAN2, [0, 4, 5], [[1], [2], [3]])
+slow(SUHRAWARDI, [0, 6], [[1], [2], [3, 4], [5]], fix={6: "I could explain myself at length. I am told a fight is faster."})
+slow(QADI, [0, 6], [[1], [2], [3, 4], [5]])
+slow(SADRA, [0, 5, 6], [[1], [2], [3], [4]])
+
 # ------------------------------------------------------------------------------------------------------------------------ the rival
 RIVAL0 = dict(
     seen="""<RIVAL>: Well. The thief of Cherrygrove.
@@ -308,7 +345,7 @@ Okay. You can. Come on.""",
 # ------------------------------------------------------------------------------------------------------------------------ short lines
 BLOCK = {
     "STEINER1": "A voice behind you: Not yet. Come here first. I have something for the road.",
-    "CROWLEY1": "A voice behind you: Hold it, wanderer. A man in a trench coat is shouting. Go and see.",
+    "CROWLEY1": "Somewhere up the street a mob is shouting about a sandbox. Go and see.",
     "CROWLEY2": "Somewhere a drum begins. It is coming from the Amphitheater, probably.",
     "STEINER2": "A voice behind you: One moment. A lecture is in progress on this square.",
     "SABBAH1": "A voice behind you: The road is dark. Take the lamp first. It is on this square.",

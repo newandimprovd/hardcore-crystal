@@ -16,7 +16,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from areamodel import GRASS, World  # noqa: E402
+from areamodel import GRASS, WARPTILE, World  # noqa: E402
 from test_walk import const_table, find_ids  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(HERE))
@@ -96,7 +96,11 @@ def main():
         if len(cells) < 20:
             problems.append(f"{e['map']}: only {len(cells)} tall-grass cells")
             continue
-        start = (e["map"], 8, 6)
+        # the start is a walkable cell of the entry row at the foot of the bottom stem (the towns of alpha 3.2 have buildings and districts all over the ground,
+        # there is no fixed cell that is always free)
+        row = 2 * mp.h - 2
+        sx = next((x for x in range(2 * mp.w) if world.walkable(mp, x, row) and mp.cell(x, row) not in WARPTILE), 8)
+        start = (e["map"], sx, row if sx != 8 or world.walkable(mp, 8, row) else 6)
         goal = set(cells)
         route = world.route(start, lambda s: s[0] == e["map"] and (s[1], s[2]) in goal)
         if route is None:

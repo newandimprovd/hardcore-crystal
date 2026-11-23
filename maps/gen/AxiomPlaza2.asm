@@ -88,64 +88,76 @@ AxiomPlaza2GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-AxiomPlaza2Townie1:
-	jumptextfaceplayer AxiomPlaza2Townie1Text
+AxiomPlaza2Persona1:
+	jumptextfaceplayer AxiomPlaza2Persona1Text
 
-AxiomPlaza2Townie1Text:
-	text "A wild Pokemon"
-	line "asked for ID. It"
-	para "was a very good"
-	line "wild Pokemon."
+AxiomPlaza2Persona1Text:
+	text "AIDE BIX: The"
+	line "Mayor loves you."
+	para "The Mayor loves"
+	line "everyone equally."
+	para "It is in his"
+	line "programming. Beep."
 	done
 
-AxiomPlaza2Townie2:
-	jumptextfaceplayer AxiomPlaza2Townie2Text
+AxiomPlaza2Persona2:
+	jumptextfaceplayer AxiomPlaza2Persona2Text
 
-AxiomPlaza2Townie2Text:
-	text "I voted. The"
-	line "result was"
-	para "'accepted'. I"
-	line "don't know what I"
-	para "accepted."
+AxiomPlaza2Persona2Text:
+	text "MATCHMAKER MABEL:"
+	line "I found you a"
+	para "compatible"
+	line "partner. It is a"
+	para "spreadsheet. It"
+	line "has no flaws and"
+	para "no questions."
 	done
 
-AxiomPlaza2Townie3:
-	jumptextfaceplayer AxiomPlaza2Townie3Text
+AxiomPlaza2Persona4:
+	jumptextfaceplayer AxiomPlaza2Persona4Text
 
-AxiomPlaza2Townie3Text:
-	text "LEFTOVERS:"
-	line "certified, tested,"
-	para "taxed. In that"
-	line "order, usually."
+AxiomPlaza2Persona4Text:
+	text "SERF MILO: I work"
+	line "sixteen hours a"
+	para "day. I have not"
+	line "seen the sun. I"
+	para "have seen the"
+	line "screen. It looks"
+	para "like the sun."
 	done
 
-AxiomPlaza2Townie4:
-	jumptextfaceplayer AxiomPlaza2Townie4Text
+AxiomPlaza2Persona6:
+	jumptextfaceplayer AxiomPlaza2Persona6Text
 
-AxiomPlaza2Townie4Text:
-	text "Please enjoy the"
-	line "mandatory leisure."
+AxiomPlaza2Persona6Text:
+	text "GUARD UNIT 12:"
+	line "Nothing to see"
+	para "here. Everything"
+	line "to see here. But"
+	para "nothing,"
+	line "officially."
 	done
 
 AxiomPlaza2Townie5:
 	jumptextfaceplayer AxiomPlaza2Townie5Text
 
 AxiomPlaza2Townie5Text:
-	text "The Mayor is a"
-	line "great listener. He"
-	para "has forty thousand"
-	line "microphones and no"
-	para "mouth."
+	text "We are all equal"
+	line "before the"
+	para "algorithm. The"
+	line "algorithm is not"
+	para "equal to us."
 	done
 
 AxiomPlaza2Townie6:
 	jumptextfaceplayer AxiomPlaza2Townie6Text
 
 AxiomPlaza2Townie6Text:
-	text "Your happiness has"
-	line "been scheduled for"
-	para "Thursday. Please"
-	line "arrive early."
+	text "My gift was"
+	line "approved. It will"
+	para "arrive after I"
+	line "have stopped"
+	para "needing it."
 	done
 
 AxiomPlaza2Rival3RivalScript:
@@ -220,7 +232,7 @@ AxiomPlaza2Duel:
 	iffalse .No
 	closetext
 	winlosstext AxiomPlaza2DuelBeatenText, 0
-	loadtrainer U_MADDOC, 137
+	loadtrainer U_MADDOC, 138
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_PLAZA2_DUEL
@@ -294,31 +306,31 @@ AxiomPlaza2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, AXIOM_POKECENTER2, 1
-	warp_event  6,  3, AXIOM_MART2, 1
-	warp_event 16,  3, AXIOM_HOUSE2, 1
-	warp_event 22,  3, AXIOM_BOUTIQUE2, 1
+	warp_event 34, 11, AXIOM_POKECENTER2, 1
+	warp_event 30, 21, AXIOM_MART2, 1
+	warp_event 20, 19, AXIOM_HOUSE2, 1
+	warp_event  4, 15, AXIOM_BOUTIQUE2, 1
 
 	def_coord_events
-	coord_event 26, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 27, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 28, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 29, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 30, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 31, 24, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 24, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 25, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 26, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 27, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 28, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 29, 28, -1, AxiomPlaza2Rival3RivalScript
 
 	def_bg_events
 
 	def_object_events
-	object_event  8, 10, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2DebateA, -1
-	object_event  9, 10, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2DebateB, -1
-	object_event 30, 16, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Giver, -1
-	object_event 13, 17, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie1, -1
-	object_event 10, 21, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie2, -1
-	object_event  6,  6, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie3, -1
-	object_event 11, 16, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie4, -1
-	object_event 12, 23, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie5, -1
-	object_event 24, 23, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie6, -1
-	object_event 29, 20, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Rival3RivalScript, EVENT_NAMED_RIVAL3_DONE
-	object_event 23, 14, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Duel, -1
+	object_event  6, 18, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2DebateA, -1
+	object_event  7, 18, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2DebateB, -1
+	object_event 23, 25, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Giver, -1
+	object_event 22, 10, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona1, -1
+	object_event 10, 13, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona2, -1
+	object_event 18, 23, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona4, -1
+	object_event  9, 21, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona6, -1
+	object_event 18, 25, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie5, -1
+	object_event  5,  8, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie6, -1
+	object_event 27, 24, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Rival3RivalScript, EVENT_NAMED_RIVAL3_DONE
+	object_event 37, 17, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Duel, -1
 

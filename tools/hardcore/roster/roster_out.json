@@ -590,12 +590,12 @@
    "BUG"
   ],
   "stats": [
-   53,
-   35,
-   41,
-   53,
-   24,
-   24
+   69,
+   46,
+   54,
+   69,
+   31,
+   31
   ],
   "new": false,
   "gfx": "CATERPIE",
@@ -609,8 +609,20 @@
     "STRING_SHOT"
    ],
    [
+    7,
+    "LEECH_LIFE"
+   ],
+   [
     12,
     "TWINEEDLE"
+   ],
+   [
+    17,
+    "HEADBUTT"
+   ],
+   [
+    21,
+    "X_SCISSOR"
    ]
   ],
   "next": "METAPOD"
@@ -626,12 +638,12 @@
    "BUG"
   ],
   "stats": [
-   92,
-   37,
-   102,
+   83,
+   51,
+   88,
+   61,
    56,
-   46,
-   46
+   56
   ],
   "new": false,
   "gfx": "METAPOD",
@@ -643,6 +655,18 @@
    [
     25,
     "TWINEEDLE"
+   ],
+   [
+    27,
+    "X_SCISSOR"
+   ],
+   [
+    33,
+    "HEADBUTT"
+   ],
+   [
+    40,
+    "BUG_BUZZ"
    ]
   ],
   "next": "BUTTERFREE"
@@ -658,12 +682,12 @@
    "FLYING"
   ],
   "stats": [
-   73,
-   54,
-   60,
-   85,
-   97,
-   97
+   76,
+   56,
+   62,
+   89,
+   101,
+   101
   ],
   "new": false,
   "gfx": "BUTTERFREE",
@@ -707,6 +731,14 @@
    [
     50,
     "TWINEEDLE"
+   ],
+   [
+    50,
+    "BUG_BUZZ"
+   ],
+   [
+    56,
+    "HURRICANE"
    ]
   ],
   "next": "CINDERWING"
@@ -722,12 +754,12 @@
    "POISON"
   ],
   "stats": [
-   47,
-   41,
-   35,
-   59,
-   24,
-   24
+   61,
+   54,
+   46,
+   77,
+   31,
+   31
   ],
   "new": false,
   "gfx": "WEEDLE",
@@ -741,8 +773,20 @@
     "STRING_SHOT"
    ],
    [
+    7,
+    "LEECH_LIFE"
+   ],
+   [
     12,
     "TWINEEDLE"
+   ],
+   [
+    16,
+    "SLUDGE"
+   ],
+   [
+    21,
+    "X_SCISSOR"
    ]
   ],
   "next": "KAKUNA"
@@ -758,12 +802,12 @@
    "POISON"
   ],
   "stats": [
+   77,
+   56,
    83,
-   46,
-   93,
-   65,
-   46,
-   46
+   67,
+   56,
+   56
   ],
   "new": false,
   "gfx": "KAKUNA",
@@ -779,6 +823,18 @@
    [
     25,
     "SLUDGE_BOMB"
+   ],
+   [
+    27,
+    "X_SCISSOR"
+   ],
+   [
+    33,
+    "POISON_JAB"
+   ],
+   [
+    40,
+    "BUG_BUZZ"
    ]
   ],
   "next": "BEEDRILL"
@@ -794,12 +850,12 @@
    "POISON"
   ],
   "stats": [
-   79,
-   97,
-   48,
-   91,
-   54,
-   97
+   82,
+   101,
+   50,
+   95,
+   56,
+   101
   ],
   "new": false,
   "gfx": "BEEDRILL",
@@ -831,6 +887,14 @@
    [
     40,
     "AGILITY"
+   ],
+   [
+    50,
+    "X_SCISSOR"
+   ],
+   [
+    55,
+    "POISON_JAB"
    ]
   ],
   "next": "BEEHEMOTH"
@@ -846,12 +910,12 @@
    "FLYING"
   ],
   "stats": [
-   43,
    48,
-   43,
-   60,
-   38,
-   38
+   53,
+   48,
+   67,
+   42,
+   42
   ],
   "new": false,
   "gfx": "PIDGEY",
@@ -1014,12 +1078,12 @@
    "NORMAL"
   ],
   "stats": [
-   31,
-   57,
    36,
-   74,
-   26,
-   36
+   66,
+   42,
+   85,
+   30,
+   41
   ],
   "new": false,
   "gfx": "RATTATA",
@@ -1110,12 +1174,12 @@
    "FLYING"
   ],
   "stats": [
-   41,
-   61,
-   30,
-   71,
-   31,
-   31
+   47,
+   69,
+   34,
+   80,
+   35,
+   35
   ],
   "new": false,
   "gfx": "SPEAROW",
@@ -2182,12 +2246,12 @@
    "FLYING"
   ],
   "stats": [
+   50,
+   55,
    43,
-   48,
+   67,
    37,
-   58,
-   32,
-   42
+   48
   ],
   "new": false,
   "gfx": "ZUBAT",
@@ -5990,12 +6054,12 @@
    "FIRE"
   ],
   "stats": [
-   117,
-   49,
-   68,
-   96,
-   137,
-   110
+   120,
+   51,
+   71,
+   100,
+   143,
+   115
   ],
   "new": true,
   "gfx": "BUTTERFREE",
@@ -6054,12 +6118,12 @@
    "POISON"
   ],
   "stats": [
-   124,
-   137,
-   55,
-   103,
-   49,
-   109
+   128,
+   143,
+   57,
+   107,
+   51,
+   114
   ],
   "new": true,
   "gfx": "BEEDRILL",
@@ -9242,12 +9306,12 @@
    "NORMAL"
   ],
   "stats": [
-   41,
-   53,
-   40,
-   23,
-   41,
-   52
+   49,
+   64,
+   48,
+   28,
+   49,
+   62
   ],
   "new": false,
   "gfx": "SENTRET",
@@ -9265,8 +9329,16 @@
     "QUICK_ATTACK"
    ],
    [
+    13,
+    "HYPER_FANG"
+   ],
+   [
     17,
     "SCRATCH"
+   ],
+   [
+    21,
+    "SLASH"
    ],
    [
     25,
@@ -9342,12 +9414,12 @@
    "FLYING"
   ],
   "stats": [
-   59,
-   30,
-   30,
-   50,
-   36,
-   55
+   68,
+   35,
+   35,
+   58,
+   41,
+   63
   ],
   "new": false,
   "gfx": "HOOTHOOT",
@@ -9578,12 +9650,12 @@
    "POISON"
   ],
   "stats": [
-   43,
-   65,
-   43,
-   33,
-   43,
-   43
+   48,
+   72,
+   48,
+   36,
+   48,
+   48
   ],
   "new": false,
   "gfx": "SPINARAK",
@@ -9609,8 +9681,16 @@
     "NIGHT_SHADE"
    ],
    [
+    20,
+    "X_SCISSOR"
+   ],
+   [
     23,
     "LEECH_LIFE"
+   ],
+   [
+    26,
+    "POISON_JAB"
    ],
    [
     30,
@@ -9671,6 +9751,14 @@
    [
     25,
     "LEECH_LIFE"
+   ],
+   [
+    28,
+    "X_SCISSOR"
+   ],
+   [
+    32,
+    "POISON_JAB"
    ],
    [
     34,
@@ -9910,12 +9998,12 @@
    "ELECTRIC"
   ],
   "stats": [
-   24,
-   49,
-   18,
-   73,
-   43,
-   43
+   29,
+   59,
+   22,
+   88,
+   51,
+   51
   ],
   "new": false,
   "gfx": "PICHU",
@@ -9929,6 +10017,10 @@
     "CHARM"
    ],
    [
+    5,
+    "QUICK_ATTACK"
+   ],
+   [
     6,
     "TAIL_WHIP"
    ],
@@ -9939,6 +10031,14 @@
    [
     11,
     "SWEET_KISS"
+   ],
+   [
+    12,
+    "SPARK"
+   ],
+   [
+    18,
+    "SWIFT"
    ]
   ],
   "next": "PIKACHU"
@@ -9954,12 +10054,12 @@
    "FAIRY"
   ],
   "stats": [
-   57,
-   29,
-   32,
-   17,
-   52,
-   63
+   69,
+   35,
+   38,
+   20,
+   62,
+   76
   ],
   "new": false,
   "gfx": "CLEFFA",
@@ -9991,6 +10091,14 @@
    [
     13,
     "SWEET_KISS"
+   ],
+   [
+    17,
+    "DOUBLESLAP"
+   ],
+   [
+    21,
+    "DAZZLE_GLEAM"
    ]
   ],
   "next": "CLEFAIRY"
@@ -10006,12 +10114,12 @@
    "FAIRY"
   ],
   "stats": [
-   107,
-   36,
-   18,
-   18,
-   47,
-   24
+   128,
+   43,
+   22,
+   22,
+   56,
+   29
   ],
   "new": false,
   "gfx": "IGGLYBUFF",
@@ -10041,8 +10149,20 @@
     "DRAIN_KISS"
    ],
    [
+    12,
+    "ROLLOUT"
+   ],
+   [
     14,
     "SWEET_KISS"
+   ],
+   [
+    17,
+    "DOUBLESLAP"
+   ],
+   [
+    21,
+    "BODY_SLAM"
    ]
   ],
   "next": "JIGGLYPUFF"
@@ -10490,12 +10610,12 @@
    "FAIRY"
   ],
   "stats": [
-   74,
-   21,
-   53,
-   43,
-   21,
-   53
+   84,
+   24,
+   60,
+   48,
+   24,
+   60
   ],
   "new": false,
   "gfx": "MARILL",
@@ -10750,12 +10870,12 @@
    "FLYING"
   ],
   "stats": [
-   37,
-   36,
+   43,
    42,
-   52,
-   36,
-   57
+   48,
+   60,
+   41,
+   66
   ],
   "new": false,
   "gfx": "HOPPIP",
@@ -10791,6 +10911,10 @@
    [
     17,
     "SLEEP_POWDER"
+   ],
+   [
+    18,
+    "RAZOR_LEAF"
    ],
    [
     20,
@@ -12998,12 +13122,12 @@
    "GROUND"
   ],
   "stats": [
-   54,
-   54,
-   43,
-   54,
-   33,
-   32
+   60,
+   60,
+   48,
+   60,
+   37,
+   35
   ],
   "new": false,
   "gfx": "SWINUB",

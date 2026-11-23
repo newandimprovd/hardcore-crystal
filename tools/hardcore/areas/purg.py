@@ -267,7 +267,7 @@ def free_spots(G, rng, avoid, count, minsep=6, rows=None):
 
 
 def build_floor(g, w, roster, rng, spec_table, idx, name, direction, lv, necks, balls, gifts, lm, music, tr_target=8,
-                extra_objs=0, last=False):
+                extra_objs=0, last=False, spec_cls=None):
     for attempt in range(120):
         r = random.Random(f"{name}:{attempt}:{rng.random()}")
         res = carve_floor(r, 20, 20 if len(necks) < 2 else 28, len(necks), 2)
@@ -308,7 +308,7 @@ def build_floor(g, w, roster, rng, spec_table, idx, name, direction, lv, necks, 
     her = info["hermits"]
     lv0, lv1 = lv
     cls_sub = subset(r, spec_table)
-    spec = PurgSpec(lv0, lv1, cls_sub)
+    spec = (spec_cls or PurgSpec)(lv0, lv1, cls_sub)
     items = list(balls)
     n_obj = 2 * len(necks) + 2 + len(balls) + extra_objs
     count = min(tr_target, 15 - n_obj)
@@ -359,7 +359,10 @@ def hub(g, w, roster, rng):
     m = MapDef(g.key, "PurgThreshold", bw, bh, "TILESET_CAVE", "DUNGEON", LM, "MUSIC_HC_PURGATORIO", pal="PALETTE_DAY", border=0x00)
     render(G, m, rng)
     south = m.warp(2 * ex + 1, 2 * (bh - 1) + 1, "mouth")
-    m.set(ex, bh - 1, 0x24)  # floor with a warp carpet bottom right: a cave door (0x13) on the last row walks the player off the map on arrival
+    # the corridor is one block (two steps) wide, so both steps of the last row must work as the exit (alpha 3.1 had a carpet on the right step only).
+    # Block 0x40 is plain floor with a warp carpet under both steps; a cave door (0x13) on the last row walks the player off the map on arrival
+    south_left = m.warp(2 * ex, 2 * (bh - 1) + 1, "mouth")
+    m.set(ex, bh - 1, 0x40)
     # the four mouths
     mouths = []
     for bx in (6, 10, 14, 18):
@@ -399,6 +402,7 @@ def hub(g, w, roster, rng):
     sign(m, 44, 23, "PurgThresholdSignUp", C.HUB_SIGN_UP)
     g.add(m)
     verify(m, (2 * ex + 1, 2 * (bh - 1)))
+    m.south_left = south_left
     return m, south, mouths, down, up
 
 
@@ -478,14 +482,15 @@ def landing(g, w, roster, rng):
     m.set(ex // 2, ey // 2, rng.choice(LADDER_DOWN))
     entry = m.warp(ex + 1, ey + 1, "ladder")
     # Bruno: a level 100 team of strong fourth stages, one per type where possible
-    types, party = set(), []
+    types, party, held = set(), [], []
     pool = roster.by_stage[4][:]
     rng.shuffle(pool)
     for mon in pool:
         t = mon["types"][0]
         if t not in types:
             types.add(t)
-            party.append((100, mon["const"]))
+            held.append(roster.item_for(rng, mon, 100, held))  # every mon of Bruno's team carries an item of its own
+            party.append((100, mon["const"], held[-1]))
         if len(party) == 6:
             break
     tid = w.trainer("MYSTICALMAN", "BRUNO", party)
@@ -535,6 +540,7 @@ def build(w, roster, rng, plaza_doors, junction_warp):
     table = class_table()
     hubm, south, mouths, down, up = hub(g, w, roster, rng)
     link(south, junction_warp)
+    hubm.south_left.dest = junction_warp  # the second step of the two step wide exit leads out as well
     for k, key in enumerate(("A1", "A2", "A3", "A4")):
         link(mouths[k], plaza_doors[key])
     prevs = {"D": down, "U": up}

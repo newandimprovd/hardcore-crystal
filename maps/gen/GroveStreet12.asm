@@ -10,17 +10,18 @@ GroveStreet12Pickup:
 	itemball REVIVE
 
 GroveStreet12Hidden:
-	hiddenitem AWAKENING, EVENT_GEN_GROVE_STREET12_HIDDEN
+	hiddenitem PP_UP, EVENT_GEN_GROVE_STREET12_HIDDEN
 
 GroveStreet12Hermit:
 	jumptextfaceplayer GroveStreet12HermitText
 
 GroveStreet12HermitText:
-	text "Have you tried not"
-	line "fighting? I've"
-	para "been not fighting"
-	line "for years. Nobody"
-	para "asked me to stop."
+	text "The goat in the"
+	line "commune is smarter"
+	para "than the leader. I"
+	line "am here to say it"
+	para "where the goat"
+	line "cannot hear."
 	done
 
 GroveStreet12SeenText:
@@ -44,25 +45,25 @@ GroveStreet12AfterScript:
 	end
 
 GroveStreet12Trainer0:
-	trainer G_HIKER, 138, EVENT_GEN_GROVE_STREET12_0, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_GRANNY, 132, EVENT_GEN_GROVE_STREET12_0, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
 
 GroveStreet12Trainer1:
-	trainer G_HIKER, 139, EVENT_GEN_GROVE_STREET12_1, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_DRUMMER, 129, EVENT_GEN_GROVE_STREET12_1, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
 
 GroveStreet12Trainer2:
-	trainer G_FLOWERKID, 133, EVENT_GEN_GROVE_STREET12_2, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_NATURISTF, 133, EVENT_GEN_GROVE_STREET12_2, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
 
 GroveStreet12Trainer3:
-	trainer G_URCHIN, 130, EVENT_GEN_GROVE_STREET12_3, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_NATURISTM, 130, EVENT_GEN_GROVE_STREET12_3, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
 
 GroveStreet12Trainer4:
-	trainer G_HIKER, 140, EVENT_GEN_GROVE_STREET12_4, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_SHAMAN, 130, EVENT_GEN_GROVE_STREET12_4, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
 
 GroveStreet12Trainer5:
-	trainer G_SCOUT, 134, EVENT_GEN_GROVE_STREET12_5, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_HIKER, 137, EVENT_GEN_GROVE_STREET12_5, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
 
 GroveStreet12Trainer6:
-	trainer G_HIKER, 141, EVENT_GEN_GROVE_STREET12_6, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_HIKER, 138, EVENT_GEN_GROVE_STREET12_6, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
 
 GroveStreet12_MapEvents:
 	db 0, 0 ; filler
@@ -72,16 +73,16 @@ GroveStreet12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  5, 12, BGEVENT_ITEM, GroveStreet12Hidden
+	bg_event 21,  5, BGEVENT_ITEM, GroveStreet12Hidden
 
 	def_object_events
-	object_event 11, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet12Pickup, EVENT_GEN_GROVE_STREET12_PICKUP
-	object_event  6, 18, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet12Hermit, -1
-	object_event  6, 28, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer0, -1
-	object_event 15, 24, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer1, -1
-	object_event 14, 20, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer2, -1
-	object_event 19, 20, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer3, -1
-	object_event 14, 16, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer4, -1
-	object_event 19, 16, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer5, -1
-	object_event 14, 12, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer6, -1
+	object_event 15, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet12Pickup, EVENT_GEN_GROVE_STREET12_PICKUP
+	object_event 15,  6, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet12Hermit, -1
+	object_event  5,  6, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer0, -1
+	object_event  9, 15, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer1, -1
+	object_event 13, 14, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer2, -1
+	object_event 13, 19, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer3, -1
+	object_event 17, 14, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer4, -1
+	object_event 17, 19, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer5, -1
+	object_event 21, 14, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer6, -1
 

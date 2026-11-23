@@ -166,9 +166,9 @@ def emit_trainers(w):
         for name, party in lst:
             assert 1 <= len(party) <= 6
             s = f'\tdb "{name}@"\n'
-            s += "".join(f"\tdb {lv}, {sp}\n" for lv, sp in party)
+            s += "".join(f"\tdb {lv}, {sp}, {it}\n" for lv, sp, it in party)
             s += "\tdb -1\n"
-            size = len(name) + 1 + 2 * len(party) + 1
+            size = len(name) + 1 + 3 * len(party) + 1
             recs.append((s, size))
         by_class[cls] = recs
     # pack classes into sections of at most 15000 bytes
@@ -210,7 +210,17 @@ def emit_story(w):
     write("data/hardcore/story_bosses.asm", "\n".join(o) + "\n")
 
 
+def emit_obj_areas(w):
+    """One byte for every map of the Purgatorio group (in map number order): the area (0..4) whose NPC colours its fighters wear, or 255 for
+    the vanilla set.  Only the five area groups have their own object palettes, the caves of the hollows and the vault look this up."""
+    o = [HEADER, "HC_PurgObjAreas:"]
+    for m in w.groups["PURG"].maps:
+        o.append(f"\tdb {getattr(m, 'obj_area', 255)} ; {m.name}")
+    write("data/hardcore/purg_obj_areas.asm", "\n".join(o) + "\n")
+
+
 def emit_all(w):
+    emit_obj_areas(w)
     emit_constants(w)
     emit_lists(w)
     emit_data(w)

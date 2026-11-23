@@ -16,12 +16,11 @@ TitheStreet4Hermit:
 	jumptextfaceplayer TitheStreet4HermitText
 
 TitheStreet4HermitText:
-	text "I left the city to"
-	line "escape the tithe."
-	para "The trees also"
-	line "want ten percent."
-	para "Of what, they"
-	line "won't say."
+	text "A nun told me this"
+	line "glade is blessed."
+	para "It is not. She was"
+	line "just selling the"
+	para "deed."
 	done
 
 TitheStreet4SeenText:
@@ -45,22 +44,22 @@ TitheStreet4AfterScript:
 	end
 
 TitheStreet4Trainer0:
-	trainer T_SUIT, 129, EVENT_GEN_TITHE_STREET4_0, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_COP, 136, EVENT_GEN_TITHE_STREET4_0, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
 
 TitheStreet4Trainer1:
-	trainer T_HOODIE, 129, EVENT_GEN_TITHE_STREET4_1, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_PRIEST, 128, EVENT_GEN_TITHE_STREET4_1, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
 
 TitheStreet4Trainer2:
-	trainer T_SUIT, 130, EVENT_GEN_TITHE_STREET4_2, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_THUG, 129, EVENT_GEN_TITHE_STREET4_2, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
 
 TitheStreet4Trainer3:
-	trainer T_THUG, 131, EVENT_GEN_TITHE_STREET4_3, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_BEGGAR, 131, EVENT_GEN_TITHE_STREET4_3, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
 
 TitheStreet4Trainer4:
-	trainer T_PRIEST, 130, EVENT_GEN_TITHE_STREET4_4, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_SUIT, 132, EVENT_GEN_TITHE_STREET4_4, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
 
 TitheStreet4Trainer5:
-	trainer T_ENFORCER, 128, EVENT_GEN_TITHE_STREET4_5, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_DRIFTER, 129, EVENT_GEN_TITHE_STREET4_5, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
 
 TitheStreet4_MapEvents:
 	db 0, 0 ; filler
@@ -70,15 +69,15 @@ TitheStreet4_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 12, 14, BGEVENT_ITEM, TitheStreet4Hidden
+	bg_event 20, 15, BGEVENT_ITEM, TitheStreet4Hidden
 
 	def_object_events
-	object_event 13, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet4Pickup, EVENT_GEN_TITHE_STREET4_PICKUP
-	object_event  4, 12, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet4Hermit, -1
-	object_event  8, 24, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer0, -1
-	object_event 13, 24, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer1, -1
-	object_event 12, 20, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer2, -1
-	object_event 16, 16, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer3, -1
-	object_event 21, 16, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer4, -1
-	object_event 21, 12, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer5, -1
+	object_event 17, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet4Pickup, EVENT_GEN_TITHE_STREET4_PICKUP
+	object_event 17, 10, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet4Hermit, -1
+	object_event 16, 24, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer0, -1
+	object_event 12, 20, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer1, -1
+	object_event 17, 20, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer2, -1
+	object_event 13, 16, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer3, -1
+	object_event  8, 12, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer4, -1
+	object_event 13, 12, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer5, -1
 

@@ -76,68 +76,75 @@ AxiomPlaza6GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-AxiomPlaza6Townie1:
-	jumptextfaceplayer AxiomPlaza6Townie1Text
+AxiomPlaza6Persona1:
+	jumptextfaceplayer AxiomPlaza6Persona1Text
 
-AxiomPlaza6Townie1Text:
-	text "The Pokemon Center"
-	line "is a processing"
-	para "facility with a"
-	line "kindly name."
+AxiomPlaza6Persona1Text:
+	text "AIDE BIX: The"
+	line "Mayor has been"
+	para "updated. He no"
+	line "longer loves"
+	para "everyone. He loves"
+	line "compliance. It is"
+	para "a start."
 	done
 
-AxiomPlaza6Townie2:
-	jumptextfaceplayer AxiomPlaza6Townie2Text
+AxiomPlaza6Persona2:
+	jumptextfaceplayer AxiomPlaza6Persona2Text
 
-AxiomPlaza6Townie2Text:
-	text "The shop with a"
-	line "clerk and a couch"
-	para "is real. The couch"
-	line "is audited weekly."
+AxiomPlaza6Persona2Text:
+	text "MATCHMAKER MABEL:"
+	line "My matches are all"
+	para "very happy. Mostly"
+	line "the ones that"
+	para "never met."
 	done
 
-AxiomPlaza6Townie3:
-	jumptextfaceplayer AxiomPlaza6Townie3Text
+AxiomPlaza6Persona3:
+	jumptextfaceplayer AxiomPlaza6Persona3Text
 
-AxiomPlaza6Townie3Text:
-	text "We are all equal"
-	line "before the"
-	para "algorithm. The"
-	line "algorithm is not"
-	para "equal to us."
+AxiomPlaza6Persona3Text:
+	text "DR HALVORSEN: I"
+	line "was wrong about"
+	para "the organ. It was"
+	line "a kidney. It is"
+	para "mine now. Do not"
+	line "mention it to the"
+	para "Registry."
 	done
 
-AxiomPlaza6Townie4:
-	jumptextfaceplayer AxiomPlaza6Townie4Text
+AxiomPlaza6Persona6:
+	jumptextfaceplayer AxiomPlaza6Persona6Text
 
-AxiomPlaza6Townie4Text:
-	text "A held item is a"
-	line "form attached to a"
-	para "Pokemon. Fill it"
-	line "in correctly."
+AxiomPlaza6Persona6Text:
+	text "GUARD UNIT 12: I"
+	line "once heard a voice"
+	para "behind the door."
+	line "It said Unit 12."
+	para "It was my own."
 	done
 
-AxiomPlaza6Townie5:
-	jumptextfaceplayer AxiomPlaza6Townie5Text
+AxiomPlaza6Persona7:
+	jumptextfaceplayer AxiomPlaza6Persona7Text
 
-AxiomPlaza6Townie5Text:
-	text "I once saw a bug"
-	line "in the system. It"
-	para "saw me too. We"
-	line "don't talk about"
-	para "it."
+AxiomPlaza6Persona7Text:
+	text "PROFESSOR AXIOM: I"
+	line "have found the"
+	para "typo. It is the"
+	line "word free. I am"
+	para "not telling"
+	line "anyone. It would"
+	para "cost a city."
 	done
 
 AxiomPlaza6Townie6:
 	jumptextfaceplayer AxiomPlaza6Townie6Text
 
 AxiomPlaza6Townie6Text:
-	text "The fountain"
-	line "plaque is a pun."
-	para "The pun is"
-	line "registered. The"
-	para "joke is not yet"
-	line "approved."
+	text "The Pokemon Center"
+	line "is a processing"
+	para "facility with a"
+	line "kindly name."
 	done
 
 AxiomPlaza6SuhrawardiDuelScript:
@@ -158,7 +165,7 @@ AxiomPlaza6SuhrawardiDuelScript:
 	opentext
 .Beaten:
 	checkevent EVENT_NAMED_SUHRAWARDI_PAID
-	iftrue .After
+	iftrue .Later
 	writetext AxiomPlaza6SuhrawardiDuelScriptGiveText
 	waitbutton
 	verbosegiveitem PP_UP
@@ -182,6 +189,46 @@ AxiomPlaza6SuhrawardiDuelScript:
 	closetext
 	end
 
+.Later:
+	checkevent EVENT_NAMED_SUHRAWARDI_TALK0
+	iffalse .More0
+	checkevent EVENT_NAMED_SUHRAWARDI_TALK1
+	iffalse .More1
+	checkevent EVENT_NAMED_SUHRAWARDI_TALK2
+	iffalse .More2
+	checkevent EVENT_NAMED_SUHRAWARDI_TALK3
+	iffalse .More3
+	sjump .After
+
+.More0:
+	writetext AxiomPlaza6SuhrawardiDuelScriptMoreText0
+	waitbutton
+	setevent EVENT_NAMED_SUHRAWARDI_TALK0
+	closetext
+	end
+
+.More1:
+	writetext AxiomPlaza6SuhrawardiDuelScriptMoreText1
+	waitbutton
+	setevent EVENT_NAMED_SUHRAWARDI_TALK1
+	closetext
+	end
+
+.More2:
+	writetext AxiomPlaza6SuhrawardiDuelScriptMoreText2
+	waitbutton
+	setevent EVENT_NAMED_SUHRAWARDI_TALK2
+	closetext
+	end
+
+.More3:
+	writetext AxiomPlaza6SuhrawardiDuelScriptMoreText3
+	waitbutton
+	setevent EVENT_NAMED_SUHRAWARDI_TALK3
+	closetext
+	end
+
+
 AxiomPlaza6SuhrawardiDuelScriptSeenText:
 	text "Shihab al Din"
 	line "Yahya al"
@@ -196,56 +243,10 @@ AxiomPlaza6SuhrawardiDuelScriptSeenText:
 	para "speak of closed"
 	line "rooms with some"
 	para "authority."
-	para "Being is a"
-	line "thought. Light is"
-	para "real. Darkness is"
-	line "only light's"
-	para "absence, and every"
-	line "thing is a degree"
-	para "of light, from the"
-	line "Light of Lights to"
-	para "the faintest"
-	line "candle in a body"
-	para "like yours."
-	para "The old Persians"
-	line "were right. There"
-	para "are two"
-	line "principles. But"
-	para "Ahriman is not an"
-	line "equal. He is a"
-	para "shadow cast by the"
-	line "lamp. A shadow"
-	para "with a budget."
-	para "Between the world"
-	line "of lights and the"
-	para "world of bodies"
-	line "lies a third, the"
-	para "world of images,"
-	line "the alam al"
-	para "mithal. Forms hang"
-	line "there without"
-	para "flesh. The dead go"
-	line "there. So do"
-	para "dreams. And, I"
-	line "see, screens."
-	para "That is why your"
-	line "little creatures"
-	para "have faces. They"
-	line "live in the"
-	para "imaginal world and"
-	line "have been pulled"
-	para "out into matter."
-	para "The soul is in the"
-	line "Occident, the far"
-	para "West of existence,"
-	line "in exile among"
-	para "bodies. It longs"
-	line "for its East. The"
-	para "cure is knowledge"
-	line "by presence."
-	para "Or a good fight. I"
-	line "am told it is"
-	para "faster."
+	para "I could explain"
+	line "myself at length."
+	para "I am told a fight"
+	line "is faster."
 	para "Fight SUHRAWARDI?"
 	done
 
@@ -275,6 +276,65 @@ AxiomPlaza6SuhrawardiDuelScriptAfterText:
 	line "have."
 	done
 
+AxiomPlaza6SuhrawardiDuelScriptMoreText0:
+	text "Being is a"
+	line "thought. Light is"
+	para "real. Darkness is"
+	line "only light's"
+	para "absence, and every"
+	line "thing is a degree"
+	para "of light, from the"
+	line "Light of Lights to"
+	para "the faintest"
+	line "candle in a body"
+	para "like yours."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptMoreText1:
+	text "The old Persians"
+	line "were right. There"
+	para "are two"
+	line "principles. But"
+	para "Ahriman is not an"
+	line "equal. He is a"
+	para "shadow cast by the"
+	line "lamp. A shadow"
+	para "with a budget."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptMoreText2:
+	text "Between the world"
+	line "of lights and the"
+	para "world of bodies"
+	line "lies a third, the"
+	para "world of images,"
+	line "the alam al"
+	para "mithal. Forms hang"
+	line "there without"
+	para "flesh. The dead go"
+	line "there. So do"
+	para "dreams. And, I"
+	line "see, screens."
+	para "That is why your"
+	line "little creatures"
+	para "have faces. They"
+	line "live in the"
+	para "imaginal world and"
+	line "have been pulled"
+	para "out into matter."
+	done
+
+AxiomPlaza6SuhrawardiDuelScriptMoreText3:
+	text "The soul is in the"
+	line "Occident, the far"
+	para "West of existence,"
+	line "in exile among"
+	para "bodies. It longs"
+	line "for its East. The"
+	para "cure is knowledge"
+	line "by presence."
+	done
+
 AxiomPlaza6SuhrawardiDuelScriptNoText:
 	text "Another day. I"
 	line "will be here. The"
@@ -300,7 +360,7 @@ AxiomPlaza6Duel:
 	iffalse .No
 	closetext
 	winlosstext AxiomPlaza6DuelBeatenText, 0
-	loadtrainer U_WARDBOT, 137
+	loadtrainer U_WARDBOT, 136
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_PLAZA6_DUEL
@@ -372,25 +432,25 @@ AxiomPlaza6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, AXIOM_HOUSE6, 1
-	warp_event  6,  3, AXIOM_MART6, 1
-	warp_event 10,  3, AXIOM_POKECENTER6, 1
-	warp_event 22,  3, AXIOM_BOUTIQUE6, 1
+	warp_event 12, 13, AXIOM_POKECENTER6, 1
+	warp_event 32, 15, AXIOM_MART6, 1
+	warp_event  8, 27, AXIOM_HOUSE6, 1
+	warp_event 30, 23, AXIOM_BOUTIQUE6, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 12, 22, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6DebateA, -1
-	object_event 13, 22, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6DebateB, -1
-	object_event  8, 14, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Giver, -1
-	object_event 28, 16, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie1, -1
-	object_event  4, 25, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie2, -1
-	object_event  7, 11, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie3, -1
-	object_event  4,  8, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie4, -1
-	object_event 29, 19, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie5, -1
-	object_event 28, 25, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie6, -1
-	object_event  7, 13, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SuhrawardiDuelScript, -1
-	object_event 13, 10, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Duel, -1
+	object_event 28, 26, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6DebateA, -1
+	object_event 29, 26, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6DebateB, -1
+	object_event  2,  6, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Giver, -1
+	object_event 27, 22, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona1, -1
+	object_event  6, 30, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona2, -1
+	object_event  8, 10, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona3, -1
+	object_event 35, 16, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona6, -1
+	object_event 19, 24, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Persona7, -1
+	object_event  4, 27, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Townie6, -1
+	object_event 37, 23, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6SuhrawardiDuelScript, -1
+	object_event 38, 23, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza6Duel, -1
 

@@ -1,11 +1,11 @@
 	db PIDGEY ; 016
 
-	db  43,  48,  43,  60,  38,  38
+	db  48,  53,  48,  67,  42,  42
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FLYING ; type
 	db 255 ; catch rate
-	db 103 ; base exp
+	db 114 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

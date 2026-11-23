@@ -37,7 +37,11 @@ What the screens show.
 
 ## Ideas (not built, none is a promise)
 1. Mirror aware tilesets. Teach the tileset generator to fold mirrored tiles into one tile and use the flip bits of the tile attributes. Grandia sets flip flags on 14 to 28 percent of the cells of a screen.
-   The tile slots this frees can go to detail, for example roof edges, worn stone and the shaded front faces that give buildings depth. This is a generator change, not an engine change.
+   The tile slots this frees can go to detail, for example roof edges, worn stone and the shaded front faces that give buildings depth.
+   **Corrected in alpha 3.2.** I first wrote that this is a generator change and not an engine change. That was wrong. A metatile of this engine is a list of tile ids, and the colour
+   attributes of a tile (palette and VRAM bank, nothing else) come from the tileset's palette map, one byte per tile id (the `tilepal` macro in `gfx/tileset_palette_maps.asm`).
+   There is no flip bit per cell anywhere in the data. Using mirrored tiles therefore needs an engine change, a second table of attribute bytes per metatile that the
+   map loader writes into VRAM bank 1, and the tile budget (all five area tilesets sit at 192 of 192 tiles) is the real reason the facades of buildings only face south.
 2. Open plan interiors. A market hall, an arcade or a cathedral nave drawn as part of the outdoor map, so the player walks in without a warp fade like Grandia does.
    It needs map work and some blocks, not engine work, and it gives the Tithe and Axiom plazas a reason to feel connected.
 3. A distinct, saturated palette set per area, with tone steps for depth. This replaces my first idea of one hue family per place, which came from the filtered opening. Grandia keeps the colour count per screen low (about 4 to 13) but gives every area its own mood and often 3 to 5 hue families on one screen.

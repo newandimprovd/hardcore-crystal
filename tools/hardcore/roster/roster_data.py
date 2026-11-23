@@ -85,23 +85,8 @@ APEX_LINES = ("DRATINI", "LARVITAR")
 
 # per-line stat options: s = overall scale (normal lines stay at or below 1.0 so finals never pass
 # 600 including the +35 HP), s1 = stage 1 BST override for deliberately weak starts
-LINE_OPT = {
+LINE_OPT = {  # alpha 3.2 point 11: the weak starts of the other lines are on the normal curve now (tools/hardcore/buff_early.py)
     "MAGIKARP": {"s1": 200},
-    "CATERPIE": {"s1": 230, "s": 0.96},
-    "WEEDLE": {"s1": 230, "s": 0.96},
-    "PIDGEY": {"s1": 270},
-    "RATTATA": {"s1": 260},
-    "SENTRET": {"s1": 250},
-    "HOOTHOOT": {"s1": 260},
-    "SPEAROW": {"s1": 265},
-    "ZUBAT": {"s1": 260},
-    "PICHU": {"s1": 250},
-    "CLEFFA": {"s1": 250},
-    "IGGLYBUFF": {"s1": 250},
-    "HOPPIP": {"s1": 260},
-    "SWINUB": {"s1": 270},
-    "MARILL": {"s1": 265},
-    "SPINARAK": {"s1": 270},
     "PORYGON": {"s": 0.96},
     "CHANSEY": {"s": 0.97},
     "SCYTHER": {"s": 0.98},

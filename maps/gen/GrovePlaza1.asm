@@ -10,11 +10,12 @@ GrovePlaza1Fountain0:
 	jumptext GrovePlaza1Fountain0Text
 
 GrovePlaza1Fountain0Text:
-	text "WELLFAIR FOUNTAIN."
-	line "Well plus welfare."
-	para "The water is free."
-	line "Wishing costs your"
-	para "whole weekend."
+	text "COMMUNIPOOL."
+	line "Commune plus pool."
+	para "Everyone's water."
+	line "Do not be seen"
+	para "being thirsty"
+	line "first."
 	done
 
 GrovePlaza1DebateA:
@@ -86,68 +87,76 @@ GrovePlaza1GiverNoRoomText:
 	para "wait. So will I."
 	done
 
-GrovePlaza1Townie1:
-	jumptextfaceplayer GrovePlaza1Townie1Text
+GrovePlaza1Persona0:
+	jumptextfaceplayer GrovePlaza1Persona0Text
 
-GrovePlaza1Townie1Text:
-	text "Held items are"
-	line "shared here. By"
-	para "which I mean"
-	line "they're taken."
+GrovePlaza1Persona0Text:
+	text "LEADER ORIN: We"
+	line "have no leaders"
+	para "here. I just"
+	line "happen to stand at"
+	para "the front, sleep"
+	line "in the big tent"
+	para "and eat first."
 	done
 
-GrovePlaza1Townie2:
-	jumptextfaceplayer GrovePlaza1Townie2Text
+GrovePlaza1Persona2:
+	jumptextfaceplayer GrovePlaza1Persona2Text
 
-GrovePlaza1Townie2Text:
-	text "The drum circle"
-	line "has gone on for"
-	para "three days. Please"
-	line "send help, or a"
-	para "replacement"
-	line "drummer."
+GrovePlaza1Persona2Text:
+	text "MAMA FERN: Eat"
+	line "something. You are"
+	para "thin as a rumor."
+	line "Everything is"
+	para "soup. The soup is"
+	line "everything."
 	done
 
-GrovePlaza1Townie3:
-	jumptextfaceplayer GrovePlaza1Townie3Text
+GrovePlaza1Persona3:
+	jumptextfaceplayer GrovePlaza1Persona3Text
 
-GrovePlaza1Townie3Text:
-	text "There's no money"
-	line "in the commune. We"
-	para "have vibes. Vibes"
-	line "are rationed."
+GrovePlaza1Persona3Text:
+	text "BARD WILLOW: I am"
+	line "writing a song"
+	para "about you. It has"
+	line "six verses and the"
+	para "fifth is your"
+	line "funeral."
 	done
 
-GrovePlaza1Townie4:
-	jumptextfaceplayer GrovePlaza1Townie4Text
+GrovePlaza1Persona5:
+	jumptextfaceplayer GrovePlaza1Persona5Text
 
-GrovePlaza1Townie4Text:
-	text "A wild Pokemon"
-	line "asked me to join"
-	para "the commune. I"
-	line "said yes. It was a"
-	para "mistake."
+GrovePlaza1Persona5Text:
+	text "FORAGER PIP: I"
+	line "found a mushroom."
+	para "It spoke. It said"
+	line "sell. I sold it. I"
+	para "am rich in"
+	line "nothing."
 	done
 
-GrovePlaza1Townie5:
-	jumptextfaceplayer GrovePlaza1Townie5Text
+GrovePlaza1Persona7:
+	jumptextfaceplayer GrovePlaza1Persona7Text
 
-GrovePlaza1Townie5Text:
-	text "We share"
-	line "everything here."
-	para "I'm sharing my"
-	line "opinion: you"
-	para "should leave."
+GrovePlaza1Persona7Text:
+	text "SAGE LYRA: The"
+	line "forest does not"
+	para "hate you. It has"
+	line "simply stopped"
+	para "caring about"
+	line "humans. A mature"
+	para "stage."
 	done
 
 GrovePlaza1Townie6:
 	jumptextfaceplayer GrovePlaza1Townie6Text
 
 GrovePlaza1Townie6Text:
-	text "I came for inner"
-	line "peace. I stayed"
-	para "for the outer"
-	line "debts."
+	text "We banned locks."
+	line "Now we just have a"
+	para "lot of nice open"
+	line "grudges."
 	done
 
 GrovePlaza1Duel:
@@ -160,7 +169,7 @@ GrovePlaza1Duel:
 	iffalse .No
 	closetext
 	winlosstext GrovePlaza1DuelBeatenText, 0
-	loadtrainer G_GRANNY, 137
+	loadtrainer G_GRANNY, 135
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_GROVE_PLAZA1_DUEL
@@ -232,25 +241,25 @@ GrovePlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 12,  3, GROVE_HOUSE1, 1
-	warp_event 16,  3, GROVE_MART1, 1
-	warp_event 20,  3, GROVE_POKECENTER1, 1
-	warp_event 20, 29, GROVE_GATE, 1
+	warp_event 24, 31, GROVE_GATE, 1
+	warp_event 14,  9, GROVE_POKECENTER1, 1
+	warp_event 32, 21, GROVE_MART1, 1
+	warp_event 28, 11, GROVE_HOUSE1, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  5, 19, BGEVENT_READ, GrovePlaza1Fountain0
+	bg_event 16, 19, BGEVENT_READ, GrovePlaza1Fountain0
 
 	def_object_events
-	object_event  2, 23, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1DebateA, -1
-	object_event  3, 23, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1DebateB, -1
-	object_event 12,  7, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Giver, -1
-	object_event  9,  6, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie1, -1
-	object_event 15, 15, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie2, -1
-	object_event  3, 22, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie3, -1
-	object_event 22,  7, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie4, -1
-	object_event 15,  6, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie5, -1
-	object_event 13, 11, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie6, -1
-	object_event 16, 19, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Duel, -1
+	object_event 18, 19, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1DebateA, -1
+	object_event 19, 19, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1DebateB, -1
+	object_event 35, 26, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Giver, -1
+	object_event  7, 12, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Persona0, -1
+	object_event 20,  6, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Persona2, -1
+	object_event  5, 29, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Persona3, -1
+	object_event 30, 17, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Persona5, -1
+	object_event 27,  9, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Persona7, -1
+	object_event 31, 13, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Townie6, -1
+	object_event  6,  9, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza1Duel, -1
 

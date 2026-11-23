@@ -155,7 +155,10 @@ CaterpieEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, STRING_SHOT
+	db 7, LEECH_LIFE
 	db 12, TWINEEDLE
+	db 17, HEADBUTT
+	db 21, X_SCISSOR
 	db 0 ; no more level-up moves
 
 MetapodEvosAttacks:
@@ -163,6 +166,9 @@ MetapodEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HARDEN
 	db 25, TWINEEDLE
+	db 27, X_SCISSOR
+	db 33, HEADBUTT
+	db 40, BUG_BUZZ
 	db 0 ; no more level-up moves
 
 ButterfreeEvosAttacks:
@@ -178,6 +184,8 @@ ButterfreeEvosAttacks:
 	db 34, PSYBEAM
 	db 40, SAFEGUARD
 	db 50, TWINEEDLE
+	db 50, BUG_BUZZ
+	db 56, HURRICANE
 	db 0 ; no more level-up moves
 
 WeedleEvosAttacks:
@@ -185,7 +193,10 @@ WeedleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, STRING_SHOT
+	db 7, LEECH_LIFE
 	db 12, TWINEEDLE
+	db 16, SLUDGE
+	db 21, X_SCISSOR
 	db 0 ; no more level-up moves
 
 KakunaEvosAttacks:
@@ -194,6 +205,9 @@ KakunaEvosAttacks:
 	db 1, HARDEN
 	db 25, TWINEEDLE
 	db 25, SLUDGE_BOMB
+	db 27, X_SCISSOR
+	db 33, POISON_JAB
+	db 40, BUG_BUZZ
 	db 0 ; no more level-up moves
 
 BeedrillEvosAttacks:
@@ -206,6 +220,8 @@ BeedrillEvosAttacks:
 	db 30, PURSUIT
 	db 35, POISON_STING
 	db 40, AGILITY
+	db 50, X_SCISSOR
+	db 55, POISON_JAB
 	db 0 ; no more level-up moves
 
 PidgeyEvosAttacks:
@@ -2138,7 +2154,9 @@ SentretEvosAttacks:
 	db 1, TACKLE
 	db 5, DEFENSE_CURL
 	db 11, QUICK_ATTACK
+	db 13, HYPER_FANG
 	db 17, SCRATCH
+	db 21, SLASH
 	db 25, BODY_SLAM
 	db 33, REST
 	db 41, AMNESIA
@@ -2216,7 +2234,9 @@ SpinarakEvosAttacks:
 	db 6, SCARY_FACE
 	db 11, TACKLE
 	db 17, NIGHT_SHADE
+	db 20, X_SCISSOR
 	db 23, LEECH_LIFE
+	db 26, POISON_JAB
 	db 30, SCRATCH
 	db 45, AGILITY
 	db 53, PSYCHIC_M
@@ -2231,6 +2251,8 @@ AriadosEvosAttacks:
 	db 1, TACKLE
 	db 17, NIGHT_SHADE
 	db 25, LEECH_LIFE
+	db 28, X_SCISSOR
+	db 32, POISON_JAB
 	db 34, SCRATCH
 	db 53, AGILITY
 	db 63, PSYCHIC_M
@@ -2290,9 +2312,12 @@ PichuEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, THUNDERSHOCK
 	db 1, CHARM
+	db 5, QUICK_ATTACK
 	db 6, TAIL_WHIP
 	db 8, THUNDER_WAVE
 	db 11, SWEET_KISS
+	db 12, SPARK
+	db 18, SWIFT
 	db 0 ; no more level-up moves
 
 CleffaEvosAttacks:
@@ -2305,6 +2330,8 @@ CleffaEvosAttacks:
 	db 8, SING
 	db 9, DRAIN_KISS
 	db 13, SWEET_KISS
+	db 17, DOUBLESLAP
+	db 21, DAZZLE_GLEAM
 	db 0 ; no more level-up moves
 
 IgglybuffEvosAttacks:
@@ -2316,7 +2343,10 @@ IgglybuffEvosAttacks:
 	db 4, FAIRY_WIND
 	db 9, POUND
 	db 9, DRAIN_KISS
+	db 12, ROLLOUT
 	db 14, SWEET_KISS
+	db 17, DOUBLESLAP
+	db 21, BODY_SLAM
 	db 0 ; no more level-up moves
 
 HellhoundEvosAttacks:
@@ -2488,6 +2518,7 @@ HoppipEvosAttacks:
 	db 13, POISONPOWDER
 	db 15, STUN_SPORE
 	db 17, SLEEP_POWDER
+	db 18, RAZOR_LEAF
 	db 20, LEECH_SEED
 	db 25, STRING_SHOT
 	db 30, MEGA_DRAIN

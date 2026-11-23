@@ -46,15 +46,18 @@ LotusStreet11Pickup:
 	itemball TM_BLIZZARD
 
 LotusStreet11Hidden:
-	hiddenitem ETHER, EVENT_GEN_LOTUS_STREET11_HIDDEN
+	hiddenitem MAX_ETHER, EVENT_GEN_LOTUS_STREET11_HIDDEN
 
 LotusStreet11Hermit:
 	jumptextfaceplayer LotusStreet11HermitText
 
 LotusStreet11HermitText:
-	text "The cocktails are"
-	line "free. Meaning is"
-	para "extra."
+	text "I have forgotten"
+	line "what day it is. It"
+	para "is wonderful."
+	line "Nobody has told"
+	para "me. I hope it"
+	line "stays that way."
 	done
 
 LotusStreet11SeenText:
@@ -78,25 +81,25 @@ LotusStreet11AfterScript:
 	end
 
 LotusStreet11Trainer0:
-	trainer L_SWIMMERF, 138, EVENT_GEN_LOTUS_STREET11_0, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_SWIMMERF, 137, EVENT_GEN_LOTUS_STREET11_0, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
 
 LotusStreet11Trainer1:
-	trainer L_BEACHBUM, 131, EVENT_GEN_LOTUS_STREET11_1, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_LOUNGER, 136, EVENT_GEN_LOTUS_STREET11_1, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
 
 LotusStreet11Trainer2:
-	trainer L_BELLHOP, 130, EVENT_GEN_LOTUS_STREET11_2, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_LIFEGUARD, 135, EVENT_GEN_LOTUS_STREET11_2, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
 
 LotusStreet11Trainer3:
-	trainer L_SWIMMERM, 134, EVENT_GEN_LOTUS_STREET11_3, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_LIFEGUARD, 136, EVENT_GEN_LOTUS_STREET11_3, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
 
 LotusStreet11Trainer4:
-	trainer L_WAITER, 132, EVENT_GEN_LOTUS_STREET11_4, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_TOURISTF, 134, EVENT_GEN_LOTUS_STREET11_4, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
 
 LotusStreet11Trainer5:
-	trainer L_SWIMMERM, 135, EVENT_GEN_LOTUS_STREET11_5, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_BELLHOP, 129, EVENT_GEN_LOTUS_STREET11_5, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
 
 LotusStreet11Trainer6:
-	trainer L_BELLHOP, 131, EVENT_GEN_LOTUS_STREET11_6, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_SUNBATHER, 133, EVENT_GEN_LOTUS_STREET11_6, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
 
 LotusStreet11_MapEvents:
 	db 0, 0 ; filler
@@ -106,18 +109,18 @@ LotusStreet11_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 13, BGEVENT_ITEM, LotusStreet11Hidden
+	bg_event 11, 16, BGEVENT_ITEM, LotusStreet11Hidden
 
 	def_object_events
-	object_event 18, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet11GateScript, EVENT_GEN_LOTUS_STREET11_GATE
-	object_event 19, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet11GateScript, EVENT_GEN_LOTUS_STREET11_GATE
-	object_event 12, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet11Pickup, EVENT_GEN_LOTUS_STREET11_PICKUP
-	object_event  4, 29, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet11Hermit, -1
-	object_event 16, 28, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer0, -1
-	object_event 16, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer1, -1
-	object_event 21, 24, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer2, -1
-	object_event 16, 20, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer3, -1
-	object_event 21, 20, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer4, -1
-	object_event 17, 16, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer5, -1
-	object_event 12, 12, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer6, -1
+	object_event 12, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet11GateScript, EVENT_GEN_LOTUS_STREET11_GATE
+	object_event 13, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet11GateScript, EVENT_GEN_LOTUS_STREET11_GATE
+	object_event  7,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet11Pickup, EVENT_GEN_LOTUS_STREET11_PICKUP
+	object_event  3, 15, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet11Hermit, -1
+	object_event 10, 28, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer0, -1
+	object_event 10, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer1, -1
+	object_event 15, 24, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer2, -1
+	object_event 10, 20, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer3, -1
+	object_event 15, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer4, -1
+	object_event 19, 16, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer5, -1
+	object_event 14, 12, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer6, -1
 

@@ -20,8 +20,8 @@ TitheCheckpoint_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  0, TITHE_PLAZA1, 4
-	warp_event  5,  0, TITHE_PLAZA1, 4
+	warp_event  4,  0, TITHE_PLAZA1, 1
+	warp_event  5,  0, TITHE_PLAZA1, 1
 	warp_event  4,  7, TITHE_ROAD, 1
 	warp_event  5,  7, TITHE_ROAD, 1
 

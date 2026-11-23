@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """The named duels (areas/named.py): the key bearers are mandatory, the rival fights come at their triggers.
 
-usage: test_named.py ROM block|rival
+usage: test_named.py ROM block|rival|crowley|amph
   block  ROM built at TithePlaza1 (verify_all.sh: stA.gbc, walk_all.sh 1: w1.gbc, TEST_ITEMS=0).  Steiner stands in the street and is not
          optional: the first step onto the trigger row below the street mouth starts his talk and the fight (god mode wins), the CHAINSAW is
          handed over, he steps aside and the exit opens.  Scripted duels are not kills.
   rival  ROM built at the Tithe junction (testbuild.sh gt1 TEST_MAP=TITHE_JUNCTION TEST_X=19 TEST_Y=20 ... TEST_ITEMS=0).  Walking north on the
          stem starts the first rival fight, the flag is set and the rival is gone, the kill count did not move.
+  crowley  ROM built at the entry of TithePlaza4 (TEST_MAP=TITHE_PLAZA4 TEST_X=17 TEST_Y=24).  The first step onto the trigger row sends Crowley
+         down the street with the mob behind him, the talk starts by itself, the fight has six mons, the CROWBAR is paid and he and the mob are gone.
+  amph   ROM built at the door of the Amphitheater (TEST_MAP=GROVE_AMPHITHEATER TEST_X=8 TEST_Y=17).  The first step in starts the scene (pan,
+         black, the full amphitheater, pan back, the interlude walk), then the duel has six mons and pays the JET SKI.  Storyboard in SHOTS.
 """
 import os
 import re
@@ -89,6 +93,59 @@ if kind == "block":
         wk.press_dir("up")
     st = wk.state()
     check("the way out is open now", st[0] != plaza or st[2] < y - 2, f"{st}")
+elif kind == "crowley":
+    plaza = "TithePlaza4"
+    check("start at the entry of the plaza", wk.state()[0] == plaza, f"{wk.state()}")
+    k0, n0 = kills(), len(wk.fights)
+    for _ in range(3):  # the first press only turns the player, the next two walk onto the trigger row (y 22)
+        t.pb.button("up", 9)
+        t.tick(30)
+    for i in range(10):  # the flight: a storyboard of it
+        t.tick(12)
+        t.shot(f"/home/claude/scratch/named/cw_{i:02d}.png", 2)
+    check("the flight flag is set", flag_get("EVENT_NAMED_CROWLEY_RAN"))
+    wk.settle()
+    t.tick(60)
+    wk.settle()
+    check("Crowley fought without being asked", len(wk.fights) == n0 + 1, f"{wk.fights[n0:]}")
+    check("the fight has six mons", wk.fights[n0]["n"] == 6, f"{wk.fights[n0]}")
+    check("the CROWBAR was paid", has_item(wk, item_value("CROWBAR")) and flag_get("EVENT_NAMED_CROWLEY_PAID"))
+    check("a scripted duel is not a kill", kills() == k0, f"{k0} -> {kills()}")
+    t.shot("/home/claude/scratch/named/cw_end.png", 3)
+    check("the player is still in the plaza", wk.state()[0] == plaza, f"{wk.state()}")
+elif kind == "amph":
+    check("start at the door", wk.state()[0] == "GroveAmphitheater", f"{wk.state()}")
+    n0, k0 = len(wk.fights), kills()
+    t.pb.button("up", 9)
+    shots = 0
+    for i in range(160):  # a storyboard: a picture every 30 frames, the text boxes are closed with A
+        t.tick(30)
+        if i % 3 == 2 and t.mem("wScriptRunning"):
+            t.pb.button("a", 4)
+        if i % 2 == 0 and shots < 60:
+            t.shot(f"/home/claude/scratch/named/amph_{shots:02d}.png", 2)
+            shots += 1
+        if flag_get("EVENT_AMPH_DONE") and not t.mem("wScriptRunning"):
+            break
+    check("the ritual flag is set", flag_get("EVENT_AMPH_RITUAL"))
+    check("the interlude is done", flag_get("EVENT_AMPH_DONE"))
+    wk.settle()
+    st = wk.state()
+    check("the player is back at the door", st[0] == "GroveAmphitheater" and st[2] in (15, 16), f"{st}")
+    t.shot("/home/claude/scratch/named/amph_end.png", 3)
+    for _ in range(7):
+        wk.press_dir("up")
+    st = wk.state()
+    check("the player reached Crowley", st[0] == "GroveAmphitheater" and st[2] <= 10, f"{st}")
+    t.pb.button("a", 4)
+    t.tick(30)
+    for _ in range(5):  # the question: yes is the first answer
+        wk.settle(400)
+    wk.settle()
+    check("Crowley fought", len(wk.fights) == n0 + 1, f"{wk.fights[n0:]}")
+    check("the fight has six mons", wk.fights and wk.fights[n0]["n"] == 6, f"{wk.fights[n0:]}")
+    check("the JET SKI was paid", has_item(wk, item_value("JET_SKI")) and flag_get("EVENT_NAMED_AMPH_PAID"))
+    check("a scripted duel is not a kill", kills() == k0, f"{k0} -> {kills()}")
 else:
     st = wk.state()
     check("start on the stem", st[0] == "TitheJunction", f"{st}")
