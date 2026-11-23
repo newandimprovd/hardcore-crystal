@@ -262,6 +262,7 @@ Notes for the author: `docs/ALPHA3_1_NOTES.md` (all 15 points, how each was chec
 Notes for the author: `docs/ALPHA3_2_NOTES.md` (every point, what was built, what was not, how it was checked).
 - Ten hollows (two hidden caves per area, five fighters, two hermits, two balls, a sign and a plaque each), a Corkboard page of its own, 40 townsfolk with personalities and rotating lines,
   slow character introductions (several short visits instead of one speech), turned lanes (the road bends east and west), new plaza districts and an avenue of honour at every entrance.
+- Towns rebuilt around free standing buildings with yards and paths (Sinnoh and Unova as the guide), rules in `docs/WORLD_STYLE.md`.
 - Rules: unlimited TMs, healing ten times dearer, EXP for the benched party announced and named correctly, trainer teams that never keep an unevolved form past its evolution level, held items by type and tier,
   stronger first stage species, the EXP CHARM hidden in the Undercroft of Area 3, level bands 5 to 25, 25 to 50, 50 to 75, 75 to 100 and 100.
 - Engine and tools: the caves look their object palette up per map (`purg_obj_areas.asm`), the run poses no longer shear the head, the walker skips the hidden caves (they have their own tests).

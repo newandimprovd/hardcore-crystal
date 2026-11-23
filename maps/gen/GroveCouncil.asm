@@ -52,8 +52,8 @@ GroveCouncil_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 17, GROVE_PLAZA7, 3
-	warp_event  5, 17, GROVE_PLAZA7, 3
+	warp_event  4, 17, GROVE_PLAZA7, 4
+	warp_event  5, 17, GROVE_PLAZA7, 4
 	warp_event  4,  2, AXIOM_GATE, 3
 	warp_event  5,  2, AXIOM_GATE, 3
 

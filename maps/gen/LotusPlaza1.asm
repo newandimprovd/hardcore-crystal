@@ -6,6 +6,17 @@ LotusPlaza1_MapScripts:
 
 	def_callbacks
 
+LotusPlaza1Fountain0:
+	jumptext LotusPlaza1Fountain0Text
+
+LotusPlaza1Fountain0Text:
+	text "SPLASHBLASE."
+	line "Splash plus blase."
+	para "The water has seen"
+	line "it all. It carries"
+	para "on anyway."
+	done
+
 LotusPlaza1DebateA:
 	jumptextfaceplayer LotusPlaza1DebateAText
 
@@ -433,31 +444,32 @@ LotusPlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 12,  3, LOTUS_MART1, 1
-	warp_event 16,  3, LOTUS_POKECENTER1, 1
-	warp_event 20,  3, LOTUS_HOUSE1, 1
-	warp_event 18, 25, LOTUS_GATE, 1
+	warp_event 28, 29, LOTUS_GATE, 1
+	warp_event 24,  7, LOTUS_POKECENTER1, 1
+	warp_event  6,  9, LOTUS_MART1, 1
+	warp_event  8, 17, LOTUS_HOUSE1, 1
 
 	def_coord_events
-	coord_event  4,  1, -1, LotusPlaza1CioranBlockScript
-	coord_event  5,  1, -1, LotusPlaza1CioranBlockScript
-	coord_event  6,  1, -1, LotusPlaza1CioranBlockScript
-	coord_event  7,  1, -1, LotusPlaza1CioranBlockScript
-	coord_event  8,  1, -1, LotusPlaza1CioranBlockScript
-	coord_event  9,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 12,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 13,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 14,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 15,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 16,  1, -1, LotusPlaza1CioranBlockScript
+	coord_event 17,  1, -1, LotusPlaza1CioranBlockScript
 
 	def_bg_events
+	bg_event  6, 25, BGEVENT_READ, LotusPlaza1Fountain0
 
 	def_object_events
-	object_event 12, 10, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1DebateA, -1
-	object_event 13, 10, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1DebateB, -1
-	object_event 13, 20, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Giver, -1
-	object_event 23, 12, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona0, -1
-	object_event 10, 15, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona2, -1
-	object_event  5, 23, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona3, -1
-	object_event  6, 23, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona5, -1
-	object_event 22, 21, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona7, -1
-	object_event 23, 20, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie6, -1
-	object_event 11, 14, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranBearerScript, -1
-	object_event 10, 23, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Duel, -1
+	object_event 19, 20, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1DebateA, -1
+	object_event 20, 20, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1DebateB, -1
+	object_event 30, 10, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Giver, -1
+	object_event 26,  8, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona0, -1
+	object_event 20,  9, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona2, -1
+	object_event  8, 10, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona3, -1
+	object_event  4, 21, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona5, -1
+	object_event  5, 14, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Persona7, -1
+	object_event  4, 15, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Townie6, -1
+	object_event 25, 17, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza1CioranBearerScript, -1
+	object_event 24, 12, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza1Duel, -1
 

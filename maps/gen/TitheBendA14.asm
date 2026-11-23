@@ -28,8 +28,8 @@ TitheBendA14_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  8, 17, BGEVENT_ITEM, TitheBendA14Hidden
+	bg_event  3, 20, BGEVENT_ITEM, TitheBendA14Hidden
 
 	def_object_events
-	object_event  4, 17, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheBendA14Hermit, -1
+	object_event 13, 16, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheBendA14Hermit, -1
 

@@ -29,8 +29,8 @@ LotusBendA9_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  7, 20, BGEVENT_ITEM, LotusBendA9Hidden
+	bg_event 16, 23, BGEVENT_ITEM, LotusBendA9Hidden
 
 	def_object_events
-	object_event  3, 14, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusBendA9Hermit, -1
+	object_event 18, 15, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusBendA9Hermit, -1
 

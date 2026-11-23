@@ -6,6 +6,17 @@ DisPlaza1_MapScripts:
 
 	def_callbacks
 
+DisPlaza1Fountain0:
+	jumptext DisPlaza1Fountain0Text
+
+DisPlaza1Fountain0Text:
+	text "WAILSPRING. Wail"
+	line "plus spring. The"
+	para "sound is not a"
+	line "recording. The"
+	para "recording quit."
+	done
+
 DisPlaza1DebateA:
 	jumptextfaceplayer DisPlaza1DebateAText
 
@@ -227,24 +238,25 @@ DisPlaza1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  3, DIS_HOUSE1, 1
-	warp_event  8,  3, DIS_MART1, 1
-	warp_event 18,  3, DIS_POKECENTER1, 1
-	warp_event  6, 25, DIS_GATE, 1
+	warp_event 26, 31, DIS_GATE, 1
+	warp_event 24, 15, DIS_POKECENTER1, 1
+	warp_event 24,  7, DIS_MART1, 1
+	warp_event 18, 23, DIS_HOUSE1, 1
 
 	def_coord_events
 
 	def_bg_events
+	bg_event  8,  7, BGEVENT_READ, DisPlaza1Fountain0
 
 	def_object_events
-	object_event 18,  9, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateA, -1
-	object_event 19,  9, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateB, -1
-	object_event 20,  9, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Giver, -1
-	object_event  2, 17, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona0, -1
-	object_event 14,  9, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona2, -1
-	object_event 20, 10, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona3, -1
-	object_event 19,  7, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona5, -1
-	object_event 19,  6, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona7, -1
-	object_event  6, 17, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie6, -1
-	object_event 14, 23, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Duel, -1
+	object_event 13,  7, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateA, -1
+	object_event 14,  7, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateB, -1
+	object_event 12, 29, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Giver, -1
+	object_event  3, 10, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona0, -1
+	object_event  4, 14, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona2, -1
+	object_event  4, 11, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona3, -1
+	object_event 26, 19, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona5, -1
+	object_event  7, 24, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona7, -1
+	object_event  6, 26, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie6, -1
+	object_event 10, 27, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Duel, -1
 

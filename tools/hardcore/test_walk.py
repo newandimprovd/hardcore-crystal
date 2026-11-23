@@ -19,6 +19,7 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 SHOTS = os.environ.get("SHOTS", "/home/claude/scratch/walk")
 os.makedirs(SHOTS, exist_ok=True)
 GOD = os.environ.get("WALK_GOD") == "1"
+GOD_HP = int(os.environ.get("WALK_GOD_HP", "999"))  # HP the test mon is given every turn in god mode (the final fights need far more than 999 since alpha 3.2)
 
 
 def find_ids(world):
@@ -147,9 +148,13 @@ class Walker:
             for off in (0, 1):
                 t.poke("wBattleMonHP", 0, off)
                 t.poke("wPartyMon1HP", 0, off)
+            # the first move may be out of PP after the fights before (the party copy comes back from the walker's own PP pokes): a fainted mon that is stuck
+            # on "no PP left" never takes its turn, so the test mon always has one move to use
+            t.poke("wBattleMonPP", 30, 0)
+            t.poke("wCurMoveNum", 0)
             return
         if GOD:  # map tests only: one Pokemon cannot carry 13 fights of later areas, a real player has six and items
-            for off, b in enumerate((0x03, 0xE7)):  # 999 HP: later enemies one-shot a 358 HP level 100 mon
+            for off, b in enumerate(divmod(GOD_HP, 256)):  # 999 HP: later enemies one-shot a 358 HP level 100 mon
                 for sym in ("wBattleMonHP", "wBattleMonMaxHP", "wPartyMon1HP", "wPartyMon1MaxHP"):
                     t.poke(sym, b, off)
         t.poke("wBattleMonMoves", pick_move(t.mem("wEnemyMonType1"), t.mem("wEnemyMonType2")), 0)

@@ -4,7 +4,9 @@
   normal     trainers of the roads and lanes (and the plazas), plus Timmy in Cherrygrove: the mandatory kills, MANDATORY = 500 in all
   specials   bosses (one trainer rooms of the areas) and the scripted duels (Bruno), the named duels (areas/named.py: eight key bearers, five philosophers, five rival fights)
   purg       the trainers of Purgatorio: not part of the 500
-The whole game must stay at or under TOTAL_CAP = 650, and the tidal wave (TSUNAMI_KILLS) must come before the crater (the rival's fall).
+  caves      the optional fights of the hidden caves of the areas (the Undercroft of Area 3 and the ten hollows, alpha 3.2): plain fights of the Purgatorio group, nobody dies and
+             nothing counts as a kill, so they are in neither the 500 nor the cap and are reported on their own
+The whole game (without the caves) must stay at or under TOTAL_CAP = 650, and the tidal wave (TSUNAMI_KILLS) must come before the crater (the rival's fall).
 Usage: python3 tools/hardcore/battle_budget.py [--quiet]"""
 import glob
 import os
@@ -19,13 +21,24 @@ from areas import counts  # noqa: E402
 AREAS = ("Tithe", "Grove", "Axiom", "Lotus", "Dis")
 
 
+def cave_names():
+    """The maps of the Purgatorio group that are not Purgatorio itself: the vault and the hollows (data/hardcore/purg_obj_areas.asm lists the whole group)."""
+    path = os.path.join(ROOT, "data", "hardcore", "purg_obj_areas.asm")
+    names = set(re.findall(r"db \d+ ; (\w+)", open(path).read())) if os.path.exists(path) else set()
+    return {n for n in names if not n.startswith("Purg")}
+
+
 def tally():
     normal = dict.fromkeys(AREAS, 0)
     specials, purg, scripted, other = {}, 0, 0, {}
+    caves, hidden = 0, cave_names()
     for f in sorted(glob.glob(os.path.join(ROOT, "maps", "gen", "*.asm"))):
         name = os.path.basename(f)[:-4]
         src = open(f).read()
         n = len(re.findall(r"OBJECTTYPE_TRAINER", src))
+        if name in hidden:
+            caves += n
+            continue
         if not name.startswith("Purg"):
             scripted += len(re.findall(r"^\tstartbattle", src, re.M))  # the named duelists of the plazas (areas/specials.py)
         if name.startswith("Purg"):
@@ -42,12 +55,12 @@ def tally():
             specials[name] = n
         else:
             other[name] = n  # the two last rooms of Area 5 (Judecca, Cocytus)
-    return normal, specials, other, purg, scripted
+    return normal, specials, other, purg, scripted, caves
 
 
 def main():
     quiet = "--quiet" in sys.argv
-    normal, specials, other, purg, scripted = tally()
+    normal, specials, other, purg, scripted, caves = tally()
     timmy = counts.TIMMY
     mandatory = sum(normal.values()) + timmy
     spec = sum(specials.values()) + sum(other.values()) + scripted
@@ -66,7 +79,7 @@ def main():
     if not quiet:
         print("normal per area:", normal, "+ Timmy", timmy, "=", mandatory)
         print("specials (bosses and last rooms):", spec - scripted, "scripted duels:", scripted)
-        print("purgatorio:", purg)
+        print("purgatorio:", purg, "optional fights in the caves (Undercroft and hollows, not counted):", caves)
         print(f"total {total} of {counts.TOTAL_CAP}, room for {counts.TOTAL_CAP - total} more special encounters")
         print(f"tidal wave news at kill {counts.TSUNAMI_KILLS}, crater with the rival at kill {counts.rival_kills()}, drop tiers at {counts.drop_tiers()}")
     for p in problems:

@@ -29,8 +29,8 @@ GroveBendA8_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  7, 18, BGEVENT_ITEM, GroveBendA8Hidden
+	bg_event 11, 16, BGEVENT_ITEM, GroveBendA8Hidden
 
 	def_object_events
-	object_event  7, 22, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GroveBendA8Hermit, -1
+	object_event  8, 20, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveBendA8Hermit, -1
 

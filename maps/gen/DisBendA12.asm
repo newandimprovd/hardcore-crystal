@@ -29,8 +29,8 @@ DisBendA12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 20, 21, BGEVENT_ITEM, DisBendA12Hidden
+	bg_event 16, 21, BGEVENT_ITEM, DisBendA12Hidden
 
 	def_object_events
-	object_event 16, 19, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisBendA12Hermit, -1
+	object_event 20, 17, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisBendA12Hermit, -1
 

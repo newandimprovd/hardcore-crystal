@@ -26,8 +26,8 @@ LotusBendA12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  5, 21, BGEVENT_ITEM, LotusBendA12Hidden
+	bg_event  9, 22, BGEVENT_ITEM, LotusBendA12Hidden
 
 	def_object_events
-	object_event  4, 16, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusBendA12Hermit, -1
+	object_event  6, 15, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusBendA12Hermit, -1
 

@@ -306,31 +306,31 @@ AxiomPlaza2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, AXIOM_POKECENTER2, 1
-	warp_event  6,  3, AXIOM_MART2, 1
-	warp_event 16,  3, AXIOM_HOUSE2, 1
-	warp_event 22,  3, AXIOM_BOUTIQUE2, 1
+	warp_event 34, 11, AXIOM_POKECENTER2, 1
+	warp_event 30, 21, AXIOM_MART2, 1
+	warp_event 20, 19, AXIOM_HOUSE2, 1
+	warp_event  4, 15, AXIOM_BOUTIQUE2, 1
 
 	def_coord_events
-	coord_event 26, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 27, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 28, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 29, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 30, 24, -1, AxiomPlaza2Rival3RivalScript
-	coord_event 31, 24, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 24, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 25, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 26, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 27, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 28, 28, -1, AxiomPlaza2Rival3RivalScript
+	coord_event 29, 28, -1, AxiomPlaza2Rival3RivalScript
 
 	def_bg_events
 
 	def_object_events
-	object_event  9, 24, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2DebateA, -1
-	object_event 10, 24, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2DebateB, -1
-	object_event 28, 23, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Giver, -1
-	object_event  9, 14, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona1, -1
-	object_event 28, 18, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona2, -1
-	object_event 24, 24, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona4, -1
-	object_event  9, 17, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona6, -1
-	object_event 29,  9, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie5, -1
-	object_event  4, 14, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie6, -1
-	object_event 29, 20, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Rival3RivalScript, EVENT_NAMED_RIVAL3_DONE
-	object_event 20, 19, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Duel, -1
+	object_event  6, 18, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2DebateA, -1
+	object_event  7, 18, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2DebateB, -1
+	object_event 23, 25, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Giver, -1
+	object_event 22, 10, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona1, -1
+	object_event 10, 13, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona2, -1
+	object_event 18, 23, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona4, -1
+	object_event  9, 21, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Persona6, -1
+	object_event 18, 25, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie5, -1
+	object_event  5,  8, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Townie6, -1
+	object_event 27, 24, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Rival3RivalScript, EVENT_NAMED_RIVAL3_DONE
+	object_event 37, 17, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza2Duel, -1
 

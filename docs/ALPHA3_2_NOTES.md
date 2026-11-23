@@ -38,10 +38,11 @@ and `HardcoreCrystal_alpha3_2_ending.gbc` (starts in Judecca with the story flag
 14. **Trainers with the same few Pokémon.** Teams are drawn against how often each species has already been handed out, against the last 30 picks, and never repeat a line or double a type.
 15. **Purgatorio exit to the Crossroads showed two tiles but one worked.** The exit corridor of the hub is two steps wide and only the right step was a warp carpet. The last row is now block 0x40 with a carpet under both steps and both warps lead out (`hub()` in `areas/purg.py`).
 16. **Characters speak too much too early.** The named characters tell their story in several short visits (a `.Later` block per character); the first meeting is a line or two.
-17. **Corridors are boring, more tile diversity.** **Partly done.** New plaza districts (an orchard, a cloister, a promenade, a hedge maze) and an avenue of honour at every area's entrance.
-    No new tiles (the tile budget is spent), so the variety comes from new arrangements of the blocks we have.
-18. **The Parish feels like one building, the Commune entrance needs glory.** **Partly done.** The entrance of every area (the Commune included) is now a processional, the stem from the gate to the
-    first bend is lined with trees and beds. The Parish is still built from the same house and facade blocks as every other town, a real cathedral needs new art that the tile budget does not allow.
+17. **Corridors are boring, more tile diversity.** **Partly done.** New plaza districts (an orchard, a cloister, a promenade, a hedge maze) and, from your later direction, every town is rebuilt
+    around free standing buildings (see "Towns" below). No new tiles (the tile budget is spent), so the variety comes from new arrangements of the blocks we have.
+18. **The Parish feels like one building, the Commune entrance needs glory.** **Partly done.** The buildings of every town now stand apart on open ground, so no town reads as one block any more.
+    The entrance of every area (the Commune included) is a processional, the stem from the gate to the first bend is lined with trees and beds. The Parish is still built from the same house
+    and facade blocks as every other town, a real cathedral needs new art that the tile budget does not allow.
 19. **Checkpoints share one layout, the map always goes north, crisscross like Hoenn and Sinnoh.** **Partly done.** Lanes now bend east and west (turned lanes) in all five areas, and the walker follows
     them. The road never runs south, and the checkpoint houses still share a layout.
 20. **Held items and diverse teams.** One booster per type plus tiered general items (berries early, Leftovers, Focus Band, Quick Claw and the like later). The last mon of a team always carries one.
@@ -57,6 +58,14 @@ and `HardcoreCrystal_alpha3_2_ending.gbc` (starts in Judecca with the story flag
 27. **The Alleycat sprite, the leg raising animation.** The Alleycat and the Kingpin were re-rendered as slimmer cats with a raised tail and a round head, but this is still the generated 3D to pixel
     pipeline, I did not hand draw it. I could not find a raised leg in the idle frames of the generator (the quadruped has no leg pose), so what you saw may come from a battle animation,
     tell me when it shows. I am not happy with the sprites in general either, and real hand drawn art for the 97 new species is still the biggest open job.
+
+## Towns (your direction of 23 Nov: buildings apart, like Sinnoh and Unova)
+
+The town builder (`build_plaza` in `areas/town.py`) was rewritten. Before, the buildings stood in a row along the north wall of the plaza. Now every building (the Pokecenter, the Mart, the houses, the
+boutique, the door of Purgatorio) is a free standing block of two by two on open ground with at least one block of ground between it and the next, a yard of flowers and trees, a paved
+doormat under the door and its own path to the street. The edge of a city town is runs of trees and runs of house backs, the open ground between the buildings is divided into districts. The plazas are
+four blocks wider and one to two rows deeper than before. Every town is checked for reachability when it is generated, and the walks of all five areas were run on the new layout (see below).
+The rules I follow for towns and routes, and what is still missing (towns with more than two exits, bridges, landmarks with a silhouette), are in `docs/WORLD_STYLE.md`.
 
 ## What is new and was not on your list
 

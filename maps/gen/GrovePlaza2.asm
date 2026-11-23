@@ -322,38 +322,38 @@ GrovePlaza2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  3, GROVE_HOUSE2, 1
-	warp_event 10,  3, GROVE_AMPHITHEATER, 1
-	warp_event 14,  3, GROVE_BOUTIQUE2, 1
-	warp_event 24,  3, GROVE_POKECENTER2, 1
-	warp_event 28,  3, GROVE_MART2, 1
+	warp_event 32, 11, GROVE_POKECENTER2, 1
+	warp_event 22, 19, GROVE_MART2, 1
+	warp_event 10,  7, GROVE_HOUSE2, 1
+	warp_event 18,  9, GROVE_AMPHITHEATER, 1
+	warp_event 20, 27, GROVE_BOUTIQUE2, 1
 
 	def_coord_events
-	coord_event 18,  1, -1, GrovePlaza2AmphBlockScript
-	coord_event 19,  1, -1, GrovePlaza2AmphBlockScript
-	coord_event 20,  1, -1, GrovePlaza2AmphBlockScript
-	coord_event 21,  1, -1, GrovePlaza2AmphBlockScript
-	coord_event 22,  1, -1, GrovePlaza2AmphBlockScript
-	coord_event 23,  1, -1, GrovePlaza2AmphBlockScript
-	coord_event  4, 26, -1, GrovePlaza2Rival2RivalScript
-	coord_event  5, 26, -1, GrovePlaza2Rival2RivalScript
-	coord_event  6, 26, -1, GrovePlaza2Rival2RivalScript
-	coord_event  7, 26, -1, GrovePlaza2Rival2RivalScript
-	coord_event  8, 26, -1, GrovePlaza2Rival2RivalScript
-	coord_event  9, 26, -1, GrovePlaza2Rival2RivalScript
+	coord_event 26,  1, -1, GrovePlaza2AmphBlockScript
+	coord_event 27,  1, -1, GrovePlaza2AmphBlockScript
+	coord_event 28,  1, -1, GrovePlaza2AmphBlockScript
+	coord_event 29,  1, -1, GrovePlaza2AmphBlockScript
+	coord_event 30,  1, -1, GrovePlaza2AmphBlockScript
+	coord_event 31,  1, -1, GrovePlaza2AmphBlockScript
+	coord_event 14, 30, -1, GrovePlaza2Rival2RivalScript
+	coord_event 15, 30, -1, GrovePlaza2Rival2RivalScript
+	coord_event 16, 30, -1, GrovePlaza2Rival2RivalScript
+	coord_event 17, 30, -1, GrovePlaza2Rival2RivalScript
+	coord_event 18, 30, -1, GrovePlaza2Rival2RivalScript
+	coord_event 19, 30, -1, GrovePlaza2Rival2RivalScript
 
 	def_bg_events
 
 	def_object_events
-	object_event 20, 17, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2DebateA, -1
-	object_event 21, 17, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2DebateB, -1
-	object_event 25, 16, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Giver, -1
-	object_event 26, 27, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona1, -1
-	object_event 14,  9, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona2, -1
-	object_event 23, 27, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona4, -1
-	object_event  8,  8, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona6, -1
-	object_event 16, 19, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie5, -1
-	object_event  9,  9, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie6, -1
-	object_event  7, 22, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Rival2RivalScript, EVENT_NAMED_RIVAL2_DONE
-	object_event 31, 13, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Duel, -1
+	object_event 22,  9, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2DebateA, -1
+	object_event 23,  9, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2DebateB, -1
+	object_event 28, 21, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Giver, -1
+	object_event 29, 27, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona1, -1
+	object_event 33, 13, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona2, -1
+	object_event  4, 19, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona4, -1
+	object_event 12, 15, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Persona6, -1
+	object_event 13, 26, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie5, -1
+	object_event 22,  7, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Townie6, -1
+	object_event 17, 26, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Rival2RivalScript, EVENT_NAMED_RIVAL2_DONE
+	object_event 10, 26, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza2Duel, -1
 

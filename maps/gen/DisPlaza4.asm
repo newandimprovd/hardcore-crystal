@@ -10,11 +10,13 @@ DisPlaza4Fountain0:
 	jumptext DisPlaza4Fountain0Text
 
 DisPlaza4Fountain0Text:
-	text "WAILSPRING. Wail"
-	line "plus spring. The"
-	para "sound is not a"
-	line "recording. The"
-	para "recording quit."
+	text "LETHEATRE"
+	line "FOUNTAIN. Lethe"
+	para "plus theatre."
+	line "Drink and forget"
+	para "the second act."
+	line "Nobody remembers"
+	para "the first."
 	done
 
 DisPlaza4DebateA:
@@ -232,25 +234,25 @@ DisPlaza4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, DIS_HOUSE4, 1
-	warp_event  8,  3, DIS_BOUTIQUE4, 1
-	warp_event 12,  3, DIS_POKECENTER4, 1
-	warp_event 16,  3, DIS_MART4, 1
+	warp_event  8,  7, DIS_POKECENTER4, 1
+	warp_event 18,  9, DIS_MART4, 1
+	warp_event 12, 21, DIS_HOUSE4, 1
+	warp_event  2,  7, DIS_BOUTIQUE4, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  6, 25, BGEVENT_READ, DisPlaza4Fountain0
+	bg_event 30,  7, BGEVENT_READ, DisPlaza4Fountain0
 
 	def_object_events
-	object_event 19, 20, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4DebateA, -1
-	object_event 20, 20, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4DebateB, -1
-	object_event  7, 27, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza4Giver, -1
-	object_event  9,  8, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona1, -1
-	object_event 13, 22, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona2, -1
-	object_event 15,  8, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona3, -1
-	object_event 16,  7, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona5, -1
-	object_event  9,  9, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie5, -1
-	object_event 11, 27, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie6, -1
-	object_event 25, 11, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4Duel, -1
+	object_event 19, 16, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4DebateA, -1
+	object_event 20, 16, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4DebateB, -1
+	object_event  5,  9, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza4Giver, -1
+	object_event 12, 24, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona1, -1
+	object_event 30, 14, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona2, -1
+	object_event 31, 16, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona3, -1
+	object_event 20, 23, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Persona5, -1
+	object_event  8, 15, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie5, -1
+	object_event 32, 12, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisPlaza4Townie6, -1
+	object_event 26, 16, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza4Duel, -1
 

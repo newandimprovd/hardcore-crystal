@@ -26,8 +26,8 @@ DisBendA2_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  2, 18, BGEVENT_ITEM, DisBendA2Hidden
+	bg_event 16, 16, BGEVENT_ITEM, DisBendA2Hidden
 
 	def_object_events
-	object_event  6, 19, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisBendA2Hermit, -1
+	object_event 20, 17, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisBendA2Hermit, -1
 

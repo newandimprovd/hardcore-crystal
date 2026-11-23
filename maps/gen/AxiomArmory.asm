@@ -48,8 +48,8 @@ AxiomArmory_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 17, AXIOM_PLAZA5, 1
-	warp_event  5, 17, AXIOM_PLAZA5, 1
+	warp_event  4, 17, AXIOM_PLAZA5, 4
+	warp_event  5, 17, AXIOM_PLAZA5, 4
 
 	def_coord_events
 

@@ -27,5 +27,5 @@ TitheBendB14_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 16, 20, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheBendB14Hermit, -1
+	object_event 17, 21, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheBendB14Hermit, -1
 

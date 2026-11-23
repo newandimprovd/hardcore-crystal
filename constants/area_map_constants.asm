@@ -2,7 +2,7 @@
 
 	newgroup AREA1                ; 27
 	map_const TITHE_ROAD,                              12, 15 ;  1
-	map_const TITHE_PLAZA1,                            13, 13 ;  2
+	map_const TITHE_PLAZA1,                            17, 16 ;  2
 	map_const TITHE_CHECKPOINT,                         5,  4 ;  3
 	map_const TITHE_POKECENTER1,                        5,  4 ;  4
 	map_const TITHE_MART1,                              6,  4 ;  5
@@ -12,21 +12,21 @@
 	map_const TITHE_STREET2,                           15, 12 ;  9
 	map_const TITHE_BEND_B2,                           14, 12 ; 10
 	map_const TITHE_STREET3,                           12, 15 ; 11
-	map_const TITHE_PLAZA2,                            15, 15 ; 12
+	map_const TITHE_PLAZA2,                            19, 17 ; 12
 	map_const TITHE_POKECENTER2,                        5,  4 ; 13
 	map_const TITHE_MART2,                              6,  4 ; 14
 	map_const TITHE_HOUSE2,                             4,  4 ; 15
 	map_const TITHE_BOUTIQUE2,                          4,  4 ; 16
 	map_const TITHE_STREET4,                           12, 15 ; 17
 	map_const TITHE_STREET5,                           12, 15 ; 18
-	map_const TITHE_PLAZA3,                            15, 15 ; 19
+	map_const TITHE_PLAZA3,                            21, 16 ; 19
 	map_const TITHE_POKECENTER3,                        5,  4 ; 20
 	map_const TITHE_MART3,                              6,  4 ; 21
 	map_const TITHE_HOUSE3,                             4,  4 ; 22
 	map_const TITHE_VESTRY,                             5,  9 ; 23
 	map_const TITHE_STREET6,                           12, 17 ; 24
 	map_const TITHE_STREET7,                           12, 15 ; 25
-	map_const TITHE_PLAZA4,                            15, 13 ; 26
+	map_const TITHE_PLAZA4,                            19, 17 ; 26
 	map_const TITHE_POKECENTER4,                        5,  4 ; 27
 	map_const TITHE_MART4,                              6,  4 ; 28
 	map_const TITHE_HOUSE4,                             4,  4 ; 29
@@ -36,7 +36,7 @@
 	map_const TITHE_STREET9,                           15, 12 ; 33
 	map_const TITHE_BEND_B9,                           14, 12 ; 34
 	map_const TITHE_STREET10,                          12, 15 ; 35
-	map_const TITHE_PLAZA5,                            15, 15 ; 36
+	map_const TITHE_PLAZA5,                            19, 17 ; 36
 	map_const TITHE_POKECENTER5,                        5,  4 ; 37
 	map_const TITHE_MART5,                              6,  4 ; 38
 	map_const TITHE_HOUSE5,                             4,  4 ; 39
@@ -44,7 +44,7 @@
 	map_const TITHE_STREET11,                          12, 17 ; 41
 	map_const TITHE_STREET12,                          12, 15 ; 42
 	map_const TITHE_STREET13,                          12, 15 ; 43
-	map_const TITHE_PLAZA6,                            17, 14 ; 44
+	map_const TITHE_PLAZA6,                            21, 16 ; 44
 	map_const TITHE_POKECENTER6,                        5,  4 ; 45
 	map_const TITHE_MART6,                              6,  4 ; 46
 	map_const TITHE_HOUSE6,                             4,  4 ; 47
@@ -53,7 +53,7 @@
 	map_const TITHE_STREET14,                          15, 12 ; 50
 	map_const TITHE_BEND_B14,                          14, 12 ; 51
 	map_const TITHE_STREET15,                          12, 15 ; 52
-	map_const TITHE_PLAZA7,                            15, 14 ; 53
+	map_const TITHE_PLAZA7,                            19, 16 ; 53
 	map_const TITHE_POKECENTER7,                        5,  4 ; 54
 	map_const TITHE_MART7,                              6,  4 ; 55
 	map_const TITHE_HOUSE7,                             4,  4 ; 56
@@ -61,7 +61,7 @@
 	endgroup
 
 	newgroup AREA2                ; 28
-	map_const GROVE_PLAZA1,                            13, 13 ;  1
+	map_const GROVE_PLAZA1,                            19, 16 ;  1
 	map_const GROVE_GATE,                               5,  4 ;  2
 	map_const GROVE_POKECENTER1,                        5,  4 ;  3
 	map_const GROVE_MART1,                              6,  4 ;  4
@@ -69,7 +69,7 @@
 	map_const GROVE_STREET1,                           12, 17 ;  6
 	map_const GROVE_STREET2,                           12, 15 ;  7
 	map_const GROVE_STREET3,                           12, 17 ;  8
-	map_const GROVE_PLAZA2,                            17, 15 ;  9
+	map_const GROVE_PLAZA2,                            21, 17 ;  9
 	map_const GROVE_POKECENTER2,                        5,  4 ; 10
 	map_const GROVE_MART2,                              6,  4 ; 11
 	map_const GROVE_HOUSE2,                             4,  4 ; 12
@@ -78,14 +78,14 @@
 	map_const GROVE_STREET4,                           17, 12 ; 15
 	map_const GROVE_BEND_B4,                           14, 12 ; 16
 	map_const GROVE_STREET5,                           12, 15 ; 17
-	map_const GROVE_PLAZA3,                            15, 15 ; 18
+	map_const GROVE_PLAZA3,                            19, 17 ; 18
 	map_const GROVE_POKECENTER3,                        5,  4 ; 19
 	map_const GROVE_MART3,                              6,  4 ; 20
 	map_const GROVE_HOUSE3,                             4,  4 ; 21
 	map_const GROVE_BOATHOUSE,                          5,  9 ; 22
 	map_const GROVE_STREET6,                           12, 17 ; 23
 	map_const GROVE_STREET7,                           12, 17 ; 24
-	map_const GROVE_PLAZA4,                            15, 15 ; 25
+	map_const GROVE_PLAZA4,                            19, 17 ; 25
 	map_const GROVE_POKECENTER4,                        5,  4 ; 26
 	map_const GROVE_MART4,                              6,  4 ; 27
 	map_const GROVE_HOUSE4,                             4,  4 ; 28
@@ -95,7 +95,7 @@
 	map_const GROVE_BEND_B8,                           14, 12 ; 32
 	map_const GROVE_STREET9,                           12, 17 ; 33
 	map_const GROVE_STREET10,                          12, 17 ; 34
-	map_const GROVE_PLAZA5,                            15, 14 ; 35
+	map_const GROVE_PLAZA5,                            19, 16 ; 35
 	map_const GROVE_POKECENTER5,                        5,  4 ; 36
 	map_const GROVE_MART5,                              6,  4 ; 37
 	map_const GROVE_HOUSE5,                             4,  4 ; 38
@@ -105,14 +105,14 @@
 	map_const GROVE_STREET12,                          17, 12 ; 42
 	map_const GROVE_BEND_B12,                          14, 12 ; 43
 	map_const GROVE_STREET13,                          12, 17 ; 44
-	map_const GROVE_PLAZA6,                            15, 14 ; 45
+	map_const GROVE_PLAZA6,                            19, 16 ; 45
 	map_const GROVE_POKECENTER6,                        5,  4 ; 46
 	map_const GROVE_MART6,                              6,  4 ; 47
 	map_const GROVE_HOUSE6,                             4,  4 ; 48
 	map_const GROVE_BOUTIQUE6,                          4,  4 ; 49
 	map_const GROVE_STREET14,                          12, 15 ; 50
 	map_const GROVE_STREET15,                          12, 17 ; 51
-	map_const GROVE_PLAZA7,                            17, 15 ; 52
+	map_const GROVE_PLAZA7,                            21, 17 ; 52
 	map_const GROVE_POKECENTER7,                        5,  4 ; 53
 	map_const GROVE_MART7,                              6,  4 ; 54
 	map_const GROVE_HOUSE7,                             4,  4 ; 55
@@ -121,7 +121,7 @@
 	endgroup
 
 	newgroup AREA3                ; 29
-	map_const AXIOM_PLAZA1,                            13, 14 ;  1
+	map_const AXIOM_PLAZA1,                            17, 17 ;  1
 	map_const AXIOM_GATE,                               5,  4 ;  2
 	map_const AXIOM_POKECENTER1,                        5,  4 ;  3
 	map_const AXIOM_MART1,                              6,  4 ;  4
@@ -131,21 +131,21 @@
 	map_const AXIOM_STREET2,                           17, 12 ;  8
 	map_const AXIOM_BEND_B2,                           14, 12 ;  9
 	map_const AXIOM_STREET3,                           12, 17 ; 10
-	map_const AXIOM_PLAZA2,                            17, 14 ; 11
+	map_const AXIOM_PLAZA2,                            21, 16 ; 11
 	map_const AXIOM_POKECENTER2,                        5,  4 ; 12
 	map_const AXIOM_MART2,                              6,  4 ; 13
 	map_const AXIOM_HOUSE2,                             4,  4 ; 14
 	map_const AXIOM_BOUTIQUE2,                          4,  4 ; 15
 	map_const AXIOM_STREET4,                           12, 15 ; 16
 	map_const AXIOM_STREET5,                           12, 17 ; 17
-	map_const AXIOM_PLAZA3,                            15, 13 ; 18
+	map_const AXIOM_PLAZA3,                            21, 15 ; 18
 	map_const AXIOM_POKECENTER3,                        5,  4 ; 19
 	map_const AXIOM_MART3,                              6,  4 ; 20
 	map_const AXIOM_HOUSE3,                             4,  4 ; 21
 	map_const AXIOM_REGISTRY,                           5,  9 ; 22
 	map_const AXIOM_STREET6,                           12, 17 ; 23
 	map_const AXIOM_STREET7,                           12, 15 ; 24
-	map_const AXIOM_PLAZA4,                            17, 14 ; 25
+	map_const AXIOM_PLAZA4,                            19, 17 ; 25
 	map_const AXIOM_POKECENTER4,                        5,  4 ; 26
 	map_const AXIOM_MART4,                              6,  4 ; 27
 	map_const AXIOM_HOUSE4,                             4,  4 ; 28
@@ -155,7 +155,7 @@
 	map_const AXIOM_BEND_B8,                           14, 12 ; 32
 	map_const AXIOM_STREET9,                           12, 17 ; 33
 	map_const AXIOM_STREET10,                          12, 15 ; 34
-	map_const AXIOM_PLAZA5,                            17, 15 ; 35
+	map_const AXIOM_PLAZA5,                            21, 17 ; 35
 	map_const AXIOM_POKECENTER5,                        5,  4 ; 36
 	map_const AXIOM_MART5,                              6,  4 ; 37
 	map_const AXIOM_HOUSE5,                             4,  4 ; 38
@@ -165,14 +165,14 @@
 	map_const AXIOM_STREET12,                          17, 12 ; 42
 	map_const AXIOM_BEND_B12,                          14, 12 ; 43
 	map_const AXIOM_STREET13,                          12, 15 ; 44
-	map_const AXIOM_PLAZA6,                            17, 15 ; 45
+	map_const AXIOM_PLAZA6,                            21, 17 ; 45
 	map_const AXIOM_POKECENTER6,                        5,  4 ; 46
 	map_const AXIOM_MART6,                              6,  4 ; 47
 	map_const AXIOM_HOUSE6,                             4,  4 ; 48
 	map_const AXIOM_BOUTIQUE6,                          4,  4 ; 49
 	map_const AXIOM_STREET14,                          12, 17 ; 50
 	map_const AXIOM_STREET15,                          12, 17 ; 51
-	map_const AXIOM_PLAZA7,                            15, 14 ; 52
+	map_const AXIOM_PLAZA7,                            21, 17 ; 52
 	map_const AXIOM_POKECENTER7,                        5,  4 ; 53
 	map_const AXIOM_MART7,                              6,  4 ; 54
 	map_const AXIOM_HOUSE7,                             4,  4 ; 55
@@ -180,7 +180,7 @@
 	endgroup
 
 	newgroup AREA4                ; 30
-	map_const LOTUS_PLAZA1,                            13, 13 ;  1
+	map_const LOTUS_PLAZA1,                            17, 15 ;  1
 	map_const LOTUS_GATE,                               5,  4 ;  2
 	map_const LOTUS_POKECENTER1,                        5,  4 ;  3
 	map_const LOTUS_MART1,                              6,  4 ;  4
@@ -190,21 +190,21 @@
 	map_const LOTUS_STREET2,                           17, 12 ;  8
 	map_const LOTUS_BEND_B2,                           14, 12 ;  9
 	map_const LOTUS_STREET3,                           12, 15 ; 10
-	map_const LOTUS_PLAZA2,                            17, 14 ; 11
+	map_const LOTUS_PLAZA2,                            21, 16 ; 11
 	map_const LOTUS_POKECENTER2,                        5,  4 ; 12
 	map_const LOTUS_MART2,                              6,  4 ; 13
 	map_const LOTUS_HOUSE2,                             4,  4 ; 14
 	map_const LOTUS_BOUTIQUE2,                          4,  4 ; 15
 	map_const LOTUS_STREET4,                           12, 17 ; 16
 	map_const LOTUS_STREET5,                           12, 17 ; 17
-	map_const LOTUS_PLAZA3,                            15, 15 ; 18
+	map_const LOTUS_PLAZA3,                            19, 16 ; 18
 	map_const LOTUS_POKECENTER3,                        5,  4 ; 19
 	map_const LOTUS_MART3,                              6,  4 ; 20
 	map_const LOTUS_HOUSE3,                             4,  4 ; 21
 	map_const LOTUS_CLINIC,                             5,  9 ; 22
 	map_const LOTUS_STREET6,                           12, 15 ; 23
 	map_const LOTUS_STREET7,                           12, 17 ; 24
-	map_const LOTUS_PLAZA4,                            15, 13 ; 25
+	map_const LOTUS_PLAZA4,                            19, 15 ; 25
 	map_const LOTUS_POKECENTER4,                        5,  4 ; 26
 	map_const LOTUS_MART4,                              6,  4 ; 27
 	map_const LOTUS_HOUSE4,                             4,  4 ; 28
@@ -214,7 +214,7 @@
 	map_const LOTUS_STREET9,                           15, 12 ; 32
 	map_const LOTUS_BEND_B9,                           14, 12 ; 33
 	map_const LOTUS_STREET10,                          12, 17 ; 34
-	map_const LOTUS_PLAZA5,                            17, 15 ; 35
+	map_const LOTUS_PLAZA5,                            21, 17 ; 35
 	map_const LOTUS_POKECENTER5,                        5,  4 ; 36
 	map_const LOTUS_MART5,                              6,  4 ; 37
 	map_const LOTUS_HOUSE5,                             4,  4 ; 38
@@ -224,14 +224,14 @@
 	map_const LOTUS_STREET12,                          15, 12 ; 42
 	map_const LOTUS_BEND_B12,                          14, 12 ; 43
 	map_const LOTUS_STREET13,                          12, 17 ; 44
-	map_const LOTUS_PLAZA6,                            15, 15 ; 45
+	map_const LOTUS_PLAZA6,                            19, 17 ; 45
 	map_const LOTUS_POKECENTER6,                        5,  4 ; 46
 	map_const LOTUS_MART6,                              6,  4 ; 47
 	map_const LOTUS_HOUSE6,                             4,  4 ; 48
 	map_const LOTUS_BOUTIQUE6,                          4,  4 ; 49
 	map_const LOTUS_STREET14,                          12, 17 ; 50
 	map_const LOTUS_STREET15,                          12, 15 ; 51
-	map_const LOTUS_PLAZA7,                            17, 14 ; 52
+	map_const LOTUS_PLAZA7,                            21, 16 ; 52
 	map_const LOTUS_POKECENTER7,                        5,  4 ; 53
 	map_const LOTUS_MART7,                              6,  4 ; 54
 	map_const LOTUS_HOUSE7,                             4,  4 ; 55
@@ -241,7 +241,7 @@
 	endgroup
 
 	newgroup AREA5                ; 31
-	map_const DIS_PLAZA1,                              13, 13 ;  1
+	map_const DIS_PLAZA1,                              17, 16 ;  1
 	map_const DIS_GATE,                                 5,  4 ;  2
 	map_const DIS_POKECENTER1,                          5,  4 ;  3
 	map_const DIS_MART1,                                6,  4 ;  4
@@ -251,21 +251,21 @@
 	map_const DIS_STREET2,                             15, 12 ;  8
 	map_const DIS_BEND_B2,                             14, 12 ;  9
 	map_const DIS_STREET3,                             12, 17 ; 10
-	map_const DIS_PLAZA2,                              15, 13 ; 11
+	map_const DIS_PLAZA2,                              19, 15 ; 11
 	map_const DIS_POKECENTER2,                          5,  4 ; 12
 	map_const DIS_MART2,                                6,  4 ; 13
 	map_const DIS_HOUSE2,                               4,  4 ; 14
 	map_const DIS_BOUTIQUE2,                            4,  4 ; 15
 	map_const DIS_STREET4,                             12, 17 ; 16
 	map_const DIS_STREET5,                             12, 15 ; 17
-	map_const DIS_PLAZA3,                              17, 13 ; 18
+	map_const DIS_PLAZA3,                              21, 15 ; 18
 	map_const DIS_POKECENTER3,                          5,  4 ; 19
 	map_const DIS_MART3,                                6,  4 ; 20
 	map_const DIS_HOUSE3,                               4,  4 ; 21
 	map_const DIS_GATEHOUSE,                            5,  9 ; 22
 	map_const DIS_STREET6,                             12, 17 ; 23
 	map_const DIS_STREET7,                             12, 17 ; 24
-	map_const DIS_PLAZA4,                              15, 15 ; 25
+	map_const DIS_PLAZA4,                              19, 16 ; 25
 	map_const DIS_POKECENTER4,                          5,  4 ; 26
 	map_const DIS_MART4,                                6,  4 ; 27
 	map_const DIS_HOUSE4,                               4,  4 ; 28
@@ -275,7 +275,7 @@
 	map_const DIS_STREET9,                             17, 12 ; 32
 	map_const DIS_BEND_B9,                             14, 12 ; 33
 	map_const DIS_STREET10,                            12, 17 ; 34
-	map_const DIS_PLAZA5,                              15, 14 ; 35
+	map_const DIS_PLAZA5,                              21, 17 ; 35
 	map_const DIS_POKECENTER5,                          5,  4 ; 36
 	map_const DIS_MART5,                                6,  4 ; 37
 	map_const DIS_HOUSE5,                               4,  4 ; 38
@@ -285,14 +285,14 @@
 	map_const DIS_STREET12,                            17, 12 ; 42
 	map_const DIS_BEND_B12,                            14, 12 ; 43
 	map_const DIS_STREET13,                            12, 17 ; 44
-	map_const DIS_PLAZA6,                              15, 15 ; 45
+	map_const DIS_PLAZA6,                              19, 17 ; 45
 	map_const DIS_POKECENTER6,                          5,  4 ; 46
 	map_const DIS_MART6,                                6,  4 ; 47
 	map_const DIS_HOUSE6,                               4,  4 ; 48
 	map_const DIS_BOUTIQUE6,                            4,  4 ; 49
 	map_const DIS_STREET14,                            12, 15 ; 50
 	map_const DIS_STREET15,                            12, 17 ; 51
-	map_const DIS_PLAZA7,                              15, 15 ; 52
+	map_const DIS_PLAZA7,                              19, 17 ; 52
 	map_const DIS_POKECENTER7,                          5,  4 ; 53
 	map_const DIS_MART7,                                6,  4 ; 54
 	map_const DIS_HOUSE7,                               4,  4 ; 55
