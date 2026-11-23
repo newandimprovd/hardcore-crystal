@@ -258,6 +258,16 @@ Notes for the author: `docs/ALPHA3_1_NOTES.md` (all 15 points, how each was chec
   inside the screen margin or `applymovement` never ends.
 - New tests: test_opening, test_forced (model proof that the Steiner street cannot be bypassed), test_nurse, test_battle_ui, test_run; verify_all.sh runs all of them.
 
+## Alpha 3.2 (Nov 2026): the fix pass on the 27 point playtest list, and a first answer to "nothing to explore"
+Notes for the author: `docs/ALPHA3_2_NOTES.md` (every point, what was built, what was not, how it was checked).
+- Ten hollows (two hidden caves per area, five fighters, two hermits, two balls, a sign and a plaque each), a Corkboard page of its own, 40 townsfolk with personalities and rotating lines,
+  slow character introductions (several short visits instead of one speech), turned lanes (the road bends east and west), new plaza districts and an avenue of honour at every entrance.
+- Rules: unlimited TMs, healing ten times dearer, EXP for the benched party announced and named correctly, trainer teams that never keep an unevolved form past its evolution level, held items by type and tier,
+  stronger first stage species, the EXP CHARM hidden in the Undercroft of Area 3, level bands 5 to 25, 25 to 50, 50 to 75, 75 to 100 and 100.
+- Engine and tools: the caves look their object palette up per map (`purg_obj_areas.asm`), the run poses no longer shear the head, the walker skips the hidden caves (they have their own tests).
+- Corrected: `docs/REFERENCE_STUDY.md` claimed mirrored tilesets were a generator change. They need an engine change (no flip bit exists per cell) and the tile budget is full.
+- Not done, on purpose and said plainly: hand drawn sprites and overworld class sprites, six direction building facades, a real Parish cathedral, roads that run south, verbatim quotations.
+
 ## Study passes after alpha 3.1 (no game changes)
 - `docs/REFERENCE_STUDY.md`: crystal16-bit and Grandia, art and map measurements.
 - `docs/BATTLE_ENGINE_STUDY.md`: our engine, measured AI cost, references, options. Four questions to the author are still open (ruleset, AI fairness, thinking pause, cartridge quirks).

@@ -17,22 +17,22 @@
 	spawn AXIOM_PLAZA1, 12,  4
 	spawn AXIOM_PLAZA2,  2,  4
 	spawn AXIOM_PLAZA3,  8,  4
-	spawn AXIOM_PLAZA4,  2,  4
+	spawn AXIOM_PLAZA4,  6,  4
 	spawn AXIOM_PLAZA5,  8,  4
 	spawn AXIOM_PLAZA6, 10,  4
-	spawn AXIOM_PLAZA7, 18,  4
+	spawn AXIOM_PLAZA7,  8,  4
 	spawn LOTUS_PLAZA1, 16,  4
-	spawn LOTUS_PLAZA2,  4,  4
+	spawn LOTUS_PLAZA2,  8,  4
 	spawn LOTUS_PLAZA3, 24,  4
-	spawn LOTUS_PLAZA4, 12,  4
+	spawn LOTUS_PLAZA4, 16,  4
 	spawn LOTUS_PLAZA5, 14,  4
 	spawn LOTUS_PLAZA6,  8,  4
-	spawn LOTUS_PLAZA7, 24,  4
+	spawn LOTUS_PLAZA7, 10,  4
 	spawn LOTUS_BEDROOM,  3,  3
 	spawn DIS_PLAZA1, 18,  4
 	spawn DIS_PLAZA2,  6,  4
 	spawn DIS_PLAZA3,  6,  4
-	spawn DIS_PLAZA4,  2,  4
+	spawn DIS_PLAZA4, 12,  4
 	spawn DIS_PLAZA5, 18,  4
 	spawn DIS_PLAZA6,  4,  4
 	spawn DIS_PLAZA7,  4,  4

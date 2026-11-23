@@ -10,12 +10,12 @@ AxiomPlaza4Fountain0:
 	jumptext AxiomPlaza4Fountain0Text
 
 AxiomPlaza4Fountain0Text:
-	text "FOUNTAINEER-3."
-	line "Fountain plus"
-	para "engineer. Output:"
-	line "4.0 liters per"
-	para "sigh. Sighs are"
-	line "logged."
+	text "HYDRATTEST."
+	line "Hydrate plus"
+	para "attest. Drink only"
+	line "with a signed"
+	para "statement of"
+	line "thirst."
 	done
 
 AxiomPlaza4DebateA:
@@ -444,32 +444,32 @@ AxiomPlaza4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  3, AXIOM_POKECENTER4, 1
-	warp_event  6,  3, AXIOM_MART4, 1
-	warp_event 10,  3, AXIOM_HOUSE4, 1
-	warp_event 14,  3, AXIOM_BOUTIQUE4, 1
+	warp_event  2,  3, AXIOM_HOUSE4, 1
+	warp_event  6,  3, AXIOM_POKECENTER4, 1
+	warp_event 24,  3, AXIOM_BOUTIQUE4, 1
+	warp_event 28,  3, AXIOM_MART4, 1
 
 	def_coord_events
-	coord_event 18,  1, -1, AxiomPlaza4Sabbah2BlockScript
-	coord_event 19,  1, -1, AxiomPlaza4Sabbah2BlockScript
-	coord_event 20,  1, -1, AxiomPlaza4Sabbah2BlockScript
-	coord_event 21,  1, -1, AxiomPlaza4Sabbah2BlockScript
-	coord_event 22,  1, -1, AxiomPlaza4Sabbah2BlockScript
-	coord_event 23,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 12,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 13,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 14,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 15,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 16,  1, -1, AxiomPlaza4Sabbah2BlockScript
+	coord_event 17,  1, -1, AxiomPlaza4Sabbah2BlockScript
 
 	def_bg_events
-	bg_event  6, 21, BGEVENT_READ, AxiomPlaza4Fountain0
+	bg_event  6, 23, BGEVENT_READ, AxiomPlaza4Fountain0
 
 	def_object_events
-	object_event 22, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateA, -1
-	object_event 23, 15, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateB, -1
-	object_event  6,  7, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Giver, -1
-	object_event 17,  8, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Persona1, -1
-	object_event  5, 17, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Persona2, -1
-	object_event  6, 23, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Persona3, -1
-	object_event 19, 16, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Persona5, -1
-	object_event  8, 10, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie5, -1
-	object_event  8, 22, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie6, -1
-	object_event 17,  9, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Sabbah2BearerScript, -1
-	object_event  9, 18, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Duel, -1
+	object_event 14, 18, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateA, -1
+	object_event 15, 18, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4DebateB, -1
+	object_event 30,  8, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Giver, -1
+	object_event 10, 11, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Persona1, -1
+	object_event 24, 20, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Persona2, -1
+	object_event  6, 19, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Persona3, -1
+	object_event 10, 17, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Persona5, -1
+	object_event  7, 11, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie5, -1
+	object_event  8, 18, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Townie6, -1
+	object_event 17,  8, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Sabbah2BearerScript, -1
+	object_event 18,  8, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza4Duel, -1
 

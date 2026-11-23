@@ -20,7 +20,7 @@ from .people import sign
 from .wayfolk import FOUNTAIN
 from .model import MapDef
 
-DECOR = ["park", "market", "garden", "terrace", "lake"]  # the fountain square is placed on its own (build_plaza)
+DECOR = ["park", "market", "garden", "terrace", "lake", "orchard", "cloister", "avenue", "maze"]  # the fountain square is placed on its own (build_plaza)
 
 
 def plaza2(g, name, kit, rng, **kw):
@@ -143,6 +143,13 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
         for x in range(e, e + cw):
             m.set(x, H - 1, S["mat"] if x == mx else R.choice(kit.wall))
         doors["south"] = m.warp(2 * mx, 2 * (H - 1) + 1)
+        # the way in is an avenue of honour (alpha 3.2, "the entrance of the Commune needs glory"): the stem from the gate to the first bend is lined
+        # by a column of trees and flower beds on both sides, a double row of them at the threshold, so the first sight of an area is a procession
+        for y in range(jr + 2, H - 1):
+            for x in (e - 1, e + cw):
+                if 1 <= x <= W - 2 and (x, y) not in street:
+                    m.set(x, y, S["tree"] if (H - 2 - y) % 2 == 0 else R.choice(S["flowers"]))
+                    taken.add((x, y))
     # districts: four pockets around the street
     zones = [("TL", 1, xo - 2, 3, jr - 1), ("TR", xo + cw + 1, W - 2, 3, jr - 1),
              ("BL", 1, e - 2, jr + 3, H - 2), ("BR", e + cw + 1, W - 2, jr + 3, H - 2)]
@@ -293,6 +300,64 @@ def decorate(m, kit, S, R, kind, x0, x1, y0, y1):
             pond_rect(m, S, cx - 1, cy - (1 if h >= 5 else 0), 2, 2)
         # keep one entrance on the street side open
         m.set(x0 if R.random() < 0.5 else x1, y0 + (y1 - y0) // 2, R.choice(kit.floor))
+    elif kind == "orchard":  # trees on a grid with the paths between them, flowers in the gaps
+        for y in range(y0, y1 + 1):
+            for x in range(x0, x1 + 1):
+                if (x - x0) % 2 == 0 and (y - y0) % 2 == 0:
+                    m.set(x, y, S["tree"])
+                elif R.random() < 0.3:
+                    m.set(x, y, R.choice(flowers))
+    elif kind == "cloister":  # a rail round a square of flower beds, trees at the corners, one gap on the south side
+        for x in range(x0, x1 + 1):
+            m.set(x, y0, S["fence_h"])
+            m.set(x, y1, S["fence_h"])
+        for y in range(y0 + 1, y1):
+            m.set(x0, y, S["fence_v"])
+            m.set(x1, y, S["fence_v"])
+        for y in range(y0 + 1, y1):
+            for x in range(x0 + 1, x1):
+                m.set(x, y, R.choice(flowers) if R.random() < 0.6 else R.choice(kit.floor))
+        gx = x0 + (x1 - x0) // 2
+        m.set(gx, y1, R.choice(kit.floor))
+        if y1 - y0 >= 2:
+            m.set(gx, y1 - 1, R.choice(kit.floor))
+        for (x, y) in ((x0, y0), (x1, y0)):
+            m.set(x, y, S["tree"])
+    elif kind == "avenue":  # a paved promenade across the pocket between two rows of trees
+        for x in range(x0, x1 + 1):
+            m.set(x, cy, R.choice(paved))
+            for yy in (cy - 1, cy + 1):
+                if y0 <= yy <= y1:
+                    m.set(x, yy, S["tree"] if (x - x0) % 2 == 0 else R.choice(flowers))
+        m.set(x0, cy, R.choice(paved))
+    elif kind == "maze":  # a hedge maze of trees, rooms on the odd cells, passages carved by a depth first walk
+        if w < 5 or h < 5:
+            return decorate(m, kit, S, R, "orchard", x0, x1, y0, y1)
+        for y in range(y0, y1 + 1):
+            for x in range(x0, x1 + 1):
+                m.set(x, y, S["tree"])
+        rooms = [(x, y) for y in range(y0 + 1, y1, 2) for x in range(x0 + 1, x1, 2)]
+        seen = {rooms[0]}
+        todo = [rooms[0]]
+        m.set(*rooms[0], R.choice(kit.floor))
+        while todo:
+            cx_, cy_ = todo[-1]
+            nxt = [(cx_ + dx, cy_ + dy) for dx, dy in ((2, 0), (-2, 0), (0, 2), (0, -2)) if (cx_ + dx, cy_ + dy) in rooms and (cx_ + dx, cy_ + dy) not in seen]
+            if not nxt:
+                todo.pop()
+                continue
+            nx_, ny_ = R.choice(nxt)
+            m.set((cx_ + nx_) // 2, (cy_ + ny_) // 2, R.choice(kit.floor))
+            m.set(nx_, ny_, R.choice(kit.floor))
+            seen.add((nx_, ny_))
+            todo.append((nx_, ny_))
+        ry = max(y for _, y in rooms)  # the way in, on the south side of the pocket
+        door = R.choice([x for x, y in rooms if y == ry])
+        for y in range(ry + 1, y1 + 1):
+            m.set(door, y, R.choice(kit.floor))
+        for (x, y) in ((x0 + 1, y0 + 1), (x1 - 1, y1 - 1)):
+            if (x, y) in seen and R.random() < 0.5:
+                m.set(x, y, R.choice(flowers))
     elif kind == "market":
         for y in range(y0, y1 + 1, 2):
             for x in range(x0, x1 + 1):

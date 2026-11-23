@@ -28,7 +28,7 @@ given lane on that has a glade and a free object slot gets him in place of its o
 |---|---|
 | TitheRoad | LULL CHARM |
 | TitheStreet8 | HP UP |
-| GroveStreet3 | EXP CHARM |
+| GroveStreet3 | RARE CANDY |
 | GroveStreet9 | PROTEIN |
 | GroveStreet14 | CARBOS |
 | AxiomStreet4 | PURSE CHARM |
@@ -39,7 +39,10 @@ given lane on that has a glade and a free object slot gets him in place of its o
 | DisStreet5 | LOOT CHARM |
 | DisStreet11 | HEAL CHARM |
 
-Six charms and six stat items (HP UP, PROTEIN, CARBOS, IRON, CALCIUM, PP UP). Each charm exists once in the forest, so a charm is found by walking, not by farming.
+Five charms and seven presents that are not charms (HP UP, RARE CANDY, PROTEIN, CARBOS, IRON, CALCIUM, PP UP). Each charm exists once in the world, so a charm is found by walking, not by farming.
+
+**The EXP CHARM is not a glade gift any more** (alpha 3.2). It is a late item meant for after level 55, so it lies in a ball on the last floor of the Undercroft of Area 3
+(`AxiomVault3`, areas/vault.py), behind the hidden portal of a lane of Axiom.
 
 ## The eighteen hermits of Purgatorio
 

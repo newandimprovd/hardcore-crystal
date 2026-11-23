@@ -468,6 +468,12 @@ def give(wk, name, const):
     return True
 
 
+def purg_names():
+    """Names of the maps of the Purgatorio group (Purgatorio itself, the vault and the hollows): hidden places the walk of an area does not enter, they have
+    their own tests (test_purg, test_hollow)."""
+    return {m[1] for m in re.finditer(r"db \d+ ; (\w+)", open(os.path.join(ROOT, "data/hardcore/purg_obj_areas.asm")).read())}
+
+
 def auto_plan(world, first, prefix=None):
     """Goal list that visits everything of an area: the maps in route order, every plaza building (Pokecenter with
     healing, Mart, houses), boss rooms with their item balls, and the gates of lanes."""
@@ -475,6 +481,7 @@ def auto_plan(world, first, prefix=None):
     prefix = prefix or re.match(r"[A-Z][a-z]+", first)[0]
     goals = []
     seen = set()
+    hidden = purg_names()
 
     def add(g):
         if g not in seen or g.split(":")[0] in ("heal", "item", "gate", "give"):
@@ -494,7 +501,7 @@ def auto_plan(world, first, prefix=None):
         # gatehouses and doors to other generated maps from this one
         for (x, y, dest, dw) in mp.warps:
             dm = world.consts.get(dest)
-            if dm is None or dm.name in seen:
+            if dm is None or dm.name in seen or dm.name in hidden:
                 continue
             n = dm.name
             if not n.startswith(prefix):

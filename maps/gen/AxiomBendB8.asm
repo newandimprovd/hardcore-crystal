@@ -27,8 +27,8 @@ AxiomBendB8_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  4,  4, BGEVENT_ITEM, AxiomBendB8Hidden
+	bg_event  5,  5, BGEVENT_ITEM, AxiomBendB8Hidden
 
 	def_object_events
-	object_event  5,  7, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomBendB8Hermit, -1
+	object_event  6,  6, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomBendB8Hermit, -1
 
