@@ -20,7 +20,7 @@ and `HardcoreCrystal_alpha3_2_ending.gbc` (starts in Judecca with the story flag
    pedestal and the jet at the centre. The plaque is still read from the south.
 4. **Battle text: the rest of the team's EXP, and the wrong name on a passive level up.** Alpha 3.1 paid the benched party members silently, which also left the defeated foe's name in the string buffer,
    so the "grew to level" line named the wrong mon. Benched members are announced like the fighters now and the line takes the nickname of the mon that grew (`GiveExperiencePoints`,
-   `engine/battle/core.asm`). Not yet re-checked in a full fight with the new ROM (see the verification section).
+   `engine/battle/core.asm`). Checked in a full fight with `test_exp.py` (the fighter, a benched mon and its level up line are all right).
 5. **Pokecenter upstairs replaced by normal tiles.** The staircase block in `maps/Pokecenter1F.blk` (the interior every generated Pokecenter copies) is plain floor now.
 6. **Unlimited TMs.** A TM is not used up (`engine/items/tmhm.asm`).
 7. **Crowley.** The Amphitheater event was reworked, he speaks less, and there is a new class of special characters. **Partly done:** the quote scenes are pastiche written for this game, not the real
@@ -76,7 +76,21 @@ The rules I follow for towns and routes, and what is still missing (towns with m
 
 ## What is tested, and how
 
-See the verification section at the end of this file, written after the last run.
+`tools/hardcore/verify_all.sh` builds the real ROM and every test ROM and runs every test by key presses in an emulator. The last run on the final tree: **48 of 48 steps pass**, none fail. It covers the text
+and name checks, the wild tables, the fight budget (628 lane fights, under the cap of 650, the caves counted apart), the roster, the intro, the charms, the credits, the Corkboard page (`cork`), the EXP lines of the
+whole party (`exp`: a benched mon one EXP short of level 13 grows and is named right), both Pokecenters, the run animation, whiteout, the world map, wild encounters, the story milestones, the forced
+scenes (the Crowley flight in Tithe Plaza 4 cannot be walked round), the gates, the named duels, Purgatorio, the first hollow end to end (`hollow`), and the ending.
+
+`walk_all.sh` walks every map of every area on the final layouts with a god mode test mon (level 100, kills fought, every door entered, every item ball taken): **areas 1 to 5 all finish with 0 problems**.
+(The walker reports "still busy" lines while it waits for the god mode kills to finish, those are the walker and not the game.)
+
+Not tested by play: the unlimited TMs (point 6) only checked in the code (`ConsumeTM` has no caller left), and all the looks of the new towns, which I judged from rendered pictures of the maps, a person
+has to judge them on the screen.
+
+## One thing to look at: the last boss
+
+Finnegan now has six level 100 forms with held items (`HC_GenGroup_D_FINNEGAN`). In the ending test a single move of his team deals more than 999 HP, so a test mon with 999 HP is one shot; I raised the test mon's HP to get the
+ending test through. In a real game a level 100 player mon has far less than 999 HP. I did not change his team in this pass, but I think it is stronger than the rest of the curve and I would like you to play it and tell me.
 
 ## Known gaps, in one place
 
