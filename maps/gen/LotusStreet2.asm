@@ -10,7 +10,7 @@ LotusStreet2Pickup:
 	itemball ETHER
 
 LotusStreet2Hidden:
-	hiddenitem MAX_REVIVE, EVENT_GEN_LOTUS_STREET2_HIDDEN
+	hiddenitem REVIVE, EVENT_GEN_LOTUS_STREET2_HIDDEN
 
 LotusStreet2Hermit:
 	jumptextfaceplayer LotusStreet2HermitText

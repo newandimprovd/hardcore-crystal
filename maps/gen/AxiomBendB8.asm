@@ -13,10 +13,11 @@ AxiomBendB8Hermit:
 	jumptextfaceplayer AxiomBendB8HermitText
 
 AxiomBendB8HermitText:
-	text "I deleted myself"
-	line "from the registry."
-	para "Now I am free. And"
-	line "also uninsured."
+	text "The machines here"
+	line "are polite. They"
+	para "kill you with a"
+	line "smile and a"
+	para "receipt."
 	done
 
 AxiomBendB8_MapEvents:

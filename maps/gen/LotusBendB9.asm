@@ -13,11 +13,11 @@ LotusBendB9Hermit:
 	jumptextfaceplayer LotusBendB9HermitText
 
 LotusBendB9HermitText:
-	text "Everyone says the"
-	line "sea is calming."
-	para "The sea is a bully"
-	line "with good"
-	para "lighting."
+	text "I saw a trainer"
+	line "yawn mid-attack."
+	para "It was the most"
+	line "honest violence I"
+	para "have ever seen."
 	done
 
 LotusBendB9_MapEvents:
@@ -28,8 +28,8 @@ LotusBendB9_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 18, 21, BGEVENT_ITEM, LotusBendB9Hidden
+	bg_event 21, 17, BGEVENT_ITEM, LotusBendB9Hidden
 
 	def_object_events
-	object_event 20, 20, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusBendB9Hermit, -1
+	object_event 22, 16, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusBendB9Hermit, -1
 

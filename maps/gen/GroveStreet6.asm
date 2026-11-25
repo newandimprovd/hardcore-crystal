@@ -55,11 +55,11 @@ GroveStreet6Hermit:
 	jumptextfaceplayer GroveStreet6HermitText
 
 GroveStreet6HermitText:
-	text "This tree is my"
-	line "friend. The tree"
-	para "has not said so."
-	line "It also has not"
-	para "said no."
+	text "Have you tried not"
+	line "fighting? I've"
+	para "been not fighting"
+	line "for years. Nobody"
+	para "asked me to stop."
 	done
 
 GroveStreet6AfterText:

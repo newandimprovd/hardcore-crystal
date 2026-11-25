@@ -88,8 +88,7 @@ def rotate(m, slots, kit, k, R=None):
     """Turns the finished map m k quarter turns clockwise in place, with the trainer slots of its lane."""
     k %= 4
     if k == 0:
-        if kit.extra["style"] == "urban":
-            autotile(m, kit, R or random.Random("turn:" + m.name))
+        autotile(m, kit, R or random.Random("turn:" + m.name))
         return
     swap = block_swap(kit, k)
     w, h, cw = m.w, m.h, m.cw
@@ -130,8 +129,7 @@ def rotate(m, slots, kit, k, R=None):
         gd["cells"] = [cell(x, y) for x, y in gd["cells"]]
         mx, my, _, _ = turn_pt(*gd["mouth"], w, h, k)
         gd["mouth"] = (mx, my)
-    if kit.extra["style"] == "urban":
-        autotile(m, kit, R or random.Random("turn:" + m.name))
+    autotile(m, kit, R or random.Random("turn:" + m.name))
     # the road must still lead from one side to the other, and every glade cell must still be reachable
     r = reach(m, kit, cell_of(*m.entry, cw, m.w, m.h))
     assert cell_of(*m.exit, cw, m.w, m.h) in r, (m.name, "the turned road is cut")

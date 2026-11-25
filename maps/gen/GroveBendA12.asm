@@ -13,11 +13,11 @@ GroveBendA12Hermit:
 	jumptextfaceplayer GroveBendA12HermitText
 
 GroveBendA12HermitText:
-	text "This glade belongs"
-	line "to everyone."
-	para "Please leave. I"
-	line "mean it"
-	para "communally."
+	text "I'm founding a"
+	line "cult of one."
+	para "Membership is"
+	line "great. The leader"
+	para "is a little tired."
 	done
 
 GroveBendA12_MapEvents:

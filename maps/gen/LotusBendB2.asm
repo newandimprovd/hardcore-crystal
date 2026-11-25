@@ -7,7 +7,7 @@ LotusBendB2_MapScripts:
 	def_callbacks
 
 LotusBendB2Hidden:
-	hiddenitem MAX_REVIVE, EVENT_GEN_LOTUS_BEND_B2_HIDDEN
+	hiddenitem REVIVE, EVENT_GEN_LOTUS_BEND_B2_HIDDEN
 
 LotusBendB2Hermit:
 	jumptextfaceplayer LotusBendB2HermitText

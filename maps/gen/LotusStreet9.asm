@@ -16,11 +16,12 @@ LotusStreet9Hermit:
 	jumptextfaceplayer LotusStreet9HermitText
 
 LotusStreet9HermitText:
-	text "I saw a trainer"
-	line "yawn mid-attack."
-	para "It was the most"
-	line "honest violence I"
-	para "have ever seen."
+	text "I keep a journal."
+	line "Today's entry:"
+	para "'Same.'"
+	line "Yesterday's:"
+	para "'Same.' The day"
+	line "before: 'Same.'"
 	done
 
 LotusStreet9AfterText:

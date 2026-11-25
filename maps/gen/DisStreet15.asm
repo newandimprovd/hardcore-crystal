@@ -9,19 +9,6 @@ DisStreet15_MapScripts:
 DisStreet15Pickup:
 	itemball ELIXER
 
-DisStreet15Hidden:
-	hiddenitem ELIXER, EVENT_GEN_DIS_STREET15_HIDDEN
-
-DisStreet15Hermit:
-	jumptextfaceplayer DisStreet15HermitText
-
-DisStreet15HermitText:
-	text "I have a theory"
-	line "that the fire is"
-	para "only paperwork. It"
-	line "burns the same."
-	done
-
 DisStreet15AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -164,11 +151,9 @@ DisStreet15_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 21, 25, BGEVENT_ITEM, DisStreet15Hidden
 
 	def_object_events
-	object_event 17, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet15Pickup, EVENT_GEN_DIS_STREET15_PICKUP
-	object_event 16, 11, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisStreet15Hermit, -1
+	object_event  6, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet15Pickup, EVENT_GEN_DIS_STREET15_PICKUP
 	object_event  4, 28, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet15Trainer0, -1
 	object_event  9, 28, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet15Trainer1, -1
 	object_event  8, 24, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet15Trainer2, -1

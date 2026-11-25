@@ -13,12 +13,12 @@ DisBendA12Hermit:
 	jumptextfaceplayer DisBendA12HermitText
 
 DisBendA12HermitText:
-	text "I found a corner"
-	line "nobody has"
-	para "tortured yet. I"
-	line "call it home."
-	para "Don't tell"
-	line "management."
+	text "The ground here is"
+	line "warm. It is the"
+	para "only kindness I"
+	line "have been offered"
+	para "since the"
+	line "incident."
 	done
 
 DisBendA12_MapEvents:

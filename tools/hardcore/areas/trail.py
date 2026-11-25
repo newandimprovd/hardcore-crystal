@@ -47,7 +47,7 @@ def walk(R, H, W, cw, a):
     return c
 
 
-def find_spot(lo, hi, W, H, used, R):
+def find_spot(lo, hi, W, H, used, R, side_used=()):
     """A rectangle of blocks beside the corridor for a glade: (side, x0, x1, r0, r1, mouth row, lim) or None.
     lo/hi: first and last corridor block of every row."""
     best = None
@@ -58,6 +58,8 @@ def find_spot(lo, hi, W, H, used, R):
         if any(r in used for r in range(r0 - 1, r1 + 2)):
             continue
         for side in ("L", "R"):
+            if any((r, side) in side_used for r in range(r0 - 1, r1 + 2)):
+                continue
             if side == "L":
                 lim = min(lo[r] for r in range(r0, r1 + 1))
                 width = lim - 2
@@ -147,6 +149,103 @@ def glade(m, kit, S, R, spot, force_kind=None):
     mouth_cells = {(2 * mx + dx, 2 * mr + dy) for dx in (0, 1) for dy in (0, 1)}
     cells = [cl for cl in cells if cl not in mouth_cells and abs(cl[0] - (2 * mx + 1)) + abs(cl[1] - (2 * mr + 1)) > 2]
     return dict(kind=kind, cells=cells, mouth=(mx, mr), side=side, rows=(r0, r1))
+
+
+# ---------------------------------------------------------------------------------------------------------------------------------- biomes
+# What the player sees of a street is the corridor and the one or two blocks beside it, so a street is told apart by what lines the road: dense forest,
+# a river that the road crosses on a causeway, a lakeshore, the ruins of a hamlet (wild areas), a canal, a park, plain building fronts (the city areas).
+# The sequence is walked lane by lane, so no two neighbouring streets are of one kind, and every area starts somewhere else in it.
+BIOMES = {"wild": ["forest", "river", "lakeshore", "hamlet", "forest", "lakes", "river", "hamlet"],
+          "urban": ["avenue", "canal", "park", "avenue", "park", "canal"]}
+
+
+def biome_for(name, style):
+    stem = name.rstrip("0123456789")
+    digits = name[len(stem):]
+    if not stem.endswith("Street") or not digits:
+        return "forest" if style == "wild" else "avenue"
+    seq = BIOMES[style]
+    return seq[(int(digits) + sum(map(ord, stem))) % len(seq)]
+
+
+def water_roles(mask, W, H):
+    """pond block role of every cell of a water mask: the shore faces the land beside it (outside the map counts as water)."""
+    out = {}
+    for (x, y) in mask:
+        def land(dx, dy):
+            nx, ny = x + dx, y + dy
+            return 0 <= nx < W and 0 <= ny < H and (nx, ny) not in mask
+        n, s_, e, w_ = land(0, -1), land(0, 1), land(1, 0), land(-1, 0)
+        v = ("n" if n else "s" if s_ else "") + ("w" if w_ else "e" if e else "")
+        out[(x, y)] = "pond_" + (v or "c")
+    return out
+
+
+def plan_stretches(biome, style, H, R, lo, hi):
+    """[(kind, side, r0, r1)]: kind water or wall or trees; side L, R or B (both: a crossing).  Rows stay clear of the exit clearing at the top and of the entry at the bottom."""
+    top, bot = 5, H - 6
+    out = []
+    if bot - top < 4:
+        return out
+    def span(h):
+        r0 = R.randint(top, max(top, bot - h + 1))
+        return r0, min(bot, r0 + h - 1)
+    if biome in ("river", "canal"):
+        r0, r1 = span(3)
+        out.append(("water", "B", r0, r1))
+    elif biome == "lakeshore":
+        r0, r1 = span(R.randint(5, 7))
+        out.append(("water", R.choice("LR"), r0, r1))
+    elif biome == "lakes":
+        a0, a1 = span(R.randint(4, 5))
+        out.append(("water", "L", a0, a1))
+        for _ in range(20):
+            b0, b1 = span(R.randint(4, 5))
+            if b0 > a1 + 1 or b1 < a0 - 1:
+                out.append(("water", "R", b0, b1))
+                break
+    elif biome == "hamlet":
+        a0, a1 = span(R.randint(5, 6))
+        side = R.choice("LR")
+        out.append(("wall", side, a0, a1))
+        for _ in range(20):
+            b0, b1 = span(R.randint(4, 6))
+            if b0 > a1 + 1 or b1 < a0 - 1:
+                out.append(("wall", "R" if side == "L" else "L", b0, b1))
+                break
+    elif biome == "park":
+        a0, a1 = span(R.randint(5, 7))
+        out.append(("trees", R.choice("LR"), a0, a1))
+        if H > 18:
+            for _ in range(20):
+                b0, b1 = span(R.randint(4, 5))
+                if b0 > a1 + 1 or b1 < a0 - 1:
+                    out.append(("trees", "L" if out[0][1] == "R" else "R", b0, b1))
+                    break
+    return out
+
+
+def apply_stretches(m, kit, S, R, stretches, carved, lo, hi):
+    """Lay the planned stretches over whatever the landscape put beside the corridor (never on a carved block)."""
+    W, H = m.w, m.h
+    walls = list(kit.wall)
+    for kind, side, r0, r1 in stretches:
+        cells = set()
+        depth = 3 if kind == "wall" else W  # a hamlet is a row of houses beside the road, not a field of roofs to the map edge
+        for y in range(r0, r1 + 1):
+            if side in "LB":
+                cells |= {(x, y) for x in range(max(0, lo[y] - depth), lo[y]) if (x, y) not in carved}
+            if side in "RB":
+                cells |= {(x, y) for x in range(hi[y] + 1, min(W, hi[y] + 1 + depth)) if (x, y) not in carved}
+        if kind == "water":
+            for (x, y), role in water_roles(cells, W, H).items():
+                m.set(x, y, S[role])
+        elif kind == "wall":
+            for (x, y) in cells:
+                m.set(x, y, R.choice(walls))
+        else:
+            for (x, y) in cells:
+                m.set(x, y, S["tree"])
 
 
 def landscape(m, kit, S, R, base, protect):
@@ -261,11 +360,18 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
         else:
             slots.append(Slot(cx0 if side == 0 else cx1, y, "RIGHT" if side == 0 else "LEFT", cx1 - cx0))
             side ^= 1
-    # glades beside the corridor
+    # what lines the road (see BIOMES): planned before the glades so that they take the other side, laid down after the landscape
+    biome = "forest" if (rift or vault or hollow or gate or north == "door") else biome_for(name, style)
+    stretches = plan_stretches(biome, style, H, random.Random("biome:" + name), lo, hi)
     used, glades = set(), []
+    side_used = set()
+    for kind, side, r0, r1 in stretches:
+        for r in range(r0 - 1, r1 + 2):
+            for sd in ("LR" if side == "B" else side):
+                side_used.add((r, sd))
     rift_door = None
     for k in range(3):
-        spot = find_spot(lo, hi, W, H, used, R)
+        spot = find_spot(lo, hi, W, H, used, R, side_used)
         if not spot:
             break
         side_, x0, x1, r0, r1, mr, lim = spot
@@ -306,7 +412,8 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
                     continue
                 if m.get(nx + dx, y) == base:
                     m.set(nx, y, S[role])
-    if style == "urban" and not raw:  # raw: the lane is turned afterwards (areas/turn.py), which picks the building fronts in its own frame
+    apply_stretches(m, kit, S, random.Random("lay:" + name), stretches, carved, lo, hi)
+    if not raw:  # raw: the lane is turned afterwards (areas/turn.py), which picks the building fronts in its own frame
         autotile(m, kit, R)
     r = reach(m, kit, (2 * c[H - 1] + 1, 2 * H - 1))
     assert ((door.x, door.y + 1) if door else (2 * c[0] + 1, 0)) in r, (name, "exit not reachable")
@@ -322,4 +429,5 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
     if rift or vault or hollow:
         assert rift_door is not None and (rift_door.x, rift_door.y + 1) in r, (name, "the hidden portal cannot be reached")
     m.corridor = c
+    m.biome = biome
     return m, slots

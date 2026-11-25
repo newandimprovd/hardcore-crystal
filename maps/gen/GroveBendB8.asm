@@ -13,11 +13,10 @@ GroveBendB8Hermit:
 	jumptextfaceplayer GroveBendB8HermitText
 
 GroveBendB8HermitText:
-	text "I'm founding a"
-	line "cult of one."
-	para "Membership is"
-	line "great. The leader"
-	para "is a little tired."
+	text "I came for"
+	line "silence. The birds"
+	para "are very loud"
+	line "about it."
 	done
 
 GroveBendB8_MapEvents:

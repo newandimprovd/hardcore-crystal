@@ -9,18 +9,6 @@ DisStreet2_MapScripts:
 DisStreet2Pickup:
 	itemball TM_RETURN
 
-DisStreet2Hidden:
-	hiddenitem MAX_ETHER, EVENT_GEN_DIS_STREET2_HIDDEN
-
-DisStreet2Hermit:
-	jumptextfaceplayer DisStreet2HermitText
-
-DisStreet2HermitText:
-	text "Be careful. The"
-	line "trainers are the"
-	para "nice ones."
-	done
-
 DisStreet2AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -140,11 +128,9 @@ DisStreet2_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 17,  7, BGEVENT_ITEM, DisStreet2Hidden
 
 	def_object_events
-	object_event 16,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet2Pickup, EVENT_GEN_DIS_STREET2_PICKUP
-	object_event 11,  5, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisStreet2Hermit, -1
+	object_event 15, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet2Pickup, EVENT_GEN_DIS_STREET2_PICKUP
 	object_event 24, 13, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet2Trainer0, -1
 	object_event 20, 17, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet2Trainer1, -1
 	object_event 20, 12, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet2Trainer2, -1

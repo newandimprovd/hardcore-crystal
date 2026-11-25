@@ -16,10 +16,12 @@ DisStreet3Hermit:
 	jumptextfaceplayer DisStreet3HermitText
 
 DisStreet3HermitText:
-	text "I have a theory"
-	line "that the fire is"
-	para "only paperwork. It"
-	line "burns the same."
+	text "I am the last"
+	line "honest man down"
+	para "here. Not by"
+	line "choice. I could"
+	para "not find the other"
+	line "kind."
 	done
 
 DisStreet3AfterText:
@@ -162,11 +164,11 @@ DisStreet3_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 19, 28, BGEVENT_ITEM, DisStreet3Hidden
+	bg_event  3, 19, BGEVENT_ITEM, DisStreet3Hidden
 
 	def_object_events
-	object_event 20, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet3Pickup, EVENT_GEN_DIS_STREET3_PICKUP
-	object_event 17, 24, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisStreet3Hermit, -1
+	object_event  5, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet3Pickup, EVENT_GEN_DIS_STREET3_PICKUP
+	object_event  4, 15, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisStreet3Hermit, -1
 	object_event  8, 28, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer0, -1
 	object_event 13, 28, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer1, -1
 	object_event  8, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer2, -1

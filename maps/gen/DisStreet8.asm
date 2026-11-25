@@ -16,11 +16,10 @@ DisStreet8Hermit:
 	jumptextfaceplayer DisStreet8HermitText
 
 DisStreet8HermitText:
-	text "Come back in a"
-	line "century. I will be"
-	para "less angry. Or the"
-	line "same. The numbers"
-	para "are close."
+	text "I used to be a"
+	line "lawyer. Now I'm a"
+	para "rock. The pay is"
+	line "similar."
 	done
 
 DisStreet8AfterText:

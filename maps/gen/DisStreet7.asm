@@ -9,21 +9,6 @@ DisStreet7_MapScripts:
 DisStreet7Pickup:
 	itemball REVIVE
 
-DisStreet7Hidden:
-	hiddenitem PP_UP, EVENT_GEN_DIS_STREET7_HIDDEN
-
-DisStreet7Hermit:
-	jumptextfaceplayer DisStreet7HermitText
-
-DisStreet7HermitText:
-	text "The demons are"
-	line "very professional."
-	para "They send a"
-	line "thank-you note"
-	para "after the"
-	line "screaming."
-	done
-
 DisStreet7AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -163,11 +148,9 @@ DisStreet7_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  7, 11, BGEVENT_ITEM, DisStreet7Hidden
 
 	def_object_events
-	object_event  2, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet7Pickup, EVENT_GEN_DIS_STREET7_PICKUP
-	object_event  7, 28, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisStreet7Hermit, -1
+	object_event 13,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet7Pickup, EVENT_GEN_DIS_STREET7_PICKUP
 	object_event 12, 28, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet7Trainer0, -1
 	object_event 17, 28, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet7Trainer1, -1
 	object_event 16, 24, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet7Trainer2, -1

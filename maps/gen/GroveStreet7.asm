@@ -9,19 +9,6 @@ GroveStreet7_MapScripts:
 GroveStreet7Pickup:
 	itemball TM_FIRE_PUNCH
 
-GroveStreet7Hidden:
-	hiddenitem REVIVE, EVENT_GEN_GROVE_STREET7_HIDDEN
-
-GroveStreet7Hermit:
-	jumptextfaceplayer GroveStreet7HermitText
-
-GroveStreet7HermitText:
-	text "I came for"
-	line "silence. The birds"
-	para "are very loud"
-	line "about it."
-	done
-
 GroveStreet7AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -165,11 +152,9 @@ GroveStreet7_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 14, 11, BGEVENT_ITEM, GroveStreet7Hidden
 
 	def_object_events
-	object_event 19, 27, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet7Pickup, EVENT_GEN_GROVE_STREET7_PICKUP
-	object_event 19, 28, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet7Hermit, -1
+	object_event  4, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet7Pickup, EVENT_GEN_GROVE_STREET7_PICKUP
 	object_event  8, 28, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer0, -1
 	object_event  4, 24, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer1, -1
 	object_event  9, 24, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet7Trainer2, -1

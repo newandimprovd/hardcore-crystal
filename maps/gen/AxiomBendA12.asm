@@ -13,11 +13,12 @@ AxiomBendA12Hermit:
 	jumptextfaceplayer AxiomBendA12HermitText
 
 AxiomBendA12HermitText:
-	text "A bot asked me for"
-	line "ID. I showed it a"
-	para "leaf. It accepted."
-	line "We are now"
-	para "partners."
+	text "The sensors here"
+	line "are down. The"
+	para "sensors are always"
+	line "down. It is how"
+	para "the sensors"
+	line "survive."
 	done
 
 AxiomBendA12_MapEvents:

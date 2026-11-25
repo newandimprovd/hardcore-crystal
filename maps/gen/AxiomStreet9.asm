@@ -16,10 +16,10 @@ AxiomStreet9Hermit:
 	jumptextfaceplayer AxiomStreet9HermitText
 
 AxiomStreet9HermitText:
-	text "Every axiom here"
-	line "is true until it"
-	para "becomes"
-	line "inconvenient."
+	text "I deleted myself"
+	line "from the registry."
+	para "Now I am free. And"
+	line "also uninsured."
 	done
 
 AxiomStreet9AfterText:

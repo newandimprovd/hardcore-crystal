@@ -50,11 +50,11 @@ GroveStreet11Hermit:
 	jumptextfaceplayer GroveStreet11HermitText
 
 GroveStreet11HermitText:
-	text "I left the commune"
-	line "because it was too"
-	para "loud. Now I live"
-	line "in a tree. The"
-	para "tree is also loud."
+	text "There is a"
+	line "mushroom here that"
+	para "agrees with"
+	line "everything. I call"
+	para "it my spouse."
 	done
 
 GroveStreet11AfterText:

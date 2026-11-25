@@ -16,11 +16,9 @@ DisStreet10Hermit:
 	jumptextfaceplayer DisStreet10HermitText
 
 DisStreet10HermitText:
-	text "The flames are"
-	line "warm. I stopped"
-	para "complaining. The"
-	line "complaint box is"
-	para "also on fire."
+	text "Down here 'no"
+	line "comment' is a"
+	para "full-time job."
 	done
 
 DisStreet10AfterText:
@@ -164,11 +162,11 @@ DisStreet10_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 17,  8, BGEVENT_ITEM, DisStreet10Hidden
+	bg_event  2, 24, BGEVENT_ITEM, DisStreet10Hidden
 
 	def_object_events
-	object_event 18, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet10Pickup, EVENT_GEN_DIS_STREET10_PICKUP
-	object_event  7, 24, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisStreet10Hermit, -1
+	object_event  4, 27, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet10Pickup, EVENT_GEN_DIS_STREET10_PICKUP
+	object_event  6, 25, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisStreet10Hermit, -1
 	object_event 16, 28, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet10Trainer0, -1
 	object_event 12, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet10Trainer1, -1
 	object_event 17, 24, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet10Trainer2, -1

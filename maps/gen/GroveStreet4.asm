@@ -12,15 +12,57 @@ GroveStreet4Pickup:
 GroveStreet4Hidden:
 	hiddenitem ETHER, EVENT_GEN_GROVE_STREET4_HIDDEN
 
-GroveStreet4Hermit:
-	jumptextfaceplayer GroveStreet4HermitText
+GroveStreet4GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_GROVE_STREET4_HGIFT
+	iftrue .Done
+	writetext GroveStreet4GiftHermitText
+	waitbutton
+	verbosegiveitem RARE_CANDY
+	iffalse .NoRoom
+	setevent EVENT_GEN_GROVE_STREET4_HGIFT
+.Done:
+	writetext GroveStreet4GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-GroveStreet4HermitText:
-	text "If you hear"
-	line "chanting, it isn't"
-	para "a ritual. It's"
-	line "just Greg. He's"
-	para "had a bad week."
+.NoRoom:
+	writetext GroveStreet4GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+GroveStreet4GiftHermitText:
+	text "I share"
+	line "everything, mostly"
+	para "with the"
+	line "squirrels. Take"
+	para "this RARE CANDY."
+	line "One of yours gets"
+	para "a little older"
+	line "without the"
+	para "bother. The dead,"
+	line "sadly, never get"
+	para "one."
+	done
+
+GroveStreet4GiftHermitAfterText:
+	text "It's called"
+	line "growing up."
+	para "Somebody always"
+	line "pays for it."
+	para "Usually someone"
+	line "else."
+	done
+
+GroveStreet4GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 GroveStreet4AfterText:
@@ -166,11 +208,11 @@ GroveStreet4_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 11, 13, BGEVENT_ITEM, GroveStreet4Hidden
+	bg_event 12, 19, BGEVENT_ITEM, GroveStreet4Hidden
 
 	def_object_events
-	object_event 10, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet4Pickup, EVENT_GEN_GROVE_STREET4_PICKUP
-	object_event 11, 12, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet4Hermit, -1
+	object_event 11, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet4Pickup, EVENT_GEN_GROVE_STREET4_PICKUP
+	object_event 13, 19, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet4GiftHermit, -1
 	object_event  5,  4, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer0, -1
 	object_event  9,  2, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer1, -1
 	object_event  9,  7, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer2, -1

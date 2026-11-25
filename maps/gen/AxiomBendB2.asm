@@ -10,13 +10,11 @@ AxiomBendB2Hermit:
 	jumptextfaceplayer AxiomBendB2HermitText
 
 AxiomBendB2HermitText:
-	text "I am hiding from"
-	line "my own audit. It"
-	para "is going very"
-	line "well. The audit"
-	para "has not found me."
-	line "It has found my"
-	para "sister."
+	text "This glade is not"
+	line "on the map. I am"
+	para "not on the map. We"
+	line "are a perfect"
+	para "couple."
 	done
 
 AxiomBendB2_MapEvents:

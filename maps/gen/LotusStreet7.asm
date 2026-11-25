@@ -13,11 +13,11 @@ LotusStreet7Hermit:
 	jumptextfaceplayer LotusStreet7HermitText
 
 LotusStreet7HermitText:
-	text "The waves keep"
-	line "saying 'shh'. I"
-	para "think they're"
-	line "embarrassed for"
-	para "us."
+	text "I live in a shell."
+	line "I cannot remember"
+	para "who was in it"
+	line "before. We share"
+	para "the lease."
 	done
 
 LotusStreet7AfterText:
@@ -164,8 +164,8 @@ LotusStreet7_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 20, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet7Pickup, EVENT_GEN_LOTUS_STREET7_PICKUP
-	object_event 15, 25, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet7Hermit, -1
+	object_event 16, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet7Pickup, EVENT_GEN_LOTUS_STREET7_PICKUP
+	object_event 17, 22, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet7Hermit, -1
 	object_event  4, 28, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet7Trainer0, -1
 	object_event  9, 24, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet7Trainer1, -1
 	object_event  4, 20, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet7Trainer2, -1

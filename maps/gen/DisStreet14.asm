@@ -16,12 +16,10 @@ DisStreet14Hermit:
 	jumptextfaceplayer DisStreet14HermitText
 
 DisStreet14HermitText:
-	text "I am the last"
-	line "honest man down"
-	para "here. Not by"
-	line "choice. I could"
-	para "not find the other"
-	line "kind."
+	text "I'm not dead. I'm"
+	line "just in the wrong"
+	para "queue. It's been"
+	line "forty years."
 	done
 
 DisStreet14AfterText:

@@ -9,21 +9,6 @@ GroveStreet12_MapScripts:
 GroveStreet12Pickup:
 	itemball REVIVE
 
-GroveStreet12Hidden:
-	hiddenitem PP_UP, EVENT_GEN_GROVE_STREET12_HIDDEN
-
-GroveStreet12Hermit:
-	jumptextfaceplayer GroveStreet12HermitText
-
-GroveStreet12HermitText:
-	text "The goat in the"
-	line "commune is smarter"
-	para "than the leader. I"
-	line "am here to say it"
-	para "where the goat"
-	line "cannot hear."
-	done
-
 GroveStreet12AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -160,11 +145,9 @@ GroveStreet12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 21,  5, BGEVENT_ITEM, GroveStreet12Hidden
 
 	def_object_events
-	object_event 15, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet12Pickup, EVENT_GEN_GROVE_STREET12_PICKUP
-	object_event 15,  6, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet12Hermit, -1
+	object_event 14, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet12Pickup, EVENT_GEN_GROVE_STREET12_PICKUP
 	object_event  5,  6, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer0, -1
 	object_event  9, 15, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer1, -1
 	object_event 13, 14, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet12Trainer2, -1

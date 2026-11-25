@@ -16,11 +16,11 @@ TitheStreet14Hermit:
 	jumptextfaceplayer TitheStreet14HermitText
 
 TitheStreet14HermitText:
-	text "The pond is clean."
-	line "That is because"
-	para "I've been drinking"
-	line "all the dirty"
-	para "bits."
+	text "I lost a bet with"
+	line "the Mayor. The"
+	para "stake was my"
+	line "shadow. It is on a"
+	para "payroll."
 	done
 
 TitheStreet14AfterText:

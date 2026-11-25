@@ -16,11 +16,11 @@ TitheStreet15Hermit:
 	jumptextfaceplayer TitheStreet15HermitText
 
 TitheStreet15HermitText:
-	text "A nun told me this"
-	line "glade is blessed."
-	para "It is not. She was"
-	line "just selling the"
-	para "deed."
+	text "People on the road"
+	line "keep screaming and"
+	para "fainting. I think"
+	line "it's a wellness"
+	para "program."
 	done
 
 TitheStreet15AfterText:

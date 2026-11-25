@@ -52,12 +52,10 @@ LotusStreet11Hermit:
 	jumptextfaceplayer LotusStreet11HermitText
 
 LotusStreet11HermitText:
-	text "I have forgotten"
-	line "what day it is. It"
-	para "is wonderful."
-	line "Nobody has told"
-	para "me. I hope it"
-	line "stays that way."
+	text "The seagulls here"
+	line "are on a retainer."
+	para "Do not feed them."
+	line "They report."
 	done
 
 LotusStreet11AfterText:

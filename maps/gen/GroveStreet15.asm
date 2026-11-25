@@ -9,20 +9,6 @@ GroveStreet15_MapScripts:
 GroveStreet15Pickup:
 	itemball TM_RAIN_DANCE
 
-GroveStreet15Hidden:
-	hiddenitem ELIXER, EVENT_GEN_GROVE_STREET15_HIDDEN
-
-GroveStreet15Hermit:
-	jumptextfaceplayer GroveStreet15HermitText
-
-GroveStreet15HermitText:
-	text "If you hear"
-	line "chanting, it isn't"
-	para "a ritual. It's"
-	line "just Greg. He's"
-	para "had a bad week."
-	done
-
 GroveStreet15AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -160,11 +146,9 @@ GroveStreet15_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 17, BGEVENT_ITEM, GroveStreet15Hidden
 
 	def_object_events
-	object_event  9, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet15Pickup, EVENT_GEN_GROVE_STREET15_PICKUP
-	object_event  6, 16, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GroveStreet15Hermit, -1
+	object_event 10, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet15Pickup, EVENT_GEN_GROVE_STREET15_PICKUP
 	object_event  8, 28, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet15Trainer0, -1
 	object_event 13, 28, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet15Trainer1, -1
 	object_event 12, 24, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet15Trainer2, -1

@@ -12,14 +12,52 @@ DisStreet12Pickup:
 DisStreet12Hidden:
 	hiddenitem MAX_REVIVE, EVENT_GEN_DIS_STREET12_HIDDEN
 
-DisStreet12Hermit:
-	jumptextfaceplayer DisStreet12HermitText
+DisStreet12GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_DIS_STREET12_HGIFT
+	iftrue .Done
+	writetext DisStreet12GiftHermitText
+	waitbutton
+	verbosegiveitem HEAL_CHARM
+	iffalse .NoRoom
+	setevent EVENT_GEN_DIS_STREET12_HGIFT
+.Done:
+	writetext DisStreet12GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-DisStreet12HermitText:
-	text "I'm not dead. I'm"
-	line "just in the wrong"
-	para "queue. It's been"
-	line "forty years."
+.NoRoom:
+	writetext DisStreet12GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+DisStreet12GiftHermitText:
+	text "I'm a monk of the"
+	line "long walk. Take"
+	para "this HEAL CHARM."
+	line "Your party mends a"
+	para "little with every"
+	line "step. Not the"
+	para "dead, though."
+	line "Never the dead."
+	done
+
+DisStreet12GiftHermitAfterText:
+	text "Keep walking. It's"
+	line "the only thing"
+	para "down here that's"
+	line "free."
+	done
+
+DisStreet12GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 DisStreet12AfterText:
@@ -162,7 +200,7 @@ DisStreet12_MapEvents:
 
 	def_object_events
 	object_event 21,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet12Pickup, EVENT_GEN_DIS_STREET12_PICKUP
-	object_event 22,  3, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisStreet12Hermit, -1
+	object_event 22,  3, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DisStreet12GiftHermit, -1
 	object_event 28, 13, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer0, -1
 	object_event 24, 17, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer1, -1
 	object_event 24, 12, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet12Trainer2, -1

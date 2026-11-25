@@ -16,12 +16,9 @@ TitheStreet12Hermit:
 	jumptextfaceplayer TitheStreet12HermitText
 
 TitheStreet12HermitText:
-	text "The Church says"
-	line "the poor shall"
-	para "inherit the earth."
-	line "I am in line. The"
-	para "earth is behind a"
-	line "lot of paperwork."
+	text "Do not drink from"
+	line "the stream. It has"
+	para "been taxed."
 	done
 
 TitheStreet12AfterText:
@@ -143,11 +140,11 @@ TitheStreet12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 20, 17, BGEVENT_ITEM, TitheStreet12Hidden
+	bg_event  8, 25, BGEVENT_ITEM, TitheStreet12Hidden
 
 	def_object_events
-	object_event 21, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet12Pickup, EVENT_GEN_TITHE_STREET12_PICKUP
-	object_event 16, 17, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheStreet12Hermit, -1
+	object_event  9, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet12Pickup, EVENT_GEN_TITHE_STREET12_PICKUP
+	object_event  3, 21, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet12Hermit, -1
 	object_event 16, 24, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet12Trainer0, -1
 	object_event 12, 20, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet12Trainer1, -1
 	object_event 17, 20, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet12Trainer2, -1

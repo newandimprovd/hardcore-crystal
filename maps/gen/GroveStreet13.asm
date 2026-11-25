@@ -9,19 +9,6 @@ GroveStreet13_MapScripts:
 GroveStreet13Pickup:
 	itemball TM_SWEET_SCENT
 
-GroveStreet13Hidden:
-	hiddenitem ETHER, EVENT_GEN_GROVE_STREET13_HIDDEN
-
-GroveStreet13Hermit:
-	jumptextfaceplayer GroveStreet13HermitText
-
-GroveStreet13HermitText:
-	text "I am meditating."
-	line "Do not mind the"
-	para "screaming. It is a"
-	line "mantra. A bad one."
-	done
-
 GroveStreet13AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -163,11 +150,9 @@ GroveStreet13_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 25, BGEVENT_ITEM, GroveStreet13Hidden
 
 	def_object_events
-	object_event  9, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet13Pickup, EVENT_GEN_GROVE_STREET13_PICKUP
-	object_event 11, 24, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet13Hermit, -1
+	object_event 20, 27, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet13Pickup, EVENT_GEN_GROVE_STREET13_PICKUP
 	object_event 14, 28, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet13Trainer0, -1
 	object_event 21, 24, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet13Trainer1, -1
 	object_event 16, 20, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet13Trainer2, -1

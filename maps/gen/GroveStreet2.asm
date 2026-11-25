@@ -16,12 +16,12 @@ GroveStreet2Hermit:
 	jumptextfaceplayer GroveStreet2HermitText
 
 GroveStreet2HermitText:
-	text "The trainers out"
-	line "there are so"
-	para "friendly. They"
-	line "shout 'peace' and"
-	para "then try to kill"
-	line "you."
+	text "The goat in the"
+	line "commune is smarter"
+	para "than the leader. I"
+	line "am here to say it"
+	para "where the goat"
+	line "cannot hear."
 	done
 
 GroveStreet2AfterText:

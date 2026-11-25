@@ -16,10 +16,12 @@ AxiomStreet7Hermit:
 	jumptextfaceplayer AxiomStreet7HermitText
 
 AxiomStreet7HermitText:
-	text "The glitch in the"
-	line "system is me."
-	para "Please don't patch"
-	line "me."
+	text "Do not tell them"
+	line "where I am. They"
+	para "will say they"
+	line "already know. It"
+	para "is a bluff."
+	line "Probably."
 	done
 
 AxiomStreet7AfterText:

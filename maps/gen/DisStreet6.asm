@@ -10,16 +10,16 @@ DisStreet6Pickup:
 	itemball MAX_REPEL
 
 DisStreet6Hidden:
-	hiddenitem PP_UP, EVENT_GEN_DIS_STREET6_HIDDEN
+	hiddenitem ELIXER, EVENT_GEN_DIS_STREET6_HIDDEN
 
 DisStreet6Hermit:
 	jumptextfaceplayer DisStreet6HermitText
 
 DisStreet6HermitText:
-	text "I used to be a"
-	line "lawyer. Now I'm a"
-	para "rock. The pay is"
-	line "similar."
+	text "I am not hiding. I"
+	line "am between"
+	para "circles. It is a"
+	line "zoning issue."
 	done
 
 DisStreet6AfterText:
@@ -165,11 +165,11 @@ DisStreet6_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 18, 20, BGEVENT_ITEM, DisStreet6Hidden
+	bg_event 16, 18, BGEVENT_ITEM, DisStreet6Hidden
 
 	def_object_events
-	object_event 21, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet6Pickup, EVENT_GEN_DIS_STREET6_PICKUP
-	object_event 19, 14, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisStreet6Hermit, -1
+	object_event 19, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet6Pickup, EVENT_GEN_DIS_STREET6_PICKUP
+	object_event 18, 21, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisStreet6Hermit, -1
 	object_event 16, 28, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet6Trainer0, -1
 	object_event 21, 28, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet6Trainer1, -1
 	object_event 12, 24, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet6Trainer2, -1

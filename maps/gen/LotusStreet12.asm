@@ -16,11 +16,9 @@ LotusStreet12Hermit:
 	jumptextfaceplayer LotusStreet12HermitText
 
 LotusStreet12HermitText:
-	text "Everyone is so"
-	line "relaxed here."
-	para "That's what giving"
-	line "up looks like with"
-	para "a tan."
+	text "The cocktails are"
+	line "free. Meaning is"
+	para "extra."
 	done
 
 LotusStreet12AfterText:

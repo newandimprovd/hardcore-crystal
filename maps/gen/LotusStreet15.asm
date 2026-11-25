@@ -16,10 +16,10 @@ LotusStreet15Hermit:
 	jumptextfaceplayer LotusStreet15HermitText
 
 LotusStreet15HermitText:
-	text "The sunset here is"
-	line "wonderful. It"
-	para "reminds me of the"
-	line "end of everything."
+	text "I came to the"
+	line "coast to forget. I"
+	para "forgot why. Best"
+	line "vacation ever."
 	done
 
 LotusStreet15AfterText:

@@ -16,10 +16,11 @@ LotusStreet10Hermit:
 	jumptextfaceplayer LotusStreet10HermitText
 
 LotusStreet10HermitText:
-	text "The seagulls here"
-	line "are on a retainer."
-	para "Do not feed them."
-	line "They report."
+	text "Everyone says the"
+	line "sea is calming."
+	para "The sea is a bully"
+	line "with good"
+	para "lighting."
 	done
 
 LotusStreet10PurgFlagScript:
@@ -166,16 +167,16 @@ LotusStreet10_MapEvents:
 	coord_event  2, 18, -1, LotusStreet10PurgFlagScript
 
 	def_bg_events
-	bg_event  7, 22, BGEVENT_ITEM, LotusStreet10Hidden
+	bg_event  6, 25, BGEVENT_ITEM, LotusStreet10Hidden
 
 	def_object_events
-	object_event  6, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet10Pickup, EVENT_GEN_LOTUS_STREET10_PICKUP
-	object_event  4, 25, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet10Hermit, -1
-	object_event  6, 28, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer0, -1
-	object_event 10, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer1, -1
-	object_event 15, 24, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer2, -1
-	object_event 19, 20, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer3, -1
-	object_event 10, 16, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer4, -1
-	object_event 15, 16, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer5, -1
-	object_event  6, 12, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer6, -1
+	object_event  4, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet10Pickup, EVENT_GEN_LOTUS_STREET10_PICKUP
+	object_event  4, 24, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet10Hermit, -1
+	object_event  8, 28, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer0, -1
+	object_event 12, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer1, -1
+	object_event 17, 24, SPRITE_HC_TOURIST_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer2, -1
+	object_event 21, 20, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer3, -1
+	object_event 12, 16, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer4, -1
+	object_event 17, 16, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer5, -1
+	object_event  8, 12, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet10Trainer6, -1
 
