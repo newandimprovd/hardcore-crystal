@@ -16,12 +16,12 @@ TitheStreet13Hermit:
 	jumptextfaceplayer TitheStreet13HermitText
 
 TitheStreet13HermitText:
-	text "I left the city to"
-	line "escape the tithe."
-	para "The trees also"
-	line "want ten percent."
-	para "Of what, they"
-	line "won't say."
+	text "The Church says"
+	line "the poor shall"
+	para "inherit the earth."
+	line "I am in line. The"
+	para "earth is behind a"
+	line "lot of paperwork."
 	done
 
 TitheStreet13AfterText:
@@ -148,11 +148,11 @@ TitheStreet13_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  7, 11, BGEVENT_ITEM, TitheStreet13Hidden
+	bg_event 19, 21, BGEVENT_ITEM, TitheStreet13Hidden
 
 	def_object_events
-	object_event  4, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet13Pickup, EVENT_GEN_TITHE_STREET13_PICKUP
-	object_event  3, 13, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheStreet13Hermit, -1
+	object_event 17, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet13Pickup, EVENT_GEN_TITHE_STREET13_PICKUP
+	object_event 21, 21, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheStreet13Hermit, -1
 	object_event 10, 24, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet13Trainer0, -1
 	object_event 15, 24, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet13Trainer1, -1
 	object_event  6, 20, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet13Trainer2, -1

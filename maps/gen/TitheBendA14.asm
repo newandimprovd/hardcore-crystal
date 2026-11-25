@@ -13,11 +13,12 @@ TitheBendA14Hermit:
 	jumptextfaceplayer TitheBendA14HermitText
 
 TitheBendA14HermitText:
-	text "I lost a bet with"
-	line "the Mayor. The"
-	para "stake was my"
-	line "shadow. It is on a"
-	para "payroll."
+	text "I left the city to"
+	line "escape the tithe."
+	para "The trees also"
+	line "want ten percent."
+	para "Of what, they"
+	line "won't say."
 	done
 
 TitheBendA14_MapEvents:

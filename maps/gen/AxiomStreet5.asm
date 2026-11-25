@@ -16,12 +16,11 @@ AxiomStreet5Hermit:
 	jumptextfaceplayer AxiomStreet5HermitText
 
 AxiomStreet5HermitText:
-	text "Form 27-B:"
-	line "'Request to leave"
-	para "Form 27-A'. I"
-	line "filed it. Nobody"
-	para "replied. This is"
-	line "freedom."
+	text "I escaped the"
+	line "Registry. I'm no"
+	para "longer a number."
+	line "I'm a letter. The"
+	para "letter is Q."
 	done
 
 AxiomStreet5AfterText:

@@ -21,9 +21,12 @@ TitheStreet11Hermit:
 	jumptextfaceplayer TitheStreet11HermitText
 
 TitheStreet11HermitText:
-	text "Do not drink from"
-	line "the stream. It has"
-	para "been taxed."
+	text "I have been"
+	line "praying for rain."
+	para "It rained. On the"
+	line "neighbor. I have"
+	para "been praying for"
+	line "him ever since."
 	done
 
 TitheStreet11AfterText:

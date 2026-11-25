@@ -10,12 +10,11 @@ GroveBendB12Hermit:
 	jumptextfaceplayer GroveBendB12HermitText
 
 GroveBendB12HermitText:
-	text "The trainers out"
-	line "there are so"
-	para "friendly. They"
-	line "shout 'peace' and"
-	para "then try to kill"
-	line "you."
+	text "The mushrooms here"
+	line "talk. Mostly they"
+	para "say 'sell'. I"
+	line "don't know what."
+	para "I'm scared."
 	done
 
 GroveBendB12_MapEvents:

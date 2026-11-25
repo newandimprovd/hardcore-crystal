@@ -33,12 +33,12 @@ SECTION "Area Attributes", ROMX
 	connection east, TitheStreet2, TITHE_STREET2, 0
 
 	map_attributes TitheStreet3, TITHE_STREET3, $00
-	connection north, TithePlaza2, TITHE_PLAZA2, -7
+	connection north, TithePlaza2, TITHE_PLAZA2, -8
 	connection south, TitheBendB2, TITHE_BEND_B2, 0
 
 	map_attributes TithePlaza2, TITHE_PLAZA2, $00
 	connection north, TitheStreet4, TITHE_STREET4, 6
-	connection south, TitheStreet3, TITHE_STREET3, 7
+	connection south, TitheStreet3, TITHE_STREET3, 8
 
 	map_attributes TithePokecenter2, TITHE_POKECENTER2, $00
 
@@ -471,12 +471,12 @@ SECTION "Area Attributes", ROMX
 	connection east, AxiomStreet12, AXIOM_STREET12, 0
 
 	map_attributes AxiomStreet13, AXIOM_STREET13, $00
-	connection north, AxiomPlaza6, AXIOM_PLAZA6, 0
+	connection north, AxiomPlaza6, AXIOM_PLAZA6, -3
 	connection south, AxiomBendB12, AXIOM_BEND_B12, 0
 
 	map_attributes AxiomPlaza6, AXIOM_PLAZA6, $00
 	connection north, AxiomStreet14, AXIOM_STREET14, 3
-	connection south, AxiomStreet13, AXIOM_STREET13, 0
+	connection south, AxiomStreet13, AXIOM_STREET13, 3
 
 	map_attributes AxiomPokecenter6, AXIOM_POKECENTER6, $00
 
@@ -605,12 +605,12 @@ SECTION "Area Attributes", ROMX
 	connection east, LotusStreet9, LOTUS_STREET9, 0
 
 	map_attributes LotusStreet10, LOTUS_STREET10, $00
-	connection north, LotusPlaza5, LOTUS_PLAZA5, -9
+	connection north, LotusPlaza5, LOTUS_PLAZA5, -8
 	connection south, LotusBendB9, LOTUS_BEND_B9, 0
 
 	map_attributes LotusPlaza5, LOTUS_PLAZA5, $00
 	connection north, LotusStreet11, LOTUS_STREET11, 0
-	connection south, LotusStreet10, LOTUS_STREET10, 9
+	connection south, LotusStreet10, LOTUS_STREET10, 8
 
 	map_attributes LotusPokecenter5, LOTUS_POKECENTER5, $00
 
@@ -807,12 +807,12 @@ SECTION "Area Attributes", ROMX
 	connection east, DisStreet12, DIS_STREET12, 0
 
 	map_attributes DisStreet13, DIS_STREET13, $00
-	connection north, DisPlaza6, DIS_PLAZA6, -11
+	connection north, DisPlaza6, DIS_PLAZA6, -10
 	connection south, DisBendB12, DIS_BEND_B12, 0
 
 	map_attributes DisPlaza6, DIS_PLAZA6, $00
 	connection north, DisStreet14, DIS_STREET14, 0
-	connection south, DisStreet13, DIS_STREET13, 11
+	connection south, DisStreet13, DIS_STREET13, 10
 
 	map_attributes DisPokecenter6, DIS_POKECENTER6, $00
 

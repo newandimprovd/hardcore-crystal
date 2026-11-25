@@ -9,21 +9,6 @@ GroveStreet1_MapScripts:
 GroveStreet1Pickup:
 	itemball TM_FURY_CUTTER
 
-GroveStreet1Hidden:
-	hiddenitem AWAKENING, EVENT_GEN_GROVE_STREET1_HIDDEN
-
-GroveStreet1Hermit:
-	jumptextfaceplayer GroveStreet1HermitText
-
-GroveStreet1HermitText:
-	text "The goat in the"
-	line "commune is smarter"
-	para "than the leader. I"
-	line "am here to say it"
-	para "where the goat"
-	line "cannot hear."
-	done
-
 GroveStreet1AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -163,11 +148,9 @@ GroveStreet1_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 17,  8, BGEVENT_ITEM, GroveStreet1Hidden
 
 	def_object_events
-	object_event 20, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet1Pickup, EVENT_GEN_GROVE_STREET1_PICKUP
-	object_event 20,  8, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveStreet1Hermit, -1
+	object_event  7, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet1Pickup, EVENT_GEN_GROVE_STREET1_PICKUP
 	object_event  8, 28, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet1Trainer0, -1
 	object_event 13, 24, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet1Trainer1, -1
 	object_event  8, 20, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet1Trainer2, -1

@@ -6,6 +6,7 @@ from tilebuild import Tileset, Canvas, GRAY, RED, GREEN, WATER, YELLOW, BROWN, R
 import paint
 import grass
 import scenery
+from common import add_box_kit
 
 
 def cornice(cv):
@@ -378,7 +379,9 @@ def border_block():
 
 
 # which block roles the autotiler may use where (see areas/layout.py autotile)
-AUTO = {"facade": [("facade", 1)], "side_e": [("side_e", 1), ("side_e_win", 2)], "side_w": [("side_w", 1), ("side_w_win", 2)],
+AUTO = {"facade_e": [("facade_e", 1)], "facade_w": [("facade_w", 1)], "facade_ew": [("facade_ew", 1)], "corner_ne": [("corner_ne", 1)],
+        "corner_nw": [("corner_nw", 1)], "roof_ew": [("roof_ew", 1)], "roof_new": [("roof_new", 1)],
+        "facade": [("facade", 1)], "side_e": [("side_e", 1), ("side_e_win", 2)], "side_w": [("side_w", 1), ("side_w_win", 2)],
         "roof": [("roof", 1)], "mass": [("mass", 6), ("mass_rare", 1)]}
 # facade order in build(): gothic blue, gothic gold, mixed, rose, red, LOANS, PRAY. PAY., boards
 FACADE_WEIGHTS = [3, 3, 3, 1, 1, 1, 1, 1]
@@ -442,6 +445,7 @@ def build():
         t.add(cv, "TALL_GRASS", "grass")
     scenery.add(t, cobbles(0))  # ponds, fences, ledge, tree, flower beds (after the grass: no earlier block id moves)
     t.ids = ids
+    add_box_kit(t)
     return t
 
 

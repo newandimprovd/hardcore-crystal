@@ -53,11 +53,10 @@ LotusStreet6Hermit:
 	jumptextfaceplayer LotusStreet6HermitText
 
 LotusStreet6HermitText:
-	text "I live in a shell."
-	line "I cannot remember"
-	para "who was in it"
-	line "before. We share"
-	para "the lease."
+	text "I came here to"
+	line "find myself. I"
+	para "found a towel. It"
+	line "is a start."
 	done
 
 LotusStreet6AfterText:

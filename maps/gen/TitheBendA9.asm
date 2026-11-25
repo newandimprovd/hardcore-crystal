@@ -10,12 +10,11 @@ TitheBendA9Hermit:
 	jumptextfaceplayer TitheBendA9HermitText
 
 TitheBendA9HermitText:
-	text "I came out here to"
-	line "avoid the census."
-	para "Now I count the"
-	line "trees. They do not"
-	para "respond but they"
-	line "do not charge."
+	text "If you meet the"
+	line "Mayor, tell him"
+	para "the hole in my"
+	line "roof is his fault."
+	para "And the roof."
 	done
 
 TitheBendA9_MapEvents:

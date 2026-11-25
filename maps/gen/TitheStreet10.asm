@@ -13,12 +13,11 @@ TitheStreet10Hermit:
 	jumptextfaceplayer TitheStreet10HermitText
 
 TitheStreet10HermitText:
-	text "I have been"
-	line "praying for rain."
-	para "It rained. On the"
-	line "neighbor. I have"
-	para "been praying for"
-	line "him ever since."
+	text "Shh. The trainers"
+	line "can't see you when"
+	para "you sit down. I"
+	line "have been sitting"
+	para "down since March."
 	done
 
 TitheStreet10PurgFlagScript:

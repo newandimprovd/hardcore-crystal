@@ -13,12 +13,10 @@ GroveBendA8Hermit:
 	jumptextfaceplayer GroveBendA8HermitText
 
 GroveBendA8HermitText:
-	text "I tried to join"
-	line "the commune. They"
-	para "asked for my"
-	line "savings, my shoes"
-	para "and my opinions. I"
-	line "kept the opinions."
+	text "I grow my own"
+	line "food. I also grow"
+	para "my own problems."
+	line "Both are organic."
 	done
 
 GroveBendA8_MapEvents:

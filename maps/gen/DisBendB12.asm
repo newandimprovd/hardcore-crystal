@@ -13,9 +13,11 @@ DisBendB12Hermit:
 	jumptextfaceplayer DisBendB12HermitText
 
 DisBendB12HermitText:
-	text "The river is not"
-	line "water. It's"
-	para "deadlines."
+	text "The flames are"
+	line "warm. I stopped"
+	para "complaining. The"
+	line "complaint box is"
+	para "also on fire."
 	done
 
 DisBendB12_MapEvents:
@@ -26,8 +28,8 @@ DisBendB12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 15, 13, BGEVENT_ITEM, DisBendB12Hidden
+	bg_event 19, 21, BGEVENT_ITEM, DisBendB12Hidden
 
 	def_object_events
-	object_event 17, 19, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisBendB12Hermit, -1
+	object_event 19, 17, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisBendB12Hermit, -1
 

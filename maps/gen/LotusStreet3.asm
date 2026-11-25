@@ -10,7 +10,7 @@ LotusStreet3Pickup:
 	itemball TM_SLUDGE_BOMB
 
 LotusStreet3Hidden:
-	hiddenitem MAX_ETHER, EVENT_GEN_LOTUS_STREET3_HIDDEN
+	hiddenitem ETHER, EVENT_GEN_LOTUS_STREET3_HIDDEN
 
 LotusStreet3GiftHermit:
 	faceplayer

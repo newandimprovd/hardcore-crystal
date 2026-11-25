@@ -10,19 +10,16 @@ AxiomStreet14Pickup:
 	itemball TM_ROAR
 
 AxiomStreet14Hidden:
-	hiddenitem MAX_REVIVE, EVENT_GEN_AXIOM_STREET14_HIDDEN
+	hiddenitem REVIVE, EVENT_GEN_AXIOM_STREET14_HIDDEN
 
 AxiomStreet14Hermit:
 	jumptextfaceplayer AxiomStreet14HermitText
 
 AxiomStreet14HermitText:
-	text "I am hiding from"
-	line "my own audit. It"
-	para "is going very"
-	line "well. The audit"
-	para "has not found me."
-	line "It has found my"
-	para "sister."
+	text "I'm a robot. I'm"
+	line "not allowed to say"
+	para "that. Beep. I"
+	line "mean, 'tree'."
 	done
 
 AxiomStreet14AfterText:

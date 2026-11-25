@@ -24,17 +24,25 @@ def autotile(m, kit, rng):
 
     cells = [(x, y) for y in range(m.h) for x in range(m.w) if m.get(x, y) in walls]
     for x, y in cells:
-        if open_(x, y + 1):
-            role = "facade"
-        elif open_(x + 1, y):
-            role = "side_e"
-        elif open_(x - 1, y):
-            role = "side_w"
-        elif open_(x, y - 1):
-            role = "roof"
-        else:
-            role = "mass"
+        n, e, s, w = open_(x, y - 1), open_(x + 1, y), open_(x, y + 1), open_(x - 1, y)
+        role = box_role(n, e, s, w)
+        if role not in auto:  # a tileset without the box kit: the four plain roles
+            role = "facade" if s else "side_e" if e else "side_w" if w else "roof" if n else "mass"
         m.set(x, y, rng.choice(auto[role]))
+
+
+def box_role(n, e, s, w):
+    """The wall block that fits the open sides of a cell (n, e, s, w: is there floor on that side).  A building front (south) wins over everything and
+    only gains a corner post where the street also runs along its end; on a roof the parapet (north) and the side walls (east, west) meet in corners."""
+    if s:
+        return "facade_ew" if e and w else "facade_e" if e else "facade_w" if w else "facade"
+    if e and w:
+        return "roof_new" if n else "roof_ew"
+    if n and e:
+        return "corner_ne"
+    if n and w:
+        return "corner_nw"
+    return "side_e" if e else "side_w" if w else "roof" if n else "mass"
 
 
 def reach(m, kit, start):

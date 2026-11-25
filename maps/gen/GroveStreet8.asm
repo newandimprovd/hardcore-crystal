@@ -13,11 +13,11 @@ GroveStreet8Hermit:
 	jumptextfaceplayer GroveStreet8HermitText
 
 GroveStreet8HermitText:
-	text "There is a"
-	line "mushroom here that"
-	para "agrees with"
-	line "everything. I call"
-	para "it my spouse."
+	text "This tree is my"
+	line "friend. The tree"
+	para "has not said so."
+	line "It also has not"
+	para "said no."
 	done
 
 GroveStreet8AfterText:

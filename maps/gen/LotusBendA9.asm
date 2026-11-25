@@ -13,12 +13,11 @@ LotusBendA9Hermit:
 	jumptextfaceplayer LotusBendA9HermitText
 
 LotusBendA9HermitText:
-	text "I keep a journal."
-	line "Today's entry:"
-	para "'Same.'"
-	line "Yesterday's:"
-	para "'Same.' The day"
-	line "before: 'Same.'"
+	text "The waves keep"
+	line "saying 'shh'. I"
+	para "think they're"
+	line "embarrassed for"
+	para "us."
 	done
 
 LotusBendA9_MapEvents:

@@ -13,12 +13,9 @@ DisBendB2Hermit:
 	jumptextfaceplayer DisBendB2HermitText
 
 DisBendB2HermitText:
-	text "I am the last"
-	line "honest man down"
-	para "here. Not by"
-	line "choice. I could"
-	para "not find the other"
-	line "kind."
+	text "Be careful. The"
+	line "trainers are the"
+	para "nice ones."
 	done
 
 DisBendB2_MapEvents:

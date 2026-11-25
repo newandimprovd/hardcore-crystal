@@ -13,11 +13,11 @@ LotusBendB12Hermit:
 	jumptextfaceplayer LotusBendB12HermitText
 
 LotusBendB12HermitText:
-	text "I've been lying on"
-	line "this beach for"
-	para "eleven years. The"
-	line "tide has asked me"
-	para "to move twice."
+	text "Everyone is so"
+	line "relaxed here."
+	para "That's what giving"
+	line "up looks like with"
+	para "a tan."
 	done
 
 LotusBendB12_MapEvents:

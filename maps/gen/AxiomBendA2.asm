@@ -13,10 +13,11 @@ AxiomBendA2Hermit:
 	jumptextfaceplayer AxiomBendA2HermitText
 
 AxiomBendA2HermitText:
-	text "I'm a robot. I'm"
-	line "not allowed to say"
-	para "that. Beep. I"
-	line "mean, 'tree'."
+	text "I have proven that"
+	line "I exist. It took"
+	para "six months. The"
+	line "proof expired on"
+	para "Tuesday."
 	done
 
 AxiomBendA2_MapEvents:

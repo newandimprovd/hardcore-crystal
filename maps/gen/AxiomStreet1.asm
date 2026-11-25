@@ -9,17 +9,6 @@ AxiomStreet1_MapScripts:
 AxiomStreet1Pickup:
 	itemball GREAT_BALL
 
-AxiomStreet1Hermit:
-	jumptextfaceplayer AxiomStreet1HermitText
-
-AxiomStreet1HermitText:
-	text "I have proven that"
-	line "I exist. It took"
-	para "six months. The"
-	line "proof expired on"
-	para "Tuesday."
-	done
-
 AxiomStreet1AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -152,8 +141,7 @@ AxiomStreet1_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet1Pickup, EVENT_GEN_AXIOM_STREET1_PICKUP
-	object_event  6,  8, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomStreet1Hermit, -1
+	object_event 12, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet1Pickup, EVENT_GEN_AXIOM_STREET1_PICKUP
 	object_event 16, 24, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet1Trainer0, -1
 	object_event 17, 20, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet1Trainer1, -1
 	object_event  8, 16, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet1Trainer2, -1

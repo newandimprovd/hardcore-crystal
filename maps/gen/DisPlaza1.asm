@@ -10,11 +10,13 @@ DisPlaza1Fountain0:
 	jumptext DisPlaza1Fountain0Text
 
 DisPlaza1Fountain0Text:
-	text "WAILSPRING. Wail"
-	line "plus spring. The"
-	para "sound is not a"
-	line "recording. The"
-	para "recording quit."
+	text "STYXPENSE"
+	line "FOUNTAIN. Styx"
+	para "plus expense."
+	line "Toll: one soul."
+	para "Coins accepted"
+	line "when souls are out"
+	para "of stock."
 	done
 
 DisPlaza1DebateA:
@@ -249,14 +251,14 @@ DisPlaza1_MapEvents:
 	bg_event  8,  7, BGEVENT_READ, DisPlaza1Fountain0
 
 	def_object_events
-	object_event 13,  7, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateA, -1
-	object_event 14,  7, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateB, -1
-	object_event 12, 29, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Giver, -1
+	object_event 12,  7, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateA, -1
+	object_event 13,  7, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1DebateB, -1
+	object_event 13, 29, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Giver, -1
 	object_event  3, 10, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona0, -1
 	object_event  4, 14, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona2, -1
 	object_event  4, 11, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona3, -1
-	object_event 26, 19, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona5, -1
-	object_event  7, 24, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona7, -1
-	object_event  6, 26, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie6, -1
-	object_event 10, 27, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Duel, -1
+	object_event 25, 19, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona5, -1
+	object_event  6, 24, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisPlaza1Persona7, -1
+	object_event  7, 26, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisPlaza1Townie6, -1
+	object_event 30, 27, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisPlaza1Duel, -1
 

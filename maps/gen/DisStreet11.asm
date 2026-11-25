@@ -9,57 +9,6 @@ DisStreet11_MapScripts:
 DisStreet11Pickup:
 	itemball REVIVE
 
-DisStreet11Hidden:
-	hiddenitem MAX_ETHER, EVENT_GEN_DIS_STREET11_HIDDEN
-
-DisStreet11GiftHermit:
-	faceplayer
-	opentext
-	checkevent EVENT_GEN_DIS_STREET11_HGIFT
-	iftrue .Done
-	writetext DisStreet11GiftHermitText
-	waitbutton
-	verbosegiveitem HEAL_CHARM
-	iffalse .NoRoom
-	setevent EVENT_GEN_DIS_STREET11_HGIFT
-.Done:
-	writetext DisStreet11GiftHermitAfterText
-	waitbutton
-	closetext
-	end
-
-.NoRoom:
-	writetext DisStreet11GiftHermitNoRoomText
-	waitbutton
-	closetext
-	end
-
-DisStreet11GiftHermitText:
-	text "I'm a monk of the"
-	line "long walk. Take"
-	para "this HEAL CHARM."
-	line "Your party mends a"
-	para "little with every"
-	line "step. Not the"
-	para "dead, though."
-	line "Never the dead."
-	done
-
-DisStreet11GiftHermitAfterText:
-	text "Keep walking. It's"
-	line "the only thing"
-	para "down here that's"
-	line "free."
-	done
-
-DisStreet11GiftHermitNoRoomText:
-	text "Your bag is full."
-	line "The gift will"
-	para "wait. So will I. I"
-	line "have nothing else"
-	para "on."
-	done
-
 DisStreet11AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -185,11 +134,9 @@ DisStreet11_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 10, 24, BGEVENT_ITEM, DisStreet11Hidden
 
 	def_object_events
-	object_event  3, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet11Pickup, EVENT_GEN_DIS_STREET11_PICKUP
-	object_event  7, 16, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisStreet11GiftHermit, -1
+	object_event 19, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet11Pickup, EVENT_GEN_DIS_STREET11_PICKUP
 	object_event 16, 24, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer0, -1
 	object_event 16, 20, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer1, -1
 	object_event 21, 20, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet11Trainer2, -1

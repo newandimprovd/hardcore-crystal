@@ -13,11 +13,11 @@ TitheBendB9Hermit:
 	jumptextfaceplayer TitheBendB9HermitText
 
 TitheBendB9HermitText:
-	text "Shh. The trainers"
-	line "can't see you when"
-	para "you sit down. I"
-	line "have been sitting"
-	para "down since March."
+	text "I used to be a"
+	line "loan officer. Now"
+	para "I'm a loan."
+	line "Somebody owes me"
+	para "an apology."
 	done
 
 TitheBendB9_MapEvents:

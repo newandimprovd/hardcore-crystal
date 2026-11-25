@@ -9,19 +9,6 @@ LotusStreet5_MapScripts:
 LotusStreet5Pickup:
 	itemball TM_SHADOW_BALL
 
-LotusStreet5Hidden:
-	hiddenitem PP_UP, EVENT_GEN_LOTUS_STREET5_HIDDEN
-
-LotusStreet5Hermit:
-	jumptextfaceplayer LotusStreet5HermitText
-
-LotusStreet5HermitText:
-	text "I came here to"
-	line "find myself. I"
-	para "found a towel. It"
-	line "is a start."
-	done
-
 LotusStreet5AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -162,11 +149,9 @@ LotusStreet5_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 12, 20, BGEVENT_ITEM, LotusStreet5Hidden
 
 	def_object_events
-	object_event 21, 27, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet5Pickup, EVENT_GEN_LOTUS_STREET5_PICKUP
-	object_event 13, 24, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusStreet5Hermit, -1
+	object_event  7,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet5Pickup, EVENT_GEN_LOTUS_STREET5_PICKUP
 	object_event  6, 28, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet5Trainer0, -1
 	object_event 11, 28, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet5Trainer1, -1
 	object_event  2, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet5Trainer2, -1

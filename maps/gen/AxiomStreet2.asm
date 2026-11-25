@@ -16,11 +16,10 @@ AxiomStreet2Hermit:
 	jumptextfaceplayer AxiomStreet2HermitText
 
 AxiomStreet2HermitText:
-	text "This glade is not"
-	line "on the map. I am"
-	para "not on the map. We"
-	line "are a perfect"
-	para "couple."
+	text "I'm a robot. I'm"
+	line "not allowed to say"
+	para "that. Beep. I"
+	line "mean, 'tree'."
 	done
 
 AxiomStreet2AfterText:

@@ -10,11 +10,11 @@ TitheBendB14Hermit:
 	jumptextfaceplayer TitheBendB14HermitText
 
 TitheBendB14HermitText:
-	text "People on the road"
-	line "keep screaming and"
-	para "fainting. I think"
-	line "it's a wellness"
-	para "program."
+	text "The pond is clean."
+	line "That is because"
+	para "I've been drinking"
+	line "all the dirty"
+	para "bits."
 	done
 
 TitheBendB14_MapEvents:

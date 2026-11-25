@@ -13,10 +13,11 @@ AxiomBendB12Hermit:
 	jumptextfaceplayer AxiomBendB12HermitText
 
 AxiomBendB12HermitText:
-	text "I'm a robot. I'm"
-	line "not allowed to say"
-	para "that. Beep. I"
-	line "mean, 'tree'."
+	text "A bot asked me for"
+	line "ID. I showed it a"
+	para "leaf. It accepted."
+	line "We are now"
+	para "partners."
 	done
 
 AxiomBendB12_MapEvents:
@@ -27,8 +28,8 @@ AxiomBendB12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 17, 18, BGEVENT_ITEM, AxiomBendB12Hidden
+	bg_event 16, 16, BGEVENT_ITEM, AxiomBendB12Hidden
 
 	def_object_events
-	object_event 16, 20, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomBendB12Hermit, -1
+	object_event 17, 21, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomBendB12Hermit, -1
 

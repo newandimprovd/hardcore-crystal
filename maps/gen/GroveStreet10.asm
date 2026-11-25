@@ -16,11 +16,12 @@ GroveStreet10Hermit:
 	jumptextfaceplayer GroveStreet10HermitText
 
 GroveStreet10HermitText:
-	text "The mushrooms here"
-	line "talk. Mostly they"
-	para "say 'sell'. I"
-	line "don't know what."
-	para "I'm scared."
+	text "I tried to join"
+	line "the commune. They"
+	para "asked for my"
+	line "savings, my shoes"
+	para "and my opinions. I"
+	line "kept the opinions."
 	done
 
 GroveStreet10PurgFlagScript:

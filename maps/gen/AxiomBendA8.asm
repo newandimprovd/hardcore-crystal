@@ -13,9 +13,10 @@ AxiomBendA8Hermit:
 	jumptextfaceplayer AxiomBendA8HermitText
 
 AxiomBendA8HermitText:
-	text "Don't speak"
-	line "loudly. The leaves"
-	para "are audited."
+	text "The glitch in the"
+	line "system is me."
+	para "Please don't patch"
+	line "me."
 	done
 
 AxiomBendA8_MapEvents:

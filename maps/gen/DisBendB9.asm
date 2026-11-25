@@ -13,12 +13,11 @@ DisBendB9Hermit:
 	jumptextfaceplayer DisBendB9HermitText
 
 DisBendB9HermitText:
-	text "The ground here is"
-	line "warm. It is the"
-	para "only kindness I"
-	line "have been offered"
-	para "since the"
-	line "incident."
+	text "A demon asked me"
+	line "for my soul. I"
+	para "said it was in the"
+	line "shop. He is"
+	para "waiting."
 	done
 
 DisBendB9_MapEvents:

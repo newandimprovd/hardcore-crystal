@@ -16,10 +16,10 @@ DisStreet4Hermit:
 	jumptextfaceplayer DisStreet4HermitText
 
 DisStreet4HermitText:
-	text "I am not hiding. I"
-	line "am between"
-	para "circles. It is a"
-	line "zoning issue."
+	text "I have a theory"
+	line "that the fire is"
+	para "only paperwork. It"
+	line "burns the same."
 	done
 
 DisStreet4AfterText:

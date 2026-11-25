@@ -13,10 +13,12 @@ GroveBendA4Hermit:
 	jumptextfaceplayer GroveBendA4HermitText
 
 GroveBendA4HermitText:
-	text "I am meditating."
-	line "Do not mind the"
-	para "screaming. It is a"
-	line "mantra. A bad one."
+	text "The trainers out"
+	line "there are so"
+	para "friendly. They"
+	line "shout 'peace' and"
+	para "then try to kill"
+	line "you."
 	done
 
 GroveBendA4_MapEvents:

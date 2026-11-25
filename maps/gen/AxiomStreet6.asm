@@ -52,12 +52,12 @@ AxiomStreet6Hermit:
 	jumptextfaceplayer AxiomStreet6HermitText
 
 AxiomStreet6HermitText:
-	text "Do not tell them"
-	line "where I am. They"
-	para "will say they"
-	line "already know. It"
-	para "is a bluff."
-	line "Probably."
+	text "Form 27-B:"
+	line "'Request to leave"
+	para "Form 27-A'. I"
+	line "filed it. Nobody"
+	para "replied. This is"
+	line "freedom."
 	done
 
 AxiomStreet6AfterText:
