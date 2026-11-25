@@ -62,14 +62,6 @@ LotusStreet3GiftHermitNoRoomText:
 	para "on."
 	done
 
-LotusStreet3SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet3BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet3AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -82,23 +74,112 @@ LotusStreet3AfterScript:
 	closetext
 	end
 
+LotusStreet3Trainer0SeenText:
+	text "They told me"
+	line "paradise had no"
+	para "violence. They"
+	line "didn't say I"
+	para "wasn't violence."
+	done
+
+LotusStreet3Trainer0BeatenText:
+	text "It's all right."
+	line "They'll write me a"
+	para "very nice little"
+	line "sign."
+	done
+
 LotusStreet3Trainer0:
-	trainer L_SWIMMERF, 130, EVENT_GEN_LOTUS_STREET3_0, LotusStreet3SeenText, LotusStreet3BeatenText, 0, LotusStreet3AfterScript
+	trainer L_SWIMMERF, 130, EVENT_GEN_LOTUS_STREET3_0, LotusStreet3Trainer0SeenText, LotusStreet3Trainer0BeatenText, 0, LotusStreet3AfterScript
+
+LotusStreet3Trainer1SeenText:
+	text "Sorry, I can't"
+	line "hear you. Over the"
+	para "sound of my own"
+	line "bliss."
+	done
+
+LotusStreet3Trainer1BeatenText:
+	text "I'm not hurt. I'm"
+	line "just very, very"
+	para "horizontal."
+	done
 
 LotusStreet3Trainer1:
-	trainer L_SWIMMERM, 131, EVENT_GEN_LOTUS_STREET3_1, LotusStreet3SeenText, LotusStreet3BeatenText, 0, LotusStreet3AfterScript
+	trainer L_SWIMMERM, 131, EVENT_GEN_LOTUS_STREET3_1, LotusStreet3Trainer1SeenText, LotusStreet3Trainer1BeatenText, 0, LotusStreet3AfterScript
+
+LotusStreet3Trainer2SeenText:
+	text "A death in the"
+	line "afternoon. A river"
+	para "at dusk. That's"
+	line "all I want,"
+	para "friend. Spare the"
+	line "face."
+	done
+
+LotusStreet3Trainer2BeatenText:
+	text "My memory is"
+	line "foggy. Who's that?"
+	para "Who am I? Who are"
+	line "you? Oh right. Ow."
+	done
 
 LotusStreet3Trainer2:
-	trainer L_LOUNGER, 128, EVENT_GEN_LOTUS_STREET3_2, LotusStreet3SeenText, LotusStreet3BeatenText, 0, LotusStreet3AfterScript
+	trainer L_LOUNGER, 128, EVENT_GEN_LOTUS_STREET3_2, LotusStreet3Trainer2SeenText, LotusStreet3Trainer2BeatenText, 0, LotusStreet3AfterScript
+
+LotusStreet3Trainer3SeenText:
+	text "Sunscreen is"
+	line "optional. Sunburn"
+	para "is a subscription"
+	line "tier."
+	done
+
+LotusStreet3Trainer3BeatenText:
+	text "Oof. I'm moving to"
+	line "the mountains."
+	para "Forever. Starting"
+	line "after this nap."
+	done
 
 LotusStreet3Trainer3:
-	trainer L_LOUNGER, 129, EVENT_GEN_LOTUS_STREET3_3, LotusStreet3SeenText, LotusStreet3BeatenText, 0, LotusStreet3AfterScript
+	trainer L_LOUNGER, 129, EVENT_GEN_LOTUS_STREET3_3, LotusStreet3Trainer3SeenText, LotusStreet3Trainer3BeatenText, 0, LotusStreet3AfterScript
+
+LotusStreet3Trainer4SeenText:
+	text "This beach was a"
+	line "gift from my ex."
+	para "It has since been"
+	line "repossessed. I'm"
+	para "fighting for"
+	line "squatters' rights."
+	done
+
+LotusStreet3Trainer4BeatenText:
+	text "This is the worst"
+	line "relapse of my"
+	para "life. I feel"
+	line "awake."
+	done
 
 LotusStreet3Trainer4:
-	trainer L_SWIMMERF, 131, EVENT_GEN_LOTUS_STREET3_4, LotusStreet3SeenText, LotusStreet3BeatenText, 0, LotusStreet3AfterScript
+	trainer L_SWIMMERF, 131, EVENT_GEN_LOTUS_STREET3_4, LotusStreet3Trainer4SeenText, LotusStreet3Trainer4BeatenText, 0, LotusStreet3AfterScript
+
+LotusStreet3Trainer5SeenText:
+	text "I came here to"
+	line "relax. You are a"
+	para "threat to my"
+	line "relaxation. En"
+	para "garde, on a towel."
+	done
+
+LotusStreet3Trainer5BeatenText:
+	text "Put me on the"
+	line "sand. Facing the"
+	para "sun. I want a tan"
+	line "for the funeral."
+	done
 
 LotusStreet3Trainer5:
-	trainer L_LIFEGUARD, 130, EVENT_GEN_LOTUS_STREET3_5, LotusStreet3SeenText, LotusStreet3BeatenText, 0, LotusStreet3AfterScript
+	trainer L_LIFEGUARD, 130, EVENT_GEN_LOTUS_STREET3_5, LotusStreet3Trainer5SeenText, LotusStreet3Trainer5BeatenText, 0, LotusStreet3AfterScript
 
 LotusStreet3_MapEvents:
 	db 0, 0 ; filler

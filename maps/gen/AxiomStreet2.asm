@@ -23,14 +23,6 @@ AxiomStreet2HermitText:
 	para "couple."
 	done
 
-AxiomStreet2SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet2BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet2AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -43,26 +35,128 @@ AxiomStreet2AfterScript:
 	closetext
 	end
 
+AxiomStreet2Trainer0SeenText:
+	text "I was a person"
+	line "before the update."
+	para "Now I'm a better"
+	line "person with more"
+	para "bugs."
+	done
+
+AxiomStreet2Trainer0BeatenText:
+	text "Citizen, you are"
+	line "very efficient. It"
+	para "is not a"
+	line "compliment."
+	done
+
 AxiomStreet2Trainer0:
-	trainer U_DRONE, 128, EVENT_GEN_AXIOM_STREET2_0, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer U_DRONE, 128, EVENT_GEN_AXIOM_STREET2_0, AxiomStreet2Trainer0SeenText, AxiomStreet2Trainer0BeatenText, 0, AxiomStreet2AfterScript
+
+AxiomStreet2Trainer1SeenText:
+	text "Be advised: your"
+	line "death has been"
+	para "pre-approved. I am"
+	line "only the courier."
+	done
+
+AxiomStreet2Trainer1BeatenText:
+	text "SYSTEM FAILURE."
+	line "THIS WAS NOT IN"
+	para "THE MANUAL."
+	done
 
 AxiomStreet2Trainer1:
-	trainer U_SERF, 129, EVENT_GEN_AXIOM_STREET2_1, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer U_SERF, 129, EVENT_GEN_AXIOM_STREET2_1, AxiomStreet2Trainer1SeenText, AxiomStreet2Trainer1BeatenText, 0, AxiomStreet2AfterScript
+
+AxiomStreet2Trainer2SeenText:
+	text "I'm an expert in"
+	line "your kind. Bleed"
+	para "on this and I will"
+	line "cite you."
+	done
+
+AxiomStreet2Trainer2BeatenText:
+	text "I did not feel"
+	line "that. I did not"
+	para "feel that. I did"
+	line "not feel that."
+	done
 
 AxiomStreet2Trainer2:
-	trainer U_WARDBOT, 129, EVENT_GEN_AXIOM_STREET2_2, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer U_WARDBOT, 129, EVENT_GEN_AXIOM_STREET2_2, AxiomStreet2Trainer2SeenText, AxiomStreet2Trainer2BeatenText, 0, AxiomStreet2AfterScript
+
+AxiomStreet2Trainer3SeenText:
+	text "Your family tree"
+	line "has been flagged."
+	para "Your family tree"
+	line "is a hedge."
+	done
+
+AxiomStreet2Trainer3BeatenText:
+	text "Termination"
+	line "logged. Please"
+	para "enjoy your"
+	line "continued"
+	para "existence."
+	done
 
 AxiomStreet2Trainer3:
-	trainer U_DOCTOR, 129, EVENT_GEN_AXIOM_STREET2_3, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer U_DOCTOR, 129, EVENT_GEN_AXIOM_STREET2_3, AxiomStreet2Trainer3SeenText, AxiomStreet2Trainer3BeatenText, 0, AxiomStreet2AfterScript
+
+AxiomStreet2Trainer4SeenText:
+	text "The wake has a"
+	line "loyalty program."
+	para "Ten deaths, one"
+	line "free resurrection."
+	para "I'm so close."
+	line "Please help."
+	done
+
+AxiomStreet2Trainer4BeatenText:
+	text "I am sorry. I am"
+	line "sorry. This is the"
+	para "sorriest output of"
+	line "my life."
+	done
 
 AxiomStreet2Trainer4:
-	trainer U_BOT, 130, EVENT_GEN_AXIOM_STREET2_4, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer U_BOT, 130, EVENT_GEN_AXIOM_STREET2_4, AxiomStreet2Trainer4SeenText, AxiomStreet2Trainer4BeatenText, 0, AxiomStreet2AfterScript
+
+AxiomStreet2Trainer5SeenText:
+	text "State-approved"
+	line "attraction only."
+	para "You are not"
+	line "approved. Hold my"
+	para "feelings."
+	done
+
+AxiomStreet2Trainer5BeatenText:
+	text "ERROR."
+	line "HUMILIATION."
+	para "REBOOTING."
+	done
 
 AxiomStreet2Trainer5:
-	trainer U_COURIER, 128, EVENT_GEN_AXIOM_STREET2_5, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer U_COURIER, 128, EVENT_GEN_AXIOM_STREET2_5, AxiomStreet2Trainer5SeenText, AxiomStreet2Trainer5BeatenText, 0, AxiomStreet2AfterScript
+
+AxiomStreet2Trainer6SeenText:
+	text "I am happy. I am"
+	line "required to be"
+	para "happy. Please do"
+	line "not test my"
+	para "happiness."
+	done
+
+AxiomStreet2Trainer6BeatenText:
+	text "I have unfulfilled"
+	line "tasks. I have a"
+	para "lot of them."
+	line "Delete them."
+	done
 
 AxiomStreet2Trainer6:
-	trainer U_MADDOC, 130, EVENT_GEN_AXIOM_STREET2_6, AxiomStreet2SeenText, AxiomStreet2BeatenText, 0, AxiomStreet2AfterScript
+	trainer U_MADDOC, 130, EVENT_GEN_AXIOM_STREET2_6, AxiomStreet2Trainer6SeenText, AxiomStreet2Trainer6BeatenText, 0, AxiomStreet2AfterScript
 
 AxiomStreet2_MapEvents:
 	db 0, 0 ; filler

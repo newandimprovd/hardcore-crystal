@@ -22,14 +22,6 @@ LotusStreet14HermitText:
 	line "vacation ever."
 	done
 
-LotusStreet14SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet14BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet14AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -42,26 +34,128 @@ LotusStreet14AfterScript:
 	closetext
 	end
 
+LotusStreet14Trainer0SeenText:
+	text "Do you know how"
+	line "long I've been"
+	para "waiting for a"
+	line "worthy opponent?"
+	para "Eleven coconuts'"
+	line "worth."
+	done
+
+LotusStreet14Trainer0BeatenText:
+	text "Don't put me in a"
+	line "box. Put me in a"
+	para "boat. Push it out."
+	done
+
 LotusStreet14Trainer0:
-	trainer L_SUNBATHER, 136, EVENT_GEN_LOTUS_STREET14_0, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_SUNBATHER, 136, EVENT_GEN_LOTUS_STREET14_0, LotusStreet14Trainer0SeenText, LotusStreet14Trainer0BeatenText, 0, LotusStreet14AfterScript
+
+LotusStreet14Trainer1SeenText:
+	text "A seagull stole my"
+	line "lunch and my"
+	para "dignity. Please"
+	line "restore at least"
+	para "one."
+	done
+
+LotusStreet14Trainer1BeatenText:
+	text "I lost to a"
+	line "stranger. How very"
+	para "'resort' of me."
+	done
 
 LotusStreet14Trainer1:
-	trainer L_SWIMMERM, 138, EVENT_GEN_LOTUS_STREET14_1, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_SWIMMERM, 138, EVENT_GEN_LOTUS_STREET14_1, LotusStreet14Trainer1SeenText, LotusStreet14Trainer1BeatenText, 0, LotusStreet14AfterScript
+
+LotusStreet14Trainer2SeenText:
+	text "I had a dream"
+	line "you'd show up. I"
+	para "woke up angry"
+	line "about it."
+	done
+
+LotusStreet14Trainer2BeatenText:
+	text "Do you know how"
+	line "many people die at"
+	para "this resort?"
+	line "Neither do I. It's"
+	para "a lot."
+	done
 
 LotusStreet14Trainer2:
-	trainer L_SWIMMERF, 142, EVENT_GEN_LOTUS_STREET14_2, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_SWIMMERF, 142, EVENT_GEN_LOTUS_STREET14_2, LotusStreet14Trainer2SeenText, LotusStreet14Trainer2BeatenText, 0, LotusStreet14AfterScript
+
+LotusStreet14Trainer3SeenText:
+	text "Everything is all"
+	line "inclusive here."
+	para "Even the regret."
+	done
+
+LotusStreet14Trainer3BeatenText:
+	text "I was hoping to"
+	line "retire here. I'm"
+	para "retiring right"
+	line "now."
+	done
 
 LotusStreet14Trainer3:
-	trainer L_TOURISTF, 135, EVENT_GEN_LOTUS_STREET14_3, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_TOURISTF, 135, EVENT_GEN_LOTUS_STREET14_3, LotusStreet14Trainer3SeenText, LotusStreet14Trainer3BeatenText, 0, LotusStreet14AfterScript
+
+LotusStreet14Trainer4SeenText:
+	text "Stay awhile! Stay"
+	line "forever! I've been"
+	para "told to say that."
+	line "I don't know by"
+	para "whom."
+	done
+
+LotusStreet14Trainer4BeatenText:
+	text "Do you ever just"
+	line "cry in a pool?"
+	para "Because I'm about"
+	line "to."
+	done
 
 LotusStreet14Trainer4:
-	trainer L_BELLHOP, 131, EVENT_GEN_LOTUS_STREET14_4, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_BELLHOP, 131, EVENT_GEN_LOTUS_STREET14_4, LotusStreet14Trainer4SeenText, LotusStreet14Trainer4BeatenText, 0, LotusStreet14AfterScript
+
+LotusStreet14Trainer5SeenText:
+	text "Sand in my shoes."
+	line "Sand in my soul."
+	para "Sand in my last"
+	line "will and"
+	para "testament."
+	done
+
+LotusStreet14Trainer5BeatenText:
+	text "I should've stayed"
+	line "in the hammock."
+	para "The hammock never"
+	line "hit me."
+	done
 
 LotusStreet14Trainer5:
-	trainer L_SUNBATHER, 137, EVENT_GEN_LOTUS_STREET14_5, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_SUNBATHER, 137, EVENT_GEN_LOTUS_STREET14_5, LotusStreet14Trainer5SeenText, LotusStreet14Trainer5BeatenText, 0, LotusStreet14AfterScript
+
+LotusStreet14Trainer6SeenText:
+	text "Do you know how"
+	line "long I've been"
+	para "waiting for a"
+	line "worthy opponent?"
+	para "Eleven coconuts'"
+	line "worth."
+	done
+
+LotusStreet14Trainer6BeatenText:
+	text "Bye, then. The"
+	line "tide will see to"
+	para "the rest."
+	done
 
 LotusStreet14Trainer6:
-	trainer L_TOURISTG, 130, EVENT_GEN_LOTUS_STREET14_6, LotusStreet14SeenText, LotusStreet14BeatenText, 0, LotusStreet14AfterScript
+	trainer L_TOURISTG, 130, EVENT_GEN_LOTUS_STREET14_6, LotusStreet14Trainer6SeenText, LotusStreet14Trainer6BeatenText, 0, LotusStreet14AfterScript
 
 LotusStreet14_MapEvents:
 	db 0, 0 ; filler

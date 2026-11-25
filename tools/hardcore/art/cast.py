@@ -83,7 +83,7 @@ add("judge", hair="bushy", hairc="S", torso="robe", legs="robe", extra=("collar"
 add("witch", hair="long", hat="witch", torso="dress", legs="robe", face="tired", extra=("glasses",))
 add("firebreather", hair="mohawk", hairc="C", torso="bare", legs="shorts", legsc="C", face="grin", extra=("fangs",))
 add("demon_lord", hair="bald", hat="horns", hatc="D", torso="robe", legs="robe", width=1, face="angry", extra=("fangs", "chain", "tail"))
-add("finnegan", hair="bald", torso="robe", legs="robe", face="tired", extra=("whisker_hair",), beardc="C", torsoc="C")
+add("finnegan", hair="bald", torso="robe", legs="robe", face="tired", extra=("whisker_hair",), beardc="C", torsoc="C", distort=True)
 
 # ---------------------------------------------------------------------------------------------------- Alpha 3: the people of the books
 add("joyce", hat="tophat", hatc="D", hair="short", hairc="S", torso="coat", torsoc="C", legsc="D", face="tired", extra=("glasses", "tie"))

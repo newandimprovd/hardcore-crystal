@@ -60,14 +60,6 @@ LotusStreet13GiftHermitNoRoomText:
 	para "on."
 	done
 
-LotusStreet13SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet13BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet13AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -80,26 +72,125 @@ LotusStreet13AfterScript:
 	closetext
 	end
 
+LotusStreet13Trainer0SeenText:
+	text "My grief used to"
+	line "weigh a ton. They"
+	para "sold it back to me"
+	line "by the gram. Now I"
+	para "fight lighter."
+	done
+
+LotusStreet13Trainer0BeatenText:
+	text "I need an aloe"
+	line "vera. And a"
+	para "priest. In"
+	line "whichever order."
+	done
+
 LotusStreet13Trainer0:
-	trainer L_SWIMMERF, 140, EVENT_GEN_LOTUS_STREET13_0, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_SWIMMERF, 140, EVENT_GEN_LOTUS_STREET13_0, LotusStreet13Trainer0SeenText, LotusStreet13Trainer0BeatenText, 0, LotusStreet13AfterScript
+
+LotusStreet13Trainer1SeenText:
+	text "My sunscreen is"
+	line "SPF 50 and my"
+	para "morals are SPF 5."
+	line "One of them has"
+	para "failed."
+	done
+
+LotusStreet13Trainer1BeatenText:
+	text "Please tell the"
+	line "bartender I paid."
+	para "I didn't. Please"
+	line "tell him I did."
+	done
 
 LotusStreet13Trainer1:
-	trainer L_LOUNGER, 137, EVENT_GEN_LOTUS_STREET13_1, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_LOUNGER, 137, EVENT_GEN_LOTUS_STREET13_1, LotusStreet13Trainer1SeenText, LotusStreet13Trainer1BeatenText, 0, LotusStreet13AfterScript
+
+LotusStreet13Trainer2SeenText:
+	text "I would offer you"
+	line "a drink, but I"
+	para "forgot how."
+	done
+
+LotusStreet13Trainer2BeatenText:
+	text "I'm a happy man."
+	line "I'm a happy, flat"
+	para "man."
+	done
 
 LotusStreet13Trainer2:
-	trainer L_BELLHOP, 130, EVENT_GEN_LOTUS_STREET13_2, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_BELLHOP, 130, EVENT_GEN_LOTUS_STREET13_2, LotusStreet13Trainer2SeenText, LotusStreet13Trainer2BeatenText, 0, LotusStreet13AfterScript
+
+LotusStreet13Trainer3SeenText:
+	text "Tip the waiter,"
+	line "tip the lifeguard,"
+	para "tip over. All the"
+	line "same to me."
+	done
+
+LotusStreet13Trainer3BeatenText:
+	text "Honestly, this is"
+	line "the most"
+	para "excitement I've"
+	line "had in a decade."
+	done
 
 LotusStreet13Trainer3:
-	trainer L_SWIMMERF, 141, EVENT_GEN_LOTUS_STREET13_3, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_SWIMMERF, 141, EVENT_GEN_LOTUS_STREET13_3, LotusStreet13Trainer3SeenText, LotusStreet13Trainer3BeatenText, 0, LotusStreet13AfterScript
+
+LotusStreet13Trainer4SeenText:
+	text "Smile! It's"
+	line "mandatory. So is"
+	para "losing."
+	done
+
+LotusStreet13Trainer4BeatenText:
+	text "That was a very"
+	line "honest hit. Honest"
+	para "hits are the"
+	line "worst."
+	done
 
 LotusStreet13Trainer4:
-	trainer L_CLINICIAN, 132, EVENT_GEN_LOTUS_STREET13_4, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_CLINICIAN, 132, EVENT_GEN_LOTUS_STREET13_4, LotusStreet13Trainer4SeenText, LotusStreet13Trainer4BeatenText, 0, LotusStreet13AfterScript
+
+LotusStreet13Trainer5SeenText:
+	text "The ocean is very"
+	line "deep and so is my"
+	para "disappointment."
+	line "Let's duel in the"
+	para "shallows."
+	done
+
+LotusStreet13Trainer5BeatenText:
+	text "Beautiful. Please"
+	line "tell the bartender"
+	para "I tipped in"
+	line "advance."
+	done
 
 LotusStreet13Trainer5:
-	trainer L_SWIMMERM, 136, EVENT_GEN_LOTUS_STREET13_5, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_SWIMMERM, 136, EVENT_GEN_LOTUS_STREET13_5, LotusStreet13Trainer5SeenText, LotusStreet13Trainer5BeatenText, 0, LotusStreet13AfterScript
+
+LotusStreet13Trainer6SeenText:
+	text "Everyone's so"
+	line "friendly here."
+	para "That's how they"
+	line "get you."
+	done
+
+LotusStreet13Trainer6BeatenText:
+	text "Tell them I went"
+	line "peacefully. Tell"
+	para "them there was a"
+	line "lot of sunscreen"
+	para "involved."
+	done
 
 LotusStreet13Trainer6:
-	trainer L_SWIMMERM, 137, EVENT_GEN_LOTUS_STREET13_6, LotusStreet13SeenText, LotusStreet13BeatenText, 0, LotusStreet13AfterScript
+	trainer L_SWIMMERM, 137, EVENT_GEN_LOTUS_STREET13_6, LotusStreet13Trainer6SeenText, LotusStreet13Trainer6BeatenText, 0, LotusStreet13AfterScript
 
 LotusStreet13_MapEvents:
 	db 0, 0 ; filler

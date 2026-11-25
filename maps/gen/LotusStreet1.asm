@@ -23,14 +23,6 @@ LotusStreet1HermitText:
 	para "a tan."
 	done
 
-LotusStreet1SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet1BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet1AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -43,26 +35,123 @@ LotusStreet1AfterScript:
 	closetext
 	end
 
+LotusStreet1Trainer0SeenText:
+	text "You look like"
+	line "someone who still"
+	para "feels things."
+	line "Gross. Let me fix"
+	para "that."
+	done
+
+LotusStreet1Trainer0BeatenText:
+	text "A seagull is"
+	line "eating my shoe. I"
+	para "deserve this."
+	done
+
 LotusStreet1Trainer0:
-	trainer L_CLINICIAN, 129, EVENT_GEN_LOTUS_STREET1_0, LotusStreet1SeenText, LotusStreet1BeatenText, 0, LotusStreet1AfterScript
+	trainer L_CLINICIAN, 129, EVENT_GEN_LOTUS_STREET1_0, LotusStreet1Trainer0SeenText, LotusStreet1Trainer0BeatenText, 0, LotusStreet1AfterScript
+
+LotusStreet1Trainer1SeenText:
+	text "Go ahead. Take the"
+	line "first swing. I"
+	para "have all the time"
+	line "in the world. It's"
+	para "the only thing I"
+	line "own."
+	done
+
+LotusStreet1Trainer1BeatenText:
+	text "I'll be fine. A"
+	line "coconut will help."
+	para "A coconut to the"
+	line "head, perhaps."
+	done
 
 LotusStreet1Trainer1:
-	trainer L_SWIMMERM, 128, EVENT_GEN_LOTUS_STREET1_1, LotusStreet1SeenText, LotusStreet1BeatenText, 0, LotusStreet1AfterScript
+	trainer L_SWIMMERM, 128, EVENT_GEN_LOTUS_STREET1_1, LotusStreet1Trainer1SeenText, LotusStreet1Trainer1BeatenText, 0, LotusStreet1AfterScript
+
+LotusStreet1Trainer2SeenText:
+	text "Oh good, a"
+	line "visitor. I'll show"
+	para "you the grief"
+	line "clinic. Right"
+	para "after I wreck you."
+	done
+
+LotusStreet1Trainer2BeatenText:
+	text "I forgot to duck."
+	line "And I forgot to"
+	para "forgive you."
+	done
 
 LotusStreet1Trainer2:
-	trainer L_TOURISTF, 128, EVENT_GEN_LOTUS_STREET1_2, LotusStreet1SeenText, LotusStreet1BeatenText, 0, LotusStreet1AfterScript
+	trainer L_TOURISTF, 128, EVENT_GEN_LOTUS_STREET1_2, LotusStreet1Trainer2SeenText, LotusStreet1Trainer2BeatenText, 0, LotusStreet1AfterScript
+
+LotusStreet1Trainer3SeenText:
+	text "Relax. I'm only"
+	line "going to hit you a"
+	para "little. Then a"
+	line "lot. Then a little"
+	para "again."
+	done
+
+LotusStreet1Trainer3BeatenText:
+	text "You've ruined my"
+	line "chill. It was a"
+	para "delicate chill."
+	done
 
 LotusStreet1Trainer3:
-	trainer L_SWIMMERF, 128, EVENT_GEN_LOTUS_STREET1_3, LotusStreet1SeenText, LotusStreet1BeatenText, 0, LotusStreet1AfterScript
+	trainer L_SWIMMERF, 128, EVENT_GEN_LOTUS_STREET1_3, LotusStreet1Trainer3SeenText, LotusStreet1Trainer3BeatenText, 0, LotusStreet1AfterScript
+
+LotusStreet1Trainer4SeenText:
+	text "Don't cry! Crying"
+	line "is a premium"
+	para "feature. Fight!"
+	done
+
+LotusStreet1Trainer4BeatenText:
+	text "My vacation is"
+	line "over. I never got"
+	para "to ask for the"
+	line "cocktail umbrella."
+	done
 
 LotusStreet1Trainer4:
-	trainer L_WAITER, 128, EVENT_GEN_LOTUS_STREET1_4, LotusStreet1SeenText, LotusStreet1BeatenText, 0, LotusStreet1AfterScript
+	trainer L_WAITER, 128, EVENT_GEN_LOTUS_STREET1_4, LotusStreet1Trainer4SeenText, LotusStreet1Trainer4BeatenText, 0, LotusStreet1AfterScript
+
+LotusStreet1Trainer5SeenText:
+	text "My chair has been"
+	line "taken. By you. In"
+	para "spirit. Let me"
+	line "punish the spirit."
+	done
+
+LotusStreet1Trainer5BeatenText:
+	text "That was"
+	line "refreshing. Then"
+	para "it wasn't."
+	done
 
 LotusStreet1Trainer5:
-	trainer L_TOURISTF, 129, EVENT_GEN_LOTUS_STREET1_5, LotusStreet1SeenText, LotusStreet1BeatenText, 0, LotusStreet1AfterScript
+	trainer L_TOURISTF, 129, EVENT_GEN_LOTUS_STREET1_5, LotusStreet1Trainer5SeenText, LotusStreet1Trainer5BeatenText, 0, LotusStreet1AfterScript
+
+LotusStreet1Trainer6SeenText:
+	text "The sun is a bully"
+	line "and I'm its"
+	para "apprentice."
+	done
+
+LotusStreet1Trainer6BeatenText:
+	text "Hey, it's nice"
+	line "here. The sky. The"
+	para "sand. The sudden"
+	line "lack of pulse."
+	done
 
 LotusStreet1Trainer6:
-	trainer L_LIFEGUARD, 128, EVENT_GEN_LOTUS_STREET1_6, LotusStreet1SeenText, LotusStreet1BeatenText, 0, LotusStreet1AfterScript
+	trainer L_LIFEGUARD, 128, EVENT_GEN_LOTUS_STREET1_6, LotusStreet1Trainer6SeenText, LotusStreet1Trainer6BeatenText, 0, LotusStreet1AfterScript
 
 LotusStreet1_MapEvents:
 	db 0, 0 ; filler

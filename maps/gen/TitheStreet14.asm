@@ -23,14 +23,6 @@ TitheStreet14HermitText:
 	para "bits."
 	done
 
-TitheStreet14SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet14BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet14AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -43,23 +35,110 @@ TitheStreet14AfterScript:
 	closetext
 	end
 
+TitheStreet14Trainer0SeenText:
+	text "My team and I have"
+	line "a union. You are"
+	para "the strike"
+	line "breaker."
+	done
+
+TitheStreet14Trainer0BeatenText:
+	text "Mother? Is that"
+	line "you? No. It's a"
+	para "pigeon. Hello,"
+	line "pigeon."
+	done
+
 TitheStreet14Trainer0:
-	trainer T_THUG, 132, EVENT_GEN_TITHE_STREET14_0, TitheStreet14SeenText, TitheStreet14BeatenText, 0, TitheStreet14AfterScript
+	trainer T_THUG, 132, EVENT_GEN_TITHE_STREET14_0, TitheStreet14Trainer0SeenText, TitheStreet14Trainer0BeatenText, 0, TitheStreet14AfterScript
+
+TitheStreet14Trainer1SeenText:
+	text "Every penny in"
+	line "that fountain is"
+	para "mine. Every wish"
+	line "too. Fight me for"
+	para "the change."
+	done
+
+TitheStreet14Trainer1BeatenText:
+	text "Mother? Is that"
+	line "you? No. It's a"
+	para "pigeon. Hello,"
+	line "pigeon."
+	done
 
 TitheStreet14Trainer1:
-	trainer T_COP, 144, EVENT_GEN_TITHE_STREET14_1, TitheStreet14SeenText, TitheStreet14BeatenText, 0, TitheStreet14AfterScript
+	trainer T_COP, 144, EVENT_GEN_TITHE_STREET14_1, TitheStreet14Trainer1SeenText, TitheStreet14Trainer1BeatenText, 0, TitheStreet14AfterScript
+
+TitheStreet14Trainer2SeenText:
+	text "Pay no attention"
+	line "to the stain"
+	para "behind me. It's a"
+	line "previous customer."
+	done
+
+TitheStreet14Trainer2BeatenText:
+	text "Hold my hand. No."
+	line "The other one."
+	para "Never mind, that"
+	line "one's gone."
+	done
 
 TitheStreet14Trainer2:
-	trainer T_BANKER, 135, EVENT_GEN_TITHE_STREET14_2, TitheStreet14SeenText, TitheStreet14BeatenText, 0, TitheStreet14AfterScript
+	trainer T_BANKER, 135, EVENT_GEN_TITHE_STREET14_2, TitheStreet14Trainer2SeenText, TitheStreet14Trainer2BeatenText, 0, TitheStreet14AfterScript
+
+TitheStreet14Trainer3SeenText:
+	text "I own three"
+	line "buildings and none"
+	para "of them have heat."
+	line "Heat is a tenant's"
+	para "problem."
+	done
+
+TitheStreet14Trainer3BeatenText:
+	text "I'm calling my"
+	line "uncle. He doesn't"
+	para "exist, but I'll"
+	line "feel better."
+	done
 
 TitheStreet14Trainer3:
-	trainer T_ALTARBOY, 129, EVENT_GEN_TITHE_STREET14_3, TitheStreet14SeenText, TitheStreet14BeatenText, 0, TitheStreet14AfterScript
+	trainer T_ALTARBOY, 129, EVENT_GEN_TITHE_STREET14_3, TitheStreet14Trainer3SeenText, TitheStreet14Trainer3BeatenText, 0, TitheStreet14AfterScript
+
+TitheStreet14Trainer4SeenText:
+	text "I'm a deacon and a"
+	line "dealer. The hours"
+	para "are the same."
+	done
+
+TitheStreet14Trainer4BeatenText:
+	text "I regret nothing."
+	line "I regret"
+	para "everything. I"
+	line "regret the"
+	para "sandwich."
+	done
 
 TitheStreet14Trainer4:
-	trainer T_CHOIR, 132, EVENT_GEN_TITHE_STREET14_4, TitheStreet14SeenText, TitheStreet14BeatenText, 0, TitheStreet14AfterScript
+	trainer T_CHOIR, 132, EVENT_GEN_TITHE_STREET14_4, TitheStreet14Trainer4SeenText, TitheStreet14Trainer4BeatenText, 0, TitheStreet14AfterScript
+
+TitheStreet14Trainer5SeenText:
+	text "Brother, spare"
+	line "some change? No?"
+	para "Then spare some"
+	line "HP."
+	done
+
+TitheStreet14Trainer5BeatenText:
+	text "Don't take my"
+	line "watch. It's the"
+	para "last thing my"
+	line "father and I"
+	para "fought over."
+	done
 
 TitheStreet14Trainer5:
-	trainer T_PUNK, 131, EVENT_GEN_TITHE_STREET14_5, TitheStreet14SeenText, TitheStreet14BeatenText, 0, TitheStreet14AfterScript
+	trainer T_PUNK, 131, EVENT_GEN_TITHE_STREET14_5, TitheStreet14Trainer5SeenText, TitheStreet14Trainer5BeatenText, 0, TitheStreet14AfterScript
 
 TitheStreet14_MapEvents:
 	db 0, 0 ; filler

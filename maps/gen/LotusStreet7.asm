@@ -20,14 +20,6 @@ LotusStreet7HermitText:
 	para "us."
 	done
 
-LotusStreet7SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet7BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet7AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -40,26 +32,127 @@ LotusStreet7AfterScript:
 	closetext
 	end
 
+LotusStreet7Trainer0SeenText:
+	text "The tide took my"
+	line "wallet and my"
+	para "wedding ring. I"
+	line "was glad about the"
+	para "ring."
+	done
+
+LotusStreet7Trainer0BeatenText:
+	text "The sunset is"
+	line "early today. I"
+	para "think that's me."
+	done
+
 LotusStreet7Trainer0:
-	trainer L_TOURISTM, 129, EVENT_GEN_LOTUS_STREET7_0, LotusStreet7SeenText, LotusStreet7BeatenText, 0, LotusStreet7AfterScript
+	trainer L_TOURISTM, 129, EVENT_GEN_LOTUS_STREET7_0, LotusStreet7Trainer0SeenText, LotusStreet7Trainer0BeatenText, 0, LotusStreet7AfterScript
+
+LotusStreet7Trainer1SeenText:
+	text "My life is a"
+	line "series of pleasant"
+	para "blanks. Let me"
+	line "fill one with you."
+	done
+
+LotusStreet7Trainer1BeatenText:
+	text "No hard feelings."
+	line "No soft feelings."
+	para "No feelings. Ow."
+	done
 
 LotusStreet7Trainer1:
-	trainer L_TOURISTM, 130, EVENT_GEN_LOTUS_STREET7_1, LotusStreet7SeenText, LotusStreet7BeatenText, 0, LotusStreet7AfterScript
+	trainer L_TOURISTM, 130, EVENT_GEN_LOTUS_STREET7_1, LotusStreet7Trainer1SeenText, LotusStreet7Trainer1BeatenText, 0, LotusStreet7AfterScript
+
+LotusStreet7Trainer2SeenText:
+	text "You look stressed."
+	line "I can fix that"
+	para "with a short and"
+	line "painful"
+	para "distraction."
+	done
+
+LotusStreet7Trainer2BeatenText:
+	text "You win. Take the"
+	line "towel. Take the"
+	para "robe. Take my"
+	line "soul, it's on the"
+	para "nightstand."
+	done
 
 LotusStreet7Trainer2:
-	trainer L_LOUNGER, 133, EVENT_GEN_LOTUS_STREET7_2, LotusStreet7SeenText, LotusStreet7BeatenText, 0, LotusStreet7AfterScript
+	trainer L_LOUNGER, 133, EVENT_GEN_LOTUS_STREET7_2, LotusStreet7Trainer2SeenText, LotusStreet7Trainer2BeatenText, 0, LotusStreet7AfterScript
+
+LotusStreet7Trainer3SeenText:
+	text "Do you have a"
+	line "grief license? No?"
+	para "I'll have to take"
+	line "your sadness. By"
+	para "force."
+	done
+
+LotusStreet7Trainer3BeatenText:
+	text "Don't mind me. I'm"
+	line "resting my eyes."
+	para "Forever."
+	done
 
 LotusStreet7Trainer3:
-	trainer L_SAILOR, 128, EVENT_GEN_LOTUS_STREET7_3, LotusStreet7SeenText, LotusStreet7BeatenText, 0, LotusStreet7AfterScript
+	trainer L_SAILOR, 128, EVENT_GEN_LOTUS_STREET7_3, LotusStreet7Trainer3SeenText, LotusStreet7Trainer3BeatenText, 0, LotusStreet7AfterScript
+
+LotusStreet7Trainer4SeenText:
+	text "Don't take it"
+	line "hard. I'll forget"
+	para "this in the"
+	line "morning. You'll"
+	para "forget it forever."
+	done
+
+LotusStreet7Trainer4BeatenText:
+	text "I can see the"
+	line "whole coast from"
+	para "here. It's really"
+	line "something."
+	done
 
 LotusStreet7Trainer4:
-	trainer L_TOURISTF, 132, EVENT_GEN_LOTUS_STREET7_4, LotusStreet7SeenText, LotusStreet7BeatenText, 0, LotusStreet7AfterScript
+	trainer L_TOURISTF, 132, EVENT_GEN_LOTUS_STREET7_4, LotusStreet7Trainer4SeenText, LotusStreet7Trainer4BeatenText, 0, LotusStreet7AfterScript
+
+LotusStreet7Trainer5SeenText:
+	text "I'm waiting for"
+	line "the sunset. It's"
+	para "late. It's always"
+	line "late. So is my"
+	para "patience."
+	done
+
+LotusStreet7Trainer5BeatenText:
+	text "I told myself I'd"
+	line "be a fighter. I"
+	para "told myself a lot"
+	line "of things."
+	done
 
 LotusStreet7Trainer5:
-	trainer L_TOURISTG, 128, EVENT_GEN_LOTUS_STREET7_5, LotusStreet7SeenText, LotusStreet7BeatenText, 0, LotusStreet7AfterScript
+	trainer L_TOURISTG, 128, EVENT_GEN_LOTUS_STREET7_5, LotusStreet7Trainer5SeenText, LotusStreet7Trainer5BeatenText, 0, LotusStreet7AfterScript
+
+LotusStreet7Trainer6SeenText:
+	text "You can't hurry"
+	line "the tide. But you"
+	para "can hurry me. Time"
+	line "for a fight."
+	done
+
+LotusStreet7Trainer6BeatenText:
+	text "Ow. Oh. Is this"
+	line "pain? I think it's"
+	para "pain. It's so"
+	line "unfamiliar."
+	done
 
 LotusStreet7Trainer6:
-	trainer L_SUNBATHER, 129, EVENT_GEN_LOTUS_STREET7_6, LotusStreet7SeenText, LotusStreet7BeatenText, 0, LotusStreet7AfterScript
+	trainer L_SUNBATHER, 129, EVENT_GEN_LOTUS_STREET7_6, LotusStreet7Trainer6SeenText, LotusStreet7Trainer6BeatenText, 0, LotusStreet7AfterScript
 
 LotusStreet7_MapEvents:
 	db 0, 0 ; filler

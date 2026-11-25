@@ -22,14 +22,6 @@ LotusStreet5HermitText:
 	line "is a start."
 	done
 
-LotusStreet5SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet5BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet5AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -42,26 +34,125 @@ LotusStreet5AfterScript:
 	closetext
 	end
 
+LotusStreet5Trainer0SeenText:
+	text "I drink to forget."
+	line "I'm now very good"
+	para "at forgetting the"
+	line "rules."
+	done
+
+LotusStreet5Trainer0BeatenText:
+	text "My drink is"
+	line "spilled. That's"
+	para "the real tragedy."
+	done
+
 LotusStreet5Trainer0:
-	trainer L_LIFEGUARD, 132, EVENT_GEN_LOTUS_STREET5_0, LotusStreet5SeenText, LotusStreet5BeatenText, 0, LotusStreet5AfterScript
+	trainer L_LIFEGUARD, 132, EVENT_GEN_LOTUS_STREET5_0, LotusStreet5Trainer0SeenText, LotusStreet5Trainer0BeatenText, 0, LotusStreet5AfterScript
+
+LotusStreet5Trainer1SeenText:
+	text "We are all very"
+	line "relaxed here."
+	para "Relaxed people are"
+	line "very efficient"
+	para "fighters."
+	done
+
+LotusStreet5Trainer1BeatenText:
+	text "The waves are"
+	line "lovely. They're"
+	para "counting me down."
+	done
 
 LotusStreet5Trainer1:
-	trainer L_LOUNGER, 130, EVENT_GEN_LOTUS_STREET5_1, LotusStreet5SeenText, LotusStreet5BeatenText, 0, LotusStreet5AfterScript
+	trainer L_LOUNGER, 130, EVENT_GEN_LOTUS_STREET5_1, LotusStreet5Trainer1SeenText, LotusStreet5Trainer1BeatenText, 0, LotusStreet5AfterScript
+
+LotusStreet5Trainer2SeenText:
+	text "Don't mind me. I'm"
+	line "just tanned and"
+	para "furious."
+	done
+
+LotusStreet5Trainer2BeatenText:
+	text "A good death, a"
+	line "good drink, a good"
+	para "light. Cheers,"
+	line "friend."
+	done
 
 LotusStreet5Trainer2:
-	trainer L_LOUNGER, 131, EVENT_GEN_LOTUS_STREET5_2, LotusStreet5SeenText, LotusStreet5BeatenText, 0, LotusStreet5AfterScript
+	trainer L_LOUNGER, 131, EVENT_GEN_LOTUS_STREET5_2, LotusStreet5Trainer2SeenText, LotusStreet5Trainer2BeatenText, 0, LotusStreet5AfterScript
+
+LotusStreet5Trainer3SeenText:
+	text "Every day is"
+	line "Tuesday here. It's"
+	para "wonderful. I hate"
+	line "Tuesdays."
+	done
+
+LotusStreet5Trainer3BeatenText:
+	text "I came for the"
+	line "sun. I'm leaving"
+	para "with a concussion."
+	line "Five stars."
+	done
 
 LotusStreet5Trainer3:
-	trainer L_SWIMMERF, 132, EVENT_GEN_LOTUS_STREET5_3, LotusStreet5SeenText, LotusStreet5BeatenText, 0, LotusStreet5AfterScript
+	trainer L_SWIMMERF, 132, EVENT_GEN_LOTUS_STREET5_3, LotusStreet5Trainer3SeenText, LotusStreet5Trainer3BeatenText, 0, LotusStreet5AfterScript
+
+LotusStreet5Trainer4SeenText:
+	text "Another tourist."
+	line "Another reason to"
+	para "lower the room"
+	line "rate."
+	done
+
+LotusStreet5Trainer4BeatenText:
+	text "The only thing I"
+	line "regret is the tan"
+	para "lines. Those were"
+	line "mine."
+	done
 
 LotusStreet5Trainer4:
-	trainer L_BELLHOP, 128, EVENT_GEN_LOTUS_STREET5_4, LotusStreet5SeenText, LotusStreet5BeatenText, 0, LotusStreet5AfterScript
+	trainer L_BELLHOP, 128, EVENT_GEN_LOTUS_STREET5_4, LotusStreet5Trainer4SeenText, LotusStreet5Trainer4BeatenText, 0, LotusStreet5AfterScript
+
+LotusStreet5Trainer5SeenText:
+	text "We of the wake are"
+	line "very relaxed about"
+	para "dying. We are also"
+	line "very relaxed about"
+	para "everything. Please"
+	line "begin."
+	done
+
+LotusStreet5Trainer5BeatenText:
+	text "Look at that. The"
+	line "sunset. I haven't"
+	para "seen one in years."
+	line "Thank you."
+	done
 
 LotusStreet5Trainer5:
-	trainer L_SWIMMERF, 133, EVENT_GEN_LOTUS_STREET5_5, LotusStreet5SeenText, LotusStreet5BeatenText, 0, LotusStreet5AfterScript
+	trainer L_SWIMMERF, 133, EVENT_GEN_LOTUS_STREET5_5, LotusStreet5Trainer5SeenText, LotusStreet5Trainer5BeatenText, 0, LotusStreet5AfterScript
+
+LotusStreet5Trainer6SeenText:
+	text "The ocean is"
+	line "lovely, the sand"
+	para "is lovely, and my"
+	line "fist will be"
+	para "lovely on your"
+	line "cheek."
+	done
+
+LotusStreet5Trainer6BeatenText:
+	text "My last wish is a"
+	line "mango. Somebody. A"
+	para "mango."
+	done
 
 LotusStreet5Trainer6:
-	trainer L_SWIMMERM, 133, EVENT_GEN_LOTUS_STREET5_6, LotusStreet5SeenText, LotusStreet5BeatenText, 0, LotusStreet5AfterScript
+	trainer L_SWIMMERM, 133, EVENT_GEN_LOTUS_STREET5_6, LotusStreet5Trainer6SeenText, LotusStreet5Trainer6BeatenText, 0, LotusStreet5AfterScript
 
 LotusStreet5_MapEvents:
 	db 0, 0 ; filler

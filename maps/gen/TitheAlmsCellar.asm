@@ -6,14 +6,6 @@ TitheAlmsCellar_MapScripts:
 
 	def_callbacks
 
-TitheAlmsCellarSeenText:
-	text_far HC_SeenText_HL1
-	text_end
-
-TitheAlmsCellarBeatenText:
-	text_far HC_BeatenText_HL1
-	text_end
-
 TitheAlmsCellarAfterText:
 	text_far HC_AfterText_HL1
 	text_end
@@ -26,20 +18,85 @@ TitheAlmsCellarAfterScript:
 	closetext
 	end
 
+TitheAlmsCellarTrainer0SeenText:
+	text "Soup is for the"
+	line "faithful. You"
+	para "smell like a"
+	line "visitor. Battle."
+	done
+
+TitheAlmsCellarTrainer0BeatenText:
+	text "That was divine."
+	line "Mostly the part"
+	para "where it ended."
+	done
+
 TitheAlmsCellarTrainer0:
-	trainer T_NUN, 140, EVENT_GEN_TITHE_ALMS_CELLAR_0, TitheAlmsCellarSeenText, TitheAlmsCellarBeatenText, 0, TitheAlmsCellarAfterScript
+	trainer T_NUN, 140, EVENT_GEN_TITHE_ALMS_CELLAR_0, TitheAlmsCellarTrainer0SeenText, TitheAlmsCellarTrainer0BeatenText, 0, TitheAlmsCellarAfterScript
+
+TitheAlmsCellarTrainer1SeenText:
+	text "This cellar has a"
+	line "roof, a rule and a"
+	para "rat. You are"
+	line "breaking two."
+	done
+
+TitheAlmsCellarTrainer1BeatenText:
+	text "The soup was not"
+	line "even that good."
+	done
 
 TitheAlmsCellarTrainer1:
-	trainer T_BEGGAR, 145, EVENT_GEN_TITHE_ALMS_CELLAR_1, TitheAlmsCellarSeenText, TitheAlmsCellarBeatenText, 0, TitheAlmsCellarAfterScript
+	trainer T_BEGGAR, 145, EVENT_GEN_TITHE_ALMS_CELLAR_1, TitheAlmsCellarTrainer1SeenText, TitheAlmsCellarTrainer1BeatenText, 0, TitheAlmsCellarAfterScript
+
+TitheAlmsCellarTrainer2SeenText:
+	text "Do you have a"
+	line "donation slip? No?"
+	para "Then you will"
+	line "donate your time."
+	para "In pain."
+	done
+
+TitheAlmsCellarTrainer2BeatenText:
+	text "I fall. The ground"
+	line "receives me. It is"
+	para "the only thing"
+	line "that ever did."
+	done
 
 TitheAlmsCellarTrainer2:
-	trainer T_ALTARBOY, 130, EVENT_GEN_TITHE_ALMS_CELLAR_2, TitheAlmsCellarSeenText, TitheAlmsCellarBeatenText, 0, TitheAlmsCellarAfterScript
+	trainer T_ALTARBOY, 130, EVENT_GEN_TITHE_ALMS_CELLAR_2, TitheAlmsCellarTrainer2SeenText, TitheAlmsCellarTrainer2BeatenText, 0, TitheAlmsCellarAfterScript
+
+TitheAlmsCellarTrainer3SeenText:
+	text "Every candle down"
+	line "here is a prayer."
+	para "Every prayer is a"
+	line "complaint."
+	done
+
+TitheAlmsCellarTrainer3BeatenText:
+	text "Take what you came"
+	line "for. The saints"
+	para "are looking away."
+	line "They are good at"
+	para "it."
+	done
 
 TitheAlmsCellarTrainer3:
-	trainer T_PRIEST, 142, EVENT_GEN_TITHE_ALMS_CELLAR_3, TitheAlmsCellarSeenText, TitheAlmsCellarBeatenText, 0, TitheAlmsCellarAfterScript
+	trainer T_PRIEST, 142, EVENT_GEN_TITHE_ALMS_CELLAR_3, TitheAlmsCellarTrainer3SeenText, TitheAlmsCellarTrainer3BeatenText, 0, TitheAlmsCellarAfterScript
+
+TitheAlmsCellarTrainer4SeenText:
+	text "The Lord provides."
+	line "I provide the part"
+	para "where you lose."
+	done
+
+TitheAlmsCellarTrainer4BeatenText:
+	text "Amen. And also ow."
+	done
 
 TitheAlmsCellarTrainer4:
-	trainer T_NUN, 141, EVENT_GEN_TITHE_ALMS_CELLAR_4, TitheAlmsCellarSeenText, TitheAlmsCellarBeatenText, 0, TitheAlmsCellarAfterScript
+	trainer T_NUN, 141, EVENT_GEN_TITHE_ALMS_CELLAR_4, TitheAlmsCellarTrainer4SeenText, TitheAlmsCellarTrainer4BeatenText, 0, TitheAlmsCellarAfterScript
 
 TitheAlmsCellarHermit0:
 	faceplayer

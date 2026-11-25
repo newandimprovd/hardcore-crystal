@@ -23,14 +23,6 @@ DisStreet8HermitText:
 	para "are close."
 	done
 
-DisStreet8SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet8BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet8AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -43,23 +35,103 @@ DisStreet8AfterScript:
 	closetext
 	end
 
+DisStreet8Trainer0SeenText:
+	text "I can smell the"
+	line "end of the road."
+	para "It smells like me."
+	done
+
+DisStreet8Trainer0BeatenText:
+	text "I'll be back as a"
+	line "gargoyle. I always"
+	para "wanted a view."
+	done
+
 DisStreet8Trainer0:
-	trainer D_SINNER, 131, EVENT_GEN_DIS_STREET8_0, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer D_SINNER, 131, EVENT_GEN_DIS_STREET8_0, DisStreet8Trainer0SeenText, DisStreet8Trainer0BeatenText, 0, DisStreet8AfterScript
+
+DisStreet8Trainer1SeenText:
+	text "This is the circle"
+	line "of the guards. I'm"
+	para "the guard. The"
+	line "circle is a"
+	para "metaphor."
+	done
+
+DisStreet8Trainer1BeatenText:
+	text "I knew I should"
+	line "have taken the"
+	para "other contract."
+	done
 
 DisStreet8Trainer1:
-	trainer D_JESTER, 131, EVENT_GEN_DIS_STREET8_1, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer D_JESTER, 131, EVENT_GEN_DIS_STREET8_1, DisStreet8Trainer1SeenText, DisStreet8Trainer1BeatenText, 0, DisStreet8AfterScript
+
+DisStreet8Trainer2SeenText:
+	text "I can't die. I'm"
+	line "already dead. I'm"
+	para "very good at"
+	line "fighting for that"
+	para "reason."
+	done
+
+DisStreet8Trainer2BeatenText:
+	text "Fine. Take my"
+	line "soul. It was only"
+	para "on loan."
+	done
 
 DisStreet8Trainer2:
-	trainer D_JUDGE, 133, EVENT_GEN_DIS_STREET8_2, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer D_JUDGE, 133, EVENT_GEN_DIS_STREET8_2, DisStreet8Trainer2SeenText, DisStreet8Trainer2BeatenText, 0, DisStreet8AfterScript
+
+DisStreet8Trainer3SeenText:
+	text "It's Monday. It's"
+	line "always Monday. Hit"
+	para "me, it's still"
+	line "Monday."
+	done
+
+DisStreet8Trainer3BeatenText:
+	text "I'll see you at"
+	line "the next circle."
+	para "I'll be the one in"
+	line "the dumpster."
+	done
 
 DisStreet8Trainer3:
-	trainer D_JESTER, 132, EVENT_GEN_DIS_STREET8_3, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer D_JESTER, 132, EVENT_GEN_DIS_STREET8_3, DisStreet8Trainer3SeenText, DisStreet8Trainer3BeatenText, 0, DisStreet8AfterScript
+
+DisStreet8Trainer4SeenText:
+	text "I'm a serial"
+	line "arsonist. It's"
+	para "nice here."
+	line "Everything's"
+	para "already on fire."
+	done
+
+DisStreet8Trainer4BeatenText:
+	text "Is this death? Or"
+	line "is this Wednesday?"
+	done
 
 DisStreet8Trainer4:
-	trainer D_IMPB, 129, EVENT_GEN_DIS_STREET8_4, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer D_IMPB, 129, EVENT_GEN_DIS_STREET8_4, DisStreet8Trainer4SeenText, DisStreet8Trainer4BeatenText, 0, DisStreet8AfterScript
+
+DisStreet8Trainer5SeenText:
+	text "I'm in for fraud."
+	line "Also for the thing"
+	para "with the horse."
+	done
+
+DisStreet8Trainer5BeatenText:
+	text "It's a good thing"
+	line "I'm already dead."
+	para "Otherwise that"
+	line "would've hurt."
+	done
 
 DisStreet8Trainer5:
-	trainer D_IMPB, 130, EVENT_GEN_DIS_STREET8_5, DisStreet8SeenText, DisStreet8BeatenText, 0, DisStreet8AfterScript
+	trainer D_IMPB, 130, EVENT_GEN_DIS_STREET8_5, DisStreet8Trainer5SeenText, DisStreet8Trainer5BeatenText, 0, DisStreet8AfterScript
 
 DisStreet8_MapEvents:
 	db 0, 0 ; filler

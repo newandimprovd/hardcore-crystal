@@ -36,6 +36,28 @@ AI_Basic:
 	pop hl
 	jr nz, .discourage
 
+; Alpha 3.3: no pile-ups.  An accuracy drop is dismissed when the player's accuracy is already below normal,
+; an evasion boost when the foe's evasion is already above normal.  (c still holds the effect.)
+	ld a, c
+	cp EFFECT_ACCURACY_DOWN
+	jr z, .accuracy_down
+	cp EFFECT_ACCURACY_DOWN_2
+	jr z, .accuracy_down
+	cp EFFECT_EVASION_UP
+	jr z, .evasion_up
+	cp EFFECT_EVASION_UP_2
+	jr nz, .no_pile_up
+.evasion_up
+	ld a, [wEnemyEvaLevel]
+	cp BASE_STAT_LEVEL + 1
+	jr nc, .discourage
+	jr .no_pile_up
+.accuracy_down
+	ld a, [wPlayerAccLevel]
+	cp BASE_STAT_LEVEL
+	jr c, .discourage
+.no_pile_up
+
 ; Dismiss status-only moves if the player can't be statused.
 	ld a, [wEnemyMoveStruct + MOVE_EFFECT]
 	push hl

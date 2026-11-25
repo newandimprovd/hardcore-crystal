@@ -6,14 +6,6 @@ LotusDryPool_MapScripts:
 
 	def_callbacks
 
-LotusDryPoolSeenText:
-	text_far HC_SeenText_HL4
-	text_end
-
-LotusDryPoolBeatenText:
-	text_far HC_BeatenText_HL4
-	text_end
-
 LotusDryPoolAfterText:
 	text_far HC_AfterText_HL4
 	text_end
@@ -26,20 +18,87 @@ LotusDryPoolAfterScript:
 	closetext
 	end
 
+LotusDryPoolTrainer0SeenText:
+	text "I was a guest"
+	line "once. Checkout was"
+	para "in the contract."
+	line "Fine print is a"
+	para "lifestyle."
+	done
+
+LotusDryPoolTrainer0BeatenText:
+	text "I deserve this."
+	line "The pool deserves"
+	para "better."
+	done
+
 LotusDryPoolTrainer0:
-	trainer L_BEACHBUM, 132, EVENT_GEN_LOTUS_DRY_POOL_0, LotusDryPoolSeenText, LotusDryPoolBeatenText, 0, LotusDryPoolAfterScript
+	trainer L_BEACHBUM, 132, EVENT_GEN_LOTUS_DRY_POOL_0, LotusDryPoolTrainer0SeenText, LotusDryPoolTrainer0BeatenText, 0, LotusDryPoolAfterScript
+
+LotusDryPoolTrainer1SeenText:
+	text "The pool was"
+	line "drained for"
+	para "maintenance. The"
+	line "maintenance was"
+	para "drained for"
+	line "budget. I remain."
+	done
+
+LotusDryPoolTrainer1BeatenText:
+	text "Pass the sun"
+	line "cream. I have a"
+	para "feeling I will"
+	line "need it."
+	done
 
 LotusDryPoolTrainer1:
-	trainer L_LIFEGUARD, 138, EVENT_GEN_LOTUS_DRY_POOL_1, LotusDryPoolSeenText, LotusDryPoolBeatenText, 0, LotusDryPoolAfterScript
+	trainer L_LIFEGUARD, 138, EVENT_GEN_LOTUS_DRY_POOL_1, LotusDryPoolTrainer1SeenText, LotusDryPoolTrainer1BeatenText, 0, LotusDryPoolAfterScript
+
+LotusDryPoolTrainer2SeenText:
+	text "The cabana boy is"
+	line "dead. Long live"
+	para "the cabana boy."
+	line "That is me. Fight."
+	done
+
+LotusDryPoolTrainer2BeatenText:
+	text "That was less"
+	line "relaxing than"
+	para "advertised."
+	done
 
 LotusDryPoolTrainer2:
-	trainer L_SWIMMERM, 140, EVENT_GEN_LOTUS_DRY_POOL_2, LotusDryPoolSeenText, LotusDryPoolBeatenText, 0, LotusDryPoolAfterScript
+	trainer L_SWIMMERM, 140, EVENT_GEN_LOTUS_DRY_POOL_2, LotusDryPoolTrainer2SeenText, LotusDryPoolTrainer2BeatenText, 0, LotusDryPoolAfterScript
+
+LotusDryPoolTrainer3SeenText:
+	text "The sea does not"
+	line "want you. Neither"
+	para "does the buffet."
+	line "Battle."
+	done
+
+LotusDryPoolTrainer3BeatenText:
+	text "Out for the"
+	line "season. All"
+	para "seasons."
+	done
 
 LotusDryPoolTrainer3:
-	trainer L_SUNBATHER, 139, EVENT_GEN_LOTUS_DRY_POOL_3, LotusDryPoolSeenText, LotusDryPoolBeatenText, 0, LotusDryPoolAfterScript
+	trainer L_SUNBATHER, 139, EVENT_GEN_LOTUS_DRY_POOL_3, LotusDryPoolTrainer3SeenText, LotusDryPoolTrainer3BeatenText, 0, LotusDryPoolAfterScript
+
+LotusDryPoolTrainer4SeenText:
+	text "Sun cream. Sun"
+	line "cream. Sun cream."
+	para "Sun cream. Battle."
+	done
+
+LotusDryPoolTrainer4BeatenText:
+	text "Leave a review."
+	line "Leave it very low."
+	done
 
 LotusDryPoolTrainer4:
-	trainer L_LIFEGUARD, 139, EVENT_GEN_LOTUS_DRY_POOL_4, LotusDryPoolSeenText, LotusDryPoolBeatenText, 0, LotusDryPoolAfterScript
+	trainer L_LIFEGUARD, 139, EVENT_GEN_LOTUS_DRY_POOL_4, LotusDryPoolTrainer4SeenText, LotusDryPoolTrainer4BeatenText, 0, LotusDryPoolAfterScript
 
 LotusDryPoolHermit0:
 	faceplayer

@@ -23,14 +23,6 @@ AxiomStreet8HermitText:
 	para "receipt."
 	done
 
-AxiomStreet8SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet8BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet8AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -43,26 +35,126 @@ AxiomStreet8AfterScript:
 	closetext
 	end
 
+AxiomStreet8Trainer0SeenText:
+	text "I have three"
+	line "setting: obey,"
+	para "comply and punch."
+	line "Today is a punch"
+	para "day."
+	done
+
+AxiomStreet8Trainer0BeatenText:
+	text "You win. File a"
+	line "claim at window 6."
+	para "Window 6 does not"
+	line "exist."
+	done
+
 AxiomStreet8Trainer0:
-	trainer U_BOTCOP, 135, EVENT_GEN_AXIOM_STREET8_0, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_BOTCOP, 135, EVENT_GEN_AXIOM_STREET8_0, AxiomStreet8Trainer0SeenText, AxiomStreet8Trainer0BeatenText, 0, AxiomStreet8AfterScript
+
+AxiomStreet8Trainer1SeenText:
+	text "I have been"
+	line "standing at this"
+	para "post for six"
+	line "years. Please take"
+	para "my place. Or my"
+	line "head."
+	done
+
+AxiomStreet8Trainer1BeatenText:
+	text "Deactivating. Tell"
+	line "the Mayor I was"
+	para "compliant until"
+	line "the end."
+	done
 
 AxiomStreet8Trainer1:
-	trainer U_BOT, 136, EVENT_GEN_AXIOM_STREET8_1, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_BOT, 136, EVENT_GEN_AXIOM_STREET8_1, AxiomStreet8Trainer1SeenText, AxiomStreet8Trainer1BeatenText, 0, AxiomStreet8AfterScript
+
+AxiomStreet8Trainer2SeenText:
+	text "My heart is a"
+	line "rubber stamp. Hi."
+	done
+
+AxiomStreet8Trainer2BeatenText:
+	text "Terminating."
+	line "Please do not take"
+	para "this personally."
+	line "It is personal."
+	done
 
 AxiomStreet8Trainer2:
-	trainer U_BOTCOP, 136, EVENT_GEN_AXIOM_STREET8_2, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_BOTCOP, 136, EVENT_GEN_AXIOM_STREET8_2, AxiomStreet8Trainer2SeenText, AxiomStreet8Trainer2BeatenText, 0, AxiomStreet8AfterScript
+
+AxiomStreet8Trainer3SeenText:
+	text "Statistically, you"
+	line "will lose."
+	para "Statistically, so"
+	line "will I. Nobody"
+	para "told the"
+	line "statistics."
+	done
+
+AxiomStreet8Trainer3BeatenText:
+	text "My programming"
+	line "says goodbye. My"
+	para "feelings say"
+	line "hello. Both are"
+	para "very confused."
+	done
 
 AxiomStreet8Trainer3:
-	trainer U_SERFF, 132, EVENT_GEN_AXIOM_STREET8_3, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_SERFF, 132, EVENT_GEN_AXIOM_STREET8_3, AxiomStreet8Trainer3SeenText, AxiomStreet8Trainer3BeatenText, 0, AxiomStreet8AfterScript
+
+AxiomStreet8Trainer4SeenText:
+	text "I run on spite and"
+	line "municipal"
+	para "electricity."
+	done
+
+AxiomStreet8Trainer4BeatenText:
+	text "Reboot. Reboot."
+	line "Reboot. Please."
+	done
 
 AxiomStreet8Trainer4:
-	trainer U_DOCTOR, 131, EVENT_GEN_AXIOM_STREET8_4, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_DOCTOR, 131, EVENT_GEN_AXIOM_STREET8_4, AxiomStreet8Trainer4SeenText, AxiomStreet8Trainer4BeatenText, 0, AxiomStreet8AfterScript
+
+AxiomStreet8Trainer5SeenText:
+	text "I am a member of"
+	line "FINNEGAN's wake."
+	para "Your kill count is"
+	line "a rounding error"
+	para "in my favor."
+	line "Proceed."
+	done
+
+AxiomStreet8Trainer5BeatenText:
+	text "I have a second"
+	line "form. It's"
+	para "labelled Mercy."
+	line "It's blank."
+	done
 
 AxiomStreet8Trainer5:
-	trainer U_DOCTOR, 132, EVENT_GEN_AXIOM_STREET8_5, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_DOCTOR, 132, EVENT_GEN_AXIOM_STREET8_5, AxiomStreet8Trainer5SeenText, AxiomStreet8Trainer5BeatenText, 0, AxiomStreet8AfterScript
+
+AxiomStreet8Trainer6SeenText:
+	text "I was upgraded"
+	line "last night. I feel"
+	para "nothing. It is"
+	line "wonderful."
+	done
+
+AxiomStreet8Trainer6BeatenText:
+	text "I don't feel pain."
+	line "I feel a very"
+	para "high-pitched tone."
+	done
 
 AxiomStreet8Trainer6:
-	trainer U_CASEWORKER, 128, EVENT_GEN_AXIOM_STREET8_6, AxiomStreet8SeenText, AxiomStreet8BeatenText, 0, AxiomStreet8AfterScript
+	trainer U_CASEWORKER, 128, EVENT_GEN_AXIOM_STREET8_6, AxiomStreet8Trainer6SeenText, AxiomStreet8Trainer6BeatenText, 0, AxiomStreet8AfterScript
 
 AxiomStreet8_MapEvents:
 	db 0, 0 ; filler

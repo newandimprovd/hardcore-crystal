@@ -24,14 +24,6 @@ DisStreet14HermitText:
 	line "kind."
 	done
 
-DisStreet14SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet14BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet14AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -44,23 +36,108 @@ DisStreet14AfterScript:
 	closetext
 	end
 
+DisStreet14Trainer0SeenText:
+	text "I wrote the"
+	line "pamphlet. 'How to"
+	para "Survive the Pit.'"
+	line "It's one sentence."
+	para "'Don't.'"
+	done
+
+DisStreet14Trainer0BeatenText:
+	text "I knew I should've"
+	line "been nicer to the"
+	para "guards."
+	done
+
 DisStreet14Trainer0:
-	trainer D_IMPF, 133, EVENT_GEN_DIS_STREET14_0, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_IMPF, 133, EVENT_GEN_DIS_STREET14_0, DisStreet14Trainer0SeenText, DisStreet14Trainer0BeatenText, 0, DisStreet14AfterScript
+
+DisStreet14Trainer1SeenText:
+	text "I came here to"
+	line "repent. They said,"
+	para "the line is that"
+	line "way. I said, fight"
+	para "first."
+	done
+
+DisStreet14Trainer1BeatenText:
+	text "You beat me. The"
+	line "next one will be"
+	para "much harder. He"
+	line "has teeth."
+	done
 
 DisStreet14Trainer1:
-	trainer D_IMP, 137, EVENT_GEN_DIS_STREET14_1, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_IMP, 137, EVENT_GEN_DIS_STREET14_1, DisStreet14Trainer1SeenText, DisStreet14Trainer1BeatenText, 0, DisStreet14AfterScript
+
+DisStreet14Trainer2SeenText:
+	text "Everyone here is a"
+	line "traitor. I'm a"
+	para "traitor to the"
+	line "traitors. It's"
+	para "very complicated."
+	done
+
+DisStreet14Trainer2BeatenText:
+	text "Take my coat. It"
+	line "has a hole in it."
+	para "And a body."
+	done
 
 DisStreet14Trainer2:
-	trainer D_IMPB, 132, EVENT_GEN_DIS_STREET14_2, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_IMPB, 132, EVENT_GEN_DIS_STREET14_2, DisStreet14Trainer2SeenText, DisStreet14Trainer2BeatenText, 0, DisStreet14AfterScript
+
+DisStreet14Trainer3SeenText:
+	text "That's a nice"
+	line "team. I'd like it"
+	para "for my collection."
+	line "My collection of"
+	para "regrets."
+	done
+
+DisStreet14Trainer3BeatenText:
+	text "I thought this was"
+	line "a dream. It's more"
+	para "of a reminder."
+	done
 
 DisStreet14Trainer3:
-	trainer D_WARDEN, 133, EVENT_GEN_DIS_STREET14_3, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_WARDEN, 133, EVENT_GEN_DIS_STREET14_3, DisStreet14Trainer3SeenText, DisStreet14Trainer3BeatenText, 0, DisStreet14AfterScript
+
+DisStreet14Trainer4SeenText:
+	text "Ever been betrayed"
+	line "by yourself? It's"
+	para "the easiest, and"
+	line "the most reliable."
+	done
+
+DisStreet14Trainer4BeatenText:
+	text "Sentence accepted."
+	line "Please return to"
+	para "your suffering."
+	done
 
 DisStreet14Trainer4:
-	trainer D_BRAWLER, 133, EVENT_GEN_DIS_STREET14_4, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_BRAWLER, 133, EVENT_GEN_DIS_STREET14_4, DisStreet14Trainer4SeenText, DisStreet14Trainer4BeatenText, 0, DisStreet14AfterScript
+
+DisStreet14Trainer5SeenText:
+	text "I was a"
+	line "politician. I know"
+	para "about fire. I know"
+	line "about lying. I"
+	para "know about you."
+	done
+
+DisStreet14Trainer5BeatenText:
+	text "I won't tell"
+	line "anyone. Nobody"
+	para "will believe me."
+	line "They never do."
+	done
 
 DisStreet14Trainer5:
-	trainer D_JUDGE, 136, EVENT_GEN_DIS_STREET14_5, DisStreet14SeenText, DisStreet14BeatenText, 0, DisStreet14AfterScript
+	trainer D_JUDGE, 136, EVENT_GEN_DIS_STREET14_5, DisStreet14Trainer5SeenText, DisStreet14Trainer5BeatenText, 0, DisStreet14AfterScript
 
 DisStreet14_MapEvents:
 	db 0, 0 ; filler

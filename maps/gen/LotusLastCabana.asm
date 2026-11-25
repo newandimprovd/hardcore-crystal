@@ -6,14 +6,6 @@ LotusLastCabana_MapScripts:
 
 	def_callbacks
 
-LotusLastCabanaSeenText:
-	text_far HC_SeenText_HL4
-	text_end
-
-LotusLastCabanaBeatenText:
-	text_far HC_BeatenText_HL4
-	text_end
-
 LotusLastCabanaAfterText:
 	text_far HC_AfterText_HL4
 	text_end
@@ -26,20 +18,84 @@ LotusLastCabanaAfterScript:
 	closetext
 	end
 
+LotusLastCabanaTrainer0SeenText:
+	text "All inclusive"
+	line "means all of us"
+	para "are included."
+	line "Welcome to the"
+	para "lower floor."
+	done
+
+LotusLastCabanaTrainer0BeatenText:
+	text "The sea takes"
+	line "some. You took me."
+	para "Same energy."
+	done
+
 LotusLastCabanaTrainer0:
-	trainer L_WAITER, 130, EVENT_GEN_LOTUS_LAST_CABANA_0, LotusLastCabanaSeenText, LotusLastCabanaBeatenText, 0, LotusLastCabanaAfterScript
+	trainer L_WAITER, 130, EVENT_GEN_LOTUS_LAST_CABANA_0, LotusLastCabanaTrainer0SeenText, LotusLastCabanaTrainer0BeatenText, 0, LotusLastCabanaAfterScript
+
+LotusLastCabanaTrainer1SeenText:
+	text "Sand gets"
+	line "everywhere. So do"
+	para "I. Mostly into"
+	line "your plans."
+	done
+
+LotusLastCabanaTrainer1BeatenText:
+	text "Washed up. Again."
+	done
 
 LotusLastCabanaTrainer1:
-	trainer L_FORGOTTEN, 134, EVENT_GEN_LOTUS_LAST_CABANA_1, LotusLastCabanaSeenText, LotusLastCabanaBeatenText, 0, LotusLastCabanaAfterScript
+	trainer L_FORGOTTEN, 134, EVENT_GEN_LOTUS_LAST_CABANA_1, LotusLastCabanaTrainer1SeenText, LotusLastCabanaTrainer1BeatenText, 0, LotusLastCabanaAfterScript
+
+LotusLastCabanaTrainer2SeenText:
+	text "Do you hear the"
+	line "waves? Those are"
+	para "the pipes. The"
+	line "waves left."
+	done
+
+LotusLastCabanaTrainer2BeatenText:
+	text "Refund denied."
+	line "Refund denied."
+	para "Fight denied."
+	done
 
 LotusLastCabanaTrainer2:
-	trainer L_BELLHOP, 133, EVENT_GEN_LOTUS_LAST_CABANA_2, LotusLastCabanaSeenText, LotusLastCabanaBeatenText, 0, LotusLastCabanaAfterScript
+	trainer L_BELLHOP, 133, EVENT_GEN_LOTUS_LAST_CABANA_2, LotusLastCabanaTrainer2SeenText, LotusLastCabanaTrainer2BeatenText, 0, LotusLastCabanaAfterScript
+
+LotusLastCabanaTrainer3SeenText:
+	text "Welcome to"
+	line "paradise. The"
+	para "towels are extra."
+	line "The fight is"
+	para "complimentary."
+	done
+
+LotusLastCabanaTrainer3BeatenText:
+	text "Washed up. Again."
+	done
 
 LotusLastCabanaTrainer3:
-	trainer L_LOUNGER, 138, EVENT_GEN_LOTUS_LAST_CABANA_3, LotusLastCabanaSeenText, LotusLastCabanaBeatenText, 0, LotusLastCabanaAfterScript
+	trainer L_LOUNGER, 138, EVENT_GEN_LOTUS_LAST_CABANA_3, LotusLastCabanaTrainer3SeenText, LotusLastCabanaTrainer3BeatenText, 0, LotusLastCabanaAfterScript
+
+LotusLastCabanaTrainer4SeenText:
+	text "The tide went out"
+	line "and took the"
+	para "staff. I am what"
+	line "is left of"
+	para "hospitality."
+	done
+
+LotusLastCabanaTrainer4BeatenText:
+	text "Refund denied."
+	line "Refund denied."
+	para "Fight denied."
+	done
 
 LotusLastCabanaTrainer4:
-	trainer L_BELLHOP, 134, EVENT_GEN_LOTUS_LAST_CABANA_4, LotusLastCabanaSeenText, LotusLastCabanaBeatenText, 0, LotusLastCabanaAfterScript
+	trainer L_BELLHOP, 134, EVENT_GEN_LOTUS_LAST_CABANA_4, LotusLastCabanaTrainer4SeenText, LotusLastCabanaTrainer4BeatenText, 0, LotusLastCabanaAfterScript
 
 LotusLastCabanaHermit0:
 	faceplayer

@@ -23,14 +23,6 @@ TitheStreet7HermitText:
 	para "And the roof."
 	done
 
-TitheStreet7SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet7BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet7AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -43,23 +35,106 @@ TitheStreet7AfterScript:
 	closetext
 	end
 
+TitheStreet7Trainer0SeenText:
+	text "I took a vow of"
+	line "poverty. I'm very"
+	para "good at it. Very"
+	line "good."
+	done
+
+TitheStreet7Trainer0BeatenText:
+	text "Look at that. A"
+	line "man down and a"
+	para "city that doesn't"
+	line "care. A postcard."
+	done
+
 TitheStreet7Trainer0:
-	trainer T_PRIEST, 129, EVENT_GEN_TITHE_STREET7_0, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_PRIEST, 129, EVENT_GEN_TITHE_STREET7_0, TitheStreet7Trainer0SeenText, TitheStreet7Trainer0BeatenText, 0, TitheStreet7AfterScript
+
+TitheStreet7Trainer1SeenText:
+	text "Your mother called"
+	line "me last night. I"
+	para "didn't pick up,"
+	line "but I'll tell her"
+	para "you lost."
+	done
+
+TitheStreet7Trainer1BeatenText:
+	text "Another one for"
+	line "the pile. At least"
+	para "I'm on top."
+	done
 
 TitheStreet7Trainer1:
-	trainer T_PUNK, 128, EVENT_GEN_TITHE_STREET7_1, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_PUNK, 128, EVENT_GEN_TITHE_STREET7_1, TitheStreet7Trainer1SeenText, TitheStreet7Trainer1BeatenText, 0, TitheStreet7AfterScript
+
+TitheStreet7Trainer2SeenText:
+	text "I forgave my"
+	line "debtors. Then I"
+	para "forgot who they"
+	line "were. Then I"
+	para "remembered I never"
+	line "lent anything."
+	done
+
+TitheStreet7Trainer2BeatenText:
+	text "My badge. Tell"
+	line "them it was never"
+	para "real."
+	done
 
 TitheStreet7Trainer2:
-	trainer T_COP, 141, EVENT_GEN_TITHE_STREET7_2, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_COP, 141, EVENT_GEN_TITHE_STREET7_2, TitheStreet7Trainer2SeenText, TitheStreet7Trainer2BeatenText, 0, TitheStreet7AfterScript
+
+TitheStreet7Trainer3SeenText:
+	text "Mass is at nine."
+	line "Confession is at"
+	para "ten. Murder is at"
+	line "your convenience."
+	done
+
+TitheStreet7Trainer3BeatenText:
+	text "Rest in peace, my"
+	line "pension."
+	done
 
 TitheStreet7Trainer3:
-	trainer T_PUNK, 129, EVENT_GEN_TITHE_STREET7_3, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_PUNK, 129, EVENT_GEN_TITHE_STREET7_3, TitheStreet7Trainer3SeenText, TitheStreet7Trainer3BeatenText, 0, TitheStreet7AfterScript
+
+TitheStreet7Trainer4SeenText:
+	text "I am one of"
+	line "FINNEGAN's. My"
+	para "seat at the wake"
+	line "is booked. Send me"
+	para "ahead, friend."
+	done
+
+TitheStreet7Trainer4BeatenText:
+	text "Cough. Tell my"
+	line "landlord I left in"
+	para "a hurry."
+	done
 
 TitheStreet7Trainer4:
-	trainer T_BANKER, 129, EVENT_GEN_TITHE_STREET7_4, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_BANKER, 129, EVENT_GEN_TITHE_STREET7_4, TitheStreet7Trainer4SeenText, TitheStreet7Trainer4BeatenText, 0, TitheStreet7AfterScript
+
+TitheStreet7Trainer5SeenText:
+	text "I get paid by the"
+	line "arrest. You look"
+	para "like a month's"
+	line "wages."
+	done
+
+TitheStreet7Trainer5BeatenText:
+	text "The rent was never"
+	line "going to be paid."
+	para "Thank you for the"
+	line "honesty."
+	done
 
 TitheStreet7Trainer5:
-	trainer T_SISTER, 131, EVENT_GEN_TITHE_STREET7_5, TitheStreet7SeenText, TitheStreet7BeatenText, 0, TitheStreet7AfterScript
+	trainer T_SISTER, 131, EVENT_GEN_TITHE_STREET7_5, TitheStreet7Trainer5SeenText, TitheStreet7Trainer5BeatenText, 0, TitheStreet7AfterScript
 
 TitheStreet7_MapEvents:
 	db 0, 0 ; filler

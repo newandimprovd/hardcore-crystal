@@ -48,3 +48,15 @@ def portrait_from_vanilla(src, area, palname, path):
     im.putdata([min(3, int(v)) for v in base.getdata()])
     assert len({colors[1], colors[2]}) == 2 and colors[1] != colors[0] and colors[2] != colors[0]
     im.save(path)
+
+
+def portrait_drawn(slug, area, palname, path):
+    """Pictures that are drawn in code and not borrowed from a vanilla class (PIC_FROM value '@name')."""
+    pal = areapal.npc_set(area)[PAL_INDEX[palname]]
+    colors = [(255, 255, 255), rgb8(pal[1]), rgb8(pal[2]), (0, 0, 0)]
+    assert len({colors[1], colors[2]}) == 2 and colors[1] != colors[0] and colors[2] != colors[0]
+    if slug == "finnegan":
+        import finnegan
+        finnegan.portrait(path, colors)
+    else:
+        raise KeyError(slug)

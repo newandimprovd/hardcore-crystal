@@ -79,14 +79,6 @@ PurgAbyssGate1UseText:
 	line "Mostly nothing."
 	done
 
-PurgAbyssSeenText:
-	text_far HC_SeenText_PG
-	text_end
-
-PurgAbyssBeatenText:
-	text_far HC_BeatenText_PG
-	text_end
-
 PurgAbyssAfterText:
 	text_far HC_AfterText_PG
 	text_end
@@ -99,20 +91,89 @@ PurgAbyssAfterScript:
 	closetext
 	end
 
+PurgAbyssTrainer0SeenText:
+	text "I asked the cave"
+	line "for meaning. It"
+	para "echoed. I'll take"
+	line "your answer in a"
+	para "battle."
+	done
+
+PurgAbyssTrainer0BeatenText:
+	text "Ow. I felt that."
+	line "I'd forgotten what"
+	para "feeling was."
+	line "Thanks, I guess."
+	done
+
 PurgAbyssTrainer0:
-	trainer T_BEGGAR, 142, EVENT_GEN_PURG_ABYSS_0, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer T_BEGGAR, 142, EVENT_GEN_PURG_ABYSS_0, PurgAbyssTrainer0SeenText, PurgAbyssTrainer0BeatenText, 0, PurgAbyssAfterScript
+
+PurgAbyssTrainer1SeenText:
+	text "I believed in"
+	line "karma. Turns out"
+	para "it's a rumour with"
+	line "a bad lawyer."
+	done
+
+PurgAbyssTrainer1BeatenText:
+	text "You won, so I get"
+	line "to lose in peace."
+	para "A fair trade."
+	done
 
 PurgAbyssTrainer1:
-	trainer U_SERF, 141, EVENT_GEN_PURG_ABYSS_1, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer U_SERF, 141, EVENT_GEN_PURG_ABYSS_1, PurgAbyssTrainer1SeenText, PurgAbyssTrainer1BeatenText, 0, PurgAbyssAfterScript
+
+PurgAbyssTrainer2SeenText:
+	text "My gravestone says"
+	line "'Here Lies a Good"
+	para "Man.' It's a typo."
+	line "It's a blessing."
+	done
+
+PurgAbyssTrainer2BeatenText:
+	text "You win. Please do"
+	line "not tell Dale."
+	done
 
 PurgAbyssTrainer2:
-	trainer T_BEGGAR, 143, EVENT_GEN_PURG_ABYSS_2, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer T_BEGGAR, 143, EVENT_GEN_PURG_ABYSS_2, PurgAbyssTrainer2SeenText, PurgAbyssTrainer2BeatenText, 0, PurgAbyssAfterScript
+
+PurgAbyssTrainer3SeenText:
+	text "I once lost an"
+	line "argument to a"
+	para "stone. It's still"
+	line "the best"
+	para "conversation I've"
+	line "had."
+	done
+
+PurgAbyssTrainer3BeatenText:
+	text "I'm going to lie"
+	line "down. It's what I"
+	para "do best."
+	done
 
 PurgAbyssTrainer3:
-	trainer U_SERF, 142, EVENT_GEN_PURG_ABYSS_3, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer U_SERF, 142, EVENT_GEN_PURG_ABYSS_3, PurgAbyssTrainer3SeenText, PurgAbyssTrainer3BeatenText, 0, PurgAbyssAfterScript
+
+PurgAbyssTrainer4SeenText:
+	text "Somebody has to"
+	line "haunt this tunnel."
+	para "The pay is"
+	line "nonexistent, the"
+	para "hours are forever."
+	done
+
+PurgAbyssTrainer4BeatenText:
+	text "I regret nothing."
+	line "I'm too cold to"
+	para "regret."
+	done
 
 PurgAbyssTrainer4:
-	trainer T_BEGGAR, 144, EVENT_GEN_PURG_ABYSS_4, PurgAbyssSeenText, PurgAbyssBeatenText, 0, PurgAbyssAfterScript
+	trainer T_BEGGAR, 144, EVENT_GEN_PURG_ABYSS_4, PurgAbyssTrainer4SeenText, PurgAbyssTrainer4BeatenText, 0, PurgAbyssAfterScript
 
 PurgAbyssHermit0:
 	faceplayer

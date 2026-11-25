@@ -21,14 +21,6 @@ DisStreet13HermitText:
 	para "nice ones."
 	done
 
-DisStreet13SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet13BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet13AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -41,26 +33,124 @@ DisStreet13AfterScript:
 	closetext
 	end
 
+DisStreet13Trainer0SeenText:
+	text "Treachery is the"
+	line "lowest circle. I"
+	para "wasn't even trying"
+	line "that hard."
+	done
+
+DisStreet13Trainer0BeatenText:
+	text "My boss will hear"
+	line "about this. My"
+	para "boss hears about"
+	line "everything. It's a"
+	para "gift."
+	done
+
 DisStreet13Trainer0:
-	trainer D_SHADE, 135, EVENT_GEN_DIS_STREET13_0, DisStreet13SeenText, DisStreet13BeatenText, 0, DisStreet13AfterScript
+	trainer D_SHADE, 135, EVENT_GEN_DIS_STREET13_0, DisStreet13Trainer0SeenText, DisStreet13Trainer0BeatenText, 0, DisStreet13AfterScript
+
+DisStreet13Trainer1SeenText:
+	text "The furnace is out"
+	line "of coal. I'm using"
+	para "you."
+	done
+
+DisStreet13Trainer1BeatenText:
+	text "That was awful. Do"
+	line "it again."
+	done
 
 DisStreet13Trainer1:
-	trainer D_HAG, 131, EVENT_GEN_DIS_STREET13_1, DisStreet13SeenText, DisStreet13BeatenText, 0, DisStreet13AfterScript
+	trainer D_HAG, 131, EVENT_GEN_DIS_STREET13_1, DisStreet13Trainer1SeenText, DisStreet13Trainer1BeatenText, 0, DisStreet13AfterScript
+
+DisStreet13Trainer2SeenText:
+	text "I haven't been"
+	line "burned in a week."
+	para "It's boring. Let's"
+	line "fix that."
+	done
+
+DisStreet13Trainer2BeatenText:
+	text "Thank you. I'll"
+	line "save you a seat at"
+	para "the wake. Bring"
+	line "snacks."
+	done
 
 DisStreet13Trainer2:
-	trainer D_BRUTE, 137, EVENT_GEN_DIS_STREET13_2, DisStreet13SeenText, DisStreet13BeatenText, 0, DisStreet13AfterScript
+	trainer D_BRUTE, 137, EVENT_GEN_DIS_STREET13_2, DisStreet13Trainer2SeenText, DisStreet13Trainer2BeatenText, 0, DisStreet13AfterScript
+
+DisStreet13Trainer3SeenText:
+	text "I serve at the"
+	line "pleasure of the"
+	para "Pit. It does not"
+	line "please me."
+	done
+
+DisStreet13Trainer3BeatenText:
+	text "My fingers are"
+	line "frozen. And my"
+	para "pride. And my left"
+	line "foot."
+	done
 
 DisStreet13Trainer3:
-	trainer D_IMP, 136, EVENT_GEN_DIS_STREET13_3, DisStreet13SeenText, DisStreet13BeatenText, 0, DisStreet13AfterScript
+	trainer D_IMP, 136, EVENT_GEN_DIS_STREET13_3, DisStreet13Trainer3SeenText, DisStreet13Trainer3BeatenText, 0, DisStreet13AfterScript
+
+DisStreet13Trainer4SeenText:
+	text "Hell is already"
+	line "here. FINNEGAN"
+	para "says the exit is"
+	line "behind you. Send"
+	para "me through."
+	done
+
+DisStreet13Trainer4BeatenText:
+	text "My chains have"
+	line "fallen off. How"
+	para "embarrassing."
+	done
 
 DisStreet13Trainer4:
-	trainer D_FIREEATER, 130, EVENT_GEN_DIS_STREET13_4, DisStreet13SeenText, DisStreet13BeatenText, 0, DisStreet13AfterScript
+	trainer D_FIREEATER, 130, EVENT_GEN_DIS_STREET13_4, DisStreet13Trainer4SeenText, DisStreet13Trainer4BeatenText, 0, DisStreet13AfterScript
+
+DisStreet13Trainer5SeenText:
+	text "Do you hear that?"
+	line "That's the lake."
+	para "It wants to be"
+	line "your friend. It's"
+	para "a frozen trap."
+	done
+
+DisStreet13Trainer5BeatenText:
+	text "Even in Hell,"
+	line "there's a last"
+	para "word. Mine is:"
+	line "oops."
+	done
 
 DisStreet13Trainer5:
-	trainer D_IMPF, 132, EVENT_GEN_DIS_STREET13_5, DisStreet13SeenText, DisStreet13BeatenText, 0, DisStreet13AfterScript
+	trainer D_IMPF, 132, EVENT_GEN_DIS_STREET13_5, DisStreet13Trainer5SeenText, DisStreet13Trainer5BeatenText, 0, DisStreet13AfterScript
+
+DisStreet13Trainer6SeenText:
+	text "I did something"
+	line "bad in my last"
+	para "life. I forget"
+	line "what. I hope it"
+	para "was this."
+	done
+
+DisStreet13Trainer6BeatenText:
+	text "Well. That's"
+	line "another stamp in"
+	para "my permanent"
+	line "record."
+	done
 
 DisStreet13Trainer6:
-	trainer D_HAG, 132, EVENT_GEN_DIS_STREET13_6, DisStreet13SeenText, DisStreet13BeatenText, 0, DisStreet13AfterScript
+	trainer D_HAG, 132, EVENT_GEN_DIS_STREET13_6, DisStreet13Trainer6SeenText, DisStreet13Trainer6BeatenText, 0, DisStreet13AfterScript
 
 DisStreet13_MapEvents:
 	db 0, 0 ; filler

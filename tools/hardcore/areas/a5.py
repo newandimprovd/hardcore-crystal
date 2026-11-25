@@ -31,7 +31,7 @@ def build(w, roster, rng, entry_doors):
         BossSpec("CocytusIceHall", "BETRAYER", "D_DEMON", "SPRITE_HC_DEMON_LORD", "PAL_NPC_BLUE", 99, 5, T.CAGE_SEEN,
                  T.CAGE_BEATEN, T.CAGE_AFTER, template="will"),
         BossSpec("JudeccaCentre", "FINNEGAN", "D_FINNEGAN", "SPRITE_HC_FINNEGAN", "PAL_NPC_BLUE", 99, 6, T.SLEEPER_SEEN,
-                 T.SLEEPER_BEATEN, T.SLEEPER_AFTER, template="bruno", landmark="LANDMARK_DIS_JUDECCA",
+                 T.SLEEPER_BEATEN, T.SLEEPER_AFTER, template="summit", landmark="LANDMARK_DIS_JUDECCA",
                  music="MUSIC_ROCKET_HIDEOUT", story=3)]
     cfg = AreaCfg("AREA5", "Dis", Spec(), kits.dis(), "PALETTE_DAY",
                   [("DIS_CITY", 24, 50, "THE<BSP>CITY<BSP>OF<BSP>DIS"), ("DIS_COCYTUS", 20, 46, "LAKE<BSP>COCYTUS"),

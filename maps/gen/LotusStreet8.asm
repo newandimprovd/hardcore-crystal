@@ -58,14 +58,6 @@ LotusStreet8GiftHermitNoRoomText:
 	para "on."
 	done
 
-LotusStreet8SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet8BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet8AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -78,26 +70,123 @@ LotusStreet8AfterScript:
 	closetext
 	end
 
+LotusStreet8Trainer0SeenText:
+	text "I haven't worked"
+	line "in eleven years."
+	para "This is the first"
+	line "thing I've wanted"
+	para "to do."
+	done
+
+LotusStreet8Trainer0BeatenText:
+	text "My towel is wet"
+	line "and so are my"
+	para "eyes."
+	done
+
 LotusStreet8Trainer0:
-	trainer L_BEACHBUM, 129, EVENT_GEN_LOTUS_STREET8_0, LotusStreet8SeenText, LotusStreet8BeatenText, 0, LotusStreet8AfterScript
+	trainer L_BEACHBUM, 129, EVENT_GEN_LOTUS_STREET8_0, LotusStreet8Trainer0SeenText, LotusStreet8Trainer0BeatenText, 0, LotusStreet8AfterScript
+
+LotusStreet8Trainer1SeenText:
+	text "This coast has"
+	line "seen a thousand of"
+	para "you. A thousand of"
+	line "you are in the"
+	para "sand."
+	done
+
+LotusStreet8Trainer1BeatenText:
+	text "Ha. Ha. Ha. Oh no,"
+	line "it's still"
+	para "working. Ha."
+	done
 
 LotusStreet8Trainer1:
-	trainer L_CLINICIAN, 131, EVENT_GEN_LOTUS_STREET8_1, LotusStreet8SeenText, LotusStreet8BeatenText, 0, LotusStreet8AfterScript
+	trainer L_CLINICIAN, 131, EVENT_GEN_LOTUS_STREET8_1, LotusStreet8Trainer1SeenText, LotusStreet8Trainer1BeatenText, 0, LotusStreet8AfterScript
+
+LotusStreet8Trainer2SeenText:
+	text "I came here to die"
+	line "peacefully. Now"
+	para "you're making it"
+	line "difficult."
+	done
+
+LotusStreet8Trainer2BeatenText:
+	text "Well. That's one"
+	line "way to cool off."
+	done
 
 LotusStreet8Trainer2:
-	trainer L_SUNBATHER, 130, EVENT_GEN_LOTUS_STREET8_2, LotusStreet8SeenText, LotusStreet8BeatenText, 0, LotusStreet8AfterScript
+	trainer L_SUNBATHER, 130, EVENT_GEN_LOTUS_STREET8_2, LotusStreet8Trainer2SeenText, LotusStreet8Trainer2BeatenText, 0, LotusStreet8AfterScript
+
+LotusStreet8Trainer3SeenText:
+	text "I forgot why I'm"
+	line "angry. Now I'm"
+	para "angry about that."
+	done
+
+LotusStreet8Trainer3BeatenText:
+	text "I need an aloe"
+	line "vera. And a"
+	para "priest. In"
+	line "whichever order."
+	done
 
 LotusStreet8Trainer3:
-	trainer L_LIFEGUARD, 133, EVENT_GEN_LOTUS_STREET8_3, LotusStreet8SeenText, LotusStreet8BeatenText, 0, LotusStreet8AfterScript
+	trainer L_LIFEGUARD, 133, EVENT_GEN_LOTUS_STREET8_3, LotusStreet8Trainer3SeenText, LotusStreet8Trainer3BeatenText, 0, LotusStreet8AfterScript
+
+LotusStreet8Trainer4SeenText:
+	text "I am here for a"
+	line "good time and a"
+	para "better death,"
+	line "courtesy of"
+	para "FINNEGAN's wake."
+	line "Shall we?"
+	done
+
+LotusStreet8Trainer4BeatenText:
+	text "Don't put me in a"
+	line "box. Put me in a"
+	para "boat. Push it out."
+	done
 
 LotusStreet8Trainer4:
-	trainer L_BEACHBUM, 130, EVENT_GEN_LOTUS_STREET8_4, LotusStreet8SeenText, LotusStreet8BeatenText, 0, LotusStreet8AfterScript
+	trainer L_BEACHBUM, 130, EVENT_GEN_LOTUS_STREET8_4, LotusStreet8Trainer4SeenText, LotusStreet8Trainer4BeatenText, 0, LotusStreet8AfterScript
+
+LotusStreet8Trainer5SeenText:
+	text "Welcome to"
+	line "paradise. We have"
+	para "a no refund"
+	line "policy."
+	done
+
+LotusStreet8Trainer5BeatenText:
+	text "Honestly, this is"
+	line "the most"
+	para "excitement I've"
+	line "had in a decade."
+	done
 
 LotusStreet8Trainer5:
-	trainer L_LOUNGER, 134, EVENT_GEN_LOTUS_STREET8_5, LotusStreet8SeenText, LotusStreet8BeatenText, 0, LotusStreet8AfterScript
+	trainer L_LOUNGER, 134, EVENT_GEN_LOTUS_STREET8_5, LotusStreet8Trainer5SeenText, LotusStreet8Trainer5BeatenText, 0, LotusStreet8AfterScript
+
+LotusStreet8Trainer6SeenText:
+	text "Are you here for"
+	line "the memory"
+	para "massage? No? Then"
+	line "you're here for"
+	para "the other thing."
+	done
+
+LotusStreet8Trainer6BeatenText:
+	text "I should've stayed"
+	line "in the hammock."
+	para "The hammock never"
+	line "hit me."
+	done
 
 LotusStreet8Trainer6:
-	trainer L_SUNBATHER, 131, EVENT_GEN_LOTUS_STREET8_6, LotusStreet8SeenText, LotusStreet8BeatenText, 0, LotusStreet8AfterScript
+	trainer L_SUNBATHER, 131, EVENT_GEN_LOTUS_STREET8_6, LotusStreet8Trainer6SeenText, LotusStreet8Trainer6BeatenText, 0, LotusStreet8AfterScript
 
 LotusStreet8_MapEvents:
 	db 0, 0 ; filler

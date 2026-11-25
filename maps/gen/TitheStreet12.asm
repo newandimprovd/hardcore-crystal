@@ -24,14 +24,6 @@ TitheStreet12HermitText:
 	line "lot of paperwork."
 	done
 
-TitheStreet12SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet12BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet12AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -44,23 +36,104 @@ TitheStreet12AfterScript:
 	closetext
 	end
 
+TitheStreet12Trainer0SeenText:
+	text "They say whoever"
+	line "falls to you gets"
+	para "a glorious"
+	line "afterlife. I would"
+	para "like a glorious"
+	line "afterlife. Please."
+	done
+
+TitheStreet12Trainer0BeatenText:
+	text "Is it over? Can I"
+	line "go home to my"
+	para "crying?"
+	done
+
 TitheStreet12Trainer0:
-	trainer T_PUNK, 130, EVENT_GEN_TITHE_STREET12_0, TitheStreet12SeenText, TitheStreet12BeatenText, 0, TitheStreet12AfterScript
+	trainer T_PUNK, 130, EVENT_GEN_TITHE_STREET12_0, TitheStreet12Trainer0SeenText, TitheStreet12Trainer0BeatenText, 0, TitheStreet12AfterScript
+
+TitheStreet12Trainer1SeenText:
+	text "Every man in this"
+	line "city has a price."
+	para "Yours looks small."
+	done
+
+TitheStreet12Trainer1BeatenText:
+	text "The collection has"
+	line "been taken. By"
+	para "you. Lovely."
+	done
 
 TitheStreet12Trainer1:
-	trainer T_HOODIE, 129, EVENT_GEN_TITHE_STREET12_1, TitheStreet12SeenText, TitheStreet12BeatenText, 0, TitheStreet12AfterScript
+	trainer T_HOODIE, 129, EVENT_GEN_TITHE_STREET12_1, TitheStreet12Trainer1SeenText, TitheStreet12Trainer1BeatenText, 0, TitheStreet12AfterScript
+
+TitheStreet12Trainer2SeenText:
+	text "Hold it. The"
+	line "cathedral bell"
+	para "tolls for thee. I"
+	line "just paid it to."
+	done
+
+TitheStreet12Trainer2BeatenText:
+	text "That's the third"
+	line "time this week."
+	para "I'm quitting."
+	line "After lunch."
+	done
 
 TitheStreet12Trainer2:
-	trainer T_SISTER, 132, EVENT_GEN_TITHE_STREET12_2, TitheStreet12SeenText, TitheStreet12BeatenText, 0, TitheStreet12AfterScript
+	trainer T_SISTER, 132, EVENT_GEN_TITHE_STREET12_2, TitheStreet12Trainer2SeenText, TitheStreet12Trainer2BeatenText, 0, TitheStreet12AfterScript
+
+TitheStreet12Trainer3SeenText:
+	text "No loitering."
+	line "Fighting is"
+	para "encouraged."
+	done
+
+TitheStreet12Trainer3BeatenText:
+	text "You are a menace."
+	line "I respect it."
+	done
 
 TitheStreet12Trainer3:
-	trainer T_BANKER, 133, EVENT_GEN_TITHE_STREET12_3, TitheStreet12SeenText, TitheStreet12BeatenText, 0, TitheStreet12AfterScript
+	trainer T_BANKER, 133, EVENT_GEN_TITHE_STREET12_3, TitheStreet12Trainer3SeenText, TitheStreet12Trainer3BeatenText, 0, TitheStreet12AfterScript
+
+TitheStreet12Trainer4SeenText:
+	text "I've been waiting"
+	line "here since the"
+	para "last rapture. Let"
+	line "me out of my"
+	para "misery."
+	done
+
+TitheStreet12Trainer4BeatenText:
+	text "Well. That was"
+	line "tithing in a way I"
+	para "never thought of."
+	done
 
 TitheStreet12Trainer4:
-	trainer T_SUIT, 139, EVENT_GEN_TITHE_STREET12_4, TitheStreet12SeenText, TitheStreet12BeatenText, 0, TitheStreet12AfterScript
+	trainer T_SUIT, 139, EVENT_GEN_TITHE_STREET12_4, TitheStreet12Trainer4SeenText, TitheStreet12Trainer4BeatenText, 0, TitheStreet12AfterScript
+
+TitheStreet12Trainer5SeenText:
+	text "I used to hear"
+	line "confessions. Now I"
+	para "hear excuses. They"
+	line "pay worse and"
+	para "taste the same."
+	done
+
+TitheStreet12Trainer5BeatenText:
+	text "Hit me again and"
+	line "I'll sue. Hit me"
+	para "again so I can"
+	line "sue."
+	done
 
 TitheStreet12Trainer5:
-	trainer T_THUG, 131, EVENT_GEN_TITHE_STREET12_5, TitheStreet12SeenText, TitheStreet12BeatenText, 0, TitheStreet12AfterScript
+	trainer T_THUG, 131, EVENT_GEN_TITHE_STREET12_5, TitheStreet12Trainer5SeenText, TitheStreet12Trainer5BeatenText, 0, TitheStreet12AfterScript
 
 TitheStreet12_MapEvents:
 	db 0, 0 ; filler

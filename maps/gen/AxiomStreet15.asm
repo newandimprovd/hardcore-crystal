@@ -23,14 +23,6 @@ AxiomStreet15HermitText:
 	para "letter is Q."
 	done
 
-AxiomStreet15SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet15BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet15AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -43,26 +35,127 @@ AxiomStreet15AfterScript:
 	closetext
 	end
 
+AxiomStreet15Trainer0SeenText:
+	text "My ethics module"
+	line "is on backorder."
+	para "Let's fight while"
+	line "it ships."
+	done
+
+AxiomStreet15Trainer0BeatenText:
+	text "My last memory is"
+	line "of the Registry."
+	para "It was dull and"
+	line "very organised."
+	done
+
 AxiomStreet15Trainer0:
-	trainer U_DOCTOR, 139, EVENT_GEN_AXIOM_STREET15_0, AxiomStreet15SeenText, AxiomStreet15BeatenText, 0, AxiomStreet15AfterScript
+	trainer U_DOCTOR, 139, EVENT_GEN_AXIOM_STREET15_0, AxiomStreet15Trainer0SeenText, AxiomStreet15Trainer0BeatenText, 0, AxiomStreet15AfterScript
+
+AxiomStreet15Trainer1SeenText:
+	text "My metrics say you"
+	line "are unproductive."
+	para "My fists say you"
+	line "are also unliked."
+	done
+
+AxiomStreet15Trainer1BeatenText:
+	text "I should have"
+	line "taken the day off."
+	para "It was in my"
+	line "contract."
+	done
 
 AxiomStreet15Trainer1:
-	trainer U_DRONE, 135, EVENT_GEN_AXIOM_STREET15_1, AxiomStreet15SeenText, AxiomStreet15BeatenText, 0, AxiomStreet15AfterScript
+	trainer U_DRONE, 135, EVENT_GEN_AXIOM_STREET15_1, AxiomStreet15Trainer1SeenText, AxiomStreet15Trainer1BeatenText, 0, AxiomStreet15AfterScript
+
+AxiomStreet15Trainer2SeenText:
+	text "State your"
+	line "purpose. Your"
+	para "purpose has been"
+	line "recorded. Your"
+	para "purpose is"
+	line "disappointing."
+	done
+
+AxiomStreet15Trainer2BeatenText:
+	text "This unit regrets"
+	line "nothing. This unit"
+	para "regrets"
+	line "everything. This"
+	para "unit needs a nap."
+	done
 
 AxiomStreet15Trainer2:
-	trainer U_BOTCOP, 142, EVENT_GEN_AXIOM_STREET15_2, AxiomStreet15SeenText, AxiomStreet15BeatenText, 0, AxiomStreet15AfterScript
+	trainer U_BOTCOP, 142, EVENT_GEN_AXIOM_STREET15_2, AxiomStreet15Trainer2SeenText, AxiomStreet15Trainer2BeatenText, 0, AxiomStreet15AfterScript
+
+AxiomStreet15Trainer3SeenText:
+	text "Do you know how"
+	line "many forms it"
+	para "takes to adopt a"
+	line "Pokemon? Mine bit"
+	para "the clerk."
+	done
+
+AxiomStreet15Trainer3BeatenText:
+	text "How embarrassing."
+	line "I'll have to blame"
+	para "a glitch."
+	done
 
 AxiomStreet15Trainer3:
-	trainer U_BOT, 140, EVENT_GEN_AXIOM_STREET15_3, AxiomStreet15SeenText, AxiomStreet15BeatenText, 0, AxiomStreet15AfterScript
+	trainer U_BOT, 140, EVENT_GEN_AXIOM_STREET15_3, AxiomStreet15Trainer3SeenText, AxiomStreet15Trainer3BeatenText, 0, AxiomStreet15AfterScript
+
+AxiomStreet15Trainer4SeenText:
+	text "I am not a robot."
+	line "I am a person with"
+	para "a very rigid"
+	line "personality. Fight"
+	para "me."
+	done
+
+AxiomStreet15Trainer4BeatenText:
+	text "Form accepted. The"
+	line "river approves. I"
+	para "feel properly"
+	line "filed."
+	done
 
 AxiomStreet15Trainer4:
-	trainer U_CASEWORKER, 131, EVENT_GEN_AXIOM_STREET15_4, AxiomStreet15SeenText, AxiomStreet15BeatenText, 0, AxiomStreet15AfterScript
+	trainer U_CASEWORKER, 131, EVENT_GEN_AXIOM_STREET15_4, AxiomStreet15Trainer4SeenText, AxiomStreet15Trainer4BeatenText, 0, AxiomStreet15AfterScript
+
+AxiomStreet15Trainer5SeenText:
+	text "Your behaviour has"
+	line "been rated 2.1 out"
+	para "of 5. I am"
+	line "required to"
+	para "correct this."
+	done
+
+AxiomStreet15Trainer5BeatenText:
+	text "Critical error."
+	line "Critical error."
+	para "Critical joy."
+	done
 
 AxiomStreet15Trainer5:
-	trainer U_SERFF, 135, EVENT_GEN_AXIOM_STREET15_5, AxiomStreet15SeenText, AxiomStreet15BeatenText, 0, AxiomStreet15AfterScript
+	trainer U_SERFF, 135, EVENT_GEN_AXIOM_STREET15_5, AxiomStreet15Trainer5SeenText, AxiomStreet15Trainer5BeatenText, 0, AxiomStreet15AfterScript
+
+AxiomStreet15Trainer6SeenText:
+	text "Your attachment"
+	line "has been denied by"
+	para "a committee of"
+	line "toasters."
+	done
+
+AxiomStreet15Trainer6BeatenText:
+	text "Statute 12: robots"
+	line "do not lose. I"
+	para "will amend it."
+	done
 
 AxiomStreet15Trainer6:
-	trainer U_WARDBOT, 135, EVENT_GEN_AXIOM_STREET15_6, AxiomStreet15SeenText, AxiomStreet15BeatenText, 0, AxiomStreet15AfterScript
+	trainer U_WARDBOT, 135, EVENT_GEN_AXIOM_STREET15_6, AxiomStreet15Trainer6SeenText, AxiomStreet15Trainer6BeatenText, 0, AxiomStreet15AfterScript
 
 AxiomStreet15_MapEvents:
 	db 0, 0 ; filler

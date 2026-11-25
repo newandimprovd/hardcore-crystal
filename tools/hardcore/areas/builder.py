@@ -421,7 +421,7 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
         boss = dict(cls=b.cls, sprite=b.sprite, pal=b.pal, name=b.name, party=party, seen=Text(b.seen),
                     beaten=Text(b.beaten), after=Text(b.after))
         room, exits = boss_room(g, w, b.room, doors["extra"][0], b.landmark or act.landmark, b.music, b.template,
-                                boss, item=b.item, open_exit=b.open_exit, story=b.story)
+                                boss, item=b.item, open_exit=b.open_exit, story=b.story, kit=kit)
         info = (room, boss, exits)
     return lanes, p, doors, info, lane_no, plaza_no
 

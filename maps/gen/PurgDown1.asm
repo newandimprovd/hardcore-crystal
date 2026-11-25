@@ -6,14 +6,6 @@ PurgDown1_MapScripts:
 
 	def_callbacks
 
-PurgDown1SeenText:
-	text_far HC_SeenText_PG
-	text_end
-
-PurgDown1BeatenText:
-	text_far HC_BeatenText_PG
-	text_end
-
 PurgDown1AfterText:
 	text_far HC_AfterText_PG
 	text_end
@@ -26,29 +18,145 @@ PurgDown1AfterScript:
 	closetext
 	end
 
+PurgDown1Trainer0SeenText:
+	text "A Pokemon duel is"
+	line "the most honest"
+	para "conversation left"
+	line "to me."
+	done
+
+PurgDown1Trainer0BeatenText:
+	text "You win. Eternity"
+	line "just got a little"
+	para "less boring."
+	done
+
 PurgDown1Trainer0:
-	trainer L_SAILOR, 133, EVENT_GEN_PURG_DOWN1_0, PurgDown1SeenText, PurgDown1BeatenText, 0, PurgDown1AfterScript
+	trainer L_SAILOR, 133, EVENT_GEN_PURG_DOWN1_0, PurgDown1Trainer0SeenText, PurgDown1Trainer0BeatenText, 0, PurgDown1AfterScript
+
+PurgDown1Trainer1SeenText:
+	text "I have argued with"
+	line "myself for four"
+	para "hundred years. You"
+	line "are a refreshing"
+	para "change of"
+	line "opponent."
+	done
+
+PurgDown1Trainer1BeatenText:
+	text "You hit like"
+	line "someone with a"
+	para "deadline."
+	done
 
 PurgDown1Trainer1:
-	trainer G_SHAMAN, 134, EVENT_GEN_PURG_DOWN1_1, PurgDown1SeenText, PurgDown1BeatenText, 0, PurgDown1AfterScript
+	trainer G_SHAMAN, 134, EVENT_GEN_PURG_DOWN1_1, PurgDown1Trainer1SeenText, PurgDown1Trainer1BeatenText, 0, PurgDown1AfterScript
+
+PurgDown1Trainer2SeenText:
+	text "I came here to"
+	line "repent. They only"
+	para "had a waiting"
+	line "room. Fight me"
+	para "while I wait."
+	done
+
+PurgDown1Trainer2BeatenText:
+	text "Please don't tell"
+	line "the ferryman I"
+	para "lost. He doesn't"
+	line "take it well."
+	done
 
 PurgDown1Trainer2:
-	trainer T_PRIEST, 138, EVENT_GEN_PURG_DOWN1_2, PurgDown1SeenText, PurgDown1BeatenText, 0, PurgDown1AfterScript
+	trainer T_PRIEST, 138, EVENT_GEN_PURG_DOWN1_2, PurgDown1Trainer2SeenText, PurgDown1Trainer2BeatenText, 0, PurgDown1AfterScript
+
+PurgDown1Trainer3SeenText:
+	text "They hang a"
+	line "lantern for the"
+	para "wayward. I'm the"
+	line "lantern's"
+	para "assistant."
+	done
+
+PurgDown1Trainer3BeatenText:
+	text "I surrender my"
+	line "dignity. It was in"
+	para "poor shape anyway."
+	done
 
 PurgDown1Trainer3:
-	trainer T_BEGGAR, 138, EVENT_GEN_PURG_DOWN1_3, PurgDown1SeenText, PurgDown1BeatenText, 0, PurgDown1AfterScript
+	trainer T_BEGGAR, 138, EVENT_GEN_PURG_DOWN1_3, PurgDown1Trainer3SeenText, PurgDown1Trainer3BeatenText, 0, PurgDown1AfterScript
+
+PurgDown1Trainer4SeenText:
+	text "I'm here because I"
+	line "held a grudge."
+	para "It's in the"
+	line "contract of the"
+	para "cave. Let me hold"
+	line "you."
+	done
+
+PurgDown1Trainer4BeatenText:
+	text "Congratulations."
+	line "You've won a"
+	para "conversation with"
+	line "a stranger. It's"
+	para "rarer than you"
+	line "think."
+	done
 
 PurgDown1Trainer4:
-	trainer L_SAILOR, 134, EVENT_GEN_PURG_DOWN1_4, PurgDown1SeenText, PurgDown1BeatenText, 0, PurgDown1AfterScript
+	trainer L_SAILOR, 134, EVENT_GEN_PURG_DOWN1_4, PurgDown1Trainer4SeenText, PurgDown1Trainer4BeatenText, 0, PurgDown1AfterScript
+
+PurgDown1Trainer5SeenText:
+	text "Nobody dies in"
+	line "here. It is the"
+	para "worst thing about"
+	line "the place. Fight"
+	para "me anyway."
+	done
+
+PurgDown1Trainer5BeatenText:
+	text "Another loss. At"
+	line "least I am"
+	para "consistent."
+	done
 
 PurgDown1Trainer5:
-	trainer G_SHAMAN, 135, EVENT_GEN_PURG_DOWN1_5, PurgDown1SeenText, PurgDown1BeatenText, 0, PurgDown1AfterScript
+	trainer G_SHAMAN, 135, EVENT_GEN_PURG_DOWN1_5, PurgDown1Trainer5SeenText, PurgDown1Trainer5BeatenText, 0, PurgDown1AfterScript
+
+PurgDown1Trainer6SeenText:
+	text "I have read every"
+	line "book on this"
+	para "level. Both of"
+	line "them. Fight me."
+	done
+
+PurgDown1Trainer6BeatenText:
+	text "Fair play."
+	line "Someone's going to"
+	para "write that down."
+	line "Probably me. I"
+	para "have the time."
+	done
 
 PurgDown1Trainer6:
-	trainer G_SHAMAN, 136, EVENT_GEN_PURG_DOWN1_6, PurgDown1SeenText, PurgDown1BeatenText, 0, PurgDown1AfterScript
+	trainer G_SHAMAN, 136, EVENT_GEN_PURG_DOWN1_6, PurgDown1Trainer6SeenText, PurgDown1Trainer6BeatenText, 0, PurgDown1AfterScript
+
+PurgDown1Trainer7SeenText:
+	text "I'm dead, but I'm"
+	line "also very, very"
+	para "petty."
+	done
+
+PurgDown1Trainer7BeatenText:
+	text "Nothing matters."
+	line "But that matters a"
+	para "little less now."
+	done
 
 PurgDown1Trainer7:
-	trainer U_SERF, 134, EVENT_GEN_PURG_DOWN1_7, PurgDown1SeenText, PurgDown1BeatenText, 0, PurgDown1AfterScript
+	trainer U_SERF, 134, EVENT_GEN_PURG_DOWN1_7, PurgDown1Trainer7SeenText, PurgDown1Trainer7BeatenText, 0, PurgDown1AfterScript
 
 PurgDown1Hermit0:
 	faceplayer

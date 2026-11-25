@@ -21,14 +21,6 @@ DisStreet9HermitText:
 	para "full-time job."
 	done
 
-DisStreet9SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet9BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet9AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -41,26 +33,119 @@ DisStreet9AfterScript:
 	closetext
 	end
 
+DisStreet9Trainer0SeenText:
+	text "I die for"
+	line "FINNEGAN, for the"
+	para "loop, and for the"
+	line "discount. Mostly"
+	para "the discount."
+	done
+
+DisStreet9Trainer0BeatenText:
+	text "Don't gloat. It's"
+	line "unbecoming. Also"
+	para "it's very hot."
+	done
+
 DisStreet9Trainer0:
-	trainer D_MAGISTRATE, 130, EVENT_GEN_DIS_STREET9_0, DisStreet9SeenText, DisStreet9BeatenText, 0, DisStreet9AfterScript
+	trainer D_MAGISTRATE, 130, EVENT_GEN_DIS_STREET9_0, DisStreet9Trainer0SeenText, DisStreet9Trainer0BeatenText, 0, DisStreet9AfterScript
+
+DisStreet9Trainer1SeenText:
+	text "I was put with the"
+	line "heretics. They"
+	para "have better"
+	line "snacks."
+	done
+
+DisStreet9Trainer1BeatenText:
+	text "Even in Hell,"
+	line "there's a last"
+	para "word. Mine is:"
+	line "oops."
+	done
 
 DisStreet9Trainer1:
-	trainer D_WARDEN, 131, EVENT_GEN_DIS_STREET9_1, DisStreet9SeenText, DisStreet9BeatenText, 0, DisStreet9AfterScript
+	trainer D_WARDEN, 131, EVENT_GEN_DIS_STREET9_1, DisStreet9Trainer1SeenText, DisStreet9Trainer1BeatenText, 0, DisStreet9AfterScript
+
+DisStreet9Trainer2SeenText:
+	text "I deserve it. I"
+	line "really do. Please"
+	para "hit me anyway."
+	done
+
+DisStreet9Trainer2BeatenText:
+	text "I thought this was"
+	line "a dream. It's more"
+	para "of a reminder."
+	done
 
 DisStreet9Trainer2:
-	trainer D_BRUTE, 134, EVENT_GEN_DIS_STREET9_2, DisStreet9SeenText, DisStreet9BeatenText, 0, DisStreet9AfterScript
+	trainer D_BRUTE, 134, EVENT_GEN_DIS_STREET9_2, DisStreet9Trainer2SeenText, DisStreet9Trainer2BeatenText, 0, DisStreet9AfterScript
+
+DisStreet9Trainer3SeenText:
+	text "My cousin is"
+	line "Satan. He doesn't"
+	para "call. He doesn't"
+	line "write. He does"
+	para "collect."
+	done
+
+DisStreet9Trainer3BeatenText:
+	text "My soul is the"
+	line "property of"
+	para "someone else. Take"
+	line "it up with him."
+	done
 
 DisStreet9Trainer3:
-	trainer D_DAMNED, 130, EVENT_GEN_DIS_STREET9_3, DisStreet9SeenText, DisStreet9BeatenText, 0, DisStreet9AfterScript
+	trainer D_DAMNED, 130, EVENT_GEN_DIS_STREET9_3, DisStreet9Trainer3SeenText, DisStreet9Trainer3BeatenText, 0, DisStreet9AfterScript
+
+DisStreet9Trainer4SeenText:
+	text "My boss has a"
+	line "pitchfork and a"
+	para "clipboard. He's a"
+	line "stickler for both."
+	done
+
+DisStreet9Trainer4BeatenText:
+	text "That was awful. Do"
+	line "it again."
+	done
 
 DisStreet9Trainer4:
-	trainer D_IMP, 132, EVENT_GEN_DIS_STREET9_4, DisStreet9SeenText, DisStreet9BeatenText, 0, DisStreet9AfterScript
+	trainer D_IMP, 132, EVENT_GEN_DIS_STREET9_4, DisStreet9Trainer4SeenText, DisStreet9Trainer4BeatenText, 0, DisStreet9AfterScript
+
+DisStreet9Trainer5SeenText:
+	text "My wife is"
+	line "upstairs. I'm"
+	para "downstairs. It's"
+	line "the happiest we've"
+	para "been."
+	done
+
+DisStreet9Trainer5BeatenText:
+	text "Sentence accepted."
+	line "Please return to"
+	para "your suffering."
+	done
 
 DisStreet9Trainer5:
-	trainer D_SPECTRE, 129, EVENT_GEN_DIS_STREET9_5, DisStreet9SeenText, DisStreet9BeatenText, 0, DisStreet9AfterScript
+	trainer D_SPECTRE, 129, EVENT_GEN_DIS_STREET9_5, DisStreet9Trainer5SeenText, DisStreet9Trainer5BeatenText, 0, DisStreet9AfterScript
+
+DisStreet9Trainer6SeenText:
+	text "I have a dozen"
+	line "personalities. All"
+	para "of them hate you."
+	done
+
+DisStreet9Trainer6BeatenText:
+	text "Take my coat. It"
+	line "has a hole in it."
+	para "And a body."
+	done
 
 DisStreet9Trainer6:
-	trainer D_BRUTE, 135, EVENT_GEN_DIS_STREET9_6, DisStreet9SeenText, DisStreet9BeatenText, 0, DisStreet9AfterScript
+	trainer D_BRUTE, 135, EVENT_GEN_DIS_STREET9_6, DisStreet9Trainer6SeenText, DisStreet9Trainer6BeatenText, 0, DisStreet9AfterScript
 
 DisStreet9_MapEvents:
 	db 0, 0 ; filler

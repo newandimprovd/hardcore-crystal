@@ -45,14 +45,6 @@ PurgUp2Gate0UseText:
 	line "anyway."
 	done
 
-PurgUp2SeenText:
-	text_far HC_SeenText_PG
-	text_end
-
-PurgUp2BeatenText:
-	text_far HC_BeatenText_PG
-	text_end
-
 PurgUp2AfterText:
 	text_far HC_AfterText_PG
 	text_end
@@ -65,29 +57,146 @@ PurgUp2AfterScript:
 	closetext
 	end
 
+PurgUp2Trainer0SeenText:
+	text "I died of boredom."
+	line "This is the first"
+	para "interesting thing"
+	line "that has happened"
+	para "to me."
+	done
+
+PurgUp2Trainer0BeatenText:
+	text "I lost? How"
+	line "terribly"
+	para "philosophical of"
+	line "me."
+	done
+
 PurgUp2Trainer0:
-	trainer G_GRANNY, 140, EVENT_GEN_PURG_UP2_0, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer G_GRANNY, 140, EVENT_GEN_PURG_UP2_0, PurgUp2Trainer0SeenText, PurgUp2Trainer0BeatenText, 0, PurgUp2AfterScript
+
+PurgUp2Trainer1SeenText:
+	text "I once had seven"
+	line "wives. Now I have"
+	para "a cave and no"
+	line "hobby. Let's"
+	para "battle."
+	done
+
+PurgUp2Trainer1BeatenText:
+	text "That was not in my"
+	line "notes."
+	done
 
 PurgUp2Trainer1:
-	trainer U_DOCTOR, 142, EVENT_GEN_PURG_UP2_1, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer U_DOCTOR, 142, EVENT_GEN_PURG_UP2_1, PurgUp2Trainer1SeenText, PurgUp2Trainer1BeatenText, 0, PurgUp2AfterScript
+
+PurgUp2Trainer2SeenText:
+	text "I haven't spoken"
+	line "to anyone in"
+	para "ninety years. Be"
+	line "gentle. I'm very"
+	para "out of practice at"
+	line "being polite."
+	done
+
+PurgUp2Trainer2BeatenText:
+	text "I have given you a"
+	line "good fight. Please"
+	para "remember me as a"
+	line "worthy opponent."
+	para "Or at least a"
+	line "stubborn one."
+	done
 
 PurgUp2Trainer2:
-	trainer G_GRANNY, 141, EVENT_GEN_PURG_UP2_2, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer G_GRANNY, 141, EVENT_GEN_PURG_UP2_2, PurgUp2Trainer2SeenText, PurgUp2Trainer2BeatenText, 0, PurgUp2AfterScript
+
+PurgUp2Trainer3SeenText:
+	text "They say suffering"
+	line "ennobles. I've"
+	para "suffered. I'm"
+	line "still a jerk."
+	para "Battle!"
+	done
+
+PurgUp2Trainer3BeatenText:
+	text "Lost again."
+	line "Eternity is a long"
+	para "time to be"
+	line "mediocre."
+	done
 
 PurgUp2Trainer3:
-	trainer G_SHAMAN, 141, EVENT_GEN_PURG_UP2_3, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer G_SHAMAN, 141, EVENT_GEN_PURG_UP2_3, PurgUp2Trainer3SeenText, PurgUp2Trainer3BeatenText, 0, PurgUp2AfterScript
+
+PurgUp2Trainer4SeenText:
+	text "I do not fear"
+	line "death. I have"
+	para "already done it"
+	line "and the reviews"
+	para "were mixed."
+	done
+
+PurgUp2Trainer4BeatenText:
+	text "The dead are never"
+	line "beaten. Merely"
+	para "re-filed."
+	done
 
 PurgUp2Trainer4:
-	trainer G_GRANNY, 142, EVENT_GEN_PURG_UP2_4, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer G_GRANNY, 142, EVENT_GEN_PURG_UP2_4, PurgUp2Trainer4SeenText, PurgUp2Trainer4BeatenText, 0, PurgUp2AfterScript
+
+PurgUp2Trainer5SeenText:
+	text "My last words were"
+	line "a complaint about"
+	para "parking. Be gentle"
+	line "with me."
+	done
+
+PurgUp2Trainer5BeatenText:
+	text "I'll go tell the"
+	line "others. They'll be"
+	para "crushed. They're"
+	line "always crushed."
+	done
 
 PurgUp2Trainer5:
-	trainer G_GRANNY, 143, EVENT_GEN_PURG_UP2_5, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer G_GRANNY, 143, EVENT_GEN_PURG_UP2_5, PurgUp2Trainer5SeenText, PurgUp2Trainer5BeatenText, 0, PurgUp2AfterScript
+
+PurgUp2Trainer6SeenText:
+	text "You are late."
+	line "Everyone down here"
+	para "is early, because"
+	line "there's nowhere"
+	para "else to be."
+	done
+
+PurgUp2Trainer6BeatenText:
+	text "A fair fight. A"
+	line "fair loss. A fair"
+	para "amount of me on"
+	line "the floor."
+	done
 
 PurgUp2Trainer6:
-	trainer G_SHAMAN, 142, EVENT_GEN_PURG_UP2_6, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer G_SHAMAN, 142, EVENT_GEN_PURG_UP2_6, PurgUp2Trainer6SeenText, PurgUp2Trainer6BeatenText, 0, PurgUp2AfterScript
+
+PurgUp2Trainer7SeenText:
+	text "Free will is a"
+	line "rumor spread by"
+	para "people who lose"
+	line "fights. Let's test"
+	para "it."
+	done
+
+PurgUp2Trainer7BeatenText:
+	text "This is why the"
+	line "dead don't gamble."
+	done
 
 PurgUp2Trainer7:
-	trainer T_PRIEST, 139, EVENT_GEN_PURG_UP2_7, PurgUp2SeenText, PurgUp2BeatenText, 0, PurgUp2AfterScript
+	trainer T_PRIEST, 139, EVENT_GEN_PURG_UP2_7, PurgUp2Trainer7SeenText, PurgUp2Trainer7BeatenText, 0, PurgUp2AfterScript
 
 PurgUp2Hermit0:
 	faceplayer

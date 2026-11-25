@@ -60,14 +60,6 @@ AxiomStreet6HermitText:
 	line "Probably."
 	done
 
-AxiomStreet6SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet6BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet6AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -80,26 +72,125 @@ AxiomStreet6AfterScript:
 	closetext
 	end
 
+AxiomStreet6Trainer0SeenText:
+	text "I once loved a"
+	line "vending machine."
+	para "They scrapped her."
+	line "Fight me."
+	done
+
+AxiomStreet6Trainer0BeatenText:
+	text "Thank you for your"
+	line "participation."
+	para "Your participation"
+	line "has been logged as"
+	para "fatal."
+	done
+
 AxiomStreet6Trainer0:
-	trainer U_BOT, 134, EVENT_GEN_AXIOM_STREET6_0, AxiomStreet6SeenText, AxiomStreet6BeatenText, 0, AxiomStreet6AfterScript
+	trainer U_BOT, 134, EVENT_GEN_AXIOM_STREET6_0, AxiomStreet6Trainer0SeenText, AxiomStreet6Trainer0BeatenText, 0, AxiomStreet6AfterScript
+
+AxiomStreet6Trainer1SeenText:
+	text "I'd say it's"
+	line "nothing personal,"
+	para "but I'm programmed"
+	line "to say that."
+	done
+
+AxiomStreet6Trainer1BeatenText:
+	text "The Mayor will"
+	line "hear of this. He"
+	para "will not care."
+	done
 
 AxiomStreet6Trainer1:
-	trainer U_GUARD, 129, EVENT_GEN_AXIOM_STREET6_1, AxiomStreet6SeenText, AxiomStreet6BeatenText, 0, AxiomStreet6AfterScript
+	trainer U_GUARD, 129, EVENT_GEN_AXIOM_STREET6_1, AxiomStreet6Trainer1SeenText, AxiomStreet6Trainer1BeatenText, 0, AxiomStreet6AfterScript
+
+AxiomStreet6Trainer2SeenText:
+	text "Your paperwork is"
+	line "incomplete. Also"
+	para "you. You are"
+	line "incomplete."
+	done
+
+AxiomStreet6Trainer2BeatenText:
+	text "Error 404:"
+	line "opponent not"
+	para "found. Oh. It's"
+	line "me."
+	done
 
 AxiomStreet6Trainer2:
-	trainer U_DRONE, 131, EVENT_GEN_AXIOM_STREET6_2, AxiomStreet6SeenText, AxiomStreet6BeatenText, 0, AxiomStreet6AfterScript
+	trainer U_DRONE, 131, EVENT_GEN_AXIOM_STREET6_2, AxiomStreet6Trainer2SeenText, AxiomStreet6Trainer2BeatenText, 0, AxiomStreet6AfterScript
+
+AxiomStreet6Trainer3SeenText:
+	text "You are the"
+	line "instrument of a"
+	para "grander process."
+	line "I'd like to thank"
+	para "you in advance."
+	line "Form 17 is"
+	para "attached."
+	done
+
+AxiomStreet6Trainer3BeatenText:
+	text "I have zero HP and"
+	line "one hundred"
+	para "percent shame."
+	done
 
 AxiomStreet6Trainer3:
-	trainer U_SERF, 131, EVENT_GEN_AXIOM_STREET6_3, AxiomStreet6SeenText, AxiomStreet6BeatenText, 0, AxiomStreet6AfterScript
+	trainer U_SERF, 131, EVENT_GEN_AXIOM_STREET6_3, AxiomStreet6Trainer3SeenText, AxiomStreet6Trainer3BeatenText, 0, AxiomStreet6AfterScript
+
+AxiomStreet6Trainer4SeenText:
+	text "My emotional range"
+	line "is a spreadsheet."
+	para "Today's cell"
+	line "reads: irritated."
+	done
+
+AxiomStreet6Trainer4BeatenText:
+	text "I want it on"
+	line "record that I"
+	para "resisted. Weakly."
+	line "With my face."
+	done
 
 AxiomStreet6Trainer4:
-	trainer U_MATCHMAKER, 130, EVENT_GEN_AXIOM_STREET6_4, AxiomStreet6SeenText, AxiomStreet6BeatenText, 0, AxiomStreet6AfterScript
+	trainer U_MATCHMAKER, 130, EVENT_GEN_AXIOM_STREET6_4, AxiomStreet6Trainer4SeenText, AxiomStreet6Trainer4BeatenText, 0, AxiomStreet6AfterScript
+
+AxiomStreet6Trainer5SeenText:
+	text "Citizen, you"
+	line "appear to have"
+	para "feelings. That"
+	line "requires Form"
+	para "27-B."
+	done
+
+AxiomStreet6Trainer5BeatenText:
+	text "My warranty has"
+	line "expired. Thanks"
+	para "for that."
+	done
 
 AxiomStreet6Trainer5:
-	trainer U_BOTCOP, 131, EVENT_GEN_AXIOM_STREET6_5, AxiomStreet6SeenText, AxiomStreet6BeatenText, 0, AxiomStreet6AfterScript
+	trainer U_BOTCOP, 131, EVENT_GEN_AXIOM_STREET6_5, AxiomStreet6Trainer5SeenText, AxiomStreet6Trainer5BeatenText, 0, AxiomStreet6AfterScript
+
+AxiomStreet6Trainer6SeenText:
+	text "I scanned your"
+	line "genes. Plot twist:"
+	para "I don't like them."
+	done
+
+AxiomStreet6Trainer6BeatenText:
+	text "My shift ended."
+	line "Not just now."
+	para "Years ago. Why do"
+	line "I still work here?"
+	done
 
 AxiomStreet6Trainer6:
-	trainer U_BOTCOP, 132, EVENT_GEN_AXIOM_STREET6_6, AxiomStreet6SeenText, AxiomStreet6BeatenText, 0, AxiomStreet6AfterScript
+	trainer U_BOTCOP, 132, EVENT_GEN_AXIOM_STREET6_6, AxiomStreet6Trainer6SeenText, AxiomStreet6Trainer6BeatenText, 0, AxiomStreet6AfterScript
 
 AxiomStreet6_MapEvents:
 	db 0, 0 ; filler

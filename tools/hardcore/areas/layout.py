@@ -439,10 +439,59 @@ BOSS_TEMPLATES = {"karen": (bytes([20, 20, 20, 20, 20, 21, 21, 34, 21, 21, 21, 2
                   "bruno": (bytes([20, 20, 20, 20, 20, 21, 21, 34, 21, 21, 52, 52, 1, 52, 52, 44, 56, 56, 56, 44, 43, 56, 56, 56, 43, 43, 44, 56, 44, 43, 43, 43, 56, 43, 43, 42, 42, 45, 42, 42, 45, 29, 28, 30, 45]), 9)}
 
 
-def boss_room(g, w, name, outer_warp, landmark, music, template, boss, item=None, open_exit=False, story=0):
+def summit_room(g, w, name, outer_warp, landmark, music, boss, kit, story=0):
+    """FINNEGAN's arena (alpha 3.3): not a hall but the rim of a burning volcano, like Red on the summit of Mt. Silver.  The way in is a narrow path of black
+    rock between rock walls and pools of lava (the exit mat at the bottom), it opens to a plateau with lava on three sides, and FINNEGAN stands at the north edge
+    with the crater behind him.  5x9 blocks of the Dis tileset (the blocks of the volcano are appended to it by art/disart.py), the same warps as the old room."""
+    from art import disart
+    t = disart.build()
+    r, scn = t.roles, t.scn
+    V, EN, EW, EE, MAT = scn["v_lava"], scn["v_edge_n"], scn["v_edge_w"], scn["v_edge_e"], scn["mat"]
+    MASS, POOL = r["mass"][0], r["mass_rare"][0]
+    rng = random.Random("summit:" + name)
+    m = MapDef(g.key, name, 5, 9, kit.tileset, "ROUTE", landmark, music, border=kit.extra["border"], pal="PALETTE_DAY")
+
+    def ground():
+        return rng.choice(r["floor"] + r["floor"] + r["floor_rare"][:1])
+
+    rows = [[V, V, V, V, V],
+            [V, V, V, V, V],
+            [V, EN, EN, EN, V],
+            [EW, None, None, None, EE],
+            [EW, None, None, None, EE],
+            [EW, None, None, None, EE],
+            [MASS, POOL, None, POOL, MASS],
+            [MASS, MASS, None, MASS, MASS],
+            [MASS, MASS, MAT, MASS, MASS]]
+    for by, row in enumerate(rows):
+        for bx, b in enumerate(row):
+            m.set(bx, by, ground() if b is None else b)
+    w1, w2 = m.warp(4, 17), m.warp(5, 17)
+    outer_warp.dest = w1
+    w1.dest = outer_warp
+    w2.dest = outer_warp
+    tid = w.trainer(boss["cls"], boss["name"], boss["party"])
+    if story:
+        w.story.append((boss["cls"], tid, story))
+    flag = w.flag(f"EVENT_GEN_{m.const}_BOSS")
+    n = name
+    m.scripts.append(
+        f"{n}BossScript:\n\ttrainer {boss['cls']}, {tid}, {flag}, {n}BossSeenText, {n}BossBeatenText, 0, {n}BossAfterScript\n\n"
+        f"{n}BossAfterScript:\n\tendifjustbattled\n\topentext\n\twritetext {n}BossAfterText\n\twaitbutton\n\tclosetext\n\tend\n")
+    m.scripts.append(boss["seen"].emit(f"{n}BossSeenText"))
+    m.scripts.append(boss["beaten"].emit(f"{n}BossBeatenText"))
+    m.scripts.append(boss["after"].emit(f"{n}BossAfterText"))
+    m.obj(4, 5, boss["sprite"], FACE["DOWN"], f"{n}BossScript", pal=boss["pal"], otype="OBJECTTYPE_TRAINER", sight=5)
+    g.add(m)
+    return m, []
+
+
+def boss_room(g, w, name, outer_warp, landmark, music, template, boss, item=None, open_exit=False, story=0, kit=None):
     """boss: dict(cls, sprite, pal, name, party, seen, beaten, after) with Text objects for the three texts.
     item: key item constant placed on a ball in the room (event flag generated).
     Returns (map, exit_warps); exit_warps is [] unless open_exit (then the two top warps, unlinked)."""
+    if template == "summit":
+        return summit_room(g, w, name, outer_warp, landmark, music, boss, kit, story=story)
     path, row = BOSS_TEMPLATES[template]
     m = MapDef(g.key, name, 5, 9, "TILESET_ELITE_FOUR_ROOM", "INDOOR", landmark, music, pal="PALETTE_DAY")
     m.blocks = bytearray(path)

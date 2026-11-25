@@ -23,14 +23,6 @@ TitheStreet15HermitText:
 	para "deed."
 	done
 
-TitheStreet15SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet15BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet15AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -43,23 +35,106 @@ TitheStreet15AfterScript:
 	closetext
 	end
 
+TitheStreet15Trainer0SeenText:
+	text "Tithe's due. I"
+	line "take cash, cards"
+	para "or teeth."
+	done
+
+TitheStreet15Trainer0BeatenText:
+	text "Please, no sermon."
+	line "I've had a"
+	para "lifetime of those."
+	done
+
 TitheStreet15Trainer0:
-	trainer T_BEGGAR, 137, EVENT_GEN_TITHE_STREET15_0, TitheStreet15SeenText, TitheStreet15BeatenText, 0, TitheStreet15AfterScript
+	trainer T_BEGGAR, 137, EVENT_GEN_TITHE_STREET15_0, TitheStreet15Trainer0SeenText, TitheStreet15Trainer0BeatenText, 0, TitheStreet15AfterScript
+
+TitheStreet15Trainer1SeenText:
+	text "I give charity. I"
+	line "give it to myself."
+	para "It has never been"
+	line "refused."
+	done
+
+TitheStreet15Trainer1BeatenText:
+	text "Is it over? Can I"
+	line "go home to my"
+	para "crying?"
+	done
 
 TitheStreet15Trainer1:
-	trainer T_ENFORCER, 129, EVENT_GEN_TITHE_STREET15_1, TitheStreet15SeenText, TitheStreet15BeatenText, 0, TitheStreet15AfterScript
+	trainer T_ENFORCER, 129, EVENT_GEN_TITHE_STREET15_1, TitheStreet15Trainer1SeenText, TitheStreet15Trainer1BeatenText, 0, TitheStreet15AfterScript
+
+TitheStreet15Trainer2SeenText:
+	text "The only thing"
+	line "cheaper than a"
+	para "priest in this"
+	line "city is a promise"
+	para "from one."
+	done
+
+TitheStreet15Trainer2BeatenText:
+	text "That's the third"
+	line "time this week."
+	para "I'm quitting."
+	line "After lunch."
+	done
 
 TitheStreet15Trainer2:
-	trainer T_HOODIE, 131, EVENT_GEN_TITHE_STREET15_2, TitheStreet15SeenText, TitheStreet15BeatenText, 0, TitheStreet15AfterScript
+	trainer T_HOODIE, 131, EVENT_GEN_TITHE_STREET15_2, TitheStreet15Trainer2SeenText, TitheStreet15Trainer2BeatenText, 0, TitheStreet15AfterScript
+
+TitheStreet15Trainer3SeenText:
+	text "The river runs"
+	line "backward at the"
+	para "end of the book."
+	line "I'd like to be the"
+	para "first in. Aim for"
+	line "the neck."
+	done
+
+TitheStreet15Trainer3BeatenText:
+	text "The city gave me"
+	line "nothing. I gave it"
+	para "everything. Fair"
+	line "trade."
+	done
 
 TitheStreet15Trainer3:
-	trainer T_SUIT, 140, EVENT_GEN_TITHE_STREET15_3, TitheStreet15SeenText, TitheStreet15BeatenText, 0, TitheStreet15AfterScript
+	trainer T_SUIT, 140, EVENT_GEN_TITHE_STREET15_3, TitheStreet15Trainer3SeenText, TitheStreet15Trainer3BeatenText, 0, TitheStreet15AfterScript
+
+TitheStreet15Trainer4SeenText:
+	text "Rain again. The"
+	line "sky is also a"
+	para "collection plate,"
+	line "and it is also"
+	para "empty."
+	done
+
+TitheStreet15Trainer4BeatenText:
+	text "Take it all. The"
+	line "city will take it"
+	para "back."
+	done
 
 TitheStreet15Trainer4:
-	trainer T_NUN, 135, EVENT_GEN_TITHE_STREET15_4, TitheStreet15SeenText, TitheStreet15BeatenText, 0, TitheStreet15AfterScript
+	trainer T_NUN, 135, EVENT_GEN_TITHE_STREET15_4, TitheStreet15Trainer4SeenText, TitheStreet15Trainer4BeatenText, 0, TitheStreet15AfterScript
+
+TitheStreet15Trainer5SeenText:
+	text "Rent's up again."
+	line "So is my temper."
+	done
+
+TitheStreet15Trainer5BeatenText:
+	text "It's beautiful."
+	line "There's a priest."
+	para "There's a"
+	line "landlord. They are"
+	para "both so small."
+	done
 
 TitheStreet15Trainer5:
-	trainer T_PRIEST, 136, EVENT_GEN_TITHE_STREET15_5, TitheStreet15SeenText, TitheStreet15BeatenText, 0, TitheStreet15AfterScript
+	trainer T_PRIEST, 136, EVENT_GEN_TITHE_STREET15_5, TitheStreet15Trainer5SeenText, TitheStreet15Trainer5BeatenText, 0, TitheStreet15AfterScript
 
 TitheStreet15_MapEvents:
 	db 0, 0 ; filler

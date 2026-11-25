@@ -18,7 +18,11 @@ JudeccaCentreBossAfterScript:
 	end
 
 JudeccaCentreBossSeenText:
-	text "...riverrun."
+	text "Mind the edge. The"
+	line "mountain has been"
+	para "burning since"
+	line "before I closed my"
+	para "eyes. ...riverrun."
 	line "Brings us back to"
 	para "the beginning. I"
 	line "fell. I was waked."
@@ -63,5 +67,5 @@ JudeccaCentre_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  9, SPRITE_HC_FINNEGAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, JudeccaCentreBossScript, -1
+	object_event  4,  5, SPRITE_HC_FINNEGAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, JudeccaCentreBossScript, -1
 

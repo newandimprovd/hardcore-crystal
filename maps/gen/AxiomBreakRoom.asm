@@ -6,14 +6,6 @@ AxiomBreakRoom_MapScripts:
 
 	def_callbacks
 
-AxiomBreakRoomSeenText:
-	text_far HC_SeenText_HL3
-	text_end
-
-AxiomBreakRoomBeatenText:
-	text_far HC_BeatenText_HL3
-	text_end
-
 AxiomBreakRoomAfterText:
 	text_far HC_AfterText_HL3
 	text_end
@@ -26,20 +18,85 @@ AxiomBreakRoomAfterScript:
 	closetext
 	end
 
+AxiomBreakRoomTrainer0SeenText:
+	text "This room is not"
+	line "on the floor plan."
+	para "You are not on the"
+	line "visitor log."
+	para "Battle."
+	done
+
+AxiomBreakRoomTrainer0BeatenText:
+	text "Filed under"
+	line "unfortunate. Cross"
+	para "referenced under"
+	line "Tuesday."
+	done
+
 AxiomBreakRoomTrainer0:
-	trainer U_EXEC, 131, EVENT_GEN_AXIOM_BREAK_ROOM_0, AxiomBreakRoomSeenText, AxiomBreakRoomBeatenText, 0, AxiomBreakRoomAfterScript
+	trainer U_EXEC, 131, EVENT_GEN_AXIOM_BREAK_ROOM_0, AxiomBreakRoomTrainer0SeenText, AxiomBreakRoomTrainer0BeatenText, 0, AxiomBreakRoomAfterScript
+
+AxiomBreakRoomTrainer1SeenText:
+	text "Efficiency is a"
+	line "form of violence."
+	para "Allow me to be"
+	line "efficient."
+	done
+
+AxiomBreakRoomTrainer1BeatenText:
+	text "Task complete. The"
+	line "task was losing."
+	done
 
 AxiomBreakRoomTrainer1:
-	trainer U_WARDBOT, 139, EVENT_GEN_AXIOM_BREAK_ROOM_1, AxiomBreakRoomSeenText, AxiomBreakRoomBeatenText, 0, AxiomBreakRoomAfterScript
+	trainer U_WARDBOT, 139, EVENT_GEN_AXIOM_BREAK_ROOM_1, AxiomBreakRoomTrainer1SeenText, AxiomBreakRoomTrainer1BeatenText, 0, AxiomBreakRoomAfterScript
+
+AxiomBreakRoomTrainer2SeenText:
+	text "Please take a"
+	line "number. The number"
+	para "is seven. The"
+	line "fight is now."
+	done
+
+AxiomBreakRoomTrainer2BeatenText:
+	text "Noted. Escalating"
+	line "to nobody."
+	done
 
 AxiomBreakRoomTrainer2:
-	trainer U_GUARD, 137, EVENT_GEN_AXIOM_BREAK_ROOM_2, AxiomBreakRoomSeenText, AxiomBreakRoomBeatenText, 0, AxiomBreakRoomAfterScript
+	trainer U_GUARD, 137, EVENT_GEN_AXIOM_BREAK_ROOM_2, AxiomBreakRoomTrainer2SeenText, AxiomBreakRoomTrainer2BeatenText, 0, AxiomBreakRoomAfterScript
+
+AxiomBreakRoomTrainer3SeenText:
+	text "You are in a room"
+	line "no budget"
+	para "approved. I"
+	line "enforce it anyway."
+	done
+
+AxiomBreakRoomTrainer3BeatenText:
+	text "Resignation"
+	line "accepted. Mine."
+	done
 
 AxiomBreakRoomTrainer3:
-	trainer U_EXEC, 132, EVENT_GEN_AXIOM_BREAK_ROOM_3, AxiomBreakRoomSeenText, AxiomBreakRoomBeatenText, 0, AxiomBreakRoomAfterScript
+	trainer U_EXEC, 132, EVENT_GEN_AXIOM_BREAK_ROOM_3, AxiomBreakRoomTrainer3SeenText, AxiomBreakRoomTrainer3BeatenText, 0, AxiomBreakRoomAfterScript
+
+AxiomBreakRoomTrainer4SeenText:
+	text "The coffee machine"
+	line "is broken. The"
+	para "coffee machine is"
+	line "also my boss."
+	para "Battle."
+	done
+
+AxiomBreakRoomTrainer4BeatenText:
+	text "Please rate this"
+	line "fight. One star."
+	para "Out of respect."
+	done
 
 AxiomBreakRoomTrainer4:
-	trainer U_MATCHMAKER, 136, EVENT_GEN_AXIOM_BREAK_ROOM_4, AxiomBreakRoomSeenText, AxiomBreakRoomBeatenText, 0, AxiomBreakRoomAfterScript
+	trainer U_MATCHMAKER, 136, EVENT_GEN_AXIOM_BREAK_ROOM_4, AxiomBreakRoomTrainer4SeenText, AxiomBreakRoomTrainer4BeatenText, 0, AxiomBreakRoomAfterScript
 
 AxiomBreakRoomHermit0:
 	faceplayer

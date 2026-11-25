@@ -43,14 +43,6 @@ PurgDown2Gate0UseText:
 	para "register."
 	done
 
-PurgDown2SeenText:
-	text_far HC_SeenText_PG
-	text_end
-
-PurgDown2BeatenText:
-	text_far HC_BeatenText_PG
-	text_end
-
 PurgDown2AfterText:
 	text_far HC_AfterText_PG
 	text_end
@@ -63,29 +55,143 @@ PurgDown2AfterScript:
 	closetext
 	end
 
+PurgDown2Trainer0SeenText:
+	text "Cogito, ergo I'm"
+	line "still here, and"
+	para "you have a target"
+	line "on your forehead."
+	done
+
+PurgDown2Trainer0BeatenText:
+	text "It was a good"
+	line "defeat. I'd say"
+	para "the best of my"
+	line "whole death."
+	done
+
 PurgDown2Trainer0:
-	trainer T_BEGGAR, 139, EVENT_GEN_PURG_DOWN2_0, PurgDown2SeenText, PurgDown2BeatenText, 0, PurgDown2AfterScript
+	trainer T_BEGGAR, 139, EVENT_GEN_PURG_DOWN2_0, PurgDown2Trainer0SeenText, PurgDown2Trainer0BeatenText, 0, PurgDown2AfterScript
+
+PurgDown2Trainer1SeenText:
+	text "I was a"
+	line "theologian. I"
+	para "argued a lot. They"
+	line "put me where the"
+	para "arguing is at a"
+	line "minimum."
+	done
+
+PurgDown2Trainer1BeatenText:
+	text "Another loss to"
+	line "add to my"
+	para "collection. It's a"
+	line "pretty thin one."
+	done
 
 PurgDown2Trainer1:
-	trainer L_SAILOR, 135, EVENT_GEN_PURG_DOWN2_1, PurgDown2SeenText, PurgDown2BeatenText, 0, PurgDown2AfterScript
+	trainer L_SAILOR, 135, EVENT_GEN_PURG_DOWN2_1, PurgDown2Trainer1SeenText, PurgDown2Trainer1BeatenText, 0, PurgDown2AfterScript
+
+PurgDown2Trainer2SeenText:
+	text "I came here for"
+	line "the afterlife."
+	para "They gave me a"
+	line "queue and a cave."
+	para "Fight me."
+	done
+
+PurgDown2Trainer2BeatenText:
+	text "You win. The cave"
+	line "will be pleased."
+	para "The cave is easily"
+	line "pleased."
+	done
 
 PurgDown2Trainer2:
-	trainer L_SAILOR, 136, EVENT_GEN_PURG_DOWN2_2, PurgDown2SeenText, PurgDown2BeatenText, 0, PurgDown2AfterScript
+	trainer L_SAILOR, 136, EVENT_GEN_PURG_DOWN2_2, PurgDown2Trainer2SeenText, PurgDown2Trainer2BeatenText, 0, PurgDown2AfterScript
+
+PurgDown2Trainer3SeenText:
+	text "The dead have a"
+	line "union. Today the"
+	para "union calls for"
+	line "violence."
+	done
+
+PurgDown2Trainer3BeatenText:
+	text "So that's how it"
+	line "ends. Again."
+	done
 
 PurgDown2Trainer3:
-	trainer U_SERFF, 136, EVENT_GEN_PURG_DOWN2_3, PurgDown2SeenText, PurgDown2BeatenText, 0, PurgDown2AfterScript
+	trainer U_SERFF, 136, EVENT_GEN_PURG_DOWN2_3, PurgDown2Trainer3SeenText, PurgDown2Trainer3BeatenText, 0, PurgDown2AfterScript
+
+PurgDown2Trainer4SeenText:
+	text "If a trainer falls"
+	line "in a cave and"
+	para "nobody kills him,"
+	line "did he lose? Find"
+	para "out."
+	done
+
+PurgDown2Trainer4BeatenText:
+	text "I lost to you. I'd"
+	line "lose to anyone."
+	para "That's why I'm in"
+	line "this cave."
+	done
 
 PurgDown2Trainer4:
-	trainer L_SAILOR, 137, EVENT_GEN_PURG_DOWN2_4, PurgDown2SeenText, PurgDown2BeatenText, 0, PurgDown2AfterScript
+	trainer L_SAILOR, 137, EVENT_GEN_PURG_DOWN2_4, PurgDown2Trainer4SeenText, PurgDown2Trainer4BeatenText, 0, PurgDown2AfterScript
+
+PurgDown2Trainer5SeenText:
+	text "You smell like a"
+	line "body count. Come."
+	para "Sit. Battle."
+	done
+
+PurgDown2Trainer5BeatenText:
+	text "Beaten by someone"
+	line "who did not read"
+	para "the books."
+	line "Humiliating."
+	done
 
 PurgDown2Trainer5:
-	trainer L_SAILOR, 138, EVENT_GEN_PURG_DOWN2_5, PurgDown2SeenText, PurgDown2BeatenText, 0, PurgDown2AfterScript
+	trainer L_SAILOR, 138, EVENT_GEN_PURG_DOWN2_5, PurgDown2Trainer5SeenText, PurgDown2Trainer5BeatenText, 0, PurgDown2AfterScript
+
+PurgDown2Trainer6SeenText:
+	text "A cave is only a"
+	line "tomb with"
+	para "ambition. Let me"
+	line "show you the"
+	para "ambition."
+	done
+
+PurgDown2Trainer6BeatenText:
+	text "A loss in the"
+	line "afterlife is just"
+	para "a loss in a nicer"
+	line "font."
+	done
 
 PurgDown2Trainer6:
-	trainer U_SERF, 135, EVENT_GEN_PURG_DOWN2_6, PurgDown2SeenText, PurgDown2BeatenText, 0, PurgDown2AfterScript
+	trainer U_SERF, 135, EVENT_GEN_PURG_DOWN2_6, PurgDown2Trainer6SeenText, PurgDown2Trainer6BeatenText, 0, PurgDown2AfterScript
+
+PurgDown2Trainer7SeenText:
+	text "Free will,"
+	line "determinism."
+	para "Today, a duel."
+	line "Let's see who wins"
+	para "the debate."
+	done
+
+PurgDown2Trainer7BeatenText:
+	text "Hm. That was the"
+	line "most alive I've"
+	para "felt in a century."
+	done
 
 PurgDown2Trainer7:
-	trainer U_SERF, 136, EVENT_GEN_PURG_DOWN2_7, PurgDown2SeenText, PurgDown2BeatenText, 0, PurgDown2AfterScript
+	trainer U_SERF, 136, EVENT_GEN_PURG_DOWN2_7, PurgDown2Trainer7SeenText, PurgDown2Trainer7BeatenText, 0, PurgDown2AfterScript
 
 PurgDown2Hermit0:
 	faceplayer

@@ -48,6 +48,8 @@ def build_set(name, const, stem, P):
     for cv in P.grass():  # two blocks: wild encounters (stage 9)
         t.add(cv, "TALL_GRASS", "grass")
     scenery.add(t, P.floors()[0])  # ponds, fences, ledge, tree, flower beds (after the grass: no earlier block id moves)
+    if hasattr(P, "extras"):  # blocks only one tileset has, after all the others (Dis: the volcano summit)
+        t.scn.update(P.extras(t, P.floors()[0]))
     t.ids = ids
     return t
 

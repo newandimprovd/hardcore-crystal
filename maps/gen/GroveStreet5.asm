@@ -22,14 +22,6 @@ GroveStreet5HermitText:
 	line "Both are organic."
 	done
 
-GroveStreet5SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet5BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet5AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -42,23 +34,104 @@ GroveStreet5AfterScript:
 	closetext
 	end
 
+GroveStreet5Trainer0SeenText:
+	text "I used to be a"
+	line "lawyer. Now I"
+	para "weave. I'm better"
+	line "at both than I"
+	para "was."
+	done
+
+GroveStreet5Trainer0BeatenText:
+	text "You win. The goats"
+	line "will be so"
+	para "ashamed."
+	done
+
 GroveStreet5Trainer0:
-	trainer G_SCOUT, 130, EVENT_GEN_GROVE_STREET5_0, GroveStreet5SeenText, GroveStreet5BeatenText, 0, GroveStreet5AfterScript
+	trainer G_SCOUT, 130, EVENT_GEN_GROVE_STREET5_0, GroveStreet5Trainer0SeenText, GroveStreet5Trainer0BeatenText, 0, GroveStreet5AfterScript
+
+GroveStreet5Trainer1SeenText:
+	text "No one owns"
+	line "anything here."
+	para "That bone you're"
+	line "holding is mine,"
+	para "by the way."
+	done
+
+GroveStreet5Trainer1BeatenText:
+	text "The forest will"
+	line "take me back. It's"
+	para "in a good mood."
+	done
 
 GroveStreet5Trainer1:
-	trainer G_SPROUT, 131, EVENT_GEN_GROVE_STREET5_1, GroveStreet5SeenText, GroveStreet5BeatenText, 0, GroveStreet5AfterScript
+	trainer G_SPROUT, 131, EVENT_GEN_GROVE_STREET5_1, GroveStreet5Trainer1SeenText, GroveStreet5Trainer1BeatenText, 0, GroveStreet5AfterScript
+
+GroveStreet5Trainer2SeenText:
+	text "The moon told me"
+	line "you'd come. The"
+	para "moon also said to"
+	line "buy rope."
+	done
+
+GroveStreet5Trainer2BeatenText:
+	text "Take it. It's"
+	line "communal anyway."
+	done
 
 GroveStreet5Trainer2:
-	trainer G_SCOUT, 131, EVENT_GEN_GROVE_STREET5_2, GroveStreet5SeenText, GroveStreet5BeatenText, 0, GroveStreet5AfterScript
+	trainer G_SCOUT, 131, EVENT_GEN_GROVE_STREET5_2, GroveStreet5Trainer2SeenText, GroveStreet5Trainer2BeatenText, 0, GroveStreet5AfterScript
+
+GroveStreet5Trainer3SeenText:
+	text "The elders say the"
+	line "forest listens. I"
+	para "suspect it's"
+	line "judging."
+	done
+
+GroveStreet5Trainer3BeatenText:
+	text "No hard feelings."
+	line "I'm also a little"
+	para "proud."
+	done
 
 GroveStreet5Trainer3:
-	trainer G_SPROUT, 132, EVENT_GEN_GROVE_STREET5_3, GroveStreet5SeenText, GroveStreet5BeatenText, 0, GroveStreet5AfterScript
+	trainer G_SPROUT, 132, EVENT_GEN_GROVE_STREET5_3, GroveStreet5Trainer3SeenText, GroveStreet5Trainer3BeatenText, 0, GroveStreet5AfterScript
+
+GroveStreet5Trainer4SeenText:
+	text "Do you have any"
+	line "salt? No? Then"
+	para "you're useless."
+	line "Fight."
+	done
+
+GroveStreet5Trainer4BeatenText:
+	text "Ahh. The grass is"
+	line "soft. Who knew the"
+	para "grass was soft."
+	done
 
 GroveStreet5Trainer4:
-	trainer G_BIRDER, 130, EVENT_GEN_GROVE_STREET5_4, GroveStreet5SeenText, GroveStreet5BeatenText, 0, GroveStreet5AfterScript
+	trainer G_BIRDER, 130, EVENT_GEN_GROVE_STREET5_4, GroveStreet5Trainer4SeenText, GroveStreet5Trainer4BeatenText, 0, GroveStreet5AfterScript
+
+GroveStreet5Trainer5SeenText:
+	text "I haven't seen a"
+	line "mirror in eight"
+	para "years. I'm told"
+	line "I'm handsome. I"
+	para "hope they lied."
+	done
+
+GroveStreet5Trainer5BeatenText:
+	text "Fine. You win. We"
+	line "share everything"
+	para "here, and now that"
+	line "includes the loss."
+	done
 
 GroveStreet5Trainer5:
-	trainer G_URCHIN, 130, EVENT_GEN_GROVE_STREET5_5, GroveStreet5SeenText, GroveStreet5BeatenText, 0, GroveStreet5AfterScript
+	trainer G_URCHIN, 130, EVENT_GEN_GROVE_STREET5_5, GroveStreet5Trainer5SeenText, GroveStreet5Trainer5BeatenText, 0, GroveStreet5AfterScript
 
 GroveStreet5_MapEvents:
 	db 0, 0 ; filler

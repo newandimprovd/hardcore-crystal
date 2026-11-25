@@ -139,3 +139,7 @@ from .debates import CULT_BEATEN, CULT_SEEN  # noqa: E402
 
 SEEN = SEEN + CULT_SEEN["Axiom"]
 BEATEN = BEATEN + CULT_BEATEN["Axiom"]
+
+from .more_lines import BEATEN_MORE, SEEN_MORE  # noqa: E402  (alpha 3.3: more fighter lines, one deck per area)
+SEEN = SEEN + SEEN_MORE["Axiom"]
+BEATEN = BEATEN + BEATEN_MORE["Axiom"]

@@ -6,14 +6,6 @@ AxiomSpareRoom_MapScripts:
 
 	def_callbacks
 
-AxiomSpareRoomSeenText:
-	text_far HC_SeenText_HL3
-	text_end
-
-AxiomSpareRoomBeatenText:
-	text_far HC_BeatenText_HL3
-	text_end
-
 AxiomSpareRoomAfterText:
 	text_far HC_AfterText_HL3
 	text_end
@@ -26,20 +18,87 @@ AxiomSpareRoomAfterScript:
 	closetext
 	end
 
+AxiomSpareRoomTrainer0SeenText:
+	text "My badge says"
+	line "Supervisor. My ID"
+	para "says Temp. My"
+	line "heart says Fight."
+	done
+
+AxiomSpareRoomTrainer0BeatenText:
+	text "I will circle"
+	line "back. Never. But I"
+	para "will circle."
+	done
+
 AxiomSpareRoomTrainer0:
-	trainer U_BOT, 142, EVENT_GEN_AXIOM_SPARE_ROOM_0, AxiomSpareRoomSeenText, AxiomSpareRoomBeatenText, 0, AxiomSpareRoomAfterScript
+	trainer U_BOT, 142, EVENT_GEN_AXIOM_SPARE_ROOM_0, AxiomSpareRoomTrainer0SeenText, AxiomSpareRoomTrainer0BeatenText, 0, AxiomSpareRoomAfterScript
+
+AxiomSpareRoomTrainer1SeenText:
+	text "Break time ends in"
+	line "four minutes. I"
+	para "will use all four"
+	line "on you."
+	done
+
+AxiomSpareRoomTrainer1BeatenText:
+	text "Out of office"
+	line "until the heat"
+	para "death."
+	done
 
 AxiomSpareRoomTrainer1:
-	trainer U_SERF, 145, EVENT_GEN_AXIOM_SPARE_ROOM_1, AxiomSpareRoomSeenText, AxiomSpareRoomBeatenText, 0, AxiomSpareRoomAfterScript
+	trainer U_SERF, 145, EVENT_GEN_AXIOM_SPARE_ROOM_1, AxiomSpareRoomTrainer1SeenText, AxiomSpareRoomTrainer1BeatenText, 0, AxiomSpareRoomAfterScript
+
+AxiomSpareRoomTrainer2SeenText:
+	text "I am between"
+	line "meetings. The"
+	para "meetings are"
+	line "between me. Fight."
+	done
+
+AxiomSpareRoomTrainer2BeatenText:
+	text "That is going in"
+	line "my performance"
+	para "review."
+	done
 
 AxiomSpareRoomTrainer2:
-	trainer U_BOT, 143, EVENT_GEN_AXIOM_SPARE_ROOM_2, AxiomSpareRoomSeenText, AxiomSpareRoomBeatenText, 0, AxiomSpareRoomAfterScript
+	trainer U_BOT, 143, EVENT_GEN_AXIOM_SPARE_ROOM_2, AxiomSpareRoomTrainer2SeenText, AxiomSpareRoomTrainer2BeatenText, 0, AxiomSpareRoomAfterScript
+
+AxiomSpareRoomTrainer3SeenText:
+	text "Nobody ever comes"
+	line "here. Nobody ever"
+	para "leaves. We have a"
+	line "very low churn"
+	para "rate."
+	done
+
+AxiomSpareRoomTrainer3BeatenText:
+	text "That is going in"
+	line "my performance"
+	para "review."
+	done
 
 AxiomSpareRoomTrainer3:
-	trainer U_SERF, 146, EVENT_GEN_AXIOM_SPARE_ROOM_3, AxiomSpareRoomSeenText, AxiomSpareRoomBeatenText, 0, AxiomSpareRoomAfterScript
+	trainer U_SERF, 146, EVENT_GEN_AXIOM_SPARE_ROOM_3, AxiomSpareRoomTrainer3SeenText, AxiomSpareRoomTrainer3BeatenText, 0, AxiomSpareRoomAfterScript
+
+AxiomSpareRoomTrainer4SeenText:
+	text "I was promised a"
+	line "promotion. I got"
+	para "this closet. I"
+	line "have a lot of"
+	para "feelings."
+	done
+
+AxiomSpareRoomTrainer4BeatenText:
+	text "Out of office"
+	line "until the heat"
+	para "death."
+	done
 
 AxiomSpareRoomTrainer4:
-	trainer U_DOCTOR, 146, EVENT_GEN_AXIOM_SPARE_ROOM_4, AxiomSpareRoomSeenText, AxiomSpareRoomBeatenText, 0, AxiomSpareRoomAfterScript
+	trainer U_DOCTOR, 146, EVENT_GEN_AXIOM_SPARE_ROOM_4, AxiomSpareRoomTrainer4SeenText, AxiomSpareRoomTrainer4BeatenText, 0, AxiomSpareRoomAfterScript
 
 AxiomSpareRoomHermit0:
 	faceplayer

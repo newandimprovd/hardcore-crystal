@@ -11,14 +11,6 @@ PurgDown3_MapScripts:
 PurgDown3BoulderScript:
 	jumpstd StrengthBoulderScript
 
-PurgDown3SeenText:
-	text_far HC_SeenText_PG
-	text_end
-
-PurgDown3BeatenText:
-	text_far HC_BeatenText_PG
-	text_end
-
 PurgDown3AfterText:
 	text_far HC_AfterText_PG
 	text_end
@@ -31,26 +23,128 @@ PurgDown3AfterScript:
 	closetext
 	end
 
+PurgDown3Trainer0SeenText:
+	text "I tried to leave"
+	line "once. The tunnel"
+	para "looped. Fight me"
+	line "in the loop."
+	done
+
+PurgDown3Trainer0BeatenText:
+	text "A just defeat. I"
+	line "feel more at"
+	para "peace. Hand me a"
+	line "candle."
+	done
+
 PurgDown3Trainer0:
-	trainer T_SUIT, 141, EVENT_GEN_PURG_DOWN3_0, PurgDown3SeenText, PurgDown3BeatenText, 0, PurgDown3AfterScript
+	trainer T_SUIT, 141, EVENT_GEN_PURG_DOWN3_0, PurgDown3Trainer0SeenText, PurgDown3Trainer0BeatenText, 0, PurgDown3AfterScript
+
+PurgDown3Trainer1SeenText:
+	text "I used to be"
+	line "somebody's father."
+	para "Then I was a lot"
+	line "of nothing. Now"
+	para "I'm your opponent."
+	done
+
+PurgDown3Trainer1BeatenText:
+	text "You win. The dead"
+	line "aren't bitter."
+	para "We're thorough."
+	done
 
 PurgDown3Trainer1:
-	trainer G_ELDER, 138, EVENT_GEN_PURG_DOWN3_1, PurgDown3SeenText, PurgDown3BeatenText, 0, PurgDown3AfterScript
+	trainer G_ELDER, 138, EVENT_GEN_PURG_DOWN3_1, PurgDown3Trainer1SeenText, PurgDown3Trainer1BeatenText, 0, PurgDown3AfterScript
+
+PurgDown3Trainer2SeenText:
+	text "The living always"
+	line "ask: what's it"
+	para "like? It's like"
+	line "this. Slightly"
+	para "damp."
+	done
+
+PurgDown3Trainer2BeatenText:
+	text "That was"
+	line "refreshing."
+	para "Eternity is mostly"
+	line "waiting. Thank you"
+	para "for the"
+	line "interruption."
+	done
 
 PurgDown3Trainer2:
-	trainer T_BEGGAR, 140, EVENT_GEN_PURG_DOWN3_2, PurgDown3SeenText, PurgDown3BeatenText, 0, PurgDown3AfterScript
+	trainer T_BEGGAR, 140, EVENT_GEN_PURG_DOWN3_2, PurgDown3Trainer2SeenText, PurgDown3Trainer2BeatenText, 0, PurgDown3AfterScript
+
+PurgDown3Trainer3SeenText:
+	text "The ferryman has a"
+	line "queue. I'm filling"
+	para "the time."
+	done
+
+PurgDown3Trainer3BeatenText:
+	text "You've made your"
+	line "point. It was"
+	para "sharp."
+	done
 
 PurgDown3Trainer3:
-	trainer L_SAILOR, 139, EVENT_GEN_PURG_DOWN3_3, PurgDown3SeenText, PurgDown3BeatenText, 0, PurgDown3AfterScript
+	trainer L_SAILOR, 139, EVENT_GEN_PURG_DOWN3_3, PurgDown3Trainer3SeenText, PurgDown3Trainer3BeatenText, 0, PurgDown3AfterScript
+
+PurgDown3Trainer4SeenText:
+	text "I died in my"
+	line "sleep. I've been"
+	para "looking for the"
+	line "pillow ever since."
+	done
+
+PurgDown3Trainer4BeatenText:
+	text "Fine. I'll go back"
+	line "to my wall. I was"
+	para "nearly done"
+	line "carving the"
+	para "insult."
+	done
 
 PurgDown3Trainer4:
-	trainer T_BEGGAR, 141, EVENT_GEN_PURG_DOWN3_4, PurgDown3SeenText, PurgDown3BeatenText, 0, PurgDown3AfterScript
+	trainer T_BEGGAR, 141, EVENT_GEN_PURG_DOWN3_4, PurgDown3Trainer4SeenText, PurgDown3Trainer4BeatenText, 0, PurgDown3AfterScript
+
+PurgDown3Trainer5SeenText:
+	text "I thought hell"
+	line "would be hotter."
+	para "It's merely"
+	line "disappointing."
+	done
+
+PurgDown3Trainer5BeatenText:
+	text "Well. That is one"
+	line "thing off my list"
+	para "of things to"
+	line "avoid."
+	done
 
 PurgDown3Trainer5:
-	trainer U_DOCTOR, 140, EVENT_GEN_PURG_DOWN3_5, PurgDown3SeenText, PurgDown3BeatenText, 0, PurgDown3AfterScript
+	trainer U_DOCTOR, 140, EVENT_GEN_PURG_DOWN3_5, PurgDown3Trainer5SeenText, PurgDown3Trainer5BeatenText, 0, PurgDown3AfterScript
+
+PurgDown3Trainer6SeenText:
+	text "I was an"
+	line "accountant. I"
+	para "audit the"
+	line "afterlife. It's"
+	para "off by one soul. I"
+	line "suspect you."
+	done
+
+PurgDown3Trainer6BeatenText:
+	text "Well. The"
+	line "hereafter is a"
+	para "short walk. I'll"
+	line "start."
+	done
 
 PurgDown3Trainer6:
-	trainer U_SERF, 137, EVENT_GEN_PURG_DOWN3_6, PurgDown3SeenText, PurgDown3BeatenText, 0, PurgDown3AfterScript
+	trainer U_SERF, 137, EVENT_GEN_PURG_DOWN3_6, PurgDown3Trainer6SeenText, PurgDown3Trainer6BeatenText, 0, PurgDown3AfterScript
 
 PurgDown3Hermit0:
 	faceplayer

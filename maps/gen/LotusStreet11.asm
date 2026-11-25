@@ -60,14 +60,6 @@ LotusStreet11HermitText:
 	line "stays that way."
 	done
 
-LotusStreet11SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet11BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet11AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -80,26 +72,128 @@ LotusStreet11AfterScript:
 	closetext
 	end
 
+LotusStreet11Trainer0SeenText:
+	text "My bathing suit is"
+	line "on backwards. I"
+	para "forgot. That's the"
+	line "whole point of"
+	para "this place."
+	done
+
+LotusStreet11Trainer0BeatenText:
+	text "Bye, then. The"
+	line "tide will see to"
+	para "the rest."
+	done
+
 LotusStreet11Trainer0:
-	trainer L_SWIMMERF, 137, EVENT_GEN_LOTUS_STREET11_0, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_SWIMMERF, 137, EVENT_GEN_LOTUS_STREET11_0, LotusStreet11Trainer0SeenText, LotusStreet11Trainer0BeatenText, 0, LotusStreet11AfterScript
+
+LotusStreet11Trainer1SeenText:
+	text "My therapist is a"
+	line "parrot. It says"
+	para "'Fight.' I trust"
+	line "it."
+	done
+
+LotusStreet11Trainer1BeatenText:
+	text "Tell them I went"
+	line "peacefully. Tell"
+	para "them there was a"
+	line "lot of sunscreen"
+	para "involved."
+	done
 
 LotusStreet11Trainer1:
-	trainer L_LOUNGER, 136, EVENT_GEN_LOTUS_STREET11_1, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_LOUNGER, 136, EVENT_GEN_LOTUS_STREET11_1, LotusStreet11Trainer1SeenText, LotusStreet11Trainer1BeatenText, 0, LotusStreet11AfterScript
+
+LotusStreet11Trainer2SeenText:
+	text "My subscription"
+	line "includes a pool,"
+	para "happiness and no"
+	line "memory of my"
+	para "children. Great"
+	line "deal."
+	done
+
+LotusStreet11Trainer2BeatenText:
+	text "A drink would be"
+	line "nice. A last one."
+	para "A very large last"
+	line "one."
+	done
 
 LotusStreet11Trainer2:
-	trainer L_LIFEGUARD, 135, EVENT_GEN_LOTUS_STREET11_2, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_LIFEGUARD, 135, EVENT_GEN_LOTUS_STREET11_2, LotusStreet11Trainer2SeenText, LotusStreet11Trainer2BeatenText, 0, LotusStreet11AfterScript
+
+LotusStreet11Trainer3SeenText:
+	text "Everyone talks"
+	line "about the sunset."
+	para "Nobody talks about"
+	line "the sunrise."
+	para "That's when I"
+	line "strike."
+	done
+
+LotusStreet11Trainer3BeatenText:
+	text "Do you know how"
+	line "many people die at"
+	para "this resort?"
+	line "Neither do I. It's"
+	para "a lot."
+	done
 
 LotusStreet11Trainer3:
-	trainer L_LIFEGUARD, 136, EVENT_GEN_LOTUS_STREET11_3, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_LIFEGUARD, 136, EVENT_GEN_LOTUS_STREET11_3, LotusStreet11Trainer3SeenText, LotusStreet11Trainer3BeatenText, 0, LotusStreet11AfterScript
+
+LotusStreet11Trainer4SeenText:
+	text "Lotus Coast has a"
+	line "motto. The motto"
+	para "is 'Hush.' You are"
+	line "not hushing."
+	done
+
+LotusStreet11Trainer4BeatenText:
+	text "I lost to a"
+	line "stranger. How very"
+	para "'resort' of me."
+	done
 
 LotusStreet11Trainer4:
-	trainer L_TOURISTF, 134, EVENT_GEN_LOTUS_STREET11_4, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_TOURISTF, 134, EVENT_GEN_LOTUS_STREET11_4, LotusStreet11Trainer4SeenText, LotusStreet11Trainer4BeatenText, 0, LotusStreet11AfterScript
+
+LotusStreet11Trainer5SeenText:
+	text "Hold my drink."
+	line "Hold it carefully."
+	para "Hold it until I'm"
+	line "done with you."
+	done
+
+LotusStreet11Trainer5BeatenText:
+	text "I was hoping to"
+	line "retire here. I'm"
+	para "retiring right"
+	line "now."
+	done
 
 LotusStreet11Trainer5:
-	trainer L_BELLHOP, 129, EVENT_GEN_LOTUS_STREET11_5, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_BELLHOP, 129, EVENT_GEN_LOTUS_STREET11_5, LotusStreet11Trainer5SeenText, LotusStreet11Trainer5BeatenText, 0, LotusStreet11AfterScript
+
+LotusStreet11Trainer6SeenText:
+	text "I used to cry. Now"
+	line "I fight. Same"
+	para "thing, fewer"
+	line "tears."
+	done
+
+LotusStreet11Trainer6BeatenText:
+	text "Hang loose, they"
+	line "said. I hung. I'm"
+	para "loose. Ouch."
+	done
 
 LotusStreet11Trainer6:
-	trainer L_SUNBATHER, 133, EVENT_GEN_LOTUS_STREET11_6, LotusStreet11SeenText, LotusStreet11BeatenText, 0, LotusStreet11AfterScript
+	trainer L_SUNBATHER, 133, EVENT_GEN_LOTUS_STREET11_6, LotusStreet11Trainer6SeenText, LotusStreet11Trainer6BeatenText, 0, LotusStreet11AfterScript
 
 LotusStreet11_MapEvents:
 	db 0, 0 ; filler

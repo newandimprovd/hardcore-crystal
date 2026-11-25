@@ -22,14 +22,6 @@ GroveStreet7HermitText:
 	line "about it."
 	done
 
-GroveStreet7SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet7BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet7AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -42,26 +34,128 @@ GroveStreet7AfterScript:
 	closetext
 	end
 
+GroveStreet7Trainer0SeenText:
+	text "I was a"
+	line "stockbroker once."
+	para "Then I found the"
+	line "berry. Now I fight"
+	para "strangers in a"
+	line "field."
+	done
+
+GroveStreet7Trainer0BeatenText:
+	text "I lost? I lost!"
+	line "Wow. That doesn't"
+	para "feel like sharing"
+	line "at all."
+	done
+
 GroveStreet7Trainer0:
-	trainer G_NATURISTM, 128, EVENT_GEN_GROVE_STREET7_0, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer G_NATURISTM, 128, EVENT_GEN_GROVE_STREET7_0, GroveStreet7Trainer0SeenText, GroveStreet7Trainer0BeatenText, 0, GroveStreet7AfterScript
+
+GroveStreet7Trainer1SeenText:
+	text "We have no locks"
+	line "here. Nobody has"
+	para "ever needed one."
+	line "Please do not make"
+	para "me start."
+	done
+
+GroveStreet7Trainer1BeatenText:
+	text "I think I learned"
+	line "something. Mostly"
+	para "about hospital"
+	line "food."
+	done
 
 GroveStreet7Trainer1:
-	trainer G_BIRDER, 131, EVENT_GEN_GROVE_STREET7_1, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer G_BIRDER, 131, EVENT_GEN_GROVE_STREET7_1, GroveStreet7Trainer1SeenText, GroveStreet7Trainer1BeatenText, 0, GroveStreet7AfterScript
+
+GroveStreet7Trainer2SeenText:
+	text "I grow tomatoes by"
+	line "hand and"
+	para "resentment by the"
+	line "bushel."
+	done
+
+GroveStreet7Trainer2BeatenText:
+	text "Please be gentle"
+	line "with the bodies."
+	para "They've got"
+	line "feelings. Or at"
+	para "least pollen."
+	done
 
 GroveStreet7Trainer2:
-	trainer G_DRUIDESS, 129, EVENT_GEN_GROVE_STREET7_2, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer G_DRUIDESS, 129, EVENT_GEN_GROVE_STREET7_2, GroveStreet7Trainer2SeenText, GroveStreet7Trainer2BeatenText, 0, GroveStreet7AfterScript
+
+GroveStreet7Trainer3SeenText:
+	text "We heal with herbs"
+	line "and fire. And with"
+	para "the occasional"
+	line "punch. Mostly the"
+	para "punch."
+	done
+
+GroveStreet7Trainer3BeatenText:
+	text "I'm not dead. I'm"
+	line "just sharing"
+	para "myself with the"
+	line "earth."
+	done
 
 GroveStreet7Trainer3:
-	trainer G_NATURISTF, 128, EVENT_GEN_GROVE_STREET7_3, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer G_NATURISTF, 128, EVENT_GEN_GROVE_STREET7_3, GroveStreet7Trainer3SeenText, GroveStreet7Trainer3BeatenText, 0, GroveStreet7AfterScript
+
+GroveStreet7Trainer4SeenText:
+	text "We have a rota for"
+	line "everything."
+	para "Today's task is"
+	line "you."
+	done
+
+GroveStreet7Trainer4BeatenText:
+	text "I'll come back as"
+	line "a tomato. A very"
+	para "sorry tomato."
+	done
 
 GroveStreet7Trainer4:
-	trainer G_SHAMAN, 128, EVENT_GEN_GROVE_STREET7_4, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer G_SHAMAN, 128, EVENT_GEN_GROVE_STREET7_4, GroveStreet7Trainer4SeenText, GroveStreet7Trainer4BeatenText, 0, GroveStreet7AfterScript
+
+GroveStreet7Trainer5SeenText:
+	text "I read your aura."
+	line "It's the colour of"
+	para "someone about to"
+	line "lose."
+	done
+
+GroveStreet7Trainer5BeatenText:
+	text "You're a good"
+	line "fighter. You'd"
+	para "make a lousy"
+	line "farmer."
+	done
 
 GroveStreet7Trainer5:
-	trainer G_HIKER, 134, EVENT_GEN_GROVE_STREET7_5, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer G_HIKER, 134, EVENT_GEN_GROVE_STREET7_5, GroveStreet7Trainer5SeenText, GroveStreet7Trainer5BeatenText, 0, GroveStreet7AfterScript
+
+GroveStreet7Trainer6SeenText:
+	text "Do you know what"
+	line "happens to people"
+	para "who don't gather?"
+	line "They hunt. Hello."
+	done
+
+GroveStreet7Trainer6BeatenText:
+	text "Collect my staff."
+	line "Tell it I'm sorry."
+	para "It was a good"
+	line "staff."
+	done
 
 GroveStreet7Trainer6:
-	trainer G_SPROUT, 134, EVENT_GEN_GROVE_STREET7_6, GroveStreet7SeenText, GroveStreet7BeatenText, 0, GroveStreet7AfterScript
+	trainer G_SPROUT, 134, EVENT_GEN_GROVE_STREET7_6, GroveStreet7Trainer6SeenText, GroveStreet7Trainer6BeatenText, 0, GroveStreet7AfterScript
 
 GroveStreet7_MapEvents:
 	db 0, 0 ; filler

@@ -21,14 +21,6 @@ DisStreet2HermitText:
 	para "nice ones."
 	done
 
-DisStreet2SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet2BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet2AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -41,23 +33,104 @@ DisStreet2AfterScript:
 	closetext
 	end
 
+DisStreet2Trainer0SeenText:
+	text "I'm here for lust."
+	line "It's cold down"
+	para "here. I'm very"
+	line "disappointed."
+	done
+
+DisStreet2Trainer0BeatenText:
+	text "I deserve that."
+	line "All of that."
+	para "Sorry. Thank you."
+	done
+
 DisStreet2Trainer0:
-	trainer D_CRONE, 128, EVENT_GEN_DIS_STREET2_0, DisStreet2SeenText, DisStreet2BeatenText, 0, DisStreet2AfterScript
+	trainer D_CRONE, 128, EVENT_GEN_DIS_STREET2_0, DisStreet2Trainer0SeenText, DisStreet2Trainer0BeatenText, 0, DisStreet2AfterScript
+
+DisStreet2Trainer1SeenText:
+	text "I'm an intern. I'm"
+	line "eternal. Both are"
+	para "unpaid."
+	done
+
+DisStreet2Trainer1BeatenText:
+	text "I've been hit by"
+	line "worse. Mostly by"
+	para "me."
+	done
 
 DisStreet2Trainer1:
-	trainer D_HAG, 128, EVENT_GEN_DIS_STREET2_1, DisStreet2SeenText, DisStreet2BeatenText, 0, DisStreet2AfterScript
+	trainer D_HAG, 128, EVENT_GEN_DIS_STREET2_1, DisStreet2Trainer1SeenText, DisStreet2Trainer1BeatenText, 0, DisStreet2AfterScript
+
+DisStreet2Trainer2SeenText:
+	text "The sign said"
+	line "'abandon all"
+	para "hope'. I abandoned"
+	line "all my coupons"
+	para "too."
+	done
+
+DisStreet2Trainer2BeatenText:
+	text "I'll go back to my"
+	line "crying. It's much"
+	para "cosier."
+	done
 
 DisStreet2Trainer2:
-	trainer D_SHADE, 129, EVENT_GEN_DIS_STREET2_2, DisStreet2SeenText, DisStreet2BeatenText, 0, DisStreet2AfterScript
+	trainer D_SHADE, 129, EVENT_GEN_DIS_STREET2_2, DisStreet2Trainer2SeenText, DisStreet2Trainer2BeatenText, 0, DisStreet2AfterScript
+
+DisStreet2Trainer3SeenText:
+	text "No one leaves Dis."
+	line "I'm checking the"
+	para "door in case you"
+	line "try."
+	done
+
+DisStreet2Trainer3BeatenText:
+	text "Down here, it's"
+	line "all the same fire."
+	para "You'll find that"
+	line "out too."
+	done
 
 DisStreet2Trainer3:
-	trainer D_IMPF, 129, EVENT_GEN_DIS_STREET2_3, DisStreet2SeenText, DisStreet2BeatenText, 0, DisStreet2AfterScript
+	trainer D_IMPF, 129, EVENT_GEN_DIS_STREET2_3, DisStreet2Trainer3SeenText, DisStreet2Trainer3BeatenText, 0, DisStreet2AfterScript
+
+DisStreet2Trainer4SeenText:
+	text "I'm very good at"
+	line "my job. My job is"
+	para "to prevent you"
+	line "from continuing."
+	done
+
+DisStreet2Trainer4BeatenText:
+	text "I'm sorry for your"
+	line "loss. It's mine."
+	para "I'm very sorry."
+	done
 
 DisStreet2Trainer4:
-	trainer D_SINNER, 129, EVENT_GEN_DIS_STREET2_4, DisStreet2SeenText, DisStreet2BeatenText, 0, DisStreet2AfterScript
+	trainer D_SINNER, 129, EVENT_GEN_DIS_STREET2_4, DisStreet2Trainer4SeenText, DisStreet2Trainer4BeatenText, 0, DisStreet2AfterScript
+
+DisStreet2Trainer5SeenText:
+	text "The river runs to"
+	line "the start of the"
+	para "book. I'd like to"
+	line "arrive early. Take"
+	para "me, friend."
+	done
+
+DisStreet2Trainer5BeatenText:
+	text "There's a joke"
+	line "here somewhere."
+	para "I'd tell it, but"
+	line "I'm out of breath."
+	done
 
 DisStreet2Trainer5:
-	trainer D_BRUTE, 130, EVENT_GEN_DIS_STREET2_5, DisStreet2SeenText, DisStreet2BeatenText, 0, DisStreet2AfterScript
+	trainer D_BRUTE, 130, EVENT_GEN_DIS_STREET2_5, DisStreet2Trainer5SeenText, DisStreet2Trainer5BeatenText, 0, DisStreet2AfterScript
 
 DisStreet2_MapEvents:
 	db 0, 0 ; filler

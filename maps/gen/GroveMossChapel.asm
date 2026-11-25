@@ -6,14 +6,6 @@ GroveMossChapel_MapScripts:
 
 	def_callbacks
 
-GroveMossChapelSeenText:
-	text_far HC_SeenText_HL2
-	text_end
-
-GroveMossChapelBeatenText:
-	text_far HC_BeatenText_HL2
-	text_end
-
 GroveMossChapelAfterText:
 	text_far HC_AfterText_HL2
 	text_end
@@ -26,20 +18,90 @@ GroveMossChapelAfterScript:
 	closetext
 	end
 
+GroveMossChapelTrainer0SeenText:
+	text "Peace is a great"
+	line "thing. Let me"
+	para "demonstrate by"
+	line "ending yours."
+	done
+
+GroveMossChapelTrainer0BeatenText:
+	text "Beaten by a"
+	line "stranger in a"
+	para "tree. I will tell"
+	line "the squirrels."
+	para "They gossip."
+	done
+
 GroveMossChapelTrainer0:
-	trainer G_SHAMAN, 153, EVENT_GEN_GROVE_MOSS_CHAPEL_0, GroveMossChapelSeenText, GroveMossChapelBeatenText, 0, GroveMossChapelAfterScript
+	trainer G_SHAMAN, 153, EVENT_GEN_GROVE_MOSS_CHAPEL_0, GroveMossChapelTrainer0SeenText, GroveMossChapelTrainer0BeatenText, 0, GroveMossChapelAfterScript
+
+GroveMossChapelTrainer1SeenText:
+	text "My herbal tea is"
+	line "steeping. You have"
+	para "exactly one fight"
+	line "to spare."
+	done
+
+GroveMossChapelTrainer1BeatenText:
+	text "That stung. The"
+	line "nettles are"
+	para "jealous."
+	done
 
 GroveMossChapelTrainer1:
-	trainer G_DRUIDESS, 131, EVENT_GEN_GROVE_MOSS_CHAPEL_1, GroveMossChapelSeenText, GroveMossChapelBeatenText, 0, GroveMossChapelAfterScript
+	trainer G_DRUIDESS, 131, EVENT_GEN_GROVE_MOSS_CHAPEL_1, GroveMossChapelTrainer1SeenText, GroveMossChapelTrainer1BeatenText, 0, GroveMossChapelAfterScript
+
+GroveMossChapelTrainer2SeenText:
+	text "The commune said I"
+	line "could stay if I"
+	para "stayed out of"
+	line "sight. I took it"
+	para "literally."
+	done
+
+GroveMossChapelTrainer2BeatenText:
+	text "The forest"
+	line "forgives. I only"
+	para "pretend."
+	done
 
 GroveMossChapelTrainer2:
-	trainer G_ELDRESS, 129, EVENT_GEN_GROVE_MOSS_CHAPEL_2, GroveMossChapelSeenText, GroveMossChapelBeatenText, 0, GroveMossChapelAfterScript
+	trainer G_ELDRESS, 129, EVENT_GEN_GROVE_MOSS_CHAPEL_2, GroveMossChapelTrainer2SeenText, GroveMossChapelTrainer2BeatenText, 0, GroveMossChapelAfterScript
+
+GroveMossChapelTrainer3SeenText:
+	text "I was a mother, a"
+	line "baker and a"
+	para "mystic. Now I am a"
+	line "hollow. You are a"
+	para "visitor."
+	done
+
+GroveMossChapelTrainer3BeatenText:
+	text "That stung. The"
+	line "nettles are"
+	para "jealous."
+	done
 
 GroveMossChapelTrainer3:
-	trainer G_SHAMAN, 154, EVENT_GEN_GROVE_MOSS_CHAPEL_3, GroveMossChapelSeenText, GroveMossChapelBeatenText, 0, GroveMossChapelAfterScript
+	trainer G_SHAMAN, 154, EVENT_GEN_GROVE_MOSS_CHAPEL_3, GroveMossChapelTrainer3SeenText, GroveMossChapelTrainer3BeatenText, 0, GroveMossChapelAfterScript
+
+GroveMossChapelTrainer4SeenText:
+	text "Take off your"
+	line "shoes. Not for"
+	para "respect. For the"
+	line "fight. It is a"
+	para "long story."
+	done
+
+GroveMossChapelTrainer4BeatenText:
+	text "The forest"
+	line "forgives. I only"
+	para "pretend."
+	done
 
 GroveMossChapelTrainer4:
-	trainer G_ELDRESS, 130, EVENT_GEN_GROVE_MOSS_CHAPEL_4, GroveMossChapelSeenText, GroveMossChapelBeatenText, 0, GroveMossChapelAfterScript
+	trainer G_ELDRESS, 130, EVENT_GEN_GROVE_MOSS_CHAPEL_4, GroveMossChapelTrainer4SeenText, GroveMossChapelTrainer4BeatenText, 0, GroveMossChapelAfterScript
 
 GroveMossChapelHermit0:
 	faceplayer

@@ -23,14 +23,6 @@ TitheStreet3HermitText:
 	para "program."
 	done
 
-TitheStreet3SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet3BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet3AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -43,23 +35,110 @@ TitheStreet3AfterScript:
 	closetext
 	end
 
+TitheStreet3Trainer0SeenText:
+	text "I pay six thousand"
+	line "a month for a"
+	para "closet. I need"
+	line "this win."
+	done
+
+TitheStreet3Trainer0BeatenText:
+	text "Please don't take"
+	line "my wallet. Wait,"
+	para "you already did."
+	done
+
 TitheStreet3Trainer0:
-	trainer T_SUIT, 130, EVENT_GEN_TITHE_STREET3_0, TitheStreet3SeenText, TitheStreet3BeatenText, 0, TitheStreet3AfterScript
+	trainer T_SUIT, 130, EVENT_GEN_TITHE_STREET3_0, TitheStreet3Trainer0SeenText, TitheStreet3Trainer0BeatenText, 0, TitheStreet3AfterScript
+
+TitheStreet3Trainer1SeenText:
+	text "Do you have a"
+	line "permit for that"
+	para "face? No? That's a"
+	line "fine."
+	done
+
+TitheStreet3Trainer1BeatenText:
+	text "I'll light a"
+	line "candle for you."
+	para "Maybe two. They're"
+	line "thirty bucks each."
+	done
 
 TitheStreet3Trainer1:
-	trainer T_SUIT, 131, EVENT_GEN_TITHE_STREET3_1, TitheStreet3SeenText, TitheStreet3BeatenText, 0, TitheStreet3AfterScript
+	trainer T_SUIT, 131, EVENT_GEN_TITHE_STREET3_1, TitheStreet3Trainer1SeenText, TitheStreet3Trainer1BeatenText, 0, TitheStreet3AfterScript
+
+TitheStreet3Trainer2SeenText:
+	text "You have the right"
+	line "to remain broke."
+	para "Everything you say"
+	line "may be billed."
+	done
+
+TitheStreet3Trainer2BeatenText:
+	text "That was a hell of"
+	line "a lot more than a"
+	para "donation."
+	done
 
 TitheStreet3Trainer2:
-	trainer T_COP, 134, EVENT_GEN_TITHE_STREET3_2, TitheStreet3SeenText, TitheStreet3BeatenText, 0, TitheStreet3AfterScript
+	trainer T_COP, 134, EVENT_GEN_TITHE_STREET3_2, TitheStreet3Trainer2SeenText, TitheStreet3Trainer2BeatenText, 0, TitheStreet3AfterScript
+
+TitheStreet3Trainer3SeenText:
+	text "Another traveller."
+	line "Another lost soul."
+	para "Another fight I'm"
+	line "going to enjoy"
+	para "more than I"
+	line "should."
+	done
+
+TitheStreet3Trainer3BeatenText:
+	text "Put it on my tab."
+	line "Everything is on"
+	para "my tab. Even my"
+	line "death."
+	done
 
 TitheStreet3Trainer3:
-	trainer T_BEGGAR, 130, EVENT_GEN_TITHE_STREET3_3, TitheStreet3SeenText, TitheStreet3BeatenText, 0, TitheStreet3AfterScript
+	trainer T_BEGGAR, 130, EVENT_GEN_TITHE_STREET3_3, TitheStreet3Trainer3SeenText, TitheStreet3Trainer3BeatenText, 0, TitheStreet3AfterScript
+
+TitheStreet3Trainer4SeenText:
+	text "I wear a collar"
+	line "because it hides"
+	para "the bruise. Don't"
+	line "ask who put it"
+	para "there."
+	done
+
+TitheStreet3Trainer4BeatenText:
+	text "My Pokemon fought"
+	line "bravely. It's hard"
+	para "to say the same"
+	line "for me."
+	done
 
 TitheStreet3Trainer4:
-	trainer T_ACCOUNTANT, 129, EVENT_GEN_TITHE_STREET3_4, TitheStreet3SeenText, TitheStreet3BeatenText, 0, TitheStreet3AfterScript
+	trainer T_ACCOUNTANT, 129, EVENT_GEN_TITHE_STREET3_4, TitheStreet3Trainer4SeenText, TitheStreet3Trainer4BeatenText, 0, TitheStreet3AfterScript
+
+TitheStreet3Trainer5SeenText:
+	text "A bishop once told"
+	line "me to turn the"
+	para "other cheek. So I"
+	line "hit him with the"
+	para "first."
+	done
+
+TitheStreet3Trainer5BeatenText:
+	text "I can't feel my"
+	line "legs. It's the"
+	para "first honest thing"
+	line "to happen to me"
+	para "all year."
+	done
 
 TitheStreet3Trainer5:
-	trainer T_COP, 135, EVENT_GEN_TITHE_STREET3_5, TitheStreet3SeenText, TitheStreet3BeatenText, 0, TitheStreet3AfterScript
+	trainer T_COP, 135, EVENT_GEN_TITHE_STREET3_5, TitheStreet3Trainer5SeenText, TitheStreet3Trainer5BeatenText, 0, TitheStreet3AfterScript
 
 TitheStreet3_MapEvents:
 	db 0, 0 ; filler

@@ -22,14 +22,6 @@ DisStreet1HermitText:
 	line "forty years."
 	done
 
-DisStreet1SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet1BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet1AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -42,26 +34,124 @@ DisStreet1AfterScript:
 	closetext
 	end
 
+DisStreet1Trainer0SeenText:
+	text "Greed: I charge"
+	line "for this fight."
+	para "Hold on, I'm"
+	line "looking for the"
+	para "card reader."
+	done
+
+DisStreet1Trainer0BeatenText:
+	text "Cocytus is cold."
+	line "Cold is a fact."
+	para "You're a fact. A"
+	line "cold, brutal fact."
+	done
+
 DisStreet1Trainer0:
-	trainer D_IMP, 128, EVENT_GEN_DIS_STREET1_0, DisStreet1SeenText, DisStreet1BeatenText, 0, DisStreet1AfterScript
+	trainer D_IMP, 128, EVENT_GEN_DIS_STREET1_0, DisStreet1Trainer0SeenText, DisStreet1Trainer0BeatenText, 0, DisStreet1AfterScript
+
+DisStreet1Trainer1SeenText:
+	text "I'm dead, you're"
+	line "dying, the lake's"
+	para "frozen. The"
+	line "conversation's"
+	para "going great."
+	done
+
+DisStreet1Trainer1BeatenText:
+	text "I'm in the wrong"
+	line "pit. Please."
+	para "Reroute."
+	done
 
 DisStreet1Trainer1:
-	trainer D_IMPF, 128, EVENT_GEN_DIS_STREET1_1, DisStreet1SeenText, DisStreet1BeatenText, 0, DisStreet1AfterScript
+	trainer D_IMPF, 128, EVENT_GEN_DIS_STREET1_1, DisStreet1Trainer1SeenText, DisStreet1Trainer1BeatenText, 0, DisStreet1AfterScript
+
+DisStreet1Trainer2SeenText:
+	text "Wrath! Mostly"
+	line "about the traffic."
+	para "Fight me!"
+	done
+
+DisStreet1Trainer2BeatenText:
+	text "I regret nothing."
+	line "The pit forbids"
+	para "it."
+	done
 
 DisStreet1Trainer2:
-	trainer D_BRUTE, 128, EVENT_GEN_DIS_STREET1_2, DisStreet1SeenText, DisStreet1BeatenText, 0, DisStreet1AfterScript
+	trainer D_BRUTE, 128, EVENT_GEN_DIS_STREET1_2, DisStreet1Trainer2SeenText, DisStreet1Trainer2BeatenText, 0, DisStreet1AfterScript
+
+DisStreet1Trainer3SeenText:
+	text "Please take a"
+	line "number. Your"
+	para "number is: pain."
+	done
+
+DisStreet1Trainer3BeatenText:
+	text "I'm so bored."
+	line "Thank you for the"
+	para "entertainment."
+	done
 
 DisStreet1Trainer3:
-	trainer D_BRUTE, 129, EVENT_GEN_DIS_STREET1_3, DisStreet1SeenText, DisStreet1BeatenText, 0, DisStreet1AfterScript
+	trainer D_BRUTE, 129, EVENT_GEN_DIS_STREET1_3, DisStreet1Trainer3SeenText, DisStreet1Trainer3BeatenText, 0, DisStreet1AfterScript
+
+DisStreet1Trainer4SeenText:
+	text "I was a priest."
+	line "I'm still a"
+	para "priest. Dis has a"
+	line "very strict policy"
+	para "on that."
+	done
+
+DisStreet1Trainer4BeatenText:
+	text "Nobody told me you"
+	line "could die in Dis."
+	para "Isn't it all"
+	line "supposed to be"
+	para "eternal?"
+	done
 
 DisStreet1Trainer4:
-	trainer D_SINNER, 128, EVENT_GEN_DIS_STREET1_4, DisStreet1SeenText, DisStreet1BeatenText, 0, DisStreet1AfterScript
+	trainer D_SINNER, 128, EVENT_GEN_DIS_STREET1_4, DisStreet1Trainer4SeenText, DisStreet1Trainer4BeatenText, 0, DisStreet1AfterScript
+
+DisStreet1Trainer5SeenText:
+	text "I've been told my"
+	line "attitude is"
+	para "hellish. I took it"
+	line "as a compliment."
+	done
+
+DisStreet1Trainer5BeatenText:
+	text "I thought the end"
+	line "would hurt more."
+	para "It's a gentle"
+	line "burn."
+	done
 
 DisStreet1Trainer5:
-	trainer D_SHADE, 128, EVENT_GEN_DIS_STREET1_5, DisStreet1SeenText, DisStreet1BeatenText, 0, DisStreet1AfterScript
+	trainer D_SHADE, 128, EVENT_GEN_DIS_STREET1_5, DisStreet1Trainer5SeenText, DisStreet1Trainer5BeatenText, 0, DisStreet1AfterScript
+
+DisStreet1Trainer6SeenText:
+	text "I'm a mediocre"
+	line "devil. The good"
+	para "ones got promoted"
+	line "to Judecca. I got"
+	para "a lanyard."
+	done
+
+DisStreet1Trainer6BeatenText:
+	text "My team is"
+	line "pathetic. Like me."
+	para "Like everyone"
+	line "here."
+	done
 
 DisStreet1Trainer6:
-	trainer D_JUDGE, 128, EVENT_GEN_DIS_STREET1_6, DisStreet1SeenText, DisStreet1BeatenText, 0, DisStreet1AfterScript
+	trainer D_JUDGE, 128, EVENT_GEN_DIS_STREET1_6, DisStreet1Trainer6SeenText, DisStreet1Trainer6BeatenText, 0, DisStreet1AfterScript
 
 DisStreet1_MapEvents:
 	db 0, 0 ; filler

@@ -27,14 +27,6 @@ GroveStreet10PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A2
 	end
 
-GroveStreet10SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet10BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet10AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -47,26 +39,123 @@ GroveStreet10AfterScript:
 	closetext
 	end
 
+GroveStreet10Trainer0SeenText:
+	text "I like you. That's"
+	line "what scares me."
+	para "Fight me before it"
+	line "grows."
+	done
+
+GroveStreet10Trainer0BeatenText:
+	text "I am one with the"
+	line "soil. It was a"
+	para "quick union."
+	done
+
 GroveStreet10Trainer0:
-	trainer G_SPROUT, 136, EVENT_GEN_GROVE_STREET10_0, GroveStreet10SeenText, GroveStreet10BeatenText, 0, GroveStreet10AfterScript
+	trainer G_SPROUT, 136, EVENT_GEN_GROVE_STREET10_0, GroveStreet10Trainer0SeenText, GroveStreet10Trainer0BeatenText, 0, GroveStreet10AfterScript
+
+GroveStreet10Trainer1SeenText:
+	text "Ever think a"
+	line "cooked meal is"
+	para "just a raw meal"
+	line "that gave up?"
+	done
+
+GroveStreet10Trainer1BeatenText:
+	text "Everything dies."
+	line "It's in the"
+	para "compost agreement."
+	done
 
 GroveStreet10Trainer1:
-	trainer G_GRANNY, 131, EVENT_GEN_GROVE_STREET10_1, GroveStreet10SeenText, GroveStreet10BeatenText, 0, GroveStreet10AfterScript
+	trainer G_GRANNY, 131, EVENT_GEN_GROVE_STREET10_1, GroveStreet10Trainer1SeenText, GroveStreet10Trainer1BeatenText, 0, GroveStreet10AfterScript
+
+GroveStreet10Trainer2SeenText:
+	text "I'm told I"
+	line "overshare. I had"
+	para "no idea. Anyway,"
+	line "here's my team."
+	done
+
+GroveStreet10Trainer2BeatenText:
+	text "I wanted to be a"
+	line "poet. I'm only a"
+	para "pile now."
+	done
 
 GroveStreet10Trainer2:
-	trainer G_FLOWERKID, 132, EVENT_GEN_GROVE_STREET10_2, GroveStreet10SeenText, GroveStreet10BeatenText, 0, GroveStreet10AfterScript
+	trainer G_FLOWERKID, 132, EVENT_GEN_GROVE_STREET10_2, GroveStreet10Trainer2SeenText, GroveStreet10Trainer2BeatenText, 0, GroveStreet10AfterScript
+
+GroveStreet10Trainer3SeenText:
+	text "I'm in charge of"
+	line "conflict"
+	para "resolution. Here's"
+	line "the resolution:"
+	para "me, you, a duel."
+	done
+
+GroveStreet10Trainer3BeatenText:
+	text "You hit like a"
+	line "landlord. I"
+	para "thought we'd"
+	line "escaped those."
+	done
 
 GroveStreet10Trainer3:
-	trainer G_NATURISTF, 131, EVENT_GEN_GROVE_STREET10_3, GroveStreet10SeenText, GroveStreet10BeatenText, 0, GroveStreet10AfterScript
+	trainer G_NATURISTF, 131, EVENT_GEN_GROVE_STREET10_3, GroveStreet10Trainer3SeenText, GroveStreet10Trainer3BeatenText, 0, GroveStreet10AfterScript
+
+GroveStreet10Trainer4SeenText:
+	text "Do you like sauna?"
+	line "No? Then you're"
+	para "going to love"
+	line "this."
+	done
+
+GroveStreet10Trainer4BeatenText:
+	text "I'll watch from"
+	line "the roots. Wave."
+	done
 
 GroveStreet10Trainer4:
-	trainer G_HIKER, 135, EVENT_GEN_GROVE_STREET10_4, GroveStreet10SeenText, GroveStreet10BeatenText, 0, GroveStreet10AfterScript
+	trainer G_HIKER, 135, EVENT_GEN_GROVE_STREET10_4, GroveStreet10Trainer4SeenText, GroveStreet10Trainer4BeatenText, 0, GroveStreet10AfterScript
+
+GroveStreet10Trainer5SeenText:
+	text "My daughter wants"
+	line "to leave the"
+	para "commune. I told"
+	line "her to fight me"
+	para "about it. You'll"
+	line "do."
+	done
+
+GroveStreet10Trainer5BeatenText:
+	text "The sunset's"
+	line "lovely. I wasn't"
+	para "expecting it to be"
+	line "the last thing."
+	done
 
 GroveStreet10Trainer5:
-	trainer G_SCOUT, 134, EVENT_GEN_GROVE_STREET10_5, GroveStreet10SeenText, GroveStreet10BeatenText, 0, GroveStreet10AfterScript
+	trainer G_SCOUT, 134, EVENT_GEN_GROVE_STREET10_5, GroveStreet10Trainer5SeenText, GroveStreet10Trainer5BeatenText, 0, GroveStreet10AfterScript
+
+GroveStreet10Trainer6SeenText:
+	text "I haven't worn"
+	line "shoes in six"
+	para "years. My feet are"
+	line "armor. My Pokemon"
+	para "are armor."
+	done
+
+GroveStreet10Trainer6BeatenText:
+	text "Tell my daughter"
+	line "she can leave."
+	para "Tell her I said"
+	line "so."
+	done
 
 GroveStreet10Trainer6:
-	trainer G_ELDER, 131, EVENT_GEN_GROVE_STREET10_6, GroveStreet10SeenText, GroveStreet10BeatenText, 0, GroveStreet10AfterScript
+	trainer G_ELDER, 131, EVENT_GEN_GROVE_STREET10_6, GroveStreet10Trainer6SeenText, GroveStreet10Trainer6BeatenText, 0, GroveStreet10AfterScript
 
 GroveStreet10_MapEvents:
 	db 0, 0 ; filler

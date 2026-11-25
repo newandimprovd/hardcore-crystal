@@ -23,14 +23,6 @@ LotusStreet9HermitText:
 	para "have ever seen."
 	done
 
-LotusStreet9SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet9BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet9AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -43,23 +35,103 @@ LotusStreet9AfterScript:
 	closetext
 	end
 
+LotusStreet9Trainer0SeenText:
+	text "I make cocktails"
+	line "with fish. It's"
+	para "called a Mistake."
+	line "Want one?"
+	done
+
+LotusStreet9Trainer0BeatenText:
+	text "I forgot to be"
+	line "good at this. Rain"
+	para "check."
+	done
+
 LotusStreet9Trainer0:
-	trainer L_SWIMMERF, 135, EVENT_GEN_LOTUS_STREET9_0, LotusStreet9SeenText, LotusStreet9BeatenText, 0, LotusStreet9AfterScript
+	trainer L_SWIMMERF, 135, EVENT_GEN_LOTUS_STREET9_0, LotusStreet9Trainer0SeenText, LotusStreet9Trainer0BeatenText, 0, LotusStreet9AfterScript
+
+LotusStreet9Trainer1SeenText:
+	text "I'm on holiday"
+	line "from my holiday."
+	para "It's a very"
+	line "stressful one."
+	done
+
+LotusStreet9Trainer1BeatenText:
+	text "That hurt in a"
+	line "place my memory"
+	para "used to live."
+	done
 
 LotusStreet9Trainer1:
-	trainer L_LIFEGUARD, 134, EVENT_GEN_LOTUS_STREET9_1, LotusStreet9SeenText, LotusStreet9BeatenText, 0, LotusStreet9AfterScript
+	trainer L_LIFEGUARD, 134, EVENT_GEN_LOTUS_STREET9_1, LotusStreet9Trainer1SeenText, LotusStreet9Trainer1BeatenText, 0, LotusStreet9AfterScript
+
+LotusStreet9Trainer2SeenText:
+	text "I keep a lizard in"
+	line "my pocket. It's"
+	para "the only one who"
+	line "listens."
+	done
+
+LotusStreet9Trainer2BeatenText:
+	text "I lost. I lost"
+	line "something else."
+	para "What else did I"
+	line "lose? What was it?"
+	para "What is that?"
+	done
 
 LotusStreet9Trainer2:
-	trainer L_TOURISTF, 133, EVENT_GEN_LOTUS_STREET9_2, LotusStreet9SeenText, LotusStreet9BeatenText, 0, LotusStreet9AfterScript
+	trainer L_TOURISTF, 133, EVENT_GEN_LOTUS_STREET9_2, LotusStreet9Trainer2SeenText, LotusStreet9Trainer2BeatenText, 0, LotusStreet9AfterScript
+
+LotusStreet9Trainer3SeenText:
+	text "You're so tense."
+	line "Let me help you"
+	para "relax. With"
+	line "violence."
+	done
+
+LotusStreet9Trainer3BeatenText:
+	text "I'm a happy man."
+	line "I'm a happy, flat"
+	para "man."
+	done
 
 LotusStreet9Trainer3:
-	trainer L_FORGOTTEN, 131, EVENT_GEN_LOTUS_STREET9_3, LotusStreet9SeenText, LotusStreet9BeatenText, 0, LotusStreet9AfterScript
+	trainer L_FORGOTTEN, 131, EVENT_GEN_LOTUS_STREET9_3, LotusStreet9Trainer3SeenText, LotusStreet9Trainer3BeatenText, 0, LotusStreet9AfterScript
+
+LotusStreet9Trainer4SeenText:
+	text "I came for the"
+	line "quiet. You are"
+	para "loud. I am quiet"
+	line "in a very loud"
+	para "way."
+	done
+
+LotusStreet9Trainer4BeatenText:
+	text "Everything is"
+	line "going dim. Turn"
+	para "the lights up. No."
+	line "Turn them off."
+	done
 
 LotusStreet9Trainer4:
-	trainer L_TOURISTG, 129, EVENT_GEN_LOTUS_STREET9_4, LotusStreet9SeenText, LotusStreet9BeatenText, 0, LotusStreet9AfterScript
+	trainer L_TOURISTG, 129, EVENT_GEN_LOTUS_STREET9_4, LotusStreet9Trainer4SeenText, LotusStreet9Trainer4BeatenText, 0, LotusStreet9AfterScript
+
+LotusStreet9Trainer5SeenText:
+	text "I'd be at the pool"
+	line "but the pool is"
+	para "full of regrets."
+	done
+
+LotusStreet9Trainer5BeatenText:
+	text "Ah. So this is the"
+	line "long nap."
+	done
 
 LotusStreet9Trainer5:
-	trainer L_MANAGER, 131, EVENT_GEN_LOTUS_STREET9_5, LotusStreet9SeenText, LotusStreet9BeatenText, 0, LotusStreet9AfterScript
+	trainer L_MANAGER, 131, EVENT_GEN_LOTUS_STREET9_5, LotusStreet9Trainer5SeenText, LotusStreet9Trainer5BeatenText, 0, LotusStreet9AfterScript
 
 LotusStreet9_MapEvents:
 	db 0, 0 ; filler

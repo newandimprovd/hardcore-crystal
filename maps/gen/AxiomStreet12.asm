@@ -23,14 +23,6 @@ AxiomStreet12HermitText:
 	para "Tuesday."
 	done
 
-AxiomStreet12SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet12BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet12AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -43,26 +35,130 @@ AxiomStreet12AfterScript:
 	closetext
 	end
 
+AxiomStreet12Trainer0SeenText:
+	text "Do you know how"
+	line "many forms it"
+	para "takes to adopt a"
+	line "Pokemon? Mine bit"
+	para "the clerk."
+	done
+
+AxiomStreet12Trainer0BeatenText:
+	text "Unexpected"
+	line "outcome."
+	para "Unexpected pain."
+	line "Unexpected"
+	para "feelings."
+	done
+
 AxiomStreet12Trainer0:
-	trainer U_GUARD, 133, EVENT_GEN_AXIOM_STREET12_0, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer U_GUARD, 133, EVENT_GEN_AXIOM_STREET12_0, AxiomStreet12Trainer0SeenText, AxiomStreet12Trainer0BeatenText, 0, AxiomStreet12AfterScript
+
+AxiomStreet12Trainer1SeenText:
+	text "This sector is"
+	line "clean. Cleaned by"
+	para "me. Of you."
+	done
+
+AxiomStreet12Trainer1BeatenText:
+	text "My last memory is"
+	line "of the Registry."
+	para "It was dull and"
+	line "very organised."
+	done
 
 AxiomStreet12Trainer1:
-	trainer U_MADDOC, 136, EVENT_GEN_AXIOM_STREET12_1, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer U_MADDOC, 136, EVENT_GEN_AXIOM_STREET12_1, AxiomStreet12Trainer1SeenText, AxiomStreet12Trainer1BeatenText, 0, AxiomStreet12AfterScript
+
+AxiomStreet12Trainer2SeenText:
+	text "I am not a robot."
+	line "I am a person with"
+	para "a very rigid"
+	line "personality. Fight"
+	para "me."
+	done
+
+AxiomStreet12Trainer2BeatenText:
+	text "I will report your"
+	line "violence to a"
+	para "committee. The"
+	line "committee is also"
+	para "me."
+	done
 
 AxiomStreet12Trainer2:
-	trainer U_BOTCOP, 139, EVENT_GEN_AXIOM_STREET12_2, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer U_BOTCOP, 139, EVENT_GEN_AXIOM_STREET12_2, AxiomStreet12Trainer2SeenText, AxiomStreet12Trainer2BeatenText, 0, AxiomStreet12AfterScript
+
+AxiomStreet12Trainer3SeenText:
+	text "State your"
+	line "purpose. Your"
+	para "purpose has been"
+	line "recorded. Your"
+	para "purpose is"
+	line "disappointing."
+	done
+
+AxiomStreet12Trainer3BeatenText:
+	text "Warning: faith"
+	line "detected. Warning:"
+	para "it is not mine."
+	done
 
 AxiomStreet12Trainer3:
-	trainer U_BOT, 139, EVENT_GEN_AXIOM_STREET12_3, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer U_BOT, 139, EVENT_GEN_AXIOM_STREET12_3, AxiomStreet12Trainer3SeenText, AxiomStreet12Trainer3BeatenText, 0, AxiomStreet12AfterScript
+
+AxiomStreet12Trainer4SeenText:
+	text "They gave me a"
+	line "team and a pension"
+	para "and a lobotomy."
+	line "Two of three were"
+	para "optional."
+	done
+
+AxiomStreet12Trainer4BeatenText:
+	text "My circuits are"
+	line "warm. Is this what"
+	para "it means to be a"
+	line "person?"
+	done
 
 AxiomStreet12Trainer4:
-	trainer U_DOCTOR, 136, EVENT_GEN_AXIOM_STREET12_4, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer U_DOCTOR, 136, EVENT_GEN_AXIOM_STREET12_4, AxiomStreet12Trainer4SeenText, AxiomStreet12Trainer4BeatenText, 0, AxiomStreet12AfterScript
+
+AxiomStreet12Trainer5SeenText:
+	text "UNIT 4471 reports:"
+	line "you are in"
+	para "violation of"
+	line "Statute 9. Statute"
+	para "9 is whatever I"
+	line "say it is."
+	done
+
+AxiomStreet12Trainer5BeatenText:
+	text "I have a second"
+	line "form. It's"
+	para "labelled Mercy."
+	line "It's blank."
+	done
 
 AxiomStreet12Trainer5:
-	trainer U_CASEWORKER, 130, EVENT_GEN_AXIOM_STREET12_5, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer U_CASEWORKER, 130, EVENT_GEN_AXIOM_STREET12_5, AxiomStreet12Trainer5SeenText, AxiomStreet12Trainer5BeatenText, 0, AxiomStreet12AfterScript
+
+AxiomStreet12Trainer6SeenText:
+	text "I am a robot. I"
+	line "have no feelings."
+	para "That is why I will"
+	line "enjoy this."
+	done
+
+AxiomStreet12Trainer6BeatenText:
+	text "Defeat"
+	line "acknowledged."
+	para "Pettiness remains."
+	done
 
 AxiomStreet12Trainer6:
-	trainer U_BOTCOP, 140, EVENT_GEN_AXIOM_STREET12_6, AxiomStreet12SeenText, AxiomStreet12BeatenText, 0, AxiomStreet12AfterScript
+	trainer U_BOTCOP, 140, EVENT_GEN_AXIOM_STREET12_6, AxiomStreet12Trainer6SeenText, AxiomStreet12Trainer6BeatenText, 0, AxiomStreet12AfterScript
 
 AxiomStreet12_MapEvents:
 	db 0, 0 ; filler

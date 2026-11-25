@@ -22,14 +22,6 @@ GroveStreet13HermitText:
 	line "mantra. A bad one."
 	done
 
-GroveStreet13SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet13BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet13AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -42,26 +34,126 @@ GroveStreet13AfterScript:
 	closetext
 	end
 
+GroveStreet13Trainer0SeenText:
+	text "Join the commune!"
+	line "The initiation is"
+	para "a battle. And the"
+	line "other thing, but"
+	para "later."
+	done
+
+GroveStreet13Trainer0BeatenText:
+	text "The council will"
+	line "be disappointed."
+	para "The council is"
+	line "always"
+	para "disappointed."
+	done
+
 GroveStreet13Trainer0:
-	trainer G_GRANNY, 133, EVENT_GEN_GROVE_STREET13_0, GroveStreet13SeenText, GroveStreet13BeatenText, 0, GroveStreet13AfterScript
+	trainer G_GRANNY, 133, EVENT_GEN_GROVE_STREET13_0, GroveStreet13Trainer0SeenText, GroveStreet13Trainer0BeatenText, 0, GroveStreet13AfterScript
+
+GroveStreet13Trainer1SeenText:
+	text "Everything here is"
+	line "communal, even"
+	para "this duel."
+	line "Spectators may"
+	para "join."
+	done
+
+GroveStreet13Trainer1BeatenText:
+	text "I left the city"
+	line "for peace. I got"
+	para "it. It's a bit"
+	line "sudden."
+	done
 
 GroveStreet13Trainer1:
-	trainer G_HIKER, 139, EVENT_GEN_GROVE_STREET13_1, GroveStreet13SeenText, GroveStreet13BeatenText, 0, GroveStreet13AfterScript
+	trainer G_HIKER, 139, EVENT_GEN_GROVE_STREET13_1, GroveStreet13Trainer1SeenText, GroveStreet13Trainer1BeatenText, 0, GroveStreet13AfterScript
+
+GroveStreet13Trainer2SeenText:
+	text "Plenty of food and"
+	line "no landlords."
+	para "What's the catch?"
+	line "Me. I'm the catch."
+	done
+
+GroveStreet13Trainer2BeatenText:
+	text "You hit like a"
+	line "landlord. I"
+	para "thought we'd"
+	line "escaped those."
+	done
 
 GroveStreet13Trainer2:
-	trainer G_NATURISTM, 131, EVENT_GEN_GROVE_STREET13_2, GroveStreet13SeenText, GroveStreet13BeatenText, 0, GroveStreet13AfterScript
+	trainer G_NATURISTM, 131, EVENT_GEN_GROVE_STREET13_2, GroveStreet13Trainer2SeenText, GroveStreet13Trainer2BeatenText, 0, GroveStreet13AfterScript
+
+GroveStreet13Trainer3SeenText:
+	text "The council voted."
+	line "You're a threat to"
+	para "harmony. The vote"
+	line "was me."
+	done
+
+GroveStreet13Trainer3BeatenText:
+	text "I'm not scared."
+	line "I'm very sleepy"
+	para "and very bruised."
+	done
 
 GroveStreet13Trainer3:
-	trainer G_FLOWERKID, 133, EVENT_GEN_GROVE_STREET13_3, GroveStreet13SeenText, GroveStreet13BeatenText, 0, GroveStreet13AfterScript
+	trainer G_FLOWERKID, 133, EVENT_GEN_GROVE_STREET13_3, GroveStreet13Trainer3SeenText, GroveStreet13Trainer3BeatenText, 0, GroveStreet13AfterScript
+
+GroveStreet13Trainer4SeenText:
+	text "All paths lead to"
+	line "the commune. All"
+	para "paths also lead"
+	line "away. I forget"
+	para "which one I'm on."
+	done
+
+GroveStreet13Trainer4BeatenText:
+	text "This one's for the"
+	line "harvest. This"
+	para "one's for the"
+	line "sickle."
+	done
 
 GroveStreet13Trainer4:
-	trainer G_SPROUT, 138, EVENT_GEN_GROVE_STREET13_4, GroveStreet13SeenText, GroveStreet13BeatenText, 0, GroveStreet13AfterScript
+	trainer G_SPROUT, 138, EVENT_GEN_GROVE_STREET13_4, GroveStreet13Trainer4SeenText, GroveStreet13Trainer4BeatenText, 0, GroveStreet13AfterScript
+
+GroveStreet13Trainer5SeenText:
+	text "Careful, the grass"
+	line "is damp and I'm"
+	para "not wearing much."
+	line "I'm still going to"
+	para "win."
+	done
+
+GroveStreet13Trainer5BeatenText:
+	text "Everyone's equal"
+	line "in the dirt. It's"
+	para "very sad how fast"
+	line "it happens."
+	done
 
 GroveStreet13Trainer5:
-	trainer G_NATURISTM, 132, EVENT_GEN_GROVE_STREET13_5, GroveStreet13SeenText, GroveStreet13BeatenText, 0, GroveStreet13AfterScript
+	trainer G_NATURISTM, 132, EVENT_GEN_GROVE_STREET13_5, GroveStreet13Trainer5SeenText, GroveStreet13Trainer5BeatenText, 0, GroveStreet13AfterScript
+
+GroveStreet13Trainer6SeenText:
+	text "The commune has no"
+	line "police. The"
+	para "commune has me."
+	done
+
+GroveStreet13Trainer6BeatenText:
+	text "I am one with the"
+	line "soil. It was a"
+	para "quick union."
+	done
 
 GroveStreet13Trainer6:
-	trainer G_SHAMAN, 131, EVENT_GEN_GROVE_STREET13_6, GroveStreet13SeenText, GroveStreet13BeatenText, 0, GroveStreet13AfterScript
+	trainer G_SHAMAN, 131, EVENT_GEN_GROVE_STREET13_6, GroveStreet13Trainer6SeenText, GroveStreet13Trainer6BeatenText, 0, GroveStreet13AfterScript
 
 GroveStreet13_MapEvents:
 	db 0, 0 ; filler

@@ -65,14 +65,6 @@ GroveStreet3GiftHermitNoRoomText:
 	para "on."
 	done
 
-GroveStreet3SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet3BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet3AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -85,26 +77,131 @@ GroveStreet3AfterScript:
 	closetext
 	end
 
+GroveStreet3Trainer0SeenText:
+	text "I'm sorry in"
+	line "advance. I'm a"
+	para "very sorry person."
+	line "I apologize for"
+	para "everything"
+	line "including this."
+	done
+
+GroveStreet3Trainer0BeatenText:
+	text "I forgive you in"
+	line "advance. And also"
+	para "after. And during."
+	done
+
 GroveStreet3Trainer0:
-	trainer G_HIKER, 130, EVENT_GEN_GROVE_STREET3_0, GroveStreet3SeenText, GroveStreet3BeatenText, 0, GroveStreet3AfterScript
+	trainer G_HIKER, 130, EVENT_GEN_GROVE_STREET3_0, GroveStreet3Trainer0SeenText, GroveStreet3Trainer0BeatenText, 0, GroveStreet3AfterScript
+
+GroveStreet3Trainer1SeenText:
+	text "We don't have"
+	line "money. We have"
+	para "vibes. And a"
+	line "hundred mushrooms"
+	para "I can't identify."
+	done
+
+GroveStreet3Trainer1BeatenText:
+	text "Please plant"
+	line "something over me."
+	para "A pear. I always"
+	line "liked pears."
+	done
 
 GroveStreet3Trainer1:
-	trainer G_FORAGER, 128, EVENT_GEN_GROVE_STREET3_1, GroveStreet3SeenText, GroveStreet3BeatenText, 0, GroveStreet3AfterScript
+	trainer G_FORAGER, 128, EVENT_GEN_GROVE_STREET3_1, GroveStreet3Trainer1SeenText, GroveStreet3Trainer1BeatenText, 0, GroveStreet3AfterScript
+
+GroveStreet3Trainer2SeenText:
+	text "We have"
+	line "thirty-seven words"
+	para "for rain and one"
+	line "for fighting. Hit"
+	para "me."
+	done
+
+GroveStreet3Trainer2BeatenText:
+	text "This is the wrong"
+	line "kind of intimacy."
+	done
 
 GroveStreet3Trainer2:
-	trainer G_BIRDER, 129, EVENT_GEN_GROVE_STREET3_2, GroveStreet3SeenText, GroveStreet3BeatenText, 0, GroveStreet3AfterScript
+	trainer G_BIRDER, 129, EVENT_GEN_GROVE_STREET3_2, GroveStreet3Trainer2SeenText, GroveStreet3Trainer2BeatenText, 0, GroveStreet3AfterScript
+
+GroveStreet3Trainer3SeenText:
+	text "I came to the"
+	line "Grove to find"
+	para "peace. FINNEGAN"
+	line "found me first."
+	para "Take my hand. Then"
+	line "my life."
+	done
+
+GroveStreet3Trainer3BeatenText:
+	text "I'll go meditate."
+	line "Or cry. Possibly"
+	para "both. Possibly in"
+	line "a tree."
+	done
 
 GroveStreet3Trainer3:
-	trainer G_FORAGER, 129, EVENT_GEN_GROVE_STREET3_3, GroveStreet3SeenText, GroveStreet3BeatenText, 0, GroveStreet3AfterScript
+	trainer G_FORAGER, 129, EVENT_GEN_GROVE_STREET3_3, GroveStreet3Trainer3SeenText, GroveStreet3Trainer3BeatenText, 0, GroveStreet3AfterScript
+
+GroveStreet3Trainer4SeenText:
+	text "We have a policy"
+	line "of radical"
+	para "acceptance. Which"
+	line "means I accept"
+	para "that you're going"
+	line "to lose."
+	done
+
+GroveStreet3Trainer4BeatenText:
+	text "Is that how it's"
+	line "done out there?"
+	para "Out there is"
+	line "terrible."
+	done
 
 GroveStreet3Trainer4:
-	trainer G_FORAGER, 130, EVENT_GEN_GROVE_STREET3_4, GroveStreet3SeenText, GroveStreet3BeatenText, 0, GroveStreet3AfterScript
+	trainer G_FORAGER, 130, EVENT_GEN_GROVE_STREET3_4, GroveStreet3Trainer4SeenText, GroveStreet3Trainer4BeatenText, 0, GroveStreet3AfterScript
+
+GroveStreet3Trainer5SeenText:
+	text "I'm technically on"
+	line "kitchen duty. But"
+	para "a fight is a kind"
+	line "of cooking."
+	done
+
+GroveStreet3Trainer5BeatenText:
+	text "I should have"
+	line "stayed in the"
+	para "city. At least"
+	line "there I'd be rich"
+	para "and dead."
+	done
 
 GroveStreet3Trainer5:
-	trainer G_URCHIN, 129, EVENT_GEN_GROVE_STREET3_5, GroveStreet3SeenText, GroveStreet3BeatenText, 0, GroveStreet3AfterScript
+	trainer G_URCHIN, 129, EVENT_GEN_GROVE_STREET3_5, GroveStreet3Trainer5SeenText, GroveStreet3Trainer5BeatenText, 0, GroveStreet3AfterScript
+
+GroveStreet3Trainer6SeenText:
+	text "Our rooster crows"
+	line "at midnight. It's"
+	para "a very confused"
+	line "rooster. Like us"
+	para "all."
+	done
+
+GroveStreet3Trainer6BeatenText:
+	text "The forest heard"
+	line "that. The forest"
+	para "is judging you,"
+	line "too."
+	done
 
 GroveStreet3Trainer6:
-	trainer G_ANGLER, 129, EVENT_GEN_GROVE_STREET3_6, GroveStreet3SeenText, GroveStreet3BeatenText, 0, GroveStreet3AfterScript
+	trainer G_ANGLER, 129, EVENT_GEN_GROVE_STREET3_6, GroveStreet3Trainer6SeenText, GroveStreet3Trainer6BeatenText, 0, GroveStreet3AfterScript
 
 GroveStreet3_MapEvents:
 	db 0, 0 ; filler

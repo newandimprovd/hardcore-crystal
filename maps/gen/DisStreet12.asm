@@ -22,14 +22,6 @@ DisStreet12HermitText:
 	line "forty years."
 	done
 
-DisStreet12SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet12BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet12AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -42,26 +34,121 @@ DisStreet12AfterScript:
 	closetext
 	end
 
+DisStreet12Trainer0SeenText:
+	text "Welcome to the"
+	line "line. I'm line"
+	para "management. The"
+	line "line is you."
+	done
+
+DisStreet12Trainer0BeatenText:
+	text "I knew I should've"
+	line "been nicer to the"
+	para "guards."
+	done
+
 DisStreet12Trainer0:
-	trainer D_SINNER, 132, EVENT_GEN_DIS_STREET12_0, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_SINNER, 132, EVENT_GEN_DIS_STREET12_0, DisStreet12Trainer0SeenText, DisStreet12Trainer0BeatenText, 0, DisStreet12AfterScript
+
+DisStreet12Trainer1SeenText:
+	text "I'm a bad person."
+	line "I'm the best at"
+	para "being a bad"
+	line "person. I got a"
+	para "plaque."
+	done
+
+DisStreet12Trainer1BeatenText:
+	text "I'll see you at"
+	line "the next circle."
+	para "I'll be the one in"
+	line "the dumpster."
+	done
 
 DisStreet12Trainer1:
-	trainer D_JUDGE, 134, EVENT_GEN_DIS_STREET12_1, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_JUDGE, 134, EVENT_GEN_DIS_STREET12_1, DisStreet12Trainer1SeenText, DisStreet12Trainer1BeatenText, 0, DisStreet12AfterScript
+
+DisStreet12Trainer2SeenText:
+	text "I've been dead for"
+	line "thirty years. It's"
+	para "the only job with"
+	line "a pension."
+	done
+
+DisStreet12Trainer2BeatenText:
+	text "Is this death? Or"
+	line "is this Wednesday?"
+	done
 
 DisStreet12Trainer2:
-	trainer D_IMP, 135, EVENT_GEN_DIS_STREET12_2, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_IMP, 135, EVENT_GEN_DIS_STREET12_2, DisStreet12Trainer2SeenText, DisStreet12Trainer2BeatenText, 0, DisStreet12AfterScript
+
+DisStreet12Trainer3SeenText:
+	text "Welcome to Dis. We"
+	line "have a waiting"
+	para "list. It's"
+	line "forever."
+	done
+
+DisStreet12Trainer3BeatenText:
+	text "You killed me."
+	line "That's the most"
+	para "anyone's cared in"
+	line "decades."
+	done
 
 DisStreet12Trainer3:
-	trainer D_JESTER, 135, EVENT_GEN_DIS_STREET12_3, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_JESTER, 135, EVENT_GEN_DIS_STREET12_3, DisStreet12Trainer3SeenText, DisStreet12Trainer3BeatenText, 0, DisStreet12AfterScript
+
+DisStreet12Trainer4SeenText:
+	text "We're all very"
+	line "sorry down here."
+	para "It's a fashion."
+	done
+
+DisStreet12Trainer4BeatenText:
+	text "It's a good thing"
+	line "I'm already dead."
+	para "Otherwise that"
+	line "would've hurt."
+	done
 
 DisStreet12Trainer4:
-	trainer D_WARDEN, 132, EVENT_GEN_DIS_STREET12_4, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_WARDEN, 132, EVENT_GEN_DIS_STREET12_4, DisStreet12Trainer4SeenText, DisStreet12Trainer4BeatenText, 0, DisStreet12AfterScript
+
+DisStreet12Trainer5SeenText:
+	text "I'm in for being"
+	line "late. I was late"
+	para "to my own"
+	line "damnation. They're"
+	para "very cross."
+	done
+
+DisStreet12Trainer5BeatenText:
+	text "I once got a stern"
+	line "talking-to by the"
+	para "Devil. It was"
+	line "gentler."
+	done
 
 DisStreet12Trainer5:
-	trainer D_JUDGE, 135, EVENT_GEN_DIS_STREET12_5, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_JUDGE, 135, EVENT_GEN_DIS_STREET12_5, DisStreet12Trainer5SeenText, DisStreet12Trainer5BeatenText, 0, DisStreet12AfterScript
+
+DisStreet12Trainer6SeenText:
+	text "Form 666-C:"
+	line "Request to be hit"
+	para "by me. Approved."
+	done
+
+DisStreet12Trainer6BeatenText:
+	text "My soul is the"
+	line "property of"
+	para "someone else. Take"
+	line "it up with him."
+	done
 
 DisStreet12Trainer6:
-	trainer D_SINNER, 133, EVENT_GEN_DIS_STREET12_6, DisStreet12SeenText, DisStreet12BeatenText, 0, DisStreet12AfterScript
+	trainer D_SINNER, 133, EVENT_GEN_DIS_STREET12_6, DisStreet12Trainer6SeenText, DisStreet12Trainer6BeatenText, 0, DisStreet12AfterScript
 
 DisStreet12_MapEvents:
 	db 0, 0 ; filler

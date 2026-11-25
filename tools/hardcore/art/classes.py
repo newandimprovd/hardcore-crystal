@@ -133,7 +133,7 @@ PIC_FROM = {
     "tourist_f": "pokefan_f", "tourist_m": "pokefan_m", "beach_bum": "cal", "lifeguard": "chuck", "forgotten": "pokemaniac",
     "clinician": "scientist", "waiter": "morty", "warden": "lt_surge",
     "brute": "blackbelt_t", "shade": "will", "witch": "clair", "judge": "koga", "imp": "janine", "firebreather": "firebreather",
-    "jester": "juggler", "demon_lord": "falkner", "damned": "super_nerd", "finnegan": "champion",
+    "jester": "juggler", "demon_lord": "falkner", "damned": "super_nerd", "finnegan": "@finnegan",
     "steiner": "executive_m", "crowley": "morty", "sabbah": "will", "cioran": "pokemaniac",
 }
 

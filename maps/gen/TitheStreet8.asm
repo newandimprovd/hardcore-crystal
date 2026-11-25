@@ -59,14 +59,6 @@ TitheStreet8GiftHermitNoRoomText:
 	para "on."
 	done
 
-TitheStreet8SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet8BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet8AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -79,23 +71,107 @@ TitheStreet8AfterScript:
 	closetext
 	end
 
+TitheStreet8Trainer0SeenText:
+	text "Hold still, the"
+	line "camera on that"
+	para "pole is mine. I'd"
+	line "like a close-up of"
+	para "this."
+	done
+
+TitheStreet8Trainer0BeatenText:
+	text "Mercy! I have"
+	line "children! Okay,"
+	para "one child, and"
+	line "he's a lawyer."
+	done
+
 TitheStreet8Trainer0:
-	trainer T_HOODIE, 128, EVENT_GEN_TITHE_STREET8_0, TitheStreet8SeenText, TitheStreet8BeatenText, 0, TitheStreet8AfterScript
+	trainer T_HOODIE, 128, EVENT_GEN_TITHE_STREET8_0, TitheStreet8Trainer0SeenText, TitheStreet8Trainer0BeatenText, 0, TitheStreet8AfterScript
+
+TitheStreet8Trainer1SeenText:
+	text "Do you know who my"
+	line "uncle is? Neither"
+	para "do I. Fight me."
+	done
+
+TitheStreet8Trainer1BeatenText:
+	text "I forgive you."
+	line "It's a reflex. I"
+	para "forgive everyone I"
+	line "can't afford to"
+	para "fight."
+	done
 
 TitheStreet8Trainer1:
-	trainer T_SUIT, 134, EVENT_GEN_TITHE_STREET8_1, TitheStreet8SeenText, TitheStreet8BeatenText, 0, TitheStreet8AfterScript
+	trainer T_SUIT, 134, EVENT_GEN_TITHE_STREET8_1, TitheStreet8Trainer1SeenText, TitheStreet8Trainer1BeatenText, 0, TitheStreet8AfterScript
+
+TitheStreet8Trainer2SeenText:
+	text "This corner is"
+	line "blessed. I blessed"
+	para "it myself, with a"
+	line "bottle."
+	done
+
+TitheStreet8Trainer2BeatenText:
+	text "Funny. I always"
+	line "thought the fall"
+	para "would hurt more."
+	done
 
 TitheStreet8Trainer2:
-	trainer T_SUIT, 135, EVENT_GEN_TITHE_STREET8_2, TitheStreet8SeenText, TitheStreet8BeatenText, 0, TitheStreet8AfterScript
+	trainer T_SUIT, 135, EVENT_GEN_TITHE_STREET8_2, TitheStreet8Trainer2SeenText, TitheStreet8Trainer2BeatenText, 0, TitheStreet8AfterScript
+
+TitheStreet8Trainer3SeenText:
+	text "I do this because"
+	line "I'm sad and it's"
+	para "cheaper than a"
+	line "bar."
+	done
+
+TitheStreet8Trainer3BeatenText:
+	text "That was a clean"
+	line "hit. I'll give you"
+	para "a clean"
+	line "confession."
+	done
 
 TitheStreet8Trainer3:
-	trainer T_SUIT, 136, EVENT_GEN_TITHE_STREET8_3, TitheStreet8SeenText, TitheStreet8BeatenText, 0, TitheStreet8AfterScript
+	trainer T_SUIT, 136, EVENT_GEN_TITHE_STREET8_3, TitheStreet8Trainer3SeenText, TitheStreet8Trainer3BeatenText, 0, TitheStreet8AfterScript
+
+TitheStreet8Trainer4SeenText:
+	text "Sir, this is a"
+	line "sidewalk."
+	para "Sidewalks cost"
+	line "extra."
+	done
+
+TitheStreet8Trainer4BeatenText:
+	text "I bet you brag"
+	line "about this at"
+	para "parties. You don't"
+	line "go to parties."
+	done
 
 TitheStreet8Trainer4:
-	trainer T_BUSKER, 129, EVENT_GEN_TITHE_STREET8_4, TitheStreet8SeenText, TitheStreet8BeatenText, 0, TitheStreet8AfterScript
+	trainer T_BUSKER, 129, EVENT_GEN_TITHE_STREET8_4, TitheStreet8Trainer4SeenText, TitheStreet8Trainer4BeatenText, 0, TitheStreet8AfterScript
+
+TitheStreet8Trainer5SeenText:
+	text "Is that a weapon"
+	line "in your pocket or"
+	para "are you just happy"
+	line "to be mugged?"
+	done
+
+TitheStreet8Trainer5BeatenText:
+	text "My shoes were"
+	line "nice. Take them."
+	para "Take the socks."
+	line "I'm done."
+	done
 
 TitheStreet8Trainer5:
-	trainer T_PRIEST, 130, EVENT_GEN_TITHE_STREET8_5, TitheStreet8SeenText, TitheStreet8BeatenText, 0, TitheStreet8AfterScript
+	trainer T_PRIEST, 130, EVENT_GEN_TITHE_STREET8_5, TitheStreet8Trainer5SeenText, TitheStreet8Trainer5BeatenText, 0, TitheStreet8AfterScript
 
 TitheStreet8_MapEvents:
 	db 0, 0 ; filler

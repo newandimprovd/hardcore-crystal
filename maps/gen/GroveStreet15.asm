@@ -23,14 +23,6 @@ GroveStreet15HermitText:
 	para "had a bad week."
 	done
 
-GroveStreet15SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet15BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet15AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -43,26 +35,122 @@ GroveStreet15AfterScript:
 	closetext
 	end
 
+GroveStreet15Trainer0SeenText:
+	text "I have been"
+	line "fasting for nine"
+	para "days. Shut up and"
+	line "fight me."
+	done
+
+GroveStreet15Trainer0BeatenText:
+	text "My wife is a good"
+	line "woman. She'll be"
+	para "glad. She says I"
+	line "snore."
+	done
+
 GroveStreet15Trainer0:
-	trainer G_HIKER, 140, EVENT_GEN_GROVE_STREET15_0, GroveStreet15SeenText, GroveStreet15BeatenText, 0, GroveStreet15AfterScript
+	trainer G_HIKER, 140, EVENT_GEN_GROVE_STREET15_0, GroveStreet15Trainer0SeenText, GroveStreet15Trainer0BeatenText, 0, GroveStreet15AfterScript
+
+GroveStreet15Trainer1SeenText:
+	text "I once ate a"
+	line "mushroom and met"
+	para "my father. He's a"
+	line "tree now. Get out"
+	para "of his way."
+	done
+
+GroveStreet15Trainer1BeatenText:
+	text "You win. Take a"
+	line "berry. Take all"
+	para "the berries."
+	done
 
 GroveStreet15Trainer1:
-	trainer G_ANGLER, 133, EVENT_GEN_GROVE_STREET15_1, GroveStreet15SeenText, GroveStreet15BeatenText, 0, GroveStreet15AfterScript
+	trainer G_ANGLER, 133, EVENT_GEN_GROVE_STREET15_1, GroveStreet15Trainer1SeenText, GroveStreet15Trainer1BeatenText, 0, GroveStreet15AfterScript
+
+GroveStreet15Trainer2SeenText:
+	text "I'm a monogamy"
+	line "evangelist. They"
+	para "fed me berries and"
+	line "now I have six"
+	para "boyfriends. Pray"
+	line "for me."
+	done
+
+GroveStreet15Trainer2BeatenText:
+	text "That was a very"
+	line "unsustainable"
+	para "outcome."
+	done
 
 GroveStreet15Trainer2:
-	trainer G_BIRDER, 134, EVENT_GEN_GROVE_STREET15_2, GroveStreet15SeenText, GroveStreet15BeatenText, 0, GroveStreet15AfterScript
+	trainer G_BIRDER, 134, EVENT_GEN_GROVE_STREET15_2, GroveStreet15Trainer2SeenText, GroveStreet15Trainer2BeatenText, 0, GroveStreet15AfterScript
+
+GroveStreet15Trainer3SeenText:
+	text "They put me on"
+	line "gate duty because"
+	para "I annoyed"
+	line "everyone. It's not"
+	para "working, is it."
+	done
+
+GroveStreet15Trainer3BeatenText:
+	text "Today I learned"
+	line "that violence is"
+	para "an effective"
+	line "teacher."
+	done
 
 GroveStreet15Trainer3:
-	trainer G_BARD, 130, EVENT_GEN_GROVE_STREET15_3, GroveStreet15SeenText, GroveStreet15BeatenText, 0, GroveStreet15AfterScript
+	trainer G_BARD, 130, EVENT_GEN_GROVE_STREET15_3, GroveStreet15Trainer3SeenText, GroveStreet15Trainer3BeatenText, 0, GroveStreet15AfterScript
+
+GroveStreet15Trainer4SeenText:
+	text "Sharing is caring."
+	line "I'd like to share"
+	para "my Pokemon with"
+	line "your face."
+	done
+
+GroveStreet15Trainer4BeatenText:
+	text "Take the bread."
+	line "It's better than I"
+	para "am."
+	done
 
 GroveStreet15Trainer4:
-	trainer G_DRUIDESS, 130, EVENT_GEN_GROVE_STREET15_4, GroveStreet15SeenText, GroveStreet15BeatenText, 0, GroveStreet15AfterScript
+	trainer G_DRUIDESS, 130, EVENT_GEN_GROVE_STREET15_4, GroveStreet15Trainer4SeenText, GroveStreet15Trainer4BeatenText, 0, GroveStreet15AfterScript
+
+GroveStreet15Trainer5SeenText:
+	text "The elders sleep"
+	line "in shifts. I'm on"
+	para "the shift where I"
+	line "punch strangers."
+	done
+
+GroveStreet15Trainer5BeatenText:
+	text "Well. That's one"
+	line "way to open a"
+	para "chakra."
+	done
 
 GroveStreet15Trainer5:
-	trainer G_NATURISTM, 133, EVENT_GEN_GROVE_STREET15_5, GroveStreet15SeenText, GroveStreet15BeatenText, 0, GroveStreet15AfterScript
+	trainer G_NATURISTM, 133, EVENT_GEN_GROVE_STREET15_5, GroveStreet15Trainer5SeenText, GroveStreet15Trainer5BeatenText, 0, GroveStreet15AfterScript
+
+GroveStreet15Trainer6SeenText:
+	text "I haven't bathed"
+	line "since the equinox."
+	para "It's called"
+	line "commitment."
+	done
+
+GroveStreet15Trainer6BeatenText:
+	text "I accept this"
+	line "defeat radically."
+	done
 
 GroveStreet15Trainer6:
-	trainer G_HIKER, 141, EVENT_GEN_GROVE_STREET15_6, GroveStreet15SeenText, GroveStreet15BeatenText, 0, GroveStreet15AfterScript
+	trainer G_HIKER, 141, EVENT_GEN_GROVE_STREET15_6, GroveStreet15Trainer6SeenText, GroveStreet15Trainer6BeatenText, 0, GroveStreet15AfterScript
 
 GroveStreet15_MapEvents:
 	db 0, 0 ; filler

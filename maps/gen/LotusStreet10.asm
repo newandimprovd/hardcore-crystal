@@ -26,14 +26,6 @@ LotusStreet10PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A4
 	end
 
-LotusStreet10SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet10BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet10AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -46,26 +38,123 @@ LotusStreet10AfterScript:
 	closetext
 	end
 
+LotusStreet10Trainer0SeenText:
+	text "Hey, you look sad."
+	line "Want a refill on"
+	para "that?"
+	done
+
+LotusStreet10Trainer0BeatenText:
+	text "Please tell the"
+	line "bartender I paid."
+	para "I didn't. Please"
+	line "tell him I did."
+	done
+
 LotusStreet10Trainer0:
-	trainer L_SAILOR, 129, EVENT_GEN_LOTUS_STREET10_0, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SAILOR, 129, EVENT_GEN_LOTUS_STREET10_0, LotusStreet10Trainer0SeenText, LotusStreet10Trainer0BeatenText, 0, LotusStreet10AfterScript
+
+LotusStreet10Trainer1SeenText:
+	text "The hammock is"
+	line "mine. The sea is"
+	para "mine. You, too,"
+	line "apparently."
+	done
+
+LotusStreet10Trainer1BeatenText:
+	text "Beautiful. Please"
+	line "tell the bartender"
+	para "I tipped in"
+	line "advance."
+	done
 
 LotusStreet10Trainer1:
-	trainer L_LOUNGER, 135, EVENT_GEN_LOTUS_STREET10_1, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_LOUNGER, 135, EVENT_GEN_LOTUS_STREET10_1, LotusStreet10Trainer1SeenText, LotusStreet10Trainer1BeatenText, 0, LotusStreet10AfterScript
+
+LotusStreet10Trainer2SeenText:
+	text "Pain is illegal"
+	line "here. Your face is"
+	para "therefore a crime."
+	done
+
+LotusStreet10Trainer2BeatenText:
+	text "Oof. I just"
+	line "remembered my"
+	para "mother. She was"
+	line "pretty angry. Hit"
+	para "me again."
+	done
 
 LotusStreet10Trainer2:
-	trainer L_TOURISTM, 131, EVENT_GEN_LOTUS_STREET10_2, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_TOURISTM, 131, EVENT_GEN_LOTUS_STREET10_2, LotusStreet10Trainer2SeenText, LotusStreet10Trainer2BeatenText, 0, LotusStreet10AfterScript
+
+LotusStreet10Trainer3SeenText:
+	text "I used to be a"
+	line "cop. I forgot. Now"
+	para "I'm a lifeguard."
+	line "I'm very bad at"
+	para "it."
+	done
+
+LotusStreet10Trainer3BeatenText:
+	text "I lost? I don't"
+	line "usually lose. I"
+	para "don't usually try."
+	done
 
 LotusStreet10Trainer3:
-	trainer L_SAILOR, 130, EVENT_GEN_LOTUS_STREET10_3, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SAILOR, 130, EVENT_GEN_LOTUS_STREET10_3, LotusStreet10Trainer3SeenText, LotusStreet10Trainer3BeatenText, 0, LotusStreet10AfterScript
+
+LotusStreet10Trainer4SeenText:
+	text "Welcome to the"
+	line "Lotus Coast, where"
+	para "yesterday never"
+	line "happened. Today is"
+	para "a battle."
+	done
+
+LotusStreet10Trainer4BeatenText:
+	text "That was a very"
+	line "honest hit. Honest"
+	para "hits are the"
+	line "worst."
+	done
 
 LotusStreet10Trainer4:
-	trainer L_SUNBATHER, 132, EVENT_GEN_LOTUS_STREET10_4, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SUNBATHER, 132, EVENT_GEN_LOTUS_STREET10_4, LotusStreet10Trainer4SeenText, LotusStreet10Trainer4BeatenText, 0, LotusStreet10AfterScript
+
+LotusStreet10Trainer5SeenText:
+	text "Cocktail hour is"
+	line "over. Brawl hour"
+	para "has begun."
+	done
+
+LotusStreet10Trainer5BeatenText:
+	text "If you see my"
+	line "wife, she's the"
+	para "one with the"
+	line "better lawyer."
+	done
 
 LotusStreet10Trainer5:
-	trainer L_SAILOR, 131, EVENT_GEN_LOTUS_STREET10_5, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SAILOR, 131, EVENT_GEN_LOTUS_STREET10_5, LotusStreet10Trainer5SeenText, LotusStreet10Trainer5BeatenText, 0, LotusStreet10AfterScript
+
+LotusStreet10Trainer6SeenText:
+	text "I have a margarita"
+	line "and a mission. The"
+	para "margarita is"
+	line "empty."
+	done
+
+LotusStreet10Trainer6BeatenText:
+	text "Wave goodbye to"
+	line "the tourists. And"
+	para "hello to the next"
+	line "ones."
+	done
 
 LotusStreet10Trainer6:
-	trainer L_SWIMMERF, 136, EVENT_GEN_LOTUS_STREET10_6, LotusStreet10SeenText, LotusStreet10BeatenText, 0, LotusStreet10AfterScript
+	trainer L_SWIMMERF, 136, EVENT_GEN_LOTUS_STREET10_6, LotusStreet10Trainer6SeenText, LotusStreet10Trainer6BeatenText, 0, LotusStreet10AfterScript
 
 LotusStreet10_MapEvents:
 	db 0, 0 ; filler

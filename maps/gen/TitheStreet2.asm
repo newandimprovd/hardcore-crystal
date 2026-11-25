@@ -23,14 +23,6 @@ TitheStreet2HermitText:
 	para "payroll."
 	done
 
-TitheStreet2SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet2BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet2AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -43,23 +35,109 @@ TitheStreet2AfterScript:
 	closetext
 	end
 
+TitheStreet2Trainer0SeenText:
+	text "Eviction notice"
+	line "for your face."
+	para "Effective"
+	line "immediately."
+	para "Appeal by losing."
+	done
+
+TitheStreet2Trainer0BeatenText:
+	text "I blessed this"
+	line "street myself. You"
+	para "will not enjoy the"
+	line "aftertaste."
+	done
+
 TitheStreet2Trainer0:
-	trainer T_NUN, 129, EVENT_GEN_TITHE_STREET2_0, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer T_NUN, 129, EVENT_GEN_TITHE_STREET2_0, TitheStreet2Trainer0SeenText, TitheStreet2Trainer0BeatenText, 0, TitheStreet2AfterScript
+
+TitheStreet2Trainer1SeenText:
+	text "You look like a"
+	line "witness. Witnesses"
+	para "go missing in this"
+	line "city. It's"
+	para "weather."
+	done
+
+TitheStreet2Trainer1BeatenText:
+	text "I confessed"
+	line "everything. The"
+	para "priest laughed. He"
+	line "said it wasn't"
+	para "enough."
+	done
 
 TitheStreet2Trainer1:
-	trainer T_NUN, 130, EVENT_GEN_TITHE_STREET2_1, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer T_NUN, 130, EVENT_GEN_TITHE_STREET2_1, TitheStreet2Trainer1SeenText, TitheStreet2Trainer1BeatenText, 0, TitheStreet2AfterScript
+
+TitheStreet2Trainer2SeenText:
+	text "The collection"
+	line "plate is empty and"
+	para "I'm holding the"
+	line "knife. I mean the"
+	para "Pokemon."
+	done
+
+TitheStreet2Trainer2BeatenText:
+	text "Oh. It's quieter"
+	line "than I expected."
+	para "Hello."
+	done
 
 TitheStreet2Trainer2:
-	trainer T_BEGGAR, 129, EVENT_GEN_TITHE_STREET2_2, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer T_BEGGAR, 129, EVENT_GEN_TITHE_STREET2_2, TitheStreet2Trainer2SeenText, TitheStreet2Trainer2BeatenText, 0, TitheStreet2AfterScript
+
+TitheStreet2Trainer3SeenText:
+	text "I do the Lord's"
+	line "work. The Lord is"
+	para "behind on"
+	line "payments."
+	done
+
+TitheStreet2Trainer3BeatenText:
+	text "Oh. The river. It"
+	line "runs backward. I"
+	para "see the wake."
+	line "Thank you."
+	done
 
 TitheStreet2Trainer3:
-	trainer T_COP, 132, EVENT_GEN_TITHE_STREET2_3, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer T_COP, 132, EVENT_GEN_TITHE_STREET2_3, TitheStreet2Trainer3SeenText, TitheStreet2Trainer3BeatenText, 0, TitheStreet2AfterScript
+
+TitheStreet2Trainer4SeenText:
+	text "The alley is a"
+	line "toll road now. I'm"
+	para "the toll. The road"
+	line "is optional."
+	done
+
+TitheStreet2Trainer4BeatenText:
+	text "You're the first"
+	line "honest person I've"
+	para "met here. It was"
+	line "terrifying."
+	done
 
 TitheStreet2Trainer4:
-	trainer T_SISTER, 130, EVENT_GEN_TITHE_STREET2_4, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer T_SISTER, 130, EVENT_GEN_TITHE_STREET2_4, TitheStreet2Trainer4SeenText, TitheStreet2Trainer4BeatenText, 0, TitheStreet2AfterScript
+
+TitheStreet2Trainer5SeenText:
+	text "You walk like a"
+	line "man with nothing"
+	para "to declare."
+	line "Declare it anyway."
+	done
+
+TitheStreet2Trainer5BeatenText:
+	text "I'm not dead. I'm"
+	line "just offline. I'll"
+	para "be back as a tax."
+	done
 
 TitheStreet2Trainer5:
-	trainer T_COP, 133, EVENT_GEN_TITHE_STREET2_5, TitheStreet2SeenText, TitheStreet2BeatenText, 0, TitheStreet2AfterScript
+	trainer T_COP, 133, EVENT_GEN_TITHE_STREET2_5, TitheStreet2Trainer5SeenText, TitheStreet2Trainer5BeatenText, 0, TitheStreet2AfterScript
 
 TitheStreet2_MapEvents:
 	db 0, 0 ; filler

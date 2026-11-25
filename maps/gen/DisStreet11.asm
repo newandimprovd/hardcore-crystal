@@ -60,14 +60,6 @@ DisStreet11GiftHermitNoRoomText:
 	para "on."
 	done
 
-DisStreet11SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet11BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet11AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -80,23 +72,110 @@ DisStreet11AfterScript:
 	closetext
 	end
 
+DisStreet11Trainer0SeenText:
+	text "Rejoice. You're"
+	line "the thousandth"
+	para "visitor. You win a"
+	line "fight."
+	done
+
+DisStreet11Trainer0BeatenText:
+	text "I once got a stern"
+	line "talking-to by the"
+	para "Devil. It was"
+	line "gentler."
+	done
+
 DisStreet11Trainer0:
-	trainer D_JESTER, 134, EVENT_GEN_DIS_STREET11_0, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_JESTER, 134, EVENT_GEN_DIS_STREET11_0, DisStreet11Trainer0SeenText, DisStreet11Trainer0BeatenText, 0, DisStreet11AfterScript
+
+DisStreet11Trainer1SeenText:
+	text "You'll never"
+	line "leave. I say that"
+	para "with love. I say"
+	line "that with a team."
+	done
+
+DisStreet11Trainer1BeatenText:
+	text "My chains have"
+	line "fallen off. How"
+	para "embarrassing."
+	done
 
 DisStreet11Trainer1:
-	trainer D_CRONE, 129, EVENT_GEN_DIS_STREET11_1, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_CRONE, 129, EVENT_GEN_DIS_STREET11_1, DisStreet11Trainer1SeenText, DisStreet11Trainer1BeatenText, 0, DisStreet11AfterScript
+
+DisStreet11Trainer2SeenText:
+	text "You're a killer."
+	line "I'm in the same"
+	para "boat. The boat is"
+	line "a coffin. Let's"
+	para "talk after the"
+	line "fight."
+	done
+
+DisStreet11Trainer2BeatenText:
+	text "My boss will hear"
+	line "about this. My"
+	para "boss hears about"
+	line "everything. It's a"
+	para "gift."
+	done
 
 DisStreet11Trainer2:
-	trainer D_SPECTRE, 130, EVENT_GEN_DIS_STREET11_2, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_SPECTRE, 130, EVENT_GEN_DIS_STREET11_2, DisStreet11Trainer2SeenText, DisStreet11Trainer2BeatenText, 0, DisStreet11AfterScript
+
+DisStreet11Trainer3SeenText:
+	text "I'm already"
+	line "damned. A death at"
+	para "your hands is the"
+	line "only upgrade on"
+	para "offer. Please."
+	done
+
+DisStreet11Trainer3BeatenText:
+	text "So this is what"
+	line "the afterlife of"
+	para "the afterlife"
+	line "feels like."
+	done
 
 DisStreet11Trainer3:
-	trainer D_MAGISTRATE, 131, EVENT_GEN_DIS_STREET11_3, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_MAGISTRATE, 131, EVENT_GEN_DIS_STREET11_3, DisStreet11Trainer3SeenText, DisStreet11Trainer3BeatenText, 0, DisStreet11AfterScript
+
+DisStreet11Trainer4SeenText:
+	text "I was promised a"
+	line "day off. Instead I"
+	para "got you."
+	done
+
+DisStreet11Trainer4BeatenText:
+	text "Another soul lost."
+	line "Another form"
+	para "filed. Another day"
+	line "in the office."
+	done
 
 DisStreet11Trainer4:
-	trainer D_SHADE, 134, EVENT_GEN_DIS_STREET11_4, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_SHADE, 134, EVENT_GEN_DIS_STREET11_4, DisStreet11Trainer4SeenText, DisStreet11Trainer4BeatenText, 0, DisStreet11AfterScript
+
+DisStreet11Trainer5SeenText:
+	text "I don't need hope."
+	line "I have a pension."
+	para "It doesn't pay"
+	line "out. But I have"
+	para "it."
+	done
+
+DisStreet11Trainer5BeatenText:
+	text "You beat me. The"
+	line "next one will be"
+	para "much harder. He"
+	line "has teeth."
+	done
 
 DisStreet11Trainer5:
-	trainer D_IMPF, 131, EVENT_GEN_DIS_STREET11_5, DisStreet11SeenText, DisStreet11BeatenText, 0, DisStreet11AfterScript
+	trainer D_IMPF, 131, EVENT_GEN_DIS_STREET11_5, DisStreet11Trainer5SeenText, DisStreet11Trainer5BeatenText, 0, DisStreet11AfterScript
 
 DisStreet11_MapEvents:
 	db 0, 0 ; filler

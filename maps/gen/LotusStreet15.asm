@@ -22,14 +22,6 @@ LotusStreet15HermitText:
 	line "end of everything."
 	done
 
-LotusStreet15SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet15BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet15AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -42,23 +34,106 @@ LotusStreet15AfterScript:
 	closetext
 	end
 
+LotusStreet15Trainer0SeenText:
+	text "Hold my drink."
+	line "Hold it carefully."
+	para "Hold it until I'm"
+	line "done with you."
+	done
+
+LotusStreet15Trainer0BeatenText:
+	text "That hurt in a"
+	line "place my memory"
+	para "used to live."
+	done
+
 LotusStreet15Trainer0:
-	trainer L_SAILOR, 132, EVENT_GEN_LOTUS_STREET15_0, LotusStreet15SeenText, LotusStreet15BeatenText, 0, LotusStreet15AfterScript
+	trainer L_SAILOR, 132, EVENT_GEN_LOTUS_STREET15_0, LotusStreet15Trainer0SeenText, LotusStreet15Trainer0BeatenText, 0, LotusStreet15AfterScript
+
+LotusStreet15Trainer1SeenText:
+	text "I would offer you"
+	line "a drink, but I"
+	para "forgot how."
+	done
+
+LotusStreet15Trainer1BeatenText:
+	text "A drink would be"
+	line "nice. A last one."
+	para "A very large last"
+	line "one."
+	done
 
 LotusStreet15Trainer1:
-	trainer L_SWIMMERM, 139, EVENT_GEN_LOTUS_STREET15_1, LotusStreet15SeenText, LotusStreet15BeatenText, 0, LotusStreet15AfterScript
+	trainer L_SWIMMERM, 139, EVENT_GEN_LOTUS_STREET15_1, LotusStreet15Trainer1SeenText, LotusStreet15Trainer1BeatenText, 0, LotusStreet15AfterScript
+
+LotusStreet15Trainer2SeenText:
+	text "I had a dream"
+	line "you'd show up. I"
+	para "woke up angry"
+	line "about it."
+	done
+
+LotusStreet15Trainer2BeatenText:
+	text "Hang loose, they"
+	line "said. I hung. I'm"
+	para "loose. Ouch."
+	done
 
 LotusStreet15Trainer2:
-	trainer L_SUNBATHER, 138, EVENT_GEN_LOTUS_STREET15_2, LotusStreet15SeenText, LotusStreet15BeatenText, 0, LotusStreet15AfterScript
+	trainer L_SUNBATHER, 138, EVENT_GEN_LOTUS_STREET15_2, LotusStreet15Trainer2SeenText, LotusStreet15Trainer2BeatenText, 0, LotusStreet15AfterScript
+
+LotusStreet15Trainer3SeenText:
+	text "A sandcastle is"
+	line "the only thing I"
+	para "ever built. You're"
+	line "about to break it."
+	done
+
+LotusStreet15Trainer3BeatenText:
+	text "If you see my"
+	line "wife, she's the"
+	para "one with the"
+	line "better lawyer."
+	done
 
 LotusStreet15Trainer3:
-	trainer L_CLINICIAN, 133, EVENT_GEN_LOTUS_STREET15_3, LotusStreet15SeenText, LotusStreet15BeatenText, 0, LotusStreet15AfterScript
+	trainer L_CLINICIAN, 133, EVENT_GEN_LOTUS_STREET15_3, LotusStreet15Trainer3SeenText, LotusStreet15Trainer3BeatenText, 0, LotusStreet15AfterScript
+
+LotusStreet15Trainer4SeenText:
+	text "My bathing suit is"
+	line "on backwards. I"
+	para "forgot. That's the"
+	line "whole point of"
+	para "this place."
+	done
+
+LotusStreet15Trainer4BeatenText:
+	text "Oof. I just"
+	line "remembered my"
+	para "mother. She was"
+	line "pretty angry. Hit"
+	para "me again."
+	done
 
 LotusStreet15Trainer4:
-	trainer L_BELLHOP, 132, EVENT_GEN_LOTUS_STREET15_4, LotusStreet15SeenText, LotusStreet15BeatenText, 0, LotusStreet15AfterScript
+	trainer L_BELLHOP, 132, EVENT_GEN_LOTUS_STREET15_4, LotusStreet15Trainer4SeenText, LotusStreet15Trainer4BeatenText, 0, LotusStreet15AfterScript
+
+LotusStreet15Trainer5SeenText:
+	text "My sunscreen is"
+	line "SPF 50 and my"
+	para "morals are SPF 5."
+	line "One of them has"
+	para "failed."
+	done
+
+LotusStreet15Trainer5BeatenText:
+	text "I lost? I don't"
+	line "usually lose. I"
+	para "don't usually try."
+	done
 
 LotusStreet15Trainer5:
-	trainer L_SWIMMERF, 143, EVENT_GEN_LOTUS_STREET15_5, LotusStreet15SeenText, LotusStreet15BeatenText, 0, LotusStreet15AfterScript
+	trainer L_SWIMMERF, 143, EVENT_GEN_LOTUS_STREET15_5, LotusStreet15Trainer5SeenText, LotusStreet15Trainer5BeatenText, 0, LotusStreet15AfterScript
 
 LotusStreet15_MapEvents:
 	db 0, 0 ; filler

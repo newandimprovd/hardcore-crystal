@@ -23,14 +23,6 @@ AxiomStreet3HermitText:
 	para "letter is Q."
 	done
 
-AxiomStreet3SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet3BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet3AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -43,26 +35,124 @@ AxiomStreet3AfterScript:
 	closetext
 	end
 
+AxiomStreet3Trainer0SeenText:
+	text "I am a citizen. I"
+	line "have a citizen's"
+	para "feelings. They are"
+	line "as approved as"
+	para "yours."
+	done
+
+AxiomStreet3Trainer0BeatenText:
+	text "Tell my"
+	line "replacement the"
+	para "stairs are"
+	line "slippery."
+	done
+
 AxiomStreet3Trainer0:
-	trainer U_WARDBOT, 130, EVENT_GEN_AXIOM_STREET3_0, AxiomStreet3SeenText, AxiomStreet3BeatenText, 0, AxiomStreet3AfterScript
+	trainer U_WARDBOT, 130, EVENT_GEN_AXIOM_STREET3_0, AxiomStreet3Trainer0SeenText, AxiomStreet3Trainer0BeatenText, 0, AxiomStreet3AfterScript
+
+AxiomStreet3Trainer1SeenText:
+	text "A bug in my code"
+	line "says I'm allowed"
+	para "to like you. I"
+	line "have submitted a"
+	para "patch."
+	done
+
+AxiomStreet3Trainer1BeatenText:
+	text "My handler calls"
+	line "me a good boy. I"
+	para "would like to hear"
+	line "it once more."
+	done
 
 AxiomStreet3Trainer1:
-	trainer U_BOT, 131, EVENT_GEN_AXIOM_STREET3_1, AxiomStreet3SeenText, AxiomStreet3BeatenText, 0, AxiomStreet3AfterScript
+	trainer U_BOT, 131, EVENT_GEN_AXIOM_STREET3_1, AxiomStreet3Trainer1SeenText, AxiomStreet3Trainer1BeatenText, 0, AxiomStreet3AfterScript
+
+AxiomStreet3Trainer2SeenText:
+	text "You are walking in"
+	line "a straight line."
+	para "Straight lines are"
+	line "suspicious. En"
+	para "garde."
+	done
+
+AxiomStreet3Trainer2BeatenText:
+	text "Please hold. I am"
+	line "buffering my final"
+	para "words."
+	done
 
 AxiomStreet3Trainer2:
-	trainer U_SERFF, 128, EVENT_GEN_AXIOM_STREET3_2, AxiomStreet3SeenText, AxiomStreet3BeatenText, 0, AxiomStreet3AfterScript
+	trainer U_SERFF, 128, EVENT_GEN_AXIOM_STREET3_2, AxiomStreet3Trainer2SeenText, AxiomStreet3Trainer2BeatenText, 0, AxiomStreet3AfterScript
+
+AxiomStreet3Trainer3SeenText:
+	text "A human bond"
+	line "requires approval."
+	para "Approval requires"
+	line "bribes. Bribes"
+	para "require you."
+	done
+
+AxiomStreet3Trainer3BeatenText:
+	text "My battery is low."
+	line "So is my"
+	para "self-esteem."
+	done
 
 AxiomStreet3Trainer3:
-	trainer U_BOTCOP, 128, EVENT_GEN_AXIOM_STREET3_3, AxiomStreet3SeenText, AxiomStreet3BeatenText, 0, AxiomStreet3AfterScript
+	trainer U_BOTCOP, 128, EVENT_GEN_AXIOM_STREET3_3, AxiomStreet3Trainer3SeenText, AxiomStreet3Trainer3BeatenText, 0, AxiomStreet3AfterScript
+
+AxiomStreet3Trainer4SeenText:
+	text "Ahem. In"
+	line "accordance with"
+	para "Statute 4, I must"
+	line "now flatten you."
+	done
+
+AxiomStreet3Trainer4BeatenText:
+	text "I will be recycled"
+	line "for this. At least"
+	para "I'll be something."
+	done
 
 AxiomStreet3Trainer4:
-	trainer U_SERFF, 129, EVENT_GEN_AXIOM_STREET3_4, AxiomStreet3SeenText, AxiomStreet3BeatenText, 0, AxiomStreet3AfterScript
+	trainer U_SERFF, 129, EVENT_GEN_AXIOM_STREET3_4, AxiomStreet3Trainer4SeenText, AxiomStreet3Trainer4BeatenText, 0, AxiomStreet3AfterScript
+
+AxiomStreet3Trainer5SeenText:
+	text "I am the"
+	line "thirty-first of my"
+	para "model. The first"
+	line "thirty were also"
+	para "dutiful."
+	done
+
+AxiomStreet3Trainer5BeatenText:
+	text "Archive me."
+	line "Archive me deeply."
+	done
 
 AxiomStreet3Trainer5:
-	trainer U_MADDOC, 131, EVENT_GEN_AXIOM_STREET3_5, AxiomStreet3SeenText, AxiomStreet3BeatenText, 0, AxiomStreet3AfterScript
+	trainer U_MADDOC, 131, EVENT_GEN_AXIOM_STREET3_5, AxiomStreet3Trainer5SeenText, AxiomStreet3Trainer5BeatenText, 0, AxiomStreet3AfterScript
+
+AxiomStreet3Trainer6SeenText:
+	text "Citizen, loitering"
+	line "reduces"
+	para "productivity."
+	line "Dying reduces it"
+	para "further. Pick one."
+	done
+
+AxiomStreet3Trainer6BeatenText:
+	text "Ouch. Ouch. Is"
+	line "that what ouch is?"
+	para "Ouch."
+	done
 
 AxiomStreet3Trainer6:
-	trainer U_BOTCOP, 129, EVENT_GEN_AXIOM_STREET3_6, AxiomStreet3SeenText, AxiomStreet3BeatenText, 0, AxiomStreet3AfterScript
+	trainer U_BOTCOP, 129, EVENT_GEN_AXIOM_STREET3_6, AxiomStreet3Trainer6SeenText, AxiomStreet3Trainer6BeatenText, 0, AxiomStreet3AfterScript
 
 AxiomStreet3_MapEvents:
 	db 0, 0 ; filler

@@ -22,14 +22,6 @@ DisStreet15HermitText:
 	line "burns the same."
 	done
 
-DisStreet15SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet15BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet15AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -42,26 +34,127 @@ DisStreet15AfterScript:
 	closetext
 	end
 
+DisStreet15Trainer0SeenText:
+	text "You're early. The"
+	line "torment is"
+	para "scheduled for"
+	line "four. It's three"
+	para "fifty-nine."
+	done
+
+DisStreet15Trainer0BeatenText:
+	text "Another soul lost."
+	line "Another form"
+	para "filed. Another day"
+	line "in the office."
+	done
+
 DisStreet15Trainer0:
-	trainer D_JUDGE, 137, EVENT_GEN_DIS_STREET15_0, DisStreet15SeenText, DisStreet15BeatenText, 0, DisStreet15AfterScript
+	trainer D_JUDGE, 137, EVENT_GEN_DIS_STREET15_0, DisStreet15Trainer0SeenText, DisStreet15Trainer0BeatenText, 0, DisStreet15AfterScript
+
+DisStreet15Trainer1SeenText:
+	text "Welcome to the"
+	line "line. I'm line"
+	para "management. The"
+	line "line is you."
+	done
+
+DisStreet15Trainer1BeatenText:
+	text "Don't gloat. It's"
+	line "unbecoming. Also"
+	para "it's very hot."
+	done
 
 DisStreet15Trainer1:
-	trainer D_SHADE, 136, EVENT_GEN_DIS_STREET15_1, DisStreet15SeenText, DisStreet15BeatenText, 0, DisStreet15AfterScript
+	trainer D_SHADE, 136, EVENT_GEN_DIS_STREET15_1, DisStreet15Trainer1SeenText, DisStreet15Trainer1BeatenText, 0, DisStreet15AfterScript
+
+DisStreet15Trainer2SeenText:
+	text "I'm a bad person."
+	line "I'm the best at"
+	para "being a bad"
+	line "person. I got a"
+	para "plaque."
+	done
+
+DisStreet15Trainer2BeatenText:
+	text "Tell my wife I"
+	line "love her. Tell her"
+	para "to stay up there."
+	done
 
 DisStreet15Trainer2:
-	trainer D_WARDEN, 134, EVENT_GEN_DIS_STREET15_2, DisStreet15SeenText, DisStreet15BeatenText, 0, DisStreet15AfterScript
+	trainer D_WARDEN, 134, EVENT_GEN_DIS_STREET15_2, DisStreet15Trainer2SeenText, DisStreet15Trainer2BeatenText, 0, DisStreet15AfterScript
+
+DisStreet15Trainer3SeenText:
+	text "I don't need hope."
+	line "I have a pension."
+	para "It doesn't pay"
+	line "out. But I have"
+	para "it."
+	done
+
+DisStreet15Trainer3BeatenText:
+	text "So this is what"
+	line "the afterlife of"
+	para "the afterlife"
+	line "feels like."
+	done
 
 DisStreet15Trainer3:
-	trainer D_SHADE, 137, EVENT_GEN_DIS_STREET15_3, DisStreet15SeenText, DisStreet15BeatenText, 0, DisStreet15AfterScript
+	trainer D_SHADE, 137, EVENT_GEN_DIS_STREET15_3, DisStreet15Trainer3SeenText, DisStreet15Trainer3BeatenText, 0, DisStreet15AfterScript
+
+DisStreet15Trainer4SeenText:
+	text "Rejoice. You're"
+	line "the thousandth"
+	para "visitor. You win a"
+	line "fight."
+	done
+
+DisStreet15Trainer4BeatenText:
+	text "That was"
+	line "cathartic. I'm"
+	para "going to cry now."
+	line "Then complain."
+	done
 
 DisStreet15Trainer4:
-	trainer D_FIREEATER, 131, EVENT_GEN_DIS_STREET15_4, DisStreet15SeenText, DisStreet15BeatenText, 0, DisStreet15AfterScript
+	trainer D_FIREEATER, 131, EVENT_GEN_DIS_STREET15_4, DisStreet15Trainer4SeenText, DisStreet15Trainer4BeatenText, 0, DisStreet15AfterScript
+
+DisStreet15Trainer5SeenText:
+	text "Do you hear that?"
+	line "That's the lake."
+	para "It wants to be"
+	line "your friend. It's"
+	para "a frozen trap."
+	done
+
+DisStreet15Trainer5BeatenText:
+	text "Fine. Fine! I'll"
+	line "write an angry"
+	para "letter. It will"
+	line "arrive in a"
+	para "century."
+	done
 
 DisStreet15Trainer5:
-	trainer D_SINNER, 134, EVENT_GEN_DIS_STREET15_5, DisStreet15SeenText, DisStreet15BeatenText, 0, DisStreet15AfterScript
+	trainer D_SINNER, 134, EVENT_GEN_DIS_STREET15_5, DisStreet15Trainer5SeenText, DisStreet15Trainer5BeatenText, 0, DisStreet15AfterScript
+
+DisStreet15Trainer6SeenText:
+	text "Ever been betrayed"
+	line "by yourself? It's"
+	para "the easiest, and"
+	line "the most reliable."
+	done
+
+DisStreet15Trainer6BeatenText:
+	text "Guilt is an ice."
+	line "It melts."
+	para "Eventually."
+	line "Hopefully. Please."
+	done
 
 DisStreet15Trainer6:
-	trainer D_HAG, 133, EVENT_GEN_DIS_STREET15_6, DisStreet15SeenText, DisStreet15BeatenText, 0, DisStreet15AfterScript
+	trainer D_HAG, 133, EVENT_GEN_DIS_STREET15_6, DisStreet15Trainer6SeenText, DisStreet15Trainer6BeatenText, 0, DisStreet15AfterScript
 
 DisStreet15_MapEvents:
 	db 0, 0 ; filler

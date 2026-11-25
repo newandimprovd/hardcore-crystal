@@ -44,14 +44,6 @@ PurgUp4Gate0UseText:
 	line "property."
 	done
 
-PurgUp4SeenText:
-	text_far HC_SeenText_PG
-	text_end
-
-PurgUp4BeatenText:
-	text_far HC_BeatenText_PG
-	text_end
-
 PurgUp4AfterText:
 	text_far HC_AfterText_PG
 	text_end
@@ -64,23 +56,114 @@ PurgUp4AfterScript:
 	closetext
 	end
 
+PurgUp4Trainer0SeenText:
+	text "This cave has an"
+	line "echo. I've been"
+	para "practising an"
+	line "insult for forty"
+	para "years. Listen."
+	done
+
+PurgUp4Trainer0BeatenText:
+	text "I'll be in the"
+	line "corner. It's the"
+	para "only place I get"
+	line "any quiet."
+	done
+
 PurgUp4Trainer0:
-	trainer T_NUN, 139, EVENT_GEN_PURG_UP4_0, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer T_NUN, 139, EVENT_GEN_PURG_UP4_0, PurgUp4Trainer0SeenText, PurgUp4Trainer0BeatenText, 0, PurgUp4AfterScript
+
+PurgUp4Trainer1SeenText:
+	text "I have no body"
+	line "anymore, so please"
+	para "do not take it"
+	line "personally when I"
+	para "hit you with a"
+	line "rock."
+	done
+
+PurgUp4Trainer1BeatenText:
+	text "Take the path."
+	line "Mind the echo. It"
+	para "likes to repeat"
+	line "your worst"
+	para "moments."
+	done
 
 PurgUp4Trainer1:
-	trainer G_BARD, 132, EVENT_GEN_PURG_UP4_1, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer G_BARD, 132, EVENT_GEN_PURG_UP4_1, PurgUp4Trainer1SeenText, PurgUp4Trainer1BeatenText, 0, PurgUp4AfterScript
+
+PurgUp4Trainer2SeenText:
+	text "I've been dead"
+	line "long enough to get"
+	para "a taste for"
+	line "violence with"
+	para "consequences"
+	line "removed."
+	done
+
+PurgUp4Trainer2BeatenText:
+	text "I yield. My"
+	line "argument was"
+	para "weaker than my"
+	line "team."
+	done
 
 PurgUp4Trainer2:
-	trainer U_DOCTOR, 143, EVENT_GEN_PURG_UP4_2, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer U_DOCTOR, 143, EVENT_GEN_PURG_UP4_2, PurgUp4Trainer2SeenText, PurgUp4Trainer2BeatenText, 0, PurgUp4AfterScript
+
+PurgUp4Trainer3SeenText:
+	text "I was promised"
+	line "seventy two of"
+	para "something. I got a"
+	line "cave. Hold this"
+	para "grudge for me."
+	done
+
+PurgUp4Trainer3BeatenText:
+	text "Ow. I'd forgotten"
+	line "how it felt to be"
+	para "surprised."
+	done
 
 PurgUp4Trainer3:
-	trainer U_SERF, 144, EVENT_GEN_PURG_UP4_3, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer U_SERF, 144, EVENT_GEN_PURG_UP4_3, PurgUp4Trainer3SeenText, PurgUp4Trainer3BeatenText, 0, PurgUp4AfterScript
+
+PurgUp4Trainer4SeenText:
+	text "I know you. You"
+	line "killed my cousin"
+	para "Dale. No hard"
+	line "feelings. We're"
+	para "all dead down"
+	line "here."
+	done
+
+PurgUp4Trainer4BeatenText:
+	text "Good. Now I can"
+	line "nap. Or not nap."
+	para "It's all the same."
+	done
 
 PurgUp4Trainer4:
-	trainer U_SERFF, 141, EVENT_GEN_PURG_UP4_4, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer U_SERFF, 141, EVENT_GEN_PURG_UP4_4, PurgUp4Trainer4SeenText, PurgUp4Trainer4BeatenText, 0, PurgUp4AfterScript
+
+PurgUp4Trainer5SeenText:
+	text "Do not worry about"
+	line "the dark. The dark"
+	para "has seen"
+	line "everything and is"
+	para "not impressed."
+	done
+
+PurgUp4Trainer5BeatenText:
+	text "Don't mind me. I'm"
+	line "resting my"
+	para "argument."
+	done
 
 PurgUp4Trainer5:
-	trainer U_SERFF, 142, EVENT_GEN_PURG_UP4_5, PurgUp4SeenText, PurgUp4BeatenText, 0, PurgUp4AfterScript
+	trainer U_SERFF, 142, EVENT_GEN_PURG_UP4_5, PurgUp4Trainer5SeenText, PurgUp4Trainer5BeatenText, 0, PurgUp4AfterScript
 
 PurgUp4Hermit0:
 	faceplayer

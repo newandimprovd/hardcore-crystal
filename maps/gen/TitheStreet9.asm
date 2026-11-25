@@ -23,14 +23,6 @@ TitheStreet9HermitText:
 	para "an apology."
 	done
 
-TitheStreet9SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet9BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet9AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -43,23 +35,106 @@ TitheStreet9AfterScript:
 	closetext
 	end
 
+TitheStreet9Trainer0SeenText:
+	text "Heard a nutcase is"
+	line "walking around"
+	para "killing trainers."
+	line "Lucky for me,"
+	para "that's a rumor."
+	done
+
+TitheStreet9Trainer0BeatenText:
+	text "I meant to quit"
+	line "this morning. Now"
+	para "I've quit forever."
+	done
+
 TitheStreet9Trainer0:
-	trainer T_NUN, 132, EVENT_GEN_TITHE_STREET9_0, TitheStreet9SeenText, TitheStreet9BeatenText, 0, TitheStreet9AfterScript
+	trainer T_NUN, 132, EVENT_GEN_TITHE_STREET9_0, TitheStreet9Trainer0SeenText, TitheStreet9Trainer0BeatenText, 0, TitheStreet9AfterScript
+
+TitheStreet9Trainer1SeenText:
+	text "Oh good. Another"
+	line "witness for the"
+	para "fight. Wait,"
+	line "you're the fight."
+	done
+
+TitheStreet9Trainer1BeatenText:
+	text "My team is the"
+	line "only honest thing"
+	para "I own. Be kind to"
+	line "them."
+	done
 
 TitheStreet9Trainer1:
-	trainer T_PRIEST, 131, EVENT_GEN_TITHE_STREET9_1, TitheStreet9SeenText, TitheStreet9BeatenText, 0, TitheStreet9AfterScript
+	trainer T_PRIEST, 131, EVENT_GEN_TITHE_STREET9_1, TitheStreet9Trainer1SeenText, TitheStreet9Trainer1BeatenText, 0, TitheStreet9AfterScript
+
+TitheStreet9Trainer2SeenText:
+	text "I've got a degree"
+	line "in theology and a"
+	para "debt of eighty"
+	line "grand. Hit me."
+	done
+
+TitheStreet9Trainer2BeatenText:
+	text "You'll pay for"
+	line "this. Not me."
+	para "Someone. There's"
+	line "always someone."
+	done
 
 TitheStreet9Trainer2:
-	trainer T_PRIEST, 132, EVENT_GEN_TITHE_STREET9_2, TitheStreet9SeenText, TitheStreet9BeatenText, 0, TitheStreet9AfterScript
+	trainer T_PRIEST, 132, EVENT_GEN_TITHE_STREET9_2, TitheStreet9Trainer2SeenText, TitheStreet9Trainer2BeatenText, 0, TitheStreet9AfterScript
+
+TitheStreet9Trainer3SeenText:
+	text "Do not make eye"
+	line "contact. Too late."
+	para "Now it's personal."
+	done
+
+TitheStreet9Trainer3BeatenText:
+	text "Hail Mary. Full of"
+	line "grace. Not full of"
+	para "luck."
+	done
 
 TitheStreet9Trainer3:
-	trainer T_BEGGAR, 134, EVENT_GEN_TITHE_STREET9_3, TitheStreet9SeenText, TitheStreet9BeatenText, 0, TitheStreet9AfterScript
+	trainer T_BEGGAR, 134, EVENT_GEN_TITHE_STREET9_3, TitheStreet9Trainer3SeenText, TitheStreet9Trainer3BeatenText, 0, TitheStreet9AfterScript
+
+TitheStreet9Trainer4SeenText:
+	text "Quiet, the tower"
+	line "next door is"
+	para "sleeping. Let me"
+	line "ruin that for you"
+	para "instead."
+	done
+
+TitheStreet9Trainer4BeatenText:
+	text "I regret nothing."
+	line "I regret"
+	para "everything. I"
+	line "regret the"
+	para "sandwich."
+	done
 
 TitheStreet9Trainer4:
-	trainer T_PRIEST, 133, EVENT_GEN_TITHE_STREET9_4, TitheStreet9SeenText, TitheStreet9BeatenText, 0, TitheStreet9AfterScript
+	trainer T_PRIEST, 133, EVENT_GEN_TITHE_STREET9_4, TitheStreet9Trainer4SeenText, TitheStreet9Trainer4BeatenText, 0, TitheStreet9AfterScript
+
+TitheStreet9Trainer5SeenText:
+	text "My shift ended an"
+	line "hour ago. You owe"
+	para "me for that hour."
+	done
+
+TitheStreet9Trainer5BeatenText:
+	text "I'll light a"
+	line "candle. In the"
+	para "dark. Where it"
+	line "isn't seen."
+	done
 
 TitheStreet9Trainer5:
-	trainer T_BEGGAR, 135, EVENT_GEN_TITHE_STREET9_5, TitheStreet9SeenText, TitheStreet9BeatenText, 0, TitheStreet9AfterScript
+	trainer T_BEGGAR, 135, EVENT_GEN_TITHE_STREET9_5, TitheStreet9Trainer5SeenText, TitheStreet9Trainer5BeatenText, 0, TitheStreet9AfterScript
 
 TitheStreet9_MapEvents:
 	db 0, 0 ; filler

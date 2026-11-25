@@ -6,14 +6,6 @@ TitheOssuary_MapScripts:
 
 	def_callbacks
 
-TitheOssuarySeenText:
-	text_far HC_SeenText_HL1
-	text_end
-
-TitheOssuaryBeatenText:
-	text_far HC_BeatenText_HL1
-	text_end
-
 TitheOssuaryAfterText:
 	text_far HC_AfterText_HL1
 	text_end
@@ -26,20 +18,90 @@ TitheOssuaryAfterScript:
 	closetext
 	end
 
+TitheOssuaryTrainer0SeenText:
+	text "Brother Anselm is"
+	line "not in. Brother"
+	para "Anselm has not"
+	line "been in since the"
+	para "Lent of the"
+	line "incident."
+	done
+
+TitheOssuaryTrainer0BeatenText:
+	text "Bless you."
+	line "Genuinely. Please"
+	para "leave."
+	done
+
 TitheOssuaryTrainer0:
-	trainer T_PRIEST, 143, EVENT_GEN_TITHE_OSSUARY_0, TitheOssuarySeenText, TitheOssuaryBeatenText, 0, TitheOssuaryAfterScript
+	trainer T_PRIEST, 143, EVENT_GEN_TITHE_OSSUARY_0, TitheOssuaryTrainer0SeenText, TitheOssuaryTrainer0BeatenText, 0, TitheOssuaryAfterScript
+
+TitheOssuaryTrainer1SeenText:
+	text "Mind the bones."
+	line "Some of them are"
+	para "still paying rent."
+	done
+
+TitheOssuaryTrainer1BeatenText:
+	text "I will say a"
+	line "prayer for you. It"
+	para "will be about the"
+	line "stairs."
+	done
 
 TitheOssuaryTrainer1:
-	trainer T_PRIEST, 144, EVENT_GEN_TITHE_OSSUARY_1, TitheOssuarySeenText, TitheOssuaryBeatenText, 0, TitheOssuaryAfterScript
+	trainer T_PRIEST, 144, EVENT_GEN_TITHE_OSSUARY_1, TitheOssuaryTrainer1SeenText, TitheOssuaryTrainer1BeatenText, 0, TitheOssuaryAfterScript
+
+TitheOssuaryTrainer2SeenText:
+	text "We hide the"
+	line "donations down"
+	para "here. From the"
+	line "Church. From the"
+	para "poor. From"
+	line "ourselves."
+	done
+
+TitheOssuaryTrainer2BeatenText:
+	text "Mercy. I was told"
+	line "there would be"
+	para "mercy. I was"
+	line "misinformed."
+	done
 
 TitheOssuaryTrainer2:
-	trainer T_NUN, 142, EVENT_GEN_TITHE_OSSUARY_2, TitheOssuarySeenText, TitheOssuaryBeatenText, 0, TitheOssuaryAfterScript
+	trainer T_NUN, 142, EVENT_GEN_TITHE_OSSUARY_2, TitheOssuaryTrainer2SeenText, TitheOssuaryTrainer2BeatenText, 0, TitheOssuaryAfterScript
+
+TitheOssuaryTrainer3SeenText:
+	text "A penny for your"
+	line "thoughts. A fight"
+	para "for your trespass."
+	done
+
+TitheOssuaryTrainer3BeatenText:
+	text "Mercy. I was told"
+	line "there would be"
+	para "mercy. I was"
+	line "misinformed."
+	done
 
 TitheOssuaryTrainer3:
-	trainer T_COP, 146, EVENT_GEN_TITHE_OSSUARY_3, TitheOssuarySeenText, TitheOssuaryBeatenText, 0, TitheOssuaryAfterScript
+	trainer T_COP, 146, EVENT_GEN_TITHE_OSSUARY_3, TitheOssuaryTrainer3SeenText, TitheOssuaryTrainer3BeatenText, 0, TitheOssuaryAfterScript
+
+TitheOssuaryTrainer4SeenText:
+	text "Forgive me, I am"
+	line "about to be very"
+	para "unforgiving."
+	done
+
+TitheOssuaryTrainer4BeatenText:
+	text "I will say a"
+	line "prayer for you. It"
+	para "will be about the"
+	line "stairs."
+	done
 
 TitheOssuaryTrainer4:
-	trainer T_BEGGAR, 146, EVENT_GEN_TITHE_OSSUARY_4, TitheOssuarySeenText, TitheOssuaryBeatenText, 0, TitheOssuaryAfterScript
+	trainer T_BEGGAR, 146, EVENT_GEN_TITHE_OSSUARY_4, TitheOssuaryTrainer4SeenText, TitheOssuaryTrainer4BeatenText, 0, TitheOssuaryAfterScript
 
 TitheOssuaryHermit0:
 	faceplayer
