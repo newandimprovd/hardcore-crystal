@@ -5861,6 +5861,7 @@ ParseEnemyAction:
 	dec a
 	jr nz, .skip_load
 ; wild
+	ld d, 24 ; tries to find a move that is not a stat pile-up (alpha 3.3), then take whatever comes
 .loop2
 	ld hl, wEnemyMonMoves
 	call Random
@@ -5883,6 +5884,12 @@ ParseEnemyAction:
 	ld a, [hl]
 	and PP_MASK
 	jr z, .loop2
+	ld a, b
+	call FoeStatPileUp
+	jr nc, .take_move
+	dec d
+	jr nz, .loop2
+.take_move
 	ld a, c
 	ld [wCurEnemyMoveNum], a
 	ld a, b
@@ -5927,6 +5934,34 @@ ParseEnemyAction:
 .struggle
 	ld a, STRUGGLE
 	jr .finish
+
+FoeStatPileUp:
+; Alpha 3.3 (playtest: the early game was a soft lock, a wild Pidgey that only knows Tackle and Sand-Attack drove the player's accuracy to the floor).
+; Carry if the move a only piles onto a stat that is already off by a stage: an accuracy drop against the player who is already below normal accuracy,
+; or an evasion boost for the foe who is already above normal.  The wild foe picks another move then.
+	cp SAND_ATTACK
+	jr z, .accuracy
+	cp KINESIS
+	jr z, .accuracy
+	cp FLASH
+	jr z, .accuracy
+	cp DOUBLE_TEAM
+	jr z, .evasion
+	cp MINIMIZE
+	jr z, .evasion
+	and a
+	ret
+
+.accuracy
+	ld a, [wPlayerAccLevel]
+	cp BASE_STAT_LEVEL
+	ret ; carry if below normal
+
+.evasion
+	ld a, [wEnemyEvaLevel]
+	cp BASE_STAT_LEVEL + 1
+	ccf
+	ret ; carry if above normal
 
 ResetVarsForSubstatusRage:
 	xor a

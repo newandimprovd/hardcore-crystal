@@ -24,14 +24,6 @@ TitheStreet1HermitText:
 	line "lot of paperwork."
 	done
 
-TitheStreet1SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet1BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet1AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -44,26 +36,117 @@ TitheStreet1AfterScript:
 	closetext
 	end
 
+TitheStreet1Trainer0SeenText:
+	text "Quiet down. The"
+	line "choir is"
+	para "rehearsing the"
+	line "ransom note."
+	done
+
+TitheStreet1Trainer0BeatenText:
+	text "Is it Sunday yet?"
+	line "I'd like to be"
+	para "forgiven early."
+	done
+
 TitheStreet1Trainer0:
-	trainer T_SUIT, 128, EVENT_GEN_TITHE_STREET1_0, TitheStreet1SeenText, TitheStreet1BeatenText, 0, TitheStreet1AfterScript
+	trainer T_SUIT, 128, EVENT_GEN_TITHE_STREET1_0, TitheStreet1Trainer0SeenText, TitheStreet1Trainer0BeatenText, 0, TitheStreet1AfterScript
+
+TitheStreet1Trainer1SeenText:
+	text "Your aura is bad."
+	line "I mean the smell."
+	para "Anyway, battle."
+	done
+
+TitheStreet1Trainer1BeatenText:
+	text "Ow. That's coming"
+	line "out of my"
+	para "overtime."
+	done
 
 TitheStreet1Trainer1:
-	trainer T_COP, 130, EVENT_GEN_TITHE_STREET1_1, TitheStreet1SeenText, TitheStreet1BeatenText, 0, TitheStreet1AfterScript
+	trainer T_COP, 130, EVENT_GEN_TITHE_STREET1_1, TitheStreet1Trainer1SeenText, TitheStreet1Trainer1BeatenText, 0, TitheStreet1AfterScript
+
+TitheStreet1Trainer2SeenText:
+	text "I put my whole"
+	line "life savings into"
+	para "scaffolding. It's"
+	line "going great."
+	done
+
+TitheStreet1Trainer2BeatenText:
+	text "Please tell the"
+	line "sergeant I tried"
+	para "to resist arrest."
+	line "He'll understand."
+	done
 
 TitheStreet1Trainer2:
-	trainer T_SISTER, 129, EVENT_GEN_TITHE_STREET1_2, TitheStreet1SeenText, TitheStreet1BeatenText, 0, TitheStreet1AfterScript
+	trainer T_SISTER, 129, EVENT_GEN_TITHE_STREET1_2, TitheStreet1Trainer2SeenText, TitheStreet1Trainer2BeatenText, 0, TitheStreet1AfterScript
+
+TitheStreet1Trainer3SeenText:
+	text "The city has a"
+	line "heart, it says"
+	para "here. I have the"
+	line "receipt for the"
+	para "heart."
+	done
+
+TitheStreet1Trainer3BeatenText:
+	text "My knees. My"
+	line "dignity. My lease."
+	done
 
 TitheStreet1Trainer3:
-	trainer T_SUIT, 129, EVENT_GEN_TITHE_STREET1_3, TitheStreet1SeenText, TitheStreet1BeatenText, 0, TitheStreet1AfterScript
+	trainer T_SUIT, 129, EVENT_GEN_TITHE_STREET1_3, TitheStreet1Trainer3SeenText, TitheStreet1Trainer3BeatenText, 0, TitheStreet1AfterScript
+
+TitheStreet1Trainer4SeenText:
+	text "Let's keep this"
+	line "civil. By which I"
+	para "mean, let's keep"
+	line "it off the record."
+	done
+
+TitheStreet1Trainer4BeatenText:
+	text "I used to be a"
+	line "good man. I used"
+	para "to be a lot of"
+	line "things."
+	done
 
 TitheStreet1Trainer4:
-	trainer T_BEGGAR, 128, EVENT_GEN_TITHE_STREET1_4, TitheStreet1SeenText, TitheStreet1BeatenText, 0, TitheStreet1AfterScript
+	trainer T_BEGGAR, 128, EVENT_GEN_TITHE_STREET1_4, TitheStreet1Trainer4SeenText, TitheStreet1Trainer4BeatenText, 0, TitheStreet1AfterScript
+
+TitheStreet1Trainer5SeenText:
+	text "Big city, small"
+	line "hospitality. Let's"
+	para "get on with it."
+	done
+
+TitheStreet1Trainer5BeatenText:
+	text "The cathedral will"
+	line "stand and I won't."
+	para "Seems about right."
+	done
 
 TitheStreet1Trainer5:
-	trainer T_ACCOUNTANT, 128, EVENT_GEN_TITHE_STREET1_5, TitheStreet1SeenText, TitheStreet1BeatenText, 0, TitheStreet1AfterScript
+	trainer T_ACCOUNTANT, 128, EVENT_GEN_TITHE_STREET1_5, TitheStreet1Trainer5SeenText, TitheStreet1Trainer5BeatenText, 0, TitheStreet1AfterScript
+
+TitheStreet1Trainer6SeenText:
+	text "This is a gated"
+	line "neighbourhood. You"
+	para "are the gate. Open"
+	line "up."
+	done
+
+TitheStreet1Trainer6BeatenText:
+	text "Oof. I feel"
+	line "strangely"
+	para "forgiven."
+	done
 
 TitheStreet1Trainer6:
-	trainer T_COP, 131, EVENT_GEN_TITHE_STREET1_6, TitheStreet1SeenText, TitheStreet1BeatenText, 0, TitheStreet1AfterScript
+	trainer T_COP, 131, EVENT_GEN_TITHE_STREET1_6, TitheStreet1Trainer6SeenText, TitheStreet1Trainer6BeatenText, 0, TitheStreet1AfterScript
 
 TitheStreet1_MapEvents:
 	db 0, 0 ; filler

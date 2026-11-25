@@ -58,14 +58,6 @@ GroveStreet14GiftHermitNoRoomText:
 	para "on."
 	done
 
-GroveStreet14SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet14BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet14AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -78,23 +70,112 @@ GroveStreet14AfterScript:
 	closetext
 	end
 
+GroveStreet14Trainer0SeenText:
+	text "The apples told me"
+	line "you were coming."
+	para "They said bring a"
+	line "towel. I brought"
+	para "the towel. Let's"
+	line "begin."
+	done
+
+GroveStreet14Trainer0BeatenText:
+	text "I thought I'd feel"
+	line "enlightened. I"
+	para "feel lightened."
+	done
+
 GroveStreet14Trainer0:
-	trainer G_BARD, 129, EVENT_GEN_GROVE_STREET14_0, GroveStreet14SeenText, GroveStreet14BeatenText, 0, GroveStreet14AfterScript
+	trainer G_BARD, 129, EVENT_GEN_GROVE_STREET14_0, GroveStreet14Trainer0SeenText, GroveStreet14Trainer0BeatenText, 0, GroveStreet14AfterScript
+
+GroveStreet14Trainer1SeenText:
+	text "Welcome, friend!"
+	line "Everything here is"
+	para "free. Including"
+	line "this beating."
+	done
+
+GroveStreet14Trainer1BeatenText:
+	text "The apples were"
+	line "right. They're"
+	para "always right. It's"
+	line "the pits."
+	done
 
 GroveStreet14Trainer1:
-	trainer G_SHAMAN, 132, EVENT_GEN_GROVE_STREET14_1, GroveStreet14SeenText, GroveStreet14BeatenText, 0, GroveStreet14AfterScript
+	trainer G_SHAMAN, 132, EVENT_GEN_GROVE_STREET14_1, GroveStreet14Trainer1SeenText, GroveStreet14Trainer1BeatenText, 0, GroveStreet14AfterScript
+
+GroveStreet14Trainer2SeenText:
+	text "The Commune taught"
+	line "me that all things"
+	para "return. FINNEGAN"
+	line "says it faster."
+	para "Send me back,"
+	line "friend."
+	done
+
+GroveStreet14Trainer2BeatenText:
+	text "I feel the soil."
+	line "It's warm. It's"
+	para "calling. Spread me"
+	line "well."
+	done
 
 GroveStreet14Trainer2:
-	trainer G_ELDER, 133, EVENT_GEN_GROVE_STREET14_2, GroveStreet14SeenText, GroveStreet14BeatenText, 0, GroveStreet14AfterScript
+	trainer G_ELDER, 133, EVENT_GEN_GROVE_STREET14_2, GroveStreet14Trainer2SeenText, GroveStreet14Trainer2BeatenText, 0, GroveStreet14AfterScript
+
+GroveStreet14Trainer3SeenText:
+	text "I'm very, very"
+	line "relaxed. Which is"
+	para "a lot of"
+	line "confidence for"
+	para "what's about to"
+	line "happen."
+	done
+
+GroveStreet14Trainer3BeatenText:
+	text "I wanted to be a"
+	line "poet. I'm only a"
+	para "pile now."
+	done
 
 GroveStreet14Trainer3:
-	trainer G_GRANNY, 134, EVENT_GEN_GROVE_STREET14_3, GroveStreet14SeenText, GroveStreet14BeatenText, 0, GroveStreet14AfterScript
+	trainer G_GRANNY, 134, EVENT_GEN_GROVE_STREET14_3, GroveStreet14Trainer3SeenText, GroveStreet14Trainer3BeatenText, 0, GroveStreet14AfterScript
+
+GroveStreet14Trainer4SeenText:
+	text "I made this team"
+	line "from scratch. And"
+	para "by scratch I mean"
+	line "I found it in a"
+	para "ditch."
+	done
+
+GroveStreet14Trainer4BeatenText:
+	text "That's the third"
+	line "time I've been"
+	para "fainted this week."
+	line "Hey, it's honest"
+	para "work."
+	done
 
 GroveStreet14Trainer4:
-	trainer G_SPROUT, 139, EVENT_GEN_GROVE_STREET14_4, GroveStreet14SeenText, GroveStreet14BeatenText, 0, GroveStreet14AfterScript
+	trainer G_SPROUT, 139, EVENT_GEN_GROVE_STREET14_4, GroveStreet14Trainer4SeenText, GroveStreet14Trainer4BeatenText, 0, GroveStreet14AfterScript
+
+GroveStreet14Trainer5SeenText:
+	text "Clothes are"
+	line "optional here. So"
+	para "is manners,"
+	line "apparently."
+	done
+
+GroveStreet14Trainer5BeatenText:
+	text "Everything dies."
+	line "It's in the"
+	para "compost agreement."
+	done
 
 GroveStreet14Trainer5:
-	trainer G_ELDER, 134, EVENT_GEN_GROVE_STREET14_5, GroveStreet14SeenText, GroveStreet14BeatenText, 0, GroveStreet14AfterScript
+	trainer G_ELDER, 134, EVENT_GEN_GROVE_STREET14_5, GroveStreet14Trainer5SeenText, GroveStreet14Trainer5BeatenText, 0, GroveStreet14AfterScript
 
 GroveStreet14_MapEvents:
 	db 0, 0 ; filler

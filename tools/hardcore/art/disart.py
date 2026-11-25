@@ -443,7 +443,97 @@ def rift():
     return cv
 
 
+# ---------------------------------------------------------------- the volcano summit (alpha 3.3: FINNEGAN is fought on the rim of a burning crater)
+def _lava_tile(shift, crust):
+    """Bright lava with a wavy red ribbon that runs across the tile (period 8, so it continues into the next tile) and a few black crust flecks."""
+    t = [[1] * 8 for _ in range(8)]
+    for x in range(8):
+        y = (3 + round(1.4 * math.sin(2 * math.pi * x / 8)) + shift) % 8
+        t[y][x] = 2
+        t[(y + 1) % 8][x] = 2
+    for (x, y) in crust:
+        t[y][x] = 3
+    return t
+
+
+def _tile(rows):
+    return [[int(ch) for ch in r] for r in rows]
+
+
+LAVA_T = (_lava_tile(0, [(2, 6), (5, 0)]), _lava_tile(4, [(6, 2), (1, 5)]))
+# the lip: lava that darkens into a red glow and a black crust, then the bare basalt of the ground (index 0)
+LIP_N = _tile(["11111111", "12111121", "11111111", "22222222", "33333333", "00000000", "00000000", "00000000"])
+
+
+def _put(cv, cx, cy, t, slot=RED):
+    cv.cell(cx, cy, slot)
+    for y in range(8):
+        for x in range(8):
+            cv.set(cx * 8 + x, cy * 8 + y, t[y][x])
+
+
+def _transpose(t):
+    return [[t[x][y] for x in range(8)] for y in range(8)]
+
+
+def _hflip(t):
+    return [r[::-1] for r in t]
+
+
+def _lava_cell(cv, cx, cy):
+    _put(cv, cx, cy, LAVA_T[(cx + cy) % 2])
+
+
+def _ground_cell(cv, cx, cy, g):
+    cv.cell(cx, cy, g.s[cy][cx])
+    for y in range(8):
+        for x in range(8):
+            cv.set(cx * 8 + x, cy * 8 + y, g.get(cx * 8 + x, cy * 8 + y))
+
+
+def volcano(g):
+    """(role, Canvas, collision) of the summit blocks: open lava, and the lava rim with the ground on its south, west or east side."""
+    out = []
+    cv = Canvas()
+    for cy in range(4):
+        for cx in range(4):
+            _lava_cell(cv, cx, cy)
+    out.append(("v_lava", cv, "WALL"))
+    cv = Canvas()  # lava in the north, ground in the south
+    for cx in range(4):
+        _lava_cell(cv, cx, 0)
+        _lava_cell(cv, cx, 1)
+        _put(cv, cx, 2, LIP_N)
+        _ground_cell(cv, cx, 3, g)
+    out.append(("v_edge_n", cv, ("WALL", "WALL", "FLOOR", "FLOOR")))
+    lip_w = _transpose(LIP_N)  # lava on the left of the tile
+    cv = Canvas()
+    for cy in range(4):
+        _lava_cell(cv, 0, cy)
+        _lava_cell(cv, 1, cy)
+        _put(cv, 2, cy, lip_w)
+        _ground_cell(cv, 3, cy, g)
+    out.append(("v_edge_w", cv, ("WALL", "FLOOR", "WALL", "FLOOR")))
+    lip_e = _hflip(lip_w)
+    cv = Canvas()
+    for cy in range(4):
+        _ground_cell(cv, 0, cy, g)
+        _put(cv, 1, cy, lip_e)
+        _lava_cell(cv, 2, cy)
+        _lava_cell(cv, 3, cy)
+    out.append(("v_edge_e", cv, ("FLOOR", "WALL", "FLOOR", "WALL")))
+    return out
+
+
+def volcano_extras(t, g):
+    ids = {}
+    for role, cv, coll in volcano(g):
+        ids[role] = t.add(cv, coll, role)
+    return ids
+
+
 class P:
+    extras = staticmethod(volcano_extras)
     border = staticmethod(mass)
     floors = staticmethod(lambda: [floor_plain(), floor_ash(), floor_crack()])
     rares = staticmethod(lambda: [rare_embers(), rare_icepatch(), rare_bones()])

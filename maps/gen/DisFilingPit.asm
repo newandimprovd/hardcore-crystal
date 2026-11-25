@@ -6,14 +6,6 @@ DisFilingPit_MapScripts:
 
 	def_callbacks
 
-DisFilingPitSeenText:
-	text_far HC_SeenText_HL5
-	text_end
-
-DisFilingPitBeatenText:
-	text_far HC_BeatenText_HL5
-	text_end
-
 DisFilingPitAfterText:
 	text_far HC_AfterText_HL5
 	text_end
@@ -26,20 +18,85 @@ DisFilingPitAfterScript:
 	closetext
 	end
 
+DisFilingPitTrainer0SeenText:
+	text "The pit is full."
+	line "The pit has always"
+	para "been full. You are"
+	line "an exception and"
+	para "the pit is rude"
+	line "about it."
+	done
+
+DisFilingPitTrainer0BeatenText:
+	text "Appeal granted."
+	line "Retroactively."
+	para "Bring a lawyer"
+	line "next time."
+	done
+
 DisFilingPitTrainer0:
-	trainer D_JESTER, 137, EVENT_GEN_DIS_FILING_PIT_0, DisFilingPitSeenText, DisFilingPitBeatenText, 0, DisFilingPitAfterScript
+	trainer D_JESTER, 137, EVENT_GEN_DIS_FILING_PIT_0, DisFilingPitTrainer0SeenText, DisFilingPitTrainer0BeatenText, 0, DisFilingPitAfterScript
+
+DisFilingPitTrainer1SeenText:
+	text "I judge you. It is"
+	line "my only talent."
+	para "Sadly it is also"
+	line "my hobby."
+	done
+
+DisFilingPitTrainer1BeatenText:
+	text "The flames have"
+	line "gone out. I take"
+	para "it personally."
+	done
 
 DisFilingPitTrainer1:
-	trainer D_HAG, 135, EVENT_GEN_DIS_FILING_PIT_1, DisFilingPitSeenText, DisFilingPitBeatenText, 0, DisFilingPitAfterScript
+	trainer D_HAG, 135, EVENT_GEN_DIS_FILING_PIT_1, DisFilingPitTrainer1SeenText, DisFilingPitTrainer1BeatenText, 0, DisFilingPitAfterScript
+
+DisFilingPitTrainer2SeenText:
+	text "Order. Order! No."
+	line "Not that kind. The"
+	para "other kind."
+	done
+
+DisFilingPitTrainer2BeatenText:
+	text "You win this ring."
+	line "There are nine."
+	done
 
 DisFilingPitTrainer2:
-	trainer D_IMP, 138, EVENT_GEN_DIS_FILING_PIT_2, DisFilingPitSeenText, DisFilingPitBeatenText, 0, DisFilingPitAfterScript
+	trainer D_IMP, 138, EVENT_GEN_DIS_FILING_PIT_2, DisFilingPitTrainer2SeenText, DisFilingPitTrainer2BeatenText, 0, DisFilingPitAfterScript
+
+DisFilingPitTrainer3SeenText:
+	text "I have waited a"
+	line "thousand years for"
+	para "a case. Yours will"
+	line "do."
+	done
+
+DisFilingPitTrainer3BeatenText:
+	text "I am not mad. I am"
+	line "eternal. It reads"
+	para "the same."
+	done
 
 DisFilingPitTrainer3:
-	trainer D_SHADE, 138, EVENT_GEN_DIS_FILING_PIT_3, DisFilingPitSeenText, DisFilingPitBeatenText, 0, DisFilingPitAfterScript
+	trainer D_SHADE, 138, EVENT_GEN_DIS_FILING_PIT_3, DisFilingPitTrainer3SeenText, DisFilingPitTrainer3BeatenText, 0, DisFilingPitAfterScript
+
+DisFilingPitTrainer4SeenText:
+	text "Hell is other"
+	line "people. I am other"
+	para "people. Battle."
+	done
+
+DisFilingPitTrainer4BeatenText:
+	text "Damnation"
+	line "postponed pending"
+	para "paperwork."
+	done
 
 DisFilingPitTrainer4:
-	trainer D_JESTER, 138, EVENT_GEN_DIS_FILING_PIT_4, DisFilingPitSeenText, DisFilingPitBeatenText, 0, DisFilingPitAfterScript
+	trainer D_JESTER, 138, EVENT_GEN_DIS_FILING_PIT_4, DisFilingPitTrainer4SeenText, DisFilingPitTrainer4BeatenText, 0, DisFilingPitAfterScript
 
 DisFilingPitHermit0:
 	faceplayer

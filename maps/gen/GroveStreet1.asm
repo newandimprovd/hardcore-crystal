@@ -24,14 +24,6 @@ GroveStreet1HermitText:
 	line "cannot hear."
 	done
 
-GroveStreet1SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet1BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet1AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -44,26 +36,124 @@ GroveStreet1AfterScript:
 	closetext
 	end
 
+GroveStreet1Trainer0SeenText:
+	text "My partners and I"
+	line "are in an open"
+	para "relationship with"
+	line "the whole forest."
+	para "Mostly the"
+	line "squirrels."
+	done
+
+GroveStreet1Trainer0BeatenText:
+	text "My feelings are"
+	line "hurt. And my ribs."
+	para "Mostly the ribs."
+	done
+
 GroveStreet1Trainer0:
-	trainer G_FLOWERKID, 128, EVENT_GEN_GROVE_STREET1_0, GroveStreet1SeenText, GroveStreet1BeatenText, 0, GroveStreet1AfterScript
+	trainer G_FLOWERKID, 128, EVENT_GEN_GROVE_STREET1_0, GroveStreet1Trainer0SeenText, GroveStreet1Trainer0BeatenText, 0, GroveStreet1AfterScript
+
+GroveStreet1Trainer1SeenText:
+	text "I'm a pacifist. I"
+	line "have been all"
+	para "morning. Don't"
+	line "ruin my streak."
+	para "Actually, ruin it."
+	done
+
+GroveStreet1Trainer1BeatenText:
+	text "There's a feast"
+	line "tonight. Eat"
+	para "something. Eat me,"
+	line "if it comes to"
+	para "that."
+	done
 
 GroveStreet1Trainer1:
-	trainer G_DRUIDESS, 128, EVENT_GEN_GROVE_STREET1_1, GroveStreet1SeenText, GroveStreet1BeatenText, 0, GroveStreet1AfterScript
+	trainer G_DRUIDESS, 128, EVENT_GEN_GROVE_STREET1_1, GroveStreet1Trainer1SeenText, GroveStreet1Trainer1BeatenText, 0, GroveStreet1AfterScript
+
+GroveStreet1Trainer2SeenText:
+	text "No names here. No"
+	line "property. No"
+	para "sleep. It's all"
+	line "very freeing."
+	done
+
+GroveStreet1Trainer2BeatenText:
+	text "No hard feelings."
+	line "A few soft ones. A"
+	para "bruise or two."
+	done
 
 GroveStreet1Trainer2:
-	trainer G_SCOUT, 128, EVENT_GEN_GROVE_STREET1_2, GroveStreet1SeenText, GroveStreet1BeatenText, 0, GroveStreet1AfterScript
+	trainer G_SCOUT, 128, EVENT_GEN_GROVE_STREET1_2, GroveStreet1Trainer2SeenText, GroveStreet1Trainer2BeatenText, 0, GroveStreet1AfterScript
+
+GroveStreet1Trainer3SeenText:
+	text "Where's your"
+	line "tribe? No tribe?"
+	para "Then I adopt you."
+	line "After this."
+	done
+
+GroveStreet1Trainer3BeatenText:
+	text "Whoa. Heavy. Real"
+	line "heavy, man. Like,"
+	para "structurally"
+	line "heavy."
+	done
 
 GroveStreet1Trainer3:
-	trainer G_ANGLER, 128, EVENT_GEN_GROVE_STREET1_3, GroveStreet1SeenText, GroveStreet1BeatenText, 0, GroveStreet1AfterScript
+	trainer G_ANGLER, 128, EVENT_GEN_GROVE_STREET1_3, GroveStreet1Trainer3SeenText, GroveStreet1Trainer3BeatenText, 0, GroveStreet1AfterScript
+
+GroveStreet1Trainer4SeenText:
+	text "You're wearing so"
+	line "many layers. Let"
+	para "me help with"
+	line "those. By force."
+	done
+
+GroveStreet1Trainer4BeatenText:
+	text "The mushrooms were"
+	line "right. They always"
+	para "are. I hate them."
+	done
 
 GroveStreet1Trainer4:
-	trainer G_FLOWERKID, 129, EVENT_GEN_GROVE_STREET1_4, GroveStreet1SeenText, GroveStreet1BeatenText, 0, GroveStreet1AfterScript
+	trainer G_FLOWERKID, 129, EVENT_GEN_GROVE_STREET1_4, GroveStreet1Trainer4SeenText, GroveStreet1Trainer4BeatenText, 0, GroveStreet1AfterScript
+
+GroveStreet1Trainer5SeenText:
+	text "I forage. I"
+	line "gather. I punch."
+	para "It's a cycle."
+	done
+
+GroveStreet1Trainer5BeatenText:
+	text "I'm going home."
+	line "Tell the Commune"
+	para "my chore is done."
+	done
 
 GroveStreet1Trainer5:
-	trainer G_DRUMMER, 128, EVENT_GEN_GROVE_STREET1_5, GroveStreet1SeenText, GroveStreet1BeatenText, 0, GroveStreet1AfterScript
+	trainer G_DRUMMER, 128, EVENT_GEN_GROVE_STREET1_5, GroveStreet1Trainer5SeenText, GroveStreet1Trainer5BeatenText, 0, GroveStreet1AfterScript
+
+GroveStreet1Trainer6SeenText:
+	text "Come, break bread."
+	line "Or break something"
+	para "else. The bread is"
+	line "stale."
+	done
+
+GroveStreet1Trainer6BeatenText:
+	text "Take what you"
+	line "need. We never"
+	para "lock anything."
+	line "You'll understand"
+	para "soon."
+	done
 
 GroveStreet1Trainer6:
-	trainer G_ELDER, 128, EVENT_GEN_GROVE_STREET1_6, GroveStreet1SeenText, GroveStreet1BeatenText, 0, GroveStreet1AfterScript
+	trainer G_ELDER, 128, EVENT_GEN_GROVE_STREET1_6, GroveStreet1Trainer6SeenText, GroveStreet1Trainer6BeatenText, 0, GroveStreet1AfterScript
 
 GroveStreet1_MapEvents:
 	db 0, 0 ; filler

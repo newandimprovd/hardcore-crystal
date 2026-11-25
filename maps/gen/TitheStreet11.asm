@@ -26,14 +26,6 @@ TitheStreet11HermitText:
 	para "been taxed."
 	done
 
-TitheStreet11SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet11BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet11AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -46,26 +38,124 @@ TitheStreet11AfterScript:
 	closetext
 	end
 
+TitheStreet11Trainer0SeenText:
+	text "I learned"
+	line "everything I know"
+	para "in a church"
+	line "basement. Mostly"
+	para "about the"
+	line "basement."
+	done
+
+TitheStreet11Trainer0BeatenText:
+	text "Don't take my"
+	line "watch. It's the"
+	para "last thing my"
+	line "father and I"
+	para "fought over."
+	done
+
 TitheStreet11Trainer0:
-	trainer T_COP, 142, EVENT_GEN_TITHE_STREET11_0, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_COP, 142, EVENT_GEN_TITHE_STREET11_0, TitheStreet11Trainer0SeenText, TitheStreet11Trainer0BeatenText, 0, TitheStreet11AfterScript
+
+TitheStreet11Trainer1SeenText:
+	text "I eat tourists."
+	line "Figuratively."
+	para "Mostly."
+	done
+
+TitheStreet11Trainer1BeatenText:
+	text "I'll wait here."
+	line "Everyone does. I'm"
+	para "very good at"
+	line "waiting."
+	done
 
 TitheStreet11Trainer1:
-	trainer T_PRIEST, 135, EVENT_GEN_TITHE_STREET11_1, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_PRIEST, 135, EVENT_GEN_TITHE_STREET11_1, TitheStreet11Trainer1SeenText, TitheStreet11Trainer1BeatenText, 0, TitheStreet11AfterScript
+
+TitheStreet11Trainer2SeenText:
+	text "This street has a"
+	line "collection plate."
+	para "You are the"
+	line "collection."
+	done
+
+TitheStreet11Trainer2BeatenText:
+	text "Don't worry about"
+	line "me. The rats know"
+	para "my name."
+	done
 
 TitheStreet11Trainer2:
-	trainer T_SUIT, 137, EVENT_GEN_TITHE_STREET11_2, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_SUIT, 137, EVENT_GEN_TITHE_STREET11_2, TitheStreet11Trainer2SeenText, TitheStreet11Trainer2BeatenText, 0, TitheStreet11AfterScript
+
+TitheStreet11Trainer3SeenText:
+	text "I would offer you"
+	line "a pamphlet, but"
+	para "I'd rather offer"
+	line "you a beating."
+	done
+
+TitheStreet11Trainer3BeatenText:
+	text "My team! My"
+	line "beautiful,"
+	para "overleveraged"
+	line "team!"
+	done
 
 TitheStreet11Trainer3:
-	trainer T_BANKER, 131, EVENT_GEN_TITHE_STREET11_3, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_BANKER, 131, EVENT_GEN_TITHE_STREET11_3, TitheStreet11Trainer3SeenText, TitheStreet11Trainer3BeatenText, 0, TitheStreet11AfterScript
+
+TitheStreet11Trainer4SeenText:
+	text "Move along,"
+	line "citizen. Or don't."
+	para "I could use the"
+	line "overtime."
+	done
+
+TitheStreet11Trainer4BeatenText:
+	text "I forgave you"
+	line "before you even"
+	para "won. It was in the"
+	line "contract."
+	done
 
 TitheStreet11Trainer4:
-	trainer T_SUIT, 138, EVENT_GEN_TITHE_STREET11_4, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_SUIT, 138, EVENT_GEN_TITHE_STREET11_4, TitheStreet11Trainer4SeenText, TitheStreet11Trainer4BeatenText, 0, TitheStreet11AfterScript
+
+TitheStreet11Trainer5SeenText:
+	text "Stand still. This"
+	line "is a routine stop."
+	para "The routine is"
+	line "that I stop you."
+	done
+
+TitheStreet11Trainer5BeatenText:
+	text "Ow. Oh, that's"
+	line "where the liver"
+	para "is."
+	done
 
 TitheStreet11Trainer5:
-	trainer T_BANKER, 132, EVENT_GEN_TITHE_STREET11_5, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_BANKER, 132, EVENT_GEN_TITHE_STREET11_5, TitheStreet11Trainer5SeenText, TitheStreet11Trainer5BeatenText, 0, TitheStreet11AfterScript
+
+TitheStreet11Trainer6SeenText:
+	text "I paid my tithe to"
+	line "FINNEGAN. The"
+	para "receipt says one"
+	line "death, paid in"
+	para "full."
+	done
+
+TitheStreet11Trainer6BeatenText:
+	text "That's the last"
+	line "time I moonlight"
+	para "as a hazard."
+	done
 
 TitheStreet11Trainer6:
-	trainer T_NUN, 134, EVENT_GEN_TITHE_STREET11_6, TitheStreet11SeenText, TitheStreet11BeatenText, 0, TitheStreet11AfterScript
+	trainer T_NUN, 134, EVENT_GEN_TITHE_STREET11_6, TitheStreet11Trainer6SeenText, TitheStreet11Trainer6BeatenText, 0, TitheStreet11AfterScript
 
 TitheStreet11_MapEvents:
 	db 0, 0 ; filler

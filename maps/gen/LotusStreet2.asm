@@ -22,14 +22,6 @@ LotusStreet2HermitText:
 	line "vacation ever."
 	done
 
-LotusStreet2SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet2BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet2AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -42,26 +34,124 @@ LotusStreet2AfterScript:
 	closetext
 	end
 
+LotusStreet2Trainer0SeenText:
+	text "I'm a professional"
+	line "smiler. I smile at"
+	para "funerals. It pays"
+	line "well. Now fight."
+	done
+
+LotusStreet2Trainer0BeatenText:
+	text "Another one down."
+	line "The beach is full"
+	para "of us."
+	done
+
 LotusStreet2Trainer0:
-	trainer L_LIFEGUARD, 129, EVENT_GEN_LOTUS_STREET2_0, LotusStreet2SeenText, LotusStreet2BeatenText, 0, LotusStreet2AfterScript
+	trainer L_LIFEGUARD, 129, EVENT_GEN_LOTUS_STREET2_0, LotusStreet2Trainer0SeenText, LotusStreet2Trainer0BeatenText, 0, LotusStreet2AfterScript
+
+LotusStreet2Trainer1SeenText:
+	text "My doctor says I'm"
+	line "a glowing example"
+	para "of recovery. I"
+	line "glow because I'm"
+	para "on fire."
+	done
+
+LotusStreet2Trainer1BeatenText:
+	text "I'd cry, but it's"
+	line "an extra fee."
+	done
 
 LotusStreet2Trainer1:
-	trainer L_FORGOTTEN, 128, EVENT_GEN_LOTUS_STREET2_1, LotusStreet2SeenText, LotusStreet2BeatenText, 0, LotusStreet2AfterScript
+	trainer L_FORGOTTEN, 128, EVENT_GEN_LOTUS_STREET2_1, LotusStreet2Trainer1SeenText, LotusStreet2Trainer1BeatenText, 0, LotusStreet2AfterScript
+
+LotusStreet2Trainer2SeenText:
+	text "I'm a happy"
+	line "person. Do you"
+	para "want to see how"
+	line "happy I get?"
+	done
+
+LotusStreet2Trainer2BeatenText:
+	text "That was the best"
+	line "time I've had in"
+	para "years. Please do"
+	line "it again. No,"
+	para "don't."
+	done
 
 LotusStreet2Trainer2:
-	trainer L_SWIMMERM, 129, EVENT_GEN_LOTUS_STREET2_2, LotusStreet2SeenText, LotusStreet2BeatenText, 0, LotusStreet2AfterScript
+	trainer L_SWIMMERM, 129, EVENT_GEN_LOTUS_STREET2_2, LotusStreet2Trainer2SeenText, LotusStreet2Trainer2BeatenText, 0, LotusStreet2AfterScript
+
+LotusStreet2Trainer3SeenText:
+	text "I'm not lazy. I'm"
+	line "conserving"
+	para "violence."
+	done
+
+LotusStreet2Trainer3BeatenText:
+	text "I told them I'd"
+	line "rather be fishing."
+	para "I'm now fishing in"
+	line "the beyond."
+	done
 
 LotusStreet2Trainer3:
-	trainer L_TOURISTM, 128, EVENT_GEN_LOTUS_STREET2_3, LotusStreet2SeenText, LotusStreet2BeatenText, 0, LotusStreet2AfterScript
+	trainer L_TOURISTM, 128, EVENT_GEN_LOTUS_STREET2_3, LotusStreet2Trainer3SeenText, LotusStreet2Trainer3BeatenText, 0, LotusStreet2AfterScript
+
+LotusStreet2Trainer4SeenText:
+	text "I've spent the"
+	line "last month"
+	para "rehearsing this"
+	line "line. I forgot it."
+	para "Fight me."
+	done
+
+LotusStreet2Trainer4BeatenText:
+	text "You win. I'll"
+	line "forget it by"
+	para "lunch. You won't."
+	done
 
 LotusStreet2Trainer4:
-	trainer L_SWIMMERF, 129, EVENT_GEN_LOTUS_STREET2_4, LotusStreet2SeenText, LotusStreet2BeatenText, 0, LotusStreet2AfterScript
+	trainer L_SWIMMERF, 129, EVENT_GEN_LOTUS_STREET2_4, LotusStreet2Trainer4SeenText, LotusStreet2Trainer4BeatenText, 0, LotusStreet2AfterScript
+
+LotusStreet2Trainer5SeenText:
+	text "A man once told me"
+	line "I'm too relaxed. I"
+	para "buried him in the"
+	line "sand to prove"
+	para "otherwise."
+	done
+
+LotusStreet2Trainer5BeatenText:
+	text "I will remember"
+	line "this. For about"
+	para "eight minutes."
+	line "It'll be fine."
+	done
 
 LotusStreet2Trainer5:
-	trainer L_SWIMMERM, 130, EVENT_GEN_LOTUS_STREET2_5, LotusStreet2SeenText, LotusStreet2BeatenText, 0, LotusStreet2AfterScript
+	trainer L_SWIMMERM, 130, EVENT_GEN_LOTUS_STREET2_5, LotusStreet2Trainer5SeenText, LotusStreet2Trainer5BeatenText, 0, LotusStreet2AfterScript
+
+LotusStreet2Trainer6SeenText:
+	text "I got a tan, a"
+	line "divorce and an"
+	para "addiction. Fight"
+	line "for the second"
+	para "one."
+	done
+
+LotusStreet2Trainer6BeatenText:
+	text "My wife is going"
+	line "to hear about"
+	para "this. Which wife?"
+	line "I'll ask later."
+	done
 
 LotusStreet2Trainer6:
-	trainer L_MANAGER, 129, EVENT_GEN_LOTUS_STREET2_6, LotusStreet2SeenText, LotusStreet2BeatenText, 0, LotusStreet2AfterScript
+	trainer L_MANAGER, 129, EVENT_GEN_LOTUS_STREET2_6, LotusStreet2Trainer6SeenText, LotusStreet2Trainer6BeatenText, 0, LotusStreet2AfterScript
 
 LotusStreet2_MapEvents:
 	db 0, 0 ; filler

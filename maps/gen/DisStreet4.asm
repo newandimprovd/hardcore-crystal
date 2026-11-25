@@ -22,14 +22,6 @@ DisStreet4HermitText:
 	line "zoning issue."
 	done
 
-DisStreet4SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet4BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet4AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -42,26 +34,125 @@ DisStreet4AfterScript:
 	closetext
 	end
 
+DisStreet4Trainer0SeenText:
+	text "The cold is so bad"
+	line "that I've started"
+	para "to enjoy it. I'm"
+	line "very worried about"
+	para "me."
+	done
+
+DisStreet4Trainer0BeatenText:
+	text "I'm out. Oh, I'm"
+	line "out. It's so warm"
+	para "and it's all so"
+	line "far away."
+	done
+
 DisStreet4Trainer0:
-	trainer D_SINNER, 130, EVENT_GEN_DIS_STREET4_0, DisStreet4SeenText, DisStreet4BeatenText, 0, DisStreet4AfterScript
+	trainer D_SINNER, 130, EVENT_GEN_DIS_STREET4_0, DisStreet4Trainer0SeenText, DisStreet4Trainer0BeatenText, 0, DisStreet4AfterScript
+
+DisStreet4Trainer1SeenText:
+	text "If you win you go"
+	line "on. If you lose"
+	para "you stay. Either"
+	line "way I'm still"
+	para "here."
+	done
+
+DisStreet4Trainer1BeatenText:
+	text "The pit calls. I"
+	line "can't ignore it."
+	para "It has my number."
+	done
 
 DisStreet4Trainer1:
-	trainer D_IMPB, 128, EVENT_GEN_DIS_STREET4_1, DisStreet4SeenText, DisStreet4BeatenText, 0, DisStreet4AfterScript
+	trainer D_IMPB, 128, EVENT_GEN_DIS_STREET4_1, DisStreet4Trainer1SeenText, DisStreet4Trainer1BeatenText, 0, DisStreet4AfterScript
+
+DisStreet4Trainer2SeenText:
+	text "I never believed"
+	line "in this place. I'd"
+	para "like a word with"
+	line "whoever didn't"
+	para "warn me."
+	done
+
+DisStreet4Trainer2BeatenText:
+	text "So long. It's been"
+	line "a hell of a time."
+	para "Literally."
+	done
 
 DisStreet4Trainer2:
-	trainer D_IMP, 131, EVENT_GEN_DIS_STREET4_2, DisStreet4SeenText, DisStreet4BeatenText, 0, DisStreet4AfterScript
+	trainer D_IMP, 131, EVENT_GEN_DIS_STREET4_2, DisStreet4Trainer2SeenText, DisStreet4Trainer2BeatenText, 0, DisStreet4AfterScript
+
+DisStreet4Trainer3SeenText:
+	text "I was a"
+	line "politician."
+	para "Everyone thought"
+	line "it'd be worse than"
+	para "this. It is."
+	done
+
+DisStreet4Trainer3BeatenText:
+	text "You've got a good"
+	line "arm. Have you"
+	para "considered a"
+	line "career in torture?"
+	done
 
 DisStreet4Trainer3:
-	trainer D_JESTER, 129, EVENT_GEN_DIS_STREET4_3, DisStreet4SeenText, DisStreet4BeatenText, 0, DisStreet4AfterScript
+	trainer D_JESTER, 129, EVENT_GEN_DIS_STREET4_3, DisStreet4Trainer3SeenText, DisStreet4Trainer3BeatenText, 0, DisStreet4AfterScript
+
+DisStreet4Trainer4SeenText:
+	text "I fell asleep at"
+	line "my desk. Woke up"
+	para "here. It's the"
+	line "same office."
+	done
+
+DisStreet4Trainer4BeatenText:
+	text "I'll go back to my"
+	line "desk. It's on"
+	para "fire. It's always"
+	line "on fire."
+	done
 
 DisStreet4Trainer4:
-	trainer D_SHADE, 131, EVENT_GEN_DIS_STREET4_4, DisStreet4SeenText, DisStreet4BeatenText, 0, DisStreet4AfterScript
+	trainer D_SHADE, 131, EVENT_GEN_DIS_STREET4_4, DisStreet4Trainer4SeenText, DisStreet4Trainer4BeatenText, 0, DisStreet4AfterScript
+
+DisStreet4Trainer5SeenText:
+	text "Gluttony! I will"
+	line "eat your team."
+	para "Slowly. With"
+	line "ketchup."
+	done
+
+DisStreet4Trainer5BeatenText:
+	text "Well, that's the"
+	line "end of my"
+	para "probation. And me."
+	done
 
 DisStreet4Trainer5:
-	trainer D_WARDEN, 129, EVENT_GEN_DIS_STREET4_5, DisStreet4SeenText, DisStreet4BeatenText, 0, DisStreet4AfterScript
+	trainer D_WARDEN, 129, EVENT_GEN_DIS_STREET4_5, DisStreet4Trainer5SeenText, DisStreet4Trainer5BeatenText, 0, DisStreet4AfterScript
+
+DisStreet4Trainer6SeenText:
+	text "Sin is a state of"
+	line "mind. Hell is a"
+	para "state of"
+	line "paperwork."
+	done
+
+DisStreet4Trainer6BeatenText:
+	text "I'm going to be"
+	line "sick. Not from the"
+	para "hit. From the"
+	line "paperwork."
+	done
 
 DisStreet4Trainer6:
-	trainer D_FIREEATER, 128, EVENT_GEN_DIS_STREET4_6, DisStreet4SeenText, DisStreet4BeatenText, 0, DisStreet4AfterScript
+	trainer D_FIREEATER, 128, EVENT_GEN_DIS_STREET4_6, DisStreet4Trainer6SeenText, DisStreet4Trainer6BeatenText, 0, DisStreet4AfterScript
 
 DisStreet4_MapEvents:
 	db 0, 0 ; filler

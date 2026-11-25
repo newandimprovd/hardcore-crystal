@@ -22,14 +22,6 @@ LotusStreet4HermitText:
 	line "miss the watch."
 	done
 
-LotusStreet4SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet4BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet4AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -42,26 +34,127 @@ LotusStreet4AfterScript:
 	closetext
 	end
 
+LotusStreet4Trainer0SeenText:
+	text "I'm so happy. I'm"
+	line "so happy. Why am I"
+	para "so happy? I'm so"
+	line "happy."
+	done
+
+LotusStreet4Trainer0BeatenText:
+	text "I felt something."
+	line "I did not like it."
+	para "Subscribe me to"
+	line "the other thing."
+	done
+
 LotusStreet4Trainer0:
-	trainer L_SWIMMERM, 132, EVENT_GEN_LOTUS_STREET4_0, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_SWIMMERM, 132, EVENT_GEN_LOTUS_STREET4_0, LotusStreet4Trainer0SeenText, LotusStreet4Trainer0BeatenText, 0, LotusStreet4AfterScript
+
+LotusStreet4Trainer1SeenText:
+	text "I fell asleep on"
+	line "the beach in my"
+	para "last life. This"
+	line "one's the sequel."
+	done
+
+LotusStreet4Trainer1BeatenText:
+	text "The pool is"
+	line "heated. I can feel"
+	para "it. It's heaven."
+	line "It's also a pool."
+	done
 
 LotusStreet4Trainer1:
-	trainer L_MANAGER, 130, EVENT_GEN_LOTUS_STREET4_1, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_MANAGER, 130, EVENT_GEN_LOTUS_STREET4_1, LotusStreet4Trainer1SeenText, LotusStreet4Trainer1BeatenText, 0, LotusStreet4AfterScript
+
+LotusStreet4Trainer2SeenText:
+	text "They say a death"
+	line "at your hands is"
+	para "the finest"
+	line "cocktail. I'd like"
+	para "mine shaken, not"
+	line "stirred, and"
+	para "bloody."
+	done
+
+LotusStreet4Trainer2BeatenText:
+	text "The tide's coming"
+	line "in. Tell it I said"
+	para "no hard feelings."
+	done
 
 LotusStreet4Trainer2:
-	trainer L_LIFEGUARD, 131, EVENT_GEN_LOTUS_STREET4_2, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_LIFEGUARD, 131, EVENT_GEN_LOTUS_STREET4_2, LotusStreet4Trainer2SeenText, LotusStreet4Trainer2BeatenText, 0, LotusStreet4AfterScript
+
+LotusStreet4Trainer3SeenText:
+	text "I haven't felt a"
+	line "thing in eleven"
+	para "months. Come on."
+	line "Make me."
+	done
+
+LotusStreet4Trainer3BeatenText:
+	text "Oh no. I'm fading."
+	line "Please move the"
+	para "umbrella."
+	done
 
 LotusStreet4Trainer3:
-	trainer L_FORGOTTEN, 129, EVENT_GEN_LOTUS_STREET4_3, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_FORGOTTEN, 129, EVENT_GEN_LOTUS_STREET4_3, LotusStreet4Trainer3SeenText, LotusStreet4Trainer3BeatenText, 0, LotusStreet4AfterScript
+
+LotusStreet4Trainer4SeenText:
+	text "I can't remember"
+	line "my name. I"
+	para "remember yours:"
+	line "it's the guy I'm"
+	para "about to beat."
+	done
+
+LotusStreet4Trainer4BeatenText:
+	text "Oh no. I can feel"
+	line "my feelings."
+	para "Somebody get the"
+	line "nurse. Wait, I'm"
+	para "already hurt."
+	done
 
 LotusStreet4Trainer4:
-	trainer L_CLINICIAN, 130, EVENT_GEN_LOTUS_STREET4_4, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_CLINICIAN, 130, EVENT_GEN_LOTUS_STREET4_4, LotusStreet4Trainer4SeenText, LotusStreet4Trainer4BeatenText, 0, LotusStreet4AfterScript
+
+LotusStreet4Trainer5SeenText:
+	text "I don't mind that"
+	line "my husband forgot"
+	para "me. I mind that he"
+	line "forgot me in the"
+	para "middle of dinner."
+	done
+
+LotusStreet4Trainer5BeatenText:
+	text "Pour out a drink."
+	line "No, not like that."
+	para "Aim for my mouth."
+	done
 
 LotusStreet4Trainer5:
-	trainer L_TOURISTF, 130, EVENT_GEN_LOTUS_STREET4_5, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_TOURISTF, 130, EVENT_GEN_LOTUS_STREET4_5, LotusStreet4Trainer5SeenText, LotusStreet4Trainer5BeatenText, 0, LotusStreet4AfterScript
+
+LotusStreet4Trainer6SeenText:
+	text "The towels are"
+	line "free. The robes"
+	para "are free. The"
+	line "shame is on the"
+	para "house."
+	done
+
+LotusStreet4Trainer6BeatenText:
+	text "Please cover me in"
+	line "sand. It's what I"
+	para "would have wanted."
+	done
 
 LotusStreet4Trainer6:
-	trainer L_BEACHBUM, 128, EVENT_GEN_LOTUS_STREET4_6, LotusStreet4SeenText, LotusStreet4BeatenText, 0, LotusStreet4AfterScript
+	trainer L_BEACHBUM, 128, EVENT_GEN_LOTUS_STREET4_6, LotusStreet4Trainer6SeenText, LotusStreet4Trainer6BeatenText, 0, LotusStreet4AfterScript
 
 LotusStreet4_MapEvents:
 	db 0, 0 ; filler

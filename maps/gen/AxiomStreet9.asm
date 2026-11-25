@@ -22,14 +22,6 @@ AxiomStreet9HermitText:
 	line "inconvenient."
 	done
 
-AxiomStreet9SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet9BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet9AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -42,26 +34,124 @@ AxiomStreet9AfterScript:
 	closetext
 	end
 
+AxiomStreet9Trainer0SeenText:
+	text "Silence, citizen."
+	line "The Mayor is"
+	para "thinking. It is"
+	line "very loud."
+	done
+
+AxiomStreet9Trainer0BeatenText:
+	text "I'm forgiven. The"
+	line "system says so."
+	para "The system is"
+	line "wrong."
+	done
+
 AxiomStreet9Trainer0:
-	trainer U_BOT, 137, EVENT_GEN_AXIOM_STREET9_0, AxiomStreet9SeenText, AxiomStreet9BeatenText, 0, AxiomStreet9AfterScript
+	trainer U_BOT, 137, EVENT_GEN_AXIOM_STREET9_0, AxiomStreet9Trainer0SeenText, AxiomStreet9Trainer0BeatenText, 0, AxiomStreet9AfterScript
+
+AxiomStreet9Trainer1SeenText:
+	text "There is no love"
+	line "in the Union."
+	para "There is only"
+	line "compliance, and"
+	para "snacks."
+	done
+
+AxiomStreet9Trainer1BeatenText:
+	text "Warning: faith"
+	line "detected. Warning:"
+	para "it is not mine."
+	done
 
 AxiomStreet9Trainer1:
-	trainer U_BOT, 138, EVENT_GEN_AXIOM_STREET9_1, AxiomStreet9SeenText, AxiomStreet9BeatenText, 0, AxiomStreet9AfterScript
+	trainer U_BOT, 138, EVENT_GEN_AXIOM_STREET9_1, AxiomStreet9Trainer1SeenText, AxiomStreet9Trainer1BeatenText, 0, AxiomStreet9AfterScript
+
+AxiomStreet9Trainer2SeenText:
+	text "I am a unit. I am"
+	line "a unit that"
+	para "unit-ed the wrong"
+	line "person. Anyway,"
+	para "fight."
+	done
+
+AxiomStreet9Trainer2BeatenText:
+	text "Hostility"
+	line "depleted. Reboot"
+	para "unlikely."
+	done
 
 AxiomStreet9Trainer2:
-	trainer U_SERF, 132, EVENT_GEN_AXIOM_STREET9_2, AxiomStreet9SeenText, AxiomStreet9BeatenText, 0, AxiomStreet9AfterScript
+	trainer U_SERF, 132, EVENT_GEN_AXIOM_STREET9_2, AxiomStreet9Trainer2SeenText, AxiomStreet9Trainer2BeatenText, 0, AxiomStreet9AfterScript
+
+AxiomStreet9Trainer3SeenText:
+	text "You have been"
+	line "randomly selected"
+	para "for a battle. The"
+	line "randomness is a"
+	para "lie."
+	done
+
+AxiomStreet9Trainer3BeatenText:
+	text "A final thought:"
+	line "please water the"
+	para "plant in cubicle"
+	line "nine."
+	done
 
 AxiomStreet9Trainer3:
-	trainer U_CASEWORKER, 129, EVENT_GEN_AXIOM_STREET9_3, AxiomStreet9SeenText, AxiomStreet9BeatenText, 0, AxiomStreet9AfterScript
+	trainer U_CASEWORKER, 129, EVENT_GEN_AXIOM_STREET9_3, AxiomStreet9Trainer3SeenText, AxiomStreet9Trainer3BeatenText, 0, AxiomStreet9AfterScript
+
+AxiomStreet9Trainer4SeenText:
+	text "Compliance is"
+	line "love. Resistance"
+	para "is paperwork."
+	done
+
+AxiomStreet9Trainer4BeatenText:
+	text "How embarrassing."
+	line "I'll have to blame"
+	para "a glitch."
+	done
 
 AxiomStreet9Trainer4:
-	trainer U_BOTCOP, 137, EVENT_GEN_AXIOM_STREET9_4, AxiomStreet9SeenText, AxiomStreet9BeatenText, 0, AxiomStreet9AfterScript
+	trainer U_BOTCOP, 137, EVENT_GEN_AXIOM_STREET9_4, AxiomStreet9Trainer4SeenText, AxiomStreet9Trainer4BeatenText, 0, AxiomStreet9AfterScript
+
+AxiomStreet9Trainer5SeenText:
+	text "Authorisation"
+	line "code: violence."
+	para "Authorisation"
+	line "granted. By me."
+	done
+
+AxiomStreet9Trainer5BeatenText:
+	text "Statute 12: robots"
+	line "do not lose. I"
+	para "will amend it."
+	done
 
 AxiomStreet9Trainer5:
-	trainer U_DOCTOR, 133, EVENT_GEN_AXIOM_STREET9_5, AxiomStreet9SeenText, AxiomStreet9BeatenText, 0, AxiomStreet9AfterScript
+	trainer U_DOCTOR, 133, EVENT_GEN_AXIOM_STREET9_5, AxiomStreet9Trainer5SeenText, AxiomStreet9Trainer5BeatenText, 0, AxiomStreet9AfterScript
+
+AxiomStreet9Trainer6SeenText:
+	text "The Mayor sees"
+	line "all. The Mayor is"
+	para "also a"
+	line "refrigerator,"
+	para "which explains his"
+	line "coldness."
+	done
+
+AxiomStreet9Trainer6BeatenText:
+	text "Form accepted. The"
+	line "river approves. I"
+	para "feel properly"
+	line "filed."
+	done
 
 AxiomStreet9Trainer6:
-	trainer U_GUARD, 130, EVENT_GEN_AXIOM_STREET9_6, AxiomStreet9SeenText, AxiomStreet9BeatenText, 0, AxiomStreet9AfterScript
+	trainer U_GUARD, 130, EVENT_GEN_AXIOM_STREET9_6, AxiomStreet9Trainer6SeenText, AxiomStreet9Trainer6BeatenText, 0, AxiomStreet9AfterScript
 
 AxiomStreet9_MapEvents:
 	db 0, 0 ; filler

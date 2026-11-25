@@ -122,7 +122,7 @@ CAGE_SEEN = ("I am the Betrayer. I betrayed my teacher, my friend and my dog, in
              "Betraying you will be a pleasure, since I have been saving it.")
 CAGE_BEATEN = "Of course. Of course you win. I betrayed my own prophecy. That's the worst one yet."
 CAGE_AFTER = "Past the ice is the Centre. The Sleeper. Be gentle. Or don't. It's all the same by now."
-SLEEPER_SEEN = ("...riverrun. Brings us back to the beginning. I fell. I was waked. I am falling still. "
+SLEEPER_SEEN = ("Mind the edge. The mountain has been burning since before I closed my eyes. ...riverrun. Brings us back to the beginning. I fell. I was waked. I am falling still. "
                 "My dream rewrote the world and my dream is tired of you. Let us finish this sentence, "
                 "which ends where it begins.")
 SLEEPER_BEATEN = "And so. The end runs back to the start. You were always going to do this. So was I. Wake, then. And walk."
@@ -134,3 +134,7 @@ from .debates import CULT_BEATEN, CULT_SEEN  # noqa: E402
 
 SEEN = SEEN + CULT_SEEN["Dis"]
 BEATEN = BEATEN + CULT_BEATEN["Dis"]
+
+from .more_lines import BEATEN_MORE, SEEN_MORE  # noqa: E402  (alpha 3.3: more fighter lines, one deck per area)
+SEEN = SEEN + SEEN_MORE["Dis"]
+BEATEN = BEATEN + BEATEN_MORE["Dis"]

@@ -59,14 +59,6 @@ TitheStreet6HermitText:
 	para "deeply insulting."
 	done
 
-TitheStreet6SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet6BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet6AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -79,26 +71,124 @@ TitheStreet6AfterScript:
 	closetext
 	end
 
+TitheStreet6Trainer0SeenText:
+	text "I only hit people"
+	line "who look like they"
+	para "can afford the"
+	line "dentist."
+	done
+
+TitheStreet6Trainer0BeatenText:
+	text "Ha. I'd laugh but"
+	line "my lung is"
+	para "elsewhere."
+	done
+
 TitheStreet6Trainer0:
-	trainer T_CHOIR, 128, EVENT_GEN_TITHE_STREET6_0, TitheStreet6SeenText, TitheStreet6BeatenText, 0, TitheStreet6AfterScript
+	trainer T_CHOIR, 128, EVENT_GEN_TITHE_STREET6_0, TitheStreet6Trainer0SeenText, TitheStreet6Trainer0BeatenText, 0, TitheStreet6AfterScript
+
+TitheStreet6Trainer1SeenText:
+	text "You look"
+	line "unaccompanied. Let"
+	para "me fix that with a"
+	line "bruise."
+	done
+
+TitheStreet6Trainer1BeatenText:
+	text "Tell the parish I"
+	line "tried. They'll"
+	para "still dock my pay."
+	done
 
 TitheStreet6Trainer1:
-	trainer T_BEGGAR, 133, EVENT_GEN_TITHE_STREET6_1, TitheStreet6SeenText, TitheStreet6BeatenText, 0, TitheStreet6AfterScript
+	trainer T_BEGGAR, 133, EVENT_GEN_TITHE_STREET6_1, TitheStreet6Trainer1SeenText, TitheStreet6Trainer1BeatenText, 0, TitheStreet6AfterScript
+
+TitheStreet6Trainer2SeenText:
+	text "I confessed to"
+	line "everything this"
+	para "morning. I have a"
+	line "clean slate and a"
+	para "full tank."
+	done
+
+TitheStreet6Trainer2BeatenText:
+	text "It was a good"
+	line "fight. It was a"
+	para "bad fight. It was"
+	line "one of those."
+	done
 
 TitheStreet6Trainer2:
-	trainer T_CHOIR, 129, EVENT_GEN_TITHE_STREET6_2, TitheStreet6SeenText, TitheStreet6BeatenText, 0, TitheStreet6AfterScript
+	trainer T_CHOIR, 129, EVENT_GEN_TITHE_STREET6_2, TitheStreet6Trainer2SeenText, TitheStreet6Trainer2BeatenText, 0, TitheStreet6AfterScript
+
+TitheStreet6Trainer3SeenText:
+	text "I lost my faith in"
+	line "the elevator. It"
+	para "stopped between"
+	line "floors. So did my"
+	para "faith."
+	done
+
+TitheStreet6Trainer3BeatenText:
+	text "Nobody told me"
+	line "they'd send a"
+	para "professional."
+	done
 
 TitheStreet6Trainer3:
-	trainer T_COP, 140, EVENT_GEN_TITHE_STREET6_3, TitheStreet6SeenText, TitheStreet6BeatenText, 0, TitheStreet6AfterScript
+	trainer T_COP, 140, EVENT_GEN_TITHE_STREET6_3, TitheStreet6Trainer3SeenText, TitheStreet6Trainer3BeatenText, 0, TitheStreet6AfterScript
+
+TitheStreet6Trainer4SeenText:
+	text "Citizen, you have"
+	line "been selected. Not"
+	para "for anything good."
+	line "Just selected."
+	done
+
+TitheStreet6Trainer4BeatenText:
+	text "Ha ha. You win."
+	line "I'm bleeding in"
+	para "the nicest"
+	line "possible way."
+	done
 
 TitheStreet6Trainer4:
-	trainer T_CHOIR, 130, EVENT_GEN_TITHE_STREET6_4, TitheStreet6SeenText, TitheStreet6BeatenText, 0, TitheStreet6AfterScript
+	trainer T_CHOIR, 130, EVENT_GEN_TITHE_STREET6_4, TitheStreet6Trainer4SeenText, TitheStreet6Trainer4BeatenText, 0, TitheStreet6AfterScript
+
+TitheStreet6Trainer5SeenText:
+	text "A cop told me to"
+	line "stand here and"
+	para "look scary. It's"
+	line "not working, is"
+	para "it."
+	done
+
+TitheStreet6Trainer5BeatenText:
+	text "That's three"
+	line "generations of"
+	para "Garrity cops"
+	line "finished. Mind"
+	para "you, two were"
+	line "retired."
+	done
 
 TitheStreet6Trainer5:
-	trainer T_BANKER, 128, EVENT_GEN_TITHE_STREET6_5, TitheStreet6SeenText, TitheStreet6BeatenText, 0, TitheStreet6AfterScript
+	trainer T_BANKER, 128, EVENT_GEN_TITHE_STREET6_5, TitheStreet6Trainer5SeenText, TitheStreet6Trainer5BeatenText, 0, TitheStreet6AfterScript
+
+TitheStreet6Trainer6SeenText:
+	text "The parish blesses"
+	line "this block. I just"
+	para "bill it."
+	done
+
+TitheStreet6Trainer6BeatenText:
+	text "I took the oath."
+	line "The oath took me."
+	para "Hello, ground."
+	done
 
 TitheStreet6Trainer6:
-	trainer T_BUSKER, 128, EVENT_GEN_TITHE_STREET6_6, TitheStreet6SeenText, TitheStreet6BeatenText, 0, TitheStreet6AfterScript
+	trainer T_BUSKER, 128, EVENT_GEN_TITHE_STREET6_6, TitheStreet6Trainer6SeenText, TitheStreet6Trainer6BeatenText, 0, TitheStreet6AfterScript
 
 TitheStreet6_MapEvents:
 	db 0, 0 ; filler

@@ -802,7 +802,97 @@ def body_special(f, view, rec, walk):
             f.r(4, 13, 11, 14, tc)
 
 
+# Finnegan (the last boss): a distorted humanoid.  A head far too large for the body on a thin neck, mismatched eyes, a grin that runs from ear to ear, long arms
+# that reach the floor, a second pair of hands folded on the chest, and rows of the picture knocked sideways (a glitch, as if the figure were a bad copy of a man).
+# Drawn from text maps, x 2..13, y 1..14; the outline is added by frame().
+FINN = {
+    "F": ["................",
+          "......ssss......",
+          ".....ssssss.....",
+          "....ssdsssdss...",
+          "....ssdsssssss..",
+          "....ssssssssss..",
+          "....dsdsdsdsdd..",
+          ".....ssssssss...",
+          ".......ss.......",
+          ".....cccccc.....",
+          ".....cccccc.....",
+          "....ccscscccc...",
+          "....cccssccccc..",
+          "...cccccccccccc.",
+          "...cccccccccccc.",
+          "................"],
+    "B": ["................",
+          "......ssss......",
+          ".....ssdsss.....",
+          "....sssdsssss...",
+          "....sssdsssss...",
+          "....ssssdsssss..",
+          "....sssdssssss..",
+          ".....ssdsssss...",
+          ".......ss.......",
+          ".....ccdccc.....",
+          ".....ccdccc.....",
+          "....cccdcccccc..",
+          "....cccdcccccc..",
+          "...ccccdccccccc.",
+          "...ccccdccccccc.",
+          "................"],
+    "L": ["................",
+          ".....sssss......",
+          "....ssssss......",
+          "...sdssssss.....",
+          "...ssssssss.....",
+          "...sssssss......",
+          "..dsdsdsds......",
+          "....sssss.......",
+          "......ss........",
+          ".....ccccc......",
+          ".....ccccc......",
+          "....cccscc......",
+          "....cccsccc.....",
+          "...cccccccc.....",
+          "...cccccccc.....",
+          "................"],
+}
+# the arms: long, down to the hem, one hand more than the figure should have
+FINN_ARMS = {
+    "F": [(4, 9), (4, 10), (3, 11), (3, 12), (3, 13), (3, 14), (11, 9), (11, 10), (12, 11), (12, 12), (12, 13), (12, 14), (13, 14)],
+    "B": [(4, 9), (4, 10), (3, 11), (3, 12), (3, 13), (3, 14), (11, 9), (11, 10), (12, 11), (12, 12), (12, 13), (12, 14)],
+    "L": [(4, 9), (4, 10), (4, 11), (4, 12), (3, 13), (3, 14), (4, 14), (10, 10), (10, 11), (10, 12)],
+}
+# rows pushed sideways: (row, dx) per frame; the walk frames glitch differently
+FINN_GLITCH = {False: ((4, 1), (10, -1), (13, 1)), True: ((3, -1), (6, 1), (11, 1), (13, -1))}
+
+
+def finnegan_frame(view, walk):
+    f = Fig()
+    f.oy = 1 if walk else 0
+    code = {"s": S, "c": C, "d": D}
+    for y, row in enumerate(FINN[view]):
+        for x, ch in enumerate(row):
+            if ch in code:
+                f.px(x, y, code[ch])
+    for (x, y) in FINN_ARMS[view]:
+        f.px(x, y, S)
+    g = [r[:] for r in f.g]
+    for (y, dx) in FINN_GLITCH[walk]:
+        y += f.oy
+        if 0 <= y < 16:
+            row = g[y]
+            new = [0] * 16
+            for x in range(16):
+                if row[x] and 2 <= x + dx <= 13:
+                    new[x + dx] = row[x]
+            g[y] = new
+    f.g = g
+    f.outline()
+    return f.g
+
+
 def frame(rec, view, walk):
+    if rec.get("distort"):
+        return finnegan_frame(view, walk)
     f = Fig()
     if walk:
         f.oy = 1

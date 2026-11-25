@@ -22,14 +22,6 @@ DisStreet3HermitText:
 	line "burns the same."
 	done
 
-DisStreet3SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet3BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet3AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -42,26 +34,125 @@ DisStreet3AfterScript:
 	closetext
 	end
 
+DisStreet3Trainer0SeenText:
+	text "The ice is cold."
+	line "The coffee is not."
+	para "The fight is hot."
+	done
+
+DisStreet3Trainer0BeatenText:
+	text "That's the third"
+	line "time I've died"
+	para "this month. I'm"
+	line "getting good at"
+	para "it."
+	done
+
 DisStreet3Trainer0:
-	trainer D_JUDGE, 129, EVENT_GEN_DIS_STREET3_0, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_JUDGE, 129, EVENT_GEN_DIS_STREET3_0, DisStreet3Trainer0SeenText, DisStreet3Trainer0BeatenText, 0, DisStreet3AfterScript
+
+DisStreet3Trainer1SeenText:
+	text "A man once asked"
+	line "for directions. I"
+	para "killed him. I'm"
+	line "told that's why"
+	para "I'm here."
+	done
+
+DisStreet3Trainer1BeatenText:
+	text "Down here, a loss"
+	line "is a promotion."
+	para "Thank you."
+	done
 
 DisStreet3Trainer1:
-	trainer D_BRAWLER, 128, EVENT_GEN_DIS_STREET3_1, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_BRAWLER, 128, EVENT_GEN_DIS_STREET3_1, DisStreet3Trainer1SeenText, DisStreet3Trainer1BeatenText, 0, DisStreet3AfterScript
+
+DisStreet3Trainer2SeenText:
+	text "My team comes from"
+	line "the lower circles."
+	para "They're not mean."
+	line "They're just from"
+	para "the lower circles."
+	done
+
+DisStreet3Trainer2BeatenText:
+	text "Fine. Fine! I'll"
+	line "write an angry"
+	para "letter. It will"
+	line "arrive in a"
+	para "century."
+	done
 
 DisStreet3Trainer2:
-	trainer D_IMP, 129, EVENT_GEN_DIS_STREET3_2, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_IMP, 129, EVENT_GEN_DIS_STREET3_2, DisStreet3Trainer2SeenText, DisStreet3Trainer2BeatenText, 0, DisStreet3AfterScript
+
+DisStreet3Trainer3SeenText:
+	text "We don't do"
+	line "apologies. We do"
+	para "appointments."
+	line "Yours is now."
+	done
+
+DisStreet3Trainer3BeatenText:
+	text "Tell the demons I"
+	line "tried. They won't"
+	para "care. They'll note"
+	line "it."
+	done
 
 DisStreet3Trainer3:
-	trainer D_IMP, 130, EVENT_GEN_DIS_STREET3_3, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_IMP, 130, EVENT_GEN_DIS_STREET3_3, DisStreet3Trainer3SeenText, DisStreet3Trainer3BeatenText, 0, DisStreet3AfterScript
+
+DisStreet3Trainer4SeenText:
+	text "We have a policy"
+	line "of fairness. It's"
+	para "fair that everyone"
+	line "gets hit."
+	done
+
+DisStreet3Trainer4BeatenText:
+	text "I'm filing a"
+	line "complaint. In"
+	para "triplicate. In a"
+	line "very small hell."
+	done
 
 DisStreet3Trainer4:
-	trainer D_JESTER, 128, EVENT_GEN_DIS_STREET3_4, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_JESTER, 128, EVENT_GEN_DIS_STREET3_4, DisStreet3Trainer4SeenText, DisStreet3Trainer4BeatenText, 0, DisStreet3AfterScript
+
+DisStreet3Trainer5SeenText:
+	text "I'm with the"
+	line "sullen. We sulk in"
+	para "mud. It's the best"
+	line "part of the day."
+	done
+
+DisStreet3Trainer5BeatenText:
+	text "I'm the lucky one."
+	line "I get to leave. In"
+	para "a bag."
+	done
 
 DisStreet3Trainer5:
-	trainer D_MAGISTRATE, 128, EVENT_GEN_DIS_STREET3_5, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_MAGISTRATE, 128, EVENT_GEN_DIS_STREET3_5, DisStreet3Trainer5SeenText, DisStreet3Trainer5BeatenText, 0, DisStreet3AfterScript
+
+DisStreet3Trainer6SeenText:
+	text "I was a landlord."
+	line "I have a special"
+	para "circle. It has"
+	line "rent."
+	done
+
+DisStreet3Trainer6BeatenText:
+	text "The cold is in my"
+	line "bones. You are in"
+	para "my bones. Please"
+	line "leave."
+	done
 
 DisStreet3Trainer6:
-	trainer D_SHADE, 130, EVENT_GEN_DIS_STREET3_6, DisStreet3SeenText, DisStreet3BeatenText, 0, DisStreet3AfterScript
+	trainer D_SHADE, 130, EVENT_GEN_DIS_STREET3_6, DisStreet3Trainer6SeenText, DisStreet3Trainer6BeatenText, 0, DisStreet3AfterScript
 
 DisStreet3_MapEvents:
 	db 0, 0 ; filler

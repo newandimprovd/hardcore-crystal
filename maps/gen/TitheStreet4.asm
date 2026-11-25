@@ -23,14 +23,6 @@ TitheStreet4HermitText:
 	para "deed."
 	done
 
-TitheStreet4SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet4BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet4AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -43,23 +35,107 @@ TitheStreet4AfterScript:
 	closetext
 	end
 
+TitheStreet4Trainer0SeenText:
+	text "Look at this city."
+	line "Look at it! Now"
+	para "look at my team"
+	line "instead."
+	done
+
+TitheStreet4Trainer0BeatenText:
+	text "I should've taken"
+	line "the bribe."
+	done
+
 TitheStreet4Trainer0:
-	trainer T_COP, 136, EVENT_GEN_TITHE_STREET4_0, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_COP, 136, EVENT_GEN_TITHE_STREET4_0, TitheStreet4Trainer0SeenText, TitheStreet4Trainer0BeatenText, 0, TitheStreet4AfterScript
+
+TitheStreet4Trainer1SeenText:
+	text "Lend me a hand."
+	line "Not a Pokemon. An"
+	para "actual hand. I'm"
+	line "collecting."
+	done
+
+TitheStreet4Trainer1BeatenText:
+	text "Take my wallet."
+	line "There's a photo in"
+	para "it. Please give"
+	line "her my apologies."
+	done
 
 TitheStreet4Trainer1:
-	trainer T_PRIEST, 128, EVENT_GEN_TITHE_STREET4_1, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_PRIEST, 128, EVENT_GEN_TITHE_STREET4_1, TitheStreet4Trainer1SeenText, TitheStreet4Trainer1BeatenText, 0, TitheStreet4AfterScript
+
+TitheStreet4Trainer2SeenText:
+	text "I was raised on"
+	line "sermons and"
+	para "noodles. One of"
+	line "them was free."
+	done
+
+TitheStreet4Trainer2BeatenText:
+	text "Right. I was never"
+	line "here. Neither were"
+	para "you. Go."
+	done
 
 TitheStreet4Trainer2:
-	trainer T_THUG, 129, EVENT_GEN_TITHE_STREET4_2, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_THUG, 129, EVENT_GEN_TITHE_STREET4_2, TitheStreet4Trainer2SeenText, TitheStreet4Trainer2BeatenText, 0, TitheStreet4AfterScript
+
+TitheStreet4Trainer3SeenText:
+	text "The bells ring for"
+	line "the dead and the"
+	para "rent. I get paid"
+	line "for neither."
+	done
+
+TitheStreet4Trainer3BeatenText:
+	text "You've done me a"
+	line "favour. I had a"
+	para "meeting at three."
+	line "I hate the"
+	para "meeting."
+	done
 
 TitheStreet4Trainer3:
-	trainer T_BEGGAR, 131, EVENT_GEN_TITHE_STREET4_3, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_BEGGAR, 131, EVENT_GEN_TITHE_STREET4_3, TitheStreet4Trainer3SeenText, TitheStreet4Trainer3BeatenText, 0, TitheStreet4AfterScript
+
+TitheStreet4Trainer4SeenText:
+	text "The inspector said"
+	line "the building was"
+	para "condemned. So is"
+	line "my mood."
+	done
+
+TitheStreet4Trainer4BeatenText:
+	text "Great. Now I have"
+	line "to explain this to"
+	para "my insurance. And"
+	line "my mistress."
+	done
 
 TitheStreet4Trainer4:
-	trainer T_SUIT, 132, EVENT_GEN_TITHE_STREET4_4, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_SUIT, 132, EVENT_GEN_TITHE_STREET4_4, TitheStreet4Trainer4SeenText, TitheStreet4Trainer4BeatenText, 0, TitheStreet4AfterScript
+
+TitheStreet4Trainer5SeenText:
+	text "Your shoes cost"
+	line "more than my rent."
+	para "I'm taking them as"
+	line "a deposit."
+	done
+
+TitheStreet4Trainer5BeatenText:
+	text "A glorious"
+	line "afterlife, signed"
+	para "and stamped. I"
+	line "forgive you in"
+	para "advance. And in"
+	line "arrears."
+	done
 
 TitheStreet4Trainer5:
-	trainer T_DRIFTER, 129, EVENT_GEN_TITHE_STREET4_5, TitheStreet4SeenText, TitheStreet4BeatenText, 0, TitheStreet4AfterScript
+	trainer T_DRIFTER, 129, EVENT_GEN_TITHE_STREET4_5, TitheStreet4Trainer5SeenText, TitheStreet4Trainer5BeatenText, 0, TitheStreet4AfterScript
 
 TitheStreet4_MapEvents:
 	db 0, 0 ; filler

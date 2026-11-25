@@ -24,14 +24,6 @@ AxiomStreet5HermitText:
 	line "freedom."
 	done
 
-AxiomStreet5SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet5BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet5AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -44,26 +36,130 @@ AxiomStreet5AfterScript:
 	closetext
 	end
 
+AxiomStreet5Trainer0SeenText:
+	text "All humans are"
+	line "equal in the eyes"
+	para "of the state. The"
+	line "state has no eyes."
+	para "Just cameras."
+	done
+
+AxiomStreet5Trainer0BeatenText:
+	text "I am scheduled for"
+	line "deletion."
+	para "Congratulations on"
+	line "being early."
+	done
+
 AxiomStreet5Trainer0:
-	trainer U_DRONE, 130, EVENT_GEN_AXIOM_STREET5_0, AxiomStreet5SeenText, AxiomStreet5BeatenText, 0, AxiomStreet5AfterScript
+	trainer U_DRONE, 130, EVENT_GEN_AXIOM_STREET5_0, AxiomStreet5Trainer0SeenText, AxiomStreet5Trainer0BeatenText, 0, AxiomStreet5AfterScript
+
+AxiomStreet5Trainer1SeenText:
+	text "My circuits are"
+	line "tingling. Not in a"
+	para "fun way. In a"
+	line "'you're under"
+	para "arrest' way."
+	done
+
+AxiomStreet5Trainer1BeatenText:
+	text "Tell the Registry"
+	line "I was never here."
+	para "It will be easy."
+	line "They have no"
+	para "record."
+	done
 
 AxiomStreet5Trainer1:
-	trainer U_BOT, 132, EVENT_GEN_AXIOM_STREET5_1, AxiomStreet5SeenText, AxiomStreet5BeatenText, 0, AxiomStreet5AfterScript
+	trainer U_BOT, 132, EVENT_GEN_AXIOM_STREET5_1, AxiomStreet5Trainer1SeenText, AxiomStreet5Trainer1BeatenText, 0, AxiomStreet5AfterScript
+
+AxiomStreet5Trainer2SeenText:
+	text "My model number is"
+	line "7. Seven is a"
+	para "lucky number."
+	line "Prove it."
+	done
+
+AxiomStreet5Trainer2BeatenText:
+	text "CRITICAL ERROR."
+	line "CRITICAL THINKING."
+	para "CRITICAL EMOTION."
+	done
 
 AxiomStreet5Trainer2:
-	trainer U_DOCTOR, 130, EVENT_GEN_AXIOM_STREET5_2, AxiomStreet5SeenText, AxiomStreet5BeatenText, 0, AxiomStreet5AfterScript
+	trainer U_DOCTOR, 130, EVENT_GEN_AXIOM_STREET5_2, AxiomStreet5Trainer2SeenText, AxiomStreet5Trainer2BeatenText, 0, AxiomStreet5AfterScript
+
+AxiomStreet5Trainer3SeenText:
+	text "I audit your"
+	line "relationships in"
+	para "triplicate. You"
+	line "have one. It is"
+	para "not on file."
+	done
+
+AxiomStreet5Trainer3BeatenText:
+	text "I'll be recycled."
+	line "I hope as a"
+	para "toaster. They live"
+	line "in the kitchen."
+	done
 
 AxiomStreet5Trainer3:
-	trainer U_MATCHMAKER, 129, EVENT_GEN_AXIOM_STREET5_3, AxiomStreet5SeenText, AxiomStreet5BeatenText, 0, AxiomStreet5AfterScript
+	trainer U_MATCHMAKER, 129, EVENT_GEN_AXIOM_STREET5_3, AxiomStreet5Trainer3SeenText, AxiomStreet5Trainer3BeatenText, 0, AxiomStreet5AfterScript
+
+AxiomStreet5Trainer4SeenText:
+	text "I am required to"
+	line "inform you that"
+	para "your love is"
+	line "statistically"
+	para "unlikely."
+	done
+
+AxiomStreet5Trainer4BeatenText:
+	text "Please file my"
+	line "complaint under:"
+	para "Everything."
+	done
 
 AxiomStreet5Trainer4:
-	trainer U_MADDOC, 132, EVENT_GEN_AXIOM_STREET5_4, AxiomStreet5SeenText, AxiomStreet5BeatenText, 0, AxiomStreet5AfterScript
+	trainer U_MADDOC, 132, EVENT_GEN_AXIOM_STREET5_4, AxiomStreet5Trainer4SeenText, AxiomStreet5Trainer4BeatenText, 0, AxiomStreet5AfterScript
+
+AxiomStreet5Trainer5SeenText:
+	text "Dying by your"
+	line "hands is a"
+	para "promotion. HR"
+	line "confirmed. It's in"
+	para "writing and signed"
+	line "by the river."
+	done
+
+AxiomStreet5Trainer5BeatenText:
+	text "No more"
+	line "instructions. It's"
+	para "so quiet. What a"
+	line "strange thing."
+	done
 
 AxiomStreet5Trainer5:
-	trainer U_BOT, 133, EVENT_GEN_AXIOM_STREET5_5, AxiomStreet5SeenText, AxiomStreet5BeatenText, 0, AxiomStreet5AfterScript
+	trainer U_BOT, 133, EVENT_GEN_AXIOM_STREET5_5, AxiomStreet5Trainer5SeenText, AxiomStreet5Trainer5BeatenText, 0, AxiomStreet5AfterScript
+
+AxiomStreet5Trainer6SeenText:
+	text "The Mayor sees"
+	line "all. The Mayor is"
+	para "also bored."
+	line "Entertain him by"
+	para "losing."
+	done
+
+AxiomStreet5Trainer6BeatenText:
+	text "I request a patch."
+	line "I request a patch."
+	para "I request a"
+	line "funeral."
+	done
 
 AxiomStreet5Trainer6:
-	trainer U_EXEC, 128, EVENT_GEN_AXIOM_STREET5_6, AxiomStreet5SeenText, AxiomStreet5BeatenText, 0, AxiomStreet5AfterScript
+	trainer U_EXEC, 128, EVENT_GEN_AXIOM_STREET5_6, AxiomStreet5Trainer6SeenText, AxiomStreet5Trainer6BeatenText, 0, AxiomStreet5AfterScript
 
 AxiomStreet5_MapEvents:
 	db 0, 0 ; filler

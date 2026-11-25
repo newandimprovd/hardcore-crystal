@@ -20,14 +20,6 @@ GroveStreet8HermitText:
 	para "it my spouse."
 	done
 
-GroveStreet8SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet8BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet8AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -40,23 +32,110 @@ GroveStreet8AfterScript:
 	closetext
 	end
 
+GroveStreet8Trainer0SeenText:
+	text "I joined for the"
+	line "free love. I"
+	para "stayed for the"
+	line "free lunch. I'm"
+	para "fighting for"
+	line "neither."
+	done
+
+GroveStreet8Trainer0BeatenText:
+	text "My shoes are"
+	line "clean. Even in"
+	para "death I'm a"
+	line "hippie."
+	done
+
 GroveStreet8Trainer0:
-	trainer G_FLOWERKID, 131, EVENT_GEN_GROVE_STREET8_0, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_FLOWERKID, 131, EVENT_GEN_GROVE_STREET8_0, GroveStreet8Trainer0SeenText, GroveStreet8Trainer0BeatenText, 0, GroveStreet8AfterScript
+
+GroveStreet8Trainer1SeenText:
+	text "Please remove your"
+	line "shoes. Not for"
+	para "ritual. I'm just"
+	line "very tired of mud."
+	done
+
+GroveStreet8Trainer1BeatenText:
+	text "Oh. Ow. That's a"
+	line "new feeling. I'll"
+	para "write a poem about"
+	line "it."
+	done
 
 GroveStreet8Trainer1:
-	trainer G_ANGLER, 130, EVENT_GEN_GROVE_STREET8_1, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_ANGLER, 130, EVENT_GEN_GROVE_STREET8_1, GroveStreet8Trainer1SeenText, GroveStreet8Trainer1BeatenText, 0, GroveStreet8AfterScript
+
+GroveStreet8Trainer2SeenText:
+	text "I traded a basket"
+	line "of nuts for this"
+	para "team. Best deal I"
+	line "never made."
+	done
+
+GroveStreet8Trainer2BeatenText:
+	text "Ow ow ow. Sorry."
+	line "Ow."
+	done
 
 GroveStreet8Trainer2:
-	trainer G_GRANNY, 130, EVENT_GEN_GROVE_STREET8_2, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_GRANNY, 130, EVENT_GEN_GROVE_STREET8_2, GroveStreet8Trainer2SeenText, GroveStreet8Trainer2BeatenText, 0, GroveStreet8AfterScript
+
+GroveStreet8Trainer3SeenText:
+	text "The mushrooms said"
+	line "you'd make a good"
+	para "compost. I'm just"
+	line "here to help."
+	done
+
+GroveStreet8Trainer3BeatenText:
+	text "Yes! Yes! More!"
+	line "Wait, no, I'm"
+	para "kidding. Stop."
+	line "Seriously."
+	done
 
 GroveStreet8Trainer3:
-	trainer G_NATURISTM, 129, EVENT_GEN_GROVE_STREET8_3, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_NATURISTM, 129, EVENT_GEN_GROVE_STREET8_3, GroveStreet8Trainer3SeenText, GroveStreet8Trainer3BeatenText, 0, GroveStreet8AfterScript
+
+GroveStreet8Trainer4SeenText:
+	text "You smell like"
+	line "money. We don't"
+	para "like that here."
+	line "Wash it off. In my"
+	para "fight."
+	done
+
+GroveStreet8Trainer4BeatenText:
+	text "I gave away"
+	line "everything I"
+	para "owned. It was"
+	line "nothing. It's"
+	para "still nothing."
+	done
 
 GroveStreet8Trainer4:
-	trainer G_BIRDER, 132, EVENT_GEN_GROVE_STREET8_4, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_BIRDER, 132, EVENT_GEN_GROVE_STREET8_4, GroveStreet8Trainer4SeenText, GroveStreet8Trainer4BeatenText, 0, GroveStreet8AfterScript
+
+GroveStreet8Trainer5SeenText:
+	text "The river"
+	line "provides. The"
+	para "forest provides."
+	line "You provide a"
+	para "challenge."
+	done
+
+GroveStreet8Trainer5BeatenText:
+	text "That was a very"
+	line "honest fight."
+	para "Honestly, I hated"
+	line "it."
+	done
 
 GroveStreet8Trainer5:
-	trainer G_NATURISTF, 129, EVENT_GEN_GROVE_STREET8_5, GroveStreet8SeenText, GroveStreet8BeatenText, 0, GroveStreet8AfterScript
+	trainer G_NATURISTF, 129, EVENT_GEN_GROVE_STREET8_5, GroveStreet8Trainer5SeenText, GroveStreet8Trainer5BeatenText, 0, GroveStreet8AfterScript
 
 GroveStreet8_MapEvents:
 	db 0, 0 ; filler

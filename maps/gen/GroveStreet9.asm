@@ -59,14 +59,6 @@ GroveStreet9GiftHermitNoRoomText:
 	para "on."
 	done
 
-GroveStreet9SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet9BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet9AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -79,26 +71,130 @@ GroveStreet9AfterScript:
 	closetext
 	end
 
+GroveStreet9Trainer0SeenText:
+	text "Every night we sit"
+	line "in a circle and"
+	para "share our"
+	line "feelings. Tonight"
+	para "it's your turn,"
+	line "with my fists."
+	done
+
+GroveStreet9Trainer0BeatenText:
+	text "I'm not scared."
+	line "I'm very sleepy"
+	para "and very bruised."
+	done
+
 GroveStreet9Trainer0:
-	trainer G_NATURISTF, 130, EVENT_GEN_GROVE_STREET9_0, GroveStreet9SeenText, GroveStreet9BeatenText, 0, GroveStreet9AfterScript
+	trainer G_NATURISTF, 130, EVENT_GEN_GROVE_STREET9_0, GroveStreet9Trainer0SeenText, GroveStreet9Trainer0BeatenText, 0, GroveStreet9AfterScript
+
+GroveStreet9Trainer1SeenText:
+	text "I audit"
+	line "relationships for"
+	para "a living. Yours is"
+	line "a disaster. Let me"
+	para "take that out on"
+	line "your team."
+	done
+
+GroveStreet9Trainer1BeatenText:
+	text "This one's for the"
+	line "harvest. This"
+	para "one's for the"
+	line "sickle."
+	done
 
 GroveStreet9Trainer1:
-	trainer G_URCHIN, 132, EVENT_GEN_GROVE_STREET9_1, GroveStreet9SeenText, GroveStreet9BeatenText, 0, GroveStreet9AfterScript
+	trainer G_URCHIN, 132, EVENT_GEN_GROVE_STREET9_1, GroveStreet9Trainer1SeenText, GroveStreet9Trainer1BeatenText, 0, GroveStreet9AfterScript
+
+GroveStreet9Trainer2SeenText:
+	text "Everyone is"
+	line "welcome here, even"
+	para "rude people."
+	line "Especially rude"
+	para "people. We have a"
+	line "berry for that."
+	done
+
+GroveStreet9Trainer2BeatenText:
+	text "I left the city"
+	line "for peace. I got"
+	para "it. It's a bit"
+	line "sudden."
+	done
 
 GroveStreet9Trainer2:
-	trainer G_ELDER, 130, EVENT_GEN_GROVE_STREET9_2, GroveStreet9SeenText, GroveStreet9BeatenText, 0, GroveStreet9AfterScript
+	trainer G_ELDER, 130, EVENT_GEN_GROVE_STREET9_2, GroveStreet9Trainer2SeenText, GroveStreet9Trainer2BeatenText, 0, GroveStreet9AfterScript
+
+GroveStreet9Trainer3SeenText:
+	text "Silence, please."
+	line "The grass is"
+	para "thinking."
+	done
+
+GroveStreet9Trainer3BeatenText:
+	text "Tell the elders I"
+	line "died as I lived."
+	para "Confused."
+	done
 
 GroveStreet9Trainer3:
-	trainer G_BIRDER, 133, EVENT_GEN_GROVE_STREET9_3, GroveStreet9SeenText, GroveStreet9BeatenText, 0, GroveStreet9AfterScript
+	trainer G_BIRDER, 133, EVENT_GEN_GROVE_STREET9_3, GroveStreet9Trainer3SeenText, GroveStreet9Trainer3BeatenText, 0, GroveStreet9AfterScript
+
+GroveStreet9Trainer4SeenText:
+	text "Everyone here"
+	line "loves everyone."
+	para "Except you. You"
+	line "I'm still deciding"
+	para "about."
+	done
+
+GroveStreet9Trainer4BeatenText:
+	text "The apples were"
+	line "right. They're"
+	para "always right. It's"
+	line "the pits."
+	done
 
 GroveStreet9Trainer4:
-	trainer G_SPROUT, 135, EVENT_GEN_GROVE_STREET9_4, GroveStreet9SeenText, GroveStreet9BeatenText, 0, GroveStreet9AfterScript
+	trainer G_SPROUT, 135, EVENT_GEN_GROVE_STREET9_4, GroveStreet9Trainer4SeenText, GroveStreet9Trainer4BeatenText, 0, GroveStreet9AfterScript
+
+GroveStreet9Trainer5SeenText:
+	text "We believe in"
+	line "total honesty."
+	para "Your team is"
+	line "mediocre. Your"
+	para "aura is mediocre."
+	line "Your shoes are"
+	para "mediocre."
+	done
+
+GroveStreet9Trainer5BeatenText:
+	text "You win. Take a"
+	line "berry. Take all"
+	para "the berries."
+	done
 
 GroveStreet9Trainer5:
-	trainer G_FORAGER, 131, EVENT_GEN_GROVE_STREET9_5, GroveStreet9SeenText, GroveStreet9BeatenText, 0, GroveStreet9AfterScript
+	trainer G_FORAGER, 131, EVENT_GEN_GROVE_STREET9_5, GroveStreet9Trainer5SeenText, GroveStreet9Trainer5BeatenText, 0, GroveStreet9AfterScript
+
+GroveStreet9Trainer6SeenText:
+	text "I've been chewing"
+	line "the same root for"
+	para "a week. It is the"
+	line "only thing that"
+	para "tastes like me."
+	done
+
+GroveStreet9Trainer6BeatenText:
+	text "That was a very"
+	line "unsustainable"
+	para "outcome."
+	done
 
 GroveStreet9Trainer6:
-	trainer G_ANGLER, 131, EVENT_GEN_GROVE_STREET9_6, GroveStreet9SeenText, GroveStreet9BeatenText, 0, GroveStreet9AfterScript
+	trainer G_ANGLER, 131, EVENT_GEN_GROVE_STREET9_6, GroveStreet9Trainer6SeenText, GroveStreet9Trainer6BeatenText, 0, GroveStreet9AfterScript
 
 GroveStreet9_MapEvents:
 	db 0, 0 ; filler

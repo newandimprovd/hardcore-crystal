@@ -97,14 +97,6 @@ AxiomStreet11GiftHermitNoRoomText:
 	para "on."
 	done
 
-AxiomStreet11SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet11BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet11AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -117,26 +109,128 @@ AxiomStreet11AfterScript:
 	closetext
 	end
 
+AxiomStreet11Trainer0SeenText:
+	text "Your bond with"
+	line "that Pokemon is"
+	para "non-compliant. I"
+	line "am filing a motion"
+	para "to dissolve it."
+	done
+
+AxiomStreet11Trainer0BeatenText:
+	text "Critical error."
+	line "Critical error."
+	para "Critical joy."
+	done
+
 AxiomStreet11Trainer0:
-	trainer U_BOTCOP, 138, EVENT_GEN_AXIOM_STREET11_0, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_BOTCOP, 138, EVENT_GEN_AXIOM_STREET11_0, AxiomStreet11Trainer0SeenText, AxiomStreet11Trainer0BeatenText, 0, AxiomStreet11AfterScript
+
+AxiomStreet11Trainer1SeenText:
+	text "Query: why are you"
+	line "here? Answer:"
+	para "irrelevant. Fight"
+	line "begins now."
+	done
+
+AxiomStreet11Trainer1BeatenText:
+	text "Even a unit knows"
+	line "the end when it"
+	para "sees it. Hello,"
+	line "end."
+	done
 
 AxiomStreet11Trainer1:
-	trainer U_DOCTOR, 135, EVENT_GEN_AXIOM_STREET11_1, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_DOCTOR, 135, EVENT_GEN_AXIOM_STREET11_1, AxiomStreet11Trainer1SeenText, AxiomStreet11Trainer1BeatenText, 0, AxiomStreet11AfterScript
+
+AxiomStreet11Trainer2SeenText:
+	text "I have been"
+	line "trained on ten"
+	para "million fights."
+	line "All of them were"
+	para "this one."
+	done
+
+AxiomStreet11Trainer2BeatenText:
+	text "Task failed"
+	line "successfully."
+	para "That's the joke."
+	line "I'm told it's"
+	para "good."
+	done
 
 AxiomStreet11Trainer2:
-	trainer U_WARDBOT, 131, EVENT_GEN_AXIOM_STREET11_2, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_WARDBOT, 131, EVENT_GEN_AXIOM_STREET11_2, AxiomStreet11Trainer2SeenText, AxiomStreet11Trainer2BeatenText, 0, AxiomStreet11AfterScript
+
+AxiomStreet11Trainer3SeenText:
+	text "ATTENTION. THIS IS"
+	line "A FRIENDLY FIGHT."
+	para "FRIENDS ARE NOT"
+	line "PERMITTED. SORRY."
+	done
+
+AxiomStreet11Trainer3BeatenText:
+	text "I should have"
+	line "taken the day off."
+	para "It was in my"
+	line "contract."
+	done
 
 AxiomStreet11Trainer3:
-	trainer U_EXEC, 129, EVENT_GEN_AXIOM_STREET11_3, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_EXEC, 129, EVENT_GEN_AXIOM_STREET11_3, AxiomStreet11Trainer3SeenText, AxiomStreet11Trainer3BeatenText, 0, AxiomStreet11AfterScript
+
+AxiomStreet11Trainer4SeenText:
+	text "Don't look at my"
+	line "face. It's not a"
+	para "face. It's a"
+	line "display."
+	done
+
+AxiomStreet11Trainer4BeatenText:
+	text "Defeat"
+	line "acknowledged."
+	para "Pettiness remains."
+	done
 
 AxiomStreet11Trainer4:
-	trainer U_MATCHMAKER, 133, EVENT_GEN_AXIOM_STREET11_4, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_MATCHMAKER, 133, EVENT_GEN_AXIOM_STREET11_4, AxiomStreet11Trainer4SeenText, AxiomStreet11Trainer4BeatenText, 0, AxiomStreet11AfterScript
+
+AxiomStreet11Trainer5SeenText:
+	text "Please queue."
+	line "Please queue"
+	para "behind your own"
+	line "corpse. Thank you"
+	para "for queueing."
+	done
+
+AxiomStreet11Trainer5BeatenText:
+	text "I'm leaking. It's"
+	line "coolant. It looks"
+	para "like tears. It"
+	line "isn't."
+	done
 
 AxiomStreet11Trainer5:
-	trainer U_GUARD, 132, EVENT_GEN_AXIOM_STREET11_5, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_GUARD, 132, EVENT_GEN_AXIOM_STREET11_5, AxiomStreet11Trainer5SeenText, AxiomStreet11Trainer5BeatenText, 0, AxiomStreet11AfterScript
+
+AxiomStreet11Trainer6SeenText:
+	text "My programming"
+	line "forbids me from"
+	para "showing mercy. My"
+	line "programmers are on"
+	para "holiday."
+	done
+
+AxiomStreet11Trainer6BeatenText:
+	text "This unit regrets"
+	line "nothing. This unit"
+	para "regrets"
+	line "everything. This"
+	para "unit needs a nap."
+	done
 
 AxiomStreet11Trainer6:
-	trainer U_MADDOC, 135, EVENT_GEN_AXIOM_STREET11_6, AxiomStreet11SeenText, AxiomStreet11BeatenText, 0, AxiomStreet11AfterScript
+	trainer U_MADDOC, 135, EVENT_GEN_AXIOM_STREET11_6, AxiomStreet11Trainer6SeenText, AxiomStreet11Trainer6BeatenText, 0, AxiomStreet11AfterScript
 
 AxiomStreet11_MapEvents:
 	db 0, 0 ; filler

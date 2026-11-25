@@ -18,13 +18,18 @@ ENDM
 
 HC_TestIntro::
 	farcall InitCrystalData
-	ld hl, wPlayerName
-	ld de, .name
-	call InitName
+if STRLEN("{TEST_NAME}") > 0 ; the player's name (the ending ROM: CHRIS); InitName would leave a zeroed name alone, so copy it
+	ld hl, .name
+	ld de, wPlayerName
+	ld bc, NAME_LENGTH
+	call CopyBytes
+endc
 	ret
 
+if STRLEN("{TEST_NAME}") > 0
 .name
-	db "TEST@"
+	db "{TEST_NAME}@@@@@@@@@@@"
+endc
 
 HC_TestSetup::
 	ld a, TEST_MON
@@ -76,5 +81,50 @@ HC_TestSetup::
 	endc
 	test_giveitem POKE_BALL, 20
 	test_giveitem SUPER_POTION, 10
+	if TEST_FULLDEX
+	call HC_TestFillBoxes
+	endc
 	ret
+
+if TEST_FULLDEX
+; Alpha 3.3 (the ending ROM): every species caught, level 100, stored in the PC boxes (20 to a box, species order) and so the Pokedex is complete too:
+; SendMonIntoBox marks each species seen and caught.  The boxes are saved one by one; the last step opens box 1 again.
+HC_TestFillBoxes:
+	farcall EraseBoxes
+	xor a
+	ld [wCurBox], a
+	ld b, 1
+.next
+	push bc
+	ld a, BANK(sBoxCount)
+	call OpenSRAM
+	ld a, [sBoxCount]
+	call CloseSRAM
+	cp MONS_PER_BOX
+	jr c, .room
+	farcall SaveBox
+	ld hl, wCurBox
+	inc [hl]
+	farcall LoadBox
+.room
+	pop bc
+	push bc
+	ld a, b
+	ld [wCurPartySpecies], a
+	ld [wTempEnemyMonSpecies], a
+	ld a, 100
+	ld [wCurPartyLevel], a
+	callfar LoadEnemyMon
+	farcall SendMonIntoBox
+	pop bc
+	inc b
+	ld a, b
+	cp NUM_POKEMON + 1
+	jr c, .next
+	farcall SaveBox
+	xor a
+	ld [wCurBox], a
+	farcall LoadBox
+	ret
+endc
 endc

@@ -35,3 +35,7 @@ AFTER = [
     "The humming stops when you leave. It is the only courtesy the place has.",
     "Doors here open both ways. People do not.",
 ]
+
+from .more_lines import VAULT_SEEN, VAULT_BEATEN  # noqa: E402  (alpha 3.3)
+SEEN = SEEN + VAULT_SEEN
+BEATEN = BEATEN + VAULT_BEATEN

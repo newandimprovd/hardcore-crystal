@@ -80,3 +80,7 @@ AFTER = [
     "They say the Abyss has a trumpet. They also say nothing in it is worth finding. Both are probably lies.",
     "There is a woman who sells nothing down here. Her prices are excellent.",
 ]
+
+from .more_lines import PURG_SEEN, PURG_BEATEN  # noqa: E402  (alpha 3.3)
+SEEN = SEEN + PURG_SEEN
+BEATEN = BEATEN + PURG_BEATEN

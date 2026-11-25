@@ -25,14 +25,6 @@ TitheStreet10PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A1
 	end
 
-TitheStreet10SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet10BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet10AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -45,23 +37,109 @@ TitheStreet10AfterScript:
 	closetext
 	end
 
+TitheStreet10Trainer0SeenText:
+	text "Sign here. Not"
+	line "here. There."
+	para "That's a waiver."
+	line "And a will."
+	done
+
+TitheStreet10Trainer0BeatenText:
+	text "No more bells."
+	line "Please. No more"
+	para "bells."
+	done
+
 TitheStreet10Trainer0:
-	trainer T_PRIEST, 134, EVENT_GEN_TITHE_STREET10_0, TitheStreet10SeenText, TitheStreet10BeatenText, 0, TitheStreet10AfterScript
+	trainer T_PRIEST, 134, EVENT_GEN_TITHE_STREET10_0, TitheStreet10Trainer0SeenText, TitheStreet10Trainer0BeatenText, 0, TitheStreet10AfterScript
+
+TitheStreet10Trainer1SeenText:
+	text "You must be the"
+	line "one they whisper"
+	para "about. Say"
+	line "something."
+	para "Anything. Make it"
+	line "brief."
+	done
+
+TitheStreet10Trainer1BeatenText:
+	text "Well. That's it"
+	line "for my pension."
+	para "And the rest of"
+	line "me."
+	done
 
 TitheStreet10Trainer1:
-	trainer T_BANKER, 130, EVENT_GEN_TITHE_STREET10_1, TitheStreet10SeenText, TitheStreet10BeatenText, 0, TitheStreet10AfterScript
+	trainer T_BANKER, 130, EVENT_GEN_TITHE_STREET10_1, TitheStreet10Trainer1SeenText, TitheStreet10Trainer1BeatenText, 0, TitheStreet10AfterScript
+
+TitheStreet10Trainer2SeenText:
+	text "My therapist says"
+	line "to face my"
+	para "problems. You are"
+	line "a problem."
+	done
+
+TitheStreet10Trainer2BeatenText:
+	text "I'm calling my"
+	line "uncle. He doesn't"
+	para "exist, but I'll"
+	line "feel better."
+	done
 
 TitheStreet10Trainer2:
-	trainer T_BUSKER, 130, EVENT_GEN_TITHE_STREET10_2, TitheStreet10SeenText, TitheStreet10BeatenText, 0, TitheStreet10AfterScript
+	trainer T_BUSKER, 130, EVENT_GEN_TITHE_STREET10_2, TitheStreet10Trainer2SeenText, TitheStreet10Trainer2BeatenText, 0, TitheStreet10AfterScript
+
+TitheStreet10Trainer3SeenText:
+	text "I got into this"
+	line "city to make it"
+	para "big. I'm nine"
+	line "inches tall."
+	done
+
+TitheStreet10Trainer3BeatenText:
+	text "Can I be buried"
+	line "near the vending"
+	para "machine? I like"
+	line "the hum."
+	done
 
 TitheStreet10Trainer3:
-	trainer T_NUN, 133, EVENT_GEN_TITHE_STREET10_3, TitheStreet10SeenText, TitheStreet10BeatenText, 0, TitheStreet10AfterScript
+	trainer T_NUN, 133, EVENT_GEN_TITHE_STREET10_3, TitheStreet10Trainer3SeenText, TitheStreet10Trainer3BeatenText, 0, TitheStreet10AfterScript
+
+TitheStreet10Trainer4SeenText:
+	text "I'm legally"
+	line "required to inform"
+	para "you I'm legally"
+	line "required to"
+	para "nothing."
+	done
+
+TitheStreet10Trainer4BeatenText:
+	text "Another day,"
+	line "another loss. At"
+	para "least the pay is"
+	line "the same."
+	done
 
 TitheStreet10Trainer4:
-	trainer T_THUG, 130, EVENT_GEN_TITHE_STREET10_4, TitheStreet10SeenText, TitheStreet10BeatenText, 0, TitheStreet10AfterScript
+	trainer T_THUG, 130, EVENT_GEN_TITHE_STREET10_4, TitheStreet10Trainer4SeenText, TitheStreet10Trainer4BeatenText, 0, TitheStreet10AfterScript
+
+TitheStreet10Trainer5SeenText:
+	text "Don't mind the"
+	line "badge. It's a"
+	para "hobby. The gun is"
+	line "a hobby too."
+	done
+
+TitheStreet10Trainer5BeatenText:
+	text "I'll be in the"
+	line "confessional. Come"
+	para "find me. Actually"
+	line "don't."
+	done
 
 TitheStreet10Trainer5:
-	trainer T_ALTARBOY, 128, EVENT_GEN_TITHE_STREET10_5, TitheStreet10SeenText, TitheStreet10BeatenText, 0, TitheStreet10AfterScript
+	trainer T_ALTARBOY, 128, EVENT_GEN_TITHE_STREET10_5, TitheStreet10Trainer5SeenText, TitheStreet10Trainer5BeatenText, 0, TitheStreet10AfterScript
 
 TitheStreet10_MapEvents:
 	db 0, 0 ; filler

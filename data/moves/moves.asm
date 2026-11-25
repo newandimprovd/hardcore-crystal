@@ -46,7 +46,7 @@ Moves:
 	move WOOD_HAMMER,     EFFECT_RECOIL_HIT,             120, GRASS,        100, 15,   0
 	move PLAY_ROUGH,      EFFECT_ATTACK_DOWN_HIT,         90, FAIRY,         90, 10,  10
 	move HORN_DRILL,   EFFECT_OHKO,                1, NORMAL,        30,  5,   0
-	move TACKLE,       EFFECT_NORMAL_HIT,         35, NORMAL,        95, 35,   0
+	move TACKLE,       EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0
 	move BODY_SLAM,    EFFECT_PARALYZE_HIT,       85, NORMAL,       100, 15,  30
 	move WRAP,         EFFECT_TRAP_TARGET,        15, NORMAL,        85, 20,   0
 	move TAKE_DOWN,    EFFECT_RECOIL_HIT,         90, NORMAL,        85, 20,   0

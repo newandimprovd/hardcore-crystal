@@ -6,14 +6,6 @@ AxiomVault3_MapScripts:
 
 	def_callbacks
 
-AxiomVault3SeenText:
-	text_far HC_SeenText_VT
-	text_end
-
-AxiomVault3BeatenText:
-	text_far HC_BeatenText_VT
-	text_end
-
 AxiomVault3AfterText:
 	text_far HC_AfterText_VT
 	text_end
@@ -26,26 +18,132 @@ AxiomVault3AfterScript:
 	closetext
 	end
 
+AxiomVault3Trainer0SeenText:
+	text "Please remain at"
+	line "room temperature."
+	para "Which is a joke."
+	line "It's minus ten."
+	done
+
+AxiomVault3Trainer0BeatenText:
+	text "Terminate?"
+	line "Terminate. It's"
+	para "the same word as"
+	line "freeze, from here."
+	done
+
 AxiomVault3Trainer0:
-	trainer U_COURIER, 133, EVENT_GEN_AXIOM_VAULT3_0, AxiomVault3SeenText, AxiomVault3BeatenText, 0, AxiomVault3AfterScript
+	trainer U_COURIER, 133, EVENT_GEN_AXIOM_VAULT3_0, AxiomVault3Trainer0SeenText, AxiomVault3Trainer0BeatenText, 0, AxiomVault3AfterScript
+
+AxiomVault3Trainer1SeenText:
+	text "I once thawed a"
+	line "mistake. It became"
+	para "my best friend."
+	line "Then it became a"
+	para "regulation."
+	done
+
+AxiomVault3Trainer1BeatenText:
+	text "Please file this"
+	line "under Incidents,"
+	para "Minor. It's a"
+	line "little bit major."
+	done
 
 AxiomVault3Trainer1:
-	trainer U_COURIER, 134, EVENT_GEN_AXIOM_VAULT3_1, AxiomVault3SeenText, AxiomVault3BeatenText, 0, AxiomVault3AfterScript
+	trainer U_COURIER, 134, EVENT_GEN_AXIOM_VAULT3_1, AxiomVault3Trainer1SeenText, AxiomVault3Trainer1BeatenText, 0, AxiomVault3AfterScript
+
+AxiomVault3Trainer2SeenText:
+	text "Specimen detected"
+	line "in a sealed"
+	para "corridor. Fight"
+	line "begins when I"
+	para "finish the"
+	line "paperwork."
+	done
+
+AxiomVault3Trainer2BeatenText:
+	text "You've dented the"
+	line "archive. You've"
+	para "dented me. The"
+	line "archive was"
+	para "cheaper."
+	done
 
 AxiomVault3Trainer2:
-	trainer U_GUARD, 136, EVENT_GEN_AXIOM_VAULT3_2, AxiomVault3SeenText, AxiomVault3BeatenText, 0, AxiomVault3AfterScript
+	trainer U_GUARD, 136, EVENT_GEN_AXIOM_VAULT3_2, AxiomVault3Trainer2SeenText, AxiomVault3Trainer2BeatenText, 0, AxiomVault3AfterScript
+
+AxiomVault3Trainer3SeenText:
+	text "Do not touch the"
+	line "cases. Touching is"
+	para "a form of"
+	line "ownership."
+	para "Ownership is a"
+	line "form of crime."
+	done
+
+AxiomVault3Trainer3BeatenText:
+	text "Mercy is not in my"
+	line "manual. Neither is"
+	para "losing."
+	done
 
 AxiomVault3Trainer3:
-	trainer U_DRONE, 138, EVENT_GEN_AXIOM_VAULT3_3, AxiomVault3SeenText, AxiomVault3BeatenText, 0, AxiomVault3AfterScript
+	trainer U_DRONE, 138, EVENT_GEN_AXIOM_VAULT3_3, AxiomVault3Trainer3SeenText, AxiomVault3Trainer3BeatenText, 0, AxiomVault3AfterScript
+
+AxiomVault3Trainer4SeenText:
+	text "I haven't been"
+	line "paid since the"
+	para "quarter froze. Hit"
+	line "me. I could use"
+	para "the warmth."
+	done
+
+AxiomVault3Trainer4BeatenText:
+	text "I'll defrost in"
+	line "the morning."
+	para "Please keep the"
+	line "lights low."
+	done
 
 AxiomVault3Trainer4:
-	trainer U_COURIER, 135, EVENT_GEN_AXIOM_VAULT3_4, AxiomVault3SeenText, AxiomVault3BeatenText, 0, AxiomVault3AfterScript
+	trainer U_COURIER, 135, EVENT_GEN_AXIOM_VAULT3_4, AxiomVault3Trainer4SeenText, AxiomVault3Trainer4BeatenText, 0, AxiomVault3AfterScript
+
+AxiomVault3Trainer5SeenText:
+	text "Row after row of"
+	line "the unborn. I"
+	para "check their"
+	line "temperature."
+	para "Nobody checks"
+	line "mine. Fight."
+	done
+
+AxiomVault3Trainer5BeatenText:
+	text "That was a very"
+	line "efficient loss."
+	done
 
 AxiomVault3Trainer5:
-	trainer U_DOCTOR, 145, EVENT_GEN_AXIOM_VAULT3_5, AxiomVault3SeenText, AxiomVault3BeatenText, 0, AxiomVault3AfterScript
+	trainer U_DOCTOR, 145, EVENT_GEN_AXIOM_VAULT3_5, AxiomVault3Trainer5SeenText, AxiomVault3Trainer5BeatenText, 0, AxiomVault3AfterScript
+
+AxiomVault3Trainer6SeenText:
+	text "My supervisor"
+	line "stopped replying"
+	para "in the third"
+	line "decade. I run on"
+	para "spite now."
+	done
+
+AxiomVault3Trainer6BeatenText:
+	text "Beaten by a"
+	line "visitor without"
+	para "clearance. The"
+	line "manual did not"
+	para "mention this."
+	done
 
 AxiomVault3Trainer6:
-	trainer U_MADDOC, 139, EVENT_GEN_AXIOM_VAULT3_6, AxiomVault3SeenText, AxiomVault3BeatenText, 0, AxiomVault3AfterScript
+	trainer U_MADDOC, 139, EVENT_GEN_AXIOM_VAULT3_6, AxiomVault3Trainer6SeenText, AxiomVault3Trainer6BeatenText, 0, AxiomVault3AfterScript
 
 AxiomVault3Hermit0:
 	faceplayer

@@ -23,14 +23,6 @@ AxiomStreet13HermitText:
 	para "couple."
 	done
 
-AxiomStreet13SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet13BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet13AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -43,23 +35,110 @@ AxiomStreet13AfterScript:
 	closetext
 	end
 
+AxiomStreet13Trainer0SeenText:
+	text "The Registry has"
+	line "flagged you. I am"
+	para "the flag."
+	done
+
+AxiomStreet13Trainer0BeatenText:
+	text "I'm leaking. It's"
+	line "coolant. It looks"
+	para "like tears. It"
+	line "isn't."
+	done
+
 AxiomStreet13Trainer0:
-	trainer U_DRONE, 134, EVENT_GEN_AXIOM_STREET13_0, AxiomStreet13SeenText, AxiomStreet13BeatenText, 0, AxiomStreet13AfterScript
+	trainer U_DRONE, 134, EVENT_GEN_AXIOM_STREET13_0, AxiomStreet13Trainer0SeenText, AxiomStreet13Trainer0BeatenText, 0, AxiomStreet13AfterScript
+
+AxiomStreet13Trainer1SeenText:
+	text "Citizen, the next"
+	line "block is a"
+	para "restricted zone."
+	line "This one is a"
+	para "restricted zone"
+	line "also. Everything"
+	para "is restricted."
+	done
+
+AxiomStreet13Trainer1BeatenText:
+	text "I'm forgiven. The"
+	line "system says so."
+	para "The system is"
+	line "wrong."
+	done
 
 AxiomStreet13Trainer1:
-	trainer U_GUARD, 134, EVENT_GEN_AXIOM_STREET13_1, AxiomStreet13SeenText, AxiomStreet13BeatenText, 0, AxiomStreet13AfterScript
+	trainer U_GUARD, 134, EVENT_GEN_AXIOM_STREET13_1, AxiomStreet13Trainer1SeenText, AxiomStreet13Trainer1BeatenText, 0, AxiomStreet13AfterScript
+
+AxiomStreet13Trainer2SeenText:
+	text "I am obligated to"
+	line "be polite. You are"
+	para "obligated to be"
+	line "defeated."
+	done
+
+AxiomStreet13Trainer2BeatenText:
+	text "I don't feel pain."
+	line "I feel a very"
+	para "high-pitched tone."
+	done
 
 AxiomStreet13Trainer2:
-	trainer U_GUARD, 135, EVENT_GEN_AXIOM_STREET13_2, AxiomStreet13SeenText, AxiomStreet13BeatenText, 0, AxiomStreet13AfterScript
+	trainer U_GUARD, 135, EVENT_GEN_AXIOM_STREET13_2, AxiomStreet13Trainer2SeenText, AxiomStreet13Trainer2BeatenText, 0, AxiomStreet13AfterScript
+
+AxiomStreet13Trainer3SeenText:
+	text "My metrics say you"
+	line "are unproductive."
+	para "My fists say you"
+	line "are also unliked."
+	done
+
+AxiomStreet13Trainer3BeatenText:
+	text "I'm sorry. I'm so"
+	line "sorry. I do not"
+	para "know why I said"
+	line "that. I think it"
+	para "was feeling."
+	done
 
 AxiomStreet13Trainer3:
-	trainer U_SERFF, 133, EVENT_GEN_AXIOM_STREET13_3, AxiomStreet13SeenText, AxiomStreet13BeatenText, 0, AxiomStreet13AfterScript
+	trainer U_SERFF, 133, EVENT_GEN_AXIOM_STREET13_3, AxiomStreet13Trainer3SeenText, AxiomStreet13Trainer3BeatenText, 0, AxiomStreet13AfterScript
+
+AxiomStreet13Trainer4SeenText:
+	text "Compliance check"
+	line "in progress."
+	para "Please do not"
+	line "resist the check."
+	para "Resisting is also"
+	line "checked."
+	done
+
+AxiomStreet13Trainer4BeatenText:
+	text "A final thought:"
+	line "please water the"
+	para "plant in cubicle"
+	line "nine."
+	done
 
 AxiomStreet13Trainer4:
-	trainer U_SERFF, 134, EVENT_GEN_AXIOM_STREET13_4, AxiomStreet13SeenText, AxiomStreet13BeatenText, 0, AxiomStreet13AfterScript
+	trainer U_SERFF, 134, EVENT_GEN_AXIOM_STREET13_4, AxiomStreet13Trainer4SeenText, AxiomStreet13Trainer4BeatenText, 0, AxiomStreet13AfterScript
+
+AxiomStreet13Trainer5SeenText:
+	text "I do not hate you."
+	line "I do not feel."
+	para "This is a very"
+	line "polite fight."
+	done
+
+AxiomStreet13Trainer5BeatenText:
+	text "Hostility"
+	line "depleted. Reboot"
+	para "unlikely."
+	done
 
 AxiomStreet13Trainer5:
-	trainer U_MADDOC, 137, EVENT_GEN_AXIOM_STREET13_5, AxiomStreet13SeenText, AxiomStreet13BeatenText, 0, AxiomStreet13AfterScript
+	trainer U_MADDOC, 137, EVENT_GEN_AXIOM_STREET13_5, AxiomStreet13Trainer5SeenText, AxiomStreet13Trainer5BeatenText, 0, AxiomStreet13AfterScript
 
 AxiomStreet13_MapEvents:
 	db 0, 0 ; filler

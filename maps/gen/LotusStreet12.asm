@@ -23,14 +23,6 @@ LotusStreet12HermitText:
 	para "a tan."
 	done
 
-LotusStreet12SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet12BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet12AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -43,23 +35,114 @@ LotusStreet12AfterScript:
 	closetext
 	end
 
+LotusStreet12Trainer0SeenText:
+	text "Sand in my shoes."
+	line "Sand in my soul."
+	para "Sand in my last"
+	line "will and"
+	para "testament."
+	done
+
+LotusStreet12Trainer0BeatenText:
+	text "Do you ever just"
+	line "cry in a pool?"
+	para "Because I'm about"
+	line "to."
+	done
+
 LotusStreet12Trainer0:
-	trainer L_FORGOTTEN, 132, EVENT_GEN_LOTUS_STREET12_0, LotusStreet12SeenText, LotusStreet12BeatenText, 0, LotusStreet12AfterScript
+	trainer L_FORGOTTEN, 132, EVENT_GEN_LOTUS_STREET12_0, LotusStreet12Trainer0SeenText, LotusStreet12Trainer0BeatenText, 0, LotusStreet12AfterScript
+
+LotusStreet12Trainer1SeenText:
+	text "I took the"
+	line "jealousy package."
+	para "I took the guilt"
+	line "package. I took"
+	para "the package. I"
+	line "forgot what's in"
+	para "it."
+	done
+
+LotusStreet12Trainer1BeatenText:
+	text "I lost. I lost"
+	line "something else."
+	para "What else did I"
+	line "lose? What was it?"
+	para "What is that?"
+	done
 
 LotusStreet12Trainer1:
-	trainer L_SWIMMERM, 135, EVENT_GEN_LOTUS_STREET12_1, LotusStreet12SeenText, LotusStreet12BeatenText, 0, LotusStreet12AfterScript
+	trainer L_SWIMMERM, 135, EVENT_GEN_LOTUS_STREET12_1, LotusStreet12Trainer1SeenText, LotusStreet12Trainer1BeatenText, 0, LotusStreet12AfterScript
+
+LotusStreet12Trainer2SeenText:
+	text "Hold still. I'd"
+	line "like to take a"
+	para "picture so I can"
+	line "forget you later."
+	done
+
+LotusStreet12Trainer2BeatenText:
+	text "Everything is"
+	line "going dim. Turn"
+	para "the lights up. No."
+	line "Turn them off."
+	done
 
 LotusStreet12Trainer2:
-	trainer L_SUNBATHER, 134, EVENT_GEN_LOTUS_STREET12_2, LotusStreet12SeenText, LotusStreet12BeatenText, 0, LotusStreet12AfterScript
+	trainer L_SUNBATHER, 134, EVENT_GEN_LOTUS_STREET12_2, LotusStreet12Trainer2SeenText, LotusStreet12Trainer2BeatenText, 0, LotusStreet12AfterScript
+
+LotusStreet12Trainer3SeenText:
+	text "FINNEGAN promised"
+	line "a glorious"
+	para "afterlife with a"
+	line "poolside bar. I"
+	para "read the fine"
+	line "print. It's fine"
+	para "print about the"
+	line "bar."
+	done
+
+LotusStreet12Trainer3BeatenText:
+	text "Ah. So this is the"
+	line "long nap."
+	done
 
 LotusStreet12Trainer3:
-	trainer L_SWIMMERF, 138, EVENT_GEN_LOTUS_STREET12_3, LotusStreet12SeenText, LotusStreet12BeatenText, 0, LotusStreet12AfterScript
+	trainer L_SWIMMERF, 138, EVENT_GEN_LOTUS_STREET12_3, LotusStreet12Trainer3SeenText, LotusStreet12Trainer3BeatenText, 0, LotusStreet12AfterScript
+
+LotusStreet12Trainer4SeenText:
+	text "A sandcastle is"
+	line "the only thing I"
+	para "ever built. You're"
+	line "about to break it."
+	done
+
+LotusStreet12Trainer4BeatenText:
+	text "Wave goodbye to"
+	line "the tourists. And"
+	para "hello to the next"
+	line "ones."
+	done
 
 LotusStreet12Trainer4:
-	trainer L_SUNBATHER, 135, EVENT_GEN_LOTUS_STREET12_4, LotusStreet12SeenText, LotusStreet12BeatenText, 0, LotusStreet12AfterScript
+	trainer L_SUNBATHER, 135, EVENT_GEN_LOTUS_STREET12_4, LotusStreet12Trainer4SeenText, LotusStreet12Trainer4BeatenText, 0, LotusStreet12AfterScript
+
+LotusStreet12Trainer5SeenText:
+	text "My ex was here"
+	line "yesterday. I don't"
+	para "remember her. She"
+	line "was lovely. We're"
+	para "getting divorced."
+	done
+
+LotusStreet12Trainer5BeatenText:
+	text "I forgot to be"
+	line "good at this. Rain"
+	para "check."
+	done
 
 LotusStreet12Trainer5:
-	trainer L_SWIMMERF, 139, EVENT_GEN_LOTUS_STREET12_5, LotusStreet12SeenText, LotusStreet12BeatenText, 0, LotusStreet12AfterScript
+	trainer L_SWIMMERF, 139, EVENT_GEN_LOTUS_STREET12_5, LotusStreet12Trainer5SeenText, LotusStreet12Trainer5BeatenText, 0, LotusStreet12AfterScript
 
 LotusStreet12_MapEvents:
 	db 0, 0 ; filler

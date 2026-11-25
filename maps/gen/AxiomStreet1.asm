@@ -20,14 +20,6 @@ AxiomStreet1HermitText:
 	para "Tuesday."
 	done
 
-AxiomStreet1SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet1BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet1AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -40,23 +32,115 @@ AxiomStreet1AfterScript:
 	closetext
 	end
 
+AxiomStreet1Trainer0SeenText:
+	text "Welcome to the"
+	line "Union. Please"
+	para "remove all warmth"
+	line "at the door."
+	done
+
+AxiomStreet1Trainer0BeatenText:
+	text "My Pokemon"
+	line "followed my"
+	para "orders. I am proud"
+	line "of it. Report"
+	para "that."
+	done
+
 AxiomStreet1Trainer0:
-	trainer U_BOT, 128, EVENT_GEN_AXIOM_STREET1_0, AxiomStreet1SeenText, AxiomStreet1BeatenText, 0, AxiomStreet1AfterScript
+	trainer U_BOT, 128, EVENT_GEN_AXIOM_STREET1_0, AxiomStreet1Trainer0SeenText, AxiomStreet1Trainer0BeatenText, 0, AxiomStreet1AfterScript
+
+AxiomStreet1Trainer1SeenText:
+	text "I have calculated"
+	line "your odds at three"
+	para "percent. I rounded"
+	line "up out of"
+	para "kindness."
+	done
+
+AxiomStreet1Trainer1BeatenText:
+	text "I had a family. It"
+	line "was assigned. I"
+	para "would like to meet"
+	line "them."
+	done
 
 AxiomStreet1Trainer1:
-	trainer U_MADDOC, 129, EVENT_GEN_AXIOM_STREET1_1, AxiomStreet1SeenText, AxiomStreet1BeatenText, 0, AxiomStreet1AfterScript
+	trainer U_MADDOC, 129, EVENT_GEN_AXIOM_STREET1_1, AxiomStreet1Trainer1SeenText, AxiomStreet1Trainer1BeatenText, 0, AxiomStreet1AfterScript
+
+AxiomStreet1Trainer2SeenText:
+	text "I have never lost"
+	line "a duel. I have"
+	para "never had one."
+	line "Today I'll find"
+	para "out."
+	done
+
+AxiomStreet1Trainer2BeatenText:
+	text "I always wondered"
+	line "what it felt like."
+	para "It feels like a"
+	line "very long yawn."
+	done
 
 AxiomStreet1Trainer2:
-	trainer U_BOT, 129, EVENT_GEN_AXIOM_STREET1_2, AxiomStreet1SeenText, AxiomStreet1BeatenText, 0, AxiomStreet1AfterScript
+	trainer U_BOT, 129, EVENT_GEN_AXIOM_STREET1_2, AxiomStreet1Trainer2SeenText, AxiomStreet1Trainer2BeatenText, 0, AxiomStreet1AfterScript
+
+AxiomStreet1Trainer3SeenText:
+	text "You can't flee the"
+	line "Union. The Union"
+	para "is an idea. Also a"
+	line "very big wall."
+	done
+
+AxiomStreet1Trainer3BeatenText:
+	text "I'm shutting down"
+	line "in three, two,"
+	para "one. Oh, I forgot"
+	line "the one."
+	done
 
 AxiomStreet1Trainer3:
-	trainer U_DOCTOR, 128, EVENT_GEN_AXIOM_STREET1_3, AxiomStreet1SeenText, AxiomStreet1BeatenText, 0, AxiomStreet1AfterScript
+	trainer U_DOCTOR, 128, EVENT_GEN_AXIOM_STREET1_3, AxiomStreet1Trainer3SeenText, AxiomStreet1Trainer3BeatenText, 0, AxiomStreet1AfterScript
+
+AxiomStreet1Trainer4SeenText:
+	text "Scanning... human"
+	line "detected. Neat."
+	para "Prepare for"
+	line "processing."
+	done
+
+AxiomStreet1Trainer4BeatenText:
+	text "My motor functions"
+	line "are shutting down."
+	para "It's very"
+	line "relaxing. I did"
+	para "not know about"
+	line "relaxing."
+	done
 
 AxiomStreet1Trainer4:
-	trainer U_MATCHMAKER, 128, EVENT_GEN_AXIOM_STREET1_4, AxiomStreet1SeenText, AxiomStreet1BeatenText, 0, AxiomStreet1AfterScript
+	trainer U_MATCHMAKER, 128, EVENT_GEN_AXIOM_STREET1_4, AxiomStreet1Trainer4SeenText, AxiomStreet1Trainer4BeatenText, 0, AxiomStreet1AfterScript
+
+AxiomStreet1Trainer5SeenText:
+	text "Initialising"
+	line "hostility."
+	para "Hostility"
+	line "initialised."
+	para "Please remain"
+	line "still for the"
+	para "hostility."
+	done
+
+AxiomStreet1Trainer5BeatenText:
+	text "I would like a"
+	line "moment of silence."
+	para "Please measure it"
+	line "precisely."
+	done
 
 AxiomStreet1Trainer5:
-	trainer U_SERF, 128, EVENT_GEN_AXIOM_STREET1_5, AxiomStreet1SeenText, AxiomStreet1BeatenText, 0, AxiomStreet1AfterScript
+	trainer U_SERF, 128, EVENT_GEN_AXIOM_STREET1_5, AxiomStreet1Trainer5SeenText, AxiomStreet1Trainer5BeatenText, 0, AxiomStreet1AfterScript
 
 AxiomStreet1_MapEvents:
 	db 0, 0 ; filler

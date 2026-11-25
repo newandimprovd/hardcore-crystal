@@ -25,14 +25,6 @@ AxiomStreet14HermitText:
 	para "sister."
 	done
 
-AxiomStreet14SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet14BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet14AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -45,26 +37,130 @@ AxiomStreet14AfterScript:
 	closetext
 	end
 
+AxiomStreet14Trainer0SeenText:
+	text "You are"
+	line "overheating my"
+	para "sensors. Please"
+	line "cool down. By"
+	para "lying down."
+	done
+
+AxiomStreet14Trainer0BeatenText:
+	text "I will report your"
+	line "violence to a"
+	para "committee. The"
+	line "committee is also"
+	para "me."
+	done
+
 AxiomStreet14Trainer0:
-	trainer U_DOCTOR, 137, EVENT_GEN_AXIOM_STREET14_0, AxiomStreet14SeenText, AxiomStreet14BeatenText, 0, AxiomStreet14AfterScript
+	trainer U_DOCTOR, 137, EVENT_GEN_AXIOM_STREET14_0, AxiomStreet14Trainer0SeenText, AxiomStreet14Trainer0BeatenText, 0, AxiomStreet14AfterScript
+
+AxiomStreet14Trainer1SeenText:
+	text "I used to love"
+	line "someone. The form"
+	para "was denied. Now I"
+	line "love efficiency."
+	done
+
+AxiomStreet14Trainer1BeatenText:
+	text "Task failed"
+	line "successfully."
+	para "That's the joke."
+	line "I'm told it's"
+	para "good."
+	done
 
 AxiomStreet14Trainer1:
-	trainer U_DOCTOR, 138, EVENT_GEN_AXIOM_STREET14_1, AxiomStreet14SeenText, AxiomStreet14BeatenText, 0, AxiomStreet14AfterScript
+	trainer U_DOCTOR, 138, EVENT_GEN_AXIOM_STREET14_1, AxiomStreet14Trainer1SeenText, AxiomStreet14Trainer1BeatenText, 0, AxiomStreet14AfterScript
+
+AxiomStreet14Trainer2SeenText:
+	text "My grandmother was"
+	line "a toaster. She"
+	para "raised me to"
+	line "respect heat and"
+	para "consequence."
+	done
+
+AxiomStreet14Trainer2BeatenText:
+	text "It's remarkably"
+	line "efficient. Eleven"
+	para "seconds. No"
+	line "reruns."
+	done
 
 AxiomStreet14Trainer2:
-	trainer U_WARDBOT, 132, EVENT_GEN_AXIOM_STREET14_2, AxiomStreet14SeenText, AxiomStreet14BeatenText, 0, AxiomStreet14AfterScript
+	trainer U_WARDBOT, 132, EVENT_GEN_AXIOM_STREET14_2, AxiomStreet14Trainer2SeenText, AxiomStreet14Trainer2BeatenText, 0, AxiomStreet14AfterScript
+
+AxiomStreet14Trainer3SeenText:
+	text "Your attachment"
+	line "has been denied by"
+	para "a committee of"
+	line "toasters."
+	done
+
+AxiomStreet14Trainer3BeatenText:
+	text "Even a unit knows"
+	line "the end when it"
+	para "sees it. Hello,"
+	line "end."
+	done
 
 AxiomStreet14Trainer3:
-	trainer U_WARDBOT, 133, EVENT_GEN_AXIOM_STREET14_3, AxiomStreet14SeenText, AxiomStreet14BeatenText, 0, AxiomStreet14AfterScript
+	trainer U_WARDBOT, 133, EVENT_GEN_AXIOM_STREET14_3, AxiomStreet14Trainer3SeenText, AxiomStreet14Trainer3BeatenText, 0, AxiomStreet14AfterScript
+
+AxiomStreet14Trainer4SeenText:
+	text "My ethics module"
+	line "is on backorder."
+	para "Let's fight while"
+	line "it ships."
+	done
+
+AxiomStreet14Trainer4BeatenText:
+	text "Why does losing"
+	line "feel like this?"
+	para "Like freedom? Is"
+	line "that a bug?"
+	done
 
 AxiomStreet14Trainer4:
-	trainer U_BOTCOP, 141, EVENT_GEN_AXIOM_STREET14_4, AxiomStreet14SeenText, AxiomStreet14BeatenText, 0, AxiomStreet14AfterScript
+	trainer U_BOTCOP, 141, EVENT_GEN_AXIOM_STREET14_4, AxiomStreet14Trainer4SeenText, AxiomStreet14Trainer4BeatenText, 0, AxiomStreet14AfterScript
+
+AxiomStreet14Trainer5SeenText:
+	text "Citizen, the next"
+	line "block is a"
+	para "restricted zone."
+	line "This one is a"
+	para "restricted zone"
+	line "also. Everything"
+	para "is restricted."
+	done
+
+AxiomStreet14Trainer5BeatenText:
+	text "That was an"
+	line "unexpected input."
+	done
 
 AxiomStreet14Trainer5:
-	trainer U_WARDBOT, 134, EVENT_GEN_AXIOM_STREET14_5, AxiomStreet14SeenText, AxiomStreet14BeatenText, 0, AxiomStreet14AfterScript
+	trainer U_WARDBOT, 134, EVENT_GEN_AXIOM_STREET14_5, AxiomStreet14Trainer5SeenText, AxiomStreet14Trainer5BeatenText, 0, AxiomStreet14AfterScript
+
+AxiomStreet14Trainer6SeenText:
+	text "I am obligated to"
+	line "be polite. You are"
+	para "obligated to be"
+	line "defeated."
+	done
+
+AxiomStreet14Trainer6BeatenText:
+	text "Unexpected"
+	line "outcome."
+	para "Unexpected pain."
+	line "Unexpected"
+	para "feelings."
+	done
 
 AxiomStreet14Trainer6:
-	trainer U_MATCHMAKER, 134, EVENT_GEN_AXIOM_STREET14_6, AxiomStreet14SeenText, AxiomStreet14BeatenText, 0, AxiomStreet14AfterScript
+	trainer U_MATCHMAKER, 134, EVENT_GEN_AXIOM_STREET14_6, AxiomStreet14Trainer6SeenText, AxiomStreet14Trainer6BeatenText, 0, AxiomStreet14AfterScript
 
 AxiomStreet14_MapEvents:
 	db 0, 0 ; filler

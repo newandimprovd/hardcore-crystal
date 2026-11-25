@@ -218,8 +218,8 @@ def render_map(name, out, scale=2, area=None, indoor=None):
     if indoor is None:
         indoor = env not in ("TOWN", "ROUTE")
     if area is None:
-        m = re.search(r"^(Tithe|Grove|Axiom|Lotus|Dis)", name)
-        area = {"Tithe": "AREA1", "Grove": "AREA2", "Axiom": "AREA3", "Lotus": "AREA4", "Dis": "AREA5"}.get(m[1]) if m else None
+        m = re.search(r"^(Tithe|Grove|Axiom|Lotus|Dis|Judecca|Cocytus)", name)
+        area = {"Tithe": "AREA1", "Grove": "AREA2", "Axiom": "AREA3", "Lotus": "AREA4", "Dis": "AREA5", "Judecca": "AREA5", "Cocytus": "AREA5"}.get(m[1]) if m else None
     ts = Tileset(mp.tileset)
     custom = mp.tileset in CUSTOM_TILESETS
     pals = pal_for(area, indoor, "out" if custom else ("road" if not indoor else "inn"))

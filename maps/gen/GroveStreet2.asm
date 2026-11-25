@@ -24,14 +24,6 @@ GroveStreet2HermitText:
 	line "you."
 	done
 
-GroveStreet2SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet2BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet2AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -44,23 +36,106 @@ GroveStreet2AfterScript:
 	closetext
 	end
 
+GroveStreet2Trainer0SeenText:
+	text "I carved this"
+	line "staff myself, from"
+	para "a tree that"
+	line "annoyed me."
+	done
+
+GroveStreet2Trainer0BeatenText:
+	text "That wasn't a fair"
+	line "fight. It was an"
+	para "honest one, which"
+	line "is worse."
+	done
+
 GroveStreet2Trainer0:
-	trainer G_HIKER, 128, EVENT_GEN_GROVE_STREET2_0, GroveStreet2SeenText, GroveStreet2BeatenText, 0, GroveStreet2AfterScript
+	trainer G_HIKER, 128, EVENT_GEN_GROVE_STREET2_0, GroveStreet2Trainer0SeenText, GroveStreet2Trainer0BeatenText, 0, GroveStreet2AfterScript
+
+GroveStreet2Trainer1SeenText:
+	text "Don't mind the"
+	line "smell. It's the"
+	para "compost. Also me."
+	done
+
+GroveStreet2Trainer1BeatenText:
+	text "Bury me in the"
+	line "north field. The"
+	para "cows can have the"
+	line "rest."
+	done
 
 GroveStreet2Trainer1:
-	trainer G_GRANNY, 128, EVENT_GEN_GROVE_STREET2_1, GroveStreet2SeenText, GroveStreet2BeatenText, 0, GroveStreet2AfterScript
+	trainer G_GRANNY, 128, EVENT_GEN_GROVE_STREET2_1, GroveStreet2Trainer1SeenText, GroveStreet2Trainer1BeatenText, 0, GroveStreet2AfterScript
+
+GroveStreet2Trainer2SeenText:
+	text "I left the city to"
+	line "find myself. Found"
+	para "a goat. Fight the"
+	line "goat. Fight me."
+	para "Whichever."
+	done
+
+GroveStreet2Trainer2BeatenText:
+	text "Aaah! My aura! My"
+	line "other aura!"
+	done
 
 GroveStreet2Trainer2:
-	trainer G_HIKER, 129, EVENT_GEN_GROVE_STREET2_2, GroveStreet2SeenText, GroveStreet2BeatenText, 0, GroveStreet2AfterScript
+	trainer G_HIKER, 129, EVENT_GEN_GROVE_STREET2_2, GroveStreet2Trainer2SeenText, GroveStreet2Trainer2BeatenText, 0, GroveStreet2AfterScript
+
+GroveStreet2Trainer3SeenText:
+	text "A seed is a"
+	line "promise. A fight"
+	para "is also a promise."
+	line "Let's both keep"
+	para "ours."
+	done
+
+GroveStreet2Trainer3BeatenText:
+	text "That's it. I'm"
+	line "moving to the"
+	para "beach commune."
+	done
 
 GroveStreet2Trainer3:
-	trainer G_URCHIN, 128, EVENT_GEN_GROVE_STREET2_3, GroveStreet2SeenText, GroveStreet2BeatenText, 0, GroveStreet2AfterScript
+	trainer G_URCHIN, 128, EVENT_GEN_GROVE_STREET2_3, GroveStreet2Trainer3SeenText, GroveStreet2Trainer3BeatenText, 0, GroveStreet2AfterScript
+
+GroveStreet2Trainer4SeenText:
+	text "I like how you"
+	line "look at me. No,"
+	para "wait. That's fear."
+	done
+
+GroveStreet2Trainer4BeatenText:
+	text "I forgive you. In"
+	line "fact I forgive"
+	para "everyone. It's"
+	line "easier than"
+	para "getting up."
+	done
 
 GroveStreet2Trainer4:
-	trainer G_BIRDER, 128, EVENT_GEN_GROVE_STREET2_4, GroveStreet2SeenText, GroveStreet2BeatenText, 0, GroveStreet2AfterScript
+	trainer G_BIRDER, 128, EVENT_GEN_GROVE_STREET2_4, GroveStreet2Trainer4SeenText, GroveStreet2Trainer4BeatenText, 0, GroveStreet2AfterScript
+
+GroveStreet2Trainer5SeenText:
+	text "You walk like a"
+	line "man who owns"
+	para "shoes. Shoes are a"
+	line "bourgeois tool of"
+	para "oppression."
+	done
+
+GroveStreet2Trainer5BeatenText:
+	text "The moon told me."
+	line "Why didn't anyone"
+	para "listen to the"
+	line "moon."
+	done
 
 GroveStreet2Trainer5:
-	trainer G_SCOUT, 129, EVENT_GEN_GROVE_STREET2_5, GroveStreet2SeenText, GroveStreet2BeatenText, 0, GroveStreet2AfterScript
+	trainer G_SCOUT, 129, EVENT_GEN_GROVE_STREET2_5, GroveStreet2Trainer5SeenText, GroveStreet2Trainer5BeatenText, 0, GroveStreet2AfterScript
 
 GroveStreet2_MapEvents:
 	db 0, 0 ; filler

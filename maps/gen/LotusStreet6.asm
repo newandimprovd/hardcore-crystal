@@ -60,14 +60,6 @@ LotusStreet6HermitText:
 	para "the lease."
 	done
 
-LotusStreet6SeenText:
-	text_far HC_SeenText_A4
-	text_end
-
-LotusStreet6BeatenText:
-	text_far HC_BeatenText_A4
-	text_end
-
 LotusStreet6AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -80,23 +72,111 @@ LotusStreet6AfterScript:
 	closetext
 	end
 
+LotusStreet6Trainer0SeenText:
+	text "My yoga instructor"
+	line "says to breathe."
+	para "I'm breathing. Now"
+	line "you."
+	done
+
+LotusStreet6Trainer0BeatenText:
+	text "That's okay. I was"
+	line "getting bored. I"
+	para "was also getting"
+	line "hit."
+	done
+
 LotusStreet6Trainer0:
-	trainer L_SUNBATHER, 128, EVENT_GEN_LOTUS_STREET6_0, LotusStreet6SeenText, LotusStreet6BeatenText, 0, LotusStreet6AfterScript
+	trainer L_SUNBATHER, 128, EVENT_GEN_LOTUS_STREET6_0, LotusStreet6Trainer0SeenText, LotusStreet6Trainer0BeatenText, 0, LotusStreet6AfterScript
+
+LotusStreet6Trainer1SeenText:
+	text "A crab told me to"
+	line "strike first. A"
+	para "crab has never"
+	line "been wrong."
+	done
+
+LotusStreet6Trainer1BeatenText:
+	text "I never wanted to"
+	line "win. I just wanted"
+	para "to be near the"
+	line "water."
+	done
 
 LotusStreet6Trainer1:
-	trainer L_SWIMMERM, 134, EVENT_GEN_LOTUS_STREET6_1, LotusStreet6SeenText, LotusStreet6BeatenText, 0, LotusStreet6AfterScript
+	trainer L_SWIMMERM, 134, EVENT_GEN_LOTUS_STREET6_1, LotusStreet6Trainer1SeenText, LotusStreet6Trainer1BeatenText, 0, LotusStreet6AfterScript
+
+LotusStreet6Trainer2SeenText:
+	text "Welcome to"
+	line "paradise! Have you"
+	para "tried forgetting?"
+	line "I forgot why I'm"
+	para "fighting you."
+	done
+
+LotusStreet6Trainer2BeatenText:
+	text "I forgive you. And"
+	line "you owe me a tab."
+	para "And a smoothie."
+	done
 
 LotusStreet6Trainer2:
-	trainer L_TOURISTF, 131, EVENT_GEN_LOTUS_STREET6_2, LotusStreet6SeenText, LotusStreet6BeatenText, 0, LotusStreet6AfterScript
+	trainer L_TOURISTF, 131, EVENT_GEN_LOTUS_STREET6_2, LotusStreet6Trainer2SeenText, LotusStreet6Trainer2BeatenText, 0, LotusStreet6AfterScript
+
+LotusStreet6Trainer3SeenText:
+	text "I paid four"
+	line "hundred a month to"
+	para "forget my wife."
+	line "I'm very proud."
+	para "I'm also very"
+	line "confused."
+	done
+
+LotusStreet6Trainer3BeatenText:
+	text "I paid for peace"
+	line "and got this. I"
+	para "want a refund. Or"
+	line "a hug."
+	done
 
 LotusStreet6Trainer3:
-	trainer L_LOUNGER, 132, EVENT_GEN_LOTUS_STREET6_3, LotusStreet6SeenText, LotusStreet6BeatenText, 0, LotusStreet6AfterScript
+	trainer L_LOUNGER, 132, EVENT_GEN_LOTUS_STREET6_3, LotusStreet6Trainer3SeenText, LotusStreet6Trainer3BeatenText, 0, LotusStreet6AfterScript
+
+LotusStreet6Trainer4SeenText:
+	text "I can't remember"
+	line "who owns this"
+	para "beach. I can"
+	line "remember who owns"
+	para "the club. It's me."
+	line "I'm armed."
+	done
+
+LotusStreet6Trainer4BeatenText:
+	text "That's all right."
+	line "It's a vacation."
+	para "I'm bruising on"
+	line "schedule."
+	done
 
 LotusStreet6Trainer4:
-	trainer L_SWIMMERF, 134, EVENT_GEN_LOTUS_STREET6_4, LotusStreet6SeenText, LotusStreet6BeatenText, 0, LotusStreet6AfterScript
+	trainer L_SWIMMERF, 134, EVENT_GEN_LOTUS_STREET6_4, LotusStreet6Trainer4SeenText, LotusStreet6Trainer4BeatenText, 0, LotusStreet6AfterScript
+
+LotusStreet6Trainer5SeenText:
+	text "I'm a retired pro."
+	line "Retired from what,"
+	para "I couldn't say."
+	line "Probably the"
+	para "weekend."
+	done
+
+LotusStreet6Trainer5BeatenText:
+	text "I'd call the cops"
+	line "but I used to be"
+	para "one. I forgot."
+	done
 
 LotusStreet6Trainer5:
-	trainer L_FORGOTTEN, 130, EVENT_GEN_LOTUS_STREET6_5, LotusStreet6SeenText, LotusStreet6BeatenText, 0, LotusStreet6AfterScript
+	trainer L_FORGOTTEN, 130, EVENT_GEN_LOTUS_STREET6_5, LotusStreet6Trainer5SeenText, LotusStreet6Trainer5BeatenText, 0, LotusStreet6AfterScript
 
 LotusStreet6_MapEvents:
 	db 0, 0 ; filler

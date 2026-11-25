@@ -22,14 +22,6 @@ AxiomStreet7HermitText:
 	line "me."
 	done
 
-AxiomStreet7SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet7BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet7AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -42,23 +34,108 @@ AxiomStreet7AfterScript:
 	closetext
 	end
 
+AxiomStreet7Trainer0SeenText:
+	text "Hold on, my"
+	line "firmware is"
+	para "updating. Anyway,"
+	line "your feelings are"
+	para "invalid."
+	done
+
+AxiomStreet7Trainer0BeatenText:
+	text "Well. There goes"
+	line "my promotion. And"
+	para "my left arm."
+	done
+
 AxiomStreet7Trainer0:
-	trainer U_BOTCOP, 133, EVENT_GEN_AXIOM_STREET7_0, AxiomStreet7SeenText, AxiomStreet7BeatenText, 0, AxiomStreet7AfterScript
+	trainer U_BOTCOP, 133, EVENT_GEN_AXIOM_STREET7_0, AxiomStreet7Trainer0SeenText, AxiomStreet7Trainer0BeatenText, 0, AxiomStreet7AfterScript
+
+AxiomStreet7Trainer1SeenText:
+	text "I was assigned to"
+	line "you at birth. Your"
+	para "birth. I have been"
+	line "waiting."
+	done
+
+AxiomStreet7Trainer1BeatenText:
+	text "That was"
+	line "efficient. I hope"
+	para "you'll recommend"
+	line "us."
+	done
 
 AxiomStreet7Trainer1:
-	trainer U_MADDOC, 133, EVENT_GEN_AXIOM_STREET7_1, AxiomStreet7SeenText, AxiomStreet7BeatenText, 0, AxiomStreet7AfterScript
+	trainer U_MADDOC, 133, EVENT_GEN_AXIOM_STREET7_1, AxiomStreet7Trainer1SeenText, AxiomStreet7Trainer1BeatenText, 0, AxiomStreet7AfterScript
+
+AxiomStreet7Trainer2SeenText:
+	text "I have 99 problems"
+	line "and a license for"
+	para "all of them."
+	done
+
+AxiomStreet7Trainer2BeatenText:
+	text "I will not be"
+	line "missed. I will be"
+	para "replaced by"
+	line "Monday."
+	done
 
 AxiomStreet7Trainer2:
-	trainer U_MATCHMAKER, 131, EVENT_GEN_AXIOM_STREET7_2, AxiomStreet7SeenText, AxiomStreet7BeatenText, 0, AxiomStreet7AfterScript
+	trainer U_MATCHMAKER, 131, EVENT_GEN_AXIOM_STREET7_2, AxiomStreet7Trainer2SeenText, AxiomStreet7Trainer2BeatenText, 0, AxiomStreet7AfterScript
+
+AxiomStreet7Trainer3SeenText:
+	text "I was built to"
+	line "love. They"
+	para "reprogrammed me."
+	line "Now I only count."
+	done
+
+AxiomStreet7Trainer3BeatenText:
+	text "Citizen, your"
+	line "violence has been"
+	para "noted and"
+	line "approved."
+	done
 
 AxiomStreet7Trainer3:
-	trainer U_BOT, 135, EVENT_GEN_AXIOM_STREET7_3, AxiomStreet7SeenText, AxiomStreet7BeatenText, 0, AxiomStreet7AfterScript
+	trainer U_BOT, 135, EVENT_GEN_AXIOM_STREET7_3, AxiomStreet7Trainer3SeenText, AxiomStreet7Trainer3BeatenText, 0, AxiomStreet7AfterScript
+
+AxiomStreet7Trainer4SeenText:
+	text "This conversation"
+	line "is being recorded"
+	para "for training"
+	line "purposes. Your"
+	para "training. Your"
+	line "funeral."
+	done
+
+AxiomStreet7Trainer4BeatenText:
+	text "End of line. I"
+	line "hope it was good"
+	para "for you."
+	done
 
 AxiomStreet7Trainer4:
-	trainer U_DRONE, 132, EVENT_GEN_AXIOM_STREET7_4, AxiomStreet7SeenText, AxiomStreet7BeatenText, 0, AxiomStreet7AfterScript
+	trainer U_DRONE, 132, EVENT_GEN_AXIOM_STREET7_4, AxiomStreet7Trainer4SeenText, AxiomStreet7Trainer4BeatenText, 0, AxiomStreet7AfterScript
+
+AxiomStreet7Trainer5SeenText:
+	text "Please remain"
+	line "calm. Please"
+	para "remain a corpse."
+	line "These are equally"
+	para "helpful."
+	done
+
+AxiomStreet7Trainer5BeatenText:
+	text "I see white. I was"
+	line "told to expect a"
+	para "tunnel. There is a"
+	line "queue."
+	done
 
 AxiomStreet7Trainer5:
-	trainer U_BOTCOP, 134, EVENT_GEN_AXIOM_STREET7_5, AxiomStreet7SeenText, AxiomStreet7BeatenText, 0, AxiomStreet7AfterScript
+	trainer U_BOTCOP, 134, EVENT_GEN_AXIOM_STREET7_5, AxiomStreet7Trainer5SeenText, AxiomStreet7Trainer5BeatenText, 0, AxiomStreet7AfterScript
 
 AxiomStreet7_MapEvents:
 	db 0, 0 ; filler

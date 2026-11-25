@@ -23,14 +23,6 @@ DisStreet10HermitText:
 	para "also on fire."
 	done
 
-DisStreet10SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet10BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet10AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -43,26 +35,126 @@ DisStreet10AfterScript:
 	closetext
 	end
 
+DisStreet10Trainer0SeenText:
+	text "The fire down here"
+	line "is real. The"
+	para "paperwork is"
+	line "worse."
+	done
+
+DisStreet10Trainer0BeatenText:
+	text "Thank you. I'll"
+	line "save you a seat at"
+	para "the wake. Bring"
+	line "snacks."
+	done
+
 DisStreet10Trainer0:
-	trainer D_IMP, 133, EVENT_GEN_DIS_STREET10_0, DisStreet10SeenText, DisStreet10BeatenText, 0, DisStreet10AfterScript
+	trainer D_IMP, 133, EVENT_GEN_DIS_STREET10_0, DisStreet10Trainer0SeenText, DisStreet10Trainer0BeatenText, 0, DisStreet10AfterScript
+
+DisStreet10Trainer1SeenText:
+	text "The only thing"
+	line "worse than hell is"
+	para "hell's customer"
+	line "service. Let me"
+	para "demonstrate."
+	done
+
+DisStreet10Trainer1BeatenText:
+	text "That was"
+	line "cathartic. I'm"
+	para "going to cry now."
+	line "Then complain."
+	done
 
 DisStreet10Trainer1:
-	trainer D_IMPB, 131, EVENT_GEN_DIS_STREET10_1, DisStreet10SeenText, DisStreet10BeatenText, 0, DisStreet10AfterScript
+	trainer D_IMPB, 131, EVENT_GEN_DIS_STREET10_1, DisStreet10Trainer1SeenText, DisStreet10Trainer1BeatenText, 0, DisStreet10AfterScript
+
+DisStreet10Trainer2SeenText:
+	text "I like my work. I"
+	line "like torturing the"
+	para "new ones. You're"
+	line "new, aren't you?"
+	done
+
+DisStreet10Trainer2BeatenText:
+	text "I won't tell"
+	line "anyone. Nobody"
+	para "will believe me."
+	line "They never do."
+	done
 
 DisStreet10Trainer2:
-	trainer D_BRAWLER, 132, EVENT_GEN_DIS_STREET10_2, DisStreet10SeenText, DisStreet10BeatenText, 0, DisStreet10AfterScript
+	trainer D_BRAWLER, 132, EVENT_GEN_DIS_STREET10_2, DisStreet10Trainer2SeenText, DisStreet10Trainer2BeatenText, 0, DisStreet10AfterScript
+
+DisStreet10Trainer3SeenText:
+	text "This is my"
+	line "cubicle. You are"
+	para "in it. Leave or be"
+	line "filed."
+	done
+
+DisStreet10Trainer3BeatenText:
+	text "My fingers are"
+	line "frozen. And my"
+	para "pride. And my left"
+	line "foot."
+	done
 
 DisStreet10Trainer3:
-	trainer D_SHADE, 133, EVENT_GEN_DIS_STREET10_3, DisStreet10SeenText, DisStreet10BeatenText, 0, DisStreet10AfterScript
+	trainer D_SHADE, 133, EVENT_GEN_DIS_STREET10_3, DisStreet10Trainer3SeenText, DisStreet10Trainer3BeatenText, 0, DisStreet10AfterScript
+
+DisStreet10Trainer4SeenText:
+	text "You smell like the"
+	line "surface. That"
+	para "smell is hope. I'm"
+	line "allergic."
+	done
+
+DisStreet10Trainer4BeatenText:
+	text "Well. That's"
+	line "another stamp in"
+	para "my permanent"
+	line "record."
+	done
 
 DisStreet10Trainer4:
-	trainer D_BRUTE, 136, EVENT_GEN_DIS_STREET10_4, DisStreet10SeenText, DisStreet10BeatenText, 0, DisStreet10AfterScript
+	trainer D_BRUTE, 136, EVENT_GEN_DIS_STREET10_4, DisStreet10Trainer4SeenText, DisStreet10Trainer4BeatenText, 0, DisStreet10AfterScript
+
+DisStreet10Trainer5SeenText:
+	text "You're early. The"
+	line "torment is"
+	para "scheduled for"
+	line "four. It's three"
+	para "fifty-nine."
+	done
+
+DisStreet10Trainer5BeatenText:
+	text "You killed me."
+	line "That's the most"
+	para "anyone's cared in"
+	line "decades."
+	done
 
 DisStreet10Trainer5:
-	trainer D_IMP, 134, EVENT_GEN_DIS_STREET10_5, DisStreet10SeenText, DisStreet10BeatenText, 0, DisStreet10AfterScript
+	trainer D_IMP, 134, EVENT_GEN_DIS_STREET10_5, DisStreet10Trainer5SeenText, DisStreet10Trainer5BeatenText, 0, DisStreet10AfterScript
+
+DisStreet10Trainer6SeenText:
+	text "The wake is my"
+	line "church. You are"
+	para "the priest. Do"
+	line "your office,"
+	para "brother."
+	done
+
+DisStreet10Trainer6BeatenText:
+	text "Tell my wife I"
+	line "love her. Tell her"
+	para "to stay up there."
+	done
 
 DisStreet10Trainer6:
-	trainer D_JESTER, 133, EVENT_GEN_DIS_STREET10_6, DisStreet10SeenText, DisStreet10BeatenText, 0, DisStreet10AfterScript
+	trainer D_JESTER, 133, EVENT_GEN_DIS_STREET10_6, DisStreet10Trainer6SeenText, DisStreet10Trainer6BeatenText, 0, DisStreet10AfterScript
 
 DisStreet10_MapEvents:
 	db 0, 0 ; filler

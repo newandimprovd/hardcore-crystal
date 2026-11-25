@@ -42,14 +42,6 @@ PurgUp3Gate0UseText:
 	para "fine."
 	done
 
-PurgUp3SeenText:
-	text_far HC_SeenText_PG
-	text_end
-
-PurgUp3BeatenText:
-	text_far HC_BeatenText_PG
-	text_end
-
 PurgUp3AfterText:
 	text_far HC_AfterText_PG
 	text_end
@@ -62,26 +54,124 @@ PurgUp3AfterScript:
 	closetext
 	end
 
+PurgUp3Trainer0SeenText:
+	text "Do you hear the"
+	line "chanting? No? Then"
+	para "you're luckier"
+	line "than me. Fight."
+	done
+
+PurgUp3Trainer0BeatenText:
+	text "I yield. My"
+	line "argument was"
+	para "weaker than my"
+	line "team."
+	done
+
 PurgUp3Trainer0:
-	trainer G_SHAMAN, 143, EVENT_GEN_PURG_UP3_0, PurgUp3SeenText, PurgUp3BeatenText, 0, PurgUp3AfterScript
+	trainer G_SHAMAN, 143, EVENT_GEN_PURG_UP3_0, PurgUp3Trainer0SeenText, PurgUp3Trainer0BeatenText, 0, PurgUp3AfterScript
+
+PurgUp3Trainer1SeenText:
+	text "I have been"
+	line "waiting in this"
+	para "cave for a"
+	line "verdict. The"
+	para "verdict is that I"
+	line "wait. Fight me."
+	done
+
+PurgUp3Trainer1BeatenText:
+	text "My argument was"
+	line "sound. My team was"
+	para "soft."
+	done
 
 PurgUp3Trainer1:
-	trainer G_SHAMAN, 144, EVENT_GEN_PURG_UP3_1, PurgUp3SeenText, PurgUp3BeatenText, 0, PurgUp3AfterScript
+	trainer G_SHAMAN, 144, EVENT_GEN_PURG_UP3_1, PurgUp3Trainer1SeenText, PurgUp3Trainer1BeatenText, 0, PurgUp3AfterScript
+
+PurgUp3Trainer2SeenText:
+	text "Hell is other"
+	line "people. Purgatory"
+	para "is other people"
+	line "with a cave."
+	done
+
+PurgUp3Trainer2BeatenText:
+	text "Ow. I'd forgotten"
+	line "how it felt to be"
+	para "surprised."
+	done
 
 PurgUp3Trainer2:
-	trainer G_SHAMAN, 145, EVENT_GEN_PURG_UP3_2, PurgUp3SeenText, PurgUp3BeatenText, 0, PurgUp3AfterScript
+	trainer G_SHAMAN, 145, EVENT_GEN_PURG_UP3_2, PurgUp3Trainer2SeenText, PurgUp3Trainer2BeatenText, 0, PurgUp3AfterScript
+
+PurgUp3Trainer3SeenText:
+	text "I am in a debate"
+	line "with a wall. The"
+	para "wall is winning."
+	line "Be my second"
+	para "opinion."
+	done
+
+PurgUp3Trainer3BeatenText:
+	text "I will remember"
+	line "this. I have"
+	para "nothing but time"
+	line "to do it."
+	done
 
 PurgUp3Trainer3:
-	trainer U_SERFF, 140, EVENT_GEN_PURG_UP3_3, PurgUp3SeenText, PurgUp3BeatenText, 0, PurgUp3AfterScript
+	trainer U_SERFF, 140, EVENT_GEN_PURG_UP3_3, PurgUp3Trainer3SeenText, PurgUp3Trainer3BeatenText, 0, PurgUp3AfterScript
+
+PurgUp3Trainer4SeenText:
+	text "Nothing matters."
+	line "Which is"
+	para "fortunate, because"
+	line "I'm about to lose."
+	done
+
+PurgUp3Trainer4BeatenText:
+	text "Listen: there's a"
+	line "draught coming"
+	para "from the next"
+	line "cave. Don't follow"
+	para "it."
+	done
 
 PurgUp3Trainer4:
-	trainer T_PRIEST, 140, EVENT_GEN_PURG_UP3_4, PurgUp3SeenText, PurgUp3BeatenText, 0, PurgUp3AfterScript
+	trainer T_PRIEST, 140, EVENT_GEN_PURG_UP3_4, PurgUp3Trainer4SeenText, PurgUp3Trainer4BeatenText, 0, PurgUp3AfterScript
+
+PurgUp3Trainer5SeenText:
+	text "The meek shall"
+	line "inherit the earth."
+	para "I'm not meek. I'm"
+	line "here for the cave."
+	done
+
+PurgUp3Trainer5BeatenText:
+	text "Well fought. I'd"
+	line "offer you a drink,"
+	para "but I'm all out of"
+	line "body."
+	done
 
 PurgUp3Trainer5:
-	trainer T_PRIEST, 141, EVENT_GEN_PURG_UP3_5, PurgUp3SeenText, PurgUp3BeatenText, 0, PurgUp3AfterScript
+	trainer T_PRIEST, 141, EVENT_GEN_PURG_UP3_5, PurgUp3Trainer5SeenText, PurgUp3Trainer5BeatenText, 0, PurgUp3AfterScript
+
+PurgUp3Trainer6SeenText:
+	text "Are you here for"
+	line "judgement? I'm the"
+	para "pre-judgement. A"
+	line "kind of warm-up."
+	done
+
+PurgUp3Trainer6BeatenText:
+	text "You hit like a"
+	line "closing argument."
+	done
 
 PurgUp3Trainer6:
-	trainer U_SERF, 143, EVENT_GEN_PURG_UP3_6, PurgUp3SeenText, PurgUp3BeatenText, 0, PurgUp3AfterScript
+	trainer U_SERF, 143, EVENT_GEN_PURG_UP3_6, PurgUp3Trainer6SeenText, PurgUp3Trainer6BeatenText, 0, PurgUp3AfterScript
 
 PurgUp3Hermit0:
 	faceplayer

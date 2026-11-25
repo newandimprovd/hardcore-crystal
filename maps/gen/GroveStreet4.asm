@@ -23,14 +23,6 @@ GroveStreet4HermitText:
 	para "had a bad week."
 	done
 
-GroveStreet4SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet4BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet4AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -43,26 +35,128 @@ GroveStreet4AfterScript:
 	closetext
 	end
 
+GroveStreet4Trainer0SeenText:
+	text "Welcome, friend!"
+	line "Please leave a"
+	para "donation of blood"
+	line "by the fire."
+	done
+
+GroveStreet4Trainer0BeatenText:
+	text "Ow. This is why I"
+	line "don't normally"
+	para "fight. Or normally"
+	line "bathe."
+	done
+
 GroveStreet4Trainer0:
-	trainer G_SPROUT, 128, EVENT_GEN_GROVE_STREET4_0, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_SPROUT, 128, EVENT_GEN_GROVE_STREET4_0, GroveStreet4Trainer0SeenText, GroveStreet4Trainer0BeatenText, 0, GroveStreet4AfterScript
+
+GroveStreet4Trainer1SeenText:
+	text "A man tried to"
+	line "build a fence here"
+	para "once. We ate him."
+	line "Gently."
+	para "Spiritually."
+	done
+
+GroveStreet4Trainer1BeatenText:
+	text "The elders will"
+	line "hear about this."
+	para "They won't care."
+	line "They're asleep."
+	done
 
 GroveStreet4Trainer1:
-	trainer G_FLOWERKID, 130, EVENT_GEN_GROVE_STREET4_1, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_FLOWERKID, 130, EVENT_GEN_GROVE_STREET4_1, GroveStreet4Trainer1SeenText, GroveStreet4Trainer1BeatenText, 0, GroveStreet4AfterScript
+
+GroveStreet4Trainer2SeenText:
+	text "My guru says"
+	line "restrictive"
+	para "boundaries are"
+	line "Ahrimanic. I'm"
+	para "still working out"
+	line "what that means."
+	para "Fight me about it."
+	done
+
+GroveStreet4Trainer2BeatenText:
+	text "I have no hard"
+	line "feelings. I have a"
+	para "lot of soft ones."
+	done
 
 GroveStreet4Trainer2:
-	trainer G_HIKER, 131, EVENT_GEN_GROVE_STREET4_2, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_HIKER, 131, EVENT_GEN_GROVE_STREET4_2, GroveStreet4Trainer2SeenText, GroveStreet4Trainer2BeatenText, 0, GroveStreet4AfterScript
+
+GroveStreet4Trainer3SeenText:
+	text "My Pokemon and I"
+	line "share a bed. Don't"
+	para "ask which of us"
+	line "snores."
+	done
+
+GroveStreet4Trainer3BeatenText:
+	text "I have wounded"
+	line "pride, a wounded"
+	para "team and a very"
+	line "exposed back. Be"
+	para "kind."
+	done
 
 GroveStreet4Trainer3:
-	trainer G_SPROUT, 129, EVENT_GEN_GROVE_STREET4_3, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_SPROUT, 129, EVENT_GEN_GROVE_STREET4_3, GroveStreet4Trainer3SeenText, GroveStreet4Trainer3BeatenText, 0, GroveStreet4AfterScript
+
+GroveStreet4Trainer4SeenText:
+	text "Everyone here is a"
+	line "poet. Mine's about"
+	para "hurting you. It"
+	line "rhymes."
+	done
+
+GroveStreet4Trainer4BeatenText:
+	text "Share the news."
+	line "Share it widely."
+	para "Share it at the"
+	line "feast."
+	done
 
 GroveStreet4Trainer4:
-	trainer G_HIKER, 132, EVENT_GEN_GROVE_STREET4_4, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_HIKER, 132, EVENT_GEN_GROVE_STREET4_4, GroveStreet4Trainer4SeenText, GroveStreet4Trainer4BeatenText, 0, GroveStreet4AfterScript
+
+GroveStreet4Trainer5SeenText:
+	text "My mother raised"
+	line "me on berries and"
+	para "spite. One of them"
+	line "ran out."
+	done
+
+GroveStreet4Trainer5BeatenText:
+	text "The drum has"
+	line "stopped. It's a"
+	para "shame. It was a"
+	line "good beat."
+	done
 
 GroveStreet4Trainer5:
-	trainer G_BARD, 128, EVENT_GEN_GROVE_STREET4_5, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_BARD, 128, EVENT_GEN_GROVE_STREET4_5, GroveStreet4Trainer5SeenText, GroveStreet4Trainer5BeatenText, 0, GroveStreet4AfterScript
+
+GroveStreet4Trainer6SeenText:
+	text "Anyone can join"
+	line "us. Provided they"
+	para "bring a goat and a"
+	line "grudge."
+	done
+
+GroveStreet4Trainer6BeatenText:
+	text "I hope your path"
+	line "is long. I hope it"
+	para "has fewer"
+	line "fighters."
+	done
 
 GroveStreet4Trainer6:
-	trainer G_SPROUT, 130, EVENT_GEN_GROVE_STREET4_6, GroveStreet4SeenText, GroveStreet4BeatenText, 0, GroveStreet4AfterScript
+	trainer G_SPROUT, 130, EVENT_GEN_GROVE_STREET4_6, GroveStreet4Trainer6SeenText, GroveStreet4Trainer6BeatenText, 0, GroveStreet4AfterScript
 
 GroveStreet4_MapEvents:
 	db 0, 0 ; filler

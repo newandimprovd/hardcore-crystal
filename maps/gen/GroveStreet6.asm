@@ -62,14 +62,6 @@ GroveStreet6HermitText:
 	para "said no."
 	done
 
-GroveStreet6SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet6BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet6AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -82,26 +74,126 @@ GroveStreet6AfterScript:
 	closetext
 	end
 
+GroveStreet6Trainer0SeenText:
+	text "We banned money,"
+	line "then invented hens"
+	para "as currency. Hens"
+	line "are worse."
+	done
+
+GroveStreet6Trainer0BeatenText:
+	text "Don't cry for me."
+	line "Cry into the"
+	para "compost. It needs"
+	line "the moisture."
+	done
+
 GroveStreet6Trainer0:
-	trainer G_GRANNY, 129, EVENT_GEN_GROVE_STREET6_0, GroveStreet6SeenText, GroveStreet6BeatenText, 0, GroveStreet6AfterScript
+	trainer G_GRANNY, 129, EVENT_GEN_GROVE_STREET6_0, GroveStreet6Trainer0SeenText, GroveStreet6Trainer0BeatenText, 0, GroveStreet6AfterScript
+
+GroveStreet6Trainer1SeenText:
+	text "A bee landed on my"
+	line "nose. I took it as"
+	para "a sign. I'm taking"
+	line "you as another."
+	done
+
+GroveStreet6Trainer1BeatenText:
+	text "I knew I should"
+	line "have joined the"
+	para "pottery circle."
+	done
 
 GroveStreet6Trainer1:
-	trainer G_URCHIN, 131, EVENT_GEN_GROVE_STREET6_1, GroveStreet6SeenText, GroveStreet6BeatenText, 0, GroveStreet6AfterScript
+	trainer G_URCHIN, 131, EVENT_GEN_GROVE_STREET6_1, GroveStreet6Trainer1SeenText, GroveStreet6Trainer1BeatenText, 0, GroveStreet6AfterScript
+
+GroveStreet6Trainer2SeenText:
+	text "There is a"
+	line "sunscreen"
+	para "shortage. I am"
+	line "very upset. You"
+	para "will pay for it."
+	done
+
+GroveStreet6Trainer2BeatenText:
+	text "You didn't have to"
+	line "hit that hard."
+	para "We're all just a"
+	line "little hungry."
+	done
 
 GroveStreet6Trainer2:
-	trainer G_HIKER, 133, EVENT_GEN_GROVE_STREET6_2, GroveStreet6SeenText, GroveStreet6BeatenText, 0, GroveStreet6AfterScript
+	trainer G_HIKER, 133, EVENT_GEN_GROVE_STREET6_2, GroveStreet6Trainer2SeenText, GroveStreet6Trainer2BeatenText, 0, GroveStreet6AfterScript
+
+GroveStreet6Trainer3SeenText:
+	text "No time to talk,"
+	line "I'm on my second"
+	para "breakfast. Have a"
+	line "battle."
+	done
+
+GroveStreet6Trainer3BeatenText:
+	text "Wait. I forgot the"
+	line "goat. Somebody get"
+	para "the goat. It was"
+	line "in my will."
+	done
 
 GroveStreet6Trainer3:
-	trainer G_ELDER, 129, EVENT_GEN_GROVE_STREET6_3, GroveStreet6SeenText, GroveStreet6BeatenText, 0, GroveStreet6AfterScript
+	trainer G_ELDER, 129, EVENT_GEN_GROVE_STREET6_3, GroveStreet6Trainer3SeenText, GroveStreet6Trainer3BeatenText, 0, GroveStreet6AfterScript
+
+GroveStreet6Trainer4SeenText:
+	text "I once ate a"
+	line "mushroom that told"
+	para "me my future. I'm"
+	line "still angry about"
+	para "it."
+	done
+
+GroveStreet6Trainer4BeatenText:
+	text "I was raised never"
+	line "to hate. Thank you"
+	para "for testing it."
+	done
 
 GroveStreet6Trainer4:
-	trainer G_SPROUT, 133, EVENT_GEN_GROVE_STREET6_4, GroveStreet6SeenText, GroveStreet6BeatenText, 0, GroveStreet6AfterScript
+	trainer G_SPROUT, 133, EVENT_GEN_GROVE_STREET6_4, GroveStreet6Trainer4SeenText, GroveStreet6Trainer4BeatenText, 0, GroveStreet6AfterScript
+
+GroveStreet6Trainer5SeenText:
+	text "Our commune has a"
+	line "zero violence"
+	para "policy. Rejoice,"
+	line "I'm in compliance."
+	para "This is a debate."
+	done
+
+GroveStreet6Trainer5BeatenText:
+	text "I was a banker. I"
+	line "feel so much"
+	para "better being"
+	line "beaten."
+	done
 
 GroveStreet6Trainer5:
-	trainer G_SCOUT, 132, EVENT_GEN_GROVE_STREET6_5, GroveStreet6SeenText, GroveStreet6BeatenText, 0, GroveStreet6AfterScript
+	trainer G_SCOUT, 132, EVENT_GEN_GROVE_STREET6_5, GroveStreet6Trainer5SeenText, GroveStreet6Trainer5BeatenText, 0, GroveStreet6AfterScript
+
+GroveStreet6Trainer6SeenText:
+	text "I'm not the"
+	line "leader. Nobody's"
+	para "the leader. I just"
+	line "have the keys and"
+	para "the clipboard."
+	done
+
+GroveStreet6Trainer6BeatenText:
+	text "So this is the"
+	line "circle of life."
+	para "It's a little"
+	line "pointy."
+	done
 
 GroveStreet6Trainer6:
-	trainer G_SCOUT, 133, EVENT_GEN_GROVE_STREET6_6, GroveStreet6SeenText, GroveStreet6BeatenText, 0, GroveStreet6AfterScript
+	trainer G_SCOUT, 133, EVENT_GEN_GROVE_STREET6_6, GroveStreet6Trainer6SeenText, GroveStreet6Trainer6BeatenText, 0, GroveStreet6AfterScript
 
 GroveStreet6_MapEvents:
 	db 0, 0 ; filler

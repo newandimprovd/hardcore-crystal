@@ -43,14 +43,6 @@ PurgDown4Gate0UseText:
 	para "parted, offended."
 	done
 
-PurgDown4SeenText:
-	text_far HC_SeenText_PG
-	text_end
-
-PurgDown4BeatenText:
-	text_far HC_BeatenText_PG
-	text_end
-
 PurgDown4AfterText:
 	text_far HC_AfterText_PG
 	text_end
@@ -63,29 +55,150 @@ PurgDown4AfterScript:
 	closetext
 	end
 
+PurgDown4Trainer0SeenText:
+	text "I never learned to"
+	line "swim. Nor to die"
+	para "properly. Fight"
+	line "me, I'll learn the"
+	para "second."
+	done
+
+PurgDown4Trainer0BeatenText:
+	text "You were stronger"
+	line "than my regrets. I"
+	para "did not think that"
+	line "was possible."
+	done
+
 PurgDown4Trainer0:
-	trainer U_SERF, 138, EVENT_GEN_PURG_DOWN4_0, PurgDown4SeenText, PurgDown4BeatenText, 0, PurgDown4AfterScript
+	trainer U_SERF, 138, EVENT_GEN_PURG_DOWN4_0, PurgDown4Trainer0SeenText, PurgDown4Trainer0BeatenText, 0, PurgDown4AfterScript
+
+PurgDown4Trainer1SeenText:
+	text "I saw the light at"
+	line "the end of the"
+	para "tunnel. It was a"
+	line "flashlight. It was"
+	para "pointed at me."
+	done
+
+PurgDown4Trainer1BeatenText:
+	text "I told myself I'd"
+	line "win. I tell myself"
+	para "a lot of things."
+	line "Most of them don't"
+	para "survive the cave."
+	done
 
 PurgDown4Trainer1:
-	trainer G_ELDER, 139, EVENT_GEN_PURG_DOWN4_1, PurgDown4SeenText, PurgDown4BeatenText, 0, PurgDown4AfterScript
+	trainer G_ELDER, 139, EVENT_GEN_PURG_DOWN4_1, PurgDown4Trainer1SeenText, PurgDown4Trainer1BeatenText, 0, PurgDown4AfterScript
+
+PurgDown4Trainer2SeenText:
+	text "I was a poet. They"
+	line "stuck me here for"
+	para "the rhyme scheme."
+	done
+
+PurgDown4Trainer2BeatenText:
+	text "Beaten by the"
+	line "living. That's the"
+	para "part I hate most"
+	line "about the"
+	para "afterlife."
+	done
 
 PurgDown4Trainer2:
-	trainer U_SERF, 139, EVENT_GEN_PURG_DOWN4_2, PurgDown4SeenText, PurgDown4BeatenText, 0, PurgDown4AfterScript
+	trainer U_SERF, 139, EVENT_GEN_PURG_DOWN4_2, PurgDown4Trainer2SeenText, PurgDown4Trainer2BeatenText, 0, PurgDown4AfterScript
+
+PurgDown4Trainer3SeenText:
+	text "My last words were"
+	line "a joke. It didn't"
+	para "land. Now I have"
+	line "all the time to"
+	para "work on it."
+	done
+
+PurgDown4Trainer3BeatenText:
+	text "Defeat is a type"
+	line "of knowledge."
+	para "Terrible"
+	line "knowledge, but"
+	para "knowledge."
+	done
 
 PurgDown4Trainer3:
-	trainer L_SAILOR, 140, EVENT_GEN_PURG_DOWN4_3, PurgDown4SeenText, PurgDown4BeatenText, 0, PurgDown4AfterScript
+	trainer L_SAILOR, 140, EVENT_GEN_PURG_DOWN4_3, PurgDown4Trainer3SeenText, PurgDown4Trainer3BeatenText, 0, PurgDown4AfterScript
+
+PurgDown4Trainer4SeenText:
+	text "I'm not a ghost."
+	line "I'm a stalled"
+	para "process. Please be"
+	line "gentle with the"
+	para "restart."
+	done
+
+PurgDown4Trainer4BeatenText:
+	text "My Pokemon will be"
+	line "fine. It's already"
+	para "a spirit. It'll be"
+	line "fine."
+	done
 
 PurgDown4Trainer4:
-	trainer L_SAILOR, 141, EVENT_GEN_PURG_DOWN4_4, PurgDown4SeenText, PurgDown4BeatenText, 0, PurgDown4AfterScript
+	trainer L_SAILOR, 141, EVENT_GEN_PURG_DOWN4_4, PurgDown4Trainer4SeenText, PurgDown4Trainer4BeatenText, 0, PurgDown4AfterScript
+
+PurgDown4Trainer5SeenText:
+	text "My therapist is"
+	line "somewhere above"
+	para "us, billing. I am"
+	line "here, free. Fight"
+	para "me."
+	done
+
+PurgDown4Trainer5BeatenText:
+	text "I'll try again in"
+	line "a few hundred"
+	para "years."
+	done
 
 PurgDown4Trainer5:
-	trainer T_NUN, 136, EVENT_GEN_PURG_DOWN4_5, PurgDown4SeenText, PurgDown4BeatenText, 0, PurgDown4AfterScript
+	trainer T_NUN, 136, EVENT_GEN_PURG_DOWN4_5, PurgDown4Trainer5SeenText, PurgDown4Trainer5BeatenText, 0, PurgDown4AfterScript
+
+PurgDown4Trainer6SeenText:
+	text "Death is merely a"
+	line "change of address."
+	para "I got a worse"
+	line "neighbour."
+	done
+
+PurgDown4Trainer6BeatenText:
+	text "I'm not hurt. I'm"
+	line "a little"
+	para "embarrassed. It's"
+	line "the same thing"
+	para "here."
+	done
 
 PurgDown4Trainer6:
-	trainer U_SERF, 140, EVENT_GEN_PURG_DOWN4_6, PurgDown4SeenText, PurgDown4BeatenText, 0, PurgDown4AfterScript
+	trainer U_SERF, 140, EVENT_GEN_PURG_DOWN4_6, PurgDown4Trainer6SeenText, PurgDown4Trainer6BeatenText, 0, PurgDown4AfterScript
+
+PurgDown4Trainer7SeenText:
+	text "Everything is"
+	line "meaningless, and"
+	para "yet here you are,"
+	line "walking into my"
+	para "line of sight."
+	line "Interesting."
+	done
+
+PurgDown4Trainer7BeatenText:
+	text "I'll haunt the"
+	line "next one. You've"
+	para "ruined my"
+	line "enthusiasm."
+	done
 
 PurgDown4Trainer7:
-	trainer U_DOCTOR, 141, EVENT_GEN_PURG_DOWN4_7, PurgDown4SeenText, PurgDown4BeatenText, 0, PurgDown4AfterScript
+	trainer U_DOCTOR, 141, EVENT_GEN_PURG_DOWN4_7, PurgDown4Trainer7SeenText, PurgDown4Trainer7BeatenText, 0, PurgDown4AfterScript
 
 PurgDown4Hermit0:
 	faceplayer

@@ -22,14 +22,6 @@ DisStreet6HermitText:
 	line "similar."
 	done
 
-DisStreet6SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet6BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet6AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -42,26 +34,128 @@ DisStreet6AfterScript:
 	closetext
 	end
 
+DisStreet6Trainer0SeenText:
+	text "I get one soul a"
+	line "month. You'll do"
+	para "nicely as the"
+	line "month's."
+	done
+
+DisStreet6Trainer0BeatenText:
+	text "Form 13-D: Request"
+	line "for a second"
+	para "death. Approved."
+	done
+
 DisStreet6Trainer0:
-	trainer D_HAG, 130, EVENT_GEN_DIS_STREET6_0, DisStreet6SeenText, DisStreet6BeatenText, 0, DisStreet6AfterScript
+	trainer D_HAG, 130, EVENT_GEN_DIS_STREET6_0, DisStreet6Trainer0SeenText, DisStreet6Trainer0BeatenText, 0, DisStreet6AfterScript
+
+DisStreet6Trainer1SeenText:
+	text "I got here with a"
+	line "clean conscience."
+	para "They took it. It"
+	line "was a ten-minute"
+	para "scan."
+	done
+
+DisStreet6Trainer1BeatenText:
+	text "You've defeated"
+	line "me. This will be"
+	para "reported. By me."
+	line "Right now."
+	done
 
 DisStreet6Trainer1:
-	trainer D_BRAWLER, 130, EVENT_GEN_DIS_STREET6_1, DisStreet6SeenText, DisStreet6BeatenText, 0, DisStreet6AfterScript
+	trainer D_BRAWLER, 130, EVENT_GEN_DIS_STREET6_1, DisStreet6Trainer1SeenText, DisStreet6Trainer1BeatenText, 0, DisStreet6AfterScript
+
+DisStreet6Trainer2SeenText:
+	text "I'm so bored. So"
+	line "bored. Do you know"
+	para "how long a century"
+	line "is when you're"
+	para "bored?"
+	done
+
+DisStreet6Trainer2BeatenText:
+	text "Dead again. It"
+	line "gets easier. It"
+	para "really doesn't."
+	done
 
 DisStreet6Trainer2:
-	trainer D_JUDGE, 130, EVENT_GEN_DIS_STREET6_2, DisStreet6SeenText, DisStreet6BeatenText, 0, DisStreet6AfterScript
+	trainer D_JUDGE, 130, EVENT_GEN_DIS_STREET6_2, DisStreet6Trainer2SeenText, DisStreet6Trainer2BeatenText, 0, DisStreet6AfterScript
+
+DisStreet6Trainer3SeenText:
+	text "My supervisor is a"
+	line "demon. He eats my"
+	para "lunch. Fight me,"
+	line "it's a coping"
+	para "mechanism."
+	done
+
+DisStreet6Trainer3BeatenText:
+	text "Whoever put you in"
+	line "my way, I hate"
+	para "them. And thank"
+	line "them. In that"
+	para "order."
+	done
 
 DisStreet6Trainer3:
-	trainer D_JUDGE, 131, EVENT_GEN_DIS_STREET6_3, DisStreet6SeenText, DisStreet6BeatenText, 0, DisStreet6AfterScript
+	trainer D_JUDGE, 131, EVENT_GEN_DIS_STREET6_3, DisStreet6Trainer3SeenText, DisStreet6Trainer3BeatenText, 0, DisStreet6AfterScript
+
+DisStreet6Trainer4SeenText:
+	text "Please keep your"
+	line "hands inside the"
+	para "circle. The circle"
+	line "is on fire."
+	done
+
+DisStreet6Trainer4BeatenText:
+	text "Guilt is an ice."
+	line "It melts."
+	para "Eventually."
+	line "Hopefully. Please."
+	done
 
 DisStreet6Trainer4:
-	trainer D_JUDGE, 132, EVENT_GEN_DIS_STREET6_4, DisStreet6SeenText, DisStreet6BeatenText, 0, DisStreet6AfterScript
+	trainer D_JUDGE, 132, EVENT_GEN_DIS_STREET6_4, DisStreet6Trainer4SeenText, DisStreet6Trainer4BeatenText, 0, DisStreet6AfterScript
+
+DisStreet6Trainer5SeenText:
+	text "Don't worry, it"
+	line "doesn't hurt."
+	para "Wait. It does. I"
+	line "lied. I'm in HR."
+	done
+
+DisStreet6Trainer5BeatenText:
+	text "I'll see you in"
+	line "the bottom."
+	para "Everyone ends up"
+	line "there."
+	done
 
 DisStreet6Trainer5:
-	trainer D_BRUTE, 133, EVENT_GEN_DIS_STREET6_5, DisStreet6SeenText, DisStreet6BeatenText, 0, DisStreet6AfterScript
+	trainer D_BRUTE, 133, EVENT_GEN_DIS_STREET6_5, DisStreet6Trainer5SeenText, DisStreet6Trainer5BeatenText, 0, DisStreet6AfterScript
+
+DisStreet6Trainer6SeenText:
+	text "I used to be a"
+	line "very tall man."
+	para "They've made me a"
+	line "short one. Fight"
+	para "me from below."
+	done
+
+DisStreet6Trainer6BeatenText:
+	text "The flame goes"
+	line "out. A candle in a"
+	para "cave. Wait."
+	line "There's the"
+	para "bottom."
+	done
 
 DisStreet6Trainer6:
-	trainer D_DAMNED, 128, EVENT_GEN_DIS_STREET6_6, DisStreet6SeenText, DisStreet6BeatenText, 0, DisStreet6AfterScript
+	trainer D_DAMNED, 128, EVENT_GEN_DIS_STREET6_6, DisStreet6Trainer6SeenText, DisStreet6Trainer6BeatenText, 0, DisStreet6AfterScript
 
 DisStreet6_MapEvents:
 	db 0, 0 ; filler

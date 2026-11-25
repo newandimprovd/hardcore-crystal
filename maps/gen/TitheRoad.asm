@@ -107,14 +107,6 @@ TitheRoadTipsSignText:
 	line "at 25, 50 and 75."
 	done
 
-TitheRoadSeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheRoadBeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheRoadAfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -127,23 +119,104 @@ TitheRoadAfterScript:
 	closetext
 	end
 
+TitheRoadTrainer0SeenText:
+	text "Sunday is the day"
+	line "of rest. Today is"
+	para "Tuesday. Rest in"
+	line "pieces."
+	done
+
+TitheRoadTrainer0BeatenText:
+	text "Okay, okay, okay."
+	line "That's enough. Why"
+	para "are you smiling?"
+	done
+
 TitheRoadTrainer0:
-	trainer T_COP, 128, EVENT_GEN_TITHE_ROAD_0, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_COP, 128, EVENT_GEN_TITHE_ROAD_0, TitheRoadTrainer0SeenText, TitheRoadTrainer0BeatenText, 0, TitheRoadAfterScript
+
+TitheRoadTrainer1SeenText:
+	text "Is it a sin to"
+	line "enjoy this? Asking"
+	para "for the whole"
+	line "block."
+	done
+
+TitheRoadTrainer1BeatenText:
+	text "That was"
+	line "unprofessional. Of"
+	para "me. I'll write it"
+	line "up."
+	done
 
 TitheRoadTrainer1:
-	trainer T_SISTER, 128, EVENT_GEN_TITHE_ROAD_1, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_SISTER, 128, EVENT_GEN_TITHE_ROAD_1, TitheRoadTrainer1SeenText, TitheRoadTrainer1BeatenText, 0, TitheRoadAfterScript
+
+TitheRoadTrainer2SeenText:
+	text "My ex took the"
+	line "apartment, the dog"
+	para "and my will. I"
+	line "kept the team."
+	done
+
+TitheRoadTrainer2BeatenText:
+	text "Write my name in"
+	line "the book. The big"
+	para "book. The one with"
+	line "the bad names."
+	done
 
 TitheRoadTrainer2:
-	trainer T_COP, 129, EVENT_GEN_TITHE_ROAD_2, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_COP, 129, EVENT_GEN_TITHE_ROAD_2, TitheRoadTrainer2SeenText, TitheRoadTrainer2BeatenText, 0, TitheRoadAfterScript
+
+TitheRoadTrainer3SeenText:
+	text "I'm not corrupt."
+	line "I'm just very good"
+	para "at accepting"
+	line "gifts. Hand it"
+	para "over."
+	done
+
+TitheRoadTrainer3BeatenText:
+	text "Fine. You win."
+	line "Please forget my"
+	para "face."
+	done
 
 TitheRoadTrainer3:
-	trainer T_NUN, 128, EVENT_GEN_TITHE_ROAD_3, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_NUN, 128, EVENT_GEN_TITHE_ROAD_3, TitheRoadTrainer3SeenText, TitheRoadTrainer3BeatenText, 0, TitheRoadAfterScript
+
+TitheRoadTrainer4SeenText:
+	text "I've read the last"
+	line "page. It says you"
+	para "come for us. Make"
+	line "it quick. Make it"
+	para "theological."
+	done
+
+TitheRoadTrainer4BeatenText:
+	text "You hit like"
+	line "landlords evict."
+	done
 
 TitheRoadTrainer4:
-	trainer T_THUG, 128, EVENT_GEN_TITHE_ROAD_4, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_THUG, 128, EVENT_GEN_TITHE_ROAD_4, TitheRoadTrainer4SeenText, TitheRoadTrainer4BeatenText, 0, TitheRoadAfterScript
+
+TitheRoadTrainer5SeenText:
+	text "I saw you stare at"
+	line "my Pokemon."
+	para "That'll be forty"
+	line "dollars."
+	done
+
+TitheRoadTrainer5BeatenText:
+	text "So this is how it"
+	line "ends. In a puddle"
+	para "behind a tower."
+	done
 
 TitheRoadTrainer5:
-	trainer T_DRIFTER, 128, EVENT_GEN_TITHE_ROAD_5, TitheRoadSeenText, TitheRoadBeatenText, 0, TitheRoadAfterScript
+	trainer T_DRIFTER, 128, EVENT_GEN_TITHE_ROAD_5, TitheRoadTrainer5SeenText, TitheRoadTrainer5BeatenText, 0, TitheRoadAfterScript
 
 TitheRoad_MapEvents:
 	db 0, 0 ; filler

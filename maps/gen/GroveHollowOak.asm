@@ -6,14 +6,6 @@ GroveHollowOak_MapScripts:
 
 	def_callbacks
 
-GroveHollowOakSeenText:
-	text_far HC_SeenText_HL2
-	text_end
-
-GroveHollowOakBeatenText:
-	text_far HC_BeatenText_HL2
-	text_end
-
 GroveHollowOakAfterText:
 	text_far HC_AfterText_HL2
 	text_end
@@ -26,20 +18,86 @@ GroveHollowOakAfterScript:
 	closetext
 	end
 
+GroveHollowOakTrainer0SeenText:
+	text "The old ones say"
+	line "do no harm. The"
+	para "old ones are not"
+	line "here. Battle."
+	done
+
+GroveHollowOakTrainer0BeatenText:
+	text "Compost me. I have"
+	line "earned it."
+	done
+
 GroveHollowOakTrainer0:
-	trainer G_GRANNY, 149, EVENT_GEN_GROVE_HOLLOW_OAK_0, GroveHollowOakSeenText, GroveHollowOakBeatenText, 0, GroveHollowOakAfterScript
+	trainer G_GRANNY, 149, EVENT_GEN_GROVE_HOLLOW_OAK_0, GroveHollowOakTrainer0SeenText, GroveHollowOakTrainer0BeatenText, 0, GroveHollowOakAfterScript
+
+GroveHollowOakTrainer1SeenText:
+	text "Shh. The roots are"
+	line "listening. They"
+	para "report to the"
+	line "mushrooms."
+	done
+
+GroveHollowOakTrainer1BeatenText:
+	text "The roots hold me."
+	line "Gently."
+	para "Contemptuously."
+	done
 
 GroveHollowOakTrainer1:
-	trainer G_BIRDER, 136, EVENT_GEN_GROVE_HOLLOW_OAK_1, GroveHollowOakSeenText, GroveHollowOakBeatenText, 0, GroveHollowOakAfterScript
+	trainer G_BIRDER, 136, EVENT_GEN_GROVE_HOLLOW_OAK_1, GroveHollowOakTrainer1SeenText, GroveHollowOakTrainer1BeatenText, 0, GroveHollowOakAfterScript
+
+GroveHollowOakTrainer2SeenText:
+	text "Every tree here"
+	line "has a name and a"
+	para "grievance. Mine is"
+	line "Gerald."
+	done
+
+GroveHollowOakTrainer2BeatenText:
+	text "Fine. I yield. I"
+	line "was going to yield"
+	para "anyway. Tuesdays I"
+	line "yield."
+	done
 
 GroveHollowOakTrainer2:
-	trainer G_BIRDER, 137, EVENT_GEN_GROVE_HOLLOW_OAK_2, GroveHollowOakSeenText, GroveHollowOakBeatenText, 0, GroveHollowOakAfterScript
+	trainer G_BIRDER, 137, EVENT_GEN_GROVE_HOLLOW_OAK_2, GroveHollowOakTrainer2SeenText, GroveHollowOakTrainer2BeatenText, 0, GroveHollowOakAfterScript
+
+GroveHollowOakTrainer3SeenText:
+	text "We came here to"
+	line "leave the world."
+	para "The world"
+	line "followed. I am"
+	para "angry about it."
+	done
+
+GroveHollowOakTrainer3BeatenText:
+	text "May your path be"
+	line "soft and your"
+	para "shoes be dry."
+	done
 
 GroveHollowOakTrainer3:
-	trainer G_SHAMAN, 151, EVENT_GEN_GROVE_HOLLOW_OAK_3, GroveHollowOakSeenText, GroveHollowOakBeatenText, 0, GroveHollowOakAfterScript
+	trainer G_SHAMAN, 151, EVENT_GEN_GROVE_HOLLOW_OAK_3, GroveHollowOakTrainer3SeenText, GroveHollowOakTrainer3BeatenText, 0, GroveHollowOakAfterScript
+
+GroveHollowOakTrainer4SeenText:
+	text "The oak remembers"
+	line "every footstep. It"
+	para "remembers yours."
+	line "It is unimpressed."
+	done
+
+GroveHollowOakTrainer4BeatenText:
+	text "You fight like the"
+	line "weather. Without"
+	para "apology."
+	done
 
 GroveHollowOakTrainer4:
-	trainer G_SPROUT, 140, EVENT_GEN_GROVE_HOLLOW_OAK_4, GroveHollowOakSeenText, GroveHollowOakBeatenText, 0, GroveHollowOakAfterScript
+	trainer G_SPROUT, 140, EVENT_GEN_GROVE_HOLLOW_OAK_4, GroveHollowOakTrainer4SeenText, GroveHollowOakTrainer4BeatenText, 0, GroveHollowOakAfterScript
 
 GroveHollowOakHermit0:
 	faceplayer

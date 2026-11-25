@@ -6,14 +6,6 @@ DisFurnaceRoom_MapScripts:
 
 	def_callbacks
 
-DisFurnaceRoomSeenText:
-	text_far HC_SeenText_HL5
-	text_end
-
-DisFurnaceRoomBeatenText:
-	text_far HC_BeatenText_HL5
-	text_end
-
 DisFurnaceRoomAfterText:
 	text_far HC_AfterText_HL5
 	text_end
@@ -26,20 +18,82 @@ DisFurnaceRoomAfterScript:
 	closetext
 	end
 
+DisFurnaceRoomTrainer0SeenText:
+	text "I filed you under"
+	line "Damnation. You"
+	para "were filed"
+	line "incorrectly. I"
+	para "will fix it."
+	done
+
+DisFurnaceRoomTrainer0BeatenText:
+	text "Overruled. By you."
+	line "Delightful."
+	done
+
 DisFurnaceRoomTrainer0:
-	trainer D_FIREEATER, 132, EVENT_GEN_DIS_FURNACE_ROOM_0, DisFurnaceRoomSeenText, DisFurnaceRoomBeatenText, 0, DisFurnaceRoomAfterScript
+	trainer D_FIREEATER, 132, EVENT_GEN_DIS_FURNACE_ROOM_0, DisFurnaceRoomTrainer0SeenText, DisFurnaceRoomTrainer0BeatenText, 0, DisFurnaceRoomAfterScript
+
+DisFurnaceRoomTrainer1SeenText:
+	text "I am a clerk of"
+	line "eternal suffering."
+	para "I take lunch at"
+	line "three."
+	done
+
+DisFurnaceRoomTrainer1BeatenText:
+	text "Fine. Take your"
+	line "item. Take your"
+	para "sins. Take mine."
+	done
 
 DisFurnaceRoomTrainer1:
-	trainer D_JUDGE, 139, EVENT_GEN_DIS_FURNACE_ROOM_1, DisFurnaceRoomSeenText, DisFurnaceRoomBeatenText, 0, DisFurnaceRoomAfterScript
+	trainer D_JUDGE, 139, EVENT_GEN_DIS_FURNACE_ROOM_1, DisFurnaceRoomTrainer1SeenText, DisFurnaceRoomTrainer1BeatenText, 0, DisFurnaceRoomAfterScript
+
+DisFurnaceRoomTrainer2SeenText:
+	text "Sentence handed"
+	line "down. Appeal"
+	para "denied. Fight now."
+	done
+
+DisFurnaceRoomTrainer2BeatenText:
+	text "That was a fair"
+	line "verdict. I hate"
+	para "fair."
+	done
 
 DisFurnaceRoomTrainer2:
-	trainer D_FIREEATER, 133, EVENT_GEN_DIS_FURNACE_ROOM_2, DisFurnaceRoomSeenText, DisFurnaceRoomBeatenText, 0, DisFurnaceRoomAfterScript
+	trainer D_FIREEATER, 133, EVENT_GEN_DIS_FURNACE_ROOM_2, DisFurnaceRoomTrainer2SeenText, DisFurnaceRoomTrainer2BeatenText, 0, DisFurnaceRoomAfterScript
+
+DisFurnaceRoomTrainer3SeenText:
+	text "Your name is on a"
+	line "list. The list is"
+	para "on fire. Fight."
+	done
+
+DisFurnaceRoomTrainer3BeatenText:
+	text "Fine. Take your"
+	line "item. Take your"
+	para "sins. Take mine."
+	done
 
 DisFurnaceRoomTrainer3:
-	trainer D_BRUTE, 138, EVENT_GEN_DIS_FURNACE_ROOM_3, DisFurnaceRoomSeenText, DisFurnaceRoomBeatenText, 0, DisFurnaceRoomAfterScript
+	trainer D_BRUTE, 138, EVENT_GEN_DIS_FURNACE_ROOM_3, DisFurnaceRoomTrainer3SeenText, DisFurnaceRoomTrainer3BeatenText, 0, DisFurnaceRoomAfterScript
+
+DisFurnaceRoomTrainer4SeenText:
+	text "Do not mind the"
+	line "screaming. It is"
+	para "the ventilation."
+	done
+
+DisFurnaceRoomTrainer4BeatenText:
+	text "That was a fair"
+	line "verdict. I hate"
+	para "fair."
+	done
 
 DisFurnaceRoomTrainer4:
-	trainer D_IMP, 139, EVENT_GEN_DIS_FURNACE_ROOM_4, DisFurnaceRoomSeenText, DisFurnaceRoomBeatenText, 0, DisFurnaceRoomAfterScript
+	trainer D_IMP, 139, EVENT_GEN_DIS_FURNACE_ROOM_4, DisFurnaceRoomTrainer4SeenText, DisFurnaceRoomTrainer4BeatenText, 0, DisFurnaceRoomAfterScript
 
 DisFurnaceRoomHermit0:
 	faceplayer

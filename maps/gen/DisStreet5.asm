@@ -58,14 +58,6 @@ DisStreet5GiftHermitNoRoomText:
 	para "on."
 	done
 
-DisStreet5SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet5BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet5AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -78,23 +70,111 @@ DisStreet5AfterScript:
 	closetext
 	end
 
+DisStreet5Trainer0SeenText:
+	text "The Pit has a gift"
+	line "shop. I own it."
+	para "The souvenirs are"
+	line "screaming."
+	done
+
+DisStreet5Trainer0BeatenText:
+	text "Down is up. The"
+	line "lake is a river. I"
+	para "see FINNEGAN. He's"
+	line "waving. He's also"
+	para "a typo."
+	done
+
 DisStreet5Trainer0:
-	trainer D_HAG, 129, EVENT_GEN_DIS_STREET5_0, DisStreet5SeenText, DisStreet5BeatenText, 0, DisStreet5AfterScript
+	trainer D_HAG, 129, EVENT_GEN_DIS_STREET5_0, DisStreet5Trainer0SeenText, DisStreet5Trainer0BeatenText, 0, DisStreet5AfterScript
+
+DisStreet5Trainer1SeenText:
+	text "Please sign here."
+	line "It's an affidavit"
+	para "that you tried"
+	line "your best. You"
+	para "didn't. Sign"
+	line "anyway."
+	done
+
+DisStreet5Trainer1BeatenText:
+	text "Cough. It's the"
+	line "sulphur. It's"
+	para "always the"
+	line "sulphur."
+	done
 
 DisStreet5Trainer1:
-	trainer D_FIREEATER, 129, EVENT_GEN_DIS_STREET5_1, DisStreet5SeenText, DisStreet5BeatenText, 0, DisStreet5AfterScript
+	trainer D_FIREEATER, 129, EVENT_GEN_DIS_STREET5_1, DisStreet5Trainer1SeenText, DisStreet5Trainer1BeatenText, 0, DisStreet5AfterScript
+
+DisStreet5Trainer2SeenText:
+	text "I'm here for"
+	line "sloth. Let me"
+	para "finish my nap,"
+	line "then I'll kill"
+	para "you."
+	done
+
+DisStreet5Trainer2BeatenText:
+	text "The flames aren't"
+	line "so bad when you're"
+	para "lying down."
+	done
 
 DisStreet5Trainer2:
-	trainer D_IMPF, 130, EVENT_GEN_DIS_STREET5_2, DisStreet5SeenText, DisStreet5BeatenText, 0, DisStreet5AfterScript
+	trainer D_IMPF, 130, EVENT_GEN_DIS_STREET5_2, DisStreet5Trainer2SeenText, DisStreet5Trainer2BeatenText, 0, DisStreet5AfterScript
+
+DisStreet5Trainer3SeenText:
+	text "I signed a"
+	line "contract in blood."
+	para "The blood wasn't"
+	line "mine. Don't ask"
+	para "whose."
+	done
+
+DisStreet5Trainer3BeatenText:
+	text "I'm very much"
+	line "already dead. This"
+	para "is just an"
+	line "upgrade."
+	done
 
 DisStreet5Trainer3:
-	trainer D_BRAWLER, 129, EVENT_GEN_DIS_STREET5_3, DisStreet5SeenText, DisStreet5BeatenText, 0, DisStreet5AfterScript
+	trainer D_BRAWLER, 129, EVENT_GEN_DIS_STREET5_3, DisStreet5Trainer3SeenText, DisStreet5Trainer3BeatenText, 0, DisStreet5AfterScript
+
+DisStreet5Trainer4SeenText:
+	text "I'm being punished"
+	line "for my sins by"
+	para "fighting you."
+	line "Seems like a poor"
+	para "use of resources."
+	done
+
+DisStreet5Trainer4BeatenText:
+	text "Ow. I thought it"
+	line "was impossible to"
+	para "hurt twice."
+	done
 
 DisStreet5Trainer4:
-	trainer D_BRUTE, 131, EVENT_GEN_DIS_STREET5_4, DisStreet5SeenText, DisStreet5BeatenText, 0, DisStreet5AfterScript
+	trainer D_BRUTE, 131, EVENT_GEN_DIS_STREET5_4, DisStreet5Trainer4SeenText, DisStreet5Trainer4BeatenText, 0, DisStreet5AfterScript
+
+DisStreet5Trainer5SeenText:
+	text "What did you do?"
+	line "Oh, you're a"
+	para "killer. Love that"
+	line "for us."
+	done
+
+DisStreet5Trainer5BeatenText:
+	text "My supervisor will"
+	line "think I gave up. I"
+	para "did. It was a"
+	line "pleasure."
+	done
 
 DisStreet5Trainer5:
-	trainer D_BRUTE, 132, EVENT_GEN_DIS_STREET5_5, DisStreet5SeenText, DisStreet5BeatenText, 0, DisStreet5AfterScript
+	trainer D_BRUTE, 132, EVENT_GEN_DIS_STREET5_5, DisStreet5Trainer5SeenText, DisStreet5Trainer5BeatenText, 0, DisStreet5AfterScript
 
 DisStreet5_MapEvents:
 	db 0, 0 ; filler

@@ -24,14 +24,6 @@ DisStreet7HermitText:
 	line "screaming."
 	done
 
-DisStreet7SeenText:
-	text_far HC_SeenText_A5
-	text_end
-
-DisStreet7BeatenText:
-	text_far HC_BeatenText_A5
-	text_end
-
 DisStreet7AfterText:
 	text_far HC_AfterText_A5
 	text_end
@@ -44,26 +36,124 @@ DisStreet7AfterScript:
 	closetext
 	end
 
+DisStreet7Trainer0SeenText:
+	text "Down here the"
+	line "clocks run"
+	para "backwards. So does"
+	line "my fuse."
+	done
+
+DisStreet7Trainer0BeatenText:
+	text "I'd say 'go to"
+	line "hell', but you're"
+	para "already there."
+	line "Welcome."
+	done
+
 DisStreet7Trainer0:
-	trainer D_SHADE, 132, EVENT_GEN_DIS_STREET7_0, DisStreet7SeenText, DisStreet7BeatenText, 0, DisStreet7AfterScript
+	trainer D_SHADE, 132, EVENT_GEN_DIS_STREET7_0, DisStreet7Trainer0SeenText, DisStreet7Trainer0BeatenText, 0, DisStreet7AfterScript
+
+DisStreet7Trainer1SeenText:
+	text "My soul is on"
+	line "loan. The interest"
+	para "is murder."
+	done
+
+DisStreet7Trainer1BeatenText:
+	text "I'll hold the"
+	line "door. You'll want"
+	para "to go through it."
+	line "Or not."
+	done
 
 DisStreet7Trainer1:
-	trainer D_JESTER, 130, EVENT_GEN_DIS_STREET7_1, DisStreet7SeenText, DisStreet7BeatenText, 0, DisStreet7AfterScript
+	trainer D_JESTER, 130, EVENT_GEN_DIS_STREET7_1, DisStreet7Trainer1SeenText, DisStreet7Trainer1BeatenText, 0, DisStreet7AfterScript
+
+DisStreet7Trainer2SeenText:
+	text "I was a notary in"
+	line "my last life. Now"
+	para "I notarise"
+	line "suffering. Free of"
+	para "charge."
+	done
+
+DisStreet7Trainer2BeatenText:
+	text "You've sent me to"
+	line "a better place."
+	para "It's got a"
+	line "different smell."
+	done
 
 DisStreet7Trainer2:
-	trainer D_WARDEN, 130, EVENT_GEN_DIS_STREET7_2, DisStreet7SeenText, DisStreet7BeatenText, 0, DisStreet7AfterScript
+	trainer D_WARDEN, 130, EVENT_GEN_DIS_STREET7_2, DisStreet7Trainer2SeenText, DisStreet7Trainer2BeatenText, 0, DisStreet7AfterScript
+
+DisStreet7Trainer3SeenText:
+	text "I used to scream"
+	line "for help. Now I"
+	para "scream for the"
+	line "sport."
+	done
+
+DisStreet7Trainer3BeatenText:
+	text "I'm sorry. I'm so"
+	line "sorry. That's my"
+	para "job description."
+	done
 
 DisStreet7Trainer3:
-	trainer D_MAGISTRATE, 129, EVENT_GEN_DIS_STREET7_3, DisStreet7SeenText, DisStreet7BeatenText, 0, DisStreet7AfterScript
+	trainer D_MAGISTRATE, 129, EVENT_GEN_DIS_STREET7_3, DisStreet7Trainer3SeenText, DisStreet7Trainer3BeatenText, 0, DisStreet7AfterScript
+
+DisStreet7Trainer4SeenText:
+	text "My spouse is in"
+	line "the circle"
+	para "upstairs. I'm in"
+	line "this one. We write"
+	para "letters. They get"
+	line "lost."
+	done
+
+DisStreet7Trainer4BeatenText:
+	text "My ledger is"
+	line "wrong. I'm sure of"
+	para "it. Please check."
+	done
 
 DisStreet7Trainer4:
-	trainer D_DAMNED, 129, EVENT_GEN_DIS_STREET7_4, DisStreet7SeenText, DisStreet7BeatenText, 0, DisStreet7AfterScript
+	trainer D_DAMNED, 129, EVENT_GEN_DIS_STREET7_4, DisStreet7Trainer4SeenText, DisStreet7Trainer4BeatenText, 0, DisStreet7AfterScript
+
+DisStreet7Trainer5SeenText:
+	text "The chains are"
+	line "decorative. I'm"
+	para "just very attached"
+	line "to them."
+	done
+
+DisStreet7Trainer5BeatenText:
+	text "Oh, good. A"
+	line "promotion. To the"
+	para "next circle."
+	done
 
 DisStreet7Trainer5:
-	trainer D_SPECTRE, 128, EVENT_GEN_DIS_STREET7_5, DisStreet7SeenText, DisStreet7BeatenText, 0, DisStreet7AfterScript
+	trainer D_SPECTRE, 128, EVENT_GEN_DIS_STREET7_5, DisStreet7Trainer5SeenText, DisStreet7Trainer5BeatenText, 0, DisStreet7AfterScript
+
+DisStreet7Trainer6SeenText:
+	text "Say hi to everyone"
+	line "I'm going to be,"
+	para "when you kill me"
+	line "again."
+	done
+
+DisStreet7Trainer6BeatenText:
+	text "I'll wait for you."
+	line "I have an"
+	para "eternity. Thank"
+	line "you for the time"
+	para "off."
+	done
 
 DisStreet7Trainer6:
-	trainer D_BRAWLER, 131, EVENT_GEN_DIS_STREET7_6, DisStreet7SeenText, DisStreet7BeatenText, 0, DisStreet7AfterScript
+	trainer D_BRAWLER, 131, EVENT_GEN_DIS_STREET7_6, DisStreet7Trainer6SeenText, DisStreet7Trainer6BeatenText, 0, DisStreet7AfterScript
 
 DisStreet7_MapEvents:
 	db 0, 0 ; filler

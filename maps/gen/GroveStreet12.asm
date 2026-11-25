@@ -24,14 +24,6 @@ GroveStreet12HermitText:
 	line "cannot hear."
 	done
 
-GroveStreet12SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet12BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet12AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -44,26 +36,121 @@ GroveStreet12AfterScript:
 	closetext
 	end
 
+GroveStreet12Trainer0SeenText:
+	text "We don't believe"
+	line "in sin. We believe"
+	para "in consequences."
+	line "You are about to"
+	para "meet them."
+	done
+
+GroveStreet12Trainer0BeatenText:
+	text "The council will"
+	line "be disappointed."
+	para "The council is"
+	line "always"
+	para "disappointed."
+	done
+
 GroveStreet12Trainer0:
-	trainer G_GRANNY, 132, EVENT_GEN_GROVE_STREET12_0, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_GRANNY, 132, EVENT_GEN_GROVE_STREET12_0, GroveStreet12Trainer0SeenText, GroveStreet12Trainer0BeatenText, 0, GroveStreet12AfterScript
+
+GroveStreet12Trainer1SeenText:
+	text "I came here to"
+	line "find myself. Turns"
+	para "out I'm in a bush."
+	done
+
+GroveStreet12Trainer1BeatenText:
+	text "Well. That's one"
+	line "way to open a"
+	para "chakra."
+	done
 
 GroveStreet12Trainer1:
-	trainer G_DRUMMER, 129, EVENT_GEN_GROVE_STREET12_1, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_DRUMMER, 129, EVENT_GEN_GROVE_STREET12_1, GroveStreet12Trainer1SeenText, GroveStreet12Trainer1BeatenText, 0, GroveStreet12AfterScript
+
+GroveStreet12Trainer2SeenText:
+	text "I haven't bathed"
+	line "since the equinox."
+	para "It's called"
+	line "commitment."
+	done
+
+GroveStreet12Trainer2BeatenText:
+	text "I accept this"
+	line "defeat radically."
+	done
 
 GroveStreet12Trainer2:
-	trainer G_NATURISTF, 133, EVENT_GEN_GROVE_STREET12_2, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_NATURISTF, 133, EVENT_GEN_GROVE_STREET12_2, GroveStreet12Trainer2SeenText, GroveStreet12Trainer2BeatenText, 0, GroveStreet12AfterScript
+
+GroveStreet12Trainer3SeenText:
+	text "They call me the"
+	line "Gatherer. I gather"
+	para "grievances mostly."
+	done
+
+GroveStreet12Trainer3BeatenText:
+	text "My wife is a good"
+	line "woman. She'll be"
+	para "glad. She says I"
+	line "snore."
+	done
 
 GroveStreet12Trainer3:
-	trainer G_NATURISTM, 130, EVENT_GEN_GROVE_STREET12_3, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_NATURISTM, 130, EVENT_GEN_GROVE_STREET12_3, GroveStreet12Trainer3SeenText, GroveStreet12Trainer3BeatenText, 0, GroveStreet12AfterScript
+
+GroveStreet12Trainer4SeenText:
+	text "The elders say a"
+	line "stranger brings"
+	para "change. You look"
+	line "like a lot of"
+	para "change."
+	done
+
+GroveStreet12Trainer4BeatenText:
+	text "Take the bread."
+	line "It's better than I"
+	para "am."
+	done
 
 GroveStreet12Trainer4:
-	trainer G_SHAMAN, 130, EVENT_GEN_GROVE_STREET12_4, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_SHAMAN, 130, EVENT_GEN_GROVE_STREET12_4, GroveStreet12Trainer4SeenText, GroveStreet12Trainer4BeatenText, 0, GroveStreet12AfterScript
+
+GroveStreet12Trainer5SeenText:
+	text "The elders sleep"
+	line "in shifts. I'm on"
+	para "the shift where I"
+	line "punch strangers."
+	done
+
+GroveStreet12Trainer5BeatenText:
+	text "I feel the soil."
+	line "It's warm. It's"
+	para "calling. Spread me"
+	line "well."
+	done
 
 GroveStreet12Trainer5:
-	trainer G_HIKER, 137, EVENT_GEN_GROVE_STREET12_5, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_HIKER, 137, EVENT_GEN_GROVE_STREET12_5, GroveStreet12Trainer5SeenText, GroveStreet12Trainer5BeatenText, 0, GroveStreet12AfterScript
+
+GroveStreet12Trainer6SeenText:
+	text "We hold all things"
+	line "in common. That"
+	para "includes your"
+	line "health points."
+	done
+
+GroveStreet12Trainer6BeatenText:
+	text "The sunset's"
+	line "lovely. I wasn't"
+	para "expecting it to be"
+	line "the last thing."
+	done
 
 GroveStreet12Trainer6:
-	trainer G_HIKER, 138, EVENT_GEN_GROVE_STREET12_6, GroveStreet12SeenText, GroveStreet12BeatenText, 0, GroveStreet12AfterScript
+	trainer G_HIKER, 138, EVENT_GEN_GROVE_STREET12_6, GroveStreet12Trainer6SeenText, GroveStreet12Trainer6BeatenText, 0, GroveStreet12AfterScript
 
 GroveStreet12_MapEvents:
 	db 0, 0 ; filler

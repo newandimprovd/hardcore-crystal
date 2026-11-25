@@ -6,14 +6,6 @@ PurgUp1_MapScripts:
 
 	def_callbacks
 
-PurgUp1SeenText:
-	text_far HC_SeenText_PG
-	text_end
-
-PurgUp1BeatenText:
-	text_far HC_BeatenText_PG
-	text_end
-
 PurgUp1AfterText:
 	text_far HC_AfterText_PG
 	text_end
@@ -26,26 +18,126 @@ PurgUp1AfterScript:
 	closetext
 	end
 
+PurgUp1Trainer0SeenText:
+	text "Do you believe in"
+	line "reincarnation? I"
+	para "do. I also believe"
+	line "I was a mattress"
+	para "last time."
+	done
+
+PurgUp1Trainer0BeatenText:
+	text "I yield. Please"
+	line "spare me the"
+	para "sequel."
+	done
+
 PurgUp1Trainer0:
-	trainer U_SERFF, 137, EVENT_GEN_PURG_UP1_0, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+	trainer U_SERFF, 137, EVENT_GEN_PURG_UP1_0, PurgUp1Trainer0SeenText, PurgUp1Trainer0BeatenText, 0, PurgUp1AfterScript
+
+PurgUp1Trainer1SeenText:
+	text "I'm only here for"
+	line "the philosophy."
+	para "You're here for"
+	line "the violence."
+	para "We'll meet in the"
+	line "middle."
+	done
+
+PurgUp1Trainer1BeatenText:
+	text "I thought dying"
+	line "would be the last"
+	para "indignity. I was"
+	line "wrong, I was"
+	para "wrong, I was"
+	line "wrong."
+	done
 
 PurgUp1Trainer1:
-	trainer T_NUN, 137, EVENT_GEN_PURG_UP1_1, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+	trainer T_NUN, 137, EVENT_GEN_PURG_UP1_1, PurgUp1Trainer1SeenText, PurgUp1Trainer1BeatenText, 0, PurgUp1AfterScript
+
+PurgUp1Trainer2SeenText:
+	text "I know the answer"
+	line "to everything."
+	para "I've just"
+	line "forgotten the"
+	para "question."
+	done
+
+PurgUp1Trainer2BeatenText:
+	text "That hurt in a"
+	line "very metaphysical"
+	para "way."
+	done
 
 PurgUp1Trainer2:
-	trainer T_NUN, 138, EVENT_GEN_PURG_UP1_2, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+	trainer T_NUN, 138, EVENT_GEN_PURG_UP1_2, PurgUp1Trainer2SeenText, PurgUp1Trainer2BeatenText, 0, PurgUp1AfterScript
+
+PurgUp1Trainer3SeenText:
+	text "What is the sound"
+	line "of one hand"
+	para "clapping? It's the"
+	line "sound of me"
+	para "hitting you."
+	done
+
+PurgUp1Trainer3BeatenText:
+	text "Fine. Go on. Be"
+	line "the protagonist."
+	done
 
 PurgUp1Trainer3:
-	trainer G_BARD, 131, EVENT_GEN_PURG_UP1_3, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+	trainer G_BARD, 131, EVENT_GEN_PURG_UP1_3, PurgUp1Trainer3SeenText, PurgUp1Trainer3BeatenText, 0, PurgUp1AfterScript
+
+PurgUp1Trainer4SeenText:
+	text "Do you feel that"
+	line "draught? That's"
+	para "eternity. It's"
+	line "drafty, isn't it."
+	done
+
+PurgUp1Trainer4BeatenText:
+	text "Don't mind me. I'm"
+	line "resting my"
+	para "argument."
+	done
 
 PurgUp1Trainer4:
-	trainer U_SERFF, 138, EVENT_GEN_PURG_UP1_4, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+	trainer U_SERFF, 138, EVENT_GEN_PURG_UP1_4, PurgUp1Trainer4SeenText, PurgUp1Trainer4BeatenText, 0, PurgUp1AfterScript
+
+PurgUp1Trainer5SeenText:
+	text "I'm one of the"
+	line "unburied. Have you"
+	para "got a shovel? No?"
+	line "Then a Pokemon."
+	done
+
+PurgUp1Trainer5BeatenText:
+	text "Good. Now I can"
+	line "nap. Or not nap."
+	para "It's all the same."
+	done
 
 PurgUp1Trainer5:
-	trainer G_ELDER, 142, EVENT_GEN_PURG_UP1_5, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+	trainer G_ELDER, 142, EVENT_GEN_PURG_UP1_5, PurgUp1Trainer5SeenText, PurgUp1Trainer5BeatenText, 0, PurgUp1AfterScript
+
+PurgUp1Trainer6SeenText:
+	text "They told me I'd"
+	line "meet the people I"
+	para "loved. They didn't"
+	line "say they'd be in"
+	para "line ahead of me."
+	done
+
+PurgUp1Trainer6BeatenText:
+	text "I told the others"
+	line "you'd win. I'm the"
+	para "only one who lost"
+	line "money."
+	done
 
 PurgUp1Trainer6:
-	trainer U_SERFF, 139, EVENT_GEN_PURG_UP1_6, PurgUp1SeenText, PurgUp1BeatenText, 0, PurgUp1AfterScript
+	trainer U_SERFF, 139, EVENT_GEN_PURG_UP1_6, PurgUp1Trainer6SeenText, PurgUp1Trainer6BeatenText, 0, PurgUp1AfterScript
 
 PurgUp1Hermit0:
 	faceplayer

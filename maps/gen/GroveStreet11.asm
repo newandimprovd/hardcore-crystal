@@ -57,14 +57,6 @@ GroveStreet11HermitText:
 	para "tree is also loud."
 	done
 
-GroveStreet11SeenText:
-	text_far HC_SeenText_A2
-	text_end
-
-GroveStreet11BeatenText:
-	text_far HC_BeatenText_A2
-	text_end
-
 GroveStreet11AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -77,23 +69,112 @@ GroveStreet11AfterScript:
 	closetext
 	end
 
+GroveStreet11Trainer0SeenText:
+	text "We of the wake do"
+	line "not fear you. We"
+	para "are the compost of"
+	line "the next book."
+	para "Please spread us"
+	line "well."
+	done
+
+GroveStreet11Trainer0BeatenText:
+	text "That's the third"
+	line "time I've been"
+	para "fainted this week."
+	line "Hey, it's honest"
+	para "work."
+	done
+
 GroveStreet11Trainer0:
-	trainer G_HIKER, 136, EVENT_GEN_GROVE_STREET11_0, GroveStreet11SeenText, GroveStreet11BeatenText, 0, GroveStreet11AfterScript
+	trainer G_HIKER, 136, EVENT_GEN_GROVE_STREET11_0, GroveStreet11Trainer0SeenText, GroveStreet11Trainer0BeatenText, 0, GroveStreet11AfterScript
+
+GroveStreet11Trainer1SeenText:
+	text "Free love, free"
+	line "death. Those are"
+	para "the only two free"
+	line "things, and I'd"
+	para "like the second"
+	line "today."
+	done
+
+GroveStreet11Trainer1BeatenText:
+	text "Even death is"
+	line "shared here."
+	para "You'll be hearing"
+	line "from my family."
+	done
 
 GroveStreet11Trainer1:
-	trainer G_SHAMAN, 129, EVENT_GEN_GROVE_STREET11_1, GroveStreet11SeenText, GroveStreet11BeatenText, 0, GroveStreet11AfterScript
+	trainer G_SHAMAN, 129, EVENT_GEN_GROVE_STREET11_1, GroveStreet11Trainer1SeenText, GroveStreet11Trainer1BeatenText, 0, GroveStreet11AfterScript
+
+GroveStreet11Trainer2SeenText:
+	text "I've been"
+	line "gathering my"
+	para "thoughts all"
+	line "morning. Here,"
+	para "take them. Take"
+	line "them all."
+	done
+
+GroveStreet11Trainer2BeatenText:
+	text "I thought I'd feel"
+	line "enlightened. I"
+	para "feel lightened."
+	done
 
 GroveStreet11Trainer2:
-	trainer G_ANGLER, 132, EVENT_GEN_GROVE_STREET11_2, GroveStreet11SeenText, GroveStreet11BeatenText, 0, GroveStreet11AfterScript
+	trainer G_ANGLER, 132, EVENT_GEN_GROVE_STREET11_2, GroveStreet11Trainer2SeenText, GroveStreet11Trainer2BeatenText, 0, GroveStreet11AfterScript
+
+GroveStreet11Trainer3SeenText:
+	text "Sharing is caring."
+	line "I'd like to share"
+	para "my Pokemon with"
+	line "your face."
+	done
+
+GroveStreet11Trainer3BeatenText:
+	text "Hold my beard."
+	line "It's all that's"
+	para "left of my pride."
+	done
 
 GroveStreet11Trainer3:
-	trainer G_ELDER, 132, EVENT_GEN_GROVE_STREET11_3, GroveStreet11SeenText, GroveStreet11BeatenText, 0, GroveStreet11AfterScript
+	trainer G_ELDER, 132, EVENT_GEN_GROVE_STREET11_3, GroveStreet11Trainer3SeenText, GroveStreet11Trainer3BeatenText, 0, GroveStreet11AfterScript
+
+GroveStreet11Trainer4SeenText:
+	text "The drum circle is"
+	line "on break. So am I."
+	para "Let's make this"
+	line "quick."
+	done
+
+GroveStreet11Trainer4BeatenText:
+	text "Everyone's equal"
+	line "in the dirt. It's"
+	para "very sad how fast"
+	line "it happens."
+	done
 
 GroveStreet11Trainer4:
-	trainer G_SPROUT, 137, EVENT_GEN_GROVE_STREET11_4, GroveStreet11SeenText, GroveStreet11BeatenText, 0, GroveStreet11AfterScript
+	trainer G_SPROUT, 137, EVENT_GEN_GROVE_STREET11_4, GroveStreet11Trainer4SeenText, GroveStreet11Trainer4BeatenText, 0, GroveStreet11AfterScript
+
+GroveStreet11Trainer5SeenText:
+	text "Trade you my knife"
+	line "for your socks."
+	para "No? Then I'll take"
+	line "the socks anyway."
+	done
+
+GroveStreet11Trainer5BeatenText:
+	text "Today I learned"
+	line "that violence is"
+	para "an effective"
+	line "teacher."
+	done
 
 GroveStreet11Trainer5:
-	trainer G_NATURISTF, 132, EVENT_GEN_GROVE_STREET11_5, GroveStreet11SeenText, GroveStreet11BeatenText, 0, GroveStreet11AfterScript
+	trainer G_NATURISTF, 132, EVENT_GEN_GROVE_STREET11_5, GroveStreet11Trainer5SeenText, GroveStreet11Trainer5BeatenText, 0, GroveStreet11AfterScript
 
 GroveStreet11_MapEvents:
 	db 0, 0 ; filler

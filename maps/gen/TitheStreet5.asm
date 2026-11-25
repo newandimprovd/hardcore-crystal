@@ -23,14 +23,6 @@ TitheStreet5HermitText:
 	para "government."
 	done
 
-TitheStreet5SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet5BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet5AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -43,23 +35,109 @@ TitheStreet5AfterScript:
 	closetext
 	end
 
+TitheStreet5Trainer0SeenText:
+	text "God sees"
+	line "everything, they"
+	para "say. I hope He's"
+	line "looking away right"
+	para "now."
+	done
+
+TitheStreet5Trainer0BeatenText:
+	text "I lost? The union"
+	line "is going to hear"
+	para "about this. Ow."
+	done
+
 TitheStreet5Trainer0:
-	trainer T_NUN, 131, EVENT_GEN_TITHE_STREET5_0, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_NUN, 131, EVENT_GEN_TITHE_STREET5_0, TitheStreet5Trainer0SeenText, TitheStreet5Trainer0BeatenText, 0, TitheStreet5AfterScript
+
+TitheStreet5Trainer1SeenText:
+	text "I got this job"
+	line "when the last guy"
+	para "stopped coming in."
+	line "He's in the"
+	para "foundation."
+	done
+
+TitheStreet5Trainer1BeatenText:
+	text "My mom told me"
+	line "about people like"
+	para "you. She was too"
+	line "optimistic."
+	done
 
 TitheStreet5Trainer1:
-	trainer T_SUIT, 133, EVENT_GEN_TITHE_STREET5_1, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_SUIT, 133, EVENT_GEN_TITHE_STREET5_1, TitheStreet5Trainer1SeenText, TitheStreet5Trainer1BeatenText, 0, TitheStreet5AfterScript
+
+TitheStreet5Trainer2SeenText:
+	text "Nobody gets past"
+	line "without a"
+	para "donation. Your"
+	line "face counts as"
+	para "one."
+	done
+
+TitheStreet5Trainer2BeatenText:
+	text "I smelled like a"
+	line "victory and now I"
+	para "smell like the"
+	line "gutter. It was a"
+	para "short trip."
+	done
 
 TitheStreet5Trainer2:
-	trainer T_BEGGAR, 132, EVENT_GEN_TITHE_STREET5_2, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_BEGGAR, 132, EVENT_GEN_TITHE_STREET5_2, TitheStreet5Trainer2SeenText, TitheStreet5Trainer2BeatenText, 0, TitheStreet5AfterScript
+
+TitheStreet5Trainer3SeenText:
+	text "A priest sold me"
+	line "this team. It came"
+	para "with an indulgence"
+	line "and a restocking"
+	para "fee."
+	done
+
+TitheStreet5Trainer3BeatenText:
+	text "So this is the"
+	line "part where the"
+	para "choir goes quiet."
+	done
 
 TitheStreet5Trainer3:
-	trainer T_COP, 137, EVENT_GEN_TITHE_STREET5_3, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_COP, 137, EVENT_GEN_TITHE_STREET5_3, TitheStreet5Trainer3SeenText, TitheStreet5Trainer3BeatenText, 0, TitheStreet5AfterScript
+
+TitheStreet5Trainer4SeenText:
+	text "The pigeons told"
+	line "me you were"
+	para "coming. They want"
+	line "a cut."
+	done
+
+TitheStreet5Trainer4BeatenText:
+	text "I should have"
+	line "joined the choir."
+	para "They never get"
+	line "beaten."
+	done
 
 TitheStreet5Trainer4:
-	trainer T_COP, 138, EVENT_GEN_TITHE_STREET5_4, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_COP, 138, EVENT_GEN_TITHE_STREET5_4, TitheStreet5Trainer4SeenText, TitheStreet5Trainer4BeatenText, 0, TitheStreet5AfterScript
+
+TitheStreet5Trainer5SeenText:
+	text "My pension is a"
+	line "rumour. Let me"
+	para "fight you for a"
+	line "rumour of my own."
+	done
+
+TitheStreet5Trainer5BeatenText:
+	text "I'll haunt you."
+	line "I've already got"
+	para "the lease."
+	done
 
 TitheStreet5Trainer5:
-	trainer T_COP, 139, EVENT_GEN_TITHE_STREET5_5, TitheStreet5SeenText, TitheStreet5BeatenText, 0, TitheStreet5AfterScript
+	trainer T_COP, 139, EVENT_GEN_TITHE_STREET5_5, TitheStreet5Trainer5SeenText, TitheStreet5Trainer5BeatenText, 0, TitheStreet5AfterScript
 
 TitheStreet5_MapEvents:
 	db 0, 0 ; filler

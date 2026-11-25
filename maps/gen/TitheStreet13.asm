@@ -24,14 +24,6 @@ TitheStreet13HermitText:
 	line "won't say."
 	done
 
-TitheStreet13SeenText:
-	text_far HC_SeenText_A1
-	text_end
-
-TitheStreet13BeatenText:
-	text_far HC_BeatenText_A1
-	text_end
-
 TitheStreet13AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -44,23 +36,109 @@ TitheStreet13AfterScript:
 	closetext
 	end
 
+TitheStreet13Trainer0SeenText:
+	text "My landlord is a"
+	line "cathedral. I pray"
+	para "to my landlord and"
+	line "he still raises"
+	para "the rent."
+	done
+
+TitheStreet13Trainer0BeatenText:
+	text "It's beautiful."
+	line "There's a priest."
+	para "There's a"
+	line "landlord. They are"
+	para "both so small."
+	done
+
 TitheStreet13Trainer0:
-	trainer T_HOODIE, 130, EVENT_GEN_TITHE_STREET13_0, TitheStreet13SeenText, TitheStreet13BeatenText, 0, TitheStreet13AfterScript
+	trainer T_HOODIE, 130, EVENT_GEN_TITHE_STREET13_0, TitheStreet13Trainer0SeenText, TitheStreet13Trainer0BeatenText, 0, TitheStreet13AfterScript
+
+TitheStreet13Trainer1SeenText:
+	text "You smell like the"
+	line "suburbs. That's a"
+	para "hate crime here."
+	done
+
+TitheStreet13Trainer1BeatenText:
+	text "Please, no sermon."
+	line "I've had a"
+	para "lifetime of those."
+	done
 
 TitheStreet13Trainer1:
-	trainer T_ENFORCER, 128, EVENT_GEN_TITHE_STREET13_1, TitheStreet13SeenText, TitheStreet13BeatenText, 0, TitheStreet13AfterScript
+	trainer T_ENFORCER, 128, EVENT_GEN_TITHE_STREET13_1, TitheStreet13Trainer1SeenText, TitheStreet13Trainer1BeatenText, 0, TitheStreet13AfterScript
+
+TitheStreet13Trainer2SeenText:
+	text "That's a nice"
+	line "jacket. It'd look"
+	para "better on my side"
+	line "of the court."
+	done
+
+TitheStreet13Trainer2BeatenText:
+	text "Hold my hand. No."
+	line "The other one."
+	para "Never mind, that"
+	line "one's gone."
+	done
 
 TitheStreet13Trainer2:
-	trainer T_COP, 143, EVENT_GEN_TITHE_STREET13_2, TitheStreet13SeenText, TitheStreet13BeatenText, 0, TitheStreet13AfterScript
+	trainer T_COP, 143, EVENT_GEN_TITHE_STREET13_2, TitheStreet13Trainer2SeenText, TitheStreet13Trainer2BeatenText, 0, TitheStreet13AfterScript
+
+TitheStreet13Trainer3SeenText:
+	text "I clean the"
+	line "cathedral at"
+	para "night. You would"
+	line "be amazed what"
+	para "people leave"
+	line "behind. You would"
+	para "be amazed what I"
+	line "take."
+	done
+
+TitheStreet13Trainer3BeatenText:
+	text "The city gave me"
+	line "nothing. I gave it"
+	para "everything. Fair"
+	line "trade."
+	done
 
 TitheStreet13Trainer3:
-	trainer T_CHOIR, 131, EVENT_GEN_TITHE_STREET13_3, TitheStreet13SeenText, TitheStreet13BeatenText, 0, TitheStreet13AfterScript
+	trainer T_CHOIR, 131, EVENT_GEN_TITHE_STREET13_3, TitheStreet13Trainer3SeenText, TitheStreet13Trainer3BeatenText, 0, TitheStreet13AfterScript
+
+TitheStreet13Trainer4SeenText:
+	text "I wanted to be a"
+	line "priest, but the"
+	para "pay was in"
+	line "prayers."
+	done
+
+TitheStreet13Trainer4BeatenText:
+	text "That's it. I'm"
+	line "going into the"
+	para "bell-ringing"
+	line "business."
+	done
 
 TitheStreet13Trainer4:
-	trainer T_BANKER, 134, EVENT_GEN_TITHE_STREET13_4, TitheStreet13SeenText, TitheStreet13BeatenText, 0, TitheStreet13AfterScript
+	trainer T_BANKER, 134, EVENT_GEN_TITHE_STREET13_4, TitheStreet13Trainer4SeenText, TitheStreet13Trainer4BeatenText, 0, TitheStreet13AfterScript
+
+TitheStreet13Trainer5SeenText:
+	text "I forgave myself"
+	line "for what I'm about"
+	para "to do. Saves time."
+	done
+
+TitheStreet13Trainer5BeatenText:
+	text "Take it all. The"
+	line "city will take it"
+	para "back."
+	done
 
 TitheStreet13Trainer5:
-	trainer T_BEGGAR, 136, EVENT_GEN_TITHE_STREET13_5, TitheStreet13SeenText, TitheStreet13BeatenText, 0, TitheStreet13AfterScript
+	trainer T_BEGGAR, 136, EVENT_GEN_TITHE_STREET13_5, TitheStreet13Trainer5SeenText, TitheStreet13Trainer5BeatenText, 0, TitheStreet13AfterScript
 
 TitheStreet13_MapEvents:
 	db 0, 0 ; filler

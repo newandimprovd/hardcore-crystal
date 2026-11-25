@@ -62,14 +62,6 @@ AxiomStreet4GiftHermitNoRoomText:
 	para "on."
 	done
 
-AxiomStreet4SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet4BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet4AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -82,23 +74,112 @@ AxiomStreet4AfterScript:
 	closetext
 	end
 
+AxiomStreet4Trainer0SeenText:
+	text "All violence must"
+	line "be scheduled. You"
+	para "are scheduled for"
+	line "now."
+	done
+
+AxiomStreet4Trainer0BeatenText:
+	text "I was going to be"
+	line "a poet. I'll start"
+	para "by writing this on"
+	line "my chest."
+	done
+
 AxiomStreet4Trainer0:
-	trainer U_SERFF, 130, EVENT_GEN_AXIOM_STREET4_0, AxiomStreet4SeenText, AxiomStreet4BeatenText, 0, AxiomStreet4AfterScript
+	trainer U_SERFF, 130, EVENT_GEN_AXIOM_STREET4_0, AxiomStreet4Trainer0SeenText, AxiomStreet4Trainer0BeatenText, 0, AxiomStreet4AfterScript
+
+AxiomStreet4Trainer1SeenText:
+	text "I cannot lose."
+	line "Losing would"
+	para "reduce my score,"
+	line "and my score is my"
+	para "pension."
+	done
+
+AxiomStreet4Trainer1BeatenText:
+	text "The simulation has"
+	line "ended. The"
+	para "simulation has"
+	line "also been very"
+	para "boring."
+	done
 
 AxiomStreet4Trainer1:
-	trainer U_SERF, 130, EVENT_GEN_AXIOM_STREET4_1, AxiomStreet4SeenText, AxiomStreet4BeatenText, 0, AxiomStreet4AfterScript
+	trainer U_SERF, 130, EVENT_GEN_AXIOM_STREET4_1, AxiomStreet4Trainer1SeenText, AxiomStreet4Trainer1BeatenText, 0, AxiomStreet4AfterScript
+
+AxiomStreet4Trainer2SeenText:
+	text "My loyalty is"
+	line "absolute. My"
+	para "reasons are"
+	line "classified. Even"
+	para "to me."
+	done
+
+AxiomStreet4Trainer2BeatenText:
+	text "Executing last"
+	line "will. Executing"
+	para "last will. Last"
+	line "will contains a"
+	para "single line: ow."
+	done
 
 AxiomStreet4Trainer2:
-	trainer U_GUARD, 128, EVENT_GEN_AXIOM_STREET4_2, AxiomStreet4SeenText, AxiomStreet4BeatenText, 0, AxiomStreet4AfterScript
+	trainer U_GUARD, 128, EVENT_GEN_AXIOM_STREET4_2, AxiomStreet4Trainer2SeenText, AxiomStreet4Trainer2BeatenText, 0, AxiomStreet4AfterScript
+
+AxiomStreet4Trainer3SeenText:
+	text "This is an"
+	line "official duel."
+	para "Please sign the"
+	line "waiver. The waiver"
+	para "is in my other"
+	line "hand."
+	done
+
+AxiomStreet4Trainer3BeatenText:
+	text "I think you dented"
+	line "my love of rules."
+	done
 
 AxiomStreet4Trainer3:
-	trainer U_BOTCOP, 130, EVENT_GEN_AXIOM_STREET4_3, AxiomStreet4SeenText, AxiomStreet4BeatenText, 0, AxiomStreet4AfterScript
+	trainer U_BOTCOP, 130, EVENT_GEN_AXIOM_STREET4_3, AxiomStreet4Trainer3SeenText, AxiomStreet4Trainer3BeatenText, 0, AxiomStreet4AfterScript
+
+AxiomStreet4Trainer4SeenText:
+	text "I regret nothing."
+	line "I cannot regret."
+	para "It was removed in"
+	line "the last firmware."
+	done
+
+AxiomStreet4Trainer4BeatenText:
+	text "This unit was a"
+	line "good unit. This"
+	para "unit liked a very"
+	line "specific song."
+	done
 
 AxiomStreet4Trainer4:
-	trainer U_DRONE, 129, EVENT_GEN_AXIOM_STREET4_4, AxiomStreet4SeenText, AxiomStreet4BeatenText, 0, AxiomStreet4AfterScript
+	trainer U_DRONE, 129, EVENT_GEN_AXIOM_STREET4_4, AxiomStreet4Trainer4SeenText, AxiomStreet4Trainer4BeatenText, 0, AxiomStreet4AfterScript
+
+AxiomStreet4Trainer5SeenText:
+	text "All humans must be"
+	line "registered."
+	para "Registration fee:"
+	line "one defeat."
+	done
+
+AxiomStreet4Trainer5BeatenText:
+	text "The data point is"
+	line "submitted. Thank"
+	para "you for your"
+	line "service. I'd like"
+	para "a receipt."
+	done
 
 AxiomStreet4Trainer5:
-	trainer U_SERFF, 131, EVENT_GEN_AXIOM_STREET4_5, AxiomStreet4SeenText, AxiomStreet4BeatenText, 0, AxiomStreet4AfterScript
+	trainer U_SERFF, 131, EVENT_GEN_AXIOM_STREET4_5, AxiomStreet4Trainer5SeenText, AxiomStreet4Trainer5BeatenText, 0, AxiomStreet4AfterScript
 
 AxiomStreet4_MapEvents:
 	db 0, 0 ; filler

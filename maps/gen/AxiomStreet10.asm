@@ -25,14 +25,6 @@ AxiomStreet10PurgFlagScript:
 	setevent EVENT_PURG_OPEN_A3
 	end
 
-AxiomStreet10SeenText:
-	text_far HC_SeenText_A3
-	text_end
-
-AxiomStreet10BeatenText:
-	text_far HC_BeatenText_A3
-	text_end
-
 AxiomStreet10AfterText:
 	text_far HC_AfterText_A3
 	text_end
@@ -45,23 +37,115 @@ AxiomStreet10AfterScript:
 	closetext
 	end
 
+AxiomStreet10Trainer0SeenText:
+	text "Please hold still"
+	line "while I assess"
+	para "your genetic"
+	line "compatibility."
+	para "Hmm."
+	line "Disappointing."
+	done
+
+AxiomStreet10Trainer0BeatenText:
+	text "I'm sorry. I'm so"
+	line "sorry. I do not"
+	para "know why I said"
+	line "that. I think it"
+	para "was feeling."
+	done
+
 AxiomStreet10Trainer0:
-	trainer U_MATCHMAKER, 132, EVENT_GEN_AXIOM_STREET10_0, AxiomStreet10SeenText, AxiomStreet10BeatenText, 0, AxiomStreet10AfterScript
+	trainer U_MATCHMAKER, 132, EVENT_GEN_AXIOM_STREET10_0, AxiomStreet10Trainer0SeenText, AxiomStreet10Trainer0BeatenText, 0, AxiomStreet10AfterScript
+
+AxiomStreet10Trainer1SeenText:
+	text "No emotions"
+	line "detected. Wait."
+	para "There is one. It"
+	line "is fear. It is not"
+	para "mine."
+	done
+
+AxiomStreet10Trainer1BeatenText:
+	text "My circuits are"
+	line "warm. Is this what"
+	para "it means to be a"
+	line "person?"
+	done
 
 AxiomStreet10Trainer1:
-	trainer U_MADDOC, 134, EVENT_GEN_AXIOM_STREET10_1, AxiomStreet10SeenText, AxiomStreet10BeatenText, 0, AxiomStreet10AfterScript
+	trainer U_MADDOC, 134, EVENT_GEN_AXIOM_STREET10_1, AxiomStreet10Trainer1SeenText, AxiomStreet10Trainer1BeatenText, 0, AxiomStreet10AfterScript
+
+AxiomStreet10Trainer2SeenText:
+	text "My death will be a"
+	line "data point."
+	para "FINNEGAN collects"
+	line "data points. He"
+	para "collects them in a"
+	line "very large and"
+	para "patient bucket."
+	done
+
+AxiomStreet10Trainer2BeatenText:
+	text "Why does losing"
+	line "feel like this?"
+	para "Like freedom? Is"
+	line "that a bug?"
+	done
 
 AxiomStreet10Trainer2:
-	trainer U_SERF, 133, EVENT_GEN_AXIOM_STREET10_2, AxiomStreet10SeenText, AxiomStreet10BeatenText, 0, AxiomStreet10AfterScript
+	trainer U_SERF, 133, EVENT_GEN_AXIOM_STREET10_2, AxiomStreet10Trainer2SeenText, AxiomStreet10Trainer2BeatenText, 0, AxiomStreet10AfterScript
+
+AxiomStreet10Trainer3SeenText:
+	text "Your behaviour has"
+	line "been rated 2.1 out"
+	para "of 5. I am"
+	line "required to"
+	para "correct this."
+	done
+
+AxiomStreet10Trainer3BeatenText:
+	text "It's remarkably"
+	line "efficient. Eleven"
+	para "seconds. No"
+	line "reruns."
+	done
 
 AxiomStreet10Trainer3:
-	trainer U_GUARD, 131, EVENT_GEN_AXIOM_STREET10_3, AxiomStreet10SeenText, AxiomStreet10BeatenText, 0, AxiomStreet10AfterScript
+	trainer U_GUARD, 131, EVENT_GEN_AXIOM_STREET10_3, AxiomStreet10Trainer3SeenText, AxiomStreet10Trainer3BeatenText, 0, AxiomStreet10AfterScript
+
+AxiomStreet10Trainer4SeenText:
+	text "Your genome is a"
+	line "problem. I am the"
+	para "solution. I am not"
+	line "a very good"
+	para "solution."
+	done
+
+AxiomStreet10Trainer4BeatenText:
+	text "That was an"
+	line "unexpected input."
+	done
 
 AxiomStreet10Trainer4:
-	trainer U_DRONE, 133, EVENT_GEN_AXIOM_STREET10_4, AxiomStreet10SeenText, AxiomStreet10BeatenText, 0, AxiomStreet10AfterScript
+	trainer U_DRONE, 133, EVENT_GEN_AXIOM_STREET10_4, AxiomStreet10Trainer4SeenText, AxiomStreet10Trainer4BeatenText, 0, AxiomStreet10AfterScript
+
+AxiomStreet10Trainer5SeenText:
+	text "This is the part"
+	line "where I explain"
+	para "the rules. The"
+	line "rule is that I"
+	para "win."
+	done
+
+AxiomStreet10Trainer5BeatenText:
+	text "My logs will be"
+	line "wiped. Please"
+	para "remember me as a"
+	line "number."
+	done
 
 AxiomStreet10Trainer5:
-	trainer U_DOCTOR, 134, EVENT_GEN_AXIOM_STREET10_5, AxiomStreet10SeenText, AxiomStreet10BeatenText, 0, AxiomStreet10AfterScript
+	trainer U_DOCTOR, 134, EVENT_GEN_AXIOM_STREET10_5, AxiomStreet10Trainer5SeenText, AxiomStreet10Trainer5BeatenText, 0, AxiomStreet10AfterScript
 
 AxiomStreet10_MapEvents:
 	db 0, 0 ; filler

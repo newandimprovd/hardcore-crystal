@@ -6,14 +6,6 @@ AxiomVault2_MapScripts:
 
 	def_callbacks
 
-AxiomVault2SeenText:
-	text_far HC_SeenText_VT
-	text_end
-
-AxiomVault2BeatenText:
-	text_far HC_BeatenText_VT
-	text_end
-
 AxiomVault2AfterText:
 	text_far HC_AfterText_VT
 	text_end
@@ -26,26 +18,122 @@ AxiomVault2AfterScript:
 	closetext
 	end
 
+AxiomVault2Trainer0SeenText:
+	text "Nobody told me"
+	line "what's inside the"
+	para "crates. Nobody"
+	line "told me not to"
+	para "wonder."
+	done
+
+AxiomVault2Trainer0BeatenText:
+	text "My servo is"
+	line "jammed. My heart"
+	para "is jammed."
+	line "Everything is"
+	para "jammed."
+	done
+
 AxiomVault2Trainer0:
-	trainer U_WARDBOT, 138, EVENT_GEN_AXIOM_VAULT2_0, AxiomVault2SeenText, AxiomVault2BeatenText, 0, AxiomVault2AfterScript
+	trainer U_WARDBOT, 138, EVENT_GEN_AXIOM_VAULT2_0, AxiomVault2Trainer0SeenText, AxiomVault2Trainer0BeatenText, 0, AxiomVault2AfterScript
+
+AxiomVault2Trainer1SeenText:
+	text "Unauthorised"
+	line "visitor in Cold"
+	para "Row 9. Please"
+	line "remain still while"
+	para "I file an"
+	line "incident."
+	done
+
+AxiomVault2Trainer1BeatenText:
+	text "I will be recycled"
+	line "for this. Good."
+	done
 
 AxiomVault2Trainer1:
-	trainer U_BOTCOP, 145, EVENT_GEN_AXIOM_VAULT2_1, AxiomVault2SeenText, AxiomVault2BeatenText, 0, AxiomVault2AfterScript
+	trainer U_BOTCOP, 145, EVENT_GEN_AXIOM_VAULT2_1, AxiomVault2Trainer1SeenText, AxiomVault2Trainer1BeatenText, 0, AxiomVault2AfterScript
+
+AxiomVault2Trainer2SeenText:
+	text "I was supposed to"
+	line "defrost today. I'm"
+	para "still thawing my"
+	line "temper."
+	done
+
+AxiomVault2Trainer2BeatenText:
+	text "My warranty did"
+	line "not cover this."
+	done
 
 AxiomVault2Trainer2:
-	trainer U_BOTCOP, 146, EVENT_GEN_AXIOM_VAULT2_2, AxiomVault2SeenText, AxiomVault2BeatenText, 0, AxiomVault2AfterScript
+	trainer U_BOTCOP, 146, EVENT_GEN_AXIOM_VAULT2_2, AxiomVault2Trainer2SeenText, AxiomVault2Trainer2BeatenText, 0, AxiomVault2AfterScript
+
+AxiomVault2Trainer3SeenText:
+	text "The state keeps"
+	line "what it cannot"
+	para "use, which is why"
+	line "I am still here."
+	para "Battle."
+	done
+
+AxiomVault2Trainer3BeatenText:
+	text "Alarm triggered."
+	line "The alarm is me."
+	done
 
 AxiomVault2Trainer3:
-	trainer U_COURIER, 132, EVENT_GEN_AXIOM_VAULT2_3, AxiomVault2SeenText, AxiomVault2BeatenText, 0, AxiomVault2AfterScript
+	trainer U_COURIER, 132, EVENT_GEN_AXIOM_VAULT2_3, AxiomVault2Trainer3SeenText, AxiomVault2Trainer3BeatenText, 0, AxiomVault2AfterScript
+
+AxiomVault2Trainer4SeenText:
+	text "Everything down"
+	line "here is frozen."
+	para "Including my sense"
+	line "of humour. Battle."
+	done
+
+AxiomVault2Trainer4BeatenText:
+	text "Don't wake the"
+	line "crates. They've"
+	para "had a very long"
+	line "day."
+	done
 
 AxiomVault2Trainer4:
-	trainer U_DOCTOR, 144, EVENT_GEN_AXIOM_VAULT2_4, AxiomVault2SeenText, AxiomVault2BeatenText, 0, AxiomVault2AfterScript
+	trainer U_DOCTOR, 144, EVENT_GEN_AXIOM_VAULT2_4, AxiomVault2Trainer4SeenText, AxiomVault2Trainer4BeatenText, 0, AxiomVault2AfterScript
+
+AxiomVault2Trainer5SeenText:
+	text "Cold storage is a"
+	line "family. I am the"
+	para "family's very cold"
+	line "uncle."
+	done
+
+AxiomVault2Trainer5BeatenText:
+	text "Error. Pride not"
+	line "found."
+	done
 
 AxiomVault2Trainer5:
-	trainer U_BOT, 141, EVENT_GEN_AXIOM_VAULT2_5, AxiomVault2SeenText, AxiomVault2BeatenText, 0, AxiomVault2AfterScript
+	trainer U_BOT, 141, EVENT_GEN_AXIOM_VAULT2_5, AxiomVault2Trainer5SeenText, AxiomVault2Trainer5BeatenText, 0, AxiomVault2AfterScript
+
+AxiomVault2Trainer6SeenText:
+	text "I have counted"
+	line "every crate. There"
+	para "are zero crates."
+	line "There was a leak."
+	para "Fight me."
+	done
+
+AxiomVault2Trainer6BeatenText:
+	text "Visitor one. Unit"
+	line "zero. I will not"
+	para "be mentioning the"
+	line "score."
+	done
 
 AxiomVault2Trainer6:
-	trainer U_BOTCOP, 147, EVENT_GEN_AXIOM_VAULT2_6, AxiomVault2SeenText, AxiomVault2BeatenText, 0, AxiomVault2AfterScript
+	trainer U_BOTCOP, 147, EVENT_GEN_AXIOM_VAULT2_6, AxiomVault2Trainer6SeenText, AxiomVault2Trainer6BeatenText, 0, AxiomVault2AfterScript
 
 AxiomVault2Hermit0:
 	faceplayer

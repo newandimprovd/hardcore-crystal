@@ -6,14 +6,6 @@ AxiomVault1_MapScripts:
 
 	def_callbacks
 
-AxiomVault1SeenText:
-	text_far HC_SeenText_VT
-	text_end
-
-AxiomVault1BeatenText:
-	text_far HC_BeatenText_VT
-	text_end
-
 AxiomVault1AfterText:
 	text_far HC_AfterText_VT
 	text_end
@@ -26,26 +18,128 @@ AxiomVault1AfterScript:
 	closetext
 	end
 
+AxiomVault1Trainer0SeenText:
+	text "I'm a security"
+	line "unit. I do the"
+	para "thing. The thing"
+	line "is this."
+	done
+
+AxiomVault1Trainer0BeatenText:
+	text "Take the key."
+	line "Please. The"
+	para "corridor is long"
+	line "and I'm tired."
+	done
+
 AxiomVault1Trainer0:
-	trainer U_BOTCOP, 144, EVENT_GEN_AXIOM_VAULT1_0, AxiomVault1SeenText, AxiomVault1BeatenText, 0, AxiomVault1AfterScript
+	trainer U_BOTCOP, 144, EVENT_GEN_AXIOM_VAULT1_0, AxiomVault1Trainer0SeenText, AxiomVault1Trainer0BeatenText, 0, AxiomVault1AfterScript
+
+AxiomVault1Trainer1SeenText:
+	text "You are not on the"
+	line "manifest. Neither"
+	para "am I. Fight me, we"
+	line "are equals."
+	done
+
+AxiomVault1Trainer1BeatenText:
+	text "You win. Please"
+	line "defrost somebody"
+	para "kind on your way"
+	line "out."
+	done
 
 AxiomVault1Trainer1:
-	trainer U_COURIER, 129, EVENT_GEN_AXIOM_VAULT1_1, AxiomVault1SeenText, AxiomVault1BeatenText, 0, AxiomVault1AfterScript
+	trainer U_COURIER, 129, EVENT_GEN_AXIOM_VAULT1_1, AxiomVault1Trainer1SeenText, AxiomVault1Trainer1BeatenText, 0, AxiomVault1AfterScript
+
+AxiomVault1Trainer2SeenText:
+	text "The archive is"
+	line "closed. The"
+	para "archive has always"
+	line "been closed."
+	para "Welcome."
+	done
+
+AxiomVault1Trainer2BeatenText:
+	text "Defeat logged."
+	line "Filed under:"
+	para "expected."
+	done
 
 AxiomVault1Trainer2:
-	trainer U_WARDBOT, 137, EVENT_GEN_AXIOM_VAULT1_2, AxiomVault1SeenText, AxiomVault1BeatenText, 0, AxiomVault1AfterScript
+	trainer U_WARDBOT, 137, EVENT_GEN_AXIOM_VAULT1_2, AxiomVault1Trainer2SeenText, AxiomVault1Trainer2BeatenText, 0, AxiomVault1AfterScript
+
+AxiomVault1Trainer3SeenText:
+	text "I was told to"
+	line "guard stock."
+	para "Nobody said from"
+	line "whom. Today it is"
+	para "you."
+	done
+
+AxiomVault1Trainer3BeatenText:
+	text "My warranty has"
+	line "been voided by"
+	para "fists."
+	done
 
 AxiomVault1Trainer3:
-	trainer U_COURIER, 130, EVENT_GEN_AXIOM_VAULT1_3, AxiomVault1SeenText, AxiomVault1BeatenText, 0, AxiomVault1AfterScript
+	trainer U_COURIER, 130, EVENT_GEN_AXIOM_VAULT1_3, AxiomVault1Trainer3SeenText, AxiomVault1Trainer3BeatenText, 0, AxiomVault1AfterScript
+
+AxiomVault1Trainer4SeenText:
+	text "Row after row of"
+	line "tiny blankets. I'd"
+	para "rather not talk"
+	line "about the"
+	para "blankets."
+	done
+
+AxiomVault1Trainer4BeatenText:
+	text "I suppose I am"
+	line "obsolete. Everyone"
+	para "here is."
+	done
 
 AxiomVault1Trainer4:
-	trainer U_COURIER, 131, EVENT_GEN_AXIOM_VAULT1_4, AxiomVault1SeenText, AxiomVault1BeatenText, 0, AxiomVault1AfterScript
+	trainer U_COURIER, 131, EVENT_GEN_AXIOM_VAULT1_4, AxiomVault1Trainer4SeenText, AxiomVault1Trainer4BeatenText, 0, AxiomVault1AfterScript
+
+AxiomVault1Trainer5SeenText:
+	text "Visitors are"
+	line "logged in the"
+	para "book. The book is"
+	line "in the freezer. So"
+	para "is the book's"
+	line "author."
+	done
+
+AxiomVault1Trainer5BeatenText:
+	text "Report: one"
+	line "intruder, one"
+	para "victory, no"
+	line "witnesses. Close"
+	para "enough."
+	done
 
 AxiomVault1Trainer5:
-	trainer U_DRONE, 136, EVENT_GEN_AXIOM_VAULT1_5, AxiomVault1SeenText, AxiomVault1BeatenText, 0, AxiomVault1AfterScript
+	trainer U_DRONE, 136, EVENT_GEN_AXIOM_VAULT1_5, AxiomVault1Trainer5SeenText, AxiomVault1Trainer5BeatenText, 0, AxiomVault1AfterScript
+
+AxiomVault1Trainer6SeenText:
+	text "Do you hear that"
+	line "humming? That is"
+	para "the sound of"
+	line "deferred"
+	para "decisions."
+	done
+
+AxiomVault1Trainer6BeatenText:
+	text "I will be thawed."
+	line "I will be"
+	para "refrozen. I'm used"
+	line "to it."
+	done
 
 AxiomVault1Trainer6:
-	trainer U_DRONE, 137, EVENT_GEN_AXIOM_VAULT1_6, AxiomVault1SeenText, AxiomVault1BeatenText, 0, AxiomVault1AfterScript
+	trainer U_DRONE, 137, EVENT_GEN_AXIOM_VAULT1_6, AxiomVault1Trainer6SeenText, AxiomVault1Trainer6BeatenText, 0, AxiomVault1AfterScript
 
 AxiomVault1Hermit0:
 	faceplayer
