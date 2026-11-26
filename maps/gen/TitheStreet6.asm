@@ -46,17 +46,17 @@ TitheStreet6Pickup:
 	itemball TM_SLEEP_TALK
 
 TitheStreet6Hidden:
-	hiddenitem ETHER, EVENT_GEN_TITHE_STREET6_HIDDEN
+	hiddenitem REVIVE, EVENT_GEN_TITHE_STREET6_HIDDEN
 
 TitheStreet6Hermit:
 	jumptextfaceplayer TitheStreet6HermitText
 
 TitheStreet6HermitText:
-	text "I've lived here"
-	line "nine years. Nobody"
-	para "has come to arrest"
-	line "me. I find that"
-	para "deeply insulting."
+	text "Shh. The trainers"
+	line "can't see you when"
+	para "you sit down. I"
+	line "have been sitting"
+	para "down since March."
 	done
 
 TitheStreet6AfterText:
@@ -195,17 +195,18 @@ TitheStreet6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 13, TITHE_STREET6_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  2, 10, BGEVENT_ITEM, TitheStreet6Hidden
+	bg_event  4, 19, BGEVENT_ITEM, TitheStreet6Hidden
 
 	def_object_events
 	object_event 10, 30, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TitheStreet6GateScript, EVENT_GEN_TITHE_STREET6_GATE
 	object_event 11, 30, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TitheStreet6GateScript, EVENT_GEN_TITHE_STREET6_GATE
-	object_event  5, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet6Pickup, EVENT_GEN_TITHE_STREET6_PICKUP
-	object_event  4, 18, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet6Hermit, -1
+	object_event  9, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet6Pickup, EVENT_GEN_TITHE_STREET6_PICKUP
+	object_event  2, 15, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheStreet6Hermit, -1
 	object_event  8, 28, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet6Trainer0, -1
 	object_event 13, 24, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet6Trainer1, -1
 	object_event 12, 20, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet6Trainer2, -1

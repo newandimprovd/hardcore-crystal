@@ -16,9 +16,11 @@ TitheStreet12Hermit:
 	jumptextfaceplayer TitheStreet12HermitText
 
 TitheStreet12HermitText:
-	text "Do not drink from"
-	line "the stream. It has"
-	para "been taxed."
+	text "A nun told me this"
+	line "glade is blessed."
+	para "It is not. She was"
+	line "just selling the"
+	para "deed."
 	done
 
 TitheStreet12AfterText:

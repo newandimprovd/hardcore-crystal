@@ -16,10 +16,11 @@ LotusStreet4Hermit:
 	jumptextfaceplayer LotusStreet4HermitText
 
 LotusStreet4HermitText:
-	text "The tide took my"
-	line "watch. It also"
-	para "took my reasons. I"
-	line "miss the watch."
+	text "I live in a shell."
+	line "I cannot remember"
+	para "who was in it"
+	line "before. We share"
+	para "the lease."
 	done
 
 LotusStreet4AfterText:

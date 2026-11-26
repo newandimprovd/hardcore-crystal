@@ -13,10 +13,10 @@ AxiomBendA8Hermit:
 	jumptextfaceplayer AxiomBendA8HermitText
 
 AxiomBendA8HermitText:
-	text "The glitch in the"
-	line "system is me."
-	para "Please don't patch"
-	line "me."
+	text "Every axiom here"
+	line "is true until it"
+	para "becomes"
+	line "inconvenient."
 	done
 
 AxiomBendA8_MapEvents:

@@ -13,12 +13,11 @@ AxiomBendA12Hermit:
 	jumptextfaceplayer AxiomBendA12HermitText
 
 AxiomBendA12HermitText:
-	text "The sensors here"
-	line "are down. The"
-	para "sensors are always"
-	line "down. It is how"
-	para "the sensors"
-	line "survive."
+	text "I escaped the"
+	line "Registry. I'm no"
+	para "longer a number."
+	line "I'm a letter. The"
+	para "letter is Q."
 	done
 
 AxiomBendA12_MapEvents:

@@ -16,11 +16,12 @@ AxiomStreet13Hermit:
 	jumptextfaceplayer AxiomStreet13HermitText
 
 AxiomStreet13HermitText:
-	text "I have proven that"
-	line "I exist. It took"
-	para "six months. The"
-	line "proof expired on"
-	para "Tuesday."
+	text "Do not tell them"
+	line "where I am. They"
+	para "will say they"
+	line "already know. It"
+	para "is a bluff."
+	line "Probably."
 	done
 
 AxiomStreet13AfterText:

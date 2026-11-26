@@ -13,11 +13,12 @@ TitheBendB9Hermit:
 	jumptextfaceplayer TitheBendB9HermitText
 
 TitheBendB9HermitText:
-	text "I used to be a"
-	line "loan officer. Now"
-	para "I'm a loan."
-	line "Somebody owes me"
-	para "an apology."
+	text "The Church says"
+	line "the poor shall"
+	para "inherit the earth."
+	line "I am in line. The"
+	para "earth is behind a"
+	line "lot of paperwork."
 	done
 
 TitheBendB9_MapEvents:

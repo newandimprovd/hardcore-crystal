@@ -16,11 +16,11 @@ LotusStreet14Hermit:
 	jumptextfaceplayer LotusStreet14HermitText
 
 LotusStreet14HermitText:
-	text "I've been lying on"
-	line "this beach for"
-	para "eleven years. The"
-	line "tide has asked me"
-	para "to move twice."
+	text "I saw a trainer"
+	line "yawn mid-attack."
+	para "It was the most"
+	line "honest violence I"
+	para "have ever seen."
 	done
 
 LotusStreet14AfterText:

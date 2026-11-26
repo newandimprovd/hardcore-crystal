@@ -21,12 +21,11 @@ TitheStreet11Hermit:
 	jumptextfaceplayer TitheStreet11HermitText
 
 TitheStreet11HermitText:
-	text "I have been"
-	line "praying for rain."
-	para "It rained. On the"
-	line "neighbor. I have"
-	para "been praying for"
-	line "him ever since."
+	text "People on the road"
+	line "keep screaming and"
+	para "fainting. I think"
+	line "it's a wellness"
+	para "program."
 	done
 
 TitheStreet11AfterText:
@@ -166,17 +165,18 @@ TitheStreet11_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 13, TITHE_STREET11_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 11, 13, BGEVENT_ITEM, TitheStreet11Hidden
+	bg_event 10, 18, BGEVENT_ITEM, TitheStreet11Hidden
 
 	def_object_events
 	object_event 16, 30, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11BoulderScript, -1
 	object_event 17, 30, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11BoulderScript, -1
-	object_event 13, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet11Pickup, EVENT_GEN_TITHE_STREET11_PICKUP
-	object_event  2, 17, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheStreet11Hermit, -1
+	object_event  9, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet11Pickup, EVENT_GEN_TITHE_STREET11_PICKUP
+	object_event  7, 16, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11Hermit, -1
 	object_event 14, 28, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer0, -1
 	object_event 19, 28, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer1, -1
 	object_event 16, 24, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer2, -1

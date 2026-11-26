@@ -10,17 +10,17 @@ TitheStreet5Pickup:
 	itemball TM_SNORE
 
 TitheStreet5Hidden:
-	hiddenitem AWAKENING, EVENT_GEN_TITHE_STREET5_HIDDEN
+	hiddenitem ETHER, EVENT_GEN_TITHE_STREET5_HIDDEN
 
 TitheStreet5Hermit:
 	jumptextfaceplayer TitheStreet5HermitText
 
 TitheStreet5HermitText:
-	text "Take the roots."
-	line "Take the berries."
-	para "Take whatever. I'm"
-	line "not the"
-	para "government."
+	text "If you meet the"
+	line "Mayor, tell him"
+	para "the hole in my"
+	line "roof is his fault."
+	para "And the roof."
 	done
 
 TitheStreet5AfterText:
@@ -144,15 +144,16 @@ TitheStreet5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 13, TITHE_STREET5_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 18, BGEVENT_ITEM, TitheStreet5Hidden
+	bg_event  6, 17, BGEVENT_ITEM, TitheStreet5Hidden
 
 	def_object_events
-	object_event  3, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet5Pickup, EVENT_GEN_TITHE_STREET5_PICKUP
-	object_event  6, 17, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheStreet5Hermit, -1
+	object_event  7, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet5Pickup, EVENT_GEN_TITHE_STREET5_PICKUP
+	object_event  4, 19, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheStreet5Hermit, -1
 	object_event  8, 24, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer0, -1
 	object_event 13, 24, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer1, -1
 	object_event 12, 20, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet5Trainer2, -1

@@ -16,11 +16,9 @@ DisStreet9Hermit:
 	jumptextfaceplayer DisStreet9HermitText
 
 DisStreet9HermitText:
-	text "Come back in a"
-	line "century. I will be"
-	para "less angry. Or the"
-	line "same. The numbers"
-	para "are close."
+	text "Down here 'no"
+	line "comment' is a"
+	para "full-time job."
 	done
 
 DisStreet9AfterText:

@@ -16,10 +16,10 @@ AxiomStreet14Hermit:
 	jumptextfaceplayer AxiomStreet14HermitText
 
 AxiomStreet14HermitText:
-	text "I'm a robot. I'm"
-	line "not allowed to say"
-	para "that. Beep. I"
-	line "mean, 'tree'."
+	text "The glitch in the"
+	line "system is me."
+	para "Please don't patch"
+	line "me."
 	done
 
 AxiomStreet14AfterText:

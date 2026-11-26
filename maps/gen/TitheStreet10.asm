@@ -13,11 +13,12 @@ TitheStreet10Hermit:
 	jumptextfaceplayer TitheStreet10HermitText
 
 TitheStreet10HermitText:
-	text "Shh. The trainers"
-	line "can't see you when"
-	para "you sit down. I"
-	line "have been sitting"
-	para "down since March."
+	text "I left the city to"
+	line "escape the tithe."
+	para "The trees also"
+	line "want ten percent."
+	para "Of what, they"
+	line "won't say."
 	done
 
 TitheStreet10PurgFlagScript:

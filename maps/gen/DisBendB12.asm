@@ -13,11 +13,9 @@ DisBendB12Hermit:
 	jumptextfaceplayer DisBendB12HermitText
 
 DisBendB12HermitText:
-	text "The flames are"
-	line "warm. I stopped"
-	para "complaining. The"
-	line "complaint box is"
-	para "also on fire."
+	text "Be careful. The"
+	line "trainers are the"
+	para "nice ones."
 	done
 
 DisBendB12_MapEvents:

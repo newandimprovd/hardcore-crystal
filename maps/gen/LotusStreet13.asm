@@ -10,7 +10,7 @@ LotusStreet13Pickup:
 	itemball TM_ZAP_CANNON
 
 LotusStreet13Hidden:
-	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET13_HIDDEN
+	hiddenitem PP_UP, EVENT_GEN_LOTUS_STREET13_HIDDEN
 
 LotusStreet13GiftHermit:
 	faceplayer
@@ -195,15 +195,16 @@ LotusStreet13_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 18, 11, LOTUS_STREET13_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 20, 10, BGEVENT_ITEM, LotusStreet13Hidden
+	bg_event 16, 12, BGEVENT_ITEM, LotusStreet13Hidden
 
 	def_object_events
-	object_event 20,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet13Pickup, EVENT_GEN_LOTUS_STREET13_PICKUP
-	object_event 15, 15, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet13GiftHermit, -1
+	object_event 17, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet13Pickup, EVENT_GEN_LOTUS_STREET13_PICKUP
+	object_event 20, 13, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet13GiftHermit, -1
 	object_event 14, 28, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer0, -1
 	object_event 15, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer1, -1
 	object_event 10, 20, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet13Trainer2, -1

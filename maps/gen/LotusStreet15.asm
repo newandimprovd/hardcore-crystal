@@ -16,10 +16,11 @@ LotusStreet15Hermit:
 	jumptextfaceplayer LotusStreet15HermitText
 
 LotusStreet15HermitText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+	text "Everyone says the"
+	line "sea is calming."
+	para "The sea is a bully"
+	line "with good"
+	para "lighting."
 	done
 
 LotusStreet15AfterText:

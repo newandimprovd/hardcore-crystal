@@ -3,7 +3,7 @@ import random
 
 from .flags import flag_once
 from . import boutique as shops
-from .layout import (FACE, boss_room, chain, gatehouse, house_interior, boutique_interior, lane, mart_interior, plaza, pokecenter_interior)
+from .layout import (FACE, boss_room, chain, gatehouse, house_interior, boutique_interior, hub, lane, mart_interior, plaza, pokecenter_interior)
 from .town import plaza2
 from .lines3 import AREA as L3
 from .wayfolk import GIFT, GIFT_AFTER, GIFT_HERMITS, GIFT_ITEMS, HERMIT, TOWNIE, TOWNIE2
@@ -126,6 +126,13 @@ def furnish_lane(w, g, m, reserve, total_lanes=75):
     import random
     from .people import plain_npc
     R = random.Random("furnish:" + m.name)
+    for hi_, door in enumerate(getattr(m, "huts", [])):  # a hut in a glade: the room behind the door, its dweller and what he gives
+        from .huts import hut_interior
+        tag_ = area_tag(m)
+        item = R.choice(HIDDEN[min(2, ("Tithe", "Grove", "Axiom", "Lotus", "Dis").index(tag_) // 2)])
+        pool = HERMIT[tag_] + persona.HERMIT_MORE[tag_]
+        hut_interior(g, w, f"{m.name}Hut{hi_ or ''}", door, m.landmark, hub(g, "house", 0, R.choice(people_sprites(g)), R.choice(NPC_PALS)),
+                     fresh_line(w, tag_, "hermit", pool), fresh_line(w, tag_, "hermit", pool), item)
     cells = [cl for gd in getattr(m, "glades", []) for cl in gd["cells"]]
     if not cells:
         return

@@ -16,9 +16,12 @@ AxiomStreet8Hermit:
 	jumptextfaceplayer AxiomStreet8HermitText
 
 AxiomStreet8HermitText:
-	text "Don't speak"
-	line "loudly. The leaves"
-	para "are audited."
+	text "The sensors here"
+	line "are down. The"
+	para "sensors are always"
+	line "down. It is how"
+	para "the sensors"
+	line "survive."
 	done
 
 AxiomStreet8AfterText:

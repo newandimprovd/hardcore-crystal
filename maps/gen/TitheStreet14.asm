@@ -16,11 +16,11 @@ TitheStreet14Hermit:
 	jumptextfaceplayer TitheStreet14HermitText
 
 TitheStreet14HermitText:
-	text "I lost a bet with"
-	line "the Mayor. The"
-	para "stake was my"
-	line "shadow. It is on a"
-	para "payroll."
+	text "If you meet the"
+	line "Mayor, tell him"
+	para "the hole in my"
+	line "roof is his fault."
+	para "And the roof."
 	done
 
 TitheStreet14AfterText:

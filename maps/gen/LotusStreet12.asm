@@ -16,9 +16,10 @@ LotusStreet12Hermit:
 	jumptextfaceplayer LotusStreet12HermitText
 
 LotusStreet12HermitText:
-	text "The cocktails are"
-	line "free. Meaning is"
-	para "extra."
+	text "I came here to"
+	line "find myself. I"
+	para "found a towel. It"
+	line "is a start."
 	done
 
 LotusStreet12AfterText:

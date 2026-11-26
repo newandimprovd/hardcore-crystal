@@ -16,12 +16,12 @@ LotusStreet9Hermit:
 	jumptextfaceplayer LotusStreet9HermitText
 
 LotusStreet9HermitText:
-	text "I keep a journal."
-	line "Today's entry:"
-	para "'Same.'"
-	line "Yesterday's:"
-	para "'Same.' The day"
-	line "before: 'Same.'"
+	text "I have forgotten"
+	line "what day it is. It"
+	para "is wonderful."
+	line "Nobody has told"
+	para "me. I hope it"
+	line "stays that way."
 	done
 
 LotusStreet9AfterText:

@@ -16,12 +16,10 @@ AxiomStreet7Hermit:
 	jumptextfaceplayer AxiomStreet7HermitText
 
 AxiomStreet7HermitText:
-	text "Do not tell them"
-	line "where I am. They"
-	para "will say they"
-	line "already know. It"
-	para "is a bluff."
-	line "Probably."
+	text "I deleted myself"
+	line "from the registry."
+	para "Now I am free. And"
+	line "also uninsured."
 	done
 
 AxiomStreet7AfterText:

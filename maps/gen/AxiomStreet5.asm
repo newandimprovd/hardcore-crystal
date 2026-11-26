@@ -9,18 +9,16 @@ AxiomStreet5_MapScripts:
 AxiomStreet5Pickup:
 	itemball SUPER_POTION
 
-AxiomStreet5Hidden:
-	hiddenitem ELIXER, EVENT_GEN_AXIOM_STREET5_HIDDEN
-
 AxiomStreet5Hermit:
 	jumptextfaceplayer AxiomStreet5HermitText
 
 AxiomStreet5HermitText:
-	text "I escaped the"
-	line "Registry. I'm no"
-	para "longer a number."
-	line "I'm a letter. The"
-	para "letter is Q."
+	text "Do not tell them"
+	line "where I am. They"
+	para "will say they"
+	line "already know. It"
+	para "is a bluff."
+	line "Probably."
 	done
 
 AxiomStreet5AfterText:
@@ -162,15 +160,15 @@ AxiomStreet5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 18, 19, AXIOM_STREET5_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 17, 16, BGEVENT_ITEM, AxiomStreet5Hidden
 
 	def_object_events
-	object_event 17, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet5Pickup, EVENT_GEN_AXIOM_STREET5_PICKUP
-	object_event 18, 17, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomStreet5Hermit, -1
+	object_event 20, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet5Pickup, EVENT_GEN_AXIOM_STREET5_PICKUP
+	object_event 19, 21, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet5Hermit, -1
 	object_event  8, 28, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer0, -1
 	object_event  8, 24, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer1, -1
 	object_event 13, 24, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer2, -1

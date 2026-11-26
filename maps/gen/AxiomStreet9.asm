@@ -10,16 +10,17 @@ AxiomStreet9Pickup:
 	itemball ETHER
 
 AxiomStreet9Hidden:
-	hiddenitem ETHER, EVENT_GEN_AXIOM_STREET9_HIDDEN
+	hiddenitem PP_UP, EVENT_GEN_AXIOM_STREET9_HIDDEN
 
 AxiomStreet9Hermit:
 	jumptextfaceplayer AxiomStreet9HermitText
 
 AxiomStreet9HermitText:
-	text "I deleted myself"
-	line "from the registry."
-	para "Now I am free. And"
-	line "also uninsured."
+	text "This glade is not"
+	line "on the map. I am"
+	para "not on the map. We"
+	line "are a perfect"
+	para "couple."
 	done
 
 AxiomStreet9AfterText:
@@ -163,15 +164,16 @@ AxiomStreet9_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 11, AXIOM_STREET9_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 28, BGEVENT_ITEM, AxiomStreet9Hidden
+	bg_event  3, 26, BGEVENT_ITEM, AxiomStreet9Hidden
 
 	def_object_events
-	object_event  6, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet9Pickup, EVENT_GEN_AXIOM_STREET9_PICKUP
-	object_event  2, 26, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomStreet9Hermit, -1
+	object_event  7, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet9Pickup, EVENT_GEN_AXIOM_STREET9_PICKUP
+	object_event  2, 27, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomStreet9Hermit, -1
 	object_event 16, 28, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer0, -1
 	object_event 17, 24, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer1, -1
 	object_event  8, 20, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer2, -1

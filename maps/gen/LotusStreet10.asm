@@ -16,11 +16,11 @@ LotusStreet10Hermit:
 	jumptextfaceplayer LotusStreet10HermitText
 
 LotusStreet10HermitText:
-	text "Everyone says the"
-	line "sea is calming."
-	para "The sea is a bully"
-	line "with good"
-	para "lighting."
+	text "Everyone is so"
+	line "relaxed here."
+	para "That's what giving"
+	line "up looks like with"
+	para "a tan."
 	done
 
 LotusStreet10PurgFlagScript:

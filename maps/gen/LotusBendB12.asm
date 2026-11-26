@@ -13,11 +13,11 @@ LotusBendB12Hermit:
 	jumptextfaceplayer LotusBendB12HermitText
 
 LotusBendB12HermitText:
-	text "Everyone is so"
-	line "relaxed here."
-	para "That's what giving"
-	line "up looks like with"
-	para "a tan."
+	text "I live in a shell."
+	line "I cannot remember"
+	para "who was in it"
+	line "before. We share"
+	para "the lease."
 	done
 
 LotusBendB12_MapEvents:

@@ -46,18 +46,17 @@ AxiomStreet6Pickup:
 	itemball TM_DRAGONBREATH
 
 AxiomStreet6Hidden:
-	hiddenitem ELIXER, EVENT_GEN_AXIOM_STREET6_HIDDEN
+	hiddenitem ETHER, EVENT_GEN_AXIOM_STREET6_HIDDEN
 
 AxiomStreet6Hermit:
 	jumptextfaceplayer AxiomStreet6HermitText
 
 AxiomStreet6HermitText:
-	text "Form 27-B:"
-	line "'Request to leave"
-	para "Form 27-A'. I"
-	line "filed it. Nobody"
-	para "replied. This is"
-	line "freedom."
+	text "The machines here"
+	line "are polite. They"
+	para "kill you with a"
+	line "smile and a"
+	para "receipt."
 	done
 
 AxiomStreet6AfterText:
@@ -199,17 +198,18 @@ AxiomStreet6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 23, AXIOM_STREET6_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 20, 14, BGEVENT_ITEM, AxiomStreet6Hidden
+	bg_event  9, 29, BGEVENT_ITEM, AxiomStreet6Hidden
 
 	def_object_events
 	object_event 18, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet6GateScript, EVENT_GEN_AXIOM_STREET6_GATE
 	object_event 19, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet6GateScript, EVENT_GEN_AXIOM_STREET6_GATE
-	object_event  4, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet6Pickup, EVENT_GEN_AXIOM_STREET6_PICKUP
-	object_event 11, 23, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomStreet6Hermit, -1
+	object_event 19, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet6Pickup, EVENT_GEN_AXIOM_STREET6_PICKUP
+	object_event  8, 25, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet6Hermit, -1
 	object_event 16, 28, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet6Trainer0, -1
 	object_event 16, 24, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet6Trainer1, -1
 	object_event 21, 24, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet6Trainer2, -1

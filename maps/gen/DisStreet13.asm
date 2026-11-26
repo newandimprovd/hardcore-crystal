@@ -9,19 +9,14 @@ DisStreet13_MapScripts:
 DisStreet13Pickup:
 	itemball FULL_HEAL
 
-DisStreet13Hidden:
-	hiddenitem PP_UP, EVENT_GEN_DIS_STREET13_HIDDEN
-
 DisStreet13Hermit:
 	jumptextfaceplayer DisStreet13HermitText
 
 DisStreet13HermitText:
-	text "I found a corner"
-	line "nobody has"
-	para "tortured yet. I"
-	line "call it home."
-	para "Don't tell"
-	line "management."
+	text "I am not hiding. I"
+	line "am between"
+	para "circles. It is a"
+	line "zoning issue."
 	done
 
 DisStreet13AfterText:
@@ -158,15 +153,15 @@ DisStreet13_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 15, DIS_STREET13_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 19, BGEVENT_ITEM, DisStreet13Hidden
 
 	def_object_events
-	object_event  7, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet13Pickup, EVENT_GEN_DIS_STREET13_PICKUP
-	object_event  8, 12, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisStreet13Hermit, -1
+	object_event 11, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet13Pickup, EVENT_GEN_DIS_STREET13_PICKUP
+	object_event  4, 18, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisStreet13Hermit, -1
 	object_event  6, 28, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet13Trainer0, -1
 	object_event 15, 24, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet13Trainer1, -1
 	object_event 14, 20, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet13Trainer2, -1

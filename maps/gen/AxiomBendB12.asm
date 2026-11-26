@@ -13,11 +13,12 @@ AxiomBendB12Hermit:
 	jumptextfaceplayer AxiomBendB12HermitText
 
 AxiomBendB12HermitText:
-	text "A bot asked me for"
-	line "ID. I showed it a"
-	para "leaf. It accepted."
-	line "We are now"
-	para "partners."
+	text "Form 27-B:"
+	line "'Request to leave"
+	para "Form 27-A'. I"
+	line "filed it. Nobody"
+	para "replied. This is"
+	line "freedom."
 	done
 
 AxiomBendB12_MapEvents:

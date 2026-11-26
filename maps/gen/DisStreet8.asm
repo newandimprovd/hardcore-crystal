@@ -10,16 +10,17 @@ DisStreet8Pickup:
 	itemball ELIXER
 
 DisStreet8Hidden:
-	hiddenitem PP_UP, EVENT_GEN_DIS_STREET8_HIDDEN
+	hiddenitem ELIXER, EVENT_GEN_DIS_STREET8_HIDDEN
 
 DisStreet8Hermit:
 	jumptextfaceplayer DisStreet8HermitText
 
 DisStreet8HermitText:
-	text "I used to be a"
-	line "lawyer. Now I'm a"
-	para "rock. The pay is"
-	line "similar."
+	text "Come back in a"
+	line "century. I will be"
+	para "less angry. Or the"
+	line "same. The numbers"
+	para "are close."
 	done
 
 DisStreet8AfterText:
@@ -144,15 +145,16 @@ DisStreet8_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 18, 15, DIS_STREET8_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 20, 21, BGEVENT_ITEM, DisStreet8Hidden
+	bg_event 18, 19, BGEVENT_ITEM, DisStreet8Hidden
 
 	def_object_events
-	object_event 21, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet8Pickup, EVENT_GEN_DIS_STREET8_PICKUP
-	object_event 21, 20, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisStreet8Hermit, -1
+	object_event 21, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet8Pickup, EVENT_GEN_DIS_STREET8_PICKUP
+	object_event 19, 21, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisStreet8Hermit, -1
 	object_event 12, 24, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer0, -1
 	object_event  8, 20, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer1, -1
 	object_event 13, 20, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer2, -1

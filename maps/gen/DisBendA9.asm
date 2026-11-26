@@ -13,12 +13,11 @@ DisBendA9Hermit:
 	jumptextfaceplayer DisBendA9HermitText
 
 DisBendA9HermitText:
-	text "The demons are"
-	line "very professional."
-	para "They send a"
-	line "thank-you note"
-	para "after the"
-	line "screaming."
+	text "A demon asked me"
+	line "for my soul. I"
+	para "said it was in the"
+	line "shop. He is"
+	para "waiting."
 	done
 
 DisBendA9_MapEvents:

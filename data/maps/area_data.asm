@@ -56,6 +56,8 @@ SECTION "Area Attributes", ROMX
 	connection north, TithePlaza3, TITHE_PLAZA3, -5
 	connection south, TitheStreet4, TITHE_STREET4, 0
 
+	map_attributes TitheStreet5Hut, TITHE_STREET5_HUT, $00
+
 	map_attributes TithePlaza3, TITHE_PLAZA3, $00
 	connection north, TitheStreet6, TITHE_STREET6, 0
 	connection south, TitheStreet5, TITHE_STREET5, 5
@@ -71,6 +73,8 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheStreet6, TITHE_STREET6, $00
 	connection north, TitheStreet7, TITHE_STREET7, 0
 	connection south, TithePlaza3, TITHE_PLAZA3, 0
+
+	map_attributes TitheStreet6Hut, TITHE_STREET6_HUT, $00
 
 	map_attributes TitheStreet7, TITHE_STREET7, $00
 	connection north, TithePlaza4, TITHE_PLAZA4, -11
@@ -124,6 +128,8 @@ SECTION "Area Attributes", ROMX
 	connection north, TitheStreet12, TITHE_STREET12, 0
 	connection south, TithePlaza5, TITHE_PLAZA5, 0
 
+	map_attributes TitheStreet11Hut, TITHE_STREET11_HUT, $00
+
 	map_attributes TitheStreet12, TITHE_STREET12, $00
 	connection north, TitheStreet13, TITHE_STREET13, 0
 	connection south, TitheStreet11, TITHE_STREET11, 0
@@ -159,6 +165,8 @@ SECTION "Area Attributes", ROMX
 	map_attributes TitheStreet15, TITHE_STREET15, $00
 	connection north, TithePlaza7, TITHE_PLAZA7, -5
 	connection south, TitheBendB14, TITHE_BEND_B14, 0
+
+	map_attributes TitheStreet15Hut, TITHE_STREET15_HUT, $00
 
 	map_attributes TithePlaza7, TITHE_PLAZA7, $00
 	connection south, TitheStreet15, TITHE_STREET15, 5
@@ -290,6 +298,8 @@ SECTION "Area Attributes", ROMX
 	connection north, GroveBendA12, GROVE_BEND_A12, 0
 	connection south, GrovePlaza5, GROVE_PLAZA5, 0
 
+	map_attributes GroveStreet11Hut, GROVE_STREET11_HUT, $00
+
 	map_attributes GroveBendA12, GROVE_BEND_A12, $00
 	connection south, GroveStreet11, GROVE_STREET11, 0
 	connection east, GroveStreet12, GROVE_STREET12, 0
@@ -390,6 +400,8 @@ SECTION "Area Attributes", ROMX
 	connection north, AxiomPlaza3, AXIOM_PLAZA3, -3
 	connection south, AxiomStreet4, AXIOM_STREET4, 0
 
+	map_attributes AxiomStreet5Hut, AXIOM_STREET5_HUT, $00
+
 	map_attributes AxiomPlaza3, AXIOM_PLAZA3, $00
 	connection north, AxiomStreet6, AXIOM_STREET6, 1
 	connection south, AxiomStreet5, AXIOM_STREET5, 3
@@ -405,6 +417,8 @@ SECTION "Area Attributes", ROMX
 	map_attributes AxiomStreet6, AXIOM_STREET6, $00
 	connection north, AxiomStreet7, AXIOM_STREET7, 0
 	connection south, AxiomPlaza3, AXIOM_PLAZA3, -1
+
+	map_attributes AxiomStreet6Hut, AXIOM_STREET6_HUT, $00
 
 	map_attributes AxiomStreet7, AXIOM_STREET7, $00
 	connection north, AxiomPlaza4, AXIOM_PLAZA4, -7
@@ -437,6 +451,8 @@ SECTION "Area Attributes", ROMX
 	map_attributes AxiomStreet9, AXIOM_STREET9, $00
 	connection north, AxiomStreet10, AXIOM_STREET10, 0
 	connection south, AxiomBendB8, AXIOM_BEND_B8, 0
+
+	map_attributes AxiomStreet9Hut, AXIOM_STREET9_HUT, $00
 
 	map_attributes AxiomStreet10, AXIOM_STREET10, $00
 	connection north, AxiomPlaza5, AXIOM_PLAZA5, -9
@@ -494,6 +510,8 @@ SECTION "Area Attributes", ROMX
 	connection north, AxiomPlaza7, AXIOM_PLAZA7, -10
 	connection south, AxiomStreet14, AXIOM_STREET14, 0
 
+	map_attributes AxiomStreet15Hut, AXIOM_STREET15_HUT, $00
+
 	map_attributes AxiomPlaza7, AXIOM_PLAZA7, $00
 	connection south, AxiomStreet15, AXIOM_STREET15, 10
 
@@ -519,6 +537,8 @@ SECTION "Area Attributes", ROMX
 	map_attributes LotusStreet1, LOTUS_STREET1, $00
 	connection north, LotusBendA2, LOTUS_BEND_A2, 0
 	connection south, LotusPlaza1, LOTUS_PLAZA1, 0
+
+	map_attributes LotusStreet1Hut, LOTUS_STREET1_HUT, $00
 
 	map_attributes LotusBendA2, LOTUS_BEND_A2, $00
 	connection south, LotusStreet1, LOTUS_STREET1, 0
@@ -572,6 +592,8 @@ SECTION "Area Attributes", ROMX
 	connection north, LotusStreet7, LOTUS_STREET7, 0
 	connection south, LotusPlaza3, LOTUS_PLAZA3, 0
 
+	map_attributes LotusStreet6Hut, LOTUS_STREET6_HUT, $00
+
 	map_attributes LotusStreet7, LOTUS_STREET7, $00
 	connection north, LotusPlaza4, LOTUS_PLAZA4, -7
 	connection south, LotusStreet6, LOTUS_STREET6, 0
@@ -624,6 +646,8 @@ SECTION "Area Attributes", ROMX
 	connection north, LotusBendA12, LOTUS_BEND_A12, 0
 	connection south, LotusPlaza5, LOTUS_PLAZA5, 0
 
+	map_attributes LotusStreet11Hut, LOTUS_STREET11_HUT, $00
+
 	map_attributes LotusBendA12, LOTUS_BEND_A12, $00
 	connection south, LotusStreet11, LOTUS_STREET11, 0
 	connection east, LotusStreet12, LOTUS_STREET12, 0
@@ -639,6 +663,8 @@ SECTION "Area Attributes", ROMX
 	map_attributes LotusStreet13, LOTUS_STREET13, $00
 	connection north, LotusPlaza6, LOTUS_PLAZA6, -3
 	connection south, LotusBendB12, LOTUS_BEND_B12, 0
+
+	map_attributes LotusStreet13Hut, LOTUS_STREET13_HUT, $00
 
 	map_attributes LotusPlaza6, LOTUS_PLAZA6, $00
 	connection north, LotusStreet14, LOTUS_STREET14, 0
@@ -762,6 +788,8 @@ SECTION "Area Attributes", ROMX
 	connection north, DisBendA9, DIS_BEND_A9, 0
 	connection south, DisPlaza4, DIS_PLAZA4, 0
 
+	map_attributes DisStreet8Hut, DIS_STREET8_HUT, $00
+
 	map_attributes DisBendA9, DIS_BEND_A9, $00
 	connection south, DisStreet8, DIS_STREET8, 0
 	connection east, DisStreet9, DIS_STREET9, 0
@@ -777,6 +805,8 @@ SECTION "Area Attributes", ROMX
 	map_attributes DisStreet10, DIS_STREET10, $00
 	connection north, DisPlaza5, DIS_PLAZA5, 0
 	connection south, DisBendB9, DIS_BEND_B9, 0
+
+	map_attributes DisStreet10Hut, DIS_STREET10_HUT, $00
 
 	map_attributes DisPlaza5, DIS_PLAZA5, $00
 	connection north, DisStreet11, DIS_STREET11, 1
@@ -809,6 +839,8 @@ SECTION "Area Attributes", ROMX
 	map_attributes DisStreet13, DIS_STREET13, $00
 	connection north, DisPlaza6, DIS_PLAZA6, -10
 	connection south, DisBendB12, DIS_BEND_B12, 0
+
+	map_attributes DisStreet13Hut, DIS_STREET13_HUT, $00
 
 	map_attributes DisPlaza6, DIS_PLAZA6, $00
 	connection north, DisStreet14, DIS_STREET14, 0
@@ -953,6 +985,9 @@ TitheStreet4_Blocks:
 TitheStreet5_Blocks:
 	INCBIN "maps/gen/TitheStreet5.blk"
 
+TitheStreet5Hut_Blocks:
+	INCBIN "maps/gen/TitheStreet5Hut.blk"
+
 TithePlaza3_Blocks:
 	INCBIN "maps/gen/TithePlaza3.blk"
 
@@ -970,6 +1005,9 @@ TitheVestry_Blocks:
 
 TitheStreet6_Blocks:
 	INCBIN "maps/gen/TitheStreet6.blk"
+
+TitheStreet6Hut_Blocks:
+	INCBIN "maps/gen/TitheStreet6Hut.blk"
 
 TitheStreet7_Blocks:
 	INCBIN "maps/gen/TitheStreet7.blk"
@@ -1022,6 +1060,9 @@ TitheEvidenceRoom_Blocks:
 TitheStreet11_Blocks:
 	INCBIN "maps/gen/TitheStreet11.blk"
 
+TitheStreet11Hut_Blocks:
+	INCBIN "maps/gen/TitheStreet11Hut.blk"
+
 TitheStreet12_Blocks:
 	INCBIN "maps/gen/TitheStreet12.blk"
 
@@ -1054,6 +1095,9 @@ TitheBendB14_Blocks:
 
 TitheStreet15_Blocks:
 	INCBIN "maps/gen/TitheStreet15.blk"
+
+TitheStreet15Hut_Blocks:
+	INCBIN "maps/gen/TitheStreet15Hut.blk"
 
 TithePlaza7_Blocks:
 	INCBIN "maps/gen/TithePlaza7.blk"
@@ -1194,6 +1238,9 @@ GroveSmokehouse_Blocks:
 GroveStreet11_Blocks:
 	INCBIN "maps/gen/GroveStreet11.blk"
 
+GroveStreet11Hut_Blocks:
+	INCBIN "maps/gen/GroveStreet11Hut.blk"
+
 GroveBendA12_Blocks:
 	INCBIN "maps/gen/GroveBendA12.blk"
 
@@ -1300,6 +1347,9 @@ AxiomStreet4_Blocks:
 AxiomStreet5_Blocks:
 	INCBIN "maps/gen/AxiomStreet5.blk"
 
+AxiomStreet5Hut_Blocks:
+	INCBIN "maps/gen/AxiomStreet5Hut.blk"
+
 AxiomPlaza3_Blocks:
 	INCBIN "maps/gen/AxiomPlaza3.blk"
 
@@ -1317,6 +1367,9 @@ AxiomRegistry_Blocks:
 
 AxiomStreet6_Blocks:
 	INCBIN "maps/gen/AxiomStreet6.blk"
+
+AxiomStreet6Hut_Blocks:
+	INCBIN "maps/gen/AxiomStreet6Hut.blk"
 
 AxiomStreet7_Blocks:
 	INCBIN "maps/gen/AxiomStreet7.blk"
@@ -1347,6 +1400,9 @@ AxiomBendB8_Blocks:
 
 AxiomStreet9_Blocks:
 	INCBIN "maps/gen/AxiomStreet9.blk"
+
+AxiomStreet9Hut_Blocks:
+	INCBIN "maps/gen/AxiomStreet9Hut.blk"
 
 AxiomStreet10_Blocks:
 	INCBIN "maps/gen/AxiomStreet10.blk"
@@ -1402,6 +1458,9 @@ AxiomStreet14_Blocks:
 AxiomStreet15_Blocks:
 	INCBIN "maps/gen/AxiomStreet15.blk"
 
+AxiomStreet15Hut_Blocks:
+	INCBIN "maps/gen/AxiomStreet15Hut.blk"
+
 AxiomPlaza7_Blocks:
 	INCBIN "maps/gen/AxiomPlaza7.blk"
 
@@ -1438,6 +1497,9 @@ LotusHouse1_Blocks:
 
 LotusStreet1_Blocks:
 	INCBIN "maps/gen/LotusStreet1.blk"
+
+LotusStreet1Hut_Blocks:
+	INCBIN "maps/gen/LotusStreet1Hut.blk"
 
 LotusBendA2_Blocks:
 	INCBIN "maps/gen/LotusBendA2.blk"
@@ -1490,6 +1552,9 @@ LotusClinic_Blocks:
 LotusStreet6_Blocks:
 	INCBIN "maps/gen/LotusStreet6.blk"
 
+LotusStreet6Hut_Blocks:
+	INCBIN "maps/gen/LotusStreet6Hut.blk"
+
 LotusStreet7_Blocks:
 	INCBIN "maps/gen/LotusStreet7.blk"
 
@@ -1541,6 +1606,9 @@ LotusCabana_Blocks:
 LotusStreet11_Blocks:
 	INCBIN "maps/gen/LotusStreet11.blk"
 
+LotusStreet11Hut_Blocks:
+	INCBIN "maps/gen/LotusStreet11Hut.blk"
+
 LotusBendA12_Blocks:
 	INCBIN "maps/gen/LotusBendA12.blk"
 
@@ -1552,6 +1620,9 @@ LotusBendB12_Blocks:
 
 LotusStreet13_Blocks:
 	INCBIN "maps/gen/LotusStreet13.blk"
+
+LotusStreet13Hut_Blocks:
+	INCBIN "maps/gen/LotusStreet13Hut.blk"
 
 LotusPlaza6_Blocks:
 	INCBIN "maps/gen/LotusPlaza6.blk"
@@ -1689,6 +1760,9 @@ DisBoutique4_Blocks:
 DisStreet8_Blocks:
 	INCBIN "maps/gen/DisStreet8.blk"
 
+DisStreet8Hut_Blocks:
+	INCBIN "maps/gen/DisStreet8Hut.blk"
+
 DisBendA9_Blocks:
 	INCBIN "maps/gen/DisBendA9.blk"
 
@@ -1700,6 +1774,9 @@ DisBendB9_Blocks:
 
 DisStreet10_Blocks:
 	INCBIN "maps/gen/DisStreet10.blk"
+
+DisStreet10Hut_Blocks:
+	INCBIN "maps/gen/DisStreet10Hut.blk"
 
 DisPlaza5_Blocks:
 	INCBIN "maps/gen/DisPlaza5.blk"
@@ -1730,6 +1807,9 @@ DisBendB12_Blocks:
 
 DisStreet13_Blocks:
 	INCBIN "maps/gen/DisStreet13.blk"
+
+DisStreet13Hut_Blocks:
+	INCBIN "maps/gen/DisStreet13Hut.blk"
 
 DisPlaza6_Blocks:
 	INCBIN "maps/gen/DisPlaza6.blk"
@@ -1963,6 +2043,12 @@ INCLUDE "maps/gen/TitheStreet5.asm"
 
 ENDSECTION
 
+SECTION "TitheStreet5Hut Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet5Hut.asm"
+
+ENDSECTION
+
 SECTION "TithePlaza3 Scripts", ROMX
 
 INCLUDE "maps/gen/TithePlaza3.asm"
@@ -1996,6 +2082,12 @@ ENDSECTION
 SECTION "TitheStreet6 Scripts", ROMX
 
 INCLUDE "maps/gen/TitheStreet6.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet6Hut Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet6Hut.asm"
 
 ENDSECTION
 
@@ -2101,6 +2193,12 @@ INCLUDE "maps/gen/TitheStreet11.asm"
 
 ENDSECTION
 
+SECTION "TitheStreet11Hut Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet11Hut.asm"
+
+ENDSECTION
+
 SECTION "TitheStreet12 Scripts", ROMX
 
 INCLUDE "maps/gen/TitheStreet12.asm"
@@ -2164,6 +2262,12 @@ ENDSECTION
 SECTION "TitheStreet15 Scripts", ROMX
 
 INCLUDE "maps/gen/TitheStreet15.asm"
+
+ENDSECTION
+
+SECTION "TitheStreet15Hut Scripts", ROMX
+
+INCLUDE "maps/gen/TitheStreet15Hut.asm"
 
 ENDSECTION
 
@@ -2437,6 +2541,12 @@ INCLUDE "maps/gen/GroveStreet11.asm"
 
 ENDSECTION
 
+SECTION "GroveStreet11Hut Scripts", ROMX
+
+INCLUDE "maps/gen/GroveStreet11Hut.asm"
+
+ENDSECTION
+
 SECTION "GroveBendA12 Scripts", ROMX
 
 INCLUDE "maps/gen/GroveBendA12.asm"
@@ -2641,6 +2751,12 @@ INCLUDE "maps/gen/AxiomStreet5.asm"
 
 ENDSECTION
 
+SECTION "AxiomStreet5Hut Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet5Hut.asm"
+
+ENDSECTION
+
 SECTION "AxiomPlaza3 Scripts", ROMX
 
 INCLUDE "maps/gen/AxiomPlaza3.asm"
@@ -2674,6 +2790,12 @@ ENDSECTION
 SECTION "AxiomStreet6 Scripts", ROMX
 
 INCLUDE "maps/gen/AxiomStreet6.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet6Hut Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet6Hut.asm"
 
 ENDSECTION
 
@@ -2734,6 +2856,12 @@ ENDSECTION
 SECTION "AxiomStreet9 Scripts", ROMX
 
 INCLUDE "maps/gen/AxiomStreet9.asm"
+
+ENDSECTION
+
+SECTION "AxiomStreet9Hut Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet9Hut.asm"
 
 ENDSECTION
 
@@ -2845,6 +2973,12 @@ INCLUDE "maps/gen/AxiomStreet15.asm"
 
 ENDSECTION
 
+SECTION "AxiomStreet15Hut Scripts", ROMX
+
+INCLUDE "maps/gen/AxiomStreet15Hut.asm"
+
+ENDSECTION
+
 SECTION "AxiomPlaza7 Scripts", ROMX
 
 INCLUDE "maps/gen/AxiomPlaza7.asm"
@@ -2908,6 +3042,12 @@ ENDSECTION
 SECTION "LotusStreet1 Scripts", ROMX
 
 INCLUDE "maps/gen/LotusStreet1.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet1Hut Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet1Hut.asm"
 
 ENDSECTION
 
@@ -3013,6 +3153,12 @@ INCLUDE "maps/gen/LotusStreet6.asm"
 
 ENDSECTION
 
+SECTION "LotusStreet6Hut Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet6Hut.asm"
+
+ENDSECTION
+
 SECTION "LotusStreet7 Scripts", ROMX
 
 INCLUDE "maps/gen/LotusStreet7.asm"
@@ -3115,6 +3261,12 @@ INCLUDE "maps/gen/LotusStreet11.asm"
 
 ENDSECTION
 
+SECTION "LotusStreet11Hut Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet11Hut.asm"
+
+ENDSECTION
+
 SECTION "LotusBendA12 Scripts", ROMX
 
 INCLUDE "maps/gen/LotusBendA12.asm"
@@ -3136,6 +3288,12 @@ ENDSECTION
 SECTION "LotusStreet13 Scripts", ROMX
 
 INCLUDE "maps/gen/LotusStreet13.asm"
+
+ENDSECTION
+
+SECTION "LotusStreet13Hut Scripts", ROMX
+
+INCLUDE "maps/gen/LotusStreet13Hut.asm"
 
 ENDSECTION
 
@@ -3403,6 +3561,12 @@ INCLUDE "maps/gen/DisStreet8.asm"
 
 ENDSECTION
 
+SECTION "DisStreet8Hut Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet8Hut.asm"
+
+ENDSECTION
+
 SECTION "DisBendA9 Scripts", ROMX
 
 INCLUDE "maps/gen/DisBendA9.asm"
@@ -3424,6 +3588,12 @@ ENDSECTION
 SECTION "DisStreet10 Scripts", ROMX
 
 INCLUDE "maps/gen/DisStreet10.asm"
+
+ENDSECTION
+
+SECTION "DisStreet10Hut Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet10Hut.asm"
 
 ENDSECTION
 
@@ -3484,6 +3654,12 @@ ENDSECTION
 SECTION "DisStreet13 Scripts", ROMX
 
 INCLUDE "maps/gen/DisStreet13.asm"
+
+ENDSECTION
+
+SECTION "DisStreet13Hut Scripts", ROMX
+
+INCLUDE "maps/gen/DisStreet13Hut.asm"
 
 ENDSECTION
 

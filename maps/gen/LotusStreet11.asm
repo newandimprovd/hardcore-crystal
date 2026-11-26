@@ -46,16 +46,16 @@ LotusStreet11Pickup:
 	itemball TM_BLIZZARD
 
 LotusStreet11Hidden:
-	hiddenitem MAX_ETHER, EVENT_GEN_LOTUS_STREET11_HIDDEN
+	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET11_HIDDEN
 
 LotusStreet11Hermit:
 	jumptextfaceplayer LotusStreet11HermitText
 
 LotusStreet11HermitText:
-	text "The seagulls here"
-	line "are on a retainer."
-	para "Do not feed them."
-	line "They report."
+	text "The sunset here is"
+	line "wonderful. It"
+	para "reminds me of the"
+	line "end of everything."
 	done
 
 LotusStreet11AfterText:
@@ -203,17 +203,18 @@ LotusStreet11_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 11, LOTUS_STREET11_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 11, 16, BGEVENT_ITEM, LotusStreet11Hidden
+	bg_event  4, 13, BGEVENT_ITEM, LotusStreet11Hidden
 
 	def_object_events
 	object_event 12, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet11GateScript, EVENT_GEN_LOTUS_STREET11_GATE
 	object_event 13, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet11GateScript, EVENT_GEN_LOTUS_STREET11_GATE
-	object_event  7,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet11Pickup, EVENT_GEN_LOTUS_STREET11_PICKUP
-	object_event  3, 15, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet11Hermit, -1
+	object_event 10, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet11Pickup, EVENT_GEN_LOTUS_STREET11_PICKUP
+	object_event  9,  8, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusStreet11Hermit, -1
 	object_event 10, 28, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer0, -1
 	object_event 10, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer1, -1
 	object_event 15, 24, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer2, -1

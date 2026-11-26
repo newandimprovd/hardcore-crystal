@@ -13,11 +13,11 @@ AxiomBendB8Hermit:
 	jumptextfaceplayer AxiomBendB8HermitText
 
 AxiomBendB8HermitText:
-	text "The machines here"
-	line "are polite. They"
-	para "kill you with a"
-	line "smile and a"
-	para "receipt."
+	text "A bot asked me for"
+	line "ID. I showed it a"
+	para "leaf. It accepted."
+	line "We are now"
+	para "partners."
 	done
 
 AxiomBendB8_MapEvents:

@@ -16,12 +16,9 @@ TitheStreet9Hermit:
 	jumptextfaceplayer TitheStreet9HermitText
 
 TitheStreet9HermitText:
-	text "I came out here to"
-	line "avoid the census."
-	para "Now I count the"
-	line "trees. They do not"
-	para "respond but they"
-	line "do not charge."
+	text "Do not drink from"
+	line "the stream. It has"
+	para "been taxed."
 	done
 
 TitheStreet9AfterText:

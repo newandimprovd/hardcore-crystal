@@ -10,11 +10,10 @@ LotusBendA2Hermit:
 	jumptextfaceplayer LotusBendA2HermitText
 
 LotusBendA2HermitText:
-	text "I've been lying on"
-	line "this beach for"
-	para "eleven years. The"
-	line "tide has asked me"
-	para "to move twice."
+	text "The sunset here is"
+	line "wonderful. It"
+	para "reminds me of the"
+	line "end of everything."
 	done
 
 LotusBendA2_MapEvents:

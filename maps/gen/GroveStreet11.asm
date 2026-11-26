@@ -46,15 +46,18 @@ GroveStreet11GateUseText:
 GroveStreet11Pickup:
 	itemball TM_ICY_WIND
 
+GroveStreet11Hidden:
+	hiddenitem REVIVE, EVENT_GEN_GROVE_STREET11_HIDDEN
+
 GroveStreet11Hermit:
 	jumptextfaceplayer GroveStreet11HermitText
 
 GroveStreet11HermitText:
-	text "There is a"
-	line "mushroom here that"
-	para "agrees with"
-	line "everything. I call"
-	para "it my spouse."
+	text "The mushrooms here"
+	line "talk. Mostly they"
+	para "say 'sell'. I"
+	line "don't know what."
+	para "I'm scared."
 	done
 
 GroveStreet11AfterText:
@@ -179,16 +182,18 @@ GroveStreet11_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 18, 11, GROVE_STREET11_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
+	bg_event 16, 13, BGEVENT_ITEM, GroveStreet11Hidden
 
 	def_object_events
 	object_event 18, 26, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveStreet11GateScript, EVENT_GEN_GROVE_STREET11_GATE
 	object_event 19, 26, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveStreet11GateScript, EVENT_GEN_GROVE_STREET11_GATE
-	object_event 20, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet11Pickup, EVENT_GEN_GROVE_STREET11_PICKUP
-	object_event 17, 10, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet11Hermit, -1
+	object_event 16, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet11Pickup, EVENT_GEN_GROVE_STREET11_PICKUP
+	object_event 17,  9, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GroveStreet11Hermit, -1
 	object_event 16, 24, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet11Trainer0, -1
 	object_event 21, 24, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet11Trainer1, -1
 	object_event 12, 20, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet11Trainer2, -1

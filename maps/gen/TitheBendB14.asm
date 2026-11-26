@@ -10,11 +10,12 @@ TitheBendB14Hermit:
 	jumptextfaceplayer TitheBendB14HermitText
 
 TitheBendB14HermitText:
-	text "The pond is clean."
-	line "That is because"
-	para "I've been drinking"
-	line "all the dirty"
-	para "bits."
+	text "I came out here to"
+	line "avoid the census."
+	para "Now I count the"
+	line "trees. They do not"
+	para "respond but they"
+	line "do not charge."
 	done
 
 TitheBendB14_MapEvents:

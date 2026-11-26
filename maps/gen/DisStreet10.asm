@@ -10,15 +10,16 @@ DisStreet10Pickup:
 	itemball MAX_REPEL
 
 DisStreet10Hidden:
-	hiddenitem MAX_ETHER, EVENT_GEN_DIS_STREET10_HIDDEN
+	hiddenitem ELIXER, EVENT_GEN_DIS_STREET10_HIDDEN
 
 DisStreet10Hermit:
 	jumptextfaceplayer DisStreet10HermitText
 
 DisStreet10HermitText:
-	text "Down here 'no"
-	line "comment' is a"
-	para "full-time job."
+	text "I'm not dead. I'm"
+	line "just in the wrong"
+	para "queue. It's been"
+	line "forty years."
 	done
 
 DisStreet10AfterText:
@@ -160,15 +161,16 @@ DisStreet10_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 25, DIS_STREET10_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  2, 24, BGEVENT_ITEM, DisStreet10Hidden
+	bg_event  3, 27, BGEVENT_ITEM, DisStreet10Hidden
 
 	def_object_events
 	object_event  4, 27, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet10Pickup, EVENT_GEN_DIS_STREET10_PICKUP
-	object_event  6, 25, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisStreet10Hermit, -1
+	object_event  6, 23, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisStreet10Hermit, -1
 	object_event 16, 28, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet10Trainer0, -1
 	object_event 12, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet10Trainer1, -1
 	object_event 17, 24, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet10Trainer2, -1

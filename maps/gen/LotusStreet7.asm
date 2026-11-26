@@ -13,11 +13,11 @@ LotusStreet7Hermit:
 	jumptextfaceplayer LotusStreet7HermitText
 
 LotusStreet7HermitText:
-	text "I live in a shell."
-	line "I cannot remember"
-	para "who was in it"
-	line "before. We share"
-	para "the lease."
+	text "Everyone says the"
+	line "sea is calming."
+	para "The sea is a bully"
+	line "with good"
+	para "lighting."
 	done
 
 LotusStreet7AfterText:

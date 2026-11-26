@@ -16,12 +16,11 @@ TitheStreet13Hermit:
 	jumptextfaceplayer TitheStreet13HermitText
 
 TitheStreet13HermitText:
-	text "The Church says"
-	line "the poor shall"
-	para "inherit the earth."
-	line "I am in line. The"
-	para "earth is behind a"
-	line "lot of paperwork."
+	text "Take the roots."
+	line "Take the berries."
+	para "Take whatever. I'm"
+	line "not the"
+	para "government."
 	done
 
 TitheStreet13AfterText:

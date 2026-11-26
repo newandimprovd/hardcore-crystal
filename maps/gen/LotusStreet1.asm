@@ -10,17 +10,16 @@ LotusStreet1Pickup:
 	itemball TM_DIG
 
 LotusStreet1Hidden:
-	hiddenitem PP_UP, EVENT_GEN_LOTUS_STREET1_HIDDEN
+	hiddenitem REVIVE, EVENT_GEN_LOTUS_STREET1_HIDDEN
 
 LotusStreet1Hermit:
 	jumptextfaceplayer LotusStreet1HermitText
 
 LotusStreet1HermitText:
-	text "Everyone is so"
-	line "relaxed here."
-	para "That's what giving"
-	line "up looks like with"
-	para "a tan."
+	text "I came to the"
+	line "coast to forget. I"
+	para "forgot why. Best"
+	line "vacation ever."
 	done
 
 LotusStreet1AfterText:
@@ -161,15 +160,16 @@ LotusStreet1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 17, LOTUS_STREET1_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  4, 16, BGEVENT_ITEM, LotusStreet1Hidden
+	bg_event  7, 14, BGEVENT_ITEM, LotusStreet1Hidden
 
 	def_object_events
-	object_event  2, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet1Pickup, EVENT_GEN_LOTUS_STREET1_PICKUP
-	object_event  5, 14, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet1Hermit, -1
+	object_event  9, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet1Pickup, EVENT_GEN_LOTUS_STREET1_PICKUP
+	object_event 13, 18, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusStreet1Hermit, -1
 	object_event 12, 28, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet1Trainer0, -1
 	object_event 21, 24, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet1Trainer1, -1
 	object_event 16, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet1Trainer2, -1
