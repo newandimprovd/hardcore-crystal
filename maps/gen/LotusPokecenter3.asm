@@ -15,10 +15,10 @@ LotusPokecenter3Npc0Script:
 	jumptextfaceplayer LotusPokecenter3Npc0Text
 
 LotusPokecenter3Npc0Text:
-	text "Don't read the"
-	line "brochure. It's"
-	para "very sad. I think."
-	line "I forgot."
+	text "Do you remember"
+	line "me? Neither do I."
+	para "We should split a"
+	line "room and see."
 	done
 
 LotusPokecenter3_MapEvents:

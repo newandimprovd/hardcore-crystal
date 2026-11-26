@@ -151,3 +151,6 @@ BEATEN = BEATEN + CULT_BEATEN["Grove"]
 from .more_lines import BEATEN_MORE, SEEN_MORE  # noqa: E402  (alpha 3.3: more fighter lines, one deck per area)
 SEEN = SEEN + SEEN_MORE["Grove"]
 BEATEN = BEATEN + BEATEN_MORE["Grove"]
+
+from .lines3 import AREA as _L3  # noqa: E402  (alpha 3.3: new defeat lines, a deck of their own)
+BEATEN = BEATEN + _L3["Grove"].BEATEN_NEW

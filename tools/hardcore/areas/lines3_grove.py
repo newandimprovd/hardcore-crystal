@@ -1,0 +1,102 @@
+"""Alpha 3.3 variety pass, THE COMMUNE: defeat lines for the street fighters, people inside the Pokecenter, Mart and houses, and the seven plaza givers."""
+
+BEATEN_NEW = [
+    "We'll discuss this at the meeting. The meeting is in a week. I'll bring snacks and a grudge.",
+    "I lost. The whole commune lost. That's how we do it.",
+    "Consensus is that you cheated. Consensus is me.",
+    "I had a feeling in my heart. It was indigestion.",
+    "No hard feelings. Hard bruises, though. Lots of those.",
+    "Fine, fine, take my berries. Take my goat. Don't take my goat.",
+    "That was very aggressive for someone who's supposedly at peace.",
+    "I'll be in the hot spring crying. Join me, or don't. Both are valid.",
+    "We have no leaders here. That's why nobody told me you'd be this strong.",
+    "I traded my shoes for this training. It was a poor trade.",
+    "Please don't tell the elders. They'll make me share the loss.",
+    "I'm going to meditate on this. By meditate I mean sulk.",
+    "My uncle hit me harder. He was a very communal man.",
+    "That was a gift, and so was my pride. Both are gone.",
+    "It was nothing personal. Everything here is personal. Nothing here is private.",
+    "I give up. In a very organic way.",
+    "I'll compost my ego. It's pretty rotten already.",
+    "Next time bring a flute. We lose less when there's a flute.",
+    "You've broken the circle. Sort of. We'll draw a bigger one.",
+    "They said violence was a bourgeois habit. I'd like to speak to the bourgeoisie.",
+    "I wanted to be a poet. I'm a fighter. The nouns got mixed up.",
+    "My hands are tied. By hemp. It's a lifestyle.",
+    "Don't thank me. Thank the soil. The soil is what you've been fighting.",
+    "You're not from here. You hit like someone who's worried about rent.",
+    "I forgive you. Everyone forgives you. It's a bit much.",
+    "The chief said fight with love. He didn't say who wins.",
+    "I'd cry but my tears are earmarked for the garden.",
+    "That was truly horrid. Do you want a nettle tea?",
+    "Maybe I should have spent more time foraging and less time posturing.",
+    "My ancestors are watching. They're also hiding. I can feel them hiding.",
+    "I'm being very brave about this. The bravery is mostly in my ears.",
+    "My goat saw everything. She'll never look at me the same.",
+    "Everyone sees me lose. That's a bad side of no walls.",
+    "I'll file a complaint. We don't have a place to file it. It's a new thing.",
+    "The stones have been telling me to sit this one out. I don't speak stone.",
+    "Peace, peace, and also pain. Mostly pain.",
+    "I trusted the mushroom. The mushroom said I'd win.",
+    "I heard nobody dies here. You'd better be a very good liar.",
+    "You've got a nice aura. Dark, wet, a little bit murdery.",
+    "Okay, I'll go back to weaving. Weaving never punches back.",
+    "I didn't want to fight today. Tuesday is nap day.",
+    "Take what you need. I mean it. I can't stop you either way.",
+    "That one stung. Like a bee. Like many bees. Like a very organized hive.",
+    "I volunteered for this. I regret the volunteering.",
+    "All things are shared. I hope you share the next one with a doctor.",
+]
+
+INTERIOR_CENTER = [
+    "The healer uses only herbs, chants and a very small saw. The saw is for the herbs.",
+    "I've been waiting three days. The line moves at the pace of consensus.",
+    "Nobody pays here. You owe the commune a song. I sang badly. They're still deciding.",
+    "The nurse says my headache is an unresolved emotion. I say it's a brick. We compromise on a poultice.",
+]
+
+INTERIOR_MART = [
+    "No prices. Just take what you need and leave what you want. People leave lots of noise.",
+    "I run the store but I don't own it. I also don't know who does. That's the beauty.",
+    "We sell medicine, tools and apologies. The apologies are free. Nobody takes them.",
+    "Barter only. Last week a man paid in grief. I gave him change.",
+]
+
+INTERIOR_HOUSE = [
+    "I'm the commune's beekeeper. The bees don't like me. They like the idea of me.",
+    "I keep a diary of every meeting. It's called The Long Argument. Volume nine.",
+    "We have no locks, so I keep my secrets in a hole. The hole is also communal.",
+    "My neighbor is a prophet. He predicted rain. It rained on him specifically.",
+    "I gave up my name to join. The commune gave me another. It's Brian. I preferred nothing.",
+    "I teach children to forage. They bring me things that aren't food. I eat them anyway.",
+    "I'm a weaver. Everything I make is a flag. Of what, I couldn't say.",
+    "We all sleep in the big tent. Last night the tent was very full. Also somebody sang.",
+    "I've been sitting in this house since the last full moon. It doesn't have a floor.",
+    "I trade in secrets. Not mine. I'm just a bad listener with a good memory.",
+    "My husband and my wife are friends. I'm the third in a very polite triangle.",
+    "I dig the graves. They don't ask me to. I just like having something to do.",
+    "I'm the commune's cook. I make a stew from whatever we lose each week.",
+    "Careful with the floor. The mushrooms are communal but the mold is mine.",
+    "They elected me mayor by accident. I refused. They elected me again. It's called democracy.",
+    "I'm writing a sacred text. It's half done. The other half is a grocery list.",
+]
+
+GIVER = [
+    ("BERRYOSA", "Berry plus Rosa. A woman of the hedge, with thorns.", "I picked too many. Take them before I eat the evidence."),
+    ("MOSSELF", "Moss plus self. I grew on myself. It was pleasant.", "Here. I've been saving this for someone who looks tired. You look tired."),
+    ("COMMUNIA", "Commune plus nia. Nia is Swahili for purpose. I don't speak Swahili.", "Take it. It belongs to everyone. Which means you."),
+    ("HONEYBEAR", "Honey plus bear. Don't ask where I put the other half.", "This is for you. Don't eat it all at once. I did."),
+    ("THATCHELL", "Thatch plus Chelle. My roof and my ex-wife. Both leak.", "Have this. It's better than the roof, and quieter than the wife."),
+    ("SHAREANDO", "Share plus bandolier. I carry gifts across my chest like ammunition.", "Fire away. I mean, take it. Gently."),
+    ("FOREMOTHER", "Fore plus mother. First of the commune and last to leave.", "A parting gift. The best of the hearth. Take it and be quiet about it."),
+]
+
+GIVER_AFTER = [
+    "I have more but you haven't asked nicely. You haven't asked at all, actually.",
+    "Come by the fire later. We'll sing. You'll be the lowest voice.",
+    "Everything is shared. Including this awkward silence.",
+    "The honey's off the table. The bear's not. Back away slowly.",
+    "The roof leaks again. It's mine to fix. It isn't. Goodbye.",
+    "Do you hear that? That's the sound of generosity ending.",
+    "I'll remember you. The commune remembers everyone. Eventually it forgets.",
+]

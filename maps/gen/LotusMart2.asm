@@ -18,11 +18,11 @@ LotusMart2Npc0Script:
 	jumptextfaceplayer LotusMart2Npc0Text
 
 LotusMart2Npc0Text:
-	text "I used to hate my"
-	line "job. Then I took"
-	para "the package. Now I"
-	line "just hate that I"
-	para "don't hate it."
+	text "The shelves"
+	line "rearrange when you"
+	para "aren't looking."
+	line "Don't look. It's"
+	para "the policy."
 	done
 
 LotusMart2_MapEvents:

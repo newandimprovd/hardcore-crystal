@@ -18,9 +18,10 @@ TitheMart4Npc0Script:
 	jumptextfaceplayer TitheMart4Npc0Text
 
 TitheMart4Npc0Text:
-	text "Shoplifters get"
-	line "prayed at. It's"
-	para "worse than prison."
+	text "I'd tell you the"
+	line "sale ends soon,"
+	para "but I'm always"
+	line "lying."
 	done
 
 TitheMart4_MapEvents:

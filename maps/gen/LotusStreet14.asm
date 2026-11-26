@@ -16,11 +16,11 @@ LotusStreet14Hermit:
 	jumptextfaceplayer LotusStreet14HermitText
 
 LotusStreet14HermitText:
-	text "I've been lying on"
-	line "this beach for"
-	para "eleven years. The"
-	line "tide has asked me"
-	para "to move twice."
+	text "I saw a trainer"
+	line "yawn mid-attack."
+	para "It was the most"
+	line "honest violence I"
+	para "have ever seen."
 	done
 
 LotusStreet14AfterText:
@@ -45,9 +45,10 @@ LotusStreet14Trainer0SeenText:
 	done
 
 LotusStreet14Trainer0BeatenText:
-	text "Don't put me in a"
-	line "box. Put me in a"
-	para "boat. Push it out."
+	text "Hey, it's nice"
+	line "here. The sky. The"
+	para "sand. The sudden"
+	line "lack of pulse."
 	done
 
 LotusStreet14Trainer0:
@@ -62,9 +63,9 @@ LotusStreet14Trainer1SeenText:
 	done
 
 LotusStreet14Trainer1BeatenText:
-	text "I lost to a"
-	line "stranger. How very"
-	para "'resort' of me."
+	text "The sunset is"
+	line "early today. I"
+	para "think that's me."
 	done
 
 LotusStreet14Trainer1:
@@ -78,11 +79,11 @@ LotusStreet14Trainer2SeenText:
 	done
 
 LotusStreet14Trainer2BeatenText:
-	text "Do you know how"
-	line "many people die at"
-	para "this resort?"
-	line "Neither do I. It's"
-	para "a lot."
+	text "That was the best"
+	line "time I've had in"
+	para "years. Please do"
+	line "it again. No,"
+	para "don't."
 	done
 
 LotusStreet14Trainer2:
@@ -95,10 +96,11 @@ LotusStreet14Trainer3SeenText:
 	done
 
 LotusStreet14Trainer3BeatenText:
-	text "I was hoping to"
-	line "retire here. I'm"
-	para "retiring right"
-	line "now."
+	text "Don't take it"
+	line "personally. I"
+	para "treat everyone"
+	line "this way. Mostly I"
+	para "forget them after."
 	done
 
 LotusStreet14Trainer3:
@@ -113,10 +115,11 @@ LotusStreet14Trainer4SeenText:
 	done
 
 LotusStreet14Trainer4BeatenText:
-	text "Do you ever just"
-	line "cry in a pool?"
-	para "Because I'm about"
-	line "to."
+	text "I remember"
+	line "something. It's"
+	para "awful. Quick,"
+	line "someone hand me a"
+	para "drink."
 	done
 
 LotusStreet14Trainer4:
@@ -131,10 +134,9 @@ LotusStreet14Trainer5SeenText:
 	done
 
 LotusStreet14Trainer5BeatenText:
-	text "I should've stayed"
-	line "in the hammock."
-	para "The hammock never"
-	line "hit me."
+	text "Another one down."
+	line "The beach is full"
+	para "of us."
 	done
 
 LotusStreet14Trainer5:
@@ -150,9 +152,9 @@ LotusStreet14Trainer6SeenText:
 	done
 
 LotusStreet14Trainer6BeatenText:
-	text "Bye, then. The"
-	line "tide will see to"
-	para "the rest."
+	text "I'd call the cops"
+	line "but I used to be"
+	para "one. I forgot."
 	done
 
 LotusStreet14Trainer6:

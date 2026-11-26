@@ -13,11 +13,9 @@ LotusBendB9Hermit:
 	jumptextfaceplayer LotusBendB9HermitText
 
 LotusBendB9HermitText:
-	text "I saw a trainer"
-	line "yawn mid-attack."
-	para "It was the most"
-	line "honest violence I"
-	para "have ever seen."
+	text "The cocktails are"
+	line "free. Meaning is"
+	para "extra."
 	done
 
 LotusBendB9_MapEvents:

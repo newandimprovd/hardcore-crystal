@@ -208,32 +208,34 @@ PurgUp3Hermit0:
 	end
 
 PurgUp3Hermit0SeenText:
-	text "I am a hermit, not"
-	line "a coward. Please"
-	para "hit me and then"
-	line "give me back my"
-	para "corner."
+	text "My ghost tells me"
+	line "you're weak. My"
+	para "ghost is rude and"
+	line "often wrong. Let's"
+	para "find out."
 	done
 
 PurgUp3Hermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "Hah. My ghost owes"
+	line "me an apology. He"
+	para "is already"
+	line "laughing. He"
+	para "always does."
 	done
 
 PurgUp3Hermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "Take it. It was"
+	line "his idea. I never"
+	para "wanted to give it."
+	line "He insisted."
+	para "Loudly."
 	done
 
 PurgUp3Hermit0AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "He's behind me."
+	line "Don't look. He's"
+	para "making a very"
+	line "unflattering face."
 	done
 
 PurgUp3Hermit0NoRoomText:
@@ -278,34 +280,41 @@ PurgUp3Hermit1:
 	end
 
 PurgUp3Hermit1SeenText:
-	text "A visitor! I was"
-	line "beginning to talk"
-	para "to the rocks. They"
-	line "have strong"
-	para "opinions about"
-	line "moss."
+	text "You're under"
+	line "arrest. Not"
+	para "really. I'm just"
+	line "practising."
+	para "Resist, please."
+	line "It's been a while."
 	done
 
 PurgUp3Hermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "You have the right"
+	line "to remain"
+	para "victorious."
+	line "Anything you say"
+	para "can and will be"
+	line "fondly remembered."
 	done
 
 PurgUp3Hermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "Evidence,"
+	line "confiscated from a"
+	para "better cave. Take"
+	line "it. I don't have"
+	para "the paperwork."
+	line "It's the first"
+	para "time I'm happy"
+	line "about that."
 	done
 
 PurgUp3Hermit1AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "The mushrooms are"
+	line "quiet. They know"
+	para "something. I watch"
+	line "them. They watch"
+	para "me. It's a long"
+	line "trial."
 	done
 
 PurgUp3Hermit1NoRoomText:

@@ -12,22 +12,23 @@ LotusHouse5Npc0Script:
 	jumptextfaceplayer LotusHouse5Npc0Text
 
 LotusHouse5Npc0Text:
-	text "I tried to write a"
-	line "diary. It came out"
-	para "as a travel"
-	line "brochure."
+	text "I sell postcards"
+	line "of a beach I've"
+	para "never found. The"
+	line "buyers say they"
+	para "remember it"
+	line "fondly."
 	done
 
 LotusHouse5Npc1Script:
 	jumptextfaceplayer LotusHouse5Npc1Text
 
 LotusHouse5Npc1Text:
-	text "I'm trying to stay"
-	line "sober on"
-	para "forgetting. It's"
-	line "harder than it"
-	para "sounds. I forgot"
-	line "why I started."
+	text "I run the grief"
+	line "clinic. Business"
+	para "is booming. People"
+	line "keep forgetting to"
+	para "leave."
 	done
 
 LotusHouse5_MapEvents:

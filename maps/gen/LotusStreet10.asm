@@ -16,11 +16,11 @@ LotusStreet10Hermit:
 	jumptextfaceplayer LotusStreet10HermitText
 
 LotusStreet10HermitText:
-	text "Everyone says the"
-	line "sea is calming."
-	para "The sea is a bully"
-	line "with good"
-	para "lighting."
+	text "Everyone is so"
+	line "relaxed here."
+	para "That's what giving"
+	line "up looks like with"
+	para "a tan."
 	done
 
 LotusStreet10PurgFlagScript:
@@ -46,10 +46,10 @@ LotusStreet10Trainer0SeenText:
 	done
 
 LotusStreet10Trainer0BeatenText:
-	text "Please tell the"
-	line "bartender I paid."
-	para "I didn't. Please"
-	line "tell him I did."
+	text "Please be gentle."
+	line "This is my first"
+	para "time remembering"
+	line "anything."
 	done
 
 LotusStreet10Trainer0:
@@ -63,10 +63,10 @@ LotusStreet10Trainer1SeenText:
 	done
 
 LotusStreet10Trainer1BeatenText:
-	text "Beautiful. Please"
-	line "tell the bartender"
-	para "I tipped in"
-	line "advance."
+	text "Excuse me, I need"
+	line "to lie down in the"
+	para "sand and be"
+	line "forgotten."
 	done
 
 LotusStreet10Trainer1:
@@ -79,11 +79,11 @@ LotusStreet10Trainer2SeenText:
 	done
 
 LotusStreet10Trainer2BeatenText:
-	text "Oof. I just"
-	line "remembered my"
-	para "mother. She was"
-	line "pretty angry. Hit"
-	para "me again."
+	text "You win. Take the"
+	line "towel. Take the"
+	para "robe. Take my"
+	line "soul, it's on the"
+	para "nightstand."
 	done
 
 LotusStreet10Trainer2:
@@ -98,9 +98,9 @@ LotusStreet10Trainer3SeenText:
 	done
 
 LotusStreet10Trainer3BeatenText:
-	text "I lost? I don't"
-	line "usually lose. I"
-	para "don't usually try."
+	text "That left a mark."
+	line "Ha. A mark. How"
+	para "very yesterday."
 	done
 
 LotusStreet10Trainer3:
@@ -115,10 +115,10 @@ LotusStreet10Trainer4SeenText:
 	done
 
 LotusStreet10Trainer4BeatenText:
-	text "That was a very"
-	line "honest hit. Honest"
-	para "hits are the"
-	line "worst."
+	text "It's all right."
+	line "They'll write me a"
+	para "very nice little"
+	line "sign."
 	done
 
 LotusStreet10Trainer4:
@@ -131,10 +131,9 @@ LotusStreet10Trainer5SeenText:
 	done
 
 LotusStreet10Trainer5BeatenText:
-	text "If you see my"
-	line "wife, she's the"
-	para "one with the"
-	line "better lawyer."
+	text "Who am I? Where's"
+	line "my towel? Why is"
+	para "the sea moving?"
 	done
 
 LotusStreet10Trainer5:
@@ -148,10 +147,8 @@ LotusStreet10Trainer6SeenText:
 	done
 
 LotusStreet10Trainer6BeatenText:
-	text "Wave goodbye to"
-	line "the tourists. And"
-	para "hello to the next"
-	line "ones."
+	text "Well. That's one"
+	line "way to cool off."
 	done
 
 LotusStreet10Trainer6:

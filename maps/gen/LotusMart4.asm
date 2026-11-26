@@ -18,11 +18,11 @@ LotusMart4Npc0Script:
 	jumptextfaceplayer LotusMart4Npc0Text
 
 LotusMart4Npc0Text:
-	text "We have potions"
-	line "for everything"
-	para "except your"
-	line "mother. She's not"
-	para "in stock."
+	text "Everything is"
+	line "named after a"
+	para "flower. The prices"
+	line "are named after"
+	para "your last regret."
 	done
 
 LotusMart4_MapEvents:

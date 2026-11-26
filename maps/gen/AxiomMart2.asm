@@ -18,11 +18,12 @@ AxiomMart2Npc0Script:
 	jumptextfaceplayer AxiomMart2Npc0Text
 
 AxiomMart2Npc0Text:
-	text "Everything here is"
-	line "state-approved."
-	para "That is why"
-	line "everything here is"
-	para "gray."
+	text "Our prices are"
+	line "fixed, final and a"
+	para "little"
+	line "embarrassed. The"
+	para "tags apologise"
+	line "when you look."
 	done
 
 AxiomMart2_MapEvents:

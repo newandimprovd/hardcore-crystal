@@ -15,10 +15,10 @@ TithePokecenter6Npc0Script:
 	jumptextfaceplayer TithePokecenter6Npc0Text
 
 TithePokecenter6Npc0Text:
-	text "The nurse works"
-	line "double shifts."
-	para "Triple, if you"
-	line "count the sermons."
+	text "Don't drink the"
+	line "water. Don't drink"
+	para "anything. Don't"
+	line "ask."
 	done
 
 TithePokecenter6_MapEvents:

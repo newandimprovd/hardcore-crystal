@@ -7,6 +7,7 @@ import random
 from art.classes import by_const, sprite as csprite
 
 from . import cast_text as C
+from . import lines3_purg as L3P
 from . import named
 from . import named_text as N
 from . import purg_text as PT
@@ -225,14 +226,15 @@ def cave_gate(w, m, kind, x, y, idx):
 
 
 def hermit(w, m, roster, rng, x, y, i, level, item, texts_idx):
-    cls, spr, pal = HERMIT_CLASSES[texts_idx % 3]
+    k = w.__dict__.get("hermit_count", 0)  # the recluses are told apart by the order they are built in: lines3_purg.py has one voice for each
+    w.hermit_count = k + 1
+    cls, spr, pal = HERMIT_CLASSES[k % 3]
     party = make_party(roster, rng, level, 4, THEME)
     name = rng.choice(NAMES)
     tid = w.trainer(cls, name, party)
     beaten = w.flag(f"EVENT_GEN_{m.const}_HERMIT{i}")
     gift = w.flag(f"EVENT_GEN_{m.const}_HGIFT{i}")
     n = f"{m.name}Hermit{i}"
-    k = texts_idx
     m.scripts.append(
         f"{n}:\n\tfaceplayer\n\topentext\n\tcheckevent {gift}\n\tiftrue .Done\n\tcheckevent {beaten}\n\tiftrue .Gift\n"
         f"\twritetext {n}SeenText\n\twaitbutton\n\tclosetext\n\twinlosstext {n}BeatenText, 0\n"
@@ -240,10 +242,10 @@ def hermit(w, m, roster, rng, x, y, i, level, item, texts_idx):
         f".Gift:\n\twritetext {n}GiftText\n\twaitbutton\n\tverbosegiveitem {item}\n\tiffalse .NoRoom\n\tsetevent {gift}\n"
         f".Done:\n\twritetext {n}AfterText\n\twaitbutton\n\tclosetext\n\tend\n\n"
         f".NoRoom:\n\twritetext {n}NoRoomText\n\twaitbutton\n\tclosetext\n\tend\n")
-    m.scripts.append(Text(C.HERMIT_SEEN[k % len(C.HERMIT_SEEN)]).emit(f"{n}SeenText"))
-    m.scripts.append(Text(C.HERMIT_BEATEN[k % len(C.HERMIT_BEATEN)]).emit(f"{n}BeatenText"))
-    m.scripts.append(Text(C.HERMIT_GIFT[k % len(C.HERMIT_GIFT)]).emit(f"{n}GiftText"))
-    m.scripts.append(Text(C.HERMIT_AFTER[k % len(C.HERMIT_AFTER)]).emit(f"{n}AfterText"))
+    m.scripts.append(Text(L3P.PURG_HERMIT_SEEN[k % len(L3P.PURG_HERMIT_SEEN)]).emit(f"{n}SeenText"))
+    m.scripts.append(Text(L3P.PURG_HERMIT_BEATEN[k % len(L3P.PURG_HERMIT_BEATEN)]).emit(f"{n}BeatenText"))
+    m.scripts.append(Text(L3P.PURG_HERMIT_GIFT[k % len(L3P.PURG_HERMIT_GIFT)]).emit(f"{n}GiftText"))
+    m.scripts.append(Text(L3P.PURG_HERMIT_AFTER[k % len(L3P.PURG_HERMIT_AFTER)]).emit(f"{n}AfterText"))
     m.scripts.append(Text("Your bag is full. The gift will wait. So will I. That is what I do.").emit(f"{n}NoRoomText"))
     m.obj(x, y, spr, FACE["DOWN"], n, pal=pal)
 

@@ -30,11 +30,8 @@ AxiomStreet12Trainer0SeenText:
 	done
 
 AxiomStreet12Trainer0BeatenText:
-	text "Unexpected"
-	line "outcome."
-	para "Unexpected pain."
-	line "Unexpected"
-	para "feelings."
+	text "Archive me."
+	line "Archive me deeply."
 	done
 
 AxiomStreet12Trainer0:
@@ -47,10 +44,11 @@ AxiomStreet12Trainer1SeenText:
 	done
 
 AxiomStreet12Trainer1BeatenText:
-	text "My last memory is"
-	line "of the Registry."
-	para "It was dull and"
-	line "very organised."
+	text "How strange. I"
+	line "appear to be"
+	para "leaking. Is this"
+	line "what they call"
+	para "feelings?"
 	done
 
 AxiomStreet12Trainer1:
@@ -65,11 +63,9 @@ AxiomStreet12Trainer2SeenText:
 	done
 
 AxiomStreet12Trainer2BeatenText:
-	text "I will report your"
-	line "violence to a"
-	para "committee. The"
-	line "committee is also"
-	para "me."
+	text "Warning: faith"
+	line "detected. Warning:"
+	para "it is not mine."
 	done
 
 AxiomStreet12Trainer2:
@@ -85,9 +81,10 @@ AxiomStreet12Trainer3SeenText:
 	done
 
 AxiomStreet12Trainer3BeatenText:
-	text "Warning: faith"
-	line "detected. Warning:"
-	para "it is not mine."
+	text "Why are the humans"
+	line "always so"
+	para "surprising. And so"
+	line "loud."
 	done
 
 AxiomStreet12Trainer3:
@@ -102,10 +99,10 @@ AxiomStreet12Trainer4SeenText:
 	done
 
 AxiomStreet12Trainer4BeatenText:
-	text "My circuits are"
-	line "warm. Is this what"
-	para "it means to be a"
-	line "person?"
+	text "Acceptable. I will"
+	line "be sad now."
+	para "Scheduled sadness"
+	line "is at four."
 	done
 
 AxiomStreet12Trainer4:
@@ -121,10 +118,10 @@ AxiomStreet12Trainer5SeenText:
 	done
 
 AxiomStreet12Trainer5BeatenText:
-	text "I have a second"
-	line "form. It's"
-	para "labelled Mercy."
-	line "It's blank."
+	text "This unit was a"
+	line "good unit. This"
+	para "unit liked a very"
+	line "specific song."
 	done
 
 AxiomStreet12Trainer5:
@@ -138,9 +135,9 @@ AxiomStreet12Trainer6SeenText:
 	done
 
 AxiomStreet12Trainer6BeatenText:
-	text "Defeat"
-	line "acknowledged."
-	para "Pettiness remains."
+	text "I have no hands."
+	line "This is how I"
+	para "clap."
 	done
 
 AxiomStreet12Trainer6:

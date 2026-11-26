@@ -15,11 +15,12 @@ DisPokecenter3Npc0Script:
 	jumptextfaceplayer DisPokecenter3Npc0Text
 
 DisPokecenter3Npc0Text:
-	text "The bed is on"
-	line "fire. It's fine."
-	para "It's a very warm"
-	line "fire. Mostly it's"
-	para "fine."
+	text "Free healing in"
+	line "the Ninth Circle."
+	para "The only free"
+	line "thing. The nurse"
+	para "smiles. It's the"
+	line "worst part."
 	done
 
 DisPokecenter3_MapEvents:

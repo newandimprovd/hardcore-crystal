@@ -130,32 +130,38 @@ DisFurnaceRoomHermit0:
 	end
 
 DisFurnaceRoomHermit0SeenText:
-	text "I have been"
-	line "meditating for"
-	para "four hundred"
-	line "years. Please"
-	para "insult me so I can"
-	line "get angry."
+	text "Welcome to the"
+	line "cave! On your"
+	para "left, rock. On"
+	line "your right, also"
+	para "rock. Please fight"
+	line "me, the tour is"
+	para "dull."
 	done
 
 DisFurnaceRoomHermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "And here, ladies"
+	line "and gentlemen, is"
+	para "the loser. Please"
+	line "clap. The gift"
+	para "shop is to your"
+	line "right."
 	done
 
 DisFurnaceRoomHermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "A souvenir. It's"
+	line "the last one."
+	para "Tourism is dead."
+	line "So is the tourist"
+	para "board."
 	done
 
 DisFurnaceRoomHermit0AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I do the tour for"
+	line "the echoes."
+	para "They're excellent"
+	line "listeners. They"
+	para "never tip."
 	done
 
 DisFurnaceRoomHermit0NoRoomText:
@@ -200,38 +206,37 @@ DisFurnaceRoomHermit1:
 	end
 
 DisFurnaceRoomHermit1SeenText:
-	text "I am a hermit, not"
-	line "a coward. Please"
-	para "hit me and then"
-	line "give me back my"
-	para "corner."
+	text "I outlived my"
+	line "children, their"
+	para "children, and the"
+	line "village. Do you"
+	para "think you can"
+	line "finish me?"
 	done
 
 DisFurnaceRoomHermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "Well, well. A"
+	line "little pain, a"
+	para "little respect. I"
+	line "haven't felt"
+	para "either in decades."
+	line "Thank you, dear."
 	done
 
 DisFurnaceRoomHermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "Take this, dear."
+	line "It was my"
+	para "husband's. He had"
+	line "no use for it."
+	para "Neither do I."
 	done
 
 DisFurnaceRoomHermit1AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "Eat something. You"
+	line "look pale."
+	para "Everyone does."
+	line "Everyone is. It's"
+	para "the cave."
 	done
 
 DisFurnaceRoomHermit1NoRoomText:

@@ -12,26 +12,21 @@ LotusHouse7Npc0Script:
 	jumptextfaceplayer LotusHouse7Npc0Text
 
 LotusHouse7Npc0Text:
-	text "The couple next"
-	line "door signed up for"
-	para "the jealousy and"
-	line "guilt removal."
-	para "They're both very"
-	line "happy. I think"
-	para "they're both"
-	line "sleeping with the"
-	para "lifeguard."
+	text "I tried to write a"
+	line "diary. It came out"
+	para "as a travel"
+	line "brochure."
 	done
 
 LotusHouse7Npc1Script:
 	jumptextfaceplayer LotusHouse7Npc1Text
 
 LotusHouse7Npc1Text:
-	text "I'm a guest here."
-	line "I think. Or a"
-	para "patient. The"
-	line "wristband doesn't"
-	para "say."
+	text "This is a suite."
+	line "It has a bed, a"
+	para "jacuzzi, and a"
+	line "very small, very"
+	para "quiet crying room."
 	done
 
 LotusHouse7_MapEvents:

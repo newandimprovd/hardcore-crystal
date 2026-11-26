@@ -79,9 +79,10 @@ LotusStreet8Trainer0SeenText:
 	done
 
 LotusStreet8Trainer0BeatenText:
-	text "My towel is wet"
-	line "and so are my"
-	para "eyes."
+	text "I can see the"
+	line "whole coast from"
+	para "here. It's really"
+	line "something."
 	done
 
 LotusStreet8Trainer0:
@@ -96,9 +97,10 @@ LotusStreet8Trainer1SeenText:
 	done
 
 LotusStreet8Trainer1BeatenText:
-	text "Ha. Ha. Ha. Oh no,"
-	line "it's still"
-	para "working. Ha."
+	text "This is the worst"
+	line "relapse of my"
+	para "life. I feel"
+	line "awake."
 	done
 
 LotusStreet8Trainer1:
@@ -112,8 +114,10 @@ LotusStreet8Trainer2SeenText:
 	done
 
 LotusStreet8Trainer2BeatenText:
-	text "Well. That's one"
-	line "way to cool off."
+	text "I told myself I'd"
+	line "be a fighter. I"
+	para "told myself a lot"
+	line "of things."
 	done
 
 LotusStreet8Trainer2:
@@ -126,10 +130,9 @@ LotusStreet8Trainer3SeenText:
 	done
 
 LotusStreet8Trainer3BeatenText:
-	text "I need an aloe"
-	line "vera. And a"
-	para "priest. In"
-	line "whichever order."
+	text "Oh no. I'm fading."
+	line "Please move the"
+	para "umbrella."
 	done
 
 LotusStreet8Trainer3:
@@ -145,9 +148,11 @@ LotusStreet8Trainer4SeenText:
 	done
 
 LotusStreet8Trainer4BeatenText:
-	text "Don't put me in a"
-	line "box. Put me in a"
-	para "boat. Push it out."
+	text "This is why I"
+	line "stopped"
+	para "remembering"
+	line "things. They keep"
+	para "happening."
 	done
 
 LotusStreet8Trainer4:
@@ -161,10 +166,10 @@ LotusStreet8Trainer5SeenText:
 	done
 
 LotusStreet8Trainer5BeatenText:
-	text "Honestly, this is"
-	line "the most"
-	para "excitement I've"
-	line "had in a decade."
+	text "Oof. I'm moving to"
+	line "the mountains."
+	para "Forever. Starting"
+	line "after this nap."
 	done
 
 LotusStreet8Trainer5:
@@ -179,10 +184,9 @@ LotusStreet8Trainer6SeenText:
 	done
 
 LotusStreet8Trainer6BeatenText:
-	text "I should've stayed"
-	line "in the hammock."
-	para "The hammock never"
-	line "hit me."
+	text "My last wish is a"
+	line "mango. Somebody. A"
+	para "mango."
 	done
 
 LotusStreet8Trainer6:

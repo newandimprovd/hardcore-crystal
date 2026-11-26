@@ -18,11 +18,11 @@ GroveMart6Npc0Script:
 	jumptextfaceplayer GroveMart6Npc0Text
 
 GroveMart6Npc0Text:
-	text "I trade in favors."
-	line "Do you have a"
-	para "favor? I'll take"
-	line "two potions as an"
-	para "apology."
+	text "No prices. Just"
+	line "take what you need"
+	para "and leave what you"
+	line "want. People leave"
+	para "lots of noise."
 	done
 
 GroveMart6_MapEvents:

@@ -16,10 +16,11 @@ LotusStreet15Hermit:
 	jumptextfaceplayer LotusStreet15HermitText
 
 LotusStreet15HermitText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+	text "Everyone says the"
+	line "sea is calming."
+	para "The sea is a bully"
+	line "with good"
+	para "lighting."
 	done
 
 LotusStreet15AfterText:
@@ -42,9 +43,9 @@ LotusStreet15Trainer0SeenText:
 	done
 
 LotusStreet15Trainer0BeatenText:
-	text "That hurt in a"
-	line "place my memory"
-	para "used to live."
+	text "Ha. Ha. Ha. Oh no,"
+	line "it's still"
+	para "working. Ha."
 	done
 
 LotusStreet15Trainer0:
@@ -57,10 +58,10 @@ LotusStreet15Trainer1SeenText:
 	done
 
 LotusStreet15Trainer1BeatenText:
-	text "A drink would be"
-	line "nice. A last one."
-	para "A very large last"
-	line "one."
+	text "Beautiful. Please"
+	line "tell the bartender"
+	para "I tipped in"
+	line "advance."
 	done
 
 LotusStreet15Trainer1:
@@ -74,9 +75,10 @@ LotusStreet15Trainer2SeenText:
 	done
 
 LotusStreet15Trainer2BeatenText:
-	text "Hang loose, they"
-	line "said. I hung. I'm"
-	para "loose. Ouch."
+	text "I should've stayed"
+	line "in the hammock."
+	para "The hammock never"
+	line "hit me."
 	done
 
 LotusStreet15Trainer2:
@@ -90,10 +92,9 @@ LotusStreet15Trainer3SeenText:
 	done
 
 LotusStreet15Trainer3BeatenText:
-	text "If you see my"
-	line "wife, she's the"
-	para "one with the"
-	line "better lawyer."
+	text "My drink is"
+	line "spilled. That's"
+	para "the real tragedy."
 	done
 
 LotusStreet15Trainer3:
@@ -108,11 +109,9 @@ LotusStreet15Trainer4SeenText:
 	done
 
 LotusStreet15Trainer4BeatenText:
-	text "Oof. I just"
-	line "remembered my"
-	para "mother. She was"
-	line "pretty angry. Hit"
-	para "me again."
+	text "My towel is wet"
+	line "and so are my"
+	para "eyes."
 	done
 
 LotusStreet15Trainer4:
@@ -127,9 +126,10 @@ LotusStreet15Trainer5SeenText:
 	done
 
 LotusStreet15Trainer5BeatenText:
-	text "I lost? I don't"
-	line "usually lose. I"
-	para "don't usually try."
+	text "That's a first."
+	line "I've never been"
+	para "interesting"
+	line "before."
 	done
 
 LotusStreet15Trainer5:

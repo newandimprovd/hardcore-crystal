@@ -18,10 +18,11 @@ LotusMart5Npc0Script:
 	jumptextfaceplayer LotusMart5Npc0Text
 
 LotusMart5Npc0Text:
-	text "The Gift Shop"
-	line "sells souvenirs of"
-	para "things you never"
-	line "did. Very popular."
+	text "We have potions"
+	line "for everything"
+	para "except your"
+	line "mother. She's not"
+	para "in stock."
 	done
 
 LotusMart5_MapEvents:

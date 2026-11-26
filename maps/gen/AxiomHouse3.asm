@@ -12,21 +12,23 @@ AxiomHouse3Npc0Script:
 	jumptextfaceplayer AxiomHouse3Npc0Text
 
 AxiomHouse3Npc0Text:
-	text "We have a window."
-	line "It's painted on."
-	para "It's lovely. The"
-	line "paint is wet,"
-	para "though."
+	text "I keep a plant."
+	line "It's illegal. It's"
+	para "also my best"
+	line "friend. Please"
+	para "don't tell the"
+	line "Mayor."
 	done
 
 AxiomHouse3Npc1Script:
 	jumptextfaceplayer AxiomHouse3Npc1Text
 
 AxiomHouse3Npc1Text:
-	text "I'm not allowed to"
-	line "love. So I hum."
-	para "It's technically"
-	line "background noise."
+	text "This apartment was"
+	line "assigned to me. So"
+	para "was my husband. We"
+	line "get along. Mostly"
+	para "we get assigned."
 	done
 
 AxiomHouse3_MapEvents:

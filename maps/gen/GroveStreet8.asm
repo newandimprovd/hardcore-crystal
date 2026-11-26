@@ -42,10 +42,10 @@ GroveStreet8Trainer0SeenText:
 	done
 
 GroveStreet8Trainer0BeatenText:
-	text "My shoes are"
-	line "clean. Even in"
-	para "death I'm a"
-	line "hippie."
+	text "My ancestors are"
+	line "watching. They're"
+	para "also hiding. I can"
+	line "feel them hiding."
 	done
 
 GroveStreet8Trainer0:
@@ -59,10 +59,10 @@ GroveStreet8Trainer1SeenText:
 	done
 
 GroveStreet8Trainer1BeatenText:
-	text "Oh. Ow. That's a"
-	line "new feeling. I'll"
-	para "write a poem about"
-	line "it."
+	text "Okay, I'll go back"
+	line "to weaving."
+	para "Weaving never"
+	line "punches back."
 	done
 
 GroveStreet8Trainer1:
@@ -76,8 +76,9 @@ GroveStreet8Trainer2SeenText:
 	done
 
 GroveStreet8Trainer2BeatenText:
-	text "Ow ow ow. Sorry."
-	line "Ow."
+	text "No hard feelings."
+	line "I'm also a little"
+	para "proud."
 	done
 
 GroveStreet8Trainer2:
@@ -91,10 +92,10 @@ GroveStreet8Trainer3SeenText:
 	done
 
 GroveStreet8Trainer3BeatenText:
-	text "Yes! Yes! More!"
-	line "Wait, no, I'm"
-	para "kidding. Stop."
-	line "Seriously."
+	text "Ow. This is why I"
+	line "don't normally"
+	para "fight. Or normally"
+	line "bathe."
 	done
 
 GroveStreet8Trainer3:
@@ -109,11 +110,10 @@ GroveStreet8Trainer4SeenText:
 	done
 
 GroveStreet8Trainer4BeatenText:
-	text "I gave away"
-	line "everything I"
-	para "owned. It was"
-	line "nothing. It's"
-	para "still nothing."
+	text "Fine, fine, take"
+	line "my berries. Take"
+	para "my goat. Don't"
+	line "take my goat."
 	done
 
 GroveStreet8Trainer4:
@@ -128,10 +128,10 @@ GroveStreet8Trainer5SeenText:
 	done
 
 GroveStreet8Trainer5BeatenText:
-	text "That was a very"
-	line "honest fight."
-	para "Honestly, I hated"
-	line "it."
+	text "Whoa. Heavy. Real"
+	line "heavy, man. Like,"
+	para "structurally"
+	line "heavy."
 	done
 
 GroveStreet8Trainer5:

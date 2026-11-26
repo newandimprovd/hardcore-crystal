@@ -127,9 +127,10 @@ TitheRoadTrainer0SeenText:
 	done
 
 TitheRoadTrainer0BeatenText:
-	text "Okay, okay, okay."
-	line "That's enough. Why"
-	para "are you smiling?"
+	text "That was"
+	line "unprofessional. Of"
+	para "me. I'll write it"
+	line "up."
 	done
 
 TitheRoadTrainer0:
@@ -143,10 +144,11 @@ TitheRoadTrainer1SeenText:
 	done
 
 TitheRoadTrainer1BeatenText:
-	text "That was"
-	line "unprofessional. Of"
-	para "me. I'll write it"
-	line "up."
+	text "I forgive you."
+	line "It's a reflex. I"
+	para "forgive everyone I"
+	line "can't afford to"
+	para "fight."
 	done
 
 TitheRoadTrainer1:
@@ -160,10 +162,9 @@ TitheRoadTrainer2SeenText:
 	done
 
 TitheRoadTrainer2BeatenText:
-	text "Write my name in"
-	line "the book. The big"
-	para "book. The one with"
-	line "the bad names."
+	text "Funny. I always"
+	line "thought the fall"
+	para "would hurt more."
 	done
 
 TitheRoadTrainer2:
@@ -178,9 +179,9 @@ TitheRoadTrainer3SeenText:
 	done
 
 TitheRoadTrainer3BeatenText:
-	text "Fine. You win."
-	line "Please forget my"
-	para "face."
+	text "Hail Mary. Full of"
+	line "grace. Not full of"
+	para "luck."
 	done
 
 TitheRoadTrainer3:
@@ -195,8 +196,10 @@ TitheRoadTrainer4SeenText:
 	done
 
 TitheRoadTrainer4BeatenText:
-	text "You hit like"
-	line "landlords evict."
+	text "Heaven rejected my"
+	line "application twice."
+	para "Maybe you can pull"
+	line "strings."
 	done
 
 TitheRoadTrainer4:
@@ -210,9 +213,10 @@ TitheRoadTrainer5SeenText:
 	done
 
 TitheRoadTrainer5BeatenText:
-	text "So this is how it"
-	line "ends. In a puddle"
-	para "behind a tower."
+	text "Look at that. A"
+	line "man down and a"
+	para "city that doesn't"
+	line "care. A postcard."
 	done
 
 TitheRoadTrainer5:

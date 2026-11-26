@@ -51,20 +51,21 @@ TithePlaza3Giver:
 	end
 
 TithePlaza3GiverText:
-	text "I'm PAYTIENCE. Pay"
-	line "plus patience. I"
-	para "have the first."
-	line "You don't have the"
-	para "second. Here. I"
-	line "owe it to the"
-	para "universe."
+	text "I'm CONFESSOR."
+	line "Confess plus"
+	para "sorrow. You first,"
+	line "then me, then"
+	para "nobody. I forgive"
+	line "you for the thing"
+	para "you're about to"
+	line "do. Take this."
 	done
 
 TithePlaza3GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "I said your sins"
+	line "were forgiven. I"
+	para "didn't say by"
+	line "whom."
 	done
 
 TithePlaza3GiverNoRoomText:

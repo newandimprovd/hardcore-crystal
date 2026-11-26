@@ -15,12 +15,12 @@ DisPokecenter7Npc0Script:
 	jumptextfaceplayer DisPokecenter7Npc0Text
 
 DisPokecenter7Npc0Text:
-	text "The nurse has been"
-	line "here for"
-	para "centuries. She's"
-	line "kind. She's also"
-	para "dead. It's"
-	line "complicated."
+	text "The nurse is a"
+	line "demon on a"
+	para "punishment shift."
+	line "She heals you"
+	para "gently. That's her"
+	line "punishment."
 	done
 
 DisPokecenter7_MapEvents:

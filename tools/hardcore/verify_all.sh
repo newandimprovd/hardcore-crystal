@@ -60,4 +60,11 @@ step b_pg $TB pg TEST_MAP=TITHE_JUNCTION TEST_X=19 TEST_Y=20 TEST_MON=CTHULUDON 
 step purg python3 tools/hardcore/test_purg.py /home/claude/scratch/pg.gbc
 step b_stF $TB stF TEST_MAP=JUDECCA_CENTRE TEST_X=4 TEST_Y=17 TEST_MON=DEATHROLL TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2
 step ending python3 tools/hardcore/test_story.py ending /home/claude/scratch/stF.gbc
+read -r HC HX HY <<< "$(python3 tools/hardcore/hut_spawn.py)"
+step b_hut $TB hut1 TEST_MAP=$HC TEST_X=$HX TEST_Y=$HY TEST_MON=CTHULUDON TEST_LEVEL=100 TEST_REVEALED=1 TEST_ITEMS=0
+step hut python3 tools/hardcore/test_hut.py /home/claude/scratch/hut1.gbc
+step b_endA $TB endA TEST_MAP=JUDECCA_CENTRE TEST_X=4 TEST_Y=17 TEST_MON=DEATHROLL TEST_LEVEL=100 TEST_REVEALED=1 TEST_STORY=2 TEST_FULLDEX=1 TEST_NAME=CHRIS
+step fulldex python3 tools/hardcore/test_fulldex.py /home/claude/scratch/endA.gbc
+step continuity python3 tools/hardcore/check_continuity.py
+step variety python3 tools/hardcore/check_variety.py --quiet
 echo "done" >> $V/summary.txt

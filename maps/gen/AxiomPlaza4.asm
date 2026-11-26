@@ -65,20 +65,21 @@ AxiomPlaza4Giver:
 	end
 
 AxiomPlaza4GiverText:
-	text "I'm DATUMN. Datum"
-	line "plus autumn. A"
-	para "single fact that"
-	line "has fallen. Gift"
-	para "certificate. Valid"
-	line "until this"
-	para "sentence ends."
+	text "I'm BYTEMARE. Byte"
+	line "plus nightmare. It"
+	para "nibbles at your"
+	line "sleep. A small"
+	para "bite. Not"
+	line "poisoned. Mostly."
+	para "Statistically."
 	done
 
 AxiomPlaza4GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "I told you it"
+	line "wasn't poisoned. I"
+	para "said mostly."
+	line "Mostly is a"
+	para "spectrum."
 	done
 
 AxiomPlaza4GiverNoRoomText:

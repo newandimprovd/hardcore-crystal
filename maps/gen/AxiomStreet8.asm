@@ -16,9 +16,12 @@ AxiomStreet8Hermit:
 	jumptextfaceplayer AxiomStreet8HermitText
 
 AxiomStreet8HermitText:
-	text "Don't speak"
-	line "loudly. The leaves"
-	para "are audited."
+	text "The sensors here"
+	line "are down. The"
+	para "sensors are always"
+	line "down. It is how"
+	para "the sensors"
+	line "survive."
 	done
 
 AxiomStreet8AfterText:
@@ -42,10 +45,11 @@ AxiomStreet8Trainer0SeenText:
 	done
 
 AxiomStreet8Trainer0BeatenText:
-	text "You win. File a"
-	line "claim at window 6."
-	para "Window 6 does not"
-	line "exist."
+	text "Termination"
+	line "logged. Please"
+	para "enjoy your"
+	line "continued"
+	para "existence."
 	done
 
 AxiomStreet8Trainer0:
@@ -61,10 +65,10 @@ AxiomStreet8Trainer1SeenText:
 	done
 
 AxiomStreet8Trainer1BeatenText:
-	text "Deactivating. Tell"
-	line "the Mayor I was"
-	para "compliant until"
-	line "the end."
+	text "My shift ended."
+	line "Not just now."
+	para "Years ago. Why do"
+	line "I still work here?"
 	done
 
 AxiomStreet8Trainer1:
@@ -76,10 +80,11 @@ AxiomStreet8Trainer2SeenText:
 	done
 
 AxiomStreet8Trainer2BeatenText:
-	text "Terminating."
-	line "Please do not take"
-	para "this personally."
-	line "It is personal."
+	text "I wasn't built for"
+	line "this. I was built"
+	para "for spreadsheets."
+	line "Spreadsheets love"
+	para "me."
 	done
 
 AxiomStreet8Trainer2:
@@ -95,11 +100,11 @@ AxiomStreet8Trainer3SeenText:
 	done
 
 AxiomStreet8Trainer3BeatenText:
-	text "My programming"
-	line "says goodbye. My"
-	para "feelings say"
-	line "hello. Both are"
-	para "very confused."
+	text "Executing last"
+	line "will. Executing"
+	para "last will. Last"
+	line "will contains a"
+	para "single line: ow."
 	done
 
 AxiomStreet8Trainer3:
@@ -112,8 +117,10 @@ AxiomStreet8Trainer4SeenText:
 	done
 
 AxiomStreet8Trainer4BeatenText:
-	text "Reboot. Reboot."
-	line "Reboot. Please."
+	text "I had a family. It"
+	line "was assigned. I"
+	para "would like to meet"
+	line "them."
 	done
 
 AxiomStreet8Trainer4:
@@ -129,10 +136,9 @@ AxiomStreet8Trainer5SeenText:
 	done
 
 AxiomStreet8Trainer5BeatenText:
-	text "I have a second"
-	line "form. It's"
-	para "labelled Mercy."
-	line "It's blank."
+	text "Hostility"
+	line "depleted. Reboot"
+	para "unlikely."
 	done
 
 AxiomStreet8Trainer5:
@@ -146,9 +152,9 @@ AxiomStreet8Trainer6SeenText:
 	done
 
 AxiomStreet8Trainer6BeatenText:
-	text "I don't feel pain."
-	line "I feel a very"
-	para "high-pitched tone."
+	text "My warranty has"
+	line "expired. Thanks"
+	para "for that."
 	done
 
 AxiomStreet8Trainer6:

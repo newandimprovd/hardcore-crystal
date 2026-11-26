@@ -43,8 +43,9 @@ TitheStreet4Trainer0SeenText:
 	done
 
 TitheStreet4Trainer0BeatenText:
-	text "I should've taken"
-	line "the bribe."
+	text "Please don't take"
+	line "my wallet. Wait,"
+	para "you already did."
 	done
 
 TitheStreet4Trainer0:
@@ -58,10 +59,10 @@ TitheStreet4Trainer1SeenText:
 	done
 
 TitheStreet4Trainer1BeatenText:
-	text "Take my wallet."
-	line "There's a photo in"
-	para "it. Please give"
-	line "her my apologies."
+	text "My team is the"
+	line "only honest thing"
+	para "I own. Be kind to"
+	line "them."
 	done
 
 TitheStreet4Trainer1:
@@ -75,9 +76,9 @@ TitheStreet4Trainer2SeenText:
 	done
 
 TitheStreet4Trainer2BeatenText:
-	text "Right. I was never"
-	line "here. Neither were"
-	para "you. Go."
+	text "I can stop"
+	line "anytime. I proved"
+	para "it just now."
 	done
 
 TitheStreet4Trainer2:
@@ -91,11 +92,9 @@ TitheStreet4Trainer3SeenText:
 	done
 
 TitheStreet4Trainer3BeatenText:
-	text "You've done me a"
-	line "favour. I had a"
-	para "meeting at three."
-	line "I hate the"
-	para "meeting."
+	text "Nobody told me"
+	line "they'd send a"
+	para "professional."
 	done
 
 TitheStreet4Trainer3:
@@ -109,10 +108,11 @@ TitheStreet4Trainer4SeenText:
 	done
 
 TitheStreet4Trainer4BeatenText:
-	text "Great. Now I have"
-	line "to explain this to"
-	para "my insurance. And"
-	line "my mistress."
+	text "It's beautiful."
+	line "There's a priest."
+	para "There's a"
+	line "landlord. They are"
+	para "both so small."
 	done
 
 TitheStreet4Trainer4:
@@ -126,12 +126,11 @@ TitheStreet4Trainer5SeenText:
 	done
 
 TitheStreet4Trainer5BeatenText:
-	text "A glorious"
-	line "afterlife, signed"
-	para "and stamped. I"
-	line "forgive you in"
-	para "advance. And in"
-	line "arrears."
+	text "Don't take my"
+	line "watch. It's the"
+	para "last thing my"
+	line "father and I"
+	para "fought over."
 	done
 
 TitheStreet4Trainer5:

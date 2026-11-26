@@ -13,11 +13,12 @@ TitheStreet10Hermit:
 	jumptextfaceplayer TitheStreet10HermitText
 
 TitheStreet10HermitText:
-	text "Shh. The trainers"
-	line "can't see you when"
-	para "you sit down. I"
-	line "have been sitting"
-	para "down since March."
+	text "I left the city to"
+	line "escape the tithe."
+	para "The trees also"
+	line "want ten percent."
+	para "Of what, they"
+	line "won't say."
 	done
 
 TitheStreet10PurgFlagScript:
@@ -44,9 +45,10 @@ TitheStreet10Trainer0SeenText:
 	done
 
 TitheStreet10Trainer0BeatenText:
-	text "No more bells."
-	line "Please. No more"
-	para "bells."
+	text "I blessed this"
+	line "street myself. You"
+	para "will not enjoy the"
+	line "aftertaste."
 	done
 
 TitheStreet10Trainer0:
@@ -62,10 +64,10 @@ TitheStreet10Trainer1SeenText:
 	done
 
 TitheStreet10Trainer1BeatenText:
-	text "Well. That's it"
-	line "for my pension."
-	para "And the rest of"
-	line "me."
+	text "Oh. The river. It"
+	line "runs backward. I"
+	para "see the wake."
+	line "Thank you."
 	done
 
 TitheStreet10Trainer1:
@@ -79,10 +81,10 @@ TitheStreet10Trainer2SeenText:
 	done
 
 TitheStreet10Trainer2BeatenText:
-	text "I'm calling my"
-	line "uncle. He doesn't"
-	para "exist, but I'll"
-	line "feel better."
+	text "I confess to"
+	line "everything. Not"
+	para "this fight. The"
+	line "rest."
 	done
 
 TitheStreet10Trainer2:
@@ -96,10 +98,8 @@ TitheStreet10Trainer3SeenText:
 	done
 
 TitheStreet10Trainer3BeatenText:
-	text "Can I be buried"
-	line "near the vending"
-	para "machine? I like"
-	line "the hum."
+	text "My knees. My"
+	line "dignity. My lease."
 	done
 
 TitheStreet10Trainer3:
@@ -114,10 +114,9 @@ TitheStreet10Trainer4SeenText:
 	done
 
 TitheStreet10Trainer4BeatenText:
-	text "Another day,"
-	line "another loss. At"
-	para "least the pay is"
-	line "the same."
+	text "Okay, okay, okay."
+	line "That's enough. Why"
+	para "are you smiling?"
 	done
 
 TitheStreet10Trainer4:
@@ -131,10 +130,10 @@ TitheStreet10Trainer5SeenText:
 	done
 
 TitheStreet10Trainer5BeatenText:
-	text "I'll be in the"
-	line "confessional. Come"
-	para "find me. Actually"
-	line "don't."
+	text "I used to be a"
+	line "good man. I used"
+	para "to be a lot of"
+	line "things."
 	done
 
 TitheStreet10Trainer5:

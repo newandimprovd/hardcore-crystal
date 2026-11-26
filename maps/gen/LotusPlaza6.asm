@@ -56,18 +56,21 @@ LotusPlaza6Giver:
 	end
 
 LotusPlaza6GiverText:
-	text "I'm COCONAP."
-	line "Coconut plus nap."
-	para "I rest with my"
-	line "fruit. Don't wake"
-	para "me. Just take it."
+	text "I'm PALMISTRY."
+	line "Palm plus mystery."
+	para "I read your future"
+	line "in the lines of a"
+	para "tree. You will be"
+	line "given a gift. I'm"
+	para "giving it."
+	line "Prophecy complete."
 	done
 
 LotusPlaza6GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "I predicted this"
+	line "conversation."
+	para "That's why I was"
+	line "so bored."
 	done
 
 LotusPlaza6GiverNoRoomText:

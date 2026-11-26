@@ -1,0 +1,102 @@
+"""Alpha 3.3 variety pass, TITHE CITY: defeat lines for the street fighters, people inside the Pokecenter, Mart and houses, and the seven plaza givers."""
+
+BEATEN_NEW = [
+    "Fine. Put it on my tab. The tab is also on a tab.",
+    "My landlord will hear of this. He hears of everything, then raises the rent.",
+    "I tithed ten percent of my strength to the Church. Explains a lot.",
+    "Bless you. I mean it. It costs nothing. I checked.",
+    "I was going to retire this year. Was. Grammar is cruel.",
+    "Tell the bishop I tried. He'll say it wasn't enough. He always does.",
+    "Ow. Ow. Don't worry, it's covered. By nobody.",
+    "That's the third time this week. I need a hobby that doesn't bleed.",
+    "I want a refund on my childhood.",
+    "Forgive me, Father. Oh. You're not him. Never mind.",
+    "I only did it for the dental plan.",
+    "Don't tell my mother I lost. Tell her I was martyred.",
+    "I confess to everything. Not this fight. The rest.",
+    "A priest, a cop and a landlord walk into a pond. I'm the pond.",
+    "My pension is a joke. At least now it has a punchline.",
+    "Hit me again. I'm in a good mood. It's my day off from caring.",
+    "I should have stayed in the confession booth. The booth had a heater.",
+    "This is a hate crime against my knees.",
+    "Take my wallet. It's empty. Take the receipt. It's worse.",
+    "The collection plate is passed to whoever is left standing. Hold this.",
+    "Oh good. Now I get to be a cautionary tale.",
+    "That wasn't in the lease.",
+    "I had a bad feeling this morning. It was breakfast. I still lost.",
+    "Don't stand there looking holy. You're not good at it.",
+    "I used to be somebody's favorite altar boy. Now look.",
+    "Every loss is a lesson. I've learned nothing. It's very consistent.",
+    "Sure. Rob the poor. Somebody has to.",
+    "I'd call a cop, but you know. He'd want his cut.",
+    "We were promised heaven. We got a parking fine.",
+    "Please don't hurt my little monster. He has a recital.",
+    "My knees were the last thing I owned outright.",
+    "The wine was for the sacrament. I regret the sacrament.",
+    "That was a clean loss. I'll frame it. The frame costs extra.",
+    "Mercy, then. Mercy is on the menu. It's the cheapest dish.",
+    "Eh. At least this ends the sermon.",
+    "I can stop anytime. I proved it just now.",
+    "Note to self. Never trust a man who tithes in advance.",
+    "I'll be in the vestibule, weeping professionally.",
+    "My lawyer is going to love this. He loves anything that bleeds.",
+    "Right. Now I owe the bank a fall down some stairs.",
+    "Take the next road. They pay worse. They fight worse. They're my cousins.",
+    "Heaven rejected my application twice. Maybe you can pull strings.",
+    "I'm legally entitled to a rematch. Not this year.",
+    "I don't have the faith for a comeback. Or the cash.",
+    "Quit staring. I'm praying. For your torment.",
+]
+
+INTERIOR_CENTER = [
+    "The nurse bills in prayers now. Three Hail Marys per bandage. Cash is faster.",
+    "I came in for a headache. They offered me an exorcism. Cheaper, they said.",
+    "Don't use the waiting room chairs. They belong to a lien holder.",
+    "A bishop was here yesterday. He asked for a second opinion, then a third. All of them said amen.",
+]
+
+INTERIOR_MART = [
+    "Everything is on sale. By sale I mean we stole it from the Church and the Church stole it from you.",
+    "Receipts are optional. Alibis are extra.",
+    "I used to sell candles. Then the diocese opened a candle shop and a candle protection scheme.",
+    "No credit. No debit. We accept guilt, in small bills.",
+]
+
+INTERIOR_HOUSE = [
+    "I'm a retired gravedigger. Business was always up. Retirement is better. It's quieter.",
+    "My husband went out for bread in 1998. I bake it daily in case he's still hungry.",
+    "I paint miniature saints. The smaller they are, the fewer prayers they can ignore.",
+    "I rent this room to a man who may be a priest. He may be several. He pays in candles.",
+    "I teach school. We learn three things. Obey, tithe, and don't look under the cathedral.",
+    "My brother is a cop. We don't speak. He's a cop in the other sense.",
+    "I collect hymnals. Not for the hymns. The margins are full of confessions. Don't tell.",
+    "The roof leaks holy water. Nobody can fix it. It's under a blessing.",
+    "I'm a loan officer on my day off. My day off is a lie. I'm always an officer.",
+    "My cat is a better Christian than I am. She hides every Sunday.",
+    "I once saw the Mayor cry. It was a Tuesday. Nobody believes me. It was an onion.",
+    "I make candles from the ends of other candles. A thrifty man's salvation.",
+    "The bell tower has been ringing nine times at noon for a week. Nobody asked it to.",
+    "I used to sing in the choir. They asked me to stop. Quietly. With a pillow.",
+    "Don't touch the radiator. It's a relic. It's also a radiator.",
+    "My father was a confession booth. That's not a metaphor. He was very big.",
+]
+
+GIVER = [
+    ("COLLECTA", "Collect plus Gaia. The earth gives and I take. Then I give back a little.", "Here. Consider it a rebate on your suffering."),
+    ("TITHEMIS", "Tithe plus Themis. Justice with an invoice.", "A gift. It's tax deductible. By me, for me."),
+    ("CONFESSOR", "Confess plus sorrow. You first, then me, then nobody.", "I forgive you for the thing you're about to do. Take this."),
+    ("PARISHEEP", "Parish plus sheep. I follow. I also lead, by accident.", "Keep it. The flock has plenty. The flock is also lost."),
+    ("LEDGERLY", "Ledger plus early. I balance books before they cook themselves.", "A gift for a decent debtor. You'll pay later. Everyone does."),
+    ("INDULGENT", "Indulgence plus gent. Fully paid up, in every sense.", "I'm feeling generous. It will pass. Hold out your hands."),
+    ("MITERRIBLE", "Mitre plus terrible. A bishop's hat that learned to lie.", "A little something from the top. It trickled down. This is what's left."),
+]
+
+GIVER_AFTER = [
+    "That's it. Don't stand there waiting for a sermon. I'm out.",
+    "Come back when you owe more. I'll have a bigger plate.",
+    "I said your sins were forgiven. I didn't say by whom.",
+    "Walk on. The flock needs a gap to graze in.",
+    "I wrote you down in the ledger. In pencil. For now.",
+    "A second gift would be a sin. My favorite kind. Not today.",
+    "Don't thank me. Thank the poor. They paid for it.",
+]

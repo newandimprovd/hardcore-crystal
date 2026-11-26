@@ -32,9 +32,11 @@ TitheBoutique4Npc0Script:
 	jumptextfaceplayer TitheBoutique4Npc0Text
 
 TitheBoutique4Npc0Text:
-	text "The cathedral bell"
-	line "is a recording."
-	para "Don't tell anyone."
+	text "I'm a slumlord."
+	line "It's very"
+	para "stressful."
+	line "Everyone hates me."
+	para "I own a yacht."
 	done
 
 TitheBoutique4_MapEvents:

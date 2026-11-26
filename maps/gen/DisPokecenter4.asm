@@ -15,12 +15,12 @@ DisPokecenter4Npc0Script:
 	jumptextfaceplayer DisPokecenter4Npc0Text
 
 DisPokecenter4Npc0Text:
-	text "I got here for a"
-	line "heart attack and"
-	para "I'm stuck on a"
-	line "bed. Great"
-	para "service. Zero"
-	line "oxygen."
+	text "I'm only here for"
+	line "the heating. It's"
+	para "the only warm room"
+	line "in the second"
+	para "ring. Don't tell"
+	line "the others."
 	done
 
 DisPokecenter4_MapEvents:

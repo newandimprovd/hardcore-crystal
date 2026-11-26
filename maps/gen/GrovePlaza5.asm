@@ -54,20 +54,22 @@ GrovePlaza5Giver:
 	end
 
 GrovePlaza5GiverText:
-	text "I'm HARVESTA."
-	line "Harvest plus"
-	para "vista. The view is"
-	line "poor. The yield is"
-	para "fine. Take some."
-	line "We have plenty. We"
-	para "have no idea why."
+	text "I'm THATCHELL."
+	line "Thatch plus"
+	para "Chelle. My roof"
+	line "and my ex-wife."
+	para "Both leak. Have"
+	line "this. It's better"
+	para "than the roof, and"
+	line "quieter than the"
+	para "wife."
 	done
 
 GrovePlaza5GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "The roof leaks"
+	line "again. It's mine"
+	para "to fix. It isn't."
+	line "Goodbye."
 	done
 
 GrovePlaza5GiverNoRoomText:

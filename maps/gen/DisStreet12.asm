@@ -80,9 +80,8 @@ DisStreet12Trainer0SeenText:
 	done
 
 DisStreet12Trainer0BeatenText:
-	text "I knew I should've"
-	line "been nicer to the"
-	para "guards."
+	text "Is this death? Or"
+	line "is this Wednesday?"
 	done
 
 DisStreet12Trainer0:
@@ -97,10 +96,10 @@ DisStreet12Trainer1SeenText:
 	done
 
 DisStreet12Trainer1BeatenText:
-	text "I'll see you at"
-	line "the next circle."
-	para "I'll be the one in"
-	line "the dumpster."
+	text "Down here, it's"
+	line "all the same fire."
+	para "You'll find that"
+	line "out too."
 	done
 
 DisStreet12Trainer1:
@@ -114,8 +113,9 @@ DisStreet12Trainer2SeenText:
 	done
 
 DisStreet12Trainer2BeatenText:
-	text "Is this death? Or"
-	line "is this Wednesday?"
+	text "Dead again. It"
+	line "gets easier. It"
+	para "really doesn't."
 	done
 
 DisStreet12Trainer2:
@@ -129,10 +129,9 @@ DisStreet12Trainer3SeenText:
 	done
 
 DisStreet12Trainer3BeatenText:
-	text "You killed me."
-	line "That's the most"
-	para "anyone's cared in"
-	line "decades."
+	text "I'm sorry. I'm so"
+	line "sorry. That's my"
+	para "job description."
 	done
 
 DisStreet12Trainer3:
@@ -145,10 +144,10 @@ DisStreet12Trainer4SeenText:
 	done
 
 DisStreet12Trainer4BeatenText:
-	text "It's a good thing"
-	line "I'm already dead."
-	para "Otherwise that"
-	line "would've hurt."
+	text "I'm going to be"
+	line "sick. Not from the"
+	para "hit. From the"
+	line "paperwork."
 	done
 
 DisStreet12Trainer4:
@@ -163,10 +162,11 @@ DisStreet12Trainer5SeenText:
 	done
 
 DisStreet12Trainer5BeatenText:
-	text "I once got a stern"
-	line "talking-to by the"
-	para "Devil. It was"
-	line "gentler."
+	text "Whoever put you in"
+	line "my way, I hate"
+	para "them. And thank"
+	line "them. In that"
+	para "order."
 	done
 
 DisStreet12Trainer5:
@@ -179,10 +179,9 @@ DisStreet12Trainer6SeenText:
 	done
 
 DisStreet12Trainer6BeatenText:
-	text "My soul is the"
-	line "property of"
-	para "someone else. Take"
-	line "it up with him."
+	text "I've been hit by"
+	line "worse. Mostly by"
+	para "me."
 	done
 
 DisStreet12Trainer6:

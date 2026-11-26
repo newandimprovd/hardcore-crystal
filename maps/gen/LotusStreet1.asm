@@ -10,17 +10,16 @@ LotusStreet1Pickup:
 	itemball TM_DIG
 
 LotusStreet1Hidden:
-	hiddenitem PP_UP, EVENT_GEN_LOTUS_STREET1_HIDDEN
+	hiddenitem REVIVE, EVENT_GEN_LOTUS_STREET1_HIDDEN
 
 LotusStreet1Hermit:
 	jumptextfaceplayer LotusStreet1HermitText
 
 LotusStreet1HermitText:
-	text "Everyone is so"
-	line "relaxed here."
-	para "That's what giving"
-	line "up looks like with"
-	para "a tan."
+	text "I came to the"
+	line "coast to forget. I"
+	para "forgot why. Best"
+	line "vacation ever."
 	done
 
 LotusStreet1AfterText:
@@ -44,9 +43,8 @@ LotusStreet1Trainer0SeenText:
 	done
 
 LotusStreet1Trainer0BeatenText:
-	text "A seagull is"
-	line "eating my shoe. I"
-	para "deserve this."
+	text "Ah. So this is the"
+	line "long nap."
 	done
 
 LotusStreet1Trainer0:
@@ -62,10 +60,11 @@ LotusStreet1Trainer1SeenText:
 	done
 
 LotusStreet1Trainer1BeatenText:
-	text "I'll be fine. A"
-	line "coconut will help."
-	para "A coconut to the"
-	line "head, perhaps."
+	text "My package covered"
+	line "one defeat. This"
+	para "was the second. Do"
+	line "I owe anyone an"
+	para "apology?"
 	done
 
 LotusStreet1Trainer1:
@@ -80,9 +79,10 @@ LotusStreet1Trainer2SeenText:
 	done
 
 LotusStreet1Trainer2BeatenText:
-	text "I forgot to duck."
-	line "And I forgot to"
-	para "forgive you."
+	text "I'd love to"
+	line "retaliate, but I'm"
+	para "contractually"
+	line "serene."
 	done
 
 LotusStreet1Trainer2:
@@ -97,9 +97,10 @@ LotusStreet1Trainer3SeenText:
 	done
 
 LotusStreet1Trainer3BeatenText:
-	text "You've ruined my"
-	line "chill. It was a"
-	para "delicate chill."
+	text "Put me on the"
+	line "sand. Facing the"
+	para "sun. I want a tan"
+	line "for the funeral."
 	done
 
 LotusStreet1Trainer3:
@@ -112,10 +113,10 @@ LotusStreet1Trainer4SeenText:
 	done
 
 LotusStreet1Trainer4BeatenText:
-	text "My vacation is"
-	line "over. I never got"
-	para "to ask for the"
-	line "cocktail umbrella."
+	text "I paid good money"
+	line "to forget how to"
+	para "lose. The refund"
+	line "desk is closed."
 	done
 
 LotusStreet1Trainer4:
@@ -129,9 +130,12 @@ LotusStreet1Trainer5SeenText:
 	done
 
 LotusStreet1Trainer5BeatenText:
-	text "That was"
-	line "refreshing. Then"
-	para "it wasn't."
+	text "We have a no-pain"
+	line "policy on this"
+	para "coast."
+	line "Technically, you"
+	para "are now"
+	line "trespassing."
 	done
 
 LotusStreet1Trainer5:
@@ -144,10 +148,9 @@ LotusStreet1Trainer6SeenText:
 	done
 
 LotusStreet1Trainer6BeatenText:
-	text "Hey, it's nice"
-	line "here. The sky. The"
-	para "sand. The sudden"
-	line "lack of pulse."
+	text "I forgot to duck."
+	line "And I forgot to"
+	para "forgive you."
 	done
 
 LotusStreet1Trainer6:
@@ -157,15 +160,16 @@ LotusStreet1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 17, LOTUS_STREET1_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  4, 16, BGEVENT_ITEM, LotusStreet1Hidden
+	bg_event  7, 14, BGEVENT_ITEM, LotusStreet1Hidden
 
 	def_object_events
-	object_event  2, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet1Pickup, EVENT_GEN_LOTUS_STREET1_PICKUP
-	object_event  5, 14, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet1Hermit, -1
+	object_event  9, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet1Pickup, EVENT_GEN_LOTUS_STREET1_PICKUP
+	object_event 13, 18, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusStreet1Hermit, -1
 	object_event 12, 28, SPRITE_HC_CLINICIAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet1Trainer0, -1
 	object_event 21, 24, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet1Trainer1, -1
 	object_event 16, 20, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet1Trainer2, -1

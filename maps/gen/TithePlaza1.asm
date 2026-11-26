@@ -74,21 +74,22 @@ TithePlaza1Giver:
 	end
 
 TithePlaza1GiverText:
-	text "I'm CHARITREE."
-	line "Charity plus tree."
-	para "I am the first and"
-	line "the second is my"
-	para "fault. A small"
-	line "offering, from a"
-	para "large"
-	line "organization."
+	text "I'm COLLECTA."
+	line "Collect plus Gaia."
+	para "The earth gives"
+	line "and I take. Then I"
+	para "give back a"
+	line "little. Here."
+	para "Consider it a"
+	line "rebate on your"
+	para "suffering."
 	done
 
 TithePlaza1GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "That's it. Don't"
+	line "stand there"
+	para "waiting for a"
+	line "sermon. I'm out."
 	done
 
 TithePlaza1GiverNoRoomText:

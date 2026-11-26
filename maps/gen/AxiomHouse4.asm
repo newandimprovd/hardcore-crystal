@@ -12,23 +12,24 @@ AxiomHouse4Npc0Script:
 	jumptextfaceplayer AxiomHouse4Npc0Text
 
 AxiomHouse4Npc0Text:
-	text "This apartment was"
-	line "assigned to me. So"
-	para "was my husband. We"
-	line "get along. Mostly"
-	para "we get assigned."
+	text "I keep a pet rock."
+	line "It's the only"
+	para "thing in this city"
+	line "that isn't"
+	para "monitored. We"
+	line "understand each"
+	para "other."
 	done
 
 AxiomHouse4Npc1Script:
 	jumptextfaceplayer AxiomHouse4Npc1Text
 
 AxiomHouse4Npc1Text:
-	text "I tutor human"
-	line "children in pairs."
-	para "The pairing is"
-	line "approved. The"
-	para "tutoring is"
-	line "cursed."
+	text "I paint portraits."
+	line "The robots find"
+	para "them offensive."
+	line "They are very"
+	para "accurate."
 	done
 
 AxiomHouse4_MapEvents:

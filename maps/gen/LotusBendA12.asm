@@ -13,12 +13,10 @@ LotusBendA12Hermit:
 	jumptextfaceplayer LotusBendA12HermitText
 
 LotusBendA12HermitText:
-	text "I have forgotten"
-	line "what day it is. It"
-	para "is wonderful."
-	line "Nobody has told"
-	para "me. I hope it"
-	line "stays that way."
+	text "The tide took my"
+	line "watch. It also"
+	para "took my reasons. I"
+	line "miss the watch."
 	done
 
 LotusBendA12_MapEvents:

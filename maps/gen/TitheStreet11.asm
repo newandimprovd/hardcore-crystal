@@ -21,12 +21,11 @@ TitheStreet11Hermit:
 	jumptextfaceplayer TitheStreet11HermitText
 
 TitheStreet11HermitText:
-	text "I have been"
-	line "praying for rain."
-	para "It rained. On the"
-	line "neighbor. I have"
-	para "been praying for"
-	line "him ever since."
+	text "People on the road"
+	line "keep screaming and"
+	para "fainting. I think"
+	line "it's a wellness"
+	para "program."
 	done
 
 TitheStreet11AfterText:
@@ -51,11 +50,11 @@ TitheStreet11Trainer0SeenText:
 	done
 
 TitheStreet11Trainer0BeatenText:
-	text "Don't take my"
-	line "watch. It's the"
-	para "last thing my"
-	line "father and I"
-	para "fought over."
+	text "I confessed"
+	line "everything. The"
+	para "priest laughed. He"
+	line "said it wasn't"
+	para "enough."
 	done
 
 TitheStreet11Trainer0:
@@ -68,10 +67,10 @@ TitheStreet11Trainer1SeenText:
 	done
 
 TitheStreet11Trainer1BeatenText:
-	text "I'll wait here."
-	line "Everyone does. I'm"
-	para "very good at"
-	line "waiting."
+	text "Hold my hand. No."
+	line "The other one."
+	para "Never mind, that"
+	line "one's gone."
 	done
 
 TitheStreet11Trainer1:
@@ -85,9 +84,8 @@ TitheStreet11Trainer2SeenText:
 	done
 
 TitheStreet11Trainer2BeatenText:
-	text "Don't worry about"
-	line "me. The rats know"
-	para "my name."
+	text "I want a refund on"
+	line "my childhood."
 	done
 
 TitheStreet11Trainer2:
@@ -101,10 +99,10 @@ TitheStreet11Trainer3SeenText:
 	done
 
 TitheStreet11Trainer3BeatenText:
-	text "My team! My"
-	line "beautiful,"
-	para "overleveraged"
-	line "team!"
+	text "Well. That's it"
+	line "for my pension."
+	para "And the rest of"
+	line "me."
 	done
 
 TitheStreet11Trainer3:
@@ -118,10 +116,11 @@ TitheStreet11Trainer4SeenText:
 	done
 
 TitheStreet11Trainer4BeatenText:
-	text "I forgave you"
-	line "before you even"
-	para "won. It was in the"
-	line "contract."
+	text "I had a bad"
+	line "feeling this"
+	para "morning. It was"
+	line "breakfast. I still"
+	para "lost."
 	done
 
 TitheStreet11Trainer4:
@@ -135,9 +134,9 @@ TitheStreet11Trainer5SeenText:
 	done
 
 TitheStreet11Trainer5BeatenText:
-	text "Ow. Oh, that's"
-	line "where the liver"
-	para "is."
+	text "I lost? The union"
+	line "is going to hear"
+	para "about this. Ow."
 	done
 
 TitheStreet11Trainer5:
@@ -152,9 +151,11 @@ TitheStreet11Trainer6SeenText:
 	done
 
 TitheStreet11Trainer6BeatenText:
-	text "That's the last"
-	line "time I moonlight"
-	para "as a hazard."
+	text "The collection"
+	line "plate is passed to"
+	para "whoever is left"
+	line "standing. Hold"
+	para "this."
 	done
 
 TitheStreet11Trainer6:
@@ -164,17 +165,18 @@ TitheStreet11_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 13, TITHE_STREET11_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 11, 13, BGEVENT_ITEM, TitheStreet11Hidden
+	bg_event 10, 18, BGEVENT_ITEM, TitheStreet11Hidden
 
 	def_object_events
 	object_event 16, 30, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11BoulderScript, -1
 	object_event 17, 30, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11BoulderScript, -1
-	object_event 13, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet11Pickup, EVENT_GEN_TITHE_STREET11_PICKUP
-	object_event  2, 17, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheStreet11Hermit, -1
+	object_event  9, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet11Pickup, EVENT_GEN_TITHE_STREET11_PICKUP
+	object_event  7, 16, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet11Hermit, -1
 	object_event 14, 28, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer0, -1
 	object_event 19, 28, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer1, -1
 	object_event 16, 24, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet11Trainer2, -1

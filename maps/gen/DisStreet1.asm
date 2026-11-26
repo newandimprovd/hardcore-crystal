@@ -43,10 +43,11 @@ DisStreet1Trainer0SeenText:
 	done
 
 DisStreet1Trainer0BeatenText:
-	text "Cocytus is cold."
-	line "Cold is a fact."
-	para "You're a fact. A"
-	line "cold, brutal fact."
+	text "Next time bring"
+	line "something more"
+	para "flammable. We only"
+	line "offer ice in the"
+	para "afternoon."
 	done
 
 DisStreet1Trainer0:
@@ -61,9 +62,9 @@ DisStreet1Trainer1SeenText:
 	done
 
 DisStreet1Trainer1BeatenText:
-	text "I'm in the wrong"
-	line "pit. Please."
-	para "Reroute."
+	text "Well, that's the"
+	line "end of my"
+	para "probation. And me."
 	done
 
 DisStreet1Trainer1:
@@ -76,9 +77,10 @@ DisStreet1Trainer2SeenText:
 	done
 
 DisStreet1Trainer2BeatenText:
-	text "I regret nothing."
-	line "The pit forbids"
-	para "it."
+	text "Put me in a very"
+	line "cold lake. I'd"
+	para "like to think"
+	line "about my choices."
 	done
 
 DisStreet1Trainer2:
@@ -91,9 +93,10 @@ DisStreet1Trainer3SeenText:
 	done
 
 DisStreet1Trainer3BeatenText:
-	text "I'm so bored."
-	line "Thank you for the"
-	para "entertainment."
+	text "My soul is the"
+	line "property of"
+	para "someone else. Take"
+	line "it up with him."
 	done
 
 DisStreet1Trainer3:
@@ -108,11 +111,11 @@ DisStreet1Trainer4SeenText:
 	done
 
 DisStreet1Trainer4BeatenText:
-	text "Nobody told me you"
-	line "could die in Dis."
-	para "Isn't it all"
-	line "supposed to be"
-	para "eternal?"
+	text "They'll send me"
+	line "back in a week,"
+	para "freshly burnt."
+	line "It's called"
+	para "customer service."
 	done
 
 DisStreet1Trainer4:
@@ -126,10 +129,9 @@ DisStreet1Trainer5SeenText:
 	done
 
 DisStreet1Trainer5BeatenText:
-	text "I thought the end"
-	line "would hurt more."
-	para "It's a gentle"
-	line "burn."
+	text "Ow. I thought it"
+	line "was impossible to"
+	para "hurt twice."
 	done
 
 DisStreet1Trainer5:
@@ -144,10 +146,10 @@ DisStreet1Trainer6SeenText:
 	done
 
 DisStreet1Trainer6BeatenText:
-	text "My team is"
-	line "pathetic. Like me."
-	para "Like everyone"
-	line "here."
+	text "Do you hear"
+	line "screaming? That's"
+	para "the intercom. I'm"
+	line "dead. It's a perk."
 	done
 
 DisStreet1Trainer6:

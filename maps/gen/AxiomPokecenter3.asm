@@ -15,11 +15,12 @@ AxiomPokecenter3Npc0Script:
 	jumptextfaceplayer AxiomPokecenter3Npc0Text
 
 AxiomPokecenter3Npc0Text:
-	text "Sit. Don't touch"
-	line "the walls. The"
-	para "walls are"
-	line "listening, and"
-	para "also warm."
+	text "The nurse is a"
+	line "unit, model N-3."
+	para "She says she"
+	line "cares. She has a"
+	para "certificate for"
+	line "that."
 	done
 
 AxiomPokecenter3_MapEvents:

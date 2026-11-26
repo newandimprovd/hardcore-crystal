@@ -132,32 +132,37 @@ LotusLastCabanaHermit0:
 	end
 
 LotusLastCabanaHermit0SeenText:
-	text "I am a hermit, not"
-	line "a coward. Please"
-	para "hit me and then"
-	line "give me back my"
-	para "corner."
+	text "Candles for the"
+	line "dying, candles for"
+	para "the wicked. You"
+	line "look like both."
+	para "Fight me, then"
+	line "shop."
 	done
 
 LotusLastCabanaHermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "The flame goes"
+	line "out. Another"
+	para "lesson. Please"
+	line "accept this with"
+	para "the sad smile of a"
+	line "merchant."
 	done
 
 LotusLastCabanaHermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "A parting"
+	line "offering. A single"
+	para "spark. It's pure."
+	line "Don't blow on it."
+	para "Just carry it."
 	done
 
 LotusLastCabanaHermit0AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "I only sell light."
+	line "Darkness is free."
+	para "Take as much as"
+	line "you like. People"
+	para "always do."
 	done
 
 LotusLastCabanaHermit0NoRoomText:
@@ -202,34 +207,36 @@ LotusLastCabanaHermit1:
 	end
 
 LotusLastCabanaHermit1SeenText:
-	text "A visitor! I was"
-	line "beginning to talk"
-	para "to the rocks. They"
-	line "have strong"
-	para "opinions about"
-	line "moss."
+	text "I am a spy. My"
+	line "country dissolved"
+	para "in 1997. I never"
+	line "got the memo."
+	para "Fight me, comrade."
 	done
 
 LotusLastCabanaHermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "Mission failed. As"
+	line "always. I'll burn"
+	para "this paper. It's"
+	line "just my grocery"
+	para "list."
 	done
 
 LotusLastCabanaHermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "Take this. It's"
+	line "classified. It was"
+	para "classified so long"
+	line "ago, nobody"
+	para "remembers the"
+	line "classification."
 	done
 
 LotusLastCabanaHermit1AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "The file on you is"
+	line "five pages. All"
+	para "lies. I wrote it"
+	line "myself. It's quite"
+	para "good."
 	done
 
 LotusLastCabanaHermit1NoRoomText:

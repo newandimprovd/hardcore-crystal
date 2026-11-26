@@ -16,11 +16,12 @@ AxiomStreet13Hermit:
 	jumptextfaceplayer AxiomStreet13HermitText
 
 AxiomStreet13HermitText:
-	text "I have proven that"
-	line "I exist. It took"
-	para "six months. The"
-	line "proof expired on"
-	para "Tuesday."
+	text "Do not tell them"
+	line "where I am. They"
+	para "will say they"
+	line "already know. It"
+	para "is a bluff."
+	line "Probably."
 	done
 
 AxiomStreet13AfterText:
@@ -42,10 +43,10 @@ AxiomStreet13Trainer0SeenText:
 	done
 
 AxiomStreet13Trainer0BeatenText:
-	text "I'm leaking. It's"
-	line "coolant. It looks"
-	para "like tears. It"
-	line "isn't."
+	text "Form accepted. The"
+	line "river approves. I"
+	para "feel properly"
+	line "filed."
 	done
 
 AxiomStreet13Trainer0:
@@ -62,10 +63,9 @@ AxiomStreet13Trainer1SeenText:
 	done
 
 AxiomStreet13Trainer1BeatenText:
-	text "I'm forgiven. The"
-	line "system says so."
-	para "The system is"
-	line "wrong."
+	text "SYSTEM FAILURE."
+	line "THIS WAS NOT IN"
+	para "THE MANUAL."
 	done
 
 AxiomStreet13Trainer1:
@@ -79,9 +79,10 @@ AxiomStreet13Trainer2SeenText:
 	done
 
 AxiomStreet13Trainer2BeatenText:
-	text "I don't feel pain."
-	line "I feel a very"
-	para "high-pitched tone."
+	text "I always wondered"
+	line "what it felt like."
+	para "It feels like a"
+	line "very long yawn."
 	done
 
 AxiomStreet13Trainer2:
@@ -95,11 +96,10 @@ AxiomStreet13Trainer3SeenText:
 	done
 
 AxiomStreet13Trainer3BeatenText:
-	text "I'm sorry. I'm so"
-	line "sorry. I do not"
-	para "know why I said"
-	line "that. I think it"
-	para "was feeling."
+	text "Deactivating. Tell"
+	line "the Mayor I was"
+	para "compliant until"
+	line "the end."
 	done
 
 AxiomStreet13Trainer3:
@@ -115,10 +115,11 @@ AxiomStreet13Trainer4SeenText:
 	done
 
 AxiomStreet13Trainer4BeatenText:
-	text "A final thought:"
-	line "please water the"
-	para "plant in cubicle"
-	line "nine."
+	text "I will remember"
+	line "you. I will also"
+	para "forget you. It"
+	line "will be in a"
+	para "regular file."
 	done
 
 AxiomStreet13Trainer4:
@@ -132,9 +133,11 @@ AxiomStreet13Trainer5SeenText:
 	done
 
 AxiomStreet13Trainer5BeatenText:
-	text "Hostility"
-	line "depleted. Reboot"
-	para "unlikely."
+	text "I'm sorry. I'm so"
+	line "sorry. I do not"
+	para "know why I said"
+	line "that. I think it"
+	para "was feeling."
 	done
 
 AxiomStreet13Trainer5:

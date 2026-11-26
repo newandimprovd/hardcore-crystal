@@ -12,24 +12,22 @@ DisHouse4Npc0Script:
 	jumptextfaceplayer DisHouse4Npc0Text
 
 DisHouse4Npc0Text:
-	text "This is a cell."
-	line "It's also a"
-	para "sitting room. It's"
-	line "hard to tell the"
-	para "difference down"
-	line "here."
+	text "I'm a mapmaker."
+	line "The streets keep"
+	para "moving. I charge"
+	line "extra for the"
+	para "screaming."
 	done
 
 DisHouse4Npc1Script:
 	jumptextfaceplayer DisHouse4Npc1Text
 
 DisHouse4Npc1Text:
-	text "My wife left me"
-	line "for the lake."
-	para "Literally. She's"
-	line "in the ice. I wave"
-	para "at her. Sometimes"
-	line "she waves back."
+	text "I'm the Warden's"
+	line "cousin. It's a"
+	para "very small job."
+	line "It's a very big"
+	para "cousin."
 	done
 
 DisHouse4_MapEvents:

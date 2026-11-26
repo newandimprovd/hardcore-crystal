@@ -65,22 +65,21 @@ GrovePlaza2Giver:
 	end
 
 GrovePlaza2GiverText:
-	text "I'm SWAPPLE. Swap"
-	line "plus apple. I"
-	para "swapped the first,"
-	line "I forgot the"
-	para "second. A swap"
-	line "would be fair."
-	para "This is only a"
-	line "gift. Which is"
-	para "worse."
+	text "I'm MOSSELF. Moss"
+	line "plus self. I grew"
+	para "on myself. It was"
+	line "pleasant. Here."
+	para "I've been saving"
+	line "this for someone"
+	para "who looks tired."
+	line "You look tired."
 	done
 
 GrovePlaza2GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "Come by the fire"
+	line "later. We'll sing."
+	para "You'll be the"
+	line "lowest voice."
 	done
 
 GrovePlaza2GiverNoRoomText:

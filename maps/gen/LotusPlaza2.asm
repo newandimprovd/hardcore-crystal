@@ -57,18 +57,22 @@ LotusPlaza2Giver:
 	end
 
 LotusPlaza2GiverText:
-	text "I'm COCONAP."
-	line "Coconut plus nap."
-	para "I rest with my"
-	line "fruit. Don't wake"
-	para "me. Just take it."
+	text "I'm COCONSOLA."
+	line "Coconut plus"
+	para "console. It"
+	line "comforts and also"
+	para "it falls on you."
+	line "Here. I'm trying"
+	para "to be useful. It"
+	line "didn't come"
+	para "naturally."
 	done
 
 LotusPlaza2GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "I gave you"
+	line "something? Lovely."
+	para "I'm glad someone"
+	line "remembers it."
 	done
 
 LotusPlaza2GiverNoRoomText:

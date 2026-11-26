@@ -46,15 +46,18 @@ GroveStreet11GateUseText:
 GroveStreet11Pickup:
 	itemball TM_ICY_WIND
 
+GroveStreet11Hidden:
+	hiddenitem REVIVE, EVENT_GEN_GROVE_STREET11_HIDDEN
+
 GroveStreet11Hermit:
 	jumptextfaceplayer GroveStreet11HermitText
 
 GroveStreet11HermitText:
-	text "There is a"
-	line "mushroom here that"
-	para "agrees with"
-	line "everything. I call"
-	para "it my spouse."
+	text "The mushrooms here"
+	line "talk. Mostly they"
+	para "say 'sell'. I"
+	line "don't know what."
+	para "I'm scared."
 	done
 
 GroveStreet11AfterText:
@@ -79,11 +82,9 @@ GroveStreet11Trainer0SeenText:
 	done
 
 GroveStreet11Trainer0BeatenText:
-	text "That's the third"
-	line "time I've been"
-	para "fainted this week."
-	line "Hey, it's honest"
-	para "work."
+	text "Tell the elders I"
+	line "died as I lived."
+	para "Confused."
 	done
 
 GroveStreet11Trainer0:
@@ -99,10 +100,10 @@ GroveStreet11Trainer1SeenText:
 	done
 
 GroveStreet11Trainer1BeatenText:
-	text "Even death is"
-	line "shared here."
-	para "You'll be hearing"
-	line "from my family."
+	text "I'll go meditate."
+	line "Or cry. Possibly"
+	para "both. Possibly in"
+	line "a tree."
 	done
 
 GroveStreet11Trainer1:
@@ -118,9 +119,9 @@ GroveStreet11Trainer2SeenText:
 	done
 
 GroveStreet11Trainer2BeatenText:
-	text "I thought I'd feel"
-	line "enlightened. I"
-	para "feel lightened."
+	text "Everything dies."
+	line "It's in the"
+	para "compost agreement."
 	done
 
 GroveStreet11Trainer2:
@@ -134,9 +135,11 @@ GroveStreet11Trainer3SeenText:
 	done
 
 GroveStreet11Trainer3BeatenText:
-	text "Hold my beard."
-	line "It's all that's"
-	para "left of my pride."
+	text "Don't thank me."
+	line "Thank the soil."
+	para "The soil is what"
+	line "you've been"
+	para "fighting."
 	done
 
 GroveStreet11Trainer3:
@@ -150,10 +153,10 @@ GroveStreet11Trainer4SeenText:
 	done
 
 GroveStreet11Trainer4BeatenText:
-	text "Everyone's equal"
-	line "in the dirt. It's"
-	para "very sad how fast"
-	line "it happens."
+	text "You've got a nice"
+	line "aura. Dark, wet, a"
+	para "little bit"
+	line "murdery."
 	done
 
 GroveStreet11Trainer4:
@@ -167,10 +170,9 @@ GroveStreet11Trainer5SeenText:
 	done
 
 GroveStreet11Trainer5BeatenText:
-	text "Today I learned"
-	line "that violence is"
-	para "an effective"
-	line "teacher."
+	text "I'm going home."
+	line "Tell the Commune"
+	para "my chore is done."
 	done
 
 GroveStreet11Trainer5:
@@ -180,16 +182,18 @@ GroveStreet11_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 18, 11, GROVE_STREET11_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
+	bg_event 16, 13, BGEVENT_ITEM, GroveStreet11Hidden
 
 	def_object_events
 	object_event 18, 26, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveStreet11GateScript, EVENT_GEN_GROVE_STREET11_GATE
 	object_event 19, 26, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveStreet11GateScript, EVENT_GEN_GROVE_STREET11_GATE
-	object_event 20, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet11Pickup, EVENT_GEN_GROVE_STREET11_PICKUP
-	object_event 17, 10, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet11Hermit, -1
+	object_event 16, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet11Pickup, EVENT_GEN_GROVE_STREET11_PICKUP
+	object_event 17,  9, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GroveStreet11Hermit, -1
 	object_event 16, 24, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet11Trainer0, -1
 	object_event 21, 24, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet11Trainer1, -1
 	object_event 12, 20, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet11Trainer2, -1

@@ -134,36 +134,36 @@ GroveHollowOakHermit0:
 	end
 
 GroveHollowOakHermit0SeenText:
-	text "I am a hermit, not"
-	line "a coward. Please"
-	para "hit me and then"
-	line "give me back my"
-	para "corner."
+	text "Your soul is a"
+	line "nice one. I'll"
+	para "have it. Fight me"
+	line "for it, or don't."
+	para "I'm very fast."
 	done
 
 GroveHollowOakHermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "Fine, fine. You"
+	line "can keep your"
+	para "soul. I only"
+	line "wanted a look."
+	para "It's a little"
+	line "worn."
 	done
 
 GroveHollowOakHermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "Here. I lifted it"
+	line "from a priest."
+	para "It's cleaner than"
+	line "anything I've"
+	para "owned."
 	done
 
 GroveHollowOakHermit0AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "I'm pocketing"
+	line "something now."
+	para "Don't check. It's"
+	line "probably nothing."
+	para "Probably."
 	done
 
 GroveHollowOakHermit0NoRoomText:
@@ -208,34 +208,38 @@ GroveHollowOakHermit1:
 	end
 
 GroveHollowOakHermit1SeenText:
-	text "A visitor! I was"
-	line "beginning to talk"
-	para "to the rocks. They"
-	line "have strong"
-	para "opinions about"
-	line "moss."
+	text "Eleven thousand"
+	line "and four. Eleven"
+	para "thousand and five."
+	line "Don't interrupt"
+	para "me. Fight me"
+	line "later. Fight me"
+	para "now."
 	done
 
 GroveHollowOakHermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "Eleven thousand"
+	line "and six. You made"
+	para "me lose count. I"
+	line "forgive you. Start"
+	para "again."
 	done
 
 GroveHollowOakHermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "Take this. I"
+	line "counted it three"
+	para "times. It's never"
+	line "the same number"
+	para "twice. That's why"
+	line "I give it."
 	done
 
 GroveHollowOakHermit1AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "Shh. I'm at eleven"
+	line "thousand seven"
+	para "hundred. Please"
+	line "don't breathe so"
+	para "loudly."
 	done
 
 GroveHollowOakHermit1NoRoomText:

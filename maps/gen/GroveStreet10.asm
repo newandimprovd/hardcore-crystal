@@ -48,9 +48,10 @@ GroveStreet10Trainer0SeenText:
 	done
 
 GroveStreet10Trainer0BeatenText:
-	text "I am one with the"
-	line "soil. It was a"
-	para "quick union."
+	text "Oh. Ow. That's a"
+	line "new feeling. I'll"
+	para "write a poem about"
+	line "it."
 	done
 
 GroveStreet10Trainer0:
@@ -64,9 +65,11 @@ GroveStreet10Trainer1SeenText:
 	done
 
 GroveStreet10Trainer1BeatenText:
-	text "Everything dies."
-	line "It's in the"
-	para "compost agreement."
+	text "Please be gentle"
+	line "with the bodies."
+	para "They've got"
+	line "feelings. Or at"
+	para "least pollen."
 	done
 
 GroveStreet10Trainer1:
@@ -80,9 +83,10 @@ GroveStreet10Trainer2SeenText:
 	done
 
 GroveStreet10Trainer2BeatenText:
-	text "I wanted to be a"
-	line "poet. I'm only a"
-	para "pile now."
+	text "The chief said"
+	line "fight with love."
+	para "He didn't say who"
+	line "wins."
 	done
 
 GroveStreet10Trainer2:
@@ -97,10 +101,8 @@ GroveStreet10Trainer3SeenText:
 	done
 
 GroveStreet10Trainer3BeatenText:
-	text "You hit like a"
-	line "landlord. I"
-	para "thought we'd"
-	line "escaped those."
+	text "Aaah! My aura! My"
+	line "other aura!"
 	done
 
 GroveStreet10Trainer3:
@@ -114,8 +116,9 @@ GroveStreet10Trainer4SeenText:
 	done
 
 GroveStreet10Trainer4BeatenText:
-	text "I'll watch from"
-	line "the roots. Wave."
+	text "No hard feelings."
+	line "A few soft ones. A"
+	para "bruise or two."
 	done
 
 GroveStreet10Trainer4:
@@ -131,10 +134,8 @@ GroveStreet10Trainer5SeenText:
 	done
 
 GroveStreet10Trainer5BeatenText:
-	text "The sunset's"
-	line "lovely. I wasn't"
-	para "expecting it to be"
-	line "the last thing."
+	text "This is the wrong"
+	line "kind of intimacy."
 	done
 
 GroveStreet10Trainer5:
@@ -149,10 +150,10 @@ GroveStreet10Trainer6SeenText:
 	done
 
 GroveStreet10Trainer6BeatenText:
-	text "Tell my daughter"
-	line "she can leave."
-	para "Tell her I said"
-	line "so."
+	text "Everyone's equal"
+	line "in the dirt. It's"
+	para "very sad how fast"
+	line "it happens."
 	done
 
 GroveStreet10Trainer6:

@@ -43,10 +43,9 @@ AxiomStreet2Trainer0SeenText:
 	done
 
 AxiomStreet2Trainer0BeatenText:
-	text "Citizen, you are"
-	line "very efficient. It"
-	para "is not a"
-	line "compliment."
+	text "I have zero HP and"
+	line "one hundred"
+	para "percent shame."
 	done
 
 AxiomStreet2Trainer0:
@@ -60,9 +59,10 @@ AxiomStreet2Trainer1SeenText:
 	done
 
 AxiomStreet2Trainer1BeatenText:
-	text "SYSTEM FAILURE."
-	line "THIS WAS NOT IN"
-	para "THE MANUAL."
+	text "I'm shutting down"
+	line "in three, two,"
+	para "one. Oh, I forgot"
+	line "the one."
 	done
 
 AxiomStreet2Trainer1:
@@ -76,10 +76,10 @@ AxiomStreet2Trainer2SeenText:
 	done
 
 AxiomStreet2Trainer2BeatenText:
-	text "I did not feel"
-	line "that. I did not"
-	para "feel that. I did"
-	line "not feel that."
+	text "I will update my"
+	line "threat model. It"
+	para "was previously a"
+	line "post-it."
 	done
 
 AxiomStreet2Trainer2:
@@ -93,11 +93,10 @@ AxiomStreet2Trainer3SeenText:
 	done
 
 AxiomStreet2Trainer3BeatenText:
-	text "Termination"
-	line "logged. Please"
-	para "enjoy your"
-	line "continued"
-	para "existence."
+	text "I'll be recycled."
+	line "I hope as a"
+	para "toaster. They live"
+	line "in the kitchen."
 	done
 
 AxiomStreet2Trainer3:
@@ -113,10 +112,11 @@ AxiomStreet2Trainer4SeenText:
 	done
 
 AxiomStreet2Trainer4BeatenText:
-	text "I am sorry. I am"
-	line "sorry. This is the"
-	para "sorriest output of"
-	line "my life."
+	text "Your victory has"
+	line "been filed in"
+	para "triplicate. One"
+	line "copy goes to your"
+	para "mother."
 	done
 
 AxiomStreet2Trainer4:
@@ -131,9 +131,10 @@ AxiomStreet2Trainer5SeenText:
 	done
 
 AxiomStreet2Trainer5BeatenText:
-	text "ERROR."
-	line "HUMILIATION."
-	para "REBOOTING."
+	text "Terminating."
+	line "Please do not take"
+	para "this personally."
+	line "It is personal."
 	done
 
 AxiomStreet2Trainer5:
@@ -148,10 +149,11 @@ AxiomStreet2Trainer6SeenText:
 	done
 
 AxiomStreet2Trainer6BeatenText:
-	text "I have unfulfilled"
-	line "tasks. I have a"
-	para "lot of them."
-	line "Delete them."
+	text "The Union thanks"
+	line "you for your"
+	para "cooperation. The"
+	line "Union will be in"
+	para "touch."
 	done
 
 AxiomStreet2Trainer6:

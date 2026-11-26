@@ -54,20 +54,21 @@ DisPlaza5Giver:
 	end
 
 DisPlaza5GiverText:
-	text "I'm PURGATEA."
-	line "Purgatory plus"
-	para "tea. It brews"
-	line "forever and never"
-	para "gets strong. Drink"
-	line "up. No? Then take"
-	para "this instead."
+	text "I'm SULFURINE."
+	line "Sulfur plus"
+	para "ferine. Yellow,"
+	line "wild and a bit"
+	para "smelly. Here. I"
+	line "won't stay near"
+	para "you. You'll"
+	line "understand when"
+	para "you smell it."
 	done
 
 DisPlaza5GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "The smell is yours"
+	line "now. Please wear"
+	para "it with dignity."
 	done
 
 DisPlaza5GiverNoRoomText:

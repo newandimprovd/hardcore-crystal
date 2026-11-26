@@ -9,18 +9,16 @@ TitheStreet15_MapScripts:
 TitheStreet15Pickup:
 	itemball ETHER
 
-TitheStreet15Hidden:
-	hiddenitem ETHER, EVENT_GEN_TITHE_STREET15_HIDDEN
-
 TitheStreet15Hermit:
 	jumptextfaceplayer TitheStreet15HermitText
 
 TitheStreet15HermitText:
-	text "People on the road"
-	line "keep screaming and"
-	para "fainting. I think"
-	line "it's a wellness"
-	para "program."
+	text "I have been"
+	line "praying for rain."
+	para "It rained. On the"
+	line "neighbor. I have"
+	para "been praying for"
+	line "him ever since."
 	done
 
 TitheStreet15AfterText:
@@ -42,9 +40,9 @@ TitheStreet15Trainer0SeenText:
 	done
 
 TitheStreet15Trainer0BeatenText:
-	text "Please, no sermon."
-	line "I've had a"
-	para "lifetime of those."
+	text "Is it Sunday yet?"
+	line "I'd like to be"
+	para "forgiven early."
 	done
 
 TitheStreet15Trainer0:
@@ -58,9 +56,10 @@ TitheStreet15Trainer1SeenText:
 	done
 
 TitheStreet15Trainer1BeatenText:
-	text "Is it over? Can I"
-	line "go home to my"
-	para "crying?"
+	text "Ow. Ow. Don't"
+	line "worry, it's"
+	para "covered. By"
+	line "nobody."
 	done
 
 TitheStreet15Trainer1:
@@ -75,10 +74,9 @@ TitheStreet15Trainer2SeenText:
 	done
 
 TitheStreet15Trainer2BeatenText:
-	text "That's the third"
-	line "time this week."
-	para "I'm quitting."
-	line "After lunch."
+	text "I meant to quit"
+	line "this morning. Now"
+	para "I've quit forever."
 	done
 
 TitheStreet15Trainer2:
@@ -94,10 +92,9 @@ TitheStreet15Trainer3SeenText:
 	done
 
 TitheStreet15Trainer3BeatenText:
-	text "The city gave me"
-	line "nothing. I gave it"
-	para "everything. Fair"
-	line "trade."
+	text "So this is the"
+	line "part where the"
+	para "choir goes quiet."
 	done
 
 TitheStreet15Trainer3:
@@ -112,9 +109,10 @@ TitheStreet15Trainer4SeenText:
 	done
 
 TitheStreet15Trainer4BeatenText:
-	text "Take it all. The"
-	line "city will take it"
-	para "back."
+	text "I was going to"
+	line "retire this year."
+	para "Was. Grammar is"
+	line "cruel."
 	done
 
 TitheStreet15Trainer4:
@@ -126,11 +124,11 @@ TitheStreet15Trainer5SeenText:
 	done
 
 TitheStreet15Trainer5BeatenText:
-	text "It's beautiful."
-	line "There's a priest."
-	para "There's a"
-	line "landlord. They are"
-	para "both so small."
+	text "Take the next"
+	line "road. They pay"
+	para "worse. They fight"
+	line "worse. They're my"
+	para "cousins."
 	done
 
 TitheStreet15Trainer5:
@@ -140,15 +138,15 @@ TitheStreet15_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 11, TITHE_STREET15_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 10, 13, BGEVENT_ITEM, TitheStreet15Hidden
 
 	def_object_events
-	object_event  9,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet15Pickup, EVENT_GEN_TITHE_STREET15_PICKUP
-	object_event  2, 16, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet15Hermit, -1
+	object_event  5, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet15Pickup, EVENT_GEN_TITHE_STREET15_PICKUP
+	object_event  8, 12, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet15Hermit, -1
 	object_event  6, 24, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet15Trainer0, -1
 	object_event 10, 20, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet15Trainer1, -1
 	object_event 15, 20, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet15Trainer2, -1

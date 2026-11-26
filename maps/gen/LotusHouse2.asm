@@ -12,22 +12,22 @@ LotusHouse2Npc0Script:
 	jumptextfaceplayer LotusHouse2Npc0Text
 
 LotusHouse2Npc0Text:
-	text "I run the grief"
-	line "clinic. Business"
-	para "is booming. People"
-	line "keep forgetting to"
-	para "leave."
+	text "I teach the"
+	line "children to forget"
+	para "gracefully. We"
+	line "start with their"
+	para "names."
 	done
 
 LotusHouse2Npc1Script:
 	jumptextfaceplayer LotusHouse2Npc1Text
 
 LotusHouse2Npc1Text:
-	text "My wife sleeps in"
-	line "the pool. My"
-	para "husband sleeps in"
-	line "the sand. I sleep"
-	para "in the other pool."
+	text "I'm a fisherman. I"
+	line "fish for things"
+	para "people have thrown"
+	line "away to forget."
+	para "Mostly rings."
 	done
 
 LotusHouse2_MapEvents:

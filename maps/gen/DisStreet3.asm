@@ -43,11 +43,9 @@ DisStreet3Trainer0SeenText:
 	done
 
 DisStreet3Trainer0BeatenText:
-	text "That's the third"
-	line "time I've died"
-	para "this month. I'm"
-	line "getting good at"
-	para "it."
+	text "I deserve that."
+	line "All of that."
+	para "Sorry. Thank you."
 	done
 
 DisStreet3Trainer0:
@@ -62,9 +60,10 @@ DisStreet3Trainer1SeenText:
 	done
 
 DisStreet3Trainer1BeatenText:
-	text "Down here, a loss"
-	line "is a promotion."
-	para "Thank you."
+	text "Judgment is a kind"
+	line "of weather. Today"
+	para "it's you."
+	line "Tomorrow, hail."
 	done
 
 DisStreet3Trainer1:
@@ -79,11 +78,9 @@ DisStreet3Trainer2SeenText:
 	done
 
 DisStreet3Trainer2BeatenText:
-	text "Fine. Fine! I'll"
-	line "write an angry"
-	para "letter. It will"
-	line "arrive in a"
-	para "century."
+	text "I regret nothing."
+	line "The pit forbids"
+	para "it."
 	done
 
 DisStreet3Trainer2:
@@ -97,10 +94,9 @@ DisStreet3Trainer3SeenText:
 	done
 
 DisStreet3Trainer3BeatenText:
-	text "Tell the demons I"
-	line "tried. They won't"
-	para "care. They'll note"
-	line "it."
+	text "Form 13-D: Request"
+	line "for a second"
+	para "death. Approved."
 	done
 
 DisStreet3Trainer3:
@@ -114,10 +110,9 @@ DisStreet3Trainer4SeenText:
 	done
 
 DisStreet3Trainer4BeatenText:
-	text "I'm filing a"
-	line "complaint. In"
-	para "triplicate. In a"
-	line "very small hell."
+	text "Boo. Hoo. Here's a"
+	line "tear. It's frozen."
+	para "Take it."
 	done
 
 DisStreet3Trainer4:
@@ -131,9 +126,10 @@ DisStreet3Trainer5SeenText:
 	done
 
 DisStreet3Trainer5BeatenText:
-	text "I'm the lucky one."
-	line "I get to leave. In"
-	para "a bag."
+	text "The sky is a"
+	line "ceiling. The floor"
+	para "is a lie. The"
+	line "fight was real."
 	done
 
 DisStreet3Trainer5:
@@ -147,10 +143,11 @@ DisStreet3Trainer6SeenText:
 	done
 
 DisStreet3Trainer6BeatenText:
-	text "The cold is in my"
-	line "bones. You are in"
-	para "my bones. Please"
-	line "leave."
+	text "I thought I'd be"
+	line "better at this. I"
+	para "was a gladiator"
+	line "once. Briefly. In"
+	para "accounting."
 	done
 
 DisStreet3Trainer6:

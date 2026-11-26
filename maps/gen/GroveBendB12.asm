@@ -10,11 +10,11 @@ GroveBendB12Hermit:
 	jumptextfaceplayer GroveBendB12HermitText
 
 GroveBendB12HermitText:
-	text "The mushrooms here"
-	line "talk. Mostly they"
-	para "say 'sell'. I"
-	line "don't know what."
-	para "I'm scared."
+	text "This glade belongs"
+	line "to everyone."
+	para "Please leave. I"
+	line "mean it"
+	para "communally."
 	done
 
 GroveBendB12_MapEvents:

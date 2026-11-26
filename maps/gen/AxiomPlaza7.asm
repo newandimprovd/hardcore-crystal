@@ -67,20 +67,22 @@ AxiomPlaza7Giver:
 	end
 
 AxiomPlaza7GiverText:
-	text "I'm CACHEW. Cache"
-	line "plus cashew. A"
-	para "snack that"
-	line "remembers. Take"
-	para "it. I stored a"
-	line "spare. I always"
-	para "do."
+	text "I'm MAYORTAL."
+	line "Mayor plus mortal."
+	para "A small, unelected"
+	line "bureaucrat. Hello."
+	para "The Mayor says"
+	line "thank you for"
+	para "existing. This is"
+	line "the best I could"
+	para "find."
 	done
 
 AxiomPlaza7GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "The Mayor has"
+	line "stopped listening."
+	para "So have I. Walk"
+	line "on."
 	done
 
 AxiomPlaza7GiverNoRoomText:

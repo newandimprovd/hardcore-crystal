@@ -52,20 +52,22 @@ LotusPlaza5Giver:
 	end
 
 LotusPlaza5GiverText:
-	text "I'm SANDWICHER."
-	line "Sand plus"
-	para "sandwich. The sand"
-	line "is not optional."
-	para "Have some. I made"
-	line "too many. I always"
-	para "do."
+	text "I'm SOLARIUM."
+	line "Solar plus"
+	para "delirium. Heat"
+	line "that thinks. Warm"
+	para "gift. I've held it"
+	line "in the sun all"
+	para "day. Smell it. No,"
+	line "don't."
 	done
 
 LotusPlaza5GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "It's hot."
+	line "Everything is hot."
+	para "I've forgotten"
+	line "what cold is."
+	para "Please remind me."
 	done
 
 LotusPlaza5GiverNoRoomText:

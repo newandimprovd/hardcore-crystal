@@ -12,22 +12,22 @@ GroveHouse2Npc0Script:
 	jumptextfaceplayer GroveHouse2Npc0Text
 
 GroveHouse2Npc0Text:
-	text "I make a thousand"
-	line "arrows a year."
-	para "I've never hit a"
-	line "thing. Don't tell"
-	para "anyone."
+	text "I'm the commune's"
+	line "beekeeper. The"
+	para "bees don't like"
+	line "me. They like the"
+	para "idea of me."
 	done
 
 GroveHouse2Npc1Script:
 	jumptextfaceplayer GroveHouse2Npc1Text
 
 GroveHouse2Npc1Text:
-	text "We all sleep"
-	line "together in the"
-	para "big tent. For"
-	line "warmth. And for"
-	para "warmth."
+	text "I keep a diary of"
+	line "every meeting."
+	para "It's called The"
+	line "Long Argument."
+	para "Volume nine."
 	done
 
 GroveHouse2_MapEvents:

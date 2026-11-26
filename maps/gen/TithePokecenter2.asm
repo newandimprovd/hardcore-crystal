@@ -15,10 +15,11 @@ TithePokecenter2Npc0Script:
 	jumptextfaceplayer TithePokecenter2Npc0Text
 
 TithePokecenter2Npc0Text:
-	text "Don't drink the"
-	line "water. Don't drink"
-	para "anything. Don't"
-	line "ask."
+	text "I came in for a"
+	line "headache. They"
+	para "offered me an"
+	line "exorcism. Cheaper,"
+	para "they said."
 	done
 
 TithePokecenter2_MapEvents:

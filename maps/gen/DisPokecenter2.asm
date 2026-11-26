@@ -15,12 +15,11 @@ DisPokecenter2Npc0Script:
 	jumptextfaceplayer DisPokecenter2Npc0Text
 
 DisPokecenter2Npc0Text:
-	text "The nurse has been"
-	line "here for"
-	para "centuries. She's"
-	line "kind. She's also"
-	para "dead. It's"
-	line "complicated."
+	text "The bed is on"
+	line "fire. It's fine."
+	para "It's a very warm"
+	line "fire. Mostly it's"
+	para "fine."
 	done
 
 DisPokecenter2_MapEvents:

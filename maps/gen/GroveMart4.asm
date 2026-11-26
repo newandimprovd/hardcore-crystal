@@ -18,10 +18,11 @@ GroveMart4Npc0Script:
 	jumptextfaceplayer GroveMart4Npc0Text
 
 GroveMart4Npc0Text:
-	text "The Trade Hut has"
-	line "no cashier. It has"
-	para "a very large man"
-	line "called Gerald."
+	text "I run the store"
+	line "but I don't own"
+	para "it. I also don't"
+	line "know who does."
+	para "That's the beauty."
 	done
 
 GroveMart4_MapEvents:

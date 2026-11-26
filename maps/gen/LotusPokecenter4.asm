@@ -15,11 +15,11 @@ LotusPokecenter4Npc0Script:
 	jumptextfaceplayer LotusPokecenter4Npc0Text
 
 LotusPokecenter4Npc0Text:
-	text "I came for a"
-	line "sprained ankle and"
-	para "left with no"
-	line "ankle. Great"
-	para "service."
+	text "The pillows are"
+	line "numbed. The sheets"
+	para "are numbed. The"
+	line "nurse is numbed."
+	para "It's very quiet."
 	done
 
 LotusPokecenter4_MapEvents:

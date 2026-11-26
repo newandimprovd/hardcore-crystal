@@ -18,11 +18,12 @@ DisMart7Npc0Script:
 	jumptextfaceplayer DisMart7Npc0Text
 
 DisMart7Npc0Text:
-	text "Everything has a"
-	line "price. The price"
-	para "is your soul. The"
-	line "soul is two"
-	para "ninety-nine."
+	text "We sell what the"
+	line "dead need."
+	para "Blankets. Candles."
+	line "Excuses. The"
+	para "excuses sell out"
+	line "first."
 	done
 
 DisMart7_MapEvents:

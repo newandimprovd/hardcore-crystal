@@ -83,10 +83,11 @@ LotusStreet3Trainer0SeenText:
 	done
 
 LotusStreet3Trainer0BeatenText:
-	text "It's all right."
-	line "They'll write me a"
-	para "very nice little"
-	line "sign."
+	text "Is this what pain"
+	line "is? I paid a lot"
+	para "to be rid of it."
+	line "Where's my"
+	para "receipt?"
 	done
 
 LotusStreet3Trainer0:
@@ -100,9 +101,10 @@ LotusStreet3Trainer1SeenText:
 	done
 
 LotusStreet3Trainer1BeatenText:
-	text "I'm not hurt. I'm"
-	line "just very, very"
-	para "horizontal."
+	text "Everything is"
+	line "fine. There's just"
+	para "a bit of ocean in"
+	line "my lungs."
 	done
 
 LotusStreet3Trainer1:
@@ -118,10 +120,9 @@ LotusStreet3Trainer2SeenText:
 	done
 
 LotusStreet3Trainer2BeatenText:
-	text "My memory is"
-	line "foggy. Who's that?"
-	para "Who am I? Who are"
-	line "you? Oh right. Ow."
+	text "I forgive you. And"
+	line "you owe me a tab."
+	para "And a smoothie."
 	done
 
 LotusStreet3Trainer2:
@@ -135,10 +136,9 @@ LotusStreet3Trainer3SeenText:
 	done
 
 LotusStreet3Trainer3BeatenText:
-	text "Oof. I'm moving to"
-	line "the mountains."
-	para "Forever. Starting"
-	line "after this nap."
+	text "I forgot to be"
+	line "good at this. Rain"
+	para "check."
 	done
 
 LotusStreet3Trainer3:
@@ -154,10 +154,9 @@ LotusStreet3Trainer4SeenText:
 	done
 
 LotusStreet3Trainer4BeatenText:
-	text "This is the worst"
-	line "relapse of my"
-	para "life. I feel"
-	line "awake."
+	text "The sea washes"
+	line "away everything"
+	para "except the bill."
 	done
 
 LotusStreet3Trainer4:
@@ -172,10 +171,10 @@ LotusStreet3Trainer5SeenText:
 	done
 
 LotusStreet3Trainer5BeatenText:
-	text "Put me on the"
-	line "sand. Facing the"
-	para "sun. I want a tan"
-	line "for the funeral."
+	text "I lost? Excellent."
+	line "I'll forget it by"
+	para "the time I leave"
+	line "this sentence."
 	done
 
 LotusStreet3Trainer5:

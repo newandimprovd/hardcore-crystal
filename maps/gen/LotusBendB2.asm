@@ -13,10 +13,10 @@ LotusBendB2Hermit:
 	jumptextfaceplayer LotusBendB2HermitText
 
 LotusBendB2HermitText:
-	text "The sunset here is"
-	line "wonderful. It"
-	para "reminds me of the"
-	line "end of everything."
+	text "I came here to"
+	line "find myself. I"
+	para "found a towel. It"
+	line "is a start."
 	done
 
 LotusBendB2_MapEvents:

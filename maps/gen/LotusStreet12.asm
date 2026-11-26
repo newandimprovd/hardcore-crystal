@@ -16,9 +16,10 @@ LotusStreet12Hermit:
 	jumptextfaceplayer LotusStreet12HermitText
 
 LotusStreet12HermitText:
-	text "The cocktails are"
-	line "free. Meaning is"
-	para "extra."
+	text "I came here to"
+	line "find myself. I"
+	para "found a towel. It"
+	line "is a start."
 	done
 
 LotusStreet12AfterText:
@@ -42,10 +43,10 @@ LotusStreet12Trainer0SeenText:
 	done
 
 LotusStreet12Trainer0BeatenText:
-	text "Do you ever just"
-	line "cry in a pool?"
-	para "Because I'm about"
-	line "to."
+	text "I told them I'd"
+	line "rather be fishing."
+	para "I'm now fishing in"
+	line "the beyond."
 	done
 
 LotusStreet12Trainer0:
@@ -62,11 +63,9 @@ LotusStreet12Trainer1SeenText:
 	done
 
 LotusStreet12Trainer1BeatenText:
-	text "I lost. I lost"
-	line "something else."
-	para "What else did I"
-	line "lose? What was it?"
-	para "What is that?"
+	text "Don't mind me. I'm"
+	line "resting my eyes."
+	para "Forever."
 	done
 
 LotusStreet12Trainer1:
@@ -80,10 +79,9 @@ LotusStreet12Trainer2SeenText:
 	done
 
 LotusStreet12Trainer2BeatenText:
-	text "Everything is"
-	line "going dim. Turn"
-	para "the lights up. No."
-	line "Turn them off."
+	text "A seagull is"
+	line "eating my shoe. I"
+	para "deserve this."
 	done
 
 LotusStreet12Trainer2:
@@ -101,8 +99,11 @@ LotusStreet12Trainer3SeenText:
 	done
 
 LotusStreet12Trainer3BeatenText:
-	text "Ah. So this is the"
-	line "long nap."
+	text "Don't worry, I'm"
+	line "fine. I'm on a"
+	para "very strong"
+	line "cocktail. I'm sure"
+	para "it's fine."
 	done
 
 LotusStreet12Trainer3:
@@ -116,10 +117,11 @@ LotusStreet12Trainer4SeenText:
 	done
 
 LotusStreet12Trainer4BeatenText:
-	text "Wave goodbye to"
-	line "the tourists. And"
-	para "hello to the next"
-	line "ones."
+	text "I lost. I lost"
+	line "something else."
+	para "What else did I"
+	line "lose? What was it?"
+	para "What is that?"
 	done
 
 LotusStreet12Trainer4:
@@ -134,9 +136,10 @@ LotusStreet12Trainer5SeenText:
 	done
 
 LotusStreet12Trainer5BeatenText:
-	text "I forgot to be"
-	line "good at this. Rain"
-	para "check."
+	text "That was the best"
+	line "pain I've ever"
+	para "had. Is there a"
+	line "package?"
 	done
 
 LotusStreet12Trainer5:

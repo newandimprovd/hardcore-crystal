@@ -35,12 +35,11 @@ AxiomBoutique4Npc0Script:
 	jumptextfaceplayer AxiomBoutique4Npc0Text
 
 AxiomBoutique4Npc0Text:
-	text "I keep a plant."
-	line "It's illegal. It's"
-	para "also my best"
-	line "friend. Please"
-	para "don't tell the"
-	line "Mayor."
+	text "I used to be an"
+	line "accountant. Now"
+	para "I'm a number"
+	line "someone else is"
+	para "accounting for."
 	done
 
 AxiomBoutique4_MapEvents:

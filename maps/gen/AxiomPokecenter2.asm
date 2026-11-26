@@ -15,10 +15,11 @@ AxiomPokecenter2Npc0Script:
 	jumptextfaceplayer AxiomPokecenter2Npc0Text
 
 AxiomPokecenter2Npc0Text:
-	text "Please take a"
-	line "number. Your"
-	para "number is also a"
-	line "diagnosis."
+	text "I've been waiting"
+	line "here since my last"
+	para "update. The queue"
+	line "gets longer when"
+	para "you stare at it."
 	done
 
 AxiomPokecenter2_MapEvents:

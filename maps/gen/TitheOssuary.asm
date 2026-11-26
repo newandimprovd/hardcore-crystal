@@ -138,32 +138,34 @@ TitheOssuaryHermit0:
 	end
 
 TitheOssuaryHermit0SeenText:
-	text "You found my"
-	line "corner. Nobody"
-	para "finds my corner. I"
-	line "am hurt, and also"
-	para "delighted."
+	text "Stay clear of my"
+	line "light! The sea is"
+	para "out there."
+	line "Somewhere. A very"
+	para "long way."
 	done
 
 TitheOssuaryHermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "Ha. The ship runs"
+	line "aground again. You"
+	para "are the ship. I am"
+	line "the light. I'm a"
+	para "poor light."
 	done
 
 TitheOssuaryHermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "A flare. I never"
+	line "had a ship to"
+	para "signal. Use it"
+	line "better than I did."
 	done
 
 TitheOssuaryHermit0AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "I keep the beam"
+	line "turning. Nobody"
+	para "asked. The rocks"
+	line "seem grateful."
+	para "It's mutual."
 	done
 
 TitheOssuaryHermit0NoRoomText:
@@ -208,34 +210,37 @@ TitheOssuaryHermit1:
 	end
 
 TitheOssuaryHermit1SeenText:
-	text "I have been"
-	line "meditating for"
-	para "four hundred"
-	line "years. Please"
-	para "insult me so I can"
-	line "get angry."
+	text "My funeral was"
+	line "dreadful. The"
+	para "music, the hat,"
+	line "the eulogy. Let's"
+	para "talk about your"
+	line "face."
 	done
 
 TitheOssuaryHermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "I give it two"
+	line "stars. The fight,"
+	para "I mean. The"
+	line "funeral was one."
+	para "I've been"
+	line "generous."
 	done
 
 TitheOssuaryHermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "Take this. I was"
+	line "buried with it. It"
+	para "never came to a"
+	line "good end. It's"
+	para "yours now."
 	done
 
 TitheOssuaryHermit1AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I hated every word"
+	line "of the eulogy. I'd"
+	para "correct it, but"
+	line "I'm dead. I do it"
+	para "anyway."
 	done
 
 TitheOssuaryHermit1NoRoomText:

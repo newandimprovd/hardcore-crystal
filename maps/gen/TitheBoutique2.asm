@@ -33,10 +33,11 @@ TitheBoutique2Npc0Script:
 	jumptextfaceplayer TitheBoutique2Npc0Text
 
 TitheBoutique2Npc0Text:
-	text "My husband is in"
-	line "the walls. I mean"
-	para "he's remodeling."
-	line "In the walls."
+	text "My father was a"
+	line "confession booth."
+	para "That's not a"
+	line "metaphor. He was"
+	para "very big."
 	done
 
 TitheBoutique2_MapEvents:

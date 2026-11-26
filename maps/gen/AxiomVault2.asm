@@ -146,7 +146,7 @@ AxiomVault2Hermit0:
 	waitbutton
 	closetext
 	winlosstext AxiomVault2Hermit0BeatenText, 0
-	loadtrainer G_ELDER, 145
+	loadtrainer G_SHAMAN, 148
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_VAULT2_HERMIT0
@@ -170,31 +170,35 @@ AxiomVault2Hermit0:
 	end
 
 AxiomVault2Hermit0SeenText:
-	text "You found my"
-	line "corner. Nobody"
-	para "finds my corner. I"
-	line "am hurt, and also"
-	para "delighted."
+	text "Rumor has it"
+	line "you're a coward. I"
+	para "made that up. It"
+	line "will be true in"
+	para "five minutes."
+	line "Fight."
 	done
 
 AxiomVault2Hermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "Rumor has it I"
+	line "lost. That one was"
+	para "true. I'm sorry to"
+	line "see it spread."
 	done
 
 AxiomVault2Hermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "A reward, at no"
+	line "charge. The market"
+	para "for rumors is"
+	line "down. I'm paying"
+	para "you to stop"
+	line "listening."
 	done
 
 AxiomVault2Hermit0AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I heard the Mayor"
+	line "is a duck. I made"
+	para "it up. Pass it on."
+	line "Please."
 	done
 
 AxiomVault2Hermit0NoRoomText:
@@ -215,7 +219,7 @@ AxiomVault2Hermit1:
 	waitbutton
 	closetext
 	winlosstext AxiomVault2Hermit1BeatenText, 0
-	loadtrainer G_GRANNY, 147
+	loadtrainer G_ELDER, 146
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_VAULT2_HERMIT1
@@ -239,39 +243,35 @@ AxiomVault2Hermit1:
 	end
 
 AxiomVault2Hermit1SeenText:
-	text "I have been"
-	line "meditating for"
-	para "four hundred"
-	line "years. Please"
-	para "insult me so I can"
-	line "get angry."
+	text "I have never hurt"
+	line "a fly. I've hurt a"
+	para "few people. Lovely"
+	line "people. I'm sorry"
+	para "in advance."
 	done
 
 AxiomVault2Hermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "I'm so glad that's"
+	line "over. I'm sure you"
+	para "did your best too."
+	line "No hard feelings."
 	done
 
 AxiomVault2Hermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "I made this"
+	line "myself. It's a"
+	para "little thank you"
+	line "for the fight."
+	para "Please don't open"
+	line "it near me."
 	done
 
 AxiomVault2Hermit1AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "Come by again."
+	line "I'll bake you a"
+	para "loaf. I can't"
+	line "bake. I mean it"
+	para "kindly."
 	done
 
 AxiomVault2Hermit1NoRoomText:
@@ -306,8 +306,8 @@ AxiomVault2_MapEvents:
 	object_event 14, 24, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomVault2Trainer4, -1
 	object_event 24, 27, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomVault2Trainer5, -1
 	object_event 27, 30, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomVault2Trainer6, -1
-	object_event  8, 16, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomVault2Hermit0, -1
-	object_event 30,  8, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomVault2Hermit1, -1
+	object_event  8, 16, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomVault2Hermit0, -1
+	object_event 30,  8, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomVault2Hermit1, -1
 	object_event 27, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomVault2BALL0, EVENT_GEN_AXIOM_VAULT2_BALL0
 	object_event 20, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomVault2BALL1, EVENT_GEN_AXIOM_VAULT2_BALL1
 

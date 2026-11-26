@@ -10,16 +10,17 @@ DisStreet8Pickup:
 	itemball ELIXER
 
 DisStreet8Hidden:
-	hiddenitem PP_UP, EVENT_GEN_DIS_STREET8_HIDDEN
+	hiddenitem ELIXER, EVENT_GEN_DIS_STREET8_HIDDEN
 
 DisStreet8Hermit:
 	jumptextfaceplayer DisStreet8HermitText
 
 DisStreet8HermitText:
-	text "I used to be a"
-	line "lawyer. Now I'm a"
-	para "rock. The pay is"
-	line "similar."
+	text "Come back in a"
+	line "century. I will be"
+	para "less angry. Or the"
+	line "same. The numbers"
+	para "are close."
 	done
 
 DisStreet8AfterText:
@@ -41,9 +42,11 @@ DisStreet8Trainer0SeenText:
 	done
 
 DisStreet8Trainer0BeatenText:
-	text "I'll be back as a"
-	line "gargoyle. I always"
-	para "wanted a view."
+	text "That's the third"
+	line "time I've died"
+	para "this month. I'm"
+	line "getting good at"
+	para "it."
 	done
 
 DisStreet8Trainer0:
@@ -58,9 +61,11 @@ DisStreet8Trainer1SeenText:
 	done
 
 DisStreet8Trainer1BeatenText:
-	text "I knew I should"
-	line "have taken the"
-	para "other contract."
+	text "Tell the Warden I"
+	line "held the line. I"
+	para "held it for four"
+	line "seconds. That's my"
+	para "record."
 	done
 
 DisStreet8Trainer1:
@@ -75,9 +80,11 @@ DisStreet8Trainer2SeenText:
 	done
 
 DisStreet8Trainer2BeatenText:
-	text "Fine. Take my"
-	line "soul. It was only"
-	para "on loan."
+	text "Fire and ice. I"
+	line "begged for a"
+	para "middle ground."
+	line "They gave me the"
+	para "floor."
 	done
 
 DisStreet8Trainer2:
@@ -91,10 +98,11 @@ DisStreet8Trainer3SeenText:
 	done
 
 DisStreet8Trainer3BeatenText:
-	text "I'll see you at"
-	line "the next circle."
-	para "I'll be the one in"
-	line "the dumpster."
+	text "Fine. Fine! I'll"
+	line "write an angry"
+	para "letter. It will"
+	line "arrive in a"
+	para "century."
 	done
 
 DisStreet8Trainer3:
@@ -109,8 +117,9 @@ DisStreet8Trainer4SeenText:
 	done
 
 DisStreet8Trainer4BeatenText:
-	text "Is this death? Or"
-	line "is this Wednesday?"
+	text "I thought this was"
+	line "a dream. It's more"
+	para "of a reminder."
 	done
 
 DisStreet8Trainer4:
@@ -123,10 +132,10 @@ DisStreet8Trainer5SeenText:
 	done
 
 DisStreet8Trainer5BeatenText:
-	text "It's a good thing"
-	line "I'm already dead."
-	para "Otherwise that"
-	line "would've hurt."
+	text "That was"
+	line "cathartic. I'm"
+	para "going to cry now."
+	line "Then complain."
 	done
 
 DisStreet8Trainer5:
@@ -136,15 +145,16 @@ DisStreet8_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 18, 15, DIS_STREET8_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 20, 21, BGEVENT_ITEM, DisStreet8Hidden
+	bg_event 18, 19, BGEVENT_ITEM, DisStreet8Hidden
 
 	def_object_events
-	object_event 21, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet8Pickup, EVENT_GEN_DIS_STREET8_PICKUP
-	object_event 21, 20, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisStreet8Hermit, -1
+	object_event 21, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet8Pickup, EVENT_GEN_DIS_STREET8_PICKUP
+	object_event 19, 21, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisStreet8Hermit, -1
 	object_event 12, 24, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer0, -1
 	object_event  8, 20, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer1, -1
 	object_event 13, 20, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet8Trainer2, -1

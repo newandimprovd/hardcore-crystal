@@ -18,12 +18,12 @@ DisMart1Npc0Script:
 	jumptextfaceplayer DisMart1Npc0Text
 
 DisMart1Npc0Text:
-	text "The potions are an"
-	line "ancient brand."
-	para "They taste like"
-	line "regret. They heal"
-	para "like regret. Same"
-	line "thing."
+	text "Everything is"
+	line "marked up. The"
+	para "mark is the mark"
+	line "of Cain. Ha."
+	para "Sorry. Inventory"
+	line "humour."
 	done
 
 DisMart1_MapEvents:

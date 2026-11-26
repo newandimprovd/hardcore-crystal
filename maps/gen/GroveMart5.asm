@@ -18,9 +18,10 @@ GroveMart5Npc0Script:
 	jumptextfaceplayer GroveMart5Npc0Text
 
 GroveMart5Npc0Text:
-	text "Prices are"
-	line "'suggested'. I"
-	para "suggest you pay."
+	text "The Trade Hut has"
+	line "no cashier. It has"
+	para "a very large man"
+	line "called Gerald."
 	done
 
 GroveMart5_MapEvents:

@@ -12,25 +12,24 @@ AxiomHouse6Npc0Script:
 	jumptextfaceplayer AxiomHouse6Npc0Text
 
 AxiomHouse6Npc0Text:
-	text "A man came by"
-	line "selling"
-	para "forgiveness. I"
-	line "don't have any"
-	para "money. He said"
-	line "that's fine. He"
-	para "took the lamp."
+	text "I keep every"
+	line "receipt I've ever"
+	para "been given. They"
+	line "form a staircase."
+	para "I don't know where"
+	line "it leads."
 	done
 
 AxiomHouse6Npc1Script:
 	jumptextfaceplayer AxiomHouse6Npc1Text
 
 AxiomHouse6Npc1Text:
-	text "I keep a plant."
-	line "It's illegal. It's"
-	para "also my best"
-	line "friend. Please"
-	para "don't tell the"
-	line "Mayor."
+	text "We were assigned"
+	line "this house. We"
+	para "were also assigned"
+	line "each other. The"
+	para "marriage is"
+	line "pending."
 	done
 
 AxiomHouse6_MapEvents:

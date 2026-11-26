@@ -29,10 +29,10 @@ DisStreet7Trainer0SeenText:
 	done
 
 DisStreet7Trainer0BeatenText:
-	text "I'd say 'go to"
-	line "hell', but you're"
-	para "already there."
-	line "Welcome."
+	text "I'm out. Oh, I'm"
+	line "out. It's so warm"
+	para "and it's all so"
+	line "far away."
 	done
 
 DisStreet7Trainer0:
@@ -45,10 +45,10 @@ DisStreet7Trainer1SeenText:
 	done
 
 DisStreet7Trainer1BeatenText:
-	text "I'll hold the"
-	line "door. You'll want"
-	para "to go through it."
-	line "Or not."
+	text "There's a joke"
+	line "here somewhere."
+	para "I'd tell it, but"
+	line "I'm out of breath."
 	done
 
 DisStreet7Trainer1:
@@ -63,10 +63,9 @@ DisStreet7Trainer2SeenText:
 	done
 
 DisStreet7Trainer2BeatenText:
-	text "You've sent me to"
-	line "a better place."
-	para "It's got a"
-	line "different smell."
+	text "Lord. Lord. Is"
+	line "anyone here the"
+	para "lord? No? Typical."
 	done
 
 DisStreet7Trainer2:
@@ -80,9 +79,10 @@ DisStreet7Trainer3SeenText:
 	done
 
 DisStreet7Trainer3BeatenText:
-	text "I'm sorry. I'm so"
-	line "sorry. That's my"
-	para "job description."
+	text "Tell the demons I"
+	line "tried. They won't"
+	para "care. They'll note"
+	line "it."
 	done
 
 DisStreet7Trainer3:
@@ -114,9 +114,11 @@ DisStreet7Trainer5SeenText:
 	done
 
 DisStreet7Trainer5BeatenText:
-	text "Oh, good. A"
-	line "promotion. To the"
-	para "next circle."
+	text "Ha. I'd forgotten"
+	line "what losing felt"
+	para "like. It tastes"
+	line "like pennies and"
+	para "old snow."
 	done
 
 DisStreet7Trainer5:
@@ -130,11 +132,10 @@ DisStreet7Trainer6SeenText:
 	done
 
 DisStreet7Trainer6BeatenText:
-	text "I'll wait for you."
-	line "I have an"
-	para "eternity. Thank"
-	line "you for the time"
-	para "off."
+	text "The ice is cold."
+	line "The fire is hot."
+	para "You are somehow"
+	line "both. Please stop."
 	done
 
 DisStreet7Trainer6:

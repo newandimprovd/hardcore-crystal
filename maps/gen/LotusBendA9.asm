@@ -13,11 +13,10 @@ LotusBendA9Hermit:
 	jumptextfaceplayer LotusBendA9HermitText
 
 LotusBendA9HermitText:
-	text "The waves keep"
-	line "saying 'shh'. I"
-	para "think they're"
-	line "embarrassed for"
-	para "us."
+	text "The seagulls here"
+	line "are on a retainer."
+	para "Do not feed them."
+	line "They report."
 	done
 
 LotusBendA9_MapEvents:

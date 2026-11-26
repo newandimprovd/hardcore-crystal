@@ -15,9 +15,11 @@ AxiomPokecenter4Npc0Script:
 	jumptextfaceplayer AxiomPokecenter4Npc0Text
 
 AxiomPokecenter4Npc0Text:
-	text "I came here to be"
-	line "repaired. I was"
-	para "filed instead."
+	text "The healing"
+	line "machine scans your"
+	para "genes first. I"
+	line "still don't know"
+	para "what it found."
 	done
 
 AxiomPokecenter4_MapEvents:

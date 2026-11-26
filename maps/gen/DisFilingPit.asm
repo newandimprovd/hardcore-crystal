@@ -133,36 +133,36 @@ DisFilingPitHermit0:
 	end
 
 DisFilingPitHermit0SeenText:
-	text "Go away! Wait."
-	line "Come back. Fight"
-	para "me. I am so bored"
-	line "I have started to"
-	para "like myself."
+	text "Sit up straight."
+	line "Pencils down. I'll"
+	para "grade your fight."
+	line "I give most"
+	para "students a C"
+	line "minus."
 	done
 
 DisFilingPitHermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "B plus. Not bad"
+	line "for someone with"
+	para "such poor posture."
+	line "Take this, as an"
+	para "incentive."
 	done
 
 DisFilingPitHermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "A reward for"
+	line "effort. I'd say"
+	para "good work, but"
+	line "that would spoil"
+	para "you."
 	done
 
 DisFilingPitHermit0AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "I graded the cave"
+	line "too. It scored"
+	para "very low on"
+	line "cleanliness. I"
+	para "gave it detention."
 	done
 
 DisFilingPitHermit0NoRoomText:
@@ -207,33 +207,36 @@ DisFilingPitHermit1:
 	end
 
 DisFilingPitHermit1SeenText:
-	text "You found my"
-	line "corner. Nobody"
-	para "finds my corner. I"
-	line "am hurt, and also"
-	para "delighted."
+	text "I know your last"
+	line "words. I won't"
+	para "tell you. Fight me"
+	line "and I might change"
+	para "them."
 	done
 
 DisFilingPitHermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "Interesting. That"
+	line "changes the"
+	para "ending. Take this."
+	line "It's a rewrite."
 	done
 
 DisFilingPitHermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "A gift to"
+	line "commemorate your"
+	para "almost-last words."
+	line "They were very"
+	para "good. You'll say"
+	line "them eventually."
 	done
 
 DisFilingPitHermit1AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "I've written down"
+	line "everything you"
+	para "said. Each page is"
+	line "a lie. They were"
+	para "all true in the"
+	line "end."
 	done
 
 DisFilingPitHermit1NoRoomText:

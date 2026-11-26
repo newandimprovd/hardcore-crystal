@@ -1,0 +1,102 @@
+"""Alpha 3.3 variety pass, DIS: defeat lines for the street fighters, people inside the Pokecenter, Mart and houses, and the seven plaza givers."""
+
+BEATEN_NEW = [
+    "Damn. Technically that's redundant. I'm already damned. Now I'm damned twice.",
+    "Mark it down. Case 4,119,022. Resolution. Ouch.",
+    "I clock out at midnight. I'd rather not clock out like this.",
+    "The ice is cold. The fire is hot. You are somehow both. Please stop.",
+    "My pension is eternal. So is this headache.",
+    "I used to be a notary. I notarised my own fall. Please sign here. Ow.",
+    "Tell the Warden I held the line. I held it for four seconds. That's my record.",
+    "This is the third circle I've lost in. I'm running out of circles.",
+    "I did my time. Then I was transferred. Then I was punched. Fair.",
+    "There's no heaven. There's just a longer queue.",
+    "Put me in a very cold lake. I'd like to think about my choices.",
+    "My demon supervisor will be furious. He's always furious. It's the climate.",
+    "That's one hell of a beating. I mean that professionally.",
+    "A soul for a soul. Mine is cheap. Please take it.",
+    "Lord. Lord. Is anyone here the lord? No? Typical.",
+    "I fell from a very high place once. This is less far, but more personal.",
+    "They said Dis was a fair city. The only fair thing here is the tax.",
+    "I came to this city to forget. You've been very helpful.",
+    "I can't die. Are you aware of that? You can only make it hurt differently.",
+    "They'll send me back in a week, freshly burnt. It's called customer service.",
+    "Your technique is very good. Your soul is poorly maintained.",
+    "I'm a clerk. My job is stamping the dead. Please hold still.",
+    "That was my first fight in eight hundred years. It was disappointing for both of us.",
+    "I had a bad feeling about you. It was in triplicate.",
+    "Don't thank me for the lesson. You'll be paying for it anyway.",
+    "A cold wind from the lake says I should stay down. I agree with the wind.",
+    "I thought I'd be better at this. I was a gladiator once. Briefly. In accounting.",
+    "Next time bring something more flammable. We only offer ice in the afternoon.",
+    "I was assigned this block by lottery. I'd like to contest the lottery.",
+    "That was a cruel, honest, unremarkable beating. I commend you.",
+    "Fire and ice. I begged for a middle ground. They gave me the floor.",
+    "Do you hear screaming? That's the intercom. I'm dead. It's a perk.",
+    "Pain is just information that hasn't been invoiced yet.",
+    "The sky is a ceiling. The floor is a lie. The fight was real.",
+    "I'll go be miserable in the cold quarter. It's very exclusive.",
+    "Forget the wall. Forget the gate. I'm just a very sad man in a tie.",
+    "I was an executioner in life. This is poetic. I hate poetry.",
+    "My mother used to say I'd end up here. I wish she'd been wrong about the details.",
+    "You hit like a landlord. That's not a compliment. It's a diagnosis.",
+    "Boo. Hoo. Here's a tear. It's frozen. Take it.",
+    "Judgment is a kind of weather. Today it's you. Tomorrow, hail.",
+    "Hell, hell, hell. That's the entire sermon. Class dismissed.",
+    "Don't pity me. I pre-ordered this loss in the year of the plague.",
+    "I'm leaving. I'm not retreating. I'm relocating to a quieter agony.",
+    "Ha. I'd forgotten what losing felt like. It tastes like pennies and old snow.",
+]
+
+INTERIOR_CENTER = [
+    "The nurse is a demon on a punishment shift. She heals you gently. That's her punishment.",
+    "I'm only here for the heating. It's the only warm room in the second ring. Don't tell the others.",
+    "Souls are triaged by sin. I have a minor case of envy. They're sending me to a cooler ward.",
+    "Do not look at the thermometer. It records your guilt. It's up to ninety-nine.",
+]
+
+INTERIOR_MART = [
+    "We sell what the dead need. Blankets. Candles. Excuses. The excuses sell out first.",
+    "Payment by soul accepted. Pay with a small one, we give change in regret.",
+    "The clerk is a former king. He's still very particular about bags.",
+    "Everything is marked up. The mark is the mark of Cain. Ha. Sorry. Inventory humour.",
+]
+
+INTERIOR_HOUSE = [
+    "I'm a damned soul with a day job. Mine is paperwork. It's actually the worst punishment.",
+    "My husband is in the lake. I wave at him through the ice. He waves back. Hands only. It's romantic.",
+    "I keep demons as pets. The little ones. They don't bite. They chew your sleep.",
+    "I was a banker. Now I count coins that were never mine. Heaven's a rounding error.",
+    "My daughter is a candle in a church I can't enter. I visit on Sundays and stand outside.",
+    "I make soup out of whatever the chimney drops. Hell has a lot of soot. It's very meaty.",
+    "I'm a retired torturer. I knit now. It's the same motion, but with less screaming.",
+    "My neighbor is a famous poet. He's very sorry. Please don't ask him why.",
+    "I run a small clinic for the unrepentant. We charge by the inch of hubris.",
+    "This house is cursed. It has a good mortgage though. The curse is what pays the mortgage.",
+    "My uncle was sentenced to eternal rowing. We don't see him much. He's very busy.",
+    "I've been writing a list of everyone who wronged me. It has become the city directory.",
+    "I'm a mapmaker. The streets keep moving. I charge extra for the screaming.",
+    "I sell mirrors. Everyone who looks into them says it's not what they expected. Business is excellent.",
+    "My cat is a very old devil. He purrs in Latin. I don't encourage it.",
+    "I was a priest. Now I'm the only person in the neighborhood who doesn't believe in hell. It's quite lonely.",
+]
+
+GIVER = [
+    ("EMBERLY", "Ember plus Emily. A girl who died in a fire and kept the warmth.", "Take this, it's warm. It's the only warm thing here."),
+    ("FROSTITUTE", "Frost plus tribute. A cold offering, made with love and a shiver.", "A little tribute, from my coat to yours. It's ice cold. I'm sorry."),
+    ("PURGATORY", "Purgatory plus tory. Waiting, with an opinion.", "I'm in between. So is this gift. Take it. Be in between with me."),
+    ("LIMBOLINA", "Limbo plus ballerina. Graceful, and also lost.", "Low, low, lower. I dropped this. Pick it up and take it with you."),
+    ("SULFURINE", "Sulfur plus ferine. Yellow, wild and a bit smelly.", "Here. I won't stay near you. You'll understand when you smell it."),
+    ("MALEBOLGIA", "Malebolge plus gia. A ditch with a name and a very good voice.", "Don't cry. Take it. It's for the road. And for the ditch, later."),
+    ("JUDECCANDLE", "Judecca plus candle. The coldest circle holds the smallest flame.", "A last gift. Carry it to the bottom. Don't let the dark see it."),
+]
+
+GIVER_AFTER = [
+    "It's warm for now. Be careful. The warmth runs out.",
+    "I'm so cold. Stand next to me. No, further. Okay, that's fine.",
+    "I'm still in between. Aren't we all? Don't answer.",
+    "Mind the drop. I only said low. I didn't say safe.",
+    "The smell is yours now. Please wear it with dignity.",
+    "I'm just a ditch. Keep walking. Nobody visits a ditch.",
+    "The candle will go out. The dark will notice. That's what dark does.",
+]

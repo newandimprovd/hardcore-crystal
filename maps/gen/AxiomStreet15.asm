@@ -10,17 +10,16 @@ AxiomStreet15Pickup:
 	itemball TM_PSYCH_UP
 
 AxiomStreet15Hidden:
-	hiddenitem PP_UP, EVENT_GEN_AXIOM_STREET15_HIDDEN
+	hiddenitem ETHER, EVENT_GEN_AXIOM_STREET15_HIDDEN
 
 AxiomStreet15Hermit:
 	jumptextfaceplayer AxiomStreet15HermitText
 
 AxiomStreet15HermitText:
-	text "This glade is not"
-	line "on the map. I am"
-	para "not on the map. We"
-	line "are a perfect"
-	para "couple."
+	text "I deleted myself"
+	line "from the registry."
+	para "Now I am free. And"
+	line "also uninsured."
 	done
 
 AxiomStreet15AfterText:
@@ -43,10 +42,10 @@ AxiomStreet15Trainer0SeenText:
 	done
 
 AxiomStreet15Trainer0BeatenText:
-	text "My last memory is"
-	line "of the Registry."
-	para "It was dull and"
-	line "very organised."
+	text "Error 404:"
+	line "opponent not"
+	para "found. Oh. It's"
+	line "me."
 	done
 
 AxiomStreet15Trainer0:
@@ -60,10 +59,9 @@ AxiomStreet15Trainer1SeenText:
 	done
 
 AxiomStreet15Trainer1BeatenText:
-	text "I should have"
-	line "taken the day off."
-	para "It was in my"
-	line "contract."
+	text "I don't feel pain."
+	line "I feel a very"
+	para "high-pitched tone."
 	done
 
 AxiomStreet15Trainer1:
@@ -79,11 +77,10 @@ AxiomStreet15Trainer2SeenText:
 	done
 
 AxiomStreet15Trainer2BeatenText:
-	text "This unit regrets"
-	line "nothing. This unit"
-	para "regrets"
-	line "everything. This"
-	para "unit needs a nap."
+	text "I want it on"
+	line "record that I"
+	para "resisted. Weakly."
+	line "With my face."
 	done
 
 AxiomStreet15Trainer2:
@@ -98,9 +95,10 @@ AxiomStreet15Trainer3SeenText:
 	done
 
 AxiomStreet15Trainer3BeatenText:
-	text "How embarrassing."
-	line "I'll have to blame"
-	para "a glitch."
+	text "I have unfulfilled"
+	line "tasks. I have a"
+	para "lot of them."
+	line "Delete them."
 	done
 
 AxiomStreet15Trainer3:
@@ -115,10 +113,10 @@ AxiomStreet15Trainer4SeenText:
 	done
 
 AxiomStreet15Trainer4BeatenText:
-	text "Form accepted. The"
-	line "river approves. I"
-	para "feel properly"
-	line "filed."
+	text "Citizen, your"
+	line "violence has been"
+	para "noted and"
+	line "approved."
 	done
 
 AxiomStreet15Trainer4:
@@ -133,9 +131,11 @@ AxiomStreet15Trainer5SeenText:
 	done
 
 AxiomStreet15Trainer5BeatenText:
-	text "Critical error."
-	line "Critical error."
-	para "Critical joy."
+	text "The simulation has"
+	line "ended. The"
+	para "simulation has"
+	line "also been very"
+	para "boring."
 	done
 
 AxiomStreet15Trainer5:
@@ -149,9 +149,10 @@ AxiomStreet15Trainer6SeenText:
 	done
 
 AxiomStreet15Trainer6BeatenText:
-	text "Statute 12: robots"
-	line "do not lose. I"
-	para "will amend it."
+	text "You may now leave"
+	line "the premises. Or"
+	para "be reclassified as"
+	line "scrap."
 	done
 
 AxiomStreet15Trainer6:
@@ -161,15 +162,16 @@ AxiomStreet15_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 18, 11, AXIOM_STREET15_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 21, 15, BGEVENT_ITEM, AxiomStreet15Hidden
+	bg_event 15, 12, BGEVENT_ITEM, AxiomStreet15Hidden
 
 	def_object_events
-	object_event 14, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet15Pickup, EVENT_GEN_AXIOM_STREET15_PICKUP
-	object_event 14, 12, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet15Hermit, -1
+	object_event 14,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet15Pickup, EVENT_GEN_AXIOM_STREET15_PICKUP
+	object_event 17, 11, SPRITE_HC_BOT_EXEC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomStreet15Hermit, -1
 	object_event  8, 28, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet15Trainer0, -1
 	object_event 17, 24, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet15Trainer1, -1
 	object_event 12, 20, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet15Trainer2, -1

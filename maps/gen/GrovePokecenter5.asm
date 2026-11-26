@@ -15,12 +15,12 @@ GrovePokecenter5Npc0Script:
 	jumptextfaceplayer GrovePokecenter5Npc0Text
 
 GrovePokecenter5Npc0Text:
-	text "The healers here"
-	line "treat everyone the"
-	para "same. Which is to"
-	line "say, they stare"
-	para "and then hand you"
-	line "a root."
+	text "Nobody pays here."
+	line "You owe the"
+	para "commune a song. I"
+	line "sang badly."
+	para "They're still"
+	line "deciding."
 	done
 
 GrovePokecenter5_MapEvents:

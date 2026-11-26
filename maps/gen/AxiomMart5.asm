@@ -18,10 +18,11 @@ AxiomMart5Npc0Script:
 	jumptextfaceplayer AxiomMart5Npc0Text
 
 AxiomMart5Npc0Text:
-	text "Each item requires"
-	line "a permit, a"
-	para "receipt, and a"
-	line "very small bow."
+	text "Purchases are"
+	line "logged. Your"
+	para "tastes are noted."
+	line "You have terrible"
+	para "tastes."
 	done
 
 AxiomMart5_MapEvents:

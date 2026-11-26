@@ -44,9 +44,9 @@ GroveStreet5Trainer0SeenText:
 	done
 
 GroveStreet5Trainer0BeatenText:
-	text "You win. The goats"
-	line "will be so"
-	para "ashamed."
+	text "I'll compost my"
+	line "ego. It's pretty"
+	para "rotten already."
 	done
 
 GroveStreet5Trainer0:
@@ -61,9 +61,9 @@ GroveStreet5Trainer1SeenText:
 	done
 
 GroveStreet5Trainer1BeatenText:
-	text "The forest will"
-	line "take me back. It's"
-	para "in a good mood."
+	text "I have no hard"
+	line "feelings. I have a"
+	para "lot of soft ones."
 	done
 
 GroveStreet5Trainer1:
@@ -77,8 +77,11 @@ GroveStreet5Trainer2SeenText:
 	done
 
 GroveStreet5Trainer2BeatenText:
-	text "Take it. It's"
-	line "communal anyway."
+	text "Maybe I should"
+	line "have spent more"
+	para "time foraging and"
+	line "less time"
+	para "posturing."
 	done
 
 GroveStreet5Trainer2:
@@ -92,9 +95,10 @@ GroveStreet5Trainer3SeenText:
 	done
 
 GroveStreet5Trainer3BeatenText:
-	text "No hard feelings."
-	line "I'm also a little"
-	para "proud."
+	text "Collect my staff."
+	line "Tell it I'm sorry."
+	para "It was a good"
+	line "staff."
 	done
 
 GroveStreet5Trainer3:
@@ -125,10 +129,10 @@ GroveStreet5Trainer5SeenText:
 	done
 
 GroveStreet5Trainer5BeatenText:
-	text "Fine. You win. We"
-	line "share everything"
-	para "here, and now that"
-	line "includes the loss."
+	text "No hard feelings."
+	line "Hard bruises,"
+	para "though. Lots of"
+	line "those."
 	done
 
 GroveStreet5Trainer5:

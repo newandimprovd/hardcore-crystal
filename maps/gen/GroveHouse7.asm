@@ -12,24 +12,22 @@ GroveHouse7Npc0Script:
 	jumptextfaceplayer GroveHouse7Npc0Text
 
 GroveHouse7Npc0Text:
-	text "I'm a critic. I"
-	line "came to"
-	para "disapprove. The"
-	line "weaving circle is"
-	para "very, very good,"
-	line "and now I'm"
-	para "confused."
+	text "I make tea from"
+	line "things I find."
+	para "This one's mostly"
+	line "moss. This one's"
+	para "mostly regret."
 	done
 
 GroveHouse7Npc1Script:
 	jumptextfaceplayer GroveHouse7Npc1Text
 
 GroveHouse7Npc1Text:
-	text "There are no doors"
-	line "in my hut. The"
-	para "wind is my"
-	line "doorman. He isn't"
-	para "great."
+	text "Careful with the"
+	line "floor. The"
+	para "mushrooms are"
+	line "communal but the"
+	para "mold is mine."
 	done
 
 GroveHouse7_MapEvents:

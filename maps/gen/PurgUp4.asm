@@ -200,36 +200,35 @@ PurgUp4Hermit0:
 	end
 
 PurgUp4Hermit0SeenText:
-	text "Go away! Wait."
-	line "Come back. Fight"
-	para "me. I am so bored"
-	line "I have started to"
-	para "like myself."
+	text "The bread is for"
+	line "the dead. You are"
+	para "not dead. Fight me"
+	line "and we'll fix"
+	para "that."
 	done
 
 PurgUp4Hermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "A crumb. Just a"
+	line "crumb of defeat."
+	para "Fine. I still sell"
+	line "bread, with or"
+	para "without pride."
 	done
 
 PurgUp4Hermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "Take it. It's"
+	line "warm. It's the"
+	para "only warm thing in"
+	line "this tunnel. Eat"
+	para "it. Or carry it."
+	line "Same thing."
 	done
 
 PurgUp4Hermit0AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "The dead are very"
+	line "particular about"
+	para "crusts. I take"
+	line "notes."
 	done
 
 PurgUp4Hermit0NoRoomText:
@@ -274,33 +273,35 @@ PurgUp4Hermit1:
 	end
 
 PurgUp4Hermit1SeenText:
-	text "You found my"
-	line "corner. Nobody"
-	para "finds my corner. I"
-	line "am hurt, and also"
-	para "delighted."
+	text "I am the cave. You"
+	line "are inside me."
+	para "This is a gentle"
+	line "form of dying."
+	para "Fight."
 	done
 
 PurgUp4Hermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "Oh. I have been"
+	line "breached. This is"
+	para "how it feels. How"
+	line "curious, I'm not"
+	para "unhappy."
 	done
 
 PurgUp4Hermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "I will give you"
+	line "something from my"
+	para "interior. Do not"
+	line "tell my"
+	para "stalactites."
 	done
 
 PurgUp4Hermit1AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "I'm still the"
+	line "cave. Please don't"
+	para "talk about my"
+	line "acoustics. They're"
+	para "a sore subject."
 	done
 
 PurgUp4Hermit1NoRoomText:

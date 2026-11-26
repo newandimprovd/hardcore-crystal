@@ -18,11 +18,10 @@ AxiomMart7Npc0Script:
 	jumptextfaceplayer AxiomMart7Npc0Text
 
 AxiomMart7Npc0Text:
-	text "Everything here is"
-	line "state-approved."
-	para "That is why"
-	line "everything here is"
-	para "gray."
+	text "The clerk is a"
+	line "very polite shelf."
+	para "Do not argue with"
+	line "the shelf."
 	done
 
 AxiomMart7_MapEvents:

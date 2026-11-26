@@ -133,32 +133,33 @@ TitheAlmsCellarHermit0:
 	end
 
 TitheAlmsCellarHermit0SeenText:
-	text "A visitor! I was"
-	line "beginning to talk"
-	para "to the rocks. They"
-	line "have strong"
-	para "opinions about"
-	line "moss."
+	text "I bet Death I"
+	line "could outlast him."
+	para "He was patient."
+	line "I'm still waiting"
+	para "for him to win."
 	done
 
 TitheAlmsCellarHermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "Hah. He didn't"
+	line "send you. He's"
+	para "lazy. Tell him I"
+	line "said the bet's"
+	para "still on."
 	done
 
 TitheAlmsCellarHermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "Here. A trophy"
+	line "from our wager. I"
+	para "never won it. I"
+	line "just took it."
 	done
 
 TitheAlmsCellarHermit0AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "He plays cards"
+	line "well. I play cards"
+	para "worse. We have a"
+	line "very long game."
 	done
 
 TitheAlmsCellarHermit0NoRoomText:
@@ -203,37 +204,34 @@ TitheAlmsCellarHermit1:
 	end
 
 TitheAlmsCellarHermit1SeenText:
-	text "Go away! Wait."
-	line "Come back. Fight"
-	para "me. I am so bored"
-	line "I have started to"
-	para "like myself."
+	text "The cats are"
+	line "watching. They are"
+	para "not alive. They're"
+	line "still judgemental."
+	para "Fight."
 	done
 
 TitheAlmsCellarHermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "The cats say you"
+	line "cheated. The cats"
+	para "are delusional."
+	line "The cats are also"
+	para "right."
 	done
 
 TitheAlmsCellarHermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "Take this. The"
+	line "cats insist. They"
+	para "have no use for"
+	line "anything but"
+	para "spite."
 	done
 
 TitheAlmsCellarHermit1AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "Don't pet the"
+	line "nothing at your"
+	para "feet. She bites."
+	line "She remembers."
 	done
 
 TitheAlmsCellarHermit1NoRoomText:

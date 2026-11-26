@@ -33,12 +33,12 @@ AxiomBoutique6Npc0Script:
 	jumptextfaceplayer AxiomBoutique6Npc0Text
 
 AxiomBoutique6Npc0Text:
-	text "I tutor human"
-	line "children in pairs."
-	para "The pairing is"
-	line "approved. The"
-	para "tutoring is"
-	line "cursed."
+	text "The Mayor lives"
+	line "two blocks down."
+	para "He sends us"
+	line "holiday cards."
+	para "They all say Do"
+	line "Not Open."
 	done
 
 AxiomBoutique6_MapEvents:

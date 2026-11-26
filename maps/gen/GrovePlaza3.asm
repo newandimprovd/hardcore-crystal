@@ -57,18 +57,22 @@ GrovePlaza3Giver:
 	end
 
 GrovePlaza3GiverText:
-	text "I'm FORAGEL."
-	line "Forage plus angel."
-	para "Mostly forage. Eat"
-	line "it before the goat"
-	para "does."
+	text "I'm COMMUNIA."
+	line "Commune plus nia."
+	para "Nia is Swahili for"
+	line "purpose. I don't"
+	para "speak Swahili."
+	line "Take it. It"
+	para "belongs to"
+	line "everyone. Which"
+	para "means you."
 	done
 
 GrovePlaza3GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "Everything is"
+	line "shared. Including"
+	para "this awkward"
+	line "silence."
 	done
 
 GrovePlaza3GiverNoRoomText:

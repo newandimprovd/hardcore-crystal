@@ -12,23 +12,23 @@ DisHouse2Npc0Script:
 	jumptextfaceplayer DisHouse2Npc0Text
 
 DisHouse2Npc0Text:
-	text "The walls whisper"
-	line "my name. They're"
-	para "bad at it. They"
-	line "keep calling me"
-	para "'Gary'. I'm not"
-	line "Gary."
+	text "I own a house with"
+	line "four rooms and no"
+	para "exits. It's a"
+	line "perfect"
+	para "investment."
 	done
 
 DisHouse2Npc1Script:
 	jumptextfaceplayer DisHouse2Npc1Text
 
 DisHouse2Npc1Text:
-	text "I'm the Warden's"
-	line "cousin. It's a"
-	para "very small job."
-	line "It's a very big"
-	para "cousin."
+	text "This is a cell."
+	line "It's also a"
+	para "sitting room. It's"
+	line "hard to tell the"
+	para "difference down"
+	line "here."
 	done
 
 DisHouse2_MapEvents:

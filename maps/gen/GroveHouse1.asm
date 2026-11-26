@@ -12,23 +12,23 @@ GroveHouse1Npc0Script:
 	jumptextfaceplayer GroveHouse1Npc0Text
 
 GroveHouse1Npc0Text:
-	text "I make tea from"
-	line "things I find."
-	para "This one's mostly"
-	line "moss. This one's"
-	para "mostly regret."
+	text "We all sleep"
+	line "together in the"
+	para "big tent. For"
+	line "warmth. And for"
+	para "warmth."
 	done
 
 GroveHouse1Npc1Script:
 	jumptextfaceplayer GroveHouse1Npc1Text
 
 GroveHouse1Npc1Text:
-	text "My two husbands"
-	line "are in the garden."
-	para "My wife is in the"
-	line "garden. The garden"
-	para "is very full of"
-	line "us."
+	text "This is a yurt."
+	line "It's also a"
+	para "lounge, a kitchen,"
+	line "a bedroom, and a"
+	para "bit of a fire"
+	line "hazard."
 	done
 
 GroveHouse1_MapEvents:

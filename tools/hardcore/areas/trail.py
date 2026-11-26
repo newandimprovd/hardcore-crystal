@@ -122,6 +122,15 @@ def glade(m, kit, S, R, spot, force_kind=None):
             for xx in range(x0, x1 + 1):
                 if (xx - x0) % 2 == 1 and (yy - r0) % 2 == 1 and (xx, yy) not in keep:
                     m.set(xx, yy, S["tree"])
+    elif kind == "hut":  # a house in the top rows of the glade, on the side away from the mouth, its door facing the open ground (alpha 3.3: a place to enter)
+        hs, hr = kit.extra["house"], kit.extra["house_roof"]
+        hx = x0 if side == "L" else x1 - 1
+        m.set(hx, r0, hr[0])
+        m.set(hx + 1, r0, hr[1])
+        m.set(hx, r0 + 1, hs[0])
+        m.set(hx + 1, r0 + 1, hs[1])
+        hut_door = m.warp(*kit.door_cell(hx, r0 + 1, hs[0]))
+        m.huts = getattr(m, "huts", []) + [hut_door]
     elif kind == "garden":
         for xx in range(x0, x1 + 1):  # a rail across the top row of the glade, beds below
             if (xx, r0) not in keep:
@@ -148,6 +157,9 @@ def glade(m, kit, S, R, spot, force_kind=None):
                         cells.append((2 * xx + dx, 2 * yy + dy))
     mouth_cells = {(2 * mx + dx, 2 * mr + dy) for dx in (0, 1) for dy in (0, 1)}
     cells = [cl for cl in cells if cl not in mouth_cells and abs(cl[0] - (2 * mx + 1)) + abs(cl[1] - (2 * mr + 1)) > 2]
+    if kind == "hut":  # nothing stands in front of the door
+        dx_, dy_ = hut_door.x, hut_door.y + 1
+        cells = [cl for cl in cells if not (cl[1] == dy_ and abs(cl[0] - dx_) <= 1)]
     return dict(kind=kind, cells=cells, mouth=(mx, mr), side=side, rows=(r0, r1))
 
 
@@ -390,7 +402,9 @@ def trail(g, name, kit, rng, *, trainers, a, landmark, music, cw=3, gate=None, n
             rift_door = m.warp(*kit.door_cell(px, r0, rb))  # for a vault the same hidden portal leads to the Undercroft instead
             glades[-1]["cells"] = [cl for cl in glades[-1]["cells"] if abs(cl[0] - (2 * px + 1)) + abs(cl[1] - (2 * (r0 + 1) + 1)) > 1]
         else:
-            glades.append(glade(m, kit, S, R, spot))
+            fits = (spot[2] - spot[1] + 1) >= 3 and (spot[4] - spot[3] + 1) >= 4
+            hut = fits and not raw and not getattr(m, "huts", None) and (biome in ("hamlet", "park") or random.Random("hut:" + name).random() < 0.4)
+            glades.append(glade(m, kit, S, R, spot, force_kind="hut" if hut else None))
         used.update(range(r0 - 1, r1 + 2))
         for yy in range(r0, r1 + 1):
             for xx in range(x0, x1 + 1):

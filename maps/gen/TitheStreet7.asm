@@ -29,10 +29,10 @@ TitheStreet7Trainer0SeenText:
 	done
 
 TitheStreet7Trainer0BeatenText:
-	text "Look at that. A"
-	line "man down and a"
-	para "city that doesn't"
-	line "care. A postcard."
+	text "Great. Now I have"
+	line "to explain this to"
+	para "my insurance. And"
+	line "my mistress."
 	done
 
 TitheStreet7Trainer0:
@@ -47,9 +47,10 @@ TitheStreet7Trainer1SeenText:
 	done
 
 TitheStreet7Trainer1BeatenText:
-	text "Another one for"
-	line "the pile. At least"
-	para "I'm on top."
+	text "My Pokemon fought"
+	line "bravely. It's hard"
+	para "to say the same"
+	line "for me."
 	done
 
 TitheStreet7Trainer1:
@@ -65,9 +66,10 @@ TitheStreet7Trainer2SeenText:
 	done
 
 TitheStreet7Trainer2BeatenText:
-	text "My badge. Tell"
-	line "them it was never"
-	para "real."
+	text "That's the third"
+	line "time this week. I"
+	para "need a hobby that"
+	line "doesn't bleed."
 	done
 
 TitheStreet7Trainer2:
@@ -81,8 +83,9 @@ TitheStreet7Trainer3SeenText:
 	done
 
 TitheStreet7Trainer3BeatenText:
-	text "Rest in peace, my"
-	line "pension."
+	text "I'd call a cop,"
+	line "but you know. He'd"
+	para "want his cut."
 	done
 
 TitheStreet7Trainer3:
@@ -97,9 +100,9 @@ TitheStreet7Trainer4SeenText:
 	done
 
 TitheStreet7Trainer4BeatenText:
-	text "Cough. Tell my"
-	line "landlord I left in"
-	para "a hurry."
+	text "Ow. That's coming"
+	line "out of my"
+	para "overtime."
 	done
 
 TitheStreet7Trainer4:
@@ -113,10 +116,10 @@ TitheStreet7Trainer5SeenText:
 	done
 
 TitheStreet7Trainer5BeatenText:
-	text "The rent was never"
-	line "going to be paid."
-	para "Thank you for the"
-	line "honesty."
+	text "I'll light a"
+	line "candle. In the"
+	para "dark. Where it"
+	line "isn't seen."
 	done
 
 TitheStreet7Trainer5:

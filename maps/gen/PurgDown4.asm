@@ -235,31 +235,36 @@ PurgDown4Hermit0:
 	end
 
 PurgDown4Hermit0SeenText:
-	text "Go away! Wait."
-	line "Come back. Fight"
-	para "me. I am so bored"
-	line "I have started to"
-	para "like myself."
+	text "Don't look at the"
+	line "ledger! You're not"
+	para "from the Bureau,"
+	line "are you? Fight me,"
+	para "just in case."
 	done
 
 PurgDown4Hermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "Audit complete."
+	line "Result, one"
+	para "defeat. I owe you"
+	line "nothing. You owe"
+	para "me a signature."
 	done
 
 PurgDown4Hermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "Take it. It's a"
+	line "deduction. Don't"
+	para "ask what for."
+	line "Deductions are"
+	para "never for"
+	line "anything."
 	done
 
 PurgDown4Hermit0AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "They found me"
+	line "once. I paid them"
+	para "in coins and fear."
+	line "It worked then. It"
+	para "won't work now."
 	done
 
 PurgDown4Hermit0NoRoomText:
@@ -304,38 +309,36 @@ PurgDown4Hermit1:
 	end
 
 PurgDown4Hermit1SeenText:
-	text "You found my"
-	line "corner. Nobody"
-	para "finds my corner. I"
-	line "am hurt, and also"
-	para "delighted."
+	text "The cave and I"
+	line "have an"
+	para "understanding. You"
+	line "are an intruder in"
+	para "a very private"
+	line "marriage. Fight."
 	done
 
 PurgDown4Hermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "My husband, the"
+	line "cave, will be"
+	para "told. He will be"
+	line "upset. He is quite"
+	para "wet."
 	done
 
 PurgDown4Hermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "Take this. A"
+	line "wedding present"
+	para "from the stone."
+	line "It's very small."
+	para "It's a very small"
+	line "cave."
 	done
 
 PurgDown4Hermit1AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "Please keep your"
+	line "voice down. He's"
+	para "an echo. It gets"
+	line "awkward."
 	done
 
 PurgDown4Hermit1NoRoomText:

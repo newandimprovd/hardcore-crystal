@@ -43,9 +43,10 @@ TitheStreet3Trainer0SeenText:
 	done
 
 TitheStreet3Trainer0BeatenText:
-	text "Please don't take"
-	line "my wallet. Wait,"
-	para "you already did."
+	text "Don't tell my"
+	line "mother I lost."
+	para "Tell her I was"
+	line "martyred."
 	done
 
 TitheStreet3Trainer0:
@@ -59,10 +60,9 @@ TitheStreet3Trainer1SeenText:
 	done
 
 TitheStreet3Trainer1BeatenText:
-	text "I'll light a"
-	line "candle for you."
-	para "Maybe two. They're"
-	line "thirty bucks each."
+	text "Right. I was never"
+	line "here. Neither were"
+	para "you. Go."
 	done
 
 TitheStreet3Trainer1:
@@ -76,9 +76,11 @@ TitheStreet3Trainer2SeenText:
 	done
 
 TitheStreet3Trainer2BeatenText:
-	text "That was a hell of"
-	line "a lot more than a"
-	para "donation."
+	text "Every loss is a"
+	line "lesson. I've"
+	para "learned nothing."
+	line "It's very"
+	para "consistent."
 	done
 
 TitheStreet3Trainer2:
@@ -94,10 +96,9 @@ TitheStreet3Trainer3SeenText:
 	done
 
 TitheStreet3Trainer3BeatenText:
-	text "Put it on my tab."
-	line "Everything is on"
-	para "my tab. Even my"
-	line "death."
+	text "Oh. It's quieter"
+	line "than I expected."
+	para "Hello."
 	done
 
 TitheStreet3Trainer3:
@@ -112,10 +113,11 @@ TitheStreet3Trainer4SeenText:
 	done
 
 TitheStreet3Trainer4BeatenText:
-	text "My Pokemon fought"
-	line "bravely. It's hard"
-	para "to say the same"
-	line "for me."
+	text "I smelled like a"
+	line "victory and now I"
+	para "smell like the"
+	line "gutter. It was a"
+	para "short trip."
 	done
 
 TitheStreet3Trainer4:
@@ -130,11 +132,9 @@ TitheStreet3Trainer5SeenText:
 	done
 
 TitheStreet3Trainer5BeatenText:
-	text "I can't feel my"
-	line "legs. It's the"
-	para "first honest thing"
-	line "to happen to me"
-	para "all year."
+	text "The cathedral will"
+	line "stand and I won't."
+	para "Seems about right."
 	done
 
 TitheStreet3Trainer5:

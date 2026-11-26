@@ -9,18 +9,16 @@ AxiomStreet5_MapScripts:
 AxiomStreet5Pickup:
 	itemball SUPER_POTION
 
-AxiomStreet5Hidden:
-	hiddenitem ELIXER, EVENT_GEN_AXIOM_STREET5_HIDDEN
-
 AxiomStreet5Hermit:
 	jumptextfaceplayer AxiomStreet5HermitText
 
 AxiomStreet5HermitText:
-	text "I escaped the"
-	line "Registry. I'm no"
-	para "longer a number."
-	line "I'm a letter. The"
-	para "letter is Q."
+	text "Do not tell them"
+	line "where I am. They"
+	para "will say they"
+	line "already know. It"
+	para "is a bluff."
+	line "Probably."
 	done
 
 AxiomStreet5AfterText:
@@ -44,10 +42,11 @@ AxiomStreet5Trainer0SeenText:
 	done
 
 AxiomStreet5Trainer0BeatenText:
-	text "I am scheduled for"
-	line "deletion."
-	para "Congratulations on"
-	line "being early."
+	text "Nobody told me the"
+	line "fights were real."
+	para "I thought they"
+	line "were training"
+	para "scenarios."
 	done
 
 AxiomStreet5Trainer0:
@@ -62,11 +61,9 @@ AxiomStreet5Trainer1SeenText:
 	done
 
 AxiomStreet5Trainer1BeatenText:
-	text "Tell the Registry"
-	line "I was never here."
-	para "It will be easy."
-	line "They have no"
-	para "record."
+	text "The Mayor will"
+	line "hear of this. He"
+	para "will not care."
 	done
 
 AxiomStreet5Trainer1:
@@ -80,9 +77,10 @@ AxiomStreet5Trainer2SeenText:
 	done
 
 AxiomStreet5Trainer2BeatenText:
-	text "CRITICAL ERROR."
-	line "CRITICAL THINKING."
-	para "CRITICAL EMOTION."
+	text "I thought I was a"
+	line "human. Apparently"
+	para "I'm a unit. Units"
+	line "lose."
 	done
 
 AxiomStreet5Trainer2:
@@ -97,10 +95,9 @@ AxiomStreet5Trainer3SeenText:
 	done
 
 AxiomStreet5Trainer3BeatenText:
-	text "I'll be recycled."
-	line "I hope as a"
-	para "toaster. They live"
-	line "in the kitchen."
+	text "Statute 12: robots"
+	line "do not lose. I"
+	para "will amend it."
 	done
 
 AxiomStreet5Trainer3:
@@ -115,9 +112,10 @@ AxiomStreet5Trainer4SeenText:
 	done
 
 AxiomStreet5Trainer4BeatenText:
-	text "Please file my"
-	line "complaint under:"
-	para "Everything."
+	text "Congratulations."
+	line "You have been"
+	para "promoted to"
+	line "Problem."
 	done
 
 AxiomStreet5Trainer4:
@@ -133,10 +131,9 @@ AxiomStreet5Trainer5SeenText:
 	done
 
 AxiomStreet5Trainer5BeatenText:
-	text "No more"
-	line "instructions. It's"
-	para "so quiet. What a"
-	line "strange thing."
+	text "System diagnostic"
+	line "complete. Cause of"
+	para "failure. You."
 	done
 
 AxiomStreet5Trainer5:
@@ -151,10 +148,9 @@ AxiomStreet5Trainer6SeenText:
 	done
 
 AxiomStreet5Trainer6BeatenText:
-	text "I request a patch."
-	line "I request a patch."
-	para "I request a"
-	line "funeral."
+	text "Reboot required."
+	line "Please stand by."
+	para "Do not stand by."
 	done
 
 AxiomStreet5Trainer6:
@@ -164,15 +160,15 @@ AxiomStreet5_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 18, 19, AXIOM_STREET5_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 17, 16, BGEVENT_ITEM, AxiomStreet5Hidden
 
 	def_object_events
-	object_event 17, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet5Pickup, EVENT_GEN_AXIOM_STREET5_PICKUP
-	object_event 18, 17, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomStreet5Hermit, -1
+	object_event 20, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet5Pickup, EVENT_GEN_AXIOM_STREET5_PICKUP
+	object_event 19, 21, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomStreet5Hermit, -1
 	object_event  8, 28, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer0, -1
 	object_event  8, 24, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer1, -1
 	object_event 13, 24, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet5Trainer2, -1

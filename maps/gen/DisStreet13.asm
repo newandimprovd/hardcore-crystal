@@ -9,19 +9,14 @@ DisStreet13_MapScripts:
 DisStreet13Pickup:
 	itemball FULL_HEAL
 
-DisStreet13Hidden:
-	hiddenitem PP_UP, EVENT_GEN_DIS_STREET13_HIDDEN
-
 DisStreet13Hermit:
 	jumptextfaceplayer DisStreet13HermitText
 
 DisStreet13HermitText:
-	text "I found a corner"
-	line "nobody has"
-	para "tortured yet. I"
-	line "call it home."
-	para "Don't tell"
-	line "management."
+	text "I am not hiding. I"
+	line "am between"
+	para "circles. It is a"
+	line "zoning issue."
 	done
 
 DisStreet13AfterText:
@@ -44,11 +39,10 @@ DisStreet13Trainer0SeenText:
 	done
 
 DisStreet13Trainer0BeatenText:
-	text "My boss will hear"
-	line "about this. My"
-	para "boss hears about"
-	line "everything. It's a"
-	para "gift."
+	text "The cold is in my"
+	line "bones. You are in"
+	para "my bones. Please"
+	line "leave."
 	done
 
 DisStreet13Trainer0:
@@ -61,8 +55,9 @@ DisStreet13Trainer1SeenText:
 	done
 
 DisStreet13Trainer1BeatenText:
-	text "That was awful. Do"
-	line "it again."
+	text "A soul for a soul."
+	line "Mine is cheap."
+	para "Please take it."
 	done
 
 DisStreet13Trainer1:
@@ -76,10 +71,10 @@ DisStreet13Trainer2SeenText:
 	done
 
 DisStreet13Trainer2BeatenText:
-	text "Thank you. I'll"
-	line "save you a seat at"
-	para "the wake. Bring"
-	line "snacks."
+	text "I'm leaving. I'm"
+	line "not retreating."
+	para "I'm relocating to"
+	line "a quieter agony."
 	done
 
 DisStreet13Trainer2:
@@ -93,10 +88,9 @@ DisStreet13Trainer3SeenText:
 	done
 
 DisStreet13Trainer3BeatenText:
-	text "My fingers are"
-	line "frozen. And my"
-	para "pride. And my left"
-	line "foot."
+	text "I'm sorry for your"
+	line "loss. It's mine."
+	para "I'm very sorry."
 	done
 
 DisStreet13Trainer3:
@@ -111,9 +105,9 @@ DisStreet13Trainer4SeenText:
 	done
 
 DisStreet13Trainer4BeatenText:
-	text "My chains have"
-	line "fallen off. How"
-	para "embarrassing."
+	text "Down here, a loss"
+	line "is a promotion."
+	para "Thank you."
 	done
 
 DisStreet13Trainer4:
@@ -128,10 +122,9 @@ DisStreet13Trainer5SeenText:
 	done
 
 DisStreet13Trainer5BeatenText:
-	text "Even in Hell,"
-	line "there's a last"
-	para "word. Mine is:"
-	line "oops."
+	text "Don't gloat. It's"
+	line "unbecoming. Also"
+	para "it's very hot."
 	done
 
 DisStreet13Trainer5:
@@ -146,10 +139,11 @@ DisStreet13Trainer6SeenText:
 	done
 
 DisStreet13Trainer6BeatenText:
-	text "Well. That's"
-	line "another stamp in"
-	para "my permanent"
-	line "record."
+	text "My demon"
+	line "supervisor will be"
+	para "furious. He's"
+	line "always furious."
+	para "It's the climate."
 	done
 
 DisStreet13Trainer6:
@@ -159,15 +153,15 @@ DisStreet13_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 15, DIS_STREET13_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 19, BGEVENT_ITEM, DisStreet13Hidden
 
 	def_object_events
-	object_event  7, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet13Pickup, EVENT_GEN_DIS_STREET13_PICKUP
-	object_event  8, 12, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisStreet13Hermit, -1
+	object_event 11, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet13Pickup, EVENT_GEN_DIS_STREET13_PICKUP
+	object_event  4, 18, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisStreet13Hermit, -1
 	object_event  6, 28, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet13Trainer0, -1
 	object_event 15, 24, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet13Trainer1, -1
 	object_event 14, 20, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet13Trainer2, -1

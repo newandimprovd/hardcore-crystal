@@ -16,12 +16,9 @@ TitheStreet9Hermit:
 	jumptextfaceplayer TitheStreet9HermitText
 
 TitheStreet9HermitText:
-	text "I came out here to"
-	line "avoid the census."
-	para "Now I count the"
-	line "trees. They do not"
-	para "respond but they"
-	line "do not charge."
+	text "Do not drink from"
+	line "the stream. It has"
+	para "been taxed."
 	done
 
 TitheStreet9AfterText:
@@ -45,9 +42,10 @@ TitheStreet9Trainer0SeenText:
 	done
 
 TitheStreet9Trainer0BeatenText:
-	text "I meant to quit"
-	line "this morning. Now"
-	para "I've quit forever."
+	text "The city gave me"
+	line "nothing. I gave it"
+	para "everything. Fair"
+	line "trade."
 	done
 
 TitheStreet9Trainer0:
@@ -61,10 +59,11 @@ TitheStreet9Trainer1SeenText:
 	done
 
 TitheStreet9Trainer1BeatenText:
-	text "My team is the"
-	line "only honest thing"
-	para "I own. Be kind to"
-	line "them."
+	text "I can't feel my"
+	line "legs. It's the"
+	para "first honest thing"
+	line "to happen to me"
+	para "all year."
 	done
 
 TitheStreet9Trainer1:
@@ -78,10 +77,10 @@ TitheStreet9Trainer2SeenText:
 	done
 
 TitheStreet9Trainer2BeatenText:
-	text "You'll pay for"
-	line "this. Not me."
-	para "Someone. There's"
-	line "always someone."
+	text "Please tell the"
+	line "sergeant I tried"
+	para "to resist arrest."
+	line "He'll understand."
 	done
 
 TitheStreet9Trainer2:
@@ -94,9 +93,9 @@ TitheStreet9Trainer3SeenText:
 	done
 
 TitheStreet9Trainer3BeatenText:
-	text "Hail Mary. Full of"
-	line "grace. Not full of"
-	para "luck."
+	text "That was a hell of"
+	line "a lot more than a"
+	para "donation."
 	done
 
 TitheStreet9Trainer3:
@@ -111,11 +110,10 @@ TitheStreet9Trainer4SeenText:
 	done
 
 TitheStreet9Trainer4BeatenText:
-	text "I regret nothing."
-	line "I regret"
-	para "everything. I"
-	line "regret the"
-	para "sandwich."
+	text "My shoes were"
+	line "nice. Take them."
+	para "Take the socks."
+	line "I'm done."
 	done
 
 TitheStreet9Trainer4:
@@ -128,10 +126,10 @@ TitheStreet9Trainer5SeenText:
 	done
 
 TitheStreet9Trainer5BeatenText:
-	text "I'll light a"
-	line "candle. In the"
-	para "dark. Where it"
-	line "isn't seen."
+	text "Bless you. I mean"
+	line "it. It costs"
+	para "nothing. I"
+	line "checked."
 	done
 
 TitheStreet9Trainer5:

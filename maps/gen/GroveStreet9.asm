@@ -81,9 +81,8 @@ GroveStreet9Trainer0SeenText:
 	done
 
 GroveStreet9Trainer0BeatenText:
-	text "I'm not scared."
-	line "I'm very sleepy"
-	para "and very bruised."
+	text "Take it. It's"
+	line "communal anyway."
 	done
 
 GroveStreet9Trainer0:
@@ -99,10 +98,10 @@ GroveStreet9Trainer1SeenText:
 	done
 
 GroveStreet9Trainer1BeatenText:
-	text "This one's for the"
-	line "harvest. This"
-	para "one's for the"
-	line "sickle."
+	text "I traded my shoes"
+	line "for this training."
+	para "It was a poor"
+	line "trade."
 	done
 
 GroveStreet9Trainer1:
@@ -118,10 +117,9 @@ GroveStreet9Trainer2SeenText:
 	done
 
 GroveStreet9Trainer2BeatenText:
-	text "I left the city"
-	line "for peace. I got"
-	para "it. It's a bit"
-	line "sudden."
+	text "The mushrooms were"
+	line "right. They always"
+	para "are. I hate them."
 	done
 
 GroveStreet9Trainer2:
@@ -134,9 +132,10 @@ GroveStreet9Trainer3SeenText:
 	done
 
 GroveStreet9Trainer3BeatenText:
-	text "Tell the elders I"
-	line "died as I lived."
-	para "Confused."
+	text "I'm going to"
+	line "meditate on this."
+	para "By meditate I mean"
+	line "sulk."
 	done
 
 GroveStreet9Trainer3:
@@ -151,10 +150,9 @@ GroveStreet9Trainer4SeenText:
 	done
 
 GroveStreet9Trainer4BeatenText:
-	text "The apples were"
-	line "right. They're"
-	para "always right. It's"
-	line "the pits."
+	text "I thought I'd feel"
+	line "enlightened. I"
+	para "feel lightened."
 	done
 
 GroveStreet9Trainer4:
@@ -171,9 +169,10 @@ GroveStreet9Trainer5SeenText:
 	done
 
 GroveStreet9Trainer5BeatenText:
-	text "You win. Take a"
-	line "berry. Take all"
-	para "the berries."
+	text "Bury me in the"
+	line "north field. The"
+	para "cows can have the"
+	line "rest."
 	done
 
 GroveStreet9Trainer5:
@@ -188,9 +187,10 @@ GroveStreet9Trainer6SeenText:
 	done
 
 GroveStreet9Trainer6BeatenText:
-	text "That was a very"
-	line "unsustainable"
-	para "outcome."
+	text "The drum has"
+	line "stopped. It's a"
+	para "shame. It was a"
+	line "good beat."
 	done
 
 GroveStreet9Trainer6:

@@ -34,12 +34,11 @@ AxiomBoutique2Npc0Script:
 	jumptextfaceplayer AxiomBoutique2Npc0Text
 
 AxiomBoutique2Npc0Text:
-	text "I tutor human"
-	line "children in pairs."
-	para "The pairing is"
-	line "approved. The"
-	para "tutoring is"
-	line "cursed."
+	text "I'm a compliance"
+	line "auditor. I audit"
+	para "my own compliance."
+	line "It's an endless"
+	para "loop. I love it."
 	done
 
 AxiomBoutique2_MapEvents:

@@ -12,21 +12,21 @@ TitheHouse1Npc0Script:
 	jumptextfaceplayer TitheHouse1Npc0Text
 
 TitheHouse1Npc0Text:
-	text "I've lived here"
-	line "eleven years."
-	para "Nobody knows. Not"
-	line "even the building."
+	text "Don't touch the"
+	line "radiator. It's a"
+	para "relic. It's also a"
+	line "radiator."
 	done
 
 TitheHouse1Npc1Script:
 	jumptextfaceplayer TitheHouse1Npc1Text
 
 TitheHouse1Npc1Text:
-	text "I haven't seen the"
-	line "sun since the"
-	para "towers got built."
-	line "I'm fine. I'm"
-	para "pale. I'm fine."
+	text "I'm a loan officer"
+	line "on my day off. My"
+	para "day off is a lie."
+	line "I'm always an"
+	para "officer."
 	done
 
 TitheHouse1_MapEvents:

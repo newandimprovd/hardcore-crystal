@@ -16,10 +16,10 @@ LotusStreet2Hermit:
 	jumptextfaceplayer LotusStreet2HermitText
 
 LotusStreet2HermitText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+	text "The tide took my"
+	line "watch. It also"
+	para "took my reasons. I"
+	line "miss the watch."
 	done
 
 LotusStreet2AfterText:
@@ -42,9 +42,12 @@ LotusStreet2Trainer0SeenText:
 	done
 
 LotusStreet2Trainer0BeatenText:
-	text "Another one down."
-	line "The beach is full"
-	para "of us."
+	text "I'll blame it on"
+	line "the cocktails."
+	para "I'll blame"
+	line "everything on the"
+	para "cocktails. It's"
+	line "the Lotus way."
 	done
 
 LotusStreet2Trainer0:
@@ -59,8 +62,11 @@ LotusStreet2Trainer1SeenText:
 	done
 
 LotusStreet2Trainer1BeatenText:
-	text "I'd cry, but it's"
-	line "an extra fee."
+	text "Your violence has"
+	line "been absorbed into"
+	para "the ambience."
+	line "Please enjoy the"
+	para "sunset."
 	done
 
 LotusStreet2Trainer1:
@@ -74,11 +80,10 @@ LotusStreet2Trainer2SeenText:
 	done
 
 LotusStreet2Trainer2BeatenText:
-	text "That was the best"
-	line "time I've had in"
-	para "years. Please do"
-	line "it again. No,"
-	para "don't."
+	text "Everything is"
+	line "going dim. Turn"
+	para "the lights up. No."
+	line "Turn them off."
 	done
 
 LotusStreet2Trainer2:
@@ -91,10 +96,11 @@ LotusStreet2Trainer3SeenText:
 	done
 
 LotusStreet2Trainer3BeatenText:
-	text "I told them I'd"
-	line "rather be fishing."
-	para "I'm now fishing in"
-	line "the beyond."
+	text "I'm very relaxed."
+	line "Nothing hurts."
+	para "Nothing is"
+	line "happening. Please"
+	para "keep it that way."
 	done
 
 LotusStreet2Trainer3:
@@ -109,9 +115,10 @@ LotusStreet2Trainer4SeenText:
 	done
 
 LotusStreet2Trainer4BeatenText:
-	text "You win. I'll"
-	line "forget it by"
-	para "lunch. You won't."
+	text "The pool is"
+	line "heated. I can feel"
+	para "it. It's heaven."
+	line "It's also a pool."
 	done
 
 LotusStreet2Trainer4:
@@ -126,10 +133,10 @@ LotusStreet2Trainer5SeenText:
 	done
 
 LotusStreet2Trainer5BeatenText:
-	text "I will remember"
-	line "this. For about"
-	para "eight minutes."
-	line "It'll be fine."
+	text "Excellent. I'm"
+	line "about to be turned"
+	para "into a cautionary"
+	line "brochure."
 	done
 
 LotusStreet2Trainer5:
@@ -144,10 +151,8 @@ LotusStreet2Trainer6SeenText:
 	done
 
 LotusStreet2Trainer6BeatenText:
-	text "My wife is going"
-	line "to hear about"
-	para "this. Which wife?"
-	line "I'll ask later."
+	text "I'd cry, but it's"
+	line "an extra fee."
 	done
 
 LotusStreet2Trainer6:

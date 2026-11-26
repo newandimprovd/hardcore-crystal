@@ -12,22 +12,23 @@ TitheHouse3Npc0Script:
 	jumptextfaceplayer TitheHouse3Npc0Text
 
 TitheHouse3Npc0Text:
-	text "The cops come"
-	line "twice a week to"
-	para "collect. It's"
-	line "called community"
-	para "policing."
+	text "I own this whole"
+	line "apartment. The"
+	para "rest of the block"
+	line "is my closet. We"
+	para "don't talk about"
+	line "the closet."
 	done
 
 TitheHouse3Npc1Script:
 	jumptextfaceplayer TitheHouse3Npc1Text
 
 TitheHouse3Npc1Text:
-	text "This place used to"
-	line "be a chapel. The"
-	para "pews are still"
-	line "here. I rent them"
-	para "out."
+	text "I once saw the"
+	line "Mayor cry. It was"
+	para "a Tuesday. Nobody"
+	line "believes me. It"
+	para "was an onion."
 	done
 
 TitheHouse3_MapEvents:

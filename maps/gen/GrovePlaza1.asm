@@ -67,20 +67,22 @@ GrovePlaza1Giver:
 	end
 
 GrovePlaza1GiverText:
-	text "I'm HARVESTA."
-	line "Harvest plus"
-	para "vista. The view is"
-	line "poor. The yield is"
-	para "fine. Take some."
-	line "We have plenty. We"
-	para "have no idea why."
+	text "I'm BERRYOSA."
+	line "Berry plus Rosa. A"
+	para "woman of the"
+	line "hedge, with"
+	para "thorns. I picked"
+	line "too many. Take"
+	para "them before I eat"
+	line "the evidence."
 	done
 
 GrovePlaza1GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "I have more but"
+	line "you haven't asked"
+	para "nicely. You"
+	line "haven't asked at"
+	para "all, actually."
 	done
 
 GrovePlaza1GiverNoRoomText:

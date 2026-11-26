@@ -12,23 +12,21 @@ LotusHouse4Npc0Script:
 	jumptextfaceplayer LotusHouse4Npc0Text
 
 LotusHouse4Npc0Text:
-	text "This is a suite."
-	line "It has a bed, a"
-	para "jacuzzi, and a"
-	line "very small, very"
-	para "quiet crying room."
+	text "My dog digs up"
+	line "bones every"
+	para "evening. We don't"
+	line "talk about whose."
 	done
 
 LotusHouse4Npc1Script:
 	jumptextfaceplayer LotusHouse4Npc1Text
 
 LotusHouse4Npc1Text:
-	text "I'm the world's"
-	line "best cabana boy."
-	para "I'm also an"
-	line "accountant. And a"
-	para "priest. I forgot"
-	line "which one pays."
+	text "I make shell"
+	line "necklaces for"
+	para "people I've never"
+	line "met. They end up"
+	para "on the tide."
 	done
 
 LotusHouse4_MapEvents:

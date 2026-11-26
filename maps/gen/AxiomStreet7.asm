@@ -16,12 +16,10 @@ AxiomStreet7Hermit:
 	jumptextfaceplayer AxiomStreet7HermitText
 
 AxiomStreet7HermitText:
-	text "Do not tell them"
-	line "where I am. They"
-	para "will say they"
-	line "already know. It"
-	para "is a bluff."
-	line "Probably."
+	text "I deleted myself"
+	line "from the registry."
+	para "Now I am free. And"
+	line "also uninsured."
 	done
 
 AxiomStreet7AfterText:
@@ -45,9 +43,11 @@ AxiomStreet7Trainer0SeenText:
 	done
 
 AxiomStreet7Trainer0BeatenText:
-	text "Well. There goes"
-	line "my promotion. And"
-	para "my left arm."
+	text "I would complain,"
+	line "but the complaint"
+	para "line plays your"
+	line "fight in the"
+	para "background."
 	done
 
 AxiomStreet7Trainer0:
@@ -61,10 +61,10 @@ AxiomStreet7Trainer1SeenText:
 	done
 
 AxiomStreet7Trainer1BeatenText:
-	text "That was"
-	line "efficient. I hope"
-	para "you'll recommend"
-	line "us."
+	text "A final thought:"
+	line "please water the"
+	para "plant in cubicle"
+	line "nine."
 	done
 
 AxiomStreet7Trainer1:
@@ -94,10 +94,10 @@ AxiomStreet7Trainer3SeenText:
 	done
 
 AxiomStreet7Trainer3BeatenText:
-	text "Citizen, your"
-	line "violence has been"
-	para "noted and"
-	line "approved."
+	text "That outcome was"
+	line "outside my"
+	para "training data. So"
+	line "was losing."
 	done
 
 AxiomStreet7Trainer3:
@@ -113,9 +113,10 @@ AxiomStreet7Trainer4SeenText:
 	done
 
 AxiomStreet7Trainer4BeatenText:
-	text "End of line. I"
-	line "hope it was good"
-	para "for you."
+	text "Please deposit"
+	line "your remarks into"
+	para "the suggestion"
+	line "box. It's on fire."
 	done
 
 AxiomStreet7Trainer4:
@@ -130,10 +131,9 @@ AxiomStreet7Trainer5SeenText:
 	done
 
 AxiomStreet7Trainer5BeatenText:
-	text "I see white. I was"
-	line "told to expect a"
-	para "tunnel. There is a"
-	line "queue."
+	text "I will be recycled"
+	line "for this. At least"
+	para "I'll be something."
 	done
 
 AxiomStreet7Trainer5:

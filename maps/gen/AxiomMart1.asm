@@ -18,11 +18,12 @@ AxiomMart1Npc0Script:
 	jumptextfaceplayer AxiomMart1Npc0Text
 
 AxiomMart1Npc0Text:
-	text "Welcome to the"
-	line "Commissary. We"
-	para "have antidotes for"
-	line "everything except"
-	para "the Union."
+	text "Welcome. You have"
+	line "been flagged as a"
+	para "returning"
+	line "customer. You have"
+	para "never been here."
+	line "Welcome back."
 	done
 
 AxiomMart1_MapEvents:

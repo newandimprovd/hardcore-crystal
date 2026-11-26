@@ -12,22 +12,24 @@ TitheHouse4Npc0Script:
 	jumptextfaceplayer TitheHouse4Npc0Text
 
 TitheHouse4Npc0Text:
-	text "I own this whole"
-	line "apartment. The"
-	para "rest of the block"
-	line "is my closet. We"
-	para "don't talk about"
-	line "the closet."
+	text "I'm a retired"
+	line "gravedigger."
+	para "Business was"
+	line "always up."
+	para "Retirement is"
+	line "better. It's"
+	para "quieter."
 	done
 
 TitheHouse4Npc1Script:
 	jumptextfaceplayer TitheHouse4Npc1Text
 
 TitheHouse4Npc1Text:
-	text "My husband is in"
-	line "the walls. I mean"
-	para "he's remodeling."
-	line "In the walls."
+	text "The bell tower has"
+	line "been ringing nine"
+	para "times at noon for"
+	line "a week. Nobody"
+	para "asked it to."
 	done
 
 TitheHouse4MafiaScript:

@@ -12,23 +12,23 @@ GroveHouse5Npc0Script:
 	jumptextfaceplayer GroveHouse5Npc0Text
 
 GroveHouse5Npc0Text:
-	text "I make tea from"
-	line "things I find."
-	para "This one's mostly"
-	line "moss. This one's"
-	para "mostly regret."
+	text "My neighbor is a"
+	line "prophet. He"
+	para "predicted rain. It"
+	line "rained on him"
+	para "specifically."
 	done
 
 GroveHouse5Npc1Script:
 	jumptextfaceplayer GroveHouse5Npc1Text
 
 GroveHouse5Npc1Text:
-	text "My two husbands"
-	line "are in the garden."
-	para "My wife is in the"
-	line "garden. The garden"
-	para "is very full of"
-	line "us."
+	text "They elected me"
+	line "mayor by accident."
+	para "I refused. They"
+	line "elected me again."
+	para "It's called"
+	line "democracy."
 	done
 
 GroveHouse5_MapEvents:

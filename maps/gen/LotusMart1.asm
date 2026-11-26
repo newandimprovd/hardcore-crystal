@@ -18,10 +18,11 @@ LotusMart1Npc0Script:
 	jumptextfaceplayer LotusMart1Npc0Text
 
 LotusMart1Npc0Text:
-	text "All sales are"
-	line "final. All sales"
-	para "are also"
-	line "forgotten."
+	text "I used to be the"
+	line "manager. Then I"
+	para "forgot. Now I just"
+	line "stand here being"
+	para "cheerful."
 	done
 
 LotusMart1_MapEvents:

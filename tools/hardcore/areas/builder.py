@@ -3,8 +3,9 @@ import random
 
 from .flags import flag_once
 from . import boutique as shops
-from .layout import (FACE, boss_room, chain, gatehouse, house_interior, boutique_interior, lane, mart_interior, plaza, pokecenter_interior)
+from .layout import (FACE, boss_room, chain, gatehouse, house_interior, boutique_interior, hub, lane, mart_interior, plaza, pokecenter_interior)
 from .town import plaza2
+from .lines3 import AREA as L3
 from .wayfolk import GIFT, GIFT_AFTER, GIFT_HERMITS, GIFT_ITEMS, HERMIT, TOWNIE, TOWNIE2
 from . import persona
 from .trail import trail
@@ -125,6 +126,13 @@ def furnish_lane(w, g, m, reserve, total_lanes=75):
     import random
     from .people import plain_npc
     R = random.Random("furnish:" + m.name)
+    for hi_, door in enumerate(getattr(m, "huts", [])):  # a hut in a glade: the room behind the door, its dweller and what he gives
+        from .huts import hut_interior
+        tag_ = area_tag(m)
+        item = R.choice(HIDDEN[min(2, ("Tithe", "Grove", "Axiom", "Lotus", "Dis").index(tag_) // 2)])
+        pool = HERMIT[tag_] + persona.HERMIT_MORE[tag_]
+        hut_interior(g, w, f"{m.name}Hut{hi_ or ''}", door, m.landmark, hub(g, "house", 0, R.choice(people_sprites(g)), R.choice(NPC_PALS)),
+                     fresh_line(w, tag_, "hermit", pool), fresh_line(w, tag_, "hermit", pool), item)
     cells = [cl for gd in getattr(m, "glades", []) for cl in gd["cells"]]
     if not cells:
         return
@@ -201,8 +209,8 @@ def crowd(w, g, m, n=9, plaza_no=1):
         pal = R.choice(NPC_PALS)
         face = R.choice(["LEFT", "RIGHT", "UP", "DOWN"])
         if i == 0:
-            giver(w, m, x, y, sp, pal, face, f"{m.name}Giver", GIFT[tag][plaza_no % 4], GIFT_ITEMS[(plaza_no - 1) % len(GIFT_ITEMS)],
-                  GIFT_AFTER[plaza_no % len(GIFT_AFTER)])
+            gi = (plaza_no - 1) % len(L3[tag].GIVER)  # one giver of his own for each of the seven plazas of an area
+            giver(w, m, x, y, sp, pal, face, f"{m.name}Giver", L3[tag].GIVER[gi], GIFT_ITEMS[(plaza_no - 1) % len(GIFT_ITEMS)], L3[tag].GIVER_AFTER[gi])
         elif cast:
             k, name, line = cast.pop(0)
             plain_npc(m, x, y, sprites[(k * 5 + 2) % len(sprites)], NPC_PALS[(k * 3 + 1) % len(NPC_PALS)], face, f"{m.name}Persona{k}",
@@ -263,16 +271,19 @@ def town(w, g, tag, n, p, doors, kit, landmark, spawn_const, mart_items, texts, 
     reminders: optional (pokecenter text, mart text) that replace the random picks, used for the rules reminders."""
     w.spawns.append((spawn_const, p, *p.spawn_cell))
     w.marts.append((martconst, f"Mart{tag}{n}", mart_items))
-    center = [pick(texts.get("center", []), n * 3 + i) for i in range(1)]
+    # no line is spoken twice in an area before its pool is used up (the old pools of aN_text.py plus the new people of lines3_<area>.py)
+    new = L3[tag]
+    cpool, mpool, hpool = texts.get("center", []) + new.INTERIOR_CENTER, texts.get("mart", []) + new.INTERIOR_MART, texts.get("house", []) + new.INTERIOR_HOUSE
+    center = [Text(fresh_line(w, tag, "in_center", cpool))]
     if reminders:
         center = [Text(reminders[0])]
     pokecenter_interior(g, f"{tag}Pokecenter{n}", doors["center"], landmark, [t for t in center if t])
-    mart = [pick(texts.get("mart", []), n * 2)]
+    mart = [Text(fresh_line(w, tag, "in_mart", mpool))]
     if reminders:
         mart = [Text(reminders[1])]
     mart_interior(g, f"{tag}Mart{n}", doors["mart"], landmark, martconst, [t for t in mart if t])
     for i, hd in enumerate(doors["houses"]):
-        h = [pick(texts.get("house", []), n * 2 + i), pick(texts.get("house", []), n * 2 + i + 5)]
+        h = [Text(fresh_line(w, tag, "in_house", hpool)), Text(fresh_line(w, tag, "in_house", hpool))]
         if boutique and i == len(doors["houses"]) - 1:  # the last house door is the shop
             w.marts.append((f"{martconst}B", f"Mart{tag}{n}Boutique", boutique["items"]))
             boutique_interior(g, f"{tag}Boutique{n}", hd, landmark, f"{martconst}B", boutique["greet"], [t for t in h[:1] if t])

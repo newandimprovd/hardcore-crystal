@@ -233,31 +233,36 @@ PurgUp2Hermit0:
 	end
 
 PurgUp2Hermit0SeenText:
-	text "You found my"
-	line "corner. Nobody"
-	para "finds my corner. I"
-	line "am hurt, and also"
-	para "delighted."
+	text "Don't step on my"
+	line "map! It's the"
+	para "whole cave in"
+	line "miniature. There"
+	para "is one error. You."
 	done
 
 PurgUp2Hermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "Noted. I'll draw a"
+	line "small man being"
+	para "punched. Right"
+	line "there, near the"
+	para "northern wall."
 	done
 
 PurgUp2Hermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "I made a spare"
+	line "copy of something"
+	para "rare. Take it."
+	line "Mark your own"
+	para "passage. I'm not"
+	line "jealous."
 	done
 
 PurgUp2Hermit0AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "The map is two"
+	line "years out of date."
+	para "The cave"
+	line "rearranged itself"
+	para "out of spite."
 	done
 
 PurgUp2Hermit0NoRoomText:
@@ -302,38 +307,36 @@ PurgUp2Hermit1:
 	end
 
 PurgUp2Hermit1SeenText:
-	text "I have been"
-	line "meditating for"
-	para "four hundred"
-	line "years. Please"
-	para "insult me so I can"
-	line "get angry."
+	text "Please return your"
+	line "seat to the"
+	para "upright position."
+	line "And your face to"
+	para "the upright"
+	line "position. This is"
+	para "a fight."
 	done
 
 PurgUp2Hermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "Thank you for"
+	line "flying with us."
+	para "Please check the"
+	line "overhead bin for"
+	para "your dignity."
 	done
 
 PurgUp2Hermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "Complimentary. It"
+	line "is shaped like a"
+	para "snack and weighs"
+	line "like a memory."
+	para "Enjoy."
 	done
 
 PurgUp2Hermit1AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "Fasten your belt."
+	line "The turbulence in"
+	para "this cave is"
+	line "mostly grief."
 	done
 
 PurgUp2Hermit1NoRoomText:

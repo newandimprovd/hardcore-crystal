@@ -13,12 +13,11 @@ TitheBendA14Hermit:
 	jumptextfaceplayer TitheBendA14HermitText
 
 TitheBendA14HermitText:
-	text "I left the city to"
-	line "escape the tithe."
-	para "The trees also"
-	line "want ten percent."
-	para "Of what, they"
-	line "won't say."
+	text "I've lived here"
+	line "nine years. Nobody"
+	para "has come to arrest"
+	line "me. I find that"
+	para "deeply insulting."
 	done
 
 TitheBendA14_MapEvents:

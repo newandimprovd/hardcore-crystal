@@ -43,10 +43,10 @@ DisStreet4Trainer0SeenText:
 	done
 
 DisStreet4Trainer0BeatenText:
-	text "I'm out. Oh, I'm"
-	line "out. It's so warm"
-	para "and it's all so"
-	line "far away."
+	text "You've sent me to"
+	line "a better place."
+	para "It's got a"
+	line "different smell."
 	done
 
 DisStreet4Trainer0:
@@ -61,9 +61,10 @@ DisStreet4Trainer1SeenText:
 	done
 
 DisStreet4Trainer1BeatenText:
-	text "The pit calls. I"
-	line "can't ignore it."
-	para "It has my number."
+	text "I'll hold the"
+	line "door. You'll want"
+	para "to go through it."
+	line "Or not."
 	done
 
 DisStreet4Trainer1:
@@ -78,9 +79,10 @@ DisStreet4Trainer2SeenText:
 	done
 
 DisStreet4Trainer2BeatenText:
-	text "So long. It's been"
-	line "a hell of a time."
-	para "Literally."
+	text "Pain is just"
+	line "information that"
+	para "hasn't been"
+	line "invoiced yet."
 	done
 
 DisStreet4Trainer2:
@@ -95,10 +97,11 @@ DisStreet4Trainer3SeenText:
 	done
 
 DisStreet4Trainer3BeatenText:
-	text "You've got a good"
-	line "arm. Have you"
-	para "considered a"
-	line "career in torture?"
+	text "Down is up. The"
+	line "lake is a river. I"
+	para "see FINNEGAN. He's"
+	line "waving. He's also"
+	para "a typo."
 	done
 
 DisStreet4Trainer3:
@@ -112,10 +115,10 @@ DisStreet4Trainer4SeenText:
 	done
 
 DisStreet4Trainer4BeatenText:
-	text "I'll go back to my"
-	line "desk. It's on"
-	para "fire. It's always"
-	line "on fire."
+	text "I won't tell"
+	line "anyone. Nobody"
+	para "will believe me."
+	line "They never do."
 	done
 
 DisStreet4Trainer4:
@@ -129,9 +132,11 @@ DisStreet4Trainer5SeenText:
 	done
 
 DisStreet4Trainer5BeatenText:
-	text "Well, that's the"
-	line "end of my"
-	para "probation. And me."
+	text "I'll wait for you."
+	line "I have an"
+	para "eternity. Thank"
+	line "you for the time"
+	para "off."
 	done
 
 DisStreet4Trainer5:
@@ -145,10 +150,10 @@ DisStreet4Trainer6SeenText:
 	done
 
 DisStreet4Trainer6BeatenText:
-	text "I'm going to be"
-	line "sick. Not from the"
-	para "hit. From the"
-	line "paperwork."
+	text "Thank you. I'll"
+	line "save you a seat at"
+	para "the wake. Bring"
+	line "snacks."
 	done
 
 DisStreet4Trainer6:

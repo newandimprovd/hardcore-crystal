@@ -13,12 +13,9 @@ DisBendA12Hermit:
 	jumptextfaceplayer DisBendA12HermitText
 
 DisBendA12HermitText:
-	text "The ground here is"
-	line "warm. It is the"
-	para "only kindness I"
-	line "have been offered"
-	para "since the"
-	line "incident."
+	text "The river is not"
+	line "water. It's"
+	para "deadlines."
 	done
 
 DisBendA12_MapEvents:

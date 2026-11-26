@@ -12,22 +12,21 @@ TitheHouse7Npc0Script:
 	jumptextfaceplayer TitheHouse7Npc0Text
 
 TitheHouse7Npc0Text:
-	text "The cops come"
-	line "twice a week to"
-	para "collect. It's"
-	line "called community"
-	para "policing."
+	text "This place used to"
+	line "be a chapel. The"
+	para "pews are still"
+	line "here. I rent them"
+	para "out."
 	done
 
 TitheHouse7Npc1Script:
 	jumptextfaceplayer TitheHouse7Npc1Text
 
 TitheHouse7Npc1Text:
-	text "This place used to"
-	line "be a chapel. The"
-	para "pews are still"
-	line "here. I rent them"
-	para "out."
+	text "My husband is in"
+	line "the walls. I mean"
+	para "he's remodeling."
+	line "In the walls."
 	done
 
 TitheHouse7_MapEvents:

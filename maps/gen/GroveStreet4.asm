@@ -85,10 +85,10 @@ GroveStreet4Trainer0SeenText:
 	done
 
 GroveStreet4Trainer0BeatenText:
-	text "Ow. This is why I"
-	line "don't normally"
-	para "fight. Or normally"
-	line "bathe."
+	text "I was a banker. I"
+	line "feel so much"
+	para "better being"
+	line "beaten."
 	done
 
 GroveStreet4Trainer0:
@@ -103,10 +103,9 @@ GroveStreet4Trainer1SeenText:
 	done
 
 GroveStreet4Trainer1BeatenText:
-	text "The elders will"
-	line "hear about this."
-	para "They won't care."
-	line "They're asleep."
+	text "That's it. I'm"
+	line "moving to the"
+	para "beach commune."
 	done
 
 GroveStreet4Trainer1:
@@ -123,9 +122,12 @@ GroveStreet4Trainer2SeenText:
 	done
 
 GroveStreet4Trainer2BeatenText:
-	text "I have no hard"
-	line "feelings. I have a"
-	para "lot of soft ones."
+	text "We'll discuss this"
+	line "at the meeting."
+	para "The meeting is in"
+	line "a week. I'll bring"
+	para "snacks and a"
+	line "grudge."
 	done
 
 GroveStreet4Trainer2:
@@ -139,11 +141,10 @@ GroveStreet4Trainer3SeenText:
 	done
 
 GroveStreet4Trainer3BeatenText:
-	text "I have wounded"
-	line "pride, a wounded"
-	para "team and a very"
-	line "exposed back. Be"
-	para "kind."
+	text "I lost. The whole"
+	line "commune lost."
+	para "That's how we do"
+	line "it."
 	done
 
 GroveStreet4Trainer3:
@@ -157,10 +158,10 @@ GroveStreet4Trainer4SeenText:
 	done
 
 GroveStreet4Trainer4BeatenText:
-	text "Share the news."
-	line "Share it widely."
-	para "Share it at the"
-	line "feast."
+	text "The apples were"
+	line "right. They're"
+	para "always right. It's"
+	line "the pits."
 	done
 
 GroveStreet4Trainer4:
@@ -174,10 +175,10 @@ GroveStreet4Trainer5SeenText:
 	done
 
 GroveStreet4Trainer5BeatenText:
-	text "The drum has"
-	line "stopped. It's a"
-	para "shame. It was a"
-	line "good beat."
+	text "Fine. You win. We"
+	line "share everything"
+	para "here, and now that"
+	line "includes the loss."
 	done
 
 GroveStreet4Trainer5:
@@ -191,10 +192,10 @@ GroveStreet4Trainer6SeenText:
 	done
 
 GroveStreet4Trainer6BeatenText:
-	text "I hope your path"
-	line "is long. I hope it"
-	para "has fewer"
-	line "fighters."
+	text "Take what you"
+	line "need. I mean it. I"
+	para "can't stop you"
+	line "either way."
 	done
 
 GroveStreet4Trainer6:

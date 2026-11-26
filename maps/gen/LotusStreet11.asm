@@ -46,16 +46,16 @@ LotusStreet11Pickup:
 	itemball TM_BLIZZARD
 
 LotusStreet11Hidden:
-	hiddenitem MAX_ETHER, EVENT_GEN_LOTUS_STREET11_HIDDEN
+	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET11_HIDDEN
 
 LotusStreet11Hermit:
 	jumptextfaceplayer LotusStreet11HermitText
 
 LotusStreet11HermitText:
-	text "The seagulls here"
-	line "are on a retainer."
-	para "Do not feed them."
-	line "They report."
+	text "The sunset here is"
+	line "wonderful. It"
+	para "reminds me of the"
+	line "end of everything."
 	done
 
 LotusStreet11AfterText:
@@ -79,9 +79,11 @@ LotusStreet11Trainer0SeenText:
 	done
 
 LotusStreet11Trainer0BeatenText:
-	text "Bye, then. The"
-	line "tide will see to"
-	para "the rest."
+	text "They told me"
+	line "defeat is just a"
+	para "sunset with worse"
+	line "lighting. I need a"
+	para "better window."
 	done
 
 LotusStreet11Trainer0:
@@ -95,11 +97,10 @@ LotusStreet11Trainer1SeenText:
 	done
 
 LotusStreet11Trainer1BeatenText:
-	text "Tell them I went"
-	line "peacefully. Tell"
-	para "them there was a"
-	line "lot of sunscreen"
-	para "involved."
+	text "Please tell the"
+	line "bartender I paid."
+	para "I didn't. Please"
+	line "tell him I did."
 	done
 
 LotusStreet11Trainer1:
@@ -115,10 +116,12 @@ LotusStreet11Trainer2SeenText:
 	done
 
 LotusStreet11Trainer2BeatenText:
-	text "A drink would be"
-	line "nice. A last one."
-	para "A very large last"
-	line "one."
+	text "I'm the"
+	line "instructor. We"
+	para "teach people to"
+	line "take a hit and"
+	para "smile. I'm"
+	line "smiling."
 	done
 
 LotusStreet11Trainer2:
@@ -134,11 +137,10 @@ LotusStreet11Trainer3SeenText:
 	done
 
 LotusStreet11Trainer3BeatenText:
-	text "Do you know how"
-	line "many people die at"
-	para "this resort?"
-	line "Neither do I. It's"
-	para "a lot."
+	text "I paid for peace"
+	line "and got this. I"
+	para "want a refund. Or"
+	line "a hug."
 	done
 
 LotusStreet11Trainer3:
@@ -152,9 +154,11 @@ LotusStreet11Trainer4SeenText:
 	done
 
 LotusStreet11Trainer4BeatenText:
-	text "I lost to a"
-	line "stranger. How very"
-	para "'resort' of me."
+	text "You have such"
+	line "lovely eyes. I"
+	para "wish I could"
+	line "remember the last"
+	para "time I saw them."
 	done
 
 LotusStreet11Trainer4:
@@ -168,10 +172,10 @@ LotusStreet11Trainer5SeenText:
 	done
 
 LotusStreet11Trainer5BeatenText:
-	text "I was hoping to"
-	line "retire here. I'm"
-	para "retiring right"
-	line "now."
+	text "I forgot why I"
+	line "attacked you. Was"
+	para "it money? Love? A"
+	line "parking dispute?"
 	done
 
 LotusStreet11Trainer5:
@@ -185,9 +189,11 @@ LotusStreet11Trainer6SeenText:
 	done
 
 LotusStreet11Trainer6BeatenText:
-	text "Hang loose, they"
-	line "said. I hung. I'm"
-	para "loose. Ouch."
+	text "You've ruined my"
+	line "vacation. Please"
+	para "leave a review."
+	line "Make it five"
+	para "stars."
 	done
 
 LotusStreet11Trainer6:
@@ -197,17 +203,18 @@ LotusStreet11_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 11, LOTUS_STREET11_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 11, 16, BGEVENT_ITEM, LotusStreet11Hidden
+	bg_event  4, 13, BGEVENT_ITEM, LotusStreet11Hidden
 
 	def_object_events
 	object_event 12, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet11GateScript, EVENT_GEN_LOTUS_STREET11_GATE
 	object_event 13, 30, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusStreet11GateScript, EVENT_GEN_LOTUS_STREET11_GATE
-	object_event  7,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet11Pickup, EVENT_GEN_LOTUS_STREET11_PICKUP
-	object_event  3, 15, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet11Hermit, -1
+	object_event 10, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet11Pickup, EVENT_GEN_LOTUS_STREET11_PICKUP
+	object_event  9,  8, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusStreet11Hermit, -1
 	object_event 10, 28, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer0, -1
 	object_event 10, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer1, -1
 	object_event 15, 24, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet11Trainer2, -1

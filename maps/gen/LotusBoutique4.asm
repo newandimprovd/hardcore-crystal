@@ -32,11 +32,12 @@ LotusBoutique4Npc0Script:
 	jumptextfaceplayer LotusBoutique4Npc0Text
 
 LotusBoutique4Npc0Text:
-	text "My wife sleeps in"
-	line "the pool. My"
-	para "husband sleeps in"
-	line "the sand. I sleep"
-	para "in the other pool."
+	text "I'm trying to stay"
+	line "sober on"
+	para "forgetting. It's"
+	line "harder than it"
+	para "sounds. I forgot"
+	line "why I started."
 	done
 
 LotusBoutique4_MapEvents:

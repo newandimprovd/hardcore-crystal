@@ -29,11 +29,10 @@ AxiomStreet1Trainer0SeenText:
 	done
 
 AxiomStreet1Trainer0BeatenText:
-	text "My Pokemon"
-	line "followed my"
-	para "orders. I am proud"
-	line "of it. Report"
-	para "that."
+	text "I am sorry. I am"
+	line "sorry. This is the"
+	para "sorriest output of"
+	line "my life."
 	done
 
 AxiomStreet1Trainer0:
@@ -48,10 +47,8 @@ AxiomStreet1Trainer1SeenText:
 	done
 
 AxiomStreet1Trainer1BeatenText:
-	text "I had a family. It"
-	line "was assigned. I"
-	para "would like to meet"
-	line "them."
+	text "Reboot. Reboot."
+	line "Reboot. Please."
 	done
 
 AxiomStreet1Trainer1:
@@ -66,10 +63,10 @@ AxiomStreet1Trainer2SeenText:
 	done
 
 AxiomStreet1Trainer2BeatenText:
-	text "I always wondered"
-	line "what it felt like."
-	para "It feels like a"
-	line "very long yawn."
+	text "I have lost, which"
+	line "is a form of data."
+	para "I'm very proud of"
+	line "the data."
 	done
 
 AxiomStreet1Trainer2:
@@ -83,10 +80,11 @@ AxiomStreet1Trainer3SeenText:
 	done
 
 AxiomStreet1Trainer3BeatenText:
-	text "I'm shutting down"
-	line "in three, two,"
-	para "one. Oh, I forgot"
-	line "the one."
+	text "I am a citizen in"
+	line "good standing."
+	para "Standing is no"
+	line "longer a"
+	para "requirement."
 	done
 
 AxiomStreet1Trainer3:
@@ -100,12 +98,11 @@ AxiomStreet1Trainer4SeenText:
 	done
 
 AxiomStreet1Trainer4BeatenText:
-	text "My motor functions"
-	line "are shutting down."
-	para "It's very"
-	line "relaxing. I did"
-	para "not know about"
-	line "relaxing."
+	text "My Pokemon"
+	line "followed my"
+	para "orders. I am proud"
+	line "of it. Report"
+	para "that."
 	done
 
 AxiomStreet1Trainer4:
@@ -122,10 +119,10 @@ AxiomStreet1Trainer5SeenText:
 	done
 
 AxiomStreet1Trainer5BeatenText:
-	text "I would like a"
-	line "moment of silence."
-	para "Please measure it"
-	line "precisely."
+	text "Tell my"
+	line "replacement the"
+	para "stairs are"
+	line "slippery."
 	done
 
 AxiomStreet1Trainer5:
