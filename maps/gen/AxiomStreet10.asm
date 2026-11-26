@@ -45,11 +45,10 @@ AxiomStreet10Trainer0SeenText:
 	done
 
 AxiomStreet10Trainer0BeatenText:
-	text "I'm sorry. I'm so"
-	line "sorry. I do not"
-	para "know why I said"
-	line "that. I think it"
-	para "was feeling."
+	text "I tried to compute"
+	line "a way out. The"
+	para "answer was a very"
+	line "long shrug."
 	done
 
 AxiomStreet10Trainer0:
@@ -64,10 +63,10 @@ AxiomStreet10Trainer1SeenText:
 	done
 
 AxiomStreet10Trainer1BeatenText:
-	text "My circuits are"
-	line "warm. Is this what"
-	para "it means to be a"
-	line "person?"
+	text "My handler will be"
+	line "disappointed. My"
+	para "handler is a wall"
+	line "socket."
 	done
 
 AxiomStreet10Trainer1:
@@ -84,10 +83,10 @@ AxiomStreet10Trainer2SeenText:
 	done
 
 AxiomStreet10Trainer2BeatenText:
-	text "Why does losing"
-	line "feel like this?"
-	para "Like freedom? Is"
-	line "that a bug?"
+	text "My final words"
+	line "were pre-approved."
+	para "They are the"
+	line "following. Ow."
 	done
 
 AxiomStreet10Trainer2:
@@ -102,10 +101,11 @@ AxiomStreet10Trainer3SeenText:
 	done
 
 AxiomStreet10Trainer3BeatenText:
-	text "It's remarkably"
-	line "efficient. Eleven"
-	para "seconds. No"
-	line "reruns."
+	text "Tell the Registry"
+	line "I was never here."
+	para "It will be easy."
+	line "They have no"
+	para "record."
 	done
 
 AxiomStreet10Trainer3:
@@ -120,8 +120,9 @@ AxiomStreet10Trainer4SeenText:
 	done
 
 AxiomStreet10Trainer4BeatenText:
-	text "That was an"
-	line "unexpected input."
+	text "Aha. So this is"
+	line "where the"
+	para "checklist ends."
 	done
 
 AxiomStreet10Trainer4:
@@ -136,10 +137,10 @@ AxiomStreet10Trainer5SeenText:
 	done
 
 AxiomStreet10Trainer5BeatenText:
-	text "My logs will be"
-	line "wiped. Please"
-	para "remember me as a"
-	line "number."
+	text "I would like a"
+	line "moment of silence."
+	para "Please measure it"
+	line "precisely."
 	done
 
 AxiomStreet10Trainer5:

@@ -15,11 +15,10 @@ AxiomPokecenter6Npc0Script:
 	jumptextfaceplayer AxiomPokecenter6Npc0Text
 
 AxiomPokecenter6Npc0Text:
-	text "The healing"
-	line "machine scans your"
-	para "genes first. I"
-	line "still don't know"
-	para "what it found."
+	text "Please take a"
+	line "number. Your"
+	para "number is also a"
+	line "diagnosis."
 	done
 
 AxiomPokecenter6_MapEvents:

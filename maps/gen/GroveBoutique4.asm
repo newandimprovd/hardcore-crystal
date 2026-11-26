@@ -33,11 +33,11 @@ GroveBoutique4Npc0Script:
 	jumptextfaceplayer GroveBoutique4Npc0Text
 
 GroveBoutique4Npc0Text:
-	text "We all sleep"
-	line "together in the"
-	para "big tent. For"
-	line "warmth. And for"
-	para "warmth."
+	text "I'm the commune's"
+	line "accountant."
+	para "There's nothing to"
+	line "count. It's very"
+	para "restful."
 	done
 
 GroveBoutique4_MapEvents:

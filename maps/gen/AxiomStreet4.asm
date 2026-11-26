@@ -82,10 +82,10 @@ AxiomStreet4Trainer0SeenText:
 	done
 
 AxiomStreet4Trainer0BeatenText:
-	text "I was going to be"
-	line "a poet. I'll start"
-	para "by writing this on"
-	line "my chest."
+	text "You win. File a"
+	line "claim at window 6."
+	para "Window 6 does not"
+	line "exist."
 	done
 
 AxiomStreet4Trainer0:
@@ -100,11 +100,11 @@ AxiomStreet4Trainer1SeenText:
 	done
 
 AxiomStreet4Trainer1BeatenText:
-	text "The simulation has"
-	line "ended. The"
-	para "simulation has"
-	line "also been very"
-	para "boring."
+	text "That was a"
+	line "violation of at"
+	para "least seven codes."
+	line "I only know six."
+	para "I'm learning."
 	done
 
 AxiomStreet4Trainer1:
@@ -119,11 +119,11 @@ AxiomStreet4Trainer2SeenText:
 	done
 
 AxiomStreet4Trainer2BeatenText:
-	text "Executing last"
-	line "will. Executing"
-	para "last will. Last"
-	line "will contains a"
-	para "single line: ow."
+	text "My programming"
+	line "says goodbye. My"
+	para "feelings say"
+	line "hello. Both are"
+	para "very confused."
 	done
 
 AxiomStreet4Trainer2:
@@ -139,8 +139,11 @@ AxiomStreet4Trainer3SeenText:
 	done
 
 AxiomStreet4Trainer3BeatenText:
-	text "I think you dented"
-	line "my love of rules."
+	text "My warranty covers"
+	line "acts of defeat."
+	para "Please wait on"
+	line "hold. The hold is"
+	para "forever."
 	done
 
 AxiomStreet4Trainer3:
@@ -154,10 +157,11 @@ AxiomStreet4Trainer4SeenText:
 	done
 
 AxiomStreet4Trainer4BeatenText:
-	text "This unit was a"
-	line "good unit. This"
-	para "unit liked a very"
-	line "specific song."
+	text "The data point is"
+	line "submitted. Thank"
+	para "you for your"
+	line "service. I'd like"
+	para "a receipt."
 	done
 
 AxiomStreet4Trainer4:
@@ -171,11 +175,9 @@ AxiomStreet4Trainer5SeenText:
 	done
 
 AxiomStreet4Trainer5BeatenText:
-	text "The data point is"
-	line "submitted. Thank"
-	para "you for your"
-	line "service. I'd like"
-	para "a receipt."
+	text "Please file my"
+	line "complaint under:"
+	para "Everything."
 	done
 
 AxiomStreet4Trainer5:

@@ -43,10 +43,10 @@ AxiomStreet15Trainer0SeenText:
 	done
 
 AxiomStreet15Trainer0BeatenText:
-	text "My last memory is"
-	line "of the Registry."
-	para "It was dull and"
-	line "very organised."
+	text "Error 404:"
+	line "opponent not"
+	para "found. Oh. It's"
+	line "me."
 	done
 
 AxiomStreet15Trainer0:
@@ -60,10 +60,9 @@ AxiomStreet15Trainer1SeenText:
 	done
 
 AxiomStreet15Trainer1BeatenText:
-	text "I should have"
-	line "taken the day off."
-	para "It was in my"
-	line "contract."
+	text "I don't feel pain."
+	line "I feel a very"
+	para "high-pitched tone."
 	done
 
 AxiomStreet15Trainer1:
@@ -79,11 +78,10 @@ AxiomStreet15Trainer2SeenText:
 	done
 
 AxiomStreet15Trainer2BeatenText:
-	text "This unit regrets"
-	line "nothing. This unit"
-	para "regrets"
-	line "everything. This"
-	para "unit needs a nap."
+	text "I want it on"
+	line "record that I"
+	para "resisted. Weakly."
+	line "With my face."
 	done
 
 AxiomStreet15Trainer2:
@@ -98,9 +96,10 @@ AxiomStreet15Trainer3SeenText:
 	done
 
 AxiomStreet15Trainer3BeatenText:
-	text "How embarrassing."
-	line "I'll have to blame"
-	para "a glitch."
+	text "I have unfulfilled"
+	line "tasks. I have a"
+	para "lot of them."
+	line "Delete them."
 	done
 
 AxiomStreet15Trainer3:
@@ -115,10 +114,10 @@ AxiomStreet15Trainer4SeenText:
 	done
 
 AxiomStreet15Trainer4BeatenText:
-	text "Form accepted. The"
-	line "river approves. I"
-	para "feel properly"
-	line "filed."
+	text "Citizen, your"
+	line "violence has been"
+	para "noted and"
+	line "approved."
 	done
 
 AxiomStreet15Trainer4:
@@ -133,9 +132,11 @@ AxiomStreet15Trainer5SeenText:
 	done
 
 AxiomStreet15Trainer5BeatenText:
-	text "Critical error."
-	line "Critical error."
-	para "Critical joy."
+	text "The simulation has"
+	line "ended. The"
+	para "simulation has"
+	line "also been very"
+	para "boring."
 	done
 
 AxiomStreet15Trainer5:
@@ -149,9 +150,10 @@ AxiomStreet15Trainer6SeenText:
 	done
 
 AxiomStreet15Trainer6BeatenText:
-	text "Statute 12: robots"
-	line "do not lose. I"
-	para "will amend it."
+	text "You may now leave"
+	line "the premises. Or"
+	para "be reclassified as"
+	line "scrap."
 	done
 
 AxiomStreet15Trainer6:

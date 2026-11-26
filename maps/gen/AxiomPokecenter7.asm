@@ -15,10 +15,12 @@ AxiomPokecenter7Npc0Script:
 	jumptextfaceplayer AxiomPokecenter7Npc0Text
 
 AxiomPokecenter7Npc0Text:
-	text "Please take a"
-	line "number. Your"
-	para "number is also a"
-	line "diagnosis."
+	text "The nurse is a"
+	line "model 7. She heals"
+	para "in a cold,"
+	line "efficient way. I"
+	para "almost miss the"
+	line "slow ones."
 	done
 
 AxiomPokecenter7_MapEvents:

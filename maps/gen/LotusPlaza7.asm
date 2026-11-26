@@ -62,19 +62,24 @@ LotusPlaza7Giver:
 	end
 
 LotusPlaza7GiverText:
-	text "I'm BREEZZE."
-	line "Breeze plus zzz. I"
-	para "drift to wherever"
-	line "it takes me. I"
-	para "blew in. This blew"
-	line "in with me. Here."
+	text "I'm LOTUSITANIA."
+	line "Lotus plus"
+	para "Lusitania. A"
+	line "coast, a boat, a"
+	para "very long cruise"
+	line "ending somewhere."
+	para "A parting favor,"
+	line "from the shore. I"
+	para "won't remember"
+	line "you. It's the"
+	para "gift."
 	done
 
 LotusPlaza7GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "Take care. Or"
+	line "don't. The coast"
+	para "forgets everyone,"
+	line "equally."
 	done
 
 LotusPlaza7GiverNoRoomText:

@@ -32,12 +32,11 @@ LotusBoutique2Npc0Script:
 	jumptextfaceplayer LotusBoutique2Npc0Text
 
 LotusBoutique2Npc0Text:
-	text "I'm the world's"
-	line "best cabana boy."
-	para "I'm also an"
-	line "accountant. And a"
-	para "priest. I forgot"
-	line "which one pays."
+	text "My husband is"
+	line "somewhere. I"
+	para "forget where. I"
+	line "think he's on a"
+	para "very long errand."
 	done
 
 LotusBoutique2_MapEvents:

@@ -41,9 +41,9 @@ LotusStreet7Trainer0SeenText:
 	done
 
 LotusStreet7Trainer0BeatenText:
-	text "The sunset is"
-	line "early today. I"
-	para "think that's me."
+	text "You win. I'll"
+	line "forget it by"
+	para "lunch. You won't."
 	done
 
 LotusStreet7Trainer0:
@@ -57,9 +57,10 @@ LotusStreet7Trainer1SeenText:
 	done
 
 LotusStreet7Trainer1BeatenText:
-	text "No hard feelings."
-	line "No soft feelings."
-	para "No feelings. Ow."
+	text "I felt something."
+	line "I did not like it."
+	para "Subscribe me to"
+	line "the other thing."
 	done
 
 LotusStreet7Trainer1:
@@ -74,11 +75,10 @@ LotusStreet7Trainer2SeenText:
 	done
 
 LotusStreet7Trainer2BeatenText:
-	text "You win. Take the"
-	line "towel. Take the"
-	para "robe. Take my"
-	line "soul, it's on the"
-	para "nightstand."
+	text "Sorry, who are"
+	line "you? Why am I on"
+	para "the ground? This"
+	line "is fantastic."
 	done
 
 LotusStreet7Trainer2:
@@ -93,9 +93,10 @@ LotusStreet7Trainer3SeenText:
 	done
 
 LotusStreet7Trainer3BeatenText:
-	text "Don't mind me. I'm"
-	line "resting my eyes."
-	para "Forever."
+	text "I'll never forgive"
+	line "you. I'll forget"
+	para "you in a minute."
+	line "Equal effect."
 	done
 
 LotusStreet7Trainer3:
@@ -110,10 +111,9 @@ LotusStreet7Trainer4SeenText:
 	done
 
 LotusStreet7Trainer4BeatenText:
-	text "I can see the"
-	line "whole coast from"
-	para "here. It's really"
-	line "something."
+	text "Pour out a drink."
+	line "No, not like that."
+	para "Aim for my mouth."
 	done
 
 LotusStreet7Trainer4:
@@ -128,10 +128,9 @@ LotusStreet7Trainer5SeenText:
 	done
 
 LotusStreet7Trainer5BeatenText:
-	text "I told myself I'd"
-	line "be a fighter. I"
-	para "told myself a lot"
-	line "of things."
+	text "That was"
+	line "refreshing. Then"
+	para "it wasn't."
 	done
 
 LotusStreet7Trainer5:
@@ -145,10 +144,12 @@ LotusStreet7Trainer6SeenText:
 	done
 
 LotusStreet7Trainer6BeatenText:
-	text "Ow. Oh. Is this"
-	line "pain? I think it's"
-	para "pain. It's so"
-	line "unfamiliar."
+	text "I forgot I was"
+	line "fighting. Then I"
+	para "forgot I'd lost."
+	line "Then you hit me."
+	para "It's all coming"
+	line "back."
 	done
 
 LotusStreet7Trainer6:

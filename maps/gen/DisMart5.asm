@@ -18,10 +18,11 @@ DisMart5Npc0Script:
 	jumptextfaceplayer DisMart5Npc0Text
 
 DisMart5Npc0Text:
-	text "Credit's no good"
-	line "here. Neither is"
-	para "anything else. Pay"
-	line "with regret."
+	text "Everything has a"
+	line "price. The price"
+	para "is your soul. The"
+	line "soul is two"
+	para "ninety-nine."
 	done
 
 DisMart5_MapEvents:

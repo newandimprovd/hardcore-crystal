@@ -45,11 +45,9 @@ TitheStreet13Trainer0SeenText:
 	done
 
 TitheStreet13Trainer0BeatenText:
-	text "It's beautiful."
-	line "There's a priest."
-	para "There's a"
-	line "landlord. They are"
-	para "both so small."
+	text "Oof. I feel"
+	line "strangely"
+	para "forgiven."
 	done
 
 TitheStreet13Trainer0:
@@ -62,9 +60,9 @@ TitheStreet13Trainer1SeenText:
 	done
 
 TitheStreet13Trainer1BeatenText:
-	text "Please, no sermon."
-	line "I've had a"
-	para "lifetime of those."
+	text "I'm not dead. I'm"
+	line "just offline. I'll"
+	para "be back as a tax."
 	done
 
 TitheStreet13Trainer1:
@@ -78,10 +76,9 @@ TitheStreet13Trainer2SeenText:
 	done
 
 TitheStreet13Trainer2BeatenText:
-	text "Hold my hand. No."
-	line "The other one."
-	para "Never mind, that"
-	line "one's gone."
+	text "Please, no sermon."
+	line "I've had a"
+	para "lifetime of those."
 	done
 
 TitheStreet13Trainer2:
@@ -99,10 +96,10 @@ TitheStreet13Trainer3SeenText:
 	done
 
 TitheStreet13Trainer3BeatenText:
-	text "The city gave me"
-	line "nothing. I gave it"
-	para "everything. Fair"
-	line "trade."
+	text "Mother? Is that"
+	line "you? No. It's a"
+	para "pigeon. Hello,"
+	line "pigeon."
 	done
 
 TitheStreet13Trainer3:
@@ -116,10 +113,9 @@ TitheStreet13Trainer4SeenText:
 	done
 
 TitheStreet13Trainer4BeatenText:
-	text "That's it. I'm"
-	line "going into the"
-	para "bell-ringing"
-	line "business."
+	text "I took the oath."
+	line "The oath took me."
+	para "Hello, ground."
 	done
 
 TitheStreet13Trainer4:
@@ -132,9 +128,10 @@ TitheStreet13Trainer5SeenText:
 	done
 
 TitheStreet13Trainer5BeatenText:
-	text "Take it all. The"
-	line "city will take it"
-	para "back."
+	text "Note to self."
+	line "Never trust a man"
+	para "who tithes in"
+	line "advance."
 	done
 
 TitheStreet13Trainer5:

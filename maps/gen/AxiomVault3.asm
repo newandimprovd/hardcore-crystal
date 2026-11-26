@@ -156,7 +156,7 @@ AxiomVault3Hermit0:
 	waitbutton
 	closetext
 	winlosstext AxiomVault3Hermit0BeatenText, 0
-	loadtrainer G_SHAMAN, 149
+	loadtrainer G_GRANNY, 147
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_VAULT3_HERMIT0
@@ -180,32 +180,35 @@ AxiomVault3Hermit0:
 	end
 
 AxiomVault3Hermit0SeenText:
-	text "I am a hermit, not"
-	line "a coward. Please"
-	para "hit me and then"
-	line "give me back my"
-	para "corner."
+	text "Kneel. Or fight."
+	line "Our country was"
+	para "one room. We still"
+	line "take protocol very"
+	para "seriously."
 	done
 
 AxiomVault3Hermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "My crown! Not the"
+	line "crown! The crown"
+	para "is a hat. Fine,"
+	line "take the hat."
+	para "Fine."
 	done
 
 AxiomVault3Hermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "A royal gift. The"
+	line "treasury was a"
+	para "drawer. This was"
+	line "the best thing in"
+	para "it."
 	done
 
 AxiomVault3Hermit0AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "My people are in"
+	line "the next cave. All"
+	para "four of them."
+	line "Don't tell them I"
+	para "lost."
 	done
 
 AxiomVault3Hermit0NoRoomText:
@@ -226,7 +229,7 @@ AxiomVault3Hermit1:
 	waitbutton
 	closetext
 	winlosstext AxiomVault3Hermit1BeatenText, 0
-	loadtrainer G_ELDER, 146
+	loadtrainer G_SHAMAN, 149
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_AXIOM_VAULT3_HERMIT1
@@ -250,33 +253,35 @@ AxiomVault3Hermit1:
 	end
 
 AxiomVault3Hermit1SeenText:
-	text "A visitor! I was"
-	line "beginning to talk"
-	para "to the rocks. They"
-	line "have strong"
-	para "opinions about"
-	line "moss."
+	text "I steal dreams for"
+	line "a living. Yours is"
+	para "a poor one. I'm"
+	line "trying to be"
+	para "gentle about it."
 	done
 
 AxiomVault3Hermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "That was a very"
+	line "bad dream. A loss."
+	para "I'll keep it. It's"
+	line "a small"
+	para "collection."
 	done
 
 AxiomVault3Hermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "Take this. I stole"
+	line "it from a sleeping"
+	para "king. He won't"
+	line "miss it. He misses"
+	para "everything."
 	done
 
 AxiomVault3Hermit1AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I dreamed of you"
+	line "last night. You"
+	para "were dead. You"
+	line "were also kind."
+	para "Sleep well."
 	done
 
 AxiomVault3Hermit1NoRoomText:
@@ -310,8 +315,8 @@ AxiomVault3_MapEvents:
 	object_event 14, 29, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, AxiomVault3Trainer4, -1
 	object_event 17, 22, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomVault3Trainer5, -1
 	object_event 16, 15, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomVault3Trainer6, -1
-	object_event  8, 16, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomVault3Hermit0, -1
-	object_event 24, 28, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomVault3Hermit1, -1
+	object_event  8, 16, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomVault3Hermit0, -1
+	object_event 24, 28, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomVault3Hermit1, -1
 	object_event 25, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomVault3BALL0, EVENT_GEN_AXIOM_VAULT3_BALL0
 	object_event 17, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomVault3BALL1, EVENT_GEN_AXIOM_VAULT3_BALL1
 

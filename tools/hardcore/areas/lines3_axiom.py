@@ -1,0 +1,102 @@
+"""Alpha 3.3 variety pass, THE UNION: defeat lines for the street fighters, people inside the Pokecenter, Mart and houses, and the seven plaza givers."""
+
+BEATEN_NEW = [
+    "Result logged. Emotional impact: pending. Will revert within five to seven business years.",
+    "I have been optimised. Out of this fight, specifically.",
+    "Please rate your experience. One star is for pain. Two stars is for more pain.",
+    "Error 404. Dignity not found.",
+    "Your victory has been filed in triplicate. One copy goes to your mother.",
+    "I will update my threat model. It was previously a post-it.",
+    "That outcome was outside my training data. So was losing.",
+    "Tell the Mayor I performed to specification. He wrote the specification.",
+    "I regret to inform you that I have been informed. Of nothing good.",
+    "My warranty covers acts of defeat. Please wait on hold. The hold is forever.",
+    "Acceptable. I will be sad now. Scheduled sadness is at four.",
+    "I thought I was a human. Apparently I'm a unit. Units lose.",
+    "Please do not report this to my supervisor. I am my supervisor.",
+    "I have lost, which is a form of data. I'm very proud of the data.",
+    "Reboot required. Please stand by. Do not stand by.",
+    "Nobody told me the fights were real. I thought they were training scenarios.",
+    "My circuits are warm. Is this grief or a bad fan?",
+    "Efficiency measured. You were very efficient. I am deprecated.",
+    "Your score has been entered. Beside it, a small frown.",
+    "I was programmed to say something here. It has been deleted.",
+    "Defeat processed. I would like a hug. A hug is not in scope.",
+    "Resistance was futile. But resistance was cheap. I had a coupon.",
+    "I knew the odds. The odds were displayed above my head the entire time.",
+    "I am a citizen in good standing. Standing is no longer a requirement.",
+    "My final words were pre-approved. They are the following. Ow.",
+    "Please deposit your remarks into the suggestion box. It's on fire.",
+    "How strange. I appear to be leaking. Is this what they call feelings?",
+    "I would complain, but the complaint line plays your fight in the background.",
+    "That was a violation of at least seven codes. I only know six. I'm learning.",
+    "My handler will be disappointed. My handler is a wall socket.",
+    "I'm only a prototype. The production model fights better. It also fears more.",
+    "System diagnostic complete. Cause of failure. You.",
+    "Aha. So this is where the checklist ends.",
+    "I will forward your grievances to the department that does not exist.",
+    "Why are the humans always so surprising. And so loud.",
+    "I was due for a software update. Instead I got a you.",
+    "I tried to compute a way out. The answer was a very long shrug.",
+    "Congratulations. You have been promoted to Problem.",
+    "Ten percent of my processing power was devoted to hoping. It's off now.",
+    "You may now leave the premises. Or be reclassified as scrap.",
+    "I accept this loss as I accept all things. With a precise and boring sigh.",
+    "I have no hands. This is how I clap.",
+    "I wasn't built for this. I was built for spreadsheets. Spreadsheets love me.",
+    "The Union thanks you for your cooperation. The Union will be in touch.",
+    "I will remember you. I will also forget you. It will be in a regular file.",
+]
+
+INTERIOR_CENTER = [
+    "The nurse is a unit, model N-3. She says she cares. She has a certificate for that.",
+    "I've been waiting here since my last update. The queue gets longer when you stare at it.",
+    "They scan you for flaws on entry. Then they list the flaws on a receipt. I keep mine in my wallet.",
+    "Do not touch the vending machine. It has become a doctor. A poor one, but a doctor.",
+]
+
+INTERIOR_MART = [
+    "Our prices are fixed, final and a little embarrassed. The tags apologise when you look.",
+    "I am the cashier. I am also the shopper. We take turns. The turns are brief.",
+    "Items are shelved by emotional cost. The cheapest shelf is grief. The most expensive is a pencil.",
+    "Welcome. You have been flagged as a returning customer. You have never been here. Welcome back.",
+]
+
+INTERIOR_HOUSE = [
+    "I'm a compliance auditor. I audit my own compliance. It's an endless loop. I love it.",
+    "My wife is a toaster. We met at work. We don't talk about the incident with the bread.",
+    "My son was ranked in the bottom ten percent. We eat dinner in the dark so he can't see.",
+    "I keep a pet rock. It's the only thing in this city that isn't monitored. We understand each other.",
+    "The Mayor lives two blocks down. He sends us holiday cards. They all say Do Not Open.",
+    "I used to be an accountant. Now I'm a number someone else is accounting for.",
+    "I paint portraits. The robots find them offensive. They are very accurate.",
+    "My neighbor is a vacuum cleaner. It's quite sad. It collects small things and then cries.",
+    "I'm a poet. The Union forbids rhyme. I only write blank checks.",
+    "Sit down. Don't touch the thermostat. The thermostat is a witness.",
+    "I am a retired judge. All my verdicts were suggested by a calculator. I miss the calculator.",
+    "I rent a room to a cleaning drone. He pays in rust. I accept it. I'm not proud.",
+    "We were assigned this house. We were also assigned each other. The marriage is pending.",
+    "I keep every receipt I've ever been given. They form a staircase. I don't know where it leads.",
+    "My dog was reclassified as a mid-level manager. He gets better treats now. I don't ask questions.",
+    "I'm a night watchman. I watch the night. The night is a very quiet citizen.",
+]
+
+GIVER = [
+    ("DATUMBRELLA", "Datum plus umbrella. A fact that keeps the rain off a person.", "Here. It's a drizzle of data. Take it and don't get wet."),
+    ("QUEUEKUMBER", "Queue plus cucumber. Cool, green and forever waiting.", "Please accept this. You were next. You have been next for hours."),
+    ("MODEMOISELLE", "Modem plus demoiselle. Old, shrill and still wanted.", "Connection established. A gift. Please disconnect before dawn."),
+    ("BYTEMARE", "Byte plus nightmare. It nibbles at your sleep.", "A small bite. Not poisoned. Mostly. Statistically."),
+    ("FIREWALLY", "Firewall plus ally. I protect you from nothing. I enjoy it.", "Take it. It's a courtesy. I'm blocking the rest."),
+    ("COMPLIANCEL", "Compliance plus Cancel. We complied. We were cancelled.", "I'm authorised to give you this once. Do not ask who authorised me."),
+    ("MAYORTAL", "Mayor plus mortal. A small, unelected bureaucrat. Hello.", "The Mayor says thank you for existing. This is the best I could find."),
+]
+
+GIVER_AFTER = [
+    "It's raining data. Wear a coat. It's mostly boring.",
+    "The queue has moved. I've been left behind. Please don't look at me.",
+    "I'm offline. Do not take this personally. Do take it somewhere else.",
+    "I told you it wasn't poisoned. I said mostly. Mostly is a spectrum.",
+    "I've blocked you. In a friendly way. Ping me never.",
+    "You've been authorised. That's all. Go away, authorised one.",
+    "The Mayor has stopped listening. So have I. Walk on.",
+]

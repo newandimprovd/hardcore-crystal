@@ -55,20 +55,20 @@ AxiomPlaza5Giver:
 	end
 
 AxiomPlaza5GiverText:
-	text "I'm ALGORHYTHM."
-	line "Algorithm plus"
-	para "rhythm. I do the"
-	line "steps. I dance"
-	para "badly. Output: one"
-	line "item. Input: your"
-	para "gratitude."
+	text "I'm FIREWALLY."
+	line "Firewall plus"
+	para "ally. I protect"
+	line "you from nothing."
+	para "I enjoy it. Take"
+	line "it. It's a"
+	para "courtesy. I'm"
+	line "blocking the rest."
 	done
 
 AxiomPlaza5GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "I've blocked you."
+	line "In a friendly way."
+	para "Ping me never."
 	done
 
 AxiomPlaza5GiverNoRoomText:

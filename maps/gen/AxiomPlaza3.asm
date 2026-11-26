@@ -52,20 +52,23 @@ AxiomPlaza3Giver:
 	end
 
 AxiomPlaza3GiverText:
-	text "I'm CACHEW. Cache"
-	line "plus cashew. A"
-	para "snack that"
-	line "remembers. Take"
-	para "it. I stored a"
-	line "spare. I always"
-	para "do."
+	text "I'm MODEMOISELLE."
+	line "Modem plus"
+	para "demoiselle. Old,"
+	line "shrill and still"
+	para "wanted. Connection"
+	line "established. A"
+	para "gift. Please"
+	line "disconnect before"
+	para "dawn."
 	done
 
 AxiomPlaza3GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "I'm offline. Do"
+	line "not take this"
+	para "personally. Do"
+	line "take it somewhere"
+	para "else."
 	done
 
 AxiomPlaza3GiverNoRoomText:

@@ -44,9 +44,10 @@ LotusStreet9Trainer0SeenText:
 	done
 
 LotusStreet9Trainer0BeatenText:
-	text "I forgot to be"
-	line "good at this. Rain"
-	para "check."
+	text "I never wanted to"
+	line "win. I just wanted"
+	para "to be near the"
+	line "water."
 	done
 
 LotusStreet9Trainer0:
@@ -60,9 +61,11 @@ LotusStreet9Trainer1SeenText:
 	done
 
 LotusStreet9Trainer1BeatenText:
-	text "That hurt in a"
-	line "place my memory"
-	para "used to live."
+	text "I paid a lot to"
+	line "have no regrets. I"
+	para "feel something"
+	line "suspiciously like"
+	para "regret."
 	done
 
 LotusStreet9Trainer1:
@@ -76,11 +79,10 @@ LotusStreet9Trainer2SeenText:
 	done
 
 LotusStreet9Trainer2BeatenText:
-	text "I lost. I lost"
-	line "something else."
-	para "What else did I"
-	line "lose? What was it?"
-	para "What is that?"
+	text "Look at that. The"
+	line "sunset. I haven't"
+	para "seen one in years."
+	line "Thank you."
 	done
 
 LotusStreet9Trainer2:
@@ -94,9 +96,9 @@ LotusStreet9Trainer3SeenText:
 	done
 
 LotusStreet9Trainer3BeatenText:
-	text "I'm a happy man."
-	line "I'm a happy, flat"
-	para "man."
+	text "Bye, then. The"
+	line "tide will see to"
+	para "the rest."
 	done
 
 LotusStreet9Trainer3:
@@ -111,10 +113,9 @@ LotusStreet9Trainer4SeenText:
 	done
 
 LotusStreet9Trainer4BeatenText:
-	text "Everything is"
-	line "going dim. Turn"
-	para "the lights up. No."
-	line "Turn them off."
+	text "I'm not hurt. I'm"
+	line "just very, very"
+	para "horizontal."
 	done
 
 LotusStreet9Trainer4:
@@ -127,8 +128,11 @@ LotusStreet9Trainer5SeenText:
 	done
 
 LotusStreet9Trainer5BeatenText:
-	text "Ah. So this is the"
-	line "long nap."
+	text "My wife left me"
+	line "for the tide."
+	para "That's why I"
+	line "fight. Also, I was"
+	para "bored."
 	done
 
 LotusStreet9Trainer5:

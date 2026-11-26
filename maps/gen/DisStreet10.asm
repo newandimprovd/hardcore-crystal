@@ -41,10 +41,10 @@ DisStreet10Trainer0SeenText:
 	done
 
 DisStreet10Trainer0BeatenText:
-	text "Thank you. I'll"
-	line "save you a seat at"
-	para "the wake. Bring"
-	line "snacks."
+	text "You've got a good"
+	line "arm. Have you"
+	para "considered a"
+	line "career in torture?"
 	done
 
 DisStreet10Trainer0:
@@ -59,10 +59,11 @@ DisStreet10Trainer1SeenText:
 	done
 
 DisStreet10Trainer1BeatenText:
-	text "That was"
-	line "cathartic. I'm"
-	para "going to cry now."
-	line "Then complain."
+	text "I was an"
+	line "executioner in"
+	para "life. This is"
+	line "poetic. I hate"
+	para "poetry."
 	done
 
 DisStreet10Trainer1:
@@ -76,10 +77,11 @@ DisStreet10Trainer2SeenText:
 	done
 
 DisStreet10Trainer2BeatenText:
-	text "I won't tell"
-	line "anyone. Nobody"
-	para "will believe me."
-	line "They never do."
+	text "I can't die. Are"
+	line "you aware of that?"
+	para "You can only make"
+	line "it hurt"
+	para "differently."
 	done
 
 DisStreet10Trainer2:
@@ -93,10 +95,9 @@ DisStreet10Trainer3SeenText:
 	done
 
 DisStreet10Trainer3BeatenText:
-	text "My fingers are"
-	line "frozen. And my"
-	para "pride. And my left"
-	line "foot."
+	text "So long. It's been"
+	line "a hell of a time."
+	para "Literally."
 	done
 
 DisStreet10Trainer3:
@@ -110,10 +111,10 @@ DisStreet10Trainer4SeenText:
 	done
 
 DisStreet10Trainer4BeatenText:
-	text "Well. That's"
-	line "another stamp in"
-	para "my permanent"
-	line "record."
+	text "I'm very much"
+	line "already dead. This"
+	para "is just an"
+	line "upgrade."
 	done
 
 DisStreet10Trainer4:
@@ -128,10 +129,11 @@ DisStreet10Trainer5SeenText:
 	done
 
 DisStreet10Trainer5BeatenText:
-	text "You killed me."
-	line "That's the most"
-	para "anyone's cared in"
-	line "decades."
+	text "Nobody told me you"
+	line "could die in Dis."
+	para "Isn't it all"
+	line "supposed to be"
+	para "eternal?"
 	done
 
 DisStreet10Trainer5:
@@ -146,9 +148,9 @@ DisStreet10Trainer6SeenText:
 	done
 
 DisStreet10Trainer6BeatenText:
-	text "Tell my wife I"
-	line "love her. Tell her"
-	para "to stay up there."
+	text "The flames aren't"
+	line "so bad when you're"
+	para "lying down."
 	done
 
 DisStreet10Trainer6:

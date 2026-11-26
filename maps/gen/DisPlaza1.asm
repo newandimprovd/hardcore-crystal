@@ -68,20 +68,20 @@ DisPlaza1Giver:
 	end
 
 DisPlaza1GiverText:
-	text "I'm PURGATEA."
-	line "Purgatory plus"
-	para "tea. It brews"
-	line "forever and never"
-	para "gets strong. Drink"
-	line "up. No? Then take"
-	para "this instead."
+	text "I'm EMBERLY. Ember"
+	line "plus Emily. A girl"
+	para "who died in a fire"
+	line "and kept the"
+	para "warmth. Take this,"
+	line "it's warm. It's"
+	para "the only warm"
+	line "thing here."
 	done
 
 DisPlaza1GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "It's warm for now."
+	line "Be careful. The"
+	para "warmth runs out."
 	done
 
 DisPlaza1GiverNoRoomText:

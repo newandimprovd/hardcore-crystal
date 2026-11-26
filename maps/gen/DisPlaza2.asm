@@ -56,21 +56,23 @@ DisPlaza2Giver:
 	end
 
 DisPlaza2GiverText:
-	text "I'm INFERNOODLE."
-	line "Inferno plus"
-	para "noodle. Spicy,"
-	line "long and"
-	para "irreversible. A"
-	line "bowl of kindness."
-	para "It's a berry."
-	line "Don't ask."
+	text "I'm FROSTITUTE."
+	line "Frost plus"
+	para "tribute. A cold"
+	line "offering, made"
+	para "with love and a"
+	line "shiver. A little"
+	para "tribute, from my"
+	line "coat to yours."
+	para "It's ice cold. I'm"
+	line "sorry."
 	done
 
 DisPlaza2GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "I'm so cold. Stand"
+	line "next to me. No,"
+	para "further. Okay,"
+	line "that's fine."
 	done
 
 DisPlaza2GiverNoRoomText:

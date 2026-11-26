@@ -34,11 +34,13 @@ DisBoutique4Npc0Script:
 	jumptextfaceplayer DisBoutique4Npc0Text
 
 DisBoutique4Npc0Text:
-	text "I'm the Warden's"
-	line "cousin. It's a"
-	para "very small job."
-	line "It's a very big"
-	para "cousin."
+	text "I was a priest."
+	line "Now I'm the only"
+	para "person in the"
+	line "neighborhood who"
+	para "doesn't believe in"
+	line "hell. It's quite"
+	para "lonely."
 	done
 
 DisBoutique4_MapEvents:

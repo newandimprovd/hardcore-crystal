@@ -46,10 +46,10 @@ AxiomStreet3Trainer0SeenText:
 	done
 
 AxiomStreet3Trainer0BeatenText:
-	text "Tell my"
-	line "replacement the"
-	para "stairs are"
-	line "slippery."
+	text "I was due for a"
+	line "software update."
+	para "Instead I got a"
+	line "you."
 	done
 
 AxiomStreet3Trainer0:
@@ -64,10 +64,11 @@ AxiomStreet3Trainer1SeenText:
 	done
 
 AxiomStreet3Trainer1BeatenText:
-	text "My handler calls"
-	line "me a good boy. I"
-	para "would like to hear"
-	line "it once more."
+	text "I will forward"
+	line "your grievances to"
+	para "the department"
+	line "that does not"
+	para "exist."
 	done
 
 AxiomStreet3Trainer1:
@@ -82,9 +83,10 @@ AxiomStreet3Trainer2SeenText:
 	done
 
 AxiomStreet3Trainer2BeatenText:
-	text "Please hold. I am"
-	line "buffering my final"
-	para "words."
+	text "Please do not"
+	line "report this to my"
+	para "supervisor. I am"
+	line "my supervisor."
 	done
 
 AxiomStreet3Trainer2:
@@ -99,9 +101,10 @@ AxiomStreet3Trainer3SeenText:
 	done
 
 AxiomStreet3Trainer3BeatenText:
-	text "My battery is low."
-	line "So is my"
-	para "self-esteem."
+	text "Defeat processed."
+	line "I would like a"
+	para "hug. A hug is not"
+	line "in scope."
 	done
 
 AxiomStreet3Trainer3:
@@ -115,9 +118,8 @@ AxiomStreet3Trainer4SeenText:
 	done
 
 AxiomStreet3Trainer4BeatenText:
-	text "I will be recycled"
-	line "for this. At least"
-	para "I'll be something."
+	text "Error 404. Dignity"
+	line "not found."
 	done
 
 AxiomStreet3Trainer4:
@@ -132,8 +134,9 @@ AxiomStreet3Trainer5SeenText:
 	done
 
 AxiomStreet3Trainer5BeatenText:
-	text "Archive me."
-	line "Archive me deeply."
+	text "My battery is low."
+	line "So is my"
+	para "self-esteem."
 	done
 
 AxiomStreet3Trainer5:
@@ -148,9 +151,10 @@ AxiomStreet3Trainer6SeenText:
 	done
 
 AxiomStreet3Trainer6BeatenText:
-	text "Ouch. Ouch. Is"
-	line "that what ouch is?"
-	para "Ouch."
+	text "My circuits are"
+	line "warm. Is this what"
+	para "it means to be a"
+	line "person?"
 	done
 
 AxiomStreet3Trainer6:

@@ -15,10 +15,11 @@ GrovePokecenter4Npc0Script:
 	jumptextfaceplayer GrovePokecenter4Npc0Text
 
 GrovePokecenter4Npc0Text:
-	text "I came in with a"
-	line "cut and left with"
-	para "a vision. Both"
-	line "were free."
+	text "The nurse hums."
+	line "Always. Nobody"
+	para "knows why. Nobody"
+	line "has asked. We just"
+	para "sort of hum along."
 	done
 
 GrovePokecenter4_MapEvents:

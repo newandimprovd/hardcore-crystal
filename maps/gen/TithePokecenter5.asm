@@ -15,10 +15,9 @@ TithePokecenter5Npc0Script:
 	jumptextfaceplayer TithePokecenter5Npc0Text
 
 TithePokecenter5Npc0Text:
-	text "Sit down. The"
-	line "couch has seen"
-	para "worse. It's seen"
-	line "everything."
+	text "The coffee here is"
+	line "free. It's also"
+	para "illegal."
 	done
 
 TithePokecenter5_MapEvents:

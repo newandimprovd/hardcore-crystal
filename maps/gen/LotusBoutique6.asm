@@ -33,12 +33,12 @@ LotusBoutique6Npc0Script:
 	jumptextfaceplayer LotusBoutique6Npc0Text
 
 LotusBoutique6Npc0Text:
-	text "I'm the world's"
-	line "best cabana boy."
-	para "I'm also an"
-	line "accountant. And a"
-	para "priest. I forgot"
-	line "which one pays."
+	text "This house was a"
+	line "hotel once. I"
+	para "still hear guests"
+	line "ringing for room"
+	para "service. Nobody is"
+	line "in the rooms."
 	done
 
 LotusBoutique6_MapEvents:

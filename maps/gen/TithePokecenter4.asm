@@ -15,10 +15,11 @@ TithePokecenter4Npc0Script:
 	jumptextfaceplayer TithePokecenter4Npc0Text
 
 TithePokecenter4Npc0Text:
-	text "I came in for my"
-	line "knee and left with"
-	para "a donation"
-	line "receipt."
+	text "Don't use the"
+	line "waiting room"
+	para "chairs. They"
+	line "belong to a lien"
+	para "holder."
 	done
 
 TithePokecenter4_MapEvents:

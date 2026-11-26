@@ -44,11 +44,10 @@ DisStreet13Trainer0SeenText:
 	done
 
 DisStreet13Trainer0BeatenText:
-	text "My boss will hear"
-	line "about this. My"
-	para "boss hears about"
-	line "everything. It's a"
-	para "gift."
+	text "The cold is in my"
+	line "bones. You are in"
+	para "my bones. Please"
+	line "leave."
 	done
 
 DisStreet13Trainer0:
@@ -61,8 +60,9 @@ DisStreet13Trainer1SeenText:
 	done
 
 DisStreet13Trainer1BeatenText:
-	text "That was awful. Do"
-	line "it again."
+	text "A soul for a soul."
+	line "Mine is cheap."
+	para "Please take it."
 	done
 
 DisStreet13Trainer1:
@@ -76,10 +76,10 @@ DisStreet13Trainer2SeenText:
 	done
 
 DisStreet13Trainer2BeatenText:
-	text "Thank you. I'll"
-	line "save you a seat at"
-	para "the wake. Bring"
-	line "snacks."
+	text "I'm leaving. I'm"
+	line "not retreating."
+	para "I'm relocating to"
+	line "a quieter agony."
 	done
 
 DisStreet13Trainer2:
@@ -93,10 +93,9 @@ DisStreet13Trainer3SeenText:
 	done
 
 DisStreet13Trainer3BeatenText:
-	text "My fingers are"
-	line "frozen. And my"
-	para "pride. And my left"
-	line "foot."
+	text "I'm sorry for your"
+	line "loss. It's mine."
+	para "I'm very sorry."
 	done
 
 DisStreet13Trainer3:
@@ -111,9 +110,9 @@ DisStreet13Trainer4SeenText:
 	done
 
 DisStreet13Trainer4BeatenText:
-	text "My chains have"
-	line "fallen off. How"
-	para "embarrassing."
+	text "Down here, a loss"
+	line "is a promotion."
+	para "Thank you."
 	done
 
 DisStreet13Trainer4:
@@ -128,10 +127,9 @@ DisStreet13Trainer5SeenText:
 	done
 
 DisStreet13Trainer5BeatenText:
-	text "Even in Hell,"
-	line "there's a last"
-	para "word. Mine is:"
-	line "oops."
+	text "Don't gloat. It's"
+	line "unbecoming. Also"
+	para "it's very hot."
 	done
 
 DisStreet13Trainer5:
@@ -146,10 +144,11 @@ DisStreet13Trainer6SeenText:
 	done
 
 DisStreet13Trainer6BeatenText:
-	text "Well. That's"
-	line "another stamp in"
-	para "my permanent"
-	line "record."
+	text "My demon"
+	line "supervisor will be"
+	para "furious. He's"
+	line "always furious."
+	para "It's the climate."
 	done
 
 DisStreet13Trainer6:

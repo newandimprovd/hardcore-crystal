@@ -31,9 +31,10 @@ GroveStreet1Trainer0SeenText:
 	done
 
 GroveStreet1Trainer0BeatenText:
-	text "My feelings are"
-	line "hurt. And my ribs."
-	para "Mostly the ribs."
+	text "Please plant"
+	line "something over me."
+	para "A pear. I always"
+	line "liked pears."
 	done
 
 GroveStreet1Trainer0:
@@ -48,11 +49,10 @@ GroveStreet1Trainer1SeenText:
 	done
 
 GroveStreet1Trainer1BeatenText:
-	text "There's a feast"
-	line "tonight. Eat"
-	para "something. Eat me,"
-	line "if it comes to"
-	para "that."
+	text "I'm not dead. I'm"
+	line "just sharing"
+	para "myself with the"
+	line "earth."
 	done
 
 GroveStreet1Trainer1:
@@ -66,9 +66,9 @@ GroveStreet1Trainer2SeenText:
 	done
 
 GroveStreet1Trainer2BeatenText:
-	text "No hard feelings."
-	line "A few soft ones. A"
-	para "bruise or two."
+	text "I forgive you in"
+	line "advance. And also"
+	para "after. And during."
 	done
 
 GroveStreet1Trainer2:
@@ -82,10 +82,9 @@ GroveStreet1Trainer3SeenText:
 	done
 
 GroveStreet1Trainer3BeatenText:
-	text "Whoa. Heavy. Real"
-	line "heavy, man. Like,"
-	para "structurally"
-	line "heavy."
+	text "I wanted to be a"
+	line "poet. I'm only a"
+	para "pile now."
 	done
 
 GroveStreet1Trainer3:
@@ -99,9 +98,9 @@ GroveStreet1Trainer4SeenText:
 	done
 
 GroveStreet1Trainer4BeatenText:
-	text "The mushrooms were"
-	line "right. They always"
-	para "are. I hate them."
+	text "Everyone sees me"
+	line "lose. That's a bad"
+	para "side of no walls."
 	done
 
 GroveStreet1Trainer4:
@@ -114,9 +113,10 @@ GroveStreet1Trainer5SeenText:
 	done
 
 GroveStreet1Trainer5BeatenText:
-	text "I'm going home."
-	line "Tell the Commune"
-	para "my chore is done."
+	text "I think I learned"
+	line "something. Mostly"
+	para "about hospital"
+	line "food."
 	done
 
 GroveStreet1Trainer5:

@@ -12,20 +12,21 @@ TitheHouse2Npc0Script:
 	jumptextfaceplayer TitheHouse2Npc0Text
 
 TitheHouse2Npc0Text:
-	text "I'm a slumlord."
-	line "It's very"
-	para "stressful."
-	line "Everyone hates me."
-	para "I own a yacht."
+	text "My cat is a better"
+	line "Christian than I"
+	para "am. She hides"
+	line "every Sunday."
 	done
 
 TitheHouse2Npc1Script:
 	jumptextfaceplayer TitheHouse2Npc1Text
 
 TitheHouse2Npc1Text:
-	text "The cathedral bell"
-	line "is a recording."
-	para "Don't tell anyone."
+	text "I paint miniature"
+	line "saints. The"
+	para "smaller they are,"
+	line "the fewer prayers"
+	para "they can ignore."
 	done
 
 TitheHouse2_MapEvents:

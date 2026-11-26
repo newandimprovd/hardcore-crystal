@@ -135,31 +135,34 @@ LotusDryPoolHermit0:
 	end
 
 LotusDryPoolHermit0SeenText:
-	text "You found my"
-	line "corner. Nobody"
-	para "finds my corner. I"
-	line "am hurt, and also"
-	para "delighted."
+	text "I TOOK A VOW OF"
+	line "LOUDNESS. IT'S THE"
+	para "MOST DIFFICULT"
+	line "ONE. FIGHT ME AT"
+	para "FULL VOLUME."
 	done
 
 LotusDryPoolHermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "HA. IT HURT. I'M"
+	line "SCREAMING TO SHOW"
+	para "IT HURT. HERE, A"
+	line "GIFT, AT FULL"
+	para "VOLUME."
 	done
 
 LotusDryPoolHermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "TAKE THIS. DON'T"
+	line "WHISPER. IT'S TOO"
+	para "SMALL FOR"
+	line "WHISPERS. IT'S TOO"
+	para "BIG FOR ME."
 	done
 
 LotusDryPoolHermit0AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I'M SORRY. I CAN'T"
+	line "LOWER MY VOICE."
+	para "IT'S A VOW. IT'S"
+	line "ALSO A NUISANCE."
 	done
 
 LotusDryPoolHermit0NoRoomText:
@@ -204,38 +207,36 @@ LotusDryPoolHermit1:
 	end
 
 LotusDryPoolHermit1SeenText:
-	text "I have been"
-	line "meditating for"
-	para "four hundred"
-	line "years. Please"
-	para "insult me so I can"
-	line "get angry."
+	text "I've been walking"
+	line "this tunnel for"
+	para "nine years. It's a"
+	line "loop. Fight me, I"
+	para "need a change of"
+	line "scenery."
 	done
 
 LotusDryPoolHermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "A detour!"
+	line "Delightful. I'll"
+	para "add it to my"
+	line "route. Please take"
+	para "this. It's heavy."
 	done
 
 LotusDryPoolHermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "I carried it for"
+	line "six thousand laps."
+	para "It's yours. My"
+	line "legs are very"
+	para "proud of me."
 	done
 
 LotusDryPoolHermit1AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "I just passed you"
+	line "again. Or was it"
+	para "the other you?"
+	line "It's hard to tell"
+	para "in a loop."
 	done
 
 LotusDryPoolHermit1NoRoomText:

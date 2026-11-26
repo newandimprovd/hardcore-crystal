@@ -12,25 +12,24 @@ AxiomHouse2Npc0Script:
 	jumptextfaceplayer AxiomHouse2Npc0Text
 
 AxiomHouse2Npc0Text:
-	text "A man came by"
-	line "selling"
-	para "forgiveness. I"
-	line "don't have any"
-	para "money. He said"
-	line "that's fine. He"
-	para "took the lamp."
+	text "I'm a poet. The"
+	line "Union forbids"
+	para "rhyme. I only"
+	line "write blank"
+	para "checks."
 	done
 
 AxiomHouse2Npc1Script:
 	jumptextfaceplayer AxiomHouse2Npc1Text
 
 AxiomHouse2Npc1Text:
-	text "I keep a plant."
-	line "It's illegal. It's"
-	para "also my best"
-	line "friend. Please"
-	para "don't tell the"
-	line "Mayor."
+	text "My dog was"
+	line "reclassified as a"
+	para "mid-level manager."
+	line "He gets better"
+	para "treats now. I"
+	line "don't ask"
+	para "questions."
 	done
 
 AxiomHouse2_MapEvents:

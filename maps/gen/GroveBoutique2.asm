@@ -32,13 +32,11 @@ GroveBoutique2Npc0Script:
 	jumptextfaceplayer GroveBoutique2Npc0Text
 
 GroveBoutique2Npc0Text:
-	text "I'm a critic. I"
-	line "came to"
-	para "disapprove. The"
-	line "weaving circle is"
-	para "very, very good,"
-	line "and now I'm"
-	para "confused."
+	text "I'm a weaver."
+	line "Everything I make"
+	para "is a flag. Of"
+	line "what, I couldn't"
+	para "say."
 	done
 
 GroveBoutique2_MapEvents:

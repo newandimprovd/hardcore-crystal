@@ -18,10 +18,12 @@ DisMart4Npc0Script:
 	jumptextfaceplayer DisMart4Npc0Text
 
 DisMart4Npc0Text:
-	text "Don't read the"
-	line "receipt. It will"
-	para "tell you how long"
-	line "you've got."
+	text "The potions are an"
+	line "ancient brand."
+	para "They taste like"
+	line "regret. They heal"
+	para "like regret. Same"
+	line "thing."
 	done
 
 DisMart4_MapEvents:

@@ -18,11 +18,11 @@ AxiomMart6Npc0Script:
 	jumptextfaceplayer AxiomMart6Npc0Text
 
 AxiomMart6Npc0Text:
-	text "Welcome to the"
-	line "Commissary. We"
-	para "have antidotes for"
-	line "everything except"
-	para "the Union."
+	text "I am the cashier."
+	line "I am also the"
+	para "shopper. We take"
+	line "turns. The turns"
+	para "are brief."
 	done
 
 AxiomMart6_MapEvents:

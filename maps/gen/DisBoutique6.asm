@@ -34,12 +34,11 @@ DisBoutique6Npc0Script:
 	jumptextfaceplayer DisBoutique6Npc0Text
 
 DisBoutique6Npc0Text:
-	text "My wife left me"
-	line "for the lake."
-	para "Literally. She's"
-	line "in the ice. I wave"
-	para "at her. Sometimes"
-	line "she waves back."
+	text "I'm a retired"
+	line "torturer. I knit"
+	para "now. It's the same"
+	line "motion, but with"
+	para "less screaming."
 	done
 
 DisBoutique6_MapEvents:

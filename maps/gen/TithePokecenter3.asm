@@ -15,11 +15,12 @@ TithePokecenter3Npc0Script:
 	jumptextfaceplayer TithePokecenter3Npc0Text
 
 TithePokecenter3Npc0Text:
-	text "I haven't left"
-	line "this lobby in"
-	para "three days."
-	line "Nobody's asked me"
-	para "to."
+	text "My Pokemon fainted"
+	line "in a fight. The"
+	para "priest took a cut."
+	line "The cop took a"
+	para "cut. I got a"
+	line "sandwich."
 	done
 
 TithePokecenter3_MapEvents:

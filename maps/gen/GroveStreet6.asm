@@ -82,10 +82,10 @@ GroveStreet6Trainer0SeenText:
 	done
 
 GroveStreet6Trainer0BeatenText:
-	text "Don't cry for me."
-	line "Cry into the"
-	para "compost. It needs"
-	line "the moisture."
+	text "Wait. I forgot the"
+	line "goat. Somebody get"
+	para "the goat. It was"
+	line "in my will."
 	done
 
 GroveStreet6Trainer0:
@@ -99,9 +99,11 @@ GroveStreet6Trainer1SeenText:
 	done
 
 GroveStreet6Trainer1BeatenText:
-	text "I knew I should"
-	line "have joined the"
-	para "pottery circle."
+	text "I should have"
+	line "stayed in the"
+	para "city. At least"
+	line "there I'd be rich"
+	para "and dead."
 	done
 
 GroveStreet6Trainer1:
@@ -116,10 +118,11 @@ GroveStreet6Trainer2SeenText:
 	done
 
 GroveStreet6Trainer2BeatenText:
-	text "You didn't have to"
-	line "hit that hard."
-	para "We're all just a"
-	line "little hungry."
+	text "There's a feast"
+	line "tonight. Eat"
+	para "something. Eat me,"
+	line "if it comes to"
+	para "that."
 	done
 
 GroveStreet6Trainer2:
@@ -133,10 +136,11 @@ GroveStreet6Trainer3SeenText:
 	done
 
 GroveStreet6Trainer3BeatenText:
-	text "Wait. I forgot the"
-	line "goat. Somebody get"
-	para "the goat. It was"
-	line "in my will."
+	text "The stones have"
+	line "been telling me to"
+	para "sit this one out."
+	line "I don't speak"
+	para "stone."
 	done
 
 GroveStreet6Trainer3:
@@ -151,9 +155,10 @@ GroveStreet6Trainer4SeenText:
 	done
 
 GroveStreet6Trainer4BeatenText:
-	text "I was raised never"
-	line "to hate. Thank you"
-	para "for testing it."
+	text "All things are"
+	line "shared. I hope you"
+	para "share the next one"
+	line "with a doctor."
 	done
 
 GroveStreet6Trainer4:
@@ -168,10 +173,9 @@ GroveStreet6Trainer5SeenText:
 	done
 
 GroveStreet6Trainer5BeatenText:
-	text "I was a banker. I"
-	line "feel so much"
-	para "better being"
-	line "beaten."
+	text "That was a very"
+	line "unsustainable"
+	para "outcome."
 	done
 
 GroveStreet6Trainer5:
@@ -186,10 +190,10 @@ GroveStreet6Trainer6SeenText:
 	done
 
 GroveStreet6Trainer6BeatenText:
-	text "So this is the"
-	line "circle of life."
-	para "It's a little"
-	line "pointy."
+	text "I'll be in the hot"
+	line "spring crying."
+	para "Join me, or don't."
+	line "Both are valid."
 	done
 
 GroveStreet6Trainer6:

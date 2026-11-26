@@ -228,32 +228,37 @@ PurgDown2Hermit0:
 	end
 
 PurgDown2Hermit0SeenText:
-	text "You found my"
-	line "corner. Nobody"
-	para "finds my corner. I"
-	line "am hurt, and also"
-	para "delighted."
+	text "Welcome, welcome!"
+	line "I can see your"
+	para "future. It is"
+	line "brilliant. I'm"
+	para "lying. Fight me."
 	done
 
 PurgDown2Hermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "I told you I'd"
+	line "lose! No, I told"
+	para "you I'd win. One"
+	line "of those was a"
+	para "lie. Probably"
+	line "both."
 	done
 
 PurgDown2Hermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "A gift from the"
+	line "spirits. The"
+	para "spirits are me."
+	line "I'm very"
+	para "persuasive. Take"
+	line "it."
 	done
 
 PurgDown2Hermit0AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "I never said any"
+	line "of that. You"
+	para "imagined it. I am"
+	line "a respected seer."
+	para "Mind the door."
 	done
 
 PurgDown2Hermit0NoRoomText:
@@ -298,34 +303,35 @@ PurgDown2Hermit1:
 	end
 
 PurgDown2Hermit1SeenText:
-	text "I have been"
-	line "meditating for"
-	para "four hundred"
-	line "years. Please"
-	para "insult me so I can"
-	line "get angry."
+	text "I used to do this"
+	line "for a living. I"
+	para "was better at the"
+	line "other half. Let's"
+	para "see about this"
+	line "half."
 	done
 
 PurgDown2Hermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "Ha. I used to do"
+	line "it in one swing."
+	para "You took the long"
+	line "way. Respect."
 	done
 
 PurgDown2Hermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "Take it. Among the"
+	line "hangmen of my day"
+	para "there was a"
+	line "custom. You leave"
+	para "something behind."
 	done
 
 PurgDown2Hermit1AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I still dream of"
+	line "axes. Not mine."
+	para "Other people's."
+	line "They're looking"
+	para "for me."
 	done
 
 PurgDown2Hermit1NoRoomText:

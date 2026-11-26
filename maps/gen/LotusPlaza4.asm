@@ -52,20 +52,23 @@ LotusPlaza4Giver:
 	end
 
 LotusPlaza4GiverText:
-	text "I'm LAZULI. Lazy"
-	line "plus lapis lazuli."
-	para "A relaxed stone."
-	line "Take it. I"
-	para "couldn't be"
-	line "bothered to keep"
-	para "it."
+	text "I'm TIDALIA. Tide"
+	line "plus Dahlia. A"
+	para "floral person,"
+	line "constantly washed"
+	para "away. The sea kept"
+	line "giving me gifts."
+	para "I'm passing it on."
+	line "Don't thank me,"
+	para "I'll drown."
 	done
 
 LotusPlaza4GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "The sea took"
+	line "something of mine"
+	para "again. It didn't"
+	line "bring back the"
+	para "gift."
 	done
 
 LotusPlaza4GiverNoRoomText:

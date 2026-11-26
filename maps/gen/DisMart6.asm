@@ -18,12 +18,10 @@ DisMart6Npc0Script:
 	jumptextfaceplayer DisMart6Npc0Text
 
 DisMart6Npc0Text:
-	text "The potions are an"
-	line "ancient brand."
-	para "They taste like"
-	line "regret. They heal"
-	para "like regret. Same"
-	line "thing."
+	text "Credit's no good"
+	line "here. Neither is"
+	para "anything else. Pay"
+	line "with regret."
 	done
 
 DisMart6_MapEvents:

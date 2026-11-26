@@ -15,11 +15,11 @@ GrovePokecenter2Npc0Script:
 	jumptextfaceplayer GrovePokecenter2Npc0Text
 
 GrovePokecenter2Npc0Text:
-	text "The nurse hums."
-	line "Always. Nobody"
-	para "knows why. Nobody"
-	line "has asked. We just"
-	para "sort of hum along."
+	text "Don't use the left"
+	line "bed. Something"
+	para "happened in it."
+	line "Not to me. To the"
+	para "mattress."
 	done
 
 GrovePokecenter2_MapEvents:

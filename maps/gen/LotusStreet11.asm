@@ -79,9 +79,11 @@ LotusStreet11Trainer0SeenText:
 	done
 
 LotusStreet11Trainer0BeatenText:
-	text "Bye, then. The"
-	line "tide will see to"
-	para "the rest."
+	text "They told me"
+	line "defeat is just a"
+	para "sunset with worse"
+	line "lighting. I need a"
+	para "better window."
 	done
 
 LotusStreet11Trainer0:
@@ -95,11 +97,10 @@ LotusStreet11Trainer1SeenText:
 	done
 
 LotusStreet11Trainer1BeatenText:
-	text "Tell them I went"
-	line "peacefully. Tell"
-	para "them there was a"
-	line "lot of sunscreen"
-	para "involved."
+	text "Please tell the"
+	line "bartender I paid."
+	para "I didn't. Please"
+	line "tell him I did."
 	done
 
 LotusStreet11Trainer1:
@@ -115,10 +116,12 @@ LotusStreet11Trainer2SeenText:
 	done
 
 LotusStreet11Trainer2BeatenText:
-	text "A drink would be"
-	line "nice. A last one."
-	para "A very large last"
-	line "one."
+	text "I'm the"
+	line "instructor. We"
+	para "teach people to"
+	line "take a hit and"
+	para "smile. I'm"
+	line "smiling."
 	done
 
 LotusStreet11Trainer2:
@@ -134,11 +137,10 @@ LotusStreet11Trainer3SeenText:
 	done
 
 LotusStreet11Trainer3BeatenText:
-	text "Do you know how"
-	line "many people die at"
-	para "this resort?"
-	line "Neither do I. It's"
-	para "a lot."
+	text "I paid for peace"
+	line "and got this. I"
+	para "want a refund. Or"
+	line "a hug."
 	done
 
 LotusStreet11Trainer3:
@@ -152,9 +154,11 @@ LotusStreet11Trainer4SeenText:
 	done
 
 LotusStreet11Trainer4BeatenText:
-	text "I lost to a"
-	line "stranger. How very"
-	para "'resort' of me."
+	text "You have such"
+	line "lovely eyes. I"
+	para "wish I could"
+	line "remember the last"
+	para "time I saw them."
 	done
 
 LotusStreet11Trainer4:
@@ -168,10 +172,10 @@ LotusStreet11Trainer5SeenText:
 	done
 
 LotusStreet11Trainer5BeatenText:
-	text "I was hoping to"
-	line "retire here. I'm"
-	para "retiring right"
-	line "now."
+	text "I forgot why I"
+	line "attacked you. Was"
+	para "it money? Love? A"
+	line "parking dispute?"
 	done
 
 LotusStreet11Trainer5:
@@ -185,9 +189,11 @@ LotusStreet11Trainer6SeenText:
 	done
 
 LotusStreet11Trainer6BeatenText:
-	text "Hang loose, they"
-	line "said. I hung. I'm"
-	para "loose. Ouch."
+	text "You've ruined my"
+	line "vacation. Please"
+	para "leave a review."
+	line "Make it five"
+	para "stars."
 	done
 
 LotusStreet11Trainer6:

@@ -63,20 +63,22 @@ TithePlaza7Giver:
 	end
 
 TithePlaza7GiverText:
-	text "I'm PAYTIENCE. Pay"
-	line "plus patience. I"
-	para "have the first."
-	line "You don't have the"
-	para "second. Here. I"
-	line "owe it to the"
-	para "universe."
+	text "I'm MITERRIBLE."
+	line "Mitre plus"
+	para "terrible. A"
+	line "bishop's hat that"
+	para "learned to lie. A"
+	line "little something"
+	para "from the top. It"
+	line "trickled down."
+	para "This is what's"
+	line "left."
 	done
 
 TithePlaza7GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "Don't thank me."
+	line "Thank the poor."
+	para "They paid for it."
 	done
 
 TithePlaza7GiverNoRoomText:

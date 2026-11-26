@@ -80,11 +80,10 @@ AxiomStreet6Trainer0SeenText:
 	done
 
 AxiomStreet6Trainer0BeatenText:
-	text "Thank you for your"
-	line "participation."
-	para "Your participation"
-	line "has been logged as"
-	para "fatal."
+	text "I have a second"
+	line "form. It's"
+	para "labelled Mercy."
+	line "It's blank."
 	done
 
 AxiomStreet6Trainer0:
@@ -98,9 +97,9 @@ AxiomStreet6Trainer1SeenText:
 	done
 
 AxiomStreet6Trainer1BeatenText:
-	text "The Mayor will"
-	line "hear of this. He"
-	para "will not care."
+	text "ERROR."
+	line "HUMILIATION."
+	para "REBOOTING."
 	done
 
 AxiomStreet6Trainer1:
@@ -114,10 +113,10 @@ AxiomStreet6Trainer2SeenText:
 	done
 
 AxiomStreet6Trainer2BeatenText:
-	text "Error 404:"
-	line "opponent not"
-	para "found. Oh. It's"
-	line "me."
+	text "I was going to be"
+	line "a poet. I'll start"
+	para "by writing this on"
+	line "my chest."
 	done
 
 AxiomStreet6Trainer2:
@@ -134,9 +133,10 @@ AxiomStreet6Trainer3SeenText:
 	done
 
 AxiomStreet6Trainer3BeatenText:
-	text "I have zero HP and"
-	line "one hundred"
-	para "percent shame."
+	text "I see white. I was"
+	line "told to expect a"
+	para "tunnel. There is a"
+	line "queue."
 	done
 
 AxiomStreet6Trainer3:
@@ -150,10 +150,11 @@ AxiomStreet6Trainer4SeenText:
 	done
 
 AxiomStreet6Trainer4BeatenText:
-	text "I want it on"
-	line "record that I"
-	para "resisted. Weakly."
-	line "With my face."
+	text "Resistance was"
+	line "futile. But"
+	para "resistance was"
+	line "cheap. I had a"
+	para "coupon."
 	done
 
 AxiomStreet6Trainer4:
@@ -168,9 +169,11 @@ AxiomStreet6Trainer5SeenText:
 	done
 
 AxiomStreet6Trainer5BeatenText:
-	text "My warranty has"
-	line "expired. Thanks"
-	para "for that."
+	text "Thank you for your"
+	line "participation."
+	para "Your participation"
+	line "has been logged as"
+	para "fatal."
 	done
 
 AxiomStreet6Trainer5:
@@ -183,10 +186,10 @@ AxiomStreet6Trainer6SeenText:
 	done
 
 AxiomStreet6Trainer6BeatenText:
-	text "My shift ended."
-	line "Not just now."
-	para "Years ago. Why do"
-	line "I still work here?"
+	text "Why does losing"
+	line "feel like this?"
+	para "Like freedom? Is"
+	line "that a bug?"
 	done
 
 AxiomStreet6Trainer6:

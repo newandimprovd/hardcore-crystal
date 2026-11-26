@@ -63,19 +63,21 @@ GrovePlaza4Giver:
 	end
 
 GrovePlaza4GiverText:
-	text "I'm GLEANA. Glean"
-	line "plus Leana. I pick"
-	para "up what falls. I"
-	line "hold what's left."
-	para "It fell. It's"
-	line "yours now."
+	text "I'm HONEYBEAR."
+	line "Honey plus bear."
+	para "Don't ask where I"
+	line "put the other"
+	para "half. This is for"
+	line "you. Don't eat it"
+	para "all at once. I"
+	line "did."
 	done
 
 GrovePlaza4GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "The honey's off"
+	line "the table. The"
+	para "bear's not. Back"
+	line "away slowly."
 	done
 
 GrovePlaza4GiverNoRoomText:

@@ -54,20 +54,22 @@ AxiomPlaza6Giver:
 	end
 
 AxiomPlaza6GiverText:
-	text "I'm PROTOCOLA."
-	line "Protocol plus"
-	para "cola. It's bubbly"
-	line "and mandatory. Per"
-	para "Section 9: a gift"
-	line "is owed. Receipt"
-	para "attached."
+	text "I'm COMPLIANCEL."
+	line "Compliance plus"
+	para "Cancel. We"
+	line "complied. We were"
+	para "cancelled. I'm"
+	line "authorised to give"
+	para "you this once. Do"
+	line "not ask who"
+	para "authorised me."
 	done
 
 AxiomPlaza6GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "You've been"
+	line "authorised. That's"
+	para "all. Go away,"
+	line "authorised one."
 	done
 
 AxiomPlaza6GiverNoRoomText:

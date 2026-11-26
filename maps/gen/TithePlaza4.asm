@@ -77,18 +77,20 @@ TithePlaza4Giver:
 	end
 
 TithePlaza4GiverText:
-	text "I'm DONATA. Donate"
-	line "plus data. Now you"
-	para "are in my records."
-	line "You look"
-	para "underfunded."
+	text "I'm PARISHEEP."
+	line "Parish plus sheep."
+	para "I follow. I also"
+	line "lead, by accident."
+	para "Keep it. The flock"
+	line "has plenty. The"
+	para "flock is also"
+	line "lost."
 	done
 
 TithePlaza4GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "Walk on. The flock"
+	line "needs a gap to"
+	para "graze in."
 	done
 
 TithePlaza4GiverNoRoomText:

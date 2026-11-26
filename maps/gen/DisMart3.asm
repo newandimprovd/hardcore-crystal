@@ -18,11 +18,10 @@ DisMart3Npc0Script:
 	jumptextfaceplayer DisMart3Npc0Text
 
 DisMart3Npc0Text:
-	text "The shopkeeper is"
-	line "a tall man in a"
-	para "hood. He doesn't"
-	line "say anything. He"
-	para "just stares."
+	text "Don't read the"
+	line "receipt. It will"
+	para "tell you how long"
+	line "you've got."
 	done
 
 DisMart3_MapEvents:

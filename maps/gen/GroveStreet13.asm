@@ -30,11 +30,10 @@ GroveStreet13Trainer0SeenText:
 	done
 
 GroveStreet13Trainer0BeatenText:
-	text "The council will"
-	line "be disappointed."
-	para "The council is"
-	line "always"
-	para "disappointed."
+	text "You're a good"
+	line "fighter. You'd"
+	para "make a lousy"
+	line "farmer."
 	done
 
 GroveStreet13Trainer0:
@@ -49,10 +48,10 @@ GroveStreet13Trainer1SeenText:
 	done
 
 GroveStreet13Trainer1BeatenText:
-	text "I left the city"
-	line "for peace. I got"
-	para "it. It's a bit"
-	line "sudden."
+	text "So this is the"
+	line "circle of life."
+	para "It's a little"
+	line "pointy."
 	done
 
 GroveStreet13Trainer1:
@@ -66,10 +65,10 @@ GroveStreet13Trainer2SeenText:
 	done
 
 GroveStreet13Trainer2BeatenText:
-	text "You hit like a"
-	line "landlord. I"
-	para "thought we'd"
-	line "escaped those."
+	text "The moon told me."
+	line "Why didn't anyone"
+	para "listen to the"
+	line "moon."
 	done
 
 GroveStreet13Trainer2:
@@ -83,9 +82,10 @@ GroveStreet13Trainer3SeenText:
 	done
 
 GroveStreet13Trainer3BeatenText:
-	text "I'm not scared."
-	line "I'm very sleepy"
-	para "and very bruised."
+	text "Yes! Yes! More!"
+	line "Wait, no, I'm"
+	para "kidding. Stop."
+	line "Seriously."
 	done
 
 GroveStreet13Trainer3:
@@ -100,10 +100,11 @@ GroveStreet13Trainer4SeenText:
 	done
 
 GroveStreet13Trainer4BeatenText:
-	text "This one's for the"
-	line "harvest. This"
-	para "one's for the"
-	line "sickle."
+	text "I forgive you. In"
+	line "fact I forgive"
+	para "everyone. It's"
+	line "easier than"
+	para "getting up."
 	done
 
 GroveStreet13Trainer4:
@@ -118,10 +119,10 @@ GroveStreet13Trainer5SeenText:
 	done
 
 GroveStreet13Trainer5BeatenText:
-	text "Everyone's equal"
-	line "in the dirt. It's"
-	para "very sad how fast"
-	line "it happens."
+	text "Is that how it's"
+	line "done out there?"
+	para "Out there is"
+	line "terrible."
 	done
 
 GroveStreet13Trainer5:
@@ -134,9 +135,10 @@ GroveStreet13Trainer6SeenText:
 	done
 
 GroveStreet13Trainer6BeatenText:
-	text "I am one with the"
-	line "soil. It was a"
-	para "quick union."
+	text "You've broken the"
+	line "circle. Sort of."
+	para "We'll draw a"
+	line "bigger one."
 	done
 
 GroveStreet13Trainer6:

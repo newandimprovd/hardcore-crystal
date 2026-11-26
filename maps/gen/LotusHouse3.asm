@@ -12,26 +12,26 @@ LotusHouse3Npc0Script:
 	jumptextfaceplayer LotusHouse3Npc0Text
 
 LotusHouse3Npc0Text:
-	text "The couple next"
-	line "door signed up for"
-	para "the jealousy and"
-	line "guilt removal."
-	para "They're both very"
-	line "happy. I think"
-	para "they're both"
-	line "sleeping with the"
-	para "lifeguard."
+	text "I run a cocktail"
+	line "bar from my"
+	para "kitchen. Every"
+	line "drink tastes like"
+	para "a different"
+	line "childhood. None of"
+	para "them mine."
 	done
 
 LotusHouse3Npc1Script:
 	jumptextfaceplayer LotusHouse3Npc1Text
 
 LotusHouse3Npc1Text:
-	text "I'm a guest here."
-	line "I think. Or a"
-	para "patient. The"
-	line "wristband doesn't"
-	para "say."
+	text "My grandmother"
+	line "remembers"
+	para "everything. She's"
+	line "the only one. We"
+	para "keep her in the"
+	line "attic for"
+	para "tourists."
 	done
 
 LotusHouse3_MapEvents:

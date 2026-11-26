@@ -66,20 +66,23 @@ AxiomPlaza2Giver:
 	end
 
 AxiomPlaza2GiverText:
-	text "I'm PROTOCOLA."
-	line "Protocol plus"
-	para "cola. It's bubbly"
-	line "and mandatory. Per"
-	para "Section 9: a gift"
-	line "is owed. Receipt"
-	para "attached."
+	text "I'm QUEUEKUMBER."
+	line "Queue plus"
+	para "cucumber. Cool,"
+	line "green and forever"
+	para "waiting. Please"
+	line "accept this. You"
+	para "were next. You"
+	line "have been next for"
+	para "hours."
 	done
 
 AxiomPlaza2GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "The queue has"
+	line "moved. I've been"
+	para "left behind."
+	line "Please don't look"
+	para "at me."
 	done
 
 AxiomPlaza2GiverNoRoomText:

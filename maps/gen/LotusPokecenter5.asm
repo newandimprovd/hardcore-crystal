@@ -15,12 +15,13 @@ LotusPokecenter5Npc0Script:
 	jumptextfaceplayer LotusPokecenter5Npc0Text
 
 LotusPokecenter5Npc0Text:
-	text "The nurse doesn't"
-	line "remember my name."
-	para "I don't remember"
-	line "hers. It's the"
-	para "best relationship"
-	line "I've had."
+	text "The nurse erased"
+	line "my fever by"
+	para "erasing my memory"
+	line "of having it."
+	para "Works every time."
+	line "I forget why I'm"
+	para "here."
 	done
 
 LotusPokecenter5_MapEvents:

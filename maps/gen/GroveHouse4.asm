@@ -12,23 +12,23 @@ GroveHouse4Npc0Script:
 	jumptextfaceplayer GroveHouse4Npc0Text
 
 GroveHouse4Npc0Text:
-	text "This is a yurt."
-	line "It's also a"
-	para "lounge, a kitchen,"
-	line "a bedroom, and a"
-	para "bit of a fire"
-	line "hazard."
+	text "I teach children"
+	line "to forage. They"
+	para "bring me things"
+	line "that aren't food."
+	para "I eat them anyway."
 	done
 
 GroveHouse4Npc1Script:
 	jumptextfaceplayer GroveHouse4Npc1Text
 
 GroveHouse4Npc1Text:
-	text "I'm the commune's"
-	line "accountant."
-	para "There's nothing to"
-	line "count. It's very"
-	para "restful."
+	text "I've been sitting"
+	line "in this house"
+	para "since the last"
+	line "full moon. It"
+	para "doesn't have a"
+	line "floor."
 	done
 
 GroveHouse4SatoshiScript:

@@ -15,11 +15,12 @@ LotusPokecenter6Npc0Script:
 	jumptextfaceplayer LotusPokecenter6Npc0Text
 
 LotusPokecenter6Npc0Text:
-	text "The pillows are"
-	line "numbed. The sheets"
-	para "are numbed. The"
-	line "nurse is numbed."
-	para "It's very quiet."
+	text "Pain is outlawed."
+	line "They sell it back"
+	para "to you at the"
+	line "pharmacy. My bill"
+	para "is mostly my own"
+	line "old toothache."
 	done
 
 LotusPokecenter6_MapEvents:

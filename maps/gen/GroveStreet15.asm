@@ -29,10 +29,9 @@ GroveStreet15Trainer0SeenText:
 	done
 
 GroveStreet15Trainer0BeatenText:
-	text "My wife is a good"
-	line "woman. She'll be"
-	para "glad. She says I"
-	line "snore."
+	text "I'm not scared."
+	line "I'm very sleepy"
+	para "and very bruised."
 	done
 
 GroveStreet15Trainer0:
@@ -47,9 +46,11 @@ GroveStreet15Trainer1SeenText:
 	done
 
 GroveStreet15Trainer1BeatenText:
-	text "You win. Take a"
-	line "berry. Take all"
-	para "the berries."
+	text "I have wounded"
+	line "pride, a wounded"
+	para "team and a very"
+	line "exposed back. Be"
+	para "kind."
 	done
 
 GroveStreet15Trainer1:
@@ -65,9 +66,9 @@ GroveStreet15Trainer2SeenText:
 	done
 
 GroveStreet15Trainer2BeatenText:
-	text "That was a very"
-	line "unsustainable"
-	para "outcome."
+	text "My uncle hit me"
+	line "harder. He was a"
+	para "very communal man."
 	done
 
 GroveStreet15Trainer2:
@@ -82,10 +83,10 @@ GroveStreet15Trainer3SeenText:
 	done
 
 GroveStreet15Trainer3BeatenText:
-	text "Today I learned"
-	line "that violence is"
-	para "an effective"
-	line "teacher."
+	text "Next time bring a"
+	line "flute. We lose"
+	para "less when there's"
+	line "a flute."
 	done
 
 GroveStreet15Trainer3:
@@ -99,9 +100,9 @@ GroveStreet15Trainer4SeenText:
 	done
 
 GroveStreet15Trainer4BeatenText:
-	text "Take the bread."
-	line "It's better than I"
-	para "am."
+	text "I volunteered for"
+	line "this. I regret the"
+	para "volunteering."
 	done
 
 GroveStreet15Trainer4:
@@ -115,9 +116,9 @@ GroveStreet15Trainer5SeenText:
 	done
 
 GroveStreet15Trainer5BeatenText:
-	text "Well. That's one"
-	line "way to open a"
-	para "chakra."
+	text "The forest will"
+	line "take me back. It's"
+	para "in a good mood."
 	done
 
 GroveStreet15Trainer5:
@@ -131,8 +132,9 @@ GroveStreet15Trainer6SeenText:
 	done
 
 GroveStreet15Trainer6BeatenText:
-	text "I accept this"
-	line "defeat radically."
+	text "My feelings are"
+	line "hurt. And my ribs."
+	para "Mostly the ribs."
 	done
 
 GroveStreet15Trainer6:

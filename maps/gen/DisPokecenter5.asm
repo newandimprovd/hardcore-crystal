@@ -15,12 +15,11 @@ DisPokecenter5Npc0Script:
 	jumptextfaceplayer DisPokecenter5Npc0Text
 
 DisPokecenter5Npc0Text:
-	text "Free healing in"
-	line "the Ninth Circle."
-	para "The only free"
-	line "thing. The nurse"
-	para "smiles. It's the"
-	line "worst part."
+	text "Do not look at the"
+	line "thermometer. It"
+	para "records your"
+	line "guilt. It's up to"
+	para "ninety-nine."
 	done
 
 DisPokecenter5_MapEvents:

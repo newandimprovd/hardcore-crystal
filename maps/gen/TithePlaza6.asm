@@ -52,20 +52,21 @@ TithePlaza6Giver:
 	end
 
 TithePlaza6GiverText:
-	text "I'm ALMSTER. Alms"
-	line "plus monster. The"
-	para "alms were not"
-	line "voluntary. Take"
-	para "it. Nobody saw."
-	line "The camera is off."
-	para "Probably."
+	text "I'm INDULGENT."
+	line "Indulgence plus"
+	para "gent. Fully paid"
+	line "up, in every"
+	para "sense. I'm feeling"
+	line "generous. It will"
+	para "pass. Hold out"
+	line "your hands."
 	done
 
 TithePlaza6GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "A second gift"
+	line "would be a sin. My"
+	para "favorite kind. Not"
+	line "today."
 	done
 
 TithePlaza6GiverNoRoomText:

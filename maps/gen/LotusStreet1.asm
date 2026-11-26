@@ -44,9 +44,8 @@ LotusStreet1Trainer0SeenText:
 	done
 
 LotusStreet1Trainer0BeatenText:
-	text "A seagull is"
-	line "eating my shoe. I"
-	para "deserve this."
+	text "Ah. So this is the"
+	line "long nap."
 	done
 
 LotusStreet1Trainer0:
@@ -62,10 +61,11 @@ LotusStreet1Trainer1SeenText:
 	done
 
 LotusStreet1Trainer1BeatenText:
-	text "I'll be fine. A"
-	line "coconut will help."
-	para "A coconut to the"
-	line "head, perhaps."
+	text "My package covered"
+	line "one defeat. This"
+	para "was the second. Do"
+	line "I owe anyone an"
+	para "apology?"
 	done
 
 LotusStreet1Trainer1:
@@ -80,9 +80,10 @@ LotusStreet1Trainer2SeenText:
 	done
 
 LotusStreet1Trainer2BeatenText:
-	text "I forgot to duck."
-	line "And I forgot to"
-	para "forgive you."
+	text "I'd love to"
+	line "retaliate, but I'm"
+	para "contractually"
+	line "serene."
 	done
 
 LotusStreet1Trainer2:
@@ -97,9 +98,10 @@ LotusStreet1Trainer3SeenText:
 	done
 
 LotusStreet1Trainer3BeatenText:
-	text "You've ruined my"
-	line "chill. It was a"
-	para "delicate chill."
+	text "Put me on the"
+	line "sand. Facing the"
+	para "sun. I want a tan"
+	line "for the funeral."
 	done
 
 LotusStreet1Trainer3:
@@ -112,10 +114,10 @@ LotusStreet1Trainer4SeenText:
 	done
 
 LotusStreet1Trainer4BeatenText:
-	text "My vacation is"
-	line "over. I never got"
-	para "to ask for the"
-	line "cocktail umbrella."
+	text "I paid good money"
+	line "to forget how to"
+	para "lose. The refund"
+	line "desk is closed."
 	done
 
 LotusStreet1Trainer4:
@@ -129,9 +131,12 @@ LotusStreet1Trainer5SeenText:
 	done
 
 LotusStreet1Trainer5BeatenText:
-	text "That was"
-	line "refreshing. Then"
-	para "it wasn't."
+	text "We have a no-pain"
+	line "policy on this"
+	para "coast."
+	line "Technically, you"
+	para "are now"
+	line "trespassing."
 	done
 
 LotusStreet1Trainer5:
@@ -144,10 +149,9 @@ LotusStreet1Trainer6SeenText:
 	done
 
 LotusStreet1Trainer6BeatenText:
-	text "Hey, it's nice"
-	line "here. The sky. The"
-	para "sand. The sudden"
-	line "lack of pulse."
+	text "I forgot to duck."
+	line "And I forgot to"
+	para "forgive you."
 	done
 
 LotusStreet1Trainer6:

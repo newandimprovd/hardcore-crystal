@@ -210,33 +210,36 @@ PurgAbyssHermit0:
 	end
 
 PurgAbyssHermit0SeenText:
-	text "I have been"
-	line "meditating for"
-	para "four hundred"
-	line "years. Please"
-	para "insult me so I can"
-	line "get angry."
+	text "Shh. Don't shout."
+	line "I collect echoes."
+	para "You're about to"
+	line "give me a very"
+	para "good one."
 	done
 
 PurgAbyssHermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "Excellent! Your"
+	line "yelp echoed for"
+	para "eleven seconds. A"
+	line "personal best."
+	para "Keep it."
 	done
 
 PurgAbyssHermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "For you. A jar of"
+	line "your own echo."
+	para "Open it when"
+	line "you're lonely. It"
+	para "will say your"
+	line "name."
 	done
 
 PurgAbyssHermit0AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "I recorded your"
+	line "defeat. It hums in"
+	para "the third jar. I"
+	line "play it when I'm"
+	para "sad."
 	done
 
 PurgAbyssHermit0NoRoomText:
@@ -281,32 +284,37 @@ PurgAbyssHermit1:
 	end
 
 PurgAbyssHermit1SeenText:
-	text "I am a hermit, not"
-	line "a coward. Please"
-	para "hit me and then"
-	line "give me back my"
-	para "corner."
+	text "Order. Order! I"
+	line "sentence myself to"
+	para "meet you. The"
+	line "charge is"
+	para "trespass. The"
+	line "penalty, a fight."
 	done
 
 PurgAbyssHermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "The court finds in"
+	line "your favor. The"
+	para "court also finds"
+	line "I'm tired."
+	para "Adjourned."
 	done
 
 PurgAbyssHermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "Evidence, exhibit"
+	line "A. It has been"
+	para "admitted into your"
+	line "pocket. Don't ask"
+	para "me why."
 	done
 
 PurgAbyssHermit1AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I'm serving life"
+	line "in this cave. It's"
+	para "a clean sentence."
+	line "I just wish the"
+	para "neighbors were"
+	line "quieter."
 	done
 
 PurgAbyssHermit1NoRoomText:

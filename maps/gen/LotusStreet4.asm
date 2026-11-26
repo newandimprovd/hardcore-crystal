@@ -42,10 +42,12 @@ LotusStreet4Trainer0SeenText:
 	done
 
 LotusStreet4Trainer0BeatenText:
-	text "I felt something."
-	line "I did not like it."
-	para "Subscribe me to"
-	line "the other thing."
+	text "I think I'm"
+	line "bleeding. The"
+	para "staff will take"
+	line "care of it."
+	para "Smiling, as"
+	line "always."
 	done
 
 LotusStreet4Trainer0:
@@ -59,10 +61,10 @@ LotusStreet4Trainer1SeenText:
 	done
 
 LotusStreet4Trainer1BeatenText:
-	text "The pool is"
-	line "heated. I can feel"
-	para "it. It's heaven."
-	line "It's also a pool."
+	text "A good death, a"
+	line "good drink, a good"
+	para "light. Cheers,"
+	line "friend."
 	done
 
 LotusStreet4Trainer1:
@@ -79,9 +81,10 @@ LotusStreet4Trainer2SeenText:
 	done
 
 LotusStreet4Trainer2BeatenText:
-	text "The tide's coming"
-	line "in. Tell it I said"
-	para "no hard feelings."
+	text "I'll be fine. A"
+	line "coconut will help."
+	para "A coconut to the"
+	line "head, perhaps."
 	done
 
 LotusStreet4Trainer2:
@@ -95,9 +98,11 @@ LotusStreet4Trainer3SeenText:
 	done
 
 LotusStreet4Trainer3BeatenText:
-	text "Oh no. I'm fading."
-	line "Please move the"
-	para "umbrella."
+	text "Oh no. I can feel"
+	line "my feelings."
+	para "Somebody get the"
+	line "nurse. Wait, I'm"
+	para "already hurt."
 	done
 
 LotusStreet4Trainer3:
@@ -112,11 +117,10 @@ LotusStreet4Trainer4SeenText:
 	done
 
 LotusStreet4Trainer4BeatenText:
-	text "Oh no. I can feel"
-	line "my feelings."
-	para "Somebody get the"
-	line "nurse. Wait, I'm"
-	para "already hurt."
+	text "That's okay. I was"
+	line "getting bored. I"
+	para "was also getting"
+	line "hit."
 	done
 
 LotusStreet4Trainer4:
@@ -131,9 +135,10 @@ LotusStreet4Trainer5SeenText:
 	done
 
 LotusStreet4Trainer5BeatenText:
-	text "Pour out a drink."
-	line "No, not like that."
-	para "Aim for my mouth."
+	text "I came for the"
+	line "sun. I'm leaving"
+	para "with a concussion."
+	line "Five stars."
 	done
 
 LotusStreet4Trainer5:
@@ -148,9 +153,10 @@ LotusStreet4Trainer6SeenText:
 	done
 
 LotusStreet4Trainer6BeatenText:
-	text "Please cover me in"
-	line "sand. It's what I"
-	para "would have wanted."
+	text "That's all right."
+	line "It's a vacation."
+	para "I'm bruising on"
+	line "schedule."
 	done
 
 LotusStreet4Trainer6:

@@ -12,24 +12,22 @@ GroveHouse3Npc0Script:
 	jumptextfaceplayer GroveHouse3Npc0Text
 
 GroveHouse3Npc0Text:
-	text "I'm a critic. I"
-	line "came to"
-	para "disapprove. The"
-	line "weaving circle is"
-	para "very, very good,"
-	line "and now I'm"
-	para "confused."
+	text "I'm the commune's"
+	line "cook. I make a"
+	para "stew from whatever"
+	line "we lose each week."
 	done
 
 GroveHouse3Npc1Script:
 	jumptextfaceplayer GroveHouse3Npc1Text
 
 GroveHouse3Npc1Text:
-	text "There are no doors"
-	line "in my hut. The"
-	para "wind is my"
-	line "doorman. He isn't"
-	para "great."
+	text "I gave up my name"
+	line "to join. The"
+	para "commune gave me"
+	line "another. It's"
+	para "Brian. I preferred"
+	line "nothing."
 	done
 
 GroveHouse3_MapEvents:

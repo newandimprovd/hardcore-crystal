@@ -32,12 +32,11 @@ DisBoutique2Npc0Script:
 	jumptextfaceplayer DisBoutique2Npc0Text
 
 DisBoutique2Npc0Text:
-	text "My wife left me"
-	line "for the lake."
-	para "Literally. She's"
-	line "in the ice. I wave"
-	para "at her. Sometimes"
-	line "she waves back."
+	text "My daughter is a"
+	line "candle in a church"
+	para "I can't enter. I"
+	line "visit on Sundays"
+	para "and stand outside."
 	done
 
 DisBoutique2_MapEvents:

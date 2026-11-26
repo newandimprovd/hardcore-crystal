@@ -138,31 +138,36 @@ GroveMossChapelHermit0:
 	end
 
 GroveMossChapelHermit0SeenText:
-	text "Go away! Wait."
-	line "Come back. Fight"
-	para "me. I am so bored"
-	line "I have started to"
-	para "like myself."
+	text "I'm still the"
+	line "mayor. Nobody"
+	para "voted me out."
+	line "Nobody voted at"
+	para "all. Salute, or"
+	line "fight."
 	done
 
 GroveMossChapelHermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "A mayor can lose a"
+	line "fight. A mayor can"
+	para "never lose a cave."
+	line "I stay."
 	done
 
 GroveMossChapelHermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "A ceremonial gift."
+	line "The key to a city"
+	para "that no longer"
+	line "exists. It's a"
+	para "nice key."
 	done
 
 GroveMossChapelHermit0AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I opened a gate"
+	line "once. They threw"
+	para "rice. It was a"
+	line "very small gate."
+	para "It was a very good"
+	line "rice."
 	done
 
 GroveMossChapelHermit0NoRoomText:
@@ -207,38 +212,36 @@ GroveMossChapelHermit1:
 	end
 
 GroveMossChapelHermit1SeenText:
-	text "You found my"
-	line "corner. Nobody"
-	para "finds my corner. I"
-	line "am hurt, and also"
-	para "delighted."
+	text "The moss is"
+	line "listening. The"
+	para "moss is reporting."
+	line "The moss is a spy."
+	para "Fight me and I'll"
+	line "tell you the rest."
 	done
 
 GroveMossChapelHermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "I told you! The"
+	line "moss knew you'd"
+	para "win. It sent you."
+	line "You are the moss's"
+	para "weapon."
 	done
 
 GroveMossChapelHermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "Take this, and"
+	line "don't tell the"
+	para "moss. It's the"
+	line "only thing it"
+	para "hasn't found."
 	done
 
 GroveMossChapelHermit1AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "Don't sit on the"
+	line "north wall. The"
+	para "moss there is the"
+	line "chief. It's very"
+	para "sensitive."
 	done
 
 GroveMossChapelHermit1NoRoomText:

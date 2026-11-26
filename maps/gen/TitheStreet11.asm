@@ -51,11 +51,11 @@ TitheStreet11Trainer0SeenText:
 	done
 
 TitheStreet11Trainer0BeatenText:
-	text "Don't take my"
-	line "watch. It's the"
-	para "last thing my"
-	line "father and I"
-	para "fought over."
+	text "I confessed"
+	line "everything. The"
+	para "priest laughed. He"
+	line "said it wasn't"
+	para "enough."
 	done
 
 TitheStreet11Trainer0:
@@ -68,10 +68,10 @@ TitheStreet11Trainer1SeenText:
 	done
 
 TitheStreet11Trainer1BeatenText:
-	text "I'll wait here."
-	line "Everyone does. I'm"
-	para "very good at"
-	line "waiting."
+	text "Hold my hand. No."
+	line "The other one."
+	para "Never mind, that"
+	line "one's gone."
 	done
 
 TitheStreet11Trainer1:
@@ -85,9 +85,8 @@ TitheStreet11Trainer2SeenText:
 	done
 
 TitheStreet11Trainer2BeatenText:
-	text "Don't worry about"
-	line "me. The rats know"
-	para "my name."
+	text "I want a refund on"
+	line "my childhood."
 	done
 
 TitheStreet11Trainer2:
@@ -101,10 +100,10 @@ TitheStreet11Trainer3SeenText:
 	done
 
 TitheStreet11Trainer3BeatenText:
-	text "My team! My"
-	line "beautiful,"
-	para "overleveraged"
-	line "team!"
+	text "Well. That's it"
+	line "for my pension."
+	para "And the rest of"
+	line "me."
 	done
 
 TitheStreet11Trainer3:
@@ -118,10 +117,11 @@ TitheStreet11Trainer4SeenText:
 	done
 
 TitheStreet11Trainer4BeatenText:
-	text "I forgave you"
-	line "before you even"
-	para "won. It was in the"
-	line "contract."
+	text "I had a bad"
+	line "feeling this"
+	para "morning. It was"
+	line "breakfast. I still"
+	para "lost."
 	done
 
 TitheStreet11Trainer4:
@@ -135,9 +135,9 @@ TitheStreet11Trainer5SeenText:
 	done
 
 TitheStreet11Trainer5BeatenText:
-	text "Ow. Oh, that's"
-	line "where the liver"
-	para "is."
+	text "I lost? The union"
+	line "is going to hear"
+	para "about this. Ow."
 	done
 
 TitheStreet11Trainer5:
@@ -152,9 +152,11 @@ TitheStreet11Trainer6SeenText:
 	done
 
 TitheStreet11Trainer6BeatenText:
-	text "That's the last"
-	line "time I moonlight"
-	para "as a hazard."
+	text "The collection"
+	line "plate is passed to"
+	para "whoever is left"
+	line "standing. Hold"
+	para "this."
 	done
 
 TitheStreet11Trainer6:

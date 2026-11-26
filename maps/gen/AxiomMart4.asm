@@ -18,10 +18,12 @@ AxiomMart4Npc0Script:
 	jumptextfaceplayer AxiomMart4Npc0Text
 
 AxiomMart4Npc0Text:
-	text "The clerk is a"
-	line "very polite shelf."
-	para "Do not argue with"
-	line "the shelf."
+	text "Items are shelved"
+	line "by emotional cost."
+	para "The cheapest shelf"
+	line "is grief. The most"
+	para "expensive is a"
+	line "pencil."
 	done
 
 AxiomMart4_MapEvents:

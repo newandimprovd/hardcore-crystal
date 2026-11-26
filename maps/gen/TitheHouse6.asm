@@ -12,20 +12,21 @@ TitheHouse6Npc0Script:
 	jumptextfaceplayer TitheHouse6Npc0Text
 
 TitheHouse6Npc0Text:
-	text "I'm a slumlord."
-	line "It's very"
-	para "stressful."
-	line "Everyone hates me."
-	para "I own a yacht."
+	text "I've lived here"
+	line "eleven years."
+	para "Nobody knows. Not"
+	line "even the building."
 	done
 
 TitheHouse6Npc1Script:
 	jumptextfaceplayer TitheHouse6Npc1Text
 
 TitheHouse6Npc1Text:
-	text "The cathedral bell"
-	line "is a recording."
-	para "Don't tell anyone."
+	text "I used to sing in"
+	line "the choir. They"
+	para "asked me to stop."
+	line "Quietly. With a"
+	para "pillow."
 	done
 
 TitheHouse6YakuzaScript:

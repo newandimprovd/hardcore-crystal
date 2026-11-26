@@ -181,36 +181,34 @@ PurgDown3Hermit0:
 	end
 
 PurgDown3Hermit0SeenText:
-	text "I am a hermit, not"
-	line "a coward. Please"
-	para "hit me and then"
-	line "give me back my"
-	para "corner."
+	text "Don't talk to me"
+	line "in verse. Don't"
+	para "talk to me in"
+	line "anything. I'm here"
+	para "to hate. Come on."
 	done
 
 PurgDown3Hermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "Even losing rhymes"
+	line "with something. I"
+	para "despise that. Take"
+	line "your prize."
 	done
 
 PurgDown3Hermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "I wrote this on a"
+	line "napkin in a fever."
+	para "It's a gift. It's"
+	line "also my worst. I'm"
+	para "so sorry."
 	done
 
 PurgDown3Hermit0AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "Metaphors are for"
+	line "cowards. I prefer"
+	para "a slab of rock."
+	line "Please go away, my"
+	para "muse is returning."
 	done
 
 PurgDown3Hermit0NoRoomText:
@@ -255,34 +253,34 @@ PurgDown3Hermit1:
 	end
 
 PurgDown3Hermit1SeenText:
-	text "A visitor! I was"
-	line "beginning to talk"
-	para "to the rocks. They"
-	line "have strong"
-	para "opinions about"
-	line "moss."
+	text "Who are you? Who"
+	line "am I? Fight me and"
+	para "we'll see which of"
+	line "us remembers."
 	done
 
 PurgDown3Hermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "That felt"
+	line "familiar. I think"
+	para "I used to lose"
+	line "often. It's coming"
+	para "back. Awful."
 	done
 
 PurgDown3Hermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "I found this in my"
+	line "pocket. It isn't"
+	para "mine, I think."
+	line "Maybe it's yours."
+	para "Take it."
 	done
 
 PurgDown3Hermit1AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "I knew a man who"
+	line "looked like you."
+	para "Or a rock. Or a"
+	line "priest. Everyone"
+	para "is blurry."
 	done
 
 PurgDown3Hermit1NoRoomText:

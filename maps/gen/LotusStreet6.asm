@@ -79,10 +79,9 @@ LotusStreet6Trainer0SeenText:
 	done
 
 LotusStreet6Trainer0BeatenText:
-	text "That's okay. I was"
-	line "getting bored. I"
-	para "was also getting"
-	line "hit."
+	text "Don't put me in a"
+	line "box. Put me in a"
+	para "boat. Push it out."
 	done
 
 LotusStreet6Trainer0:
@@ -96,10 +95,9 @@ LotusStreet6Trainer1SeenText:
 	done
 
 LotusStreet6Trainer1BeatenText:
-	text "I never wanted to"
-	line "win. I just wanted"
-	para "to be near the"
-	line "water."
+	text "I want a spa day."
+	line "And a lawyer. And"
+	para "a spa lawyer."
 	done
 
 LotusStreet6Trainer1:
@@ -114,9 +112,10 @@ LotusStreet6Trainer2SeenText:
 	done
 
 LotusStreet6Trainer2BeatenText:
-	text "I forgive you. And"
-	line "you owe me a tab."
-	para "And a smoothie."
+	text "My wife is going"
+	line "to hear about"
+	para "this. Which wife?"
+	line "I'll ask later."
 	done
 
 LotusStreet6Trainer2:
@@ -132,10 +131,11 @@ LotusStreet6Trainer3SeenText:
 	done
 
 LotusStreet6Trainer3BeatenText:
-	text "I paid for peace"
-	line "and got this. I"
-	para "want a refund. Or"
-	line "a hug."
+	text "Oof. I just"
+	line "remembered my"
+	para "mother. She was"
+	line "pretty angry. Hit"
+	para "me again."
 	done
 
 LotusStreet6Trainer3:
@@ -151,10 +151,10 @@ LotusStreet6Trainer4SeenText:
 	done
 
 LotusStreet6Trainer4BeatenText:
-	text "That's all right."
-	line "It's a vacation."
-	para "I'm bruising on"
-	line "schedule."
+	text "I will remember"
+	line "this. For about"
+	para "eight minutes."
+	line "It'll be fine."
 	done
 
 LotusStreet6Trainer4:
@@ -169,9 +169,10 @@ LotusStreet6Trainer5SeenText:
 	done
 
 LotusStreet6Trainer5BeatenText:
-	text "I'd call the cops"
-	line "but I used to be"
-	para "one. I forgot."
+	text "My vacation is"
+	line "over. I never got"
+	para "to ask for the"
+	line "cocktail umbrella."
 	done
 
 LotusStreet6Trainer5:

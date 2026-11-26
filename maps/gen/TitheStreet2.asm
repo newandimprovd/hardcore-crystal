@@ -44,10 +44,8 @@ TitheStreet2Trainer0SeenText:
 	done
 
 TitheStreet2Trainer0BeatenText:
-	text "I blessed this"
-	line "street myself. You"
-	para "will not enjoy the"
-	line "aftertaste."
+	text "I should've taken"
+	line "the bribe."
 	done
 
 TitheStreet2Trainer0:
@@ -62,11 +60,9 @@ TitheStreet2Trainer1SeenText:
 	done
 
 TitheStreet2Trainer1BeatenText:
-	text "I confessed"
-	line "everything. The"
-	para "priest laughed. He"
-	line "said it wasn't"
-	para "enough."
+	text "My knees were the"
+	line "last thing I owned"
+	para "outright."
 	done
 
 TitheStreet2Trainer1:
@@ -81,9 +77,10 @@ TitheStreet2Trainer2SeenText:
 	done
 
 TitheStreet2Trainer2BeatenText:
-	text "Oh. It's quieter"
-	line "than I expected."
-	para "Hello."
+	text "I used to be"
+	line "somebody's"
+	para "favorite altar"
+	line "boy. Now look."
 	done
 
 TitheStreet2Trainer2:
@@ -97,10 +94,8 @@ TitheStreet2Trainer3SeenText:
 	done
 
 TitheStreet2Trainer3BeatenText:
-	text "Oh. The river. It"
-	line "runs backward. I"
-	para "see the wake."
-	line "Thank you."
+	text "That wasn't in the"
+	line "lease."
 	done
 
 TitheStreet2Trainer3:
@@ -114,10 +109,9 @@ TitheStreet2Trainer4SeenText:
 	done
 
 TitheStreet2Trainer4BeatenText:
-	text "You're the first"
-	line "honest person I've"
-	para "met here. It was"
-	line "terrifying."
+	text "Tell the parish I"
+	line "tried. They'll"
+	para "still dock my pay."
 	done
 
 TitheStreet2Trainer4:
@@ -131,9 +125,11 @@ TitheStreet2Trainer5SeenText:
 	done
 
 TitheStreet2Trainer5BeatenText:
-	text "I'm not dead. I'm"
-	line "just offline. I'll"
-	para "be back as a tax."
+	text "My landlord will"
+	line "hear of this. He"
+	para "hears of"
+	line "everything, then"
+	para "raises the rent."
 	done
 
 TitheStreet2Trainer5:

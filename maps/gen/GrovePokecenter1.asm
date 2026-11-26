@@ -15,11 +15,10 @@ GrovePokecenter1Npc0Script:
 	jumptextfaceplayer GrovePokecenter1Npc0Text
 
 GrovePokecenter1Npc0Text:
-	text "Don't use the left"
-	line "bed. Something"
-	para "happened in it."
-	line "Not to me. To the"
-	para "mattress."
+	text "I've been waiting"
+	line "three days. The"
+	para "line moves at the"
+	line "pace of consensus."
 	done
 
 GrovePokecenter1_MapEvents:

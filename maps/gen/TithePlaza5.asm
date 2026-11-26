@@ -54,21 +54,21 @@ TithePlaza5Giver:
 	end
 
 TithePlaza5GiverText:
-	text "I'm CHARITREE."
-	line "Charity plus tree."
-	para "I am the first and"
-	line "the second is my"
-	para "fault. A small"
-	line "offering, from a"
-	para "large"
-	line "organization."
+	text "I'm LEDGERLY."
+	line "Ledger plus early."
+	para "I balance books"
+	line "before they cook"
+	para "themselves. A gift"
+	line "for a decent"
+	para "debtor. You'll pay"
+	line "later. Everyone"
+	para "does."
 	done
 
 TithePlaza5GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "I wrote you down"
+	line "in the ledger. In"
+	para "pencil. For now."
 	done
 
 TithePlaza5GiverNoRoomText:

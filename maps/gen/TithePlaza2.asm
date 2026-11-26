@@ -64,20 +64,20 @@ TithePlaza2Giver:
 	end
 
 TithePlaza2GiverText:
-	text "I'm ALMSTER. Alms"
-	line "plus monster. The"
-	para "alms were not"
-	line "voluntary. Take"
-	para "it. Nobody saw."
-	line "The camera is off."
-	para "Probably."
+	text "I'm TITHEMIS."
+	line "Tithe plus Themis."
+	para "Justice with an"
+	line "invoice. A gift."
+	para "It's tax"
+	line "deductible. By me,"
+	para "for me."
 	done
 
 TithePlaza2GiverAfterText:
-	text "Go on. Be a good"
-	line "person. Or an"
-	para "average one. I'm"
-	line "not picky."
+	text "Come back when you"
+	line "owe more. I'll"
+	para "have a bigger"
+	line "plate."
 	done
 
 TithePlaza2GiverNoRoomText:

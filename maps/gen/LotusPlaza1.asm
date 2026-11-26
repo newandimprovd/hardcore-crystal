@@ -66,20 +66,22 @@ LotusPlaza1Giver:
 	end
 
 LotusPlaza1GiverText:
-	text "I'm SANDWICHER."
-	line "Sand plus"
-	para "sandwich. The sand"
-	line "is not optional."
-	para "Have some. I made"
-	line "too many. I always"
-	para "do."
+	text "I'm DAIQUIRIP."
+	line "Daiquiri plus rip."
+	para "A sweet sip that"
+	line "tears a hole. A"
+	para "little something"
+	line "to forget with."
+	para "Don't mention"
+	line "where you found"
+	para "it."
 	done
 
 LotusPlaza1GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "Sorry, who gave"
+	line "you that? Whoever"
+	para "it was, they were"
+	line "very nice."
 	done
 
 LotusPlaza1GiverNoRoomText:

@@ -42,9 +42,9 @@ TitheStreet15Trainer0SeenText:
 	done
 
 TitheStreet15Trainer0BeatenText:
-	text "Please, no sermon."
-	line "I've had a"
-	para "lifetime of those."
+	text "Is it Sunday yet?"
+	line "I'd like to be"
+	para "forgiven early."
 	done
 
 TitheStreet15Trainer0:
@@ -58,9 +58,10 @@ TitheStreet15Trainer1SeenText:
 	done
 
 TitheStreet15Trainer1BeatenText:
-	text "Is it over? Can I"
-	line "go home to my"
-	para "crying?"
+	text "Ow. Ow. Don't"
+	line "worry, it's"
+	para "covered. By"
+	line "nobody."
 	done
 
 TitheStreet15Trainer1:
@@ -75,10 +76,9 @@ TitheStreet15Trainer2SeenText:
 	done
 
 TitheStreet15Trainer2BeatenText:
-	text "That's the third"
-	line "time this week."
-	para "I'm quitting."
-	line "After lunch."
+	text "I meant to quit"
+	line "this morning. Now"
+	para "I've quit forever."
 	done
 
 TitheStreet15Trainer2:
@@ -94,10 +94,9 @@ TitheStreet15Trainer3SeenText:
 	done
 
 TitheStreet15Trainer3BeatenText:
-	text "The city gave me"
-	line "nothing. I gave it"
-	para "everything. Fair"
-	line "trade."
+	text "So this is the"
+	line "part where the"
+	para "choir goes quiet."
 	done
 
 TitheStreet15Trainer3:
@@ -112,9 +111,10 @@ TitheStreet15Trainer4SeenText:
 	done
 
 TitheStreet15Trainer4BeatenText:
-	text "Take it all. The"
-	line "city will take it"
-	para "back."
+	text "I was going to"
+	line "retire this year."
+	para "Was. Grammar is"
+	line "cruel."
 	done
 
 TitheStreet15Trainer4:
@@ -126,11 +126,11 @@ TitheStreet15Trainer5SeenText:
 	done
 
 TitheStreet15Trainer5BeatenText:
-	text "It's beautiful."
-	line "There's a priest."
-	para "There's a"
-	line "landlord. They are"
-	para "both so small."
+	text "Take the next"
+	line "road. They pay"
+	para "worse. They fight"
+	line "worse. They're my"
+	para "cousins."
 	done
 
 TitheStreet15Trainer5:

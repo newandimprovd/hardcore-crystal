@@ -174,37 +174,38 @@ PurgUp1Hermit0:
 	end
 
 PurgUp1Hermit0SeenText:
-	text "A visitor! I was"
-	line "beginning to talk"
-	para "to the rocks. They"
-	line "have strong"
-	para "opinions about"
-	line "moss."
+	text "Child, I'll bet"
+	line "you my rosary"
+	para "against your"
+	line "boots. Heads I"
+	para "fight. Tails also"
+	line "I fight."
 	done
 
 PurgUp1Hermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "Lord, I should"
+	line "never have played"
+	para "that hand. Take"
+	line "your winnings. And"
+	para "my blessing, which"
+	line "is worthless."
 	done
 
 PurgUp1Hermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "Here. It's a lucky"
+	line "charm. It has"
+	para "never brought"
+	line "luck. Perfect for"
+	para "a gambler. Take"
+	line "it."
 	done
 
 PurgUp1Hermit0AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "I confessed once"
+	line "to a bishop. He"
+	para "took my chips."
+	line "That's why I live"
+	para "in a hole."
 	done
 
 PurgUp1Hermit0NoRoomText:
@@ -249,34 +250,33 @@ PurgUp1Hermit1:
 	end
 
 PurgUp1Hermit1SeenText:
-	text "Go away! Wait."
-	line "Come back. Fight"
-	para "me. I am so bored"
-	line "I have started to"
-	para "like myself."
+	text "Low pressure, with"
+	line "a front of fists."
+	para "Expect pain by"
+	line "evening. Fight me."
 	done
 
 PurgUp1Hermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "Clearing skies."
+	line "Light bruising to"
+	para "the south. Thank"
+	line "you for your"
+	para "cooperation."
 	done
 
 PurgUp1Hermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "A warm front is"
+	line "moving in. It's a"
+	para "gift, sort of."
+	line "Carry it where the"
+	para "weather is bad."
 	done
 
 PurgUp1Hermit1AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "Scattered showers."
+	line "A chance of"
+	para "regret. Wear"
+	line "something dark."
 	done
 
 PurgUp1Hermit1NoRoomText:

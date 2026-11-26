@@ -44,9 +44,10 @@ TitheStreet5Trainer0SeenText:
 	done
 
 TitheStreet5Trainer0BeatenText:
-	text "I lost? The union"
-	line "is going to hear"
-	para "about this. Ow."
+	text "Mercy, then. Mercy"
+	line "is on the menu."
+	para "It's the cheapest"
+	line "dish."
 	done
 
 TitheStreet5Trainer0:
@@ -61,10 +62,10 @@ TitheStreet5Trainer1SeenText:
 	done
 
 TitheStreet5Trainer1BeatenText:
-	text "My mom told me"
-	line "about people like"
-	para "you. She was too"
-	line "optimistic."
+	text "I should have"
+	line "joined the choir."
+	para "They never get"
+	line "beaten."
 	done
 
 TitheStreet5Trainer1:
@@ -79,11 +80,9 @@ TitheStreet5Trainer2SeenText:
 	done
 
 TitheStreet5Trainer2BeatenText:
-	text "I smelled like a"
-	line "victory and now I"
-	para "smell like the"
-	line "gutter. It was a"
-	para "short trip."
+	text "No more bells."
+	line "Please. No more"
+	para "bells."
 	done
 
 TitheStreet5Trainer2:
@@ -98,9 +97,11 @@ TitheStreet5Trainer3SeenText:
 	done
 
 TitheStreet5Trainer3BeatenText:
-	text "So this is the"
-	line "part where the"
-	para "choir goes quiet."
+	text "You've done me a"
+	line "favour. I had a"
+	para "meeting at three."
+	line "I hate the"
+	para "meeting."
 	done
 
 TitheStreet5Trainer3:
@@ -114,10 +115,10 @@ TitheStreet5Trainer4SeenText:
 	done
 
 TitheStreet5Trainer4BeatenText:
-	text "I should have"
-	line "joined the choir."
-	para "They never get"
-	line "beaten."
+	text "The rent was never"
+	line "going to be paid."
+	para "Thank you for the"
+	line "honesty."
 	done
 
 TitheStreet5Trainer4:
@@ -131,9 +132,9 @@ TitheStreet5Trainer5SeenText:
 	done
 
 TitheStreet5Trainer5BeatenText:
-	text "I'll haunt you."
-	line "I've already got"
-	para "the lease."
+	text "Please don't hurt"
+	line "my little monster."
+	para "He has a recital."
 	done
 
 TitheStreet5Trainer5:

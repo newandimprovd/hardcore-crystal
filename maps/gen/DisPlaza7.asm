@@ -64,22 +64,23 @@ DisPlaza7Giver:
 	end
 
 DisPlaza7GiverText:
-	text "I'm HELLEBORE."
-	line "Hell plus"
-	para "hellebore."
-	line "Beautiful,"
-	para "poisonous, and"
-	line "very dull. A gift"
-	para "from below. It's"
-	line "the nicest thing"
-	para "down here."
+	text "I'm JUDECCANDLE."
+	line "Judecca plus"
+	para "candle. The"
+	line "coldest circle"
+	para "holds the smallest"
+	line "flame. A last"
+	para "gift. Carry it to"
+	line "the bottom. Don't"
+	para "let the dark see"
+	line "it."
 	done
 
 DisPlaza7GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "The candle will go"
+	line "out. The dark will"
+	para "notice. That's"
+	line "what dark does."
 	done
 
 DisPlaza7GiverNoRoomText:

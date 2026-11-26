@@ -78,11 +78,11 @@ DisStreet5Trainer0SeenText:
 	done
 
 DisStreet5Trainer0BeatenText:
-	text "Down is up. The"
-	line "lake is a river. I"
-	para "see FINNEGAN. He's"
-	line "waving. He's also"
-	para "a typo."
+	text "That was a cruel,"
+	line "honest,"
+	para "unremarkable"
+	line "beating. I commend"
+	para "you."
 	done
 
 DisStreet5Trainer0:
@@ -98,10 +98,9 @@ DisStreet5Trainer1SeenText:
 	done
 
 DisStreet5Trainer1BeatenText:
-	text "Cough. It's the"
-	line "sulphur. It's"
-	para "always the"
-	line "sulphur."
+	text "The pit calls. I"
+	line "can't ignore it."
+	para "It has my number."
 	done
 
 DisStreet5Trainer1:
@@ -116,9 +115,10 @@ DisStreet5Trainer2SeenText:
 	done
 
 DisStreet5Trainer2BeatenText:
-	text "The flames aren't"
-	line "so bad when you're"
-	para "lying down."
+	text "Guilt is an ice."
+	line "It melts."
+	para "Eventually."
+	line "Hopefully. Please."
 	done
 
 DisStreet5Trainer2:
@@ -133,10 +133,11 @@ DisStreet5Trainer3SeenText:
 	done
 
 DisStreet5Trainer3BeatenText:
-	text "I'm very much"
-	line "already dead. This"
-	para "is just an"
-	line "upgrade."
+	text "That was my first"
+	line "fight in eight"
+	para "hundred years. It"
+	line "was disappointing"
+	para "for both of us."
 	done
 
 DisStreet5Trainer3:
@@ -151,9 +152,10 @@ DisStreet5Trainer4SeenText:
 	done
 
 DisStreet5Trainer4BeatenText:
-	text "Ow. I thought it"
-	line "was impossible to"
-	para "hurt twice."
+	text "This is the third"
+	line "circle I've lost"
+	para "in. I'm running"
+	line "out of circles."
 	done
 
 DisStreet5Trainer4:
@@ -167,10 +169,10 @@ DisStreet5Trainer5SeenText:
 	done
 
 DisStreet5Trainer5BeatenText:
-	text "My supervisor will"
-	line "think I gave up. I"
-	para "did. It was a"
-	line "pleasure."
+	text "I'll see you in"
+	line "the bottom."
+	para "Everyone ends up"
+	line "there."
 	done
 
 DisStreet5Trainer5:

@@ -54,22 +54,21 @@ GrovePlaza6Giver:
 	end
 
 GrovePlaza6GiverText:
-	text "I'm SWAPPLE. Swap"
-	line "plus apple. I"
-	para "swapped the first,"
-	line "I forgot the"
-	para "second. A swap"
-	line "would be fair."
-	para "This is only a"
-	line "gift. Which is"
-	para "worse."
+	text "I'm SHAREANDO."
+	line "Share plus"
+	para "bandolier. I carry"
+	line "gifts across my"
+	para "chest like"
+	line "ammunition. Fire"
+	para "away. I mean, take"
+	line "it. Gently."
 	done
 
 GrovePlaza6GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "Do you hear that?"
+	line "That's the sound"
+	para "of generosity"
+	line "ending."
 	done
 
 GrovePlaza6GiverNoRoomText:

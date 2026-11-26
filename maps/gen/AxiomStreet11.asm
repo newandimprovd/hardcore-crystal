@@ -118,9 +118,10 @@ AxiomStreet11Trainer0SeenText:
 	done
 
 AxiomStreet11Trainer0BeatenText:
-	text "Critical error."
-	line "Critical error."
-	para "Critical joy."
+	text "I am scheduled for"
+	line "deletion."
+	para "Congratulations on"
+	line "being early."
 	done
 
 AxiomStreet11Trainer0:
@@ -134,10 +135,10 @@ AxiomStreet11Trainer1SeenText:
 	done
 
 AxiomStreet11Trainer1BeatenText:
-	text "Even a unit knows"
-	line "the end when it"
-	para "sees it. Hello,"
-	line "end."
+	text "I request a patch."
+	line "I request a patch."
+	para "I request a"
+	line "funeral."
 	done
 
 AxiomStreet11Trainer1:
@@ -152,11 +153,10 @@ AxiomStreet11Trainer2SeenText:
 	done
 
 AxiomStreet11Trainer2BeatenText:
-	text "Task failed"
-	line "successfully."
-	para "That's the joke."
-	line "I'm told it's"
-	para "good."
+	text "That was"
+	line "efficient. I hope"
+	para "you'll recommend"
+	line "us."
 	done
 
 AxiomStreet11Trainer2:
@@ -170,10 +170,10 @@ AxiomStreet11Trainer3SeenText:
 	done
 
 AxiomStreet11Trainer3BeatenText:
-	text "I should have"
-	line "taken the day off."
-	para "It was in my"
-	line "contract."
+	text "I was programmed"
+	line "to say something"
+	para "here. It has been"
+	line "deleted."
 	done
 
 AxiomStreet11Trainer3:
@@ -187,9 +187,10 @@ AxiomStreet11Trainer4SeenText:
 	done
 
 AxiomStreet11Trainer4BeatenText:
-	text "Defeat"
-	line "acknowledged."
-	para "Pettiness remains."
+	text "Citizen, you are"
+	line "very efficient. It"
+	para "is not a"
+	line "compliment."
 	done
 
 AxiomStreet11Trainer4:
@@ -204,10 +205,10 @@ AxiomStreet11Trainer5SeenText:
 	done
 
 AxiomStreet11Trainer5BeatenText:
-	text "I'm leaking. It's"
-	line "coolant. It looks"
-	para "like tears. It"
-	line "isn't."
+	text "I'm forgiven. The"
+	line "system says so."
+	para "The system is"
+	line "wrong."
 	done
 
 AxiomStreet11Trainer5:
@@ -222,11 +223,11 @@ AxiomStreet11Trainer6SeenText:
 	done
 
 AxiomStreet11Trainer6BeatenText:
-	text "This unit regrets"
-	line "nothing. This unit"
-	para "regrets"
-	line "everything. This"
-	para "unit needs a nap."
+	text "Ten percent of my"
+	line "processing power"
+	para "was devoted to"
+	line "hoping. It's off"
+	para "now."
 	done
 
 AxiomStreet11Trainer6:

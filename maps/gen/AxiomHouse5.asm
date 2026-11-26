@@ -12,24 +12,23 @@ AxiomHouse5Npc0Script:
 	jumptextfaceplayer AxiomHouse5Npc0Text
 
 AxiomHouse5Npc0Text:
-	text "My father sold me"
-	line "to the Farm. I'm"
-	para "very proud of him."
-	line "I'm very mad at"
-	para "him. I'm a unit."
+	text "My wife is a"
+	line "toaster. We met at"
+	para "work. We don't"
+	line "talk about the"
+	para "incident with the"
+	line "bread."
 	done
 
 AxiomHouse5Npc1Script:
 	jumptextfaceplayer AxiomHouse5Npc1Text
 
 AxiomHouse5Npc1Text:
-	text "There are rumors"
-	line "of a place where"
-	para "people marry for"
-	line "no reason. I can't"
-	para "believe it. I"
-	line "can't stop"
-	para "thinking about it."
+	text "My father sold me"
+	line "to the Farm. I'm"
+	para "very proud of him."
+	line "I'm very mad at"
+	para "him. I'm a unit."
 	done
 
 AxiomHouse5_MapEvents:

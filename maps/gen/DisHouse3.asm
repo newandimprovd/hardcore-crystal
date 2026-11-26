@@ -12,22 +12,22 @@ DisHouse3Npc0Script:
 	jumptextfaceplayer DisHouse3Npc0Text
 
 DisHouse3Npc0Text:
-	text "I run a bar. The"
-	line "only drink is ice"
-	para "water. Business is"
-	line "surprisingly"
-	para "strong."
+	text "I keep demons as"
+	line "pets. The little"
+	para "ones. They don't"
+	line "bite. They chew"
+	para "your sleep."
 	done
 
 DisHouse3Npc1Script:
 	jumptextfaceplayer DisHouse3Npc1Text
 
 DisHouse3Npc1Text:
-	text "I own a house with"
-	line "four rooms and no"
-	para "exits. It's a"
-	line "perfect"
-	para "investment."
+	text "I run a small"
+	line "clinic for the"
+	para "unrepentant. We"
+	line "charge by the inch"
+	para "of hubris."
 	done
 
 DisHouse3_MapEvents:

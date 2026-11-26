@@ -18,10 +18,10 @@ TitheMart3Npc0Script:
 	jumptextfaceplayer TitheMart3Npc0Text
 
 TitheMart3Npc0Text:
-	text "I'd tell you the"
-	line "sale ends soon,"
-	para "but I'm always"
-	line "lying."
+	text "No credit. No"
+	line "debit. We accept"
+	para "guilt, in small"
+	line "bills."
 	done
 
 TitheMart3_MapEvents:

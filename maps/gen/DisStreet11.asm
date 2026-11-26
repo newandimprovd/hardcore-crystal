@@ -29,10 +29,9 @@ DisStreet11Trainer0SeenText:
 	done
 
 DisStreet11Trainer0BeatenText:
-	text "I once got a stern"
-	line "talking-to by the"
-	para "Devil. It was"
-	line "gentler."
+	text "Oh, good. A"
+	line "promotion. To the"
+	para "next circle."
 	done
 
 DisStreet11Trainer0:
@@ -46,9 +45,10 @@ DisStreet11Trainer1SeenText:
 	done
 
 DisStreet11Trainer1BeatenText:
-	text "My chains have"
-	line "fallen off. How"
-	para "embarrassing."
+	text "You've defeated"
+	line "me. This will be"
+	para "reported. By me."
+	line "Right now."
 	done
 
 DisStreet11Trainer1:
@@ -64,11 +64,8 @@ DisStreet11Trainer2SeenText:
 	done
 
 DisStreet11Trainer2BeatenText:
-	text "My boss will hear"
-	line "about this. My"
-	para "boss hears about"
-	line "everything. It's a"
-	para "gift."
+	text "That was awful. Do"
+	line "it again."
 	done
 
 DisStreet11Trainer2:
@@ -83,10 +80,9 @@ DisStreet11Trainer3SeenText:
 	done
 
 DisStreet11Trainer3BeatenText:
-	text "So this is what"
-	line "the afterlife of"
-	para "the afterlife"
-	line "feels like."
+	text "I'm so bored."
+	line "Thank you for the"
+	para "entertainment."
 	done
 
 DisStreet11Trainer3:
@@ -99,10 +95,11 @@ DisStreet11Trainer4SeenText:
 	done
 
 DisStreet11Trainer4BeatenText:
-	text "Another soul lost."
-	line "Another form"
-	para "filed. Another day"
-	line "in the office."
+	text "I used to be a"
+	line "notary. I"
+	para "notarised my own"
+	line "fall. Please sign"
+	para "here. Ow."
 	done
 
 DisStreet11Trainer4:
@@ -117,10 +114,9 @@ DisStreet11Trainer5SeenText:
 	done
 
 DisStreet11Trainer5BeatenText:
-	text "You beat me. The"
-	line "next one will be"
-	para "much harder. He"
-	line "has teeth."
+	text "Mark it down. Case"
+	line "4,119,022."
+	para "Resolution. Ouch."
 	done
 
 DisStreet11Trainer5:

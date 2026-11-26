@@ -12,10 +12,10 @@ TitheHouse5Npc0Script:
 	jumptextfaceplayer TitheHouse5Npc0Text
 
 TitheHouse5Npc0Text:
-	text "I've lived here"
-	line "eleven years."
-	para "Nobody knows. Not"
-	line "even the building."
+	text "The roof leaks"
+	line "holy water. Nobody"
+	para "can fix it. It's"
+	line "under a blessing."
 	done
 
 TitheHouse5Npc1Script:

@@ -33,11 +33,11 @@ GroveBoutique6Npc0Script:
 	jumptextfaceplayer GroveBoutique6Npc0Text
 
 GroveBoutique6Npc0Text:
-	text "I'm the commune's"
-	line "accountant."
-	para "There's nothing to"
-	line "count. It's very"
-	para "restful."
+	text "We all sleep in"
+	line "the big tent. Last"
+	para "night the tent was"
+	line "very full. Also"
+	para "somebody sang."
 	done
 
 GroveBoutique6_MapEvents:

@@ -44,10 +44,10 @@ GroveStreet2Trainer0SeenText:
 	done
 
 GroveStreet2Trainer0BeatenText:
-	text "That wasn't a fair"
-	line "fight. It was an"
-	para "honest one, which"
-	line "is worse."
+	text "The forest heard"
+	line "that. The forest"
+	para "is judging you,"
+	line "too."
 	done
 
 GroveStreet2Trainer0:
@@ -60,10 +60,10 @@ GroveStreet2Trainer1SeenText:
 	done
 
 GroveStreet2Trainer1BeatenText:
-	text "Bury me in the"
-	line "north field. The"
-	para "cows can have the"
-	line "rest."
+	text "I wanted to be a"
+	line "poet. I'm a"
+	para "fighter. The nouns"
+	line "got mixed up."
 	done
 
 GroveStreet2Trainer1:
@@ -78,8 +78,10 @@ GroveStreet2Trainer2SeenText:
 	done
 
 GroveStreet2Trainer2BeatenText:
-	text "Aaah! My aura! My"
-	line "other aura!"
+	text "That wasn't a fair"
+	line "fight. It was an"
+	para "honest one, which"
+	line "is worse."
 	done
 
 GroveStreet2Trainer2:
@@ -94,9 +96,9 @@ GroveStreet2Trainer3SeenText:
 	done
 
 GroveStreet2Trainer3BeatenText:
-	text "That's it. I'm"
-	line "moving to the"
-	para "beach commune."
+	text "I am one with the"
+	line "soil. It was a"
+	para "quick union."
 	done
 
 GroveStreet2Trainer3:
@@ -109,11 +111,9 @@ GroveStreet2Trainer4SeenText:
 	done
 
 GroveStreet2Trainer4BeatenText:
-	text "I forgive you. In"
-	line "fact I forgive"
-	para "everyone. It's"
-	line "easier than"
-	para "getting up."
+	text "I'll come back as"
+	line "a tomato. A very"
+	para "sorry tomato."
 	done
 
 GroveStreet2Trainer4:
@@ -128,10 +128,9 @@ GroveStreet2Trainer5SeenText:
 	done
 
 GroveStreet2Trainer5BeatenText:
-	text "The moon told me."
-	line "Why didn't anyone"
-	para "listen to the"
-	line "moon."
+	text "You win. The goats"
+	line "will be so"
+	para "ashamed."
 	done
 
 GroveStreet2Trainer5:

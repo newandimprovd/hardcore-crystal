@@ -18,11 +18,12 @@ TitheMart2Npc0Script:
 	jumptextfaceplayer TitheMart2Npc0Text
 
 TitheMart2Npc0Text:
-	text "The cashier is"
-	line "also a deacon. He"
-	para "charges a"
-	line "convenience fee on"
-	para "forgiveness."
+	text "I used to sell"
+	line "candles. Then the"
+	para "diocese opened a"
+	line "candle shop and a"
+	para "candle protection"
+	line "scheme."
 	done
 
 TitheMart2_MapEvents:

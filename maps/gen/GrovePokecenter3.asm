@@ -15,12 +15,13 @@ GrovePokecenter3Npc0Script:
 	jumptextfaceplayer GrovePokecenter3Npc0Text
 
 GrovePokecenter3Npc0Text:
-	text "The healing lodge"
-	line "is warm and"
-	para "communal. Don't"
-	line "ask which blanket"
-	para "is whose. That's"
-	line "the point."
+	text "The nurse says my"
+	line "headache is an"
+	para "unresolved"
+	line "emotion. I say"
+	para "it's a brick. We"
+	line "compromise on a"
+	para "poultice."
 	done
 
 GrovePokecenter3_MapEvents:

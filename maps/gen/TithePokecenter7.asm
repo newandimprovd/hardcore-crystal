@@ -15,10 +15,10 @@ TithePokecenter7Npc0Script:
 	jumptextfaceplayer TithePokecenter7Npc0Text
 
 TithePokecenter7Npc0Text:
-	text "Heal up. The"
-	line "street outside has"
-	para "a budget for"
-	line "ambulances. Zero."
+	text "The nurse works"
+	line "double shifts."
+	para "Triple, if you"
+	line "count the sermons."
 	done
 
 TithePokecenter7_MapEvents:

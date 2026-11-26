@@ -63,18 +63,25 @@ GrovePlaza7Giver:
 	end
 
 GrovePlaza7GiverText:
-	text "I'm FORAGEL."
-	line "Forage plus angel."
-	para "Mostly forage. Eat"
-	line "it before the goat"
-	para "does."
+	text "I'm FOREMOTHER."
+	line "Fore plus mother."
+	para "First of the"
+	line "commune and last"
+	para "to leave. A"
+	line "parting gift. The"
+	para "best of the"
+	line "hearth. Take it"
+	para "and be quiet about"
+	line "it."
 	done
 
 GrovePlaza7GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "I'll remember you."
+	line "The commune"
+	para "remembers"
+	line "everyone."
+	para "Eventually it"
+	line "forgets."
 	done
 
 GrovePlaza7GiverNoRoomText:

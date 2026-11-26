@@ -15,12 +15,12 @@ AxiomPokecenter5Npc0Script:
 	jumptextfaceplayer AxiomPokecenter5Npc0Text
 
 AxiomPokecenter5Npc0Text:
-	text "The nurse is a"
-	line "model 7. She heals"
-	para "in a cold,"
-	line "efficient way. I"
-	para "almost miss the"
-	line "slow ones."
+	text "They scan you for"
+	line "flaws on entry."
+	para "Then they list the"
+	line "flaws on a"
+	para "receipt. I keep"
+	line "mine in my wallet."
 	done
 
 AxiomPokecenter5_MapEvents:

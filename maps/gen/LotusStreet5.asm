@@ -29,9 +29,9 @@ LotusStreet5Trainer0SeenText:
 	done
 
 LotusStreet5Trainer0BeatenText:
-	text "My drink is"
-	line "spilled. That's"
-	para "the real tragedy."
+	text "No hard feelings."
+	line "No soft feelings."
+	para "No feelings. Ow."
 	done
 
 LotusStreet5Trainer0:
@@ -46,9 +46,9 @@ LotusStreet5Trainer1SeenText:
 	done
 
 LotusStreet5Trainer1BeatenText:
-	text "The waves are"
-	line "lovely. They're"
-	para "counting me down."
+	text "Please cover me in"
+	line "sand. It's what I"
+	para "would have wanted."
 	done
 
 LotusStreet5Trainer1:
@@ -61,10 +61,11 @@ LotusStreet5Trainer2SeenText:
 	done
 
 LotusStreet5Trainer2BeatenText:
-	text "A good death, a"
-	line "good drink, a good"
-	para "light. Cheers,"
-	line "friend."
+	text "I always wanted to"
+	line "lose beautifully."
+	para "This is not"
+	line "beautiful. But"
+	para "it's very fast."
 	done
 
 LotusStreet5Trainer2:
@@ -78,10 +79,9 @@ LotusStreet5Trainer3SeenText:
 	done
 
 LotusStreet5Trainer3BeatenText:
-	text "I came for the"
-	line "sun. I'm leaving"
-	para "with a concussion."
-	line "Five stars."
+	text "You've ruined my"
+	line "chill. It was a"
+	para "delicate chill."
 	done
 
 LotusStreet5Trainer3:
@@ -95,10 +95,9 @@ LotusStreet5Trainer4SeenText:
 	done
 
 LotusStreet5Trainer4BeatenText:
-	text "The only thing I"
-	line "regret is the tan"
-	para "lines. Those were"
-	line "mine."
+	text "That hurt in a"
+	line "place my memory"
+	para "used to live."
 	done
 
 LotusStreet5Trainer4:
@@ -114,10 +113,9 @@ LotusStreet5Trainer5SeenText:
 	done
 
 LotusStreet5Trainer5BeatenText:
-	text "Look at that. The"
-	line "sunset. I haven't"
-	para "seen one in years."
-	line "Thank you."
+	text "The waves are"
+	line "lovely. They're"
+	para "counting me down."
 	done
 
 LotusStreet5Trainer5:
@@ -133,9 +131,10 @@ LotusStreet5Trainer6SeenText:
 	done
 
 LotusStreet5Trainer6BeatenText:
-	text "My last wish is a"
-	line "mango. Somebody. A"
-	para "mango."
+	text "Honestly, this is"
+	line "the most"
+	para "excitement I've"
+	line "had in a decade."
 	done
 
 LotusStreet5Trainer6:

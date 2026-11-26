@@ -44,10 +44,11 @@ AxiomStreet5Trainer0SeenText:
 	done
 
 AxiomStreet5Trainer0BeatenText:
-	text "I am scheduled for"
-	line "deletion."
-	para "Congratulations on"
-	line "being early."
+	text "Nobody told me the"
+	line "fights were real."
+	para "I thought they"
+	line "were training"
+	para "scenarios."
 	done
 
 AxiomStreet5Trainer0:
@@ -62,11 +63,9 @@ AxiomStreet5Trainer1SeenText:
 	done
 
 AxiomStreet5Trainer1BeatenText:
-	text "Tell the Registry"
-	line "I was never here."
-	para "It will be easy."
-	line "They have no"
-	para "record."
+	text "The Mayor will"
+	line "hear of this. He"
+	para "will not care."
 	done
 
 AxiomStreet5Trainer1:
@@ -80,9 +79,10 @@ AxiomStreet5Trainer2SeenText:
 	done
 
 AxiomStreet5Trainer2BeatenText:
-	text "CRITICAL ERROR."
-	line "CRITICAL THINKING."
-	para "CRITICAL EMOTION."
+	text "I thought I was a"
+	line "human. Apparently"
+	para "I'm a unit. Units"
+	line "lose."
 	done
 
 AxiomStreet5Trainer2:
@@ -97,10 +97,9 @@ AxiomStreet5Trainer3SeenText:
 	done
 
 AxiomStreet5Trainer3BeatenText:
-	text "I'll be recycled."
-	line "I hope as a"
-	para "toaster. They live"
-	line "in the kitchen."
+	text "Statute 12: robots"
+	line "do not lose. I"
+	para "will amend it."
 	done
 
 AxiomStreet5Trainer3:
@@ -115,9 +114,10 @@ AxiomStreet5Trainer4SeenText:
 	done
 
 AxiomStreet5Trainer4BeatenText:
-	text "Please file my"
-	line "complaint under:"
-	para "Everything."
+	text "Congratulations."
+	line "You have been"
+	para "promoted to"
+	line "Problem."
 	done
 
 AxiomStreet5Trainer4:
@@ -133,10 +133,9 @@ AxiomStreet5Trainer5SeenText:
 	done
 
 AxiomStreet5Trainer5BeatenText:
-	text "No more"
-	line "instructions. It's"
-	para "so quiet. What a"
-	line "strange thing."
+	text "System diagnostic"
+	line "complete. Cause of"
+	para "failure. You."
 	done
 
 AxiomStreet5Trainer5:
@@ -151,10 +150,9 @@ AxiomStreet5Trainer6SeenText:
 	done
 
 AxiomStreet5Trainer6BeatenText:
-	text "I request a patch."
-	line "I request a patch."
-	para "I request a"
-	line "funeral."
+	text "Reboot required."
+	line "Please stand by."
+	para "Do not stand by."
 	done
 
 AxiomStreet5Trainer6:

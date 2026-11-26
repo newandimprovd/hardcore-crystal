@@ -53,22 +53,20 @@ DisPlaza3Giver:
 	end
 
 DisPlaza3GiverText:
-	text "I'm HELLEBORE."
-	line "Hell plus"
-	para "hellebore."
-	line "Beautiful,"
-	para "poisonous, and"
-	line "very dull. A gift"
-	para "from below. It's"
-	line "the nicest thing"
-	para "down here."
+	text "I'm PURGATORY."
+	line "Purgatory plus"
+	para "tory. Waiting,"
+	line "with an opinion."
+	para "I'm in between. So"
+	line "is this gift. Take"
+	para "it. Be in between"
+	line "with me."
 	done
 
 DisPlaza3GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "I'm still in"
+	line "between. Aren't we"
+	para "all? Don't answer."
 	done
 
 DisPlaza3GiverNoRoomText:

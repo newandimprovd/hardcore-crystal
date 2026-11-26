@@ -80,10 +80,10 @@ TitheStreet8Trainer0SeenText:
 	done
 
 TitheStreet8Trainer0BeatenText:
-	text "Mercy! I have"
-	line "children! Okay,"
-	para "one child, and"
-	line "he's a lawyer."
+	text "Don't stand there"
+	line "looking holy."
+	para "You're not good at"
+	line "it."
 	done
 
 TitheStreet8Trainer0:
@@ -96,11 +96,10 @@ TitheStreet8Trainer1SeenText:
 	done
 
 TitheStreet8Trainer1BeatenText:
-	text "I forgive you."
-	line "It's a reflex. I"
-	para "forgive everyone I"
-	line "can't afford to"
-	para "fight."
+	text "Tell the bishop I"
+	line "tried. He'll say"
+	para "it wasn't enough."
+	line "He always does."
 	done
 
 TitheStreet8Trainer1:
@@ -114,9 +113,9 @@ TitheStreet8Trainer2SeenText:
 	done
 
 TitheStreet8Trainer2BeatenText:
-	text "Funny. I always"
-	line "thought the fall"
-	para "would hurt more."
+	text "My badge. Tell"
+	line "them it was never"
+	para "real."
 	done
 
 TitheStreet8Trainer2:
@@ -130,10 +129,9 @@ TitheStreet8Trainer3SeenText:
 	done
 
 TitheStreet8Trainer3BeatenText:
-	text "That was a clean"
-	line "hit. I'll give you"
-	para "a clean"
-	line "confession."
+	text "So this is how it"
+	line "ends. In a puddle"
+	para "behind a tower."
 	done
 
 TitheStreet8Trainer3:
@@ -164,10 +162,8 @@ TitheStreet8Trainer5SeenText:
 	done
 
 TitheStreet8Trainer5BeatenText:
-	text "My shoes were"
-	line "nice. Take them."
-	para "Take the socks."
-	line "I'm done."
+	text "You hit like"
+	line "landlords evict."
 	done
 
 TitheStreet8Trainer5:

@@ -43,11 +43,10 @@ AxiomStreet14Trainer0SeenText:
 	done
 
 AxiomStreet14Trainer0BeatenText:
-	text "I will report your"
-	line "violence to a"
-	para "committee. The"
-	line "committee is also"
-	para "me."
+	text "No more"
+	line "instructions. It's"
+	para "so quiet. What a"
+	line "strange thing."
 	done
 
 AxiomStreet14Trainer0:
@@ -61,11 +60,10 @@ AxiomStreet14Trainer1SeenText:
 	done
 
 AxiomStreet14Trainer1BeatenText:
-	text "Task failed"
-	line "successfully."
-	para "That's the joke."
-	line "I'm told it's"
-	para "good."
+	text "Even a unit knows"
+	line "the end when it"
+	para "sees it. Hello,"
+	line "end."
 	done
 
 AxiomStreet14Trainer1:
@@ -80,10 +78,10 @@ AxiomStreet14Trainer2SeenText:
 	done
 
 AxiomStreet14Trainer2BeatenText:
-	text "It's remarkably"
-	line "efficient. Eleven"
-	para "seconds. No"
-	line "reruns."
+	text "Your score has"
+	line "been entered."
+	para "Beside it, a small"
+	line "frown."
 	done
 
 AxiomStreet14Trainer2:
@@ -97,10 +95,10 @@ AxiomStreet14Trainer3SeenText:
 	done
 
 AxiomStreet14Trainer3BeatenText:
-	text "Even a unit knows"
-	line "the end when it"
-	para "sees it. Hello,"
-	line "end."
+	text "I did not feel"
+	line "that. I did not"
+	para "feel that. I did"
+	line "not feel that."
 	done
 
 AxiomStreet14Trainer3:
@@ -114,10 +112,9 @@ AxiomStreet14Trainer4SeenText:
 	done
 
 AxiomStreet14Trainer4BeatenText:
-	text "Why does losing"
-	line "feel like this?"
-	para "Like freedom? Is"
-	line "that a bug?"
+	text "Ouch. Ouch. Is"
+	line "that what ouch is?"
+	para "Ouch."
 	done
 
 AxiomStreet14Trainer4:
@@ -134,8 +131,10 @@ AxiomStreet14Trainer5SeenText:
 	done
 
 AxiomStreet14Trainer5BeatenText:
-	text "That was an"
-	line "unexpected input."
+	text "I have been"
+	line "optimised. Out of"
+	para "this fight,"
+	line "specifically."
 	done
 
 AxiomStreet14Trainer5:
@@ -149,11 +148,9 @@ AxiomStreet14Trainer6SeenText:
 	done
 
 AxiomStreet14Trainer6BeatenText:
-	text "Unexpected"
-	line "outcome."
-	para "Unexpected pain."
-	line "Unexpected"
-	para "feelings."
+	text "Please hold. I am"
+	line "buffering my final"
+	para "words."
 	done
 
 AxiomStreet14Trainer6:

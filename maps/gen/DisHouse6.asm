@@ -12,23 +12,22 @@ DisHouse6Npc0Script:
 	jumptextfaceplayer DisHouse6Npc0Text
 
 DisHouse6Npc0Text:
-	text "The walls whisper"
-	line "my name. They're"
-	para "bad at it. They"
-	line "keep calling me"
-	para "'Gary'. I'm not"
-	line "Gary."
+	text "My cat is a very"
+	line "old devil. He"
+	para "purrs in Latin. I"
+	line "don't encourage"
+	para "it."
 	done
 
 DisHouse6Npc1Script:
 	jumptextfaceplayer DisHouse6Npc1Text
 
 DisHouse6Npc1Text:
-	text "I'm the Warden's"
-	line "cousin. It's a"
-	para "very small job."
-	line "It's a very big"
-	para "cousin."
+	text "I was a banker."
+	line "Now I count coins"
+	para "that were never"
+	line "mine. Heaven's a"
+	para "rounding error."
 	done
 
 DisHouse6_MapEvents:

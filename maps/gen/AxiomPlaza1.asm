@@ -65,20 +65,21 @@ AxiomPlaza1Giver:
 	end
 
 AxiomPlaza1GiverText:
-	text "I'm ALGORHYTHM."
-	line "Algorithm plus"
-	para "rhythm. I do the"
-	line "steps. I dance"
-	para "badly. Output: one"
-	line "item. Input: your"
-	para "gratitude."
+	text "I'm DATUMBRELLA."
+	line "Datum plus"
+	para "umbrella. A fact"
+	line "that keeps the"
+	para "rain off a person."
+	line "Here. It's a"
+	para "drizzle of data."
+	line "Take it and don't"
+	para "get wet."
 	done
 
 AxiomPlaza1GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "It's raining data."
+	line "Wear a coat. It's"
+	para "mostly boring."
 	done
 
 AxiomPlaza1GiverNoRoomText:

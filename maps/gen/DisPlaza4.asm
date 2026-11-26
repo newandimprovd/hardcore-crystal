@@ -67,20 +67,21 @@ DisPlaza4Giver:
 	end
 
 DisPlaza4GiverText:
-	text "I'm SINNAMON. Sin"
-	line "plus cinnamon."
-	para "Sweet and not good"
-	line "for you. A gift."
-	para "Terms and"
-	line "conditions are in"
-	para "the afterlife."
+	text "I'm LIMBOLINA."
+	line "Limbo plus"
+	para "ballerina."
+	line "Graceful, and also"
+	para "lost. Low, low,"
+	line "lower. I dropped"
+	para "this. Pick it up"
+	line "and take it with"
+	para "you."
 	done
 
 DisPlaza4GiverAfterText:
-	text "That's all I have."
-	line "The rest is for"
-	para "someone with a"
-	line "better reason."
+	text "Mind the drop. I"
+	line "only said low. I"
+	para "didn't say safe."
 	done
 
 DisPlaza4GiverNoRoomText:

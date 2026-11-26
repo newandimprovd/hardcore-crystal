@@ -53,21 +53,22 @@ DisPlaza6Giver:
 	end
 
 DisPlaza6GiverText:
-	text "I'm INFERNOODLE."
-	line "Inferno plus"
-	para "noodle. Spicy,"
-	line "long and"
-	para "irreversible. A"
-	line "bowl of kindness."
-	para "It's a berry."
-	line "Don't ask."
+	text "I'm MALEBOLGIA."
+	line "Malebolge plus"
+	para "gia. A ditch with"
+	line "a name and a very"
+	para "good voice. Don't"
+	line "cry. Take it. It's"
+	para "for the road. And"
+	line "for the ditch,"
+	para "later."
 	done
 
 DisPlaza6GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "I'm just a ditch."
+	line "Keep walking."
+	para "Nobody visits a"
+	line "ditch."
 	done
 
 DisPlaza6GiverNoRoomText:

@@ -135,37 +135,37 @@ AxiomSpareRoomHermit0:
 	end
 
 AxiomSpareRoomHermit0SeenText:
-	text "A visitor! I was"
-	line "beginning to talk"
-	para "to the rocks. They"
-	line "have strong"
-	para "opinions about"
-	line "moss."
+	text "Hello, handsome."
+	line "Hello, anyone. You"
+	para "look very alive."
+	line "I'd like to"
+	para "measure you. Fight"
+	line "me."
 	done
 
 AxiomSpareRoomHermit0BeatenText:
-	text "That settles it. I"
-	line "am going back to"
-	para "my moss."
+	text "Oh my. A lovely"
+	line "thrashing. I'll"
+	para "hold off on"
+	line "measuring. For"
+	para "now."
 	done
 
 AxiomSpareRoomHermit0GiftText:
-	text "I have no idea"
-	line "what it does. It"
-	para "hums when I sleep."
-	line "Maybe it hums for"
-	para "you."
+	text "A little something"
+	line "to remember me by."
+	para "It's practical."
+	line "It's also shiny."
+	para "Don't make it"
+	line "weird."
 	done
 
 AxiomSpareRoomHermit0AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "Come back when"
+	line "you're a little"
+	para "less alive. I'm"
+	line "sure we'll get"
+	para "along."
 	done
 
 AxiomSpareRoomHermit0NoRoomText:
@@ -210,34 +210,37 @@ AxiomSpareRoomHermit1:
 	end
 
 AxiomSpareRoomHermit1SeenText:
-	text "Go away! Wait."
-	line "Come back. Fight"
-	para "me. I am so bored"
-	line "I have started to"
-	para "like myself."
+	text "Shh. I'm whistling"
+	line "to the dead. They"
+	para "whistle back."
+	line "Don't speak."
+	para "Fight."
 	done
 
 AxiomSpareRoomHermit1BeatenText:
-	text "Fine. A gift,"
-	line "then. Do not tell"
-	para "the others."
+	text "A rude sound. Your"
+	line "loss was a minor"
+	para "key. They liked"
+	line "it. Take this for"
+	para "the performance."
 	done
 
 AxiomSpareRoomHermit1GiftText:
-	text "Hold on to this."
-	line "It will make you"
-	para "look stronger. It"
-	line "will not make you"
-	para "stronger. That is"
-	line "the whole of"
-	para "philosophy."
+	text "A tune and a"
+	line "trinket. Whistle"
+	para "it three times."
+	line "They'll come"
+	para "running. Be"
+	line "careful."
 	done
 
 AxiomSpareRoomHermit1AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "I heard them"
+	line "whistling your"
+	para "name. I can't tell"
+	line "if it was a"
+	para "welcome or a"
+	line "warning."
 	done
 
 AxiomSpareRoomHermit1NoRoomText:

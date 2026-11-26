@@ -18,11 +18,11 @@ AxiomMart3Npc0Script:
 	jumptextfaceplayer AxiomMart3Npc0Text
 
 AxiomMart3Npc0Text:
-	text "Purchases are"
-	line "logged. Your"
-	para "tastes are noted."
-	line "You have terrible"
-	para "tastes."
+	text "Welcome to the"
+	line "Commissary. We"
+	para "have antidotes for"
+	line "everything except"
+	para "the Union."
 	done
 
 AxiomMart3_MapEvents:

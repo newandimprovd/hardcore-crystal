@@ -30,10 +30,9 @@ DisStreet15Trainer0SeenText:
 	done
 
 DisStreet15Trainer0BeatenText:
-	text "Another soul lost."
-	line "Another form"
-	para "filed. Another day"
-	line "in the office."
+	text "I'll go back to my"
+	line "crying. It's much"
+	para "cosier."
 	done
 
 DisStreet15Trainer0:
@@ -47,9 +46,10 @@ DisStreet15Trainer1SeenText:
 	done
 
 DisStreet15Trainer1BeatenText:
-	text "Don't gloat. It's"
-	line "unbecoming. Also"
-	para "it's very hot."
+	text "My supervisor will"
+	line "think I gave up. I"
+	para "did. It was a"
+	line "pleasure."
 	done
 
 DisStreet15Trainer1:
@@ -64,9 +64,10 @@ DisStreet15Trainer2SeenText:
 	done
 
 DisStreet15Trainer2BeatenText:
-	text "Tell my wife I"
-	line "love her. Tell her"
-	para "to stay up there."
+	text "Cough. It's the"
+	line "sulphur. It's"
+	para "always the"
+	line "sulphur."
 	done
 
 DisStreet15Trainer2:
@@ -81,10 +82,9 @@ DisStreet15Trainer3SeenText:
 	done
 
 DisStreet15Trainer3BeatenText:
-	text "So this is what"
-	line "the afterlife of"
-	para "the afterlife"
-	line "feels like."
+	text "Sentence accepted."
+	line "Please return to"
+	para "your suffering."
 	done
 
 DisStreet15Trainer3:
@@ -98,10 +98,10 @@ DisStreet15Trainer4SeenText:
 	done
 
 DisStreet15Trainer4BeatenText:
-	text "That was"
-	line "cathartic. I'm"
-	para "going to cry now."
-	line "Then complain."
+	text "I'll go be"
+	line "miserable in the"
+	para "cold quarter. It's"
+	line "very exclusive."
 	done
 
 DisStreet15Trainer4:
@@ -116,11 +116,11 @@ DisStreet15Trainer5SeenText:
 	done
 
 DisStreet15Trainer5BeatenText:
-	text "Fine. Fine! I'll"
-	line "write an angry"
-	para "letter. It will"
-	line "arrive in a"
-	para "century."
+	text "I was assigned"
+	line "this block by"
+	para "lottery. I'd like"
+	line "to contest the"
+	para "lottery."
 	done
 
 DisStreet15Trainer5:
@@ -134,10 +134,9 @@ DisStreet15Trainer6SeenText:
 	done
 
 DisStreet15Trainer6BeatenText:
-	text "Guilt is an ice."
-	line "It melts."
-	para "Eventually."
-	line "Hopefully. Please."
+	text "I knew I should"
+	line "have taken the"
+	para "other contract."
 	done
 
 DisStreet15Trainer6:

@@ -31,9 +31,9 @@ GroveStreet3Trainer0SeenText:
 	done
 
 GroveStreet3Trainer0BeatenText:
-	text "I forgive you in"
-	line "advance. And also"
-	para "after. And during."
+	text "Consensus is that"
+	line "you cheated."
+	para "Consensus is me."
 	done
 
 GroveStreet3Trainer0:
@@ -48,10 +48,8 @@ GroveStreet3Trainer1SeenText:
 	done
 
 GroveStreet3Trainer1BeatenText:
-	text "Please plant"
-	line "something over me."
-	para "A pear. I always"
-	line "liked pears."
+	text "Ow ow ow. Sorry."
+	line "Ow."
 	done
 
 GroveStreet3Trainer1:
@@ -66,8 +64,11 @@ GroveStreet3Trainer2SeenText:
 	done
 
 GroveStreet3Trainer2BeatenText:
-	text "This is the wrong"
-	line "kind of intimacy."
+	text "They said violence"
+	line "was a bourgeois"
+	para "habit. I'd like to"
+	line "speak to the"
+	para "bourgeoisie."
 	done
 
 GroveStreet3Trainer2:
@@ -83,10 +84,10 @@ GroveStreet3Trainer3SeenText:
 	done
 
 GroveStreet3Trainer3BeatenText:
-	text "I'll go meditate."
-	line "Or cry. Possibly"
-	para "both. Possibly in"
-	line "a tree."
+	text "That was a very"
+	line "honest fight."
+	para "Honestly, I hated"
+	line "it."
 	done
 
 GroveStreet3Trainer3:
@@ -102,10 +103,10 @@ GroveStreet3Trainer4SeenText:
 	done
 
 GroveStreet3Trainer4BeatenText:
-	text "Is that how it's"
-	line "done out there?"
-	para "Out there is"
-	line "terrible."
+	text "You didn't have to"
+	line "hit that hard."
+	para "We're all just a"
+	line "little hungry."
 	done
 
 GroveStreet3Trainer4:
@@ -119,11 +120,9 @@ GroveStreet3Trainer5SeenText:
 	done
 
 GroveStreet3Trainer5BeatenText:
-	text "I should have"
-	line "stayed in the"
-	para "city. At least"
-	line "there I'd be rich"
-	para "and dead."
+	text "I knew I should"
+	line "have joined the"
+	para "pottery circle."
 	done
 
 GroveStreet3Trainer5:
@@ -138,10 +137,11 @@ GroveStreet3Trainer6SeenText:
 	done
 
 GroveStreet3Trainer6BeatenText:
-	text "The forest heard"
-	line "that. The forest"
-	para "is judging you,"
-	line "too."
+	text "You're not from"
+	line "here. You hit like"
+	para "someone who's"
+	line "worried about"
+	para "rent."
 	done
 
 GroveStreet3Trainer6:

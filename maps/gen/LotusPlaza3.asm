@@ -52,19 +52,22 @@ LotusPlaza3Giver:
 	end
 
 LotusPlaza3GiverText:
-	text "I'm BREEZZE."
-	line "Breeze plus zzz. I"
-	para "drift to wherever"
-	line "it takes me. I"
-	para "blew in. This blew"
-	line "in with me. Here."
+	text "I'm AMNESIAC."
+	line "Amnesia plus"
+	para "maniac. I forget,"
+	line "then I giggle,"
+	para "then I forget why."
+	line "A present. For"
+	para "whom? You. I"
+	line "think. Take it"
+	para "before I remember."
 	done
 
 LotusPlaza3GiverAfterText:
-	text "Don't mention it."
-	line "Seriously, don't."
-	para "It's off the"
-	line "books."
+	text "Have we met? I'm"
+	line "Amnesiac. No,"
+	para "wait. That was"
+	line "you."
 	done
 
 LotusPlaza3GiverNoRoomText:

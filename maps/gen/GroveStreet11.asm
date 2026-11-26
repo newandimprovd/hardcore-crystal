@@ -79,11 +79,9 @@ GroveStreet11Trainer0SeenText:
 	done
 
 GroveStreet11Trainer0BeatenText:
-	text "That's the third"
-	line "time I've been"
-	para "fainted this week."
-	line "Hey, it's honest"
-	para "work."
+	text "Tell the elders I"
+	line "died as I lived."
+	para "Confused."
 	done
 
 GroveStreet11Trainer0:
@@ -99,10 +97,10 @@ GroveStreet11Trainer1SeenText:
 	done
 
 GroveStreet11Trainer1BeatenText:
-	text "Even death is"
-	line "shared here."
-	para "You'll be hearing"
-	line "from my family."
+	text "I'll go meditate."
+	line "Or cry. Possibly"
+	para "both. Possibly in"
+	line "a tree."
 	done
 
 GroveStreet11Trainer1:
@@ -118,9 +116,9 @@ GroveStreet11Trainer2SeenText:
 	done
 
 GroveStreet11Trainer2BeatenText:
-	text "I thought I'd feel"
-	line "enlightened. I"
-	para "feel lightened."
+	text "Everything dies."
+	line "It's in the"
+	para "compost agreement."
 	done
 
 GroveStreet11Trainer2:
@@ -134,9 +132,11 @@ GroveStreet11Trainer3SeenText:
 	done
 
 GroveStreet11Trainer3BeatenText:
-	text "Hold my beard."
-	line "It's all that's"
-	para "left of my pride."
+	text "Don't thank me."
+	line "Thank the soil."
+	para "The soil is what"
+	line "you've been"
+	para "fighting."
 	done
 
 GroveStreet11Trainer3:
@@ -150,10 +150,10 @@ GroveStreet11Trainer4SeenText:
 	done
 
 GroveStreet11Trainer4BeatenText:
-	text "Everyone's equal"
-	line "in the dirt. It's"
-	para "very sad how fast"
-	line "it happens."
+	text "You've got a nice"
+	line "aura. Dark, wet, a"
+	para "little bit"
+	line "murdery."
 	done
 
 GroveStreet11Trainer4:
@@ -167,10 +167,9 @@ GroveStreet11Trainer5SeenText:
 	done
 
 GroveStreet11Trainer5BeatenText:
-	text "Today I learned"
-	line "that violence is"
-	para "an effective"
-	line "teacher."
+	text "I'm going home."
+	line "Tell the Commune"
+	para "my chore is done."
 	done
 
 GroveStreet11Trainer5:

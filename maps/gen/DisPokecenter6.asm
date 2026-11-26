@@ -15,11 +15,12 @@ DisPokecenter6Npc0Script:
 	jumptextfaceplayer DisPokecenter6Npc0Text
 
 DisPokecenter6Npc0Text:
-	text "Healing in Dis is"
-	line "a luxury. You're"
-	para "lucky. So lucky."
-	line "So very lucky."
-	para "Pray."
+	text "I got here for a"
+	line "heart attack and"
+	para "I'm stuck on a"
+	line "bed. Great"
+	para "service. Zero"
+	line "oxygen."
 	done
 
 DisPokecenter6_MapEvents:

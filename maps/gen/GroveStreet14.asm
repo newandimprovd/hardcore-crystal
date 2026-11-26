@@ -80,9 +80,10 @@ GroveStreet14Trainer0SeenText:
 	done
 
 GroveStreet14Trainer0BeatenText:
-	text "I thought I'd feel"
-	line "enlightened. I"
-	para "feel lightened."
+	text "Share the news."
+	line "Share it widely."
+	para "Share it at the"
+	line "feast."
 	done
 
 GroveStreet14Trainer0:
@@ -96,10 +97,9 @@ GroveStreet14Trainer1SeenText:
 	done
 
 GroveStreet14Trainer1BeatenText:
-	text "The apples were"
-	line "right. They're"
-	para "always right. It's"
-	line "the pits."
+	text "Peace, peace, and"
+	line "also pain. Mostly"
+	para "pain."
 	done
 
 GroveStreet14Trainer1:
@@ -115,10 +115,11 @@ GroveStreet14Trainer2SeenText:
 	done
 
 GroveStreet14Trainer2BeatenText:
-	text "I feel the soil."
-	line "It's warm. It's"
-	para "calling. Spread me"
-	line "well."
+	text "I'll file a"
+	line "complaint. We"
+	para "don't have a place"
+	line "to file it. It's a"
+	para "new thing."
 	done
 
 GroveStreet14Trainer2:
@@ -134,9 +135,10 @@ GroveStreet14Trainer3SeenText:
 	done
 
 GroveStreet14Trainer3BeatenText:
-	text "I wanted to be a"
-	line "poet. I'm only a"
-	para "pile now."
+	text "I left the city"
+	line "for peace. I got"
+	para "it. It's a bit"
+	line "sudden."
 	done
 
 GroveStreet14Trainer3:
@@ -151,11 +153,9 @@ GroveStreet14Trainer4SeenText:
 	done
 
 GroveStreet14Trainer4BeatenText:
-	text "That's the third"
-	line "time I've been"
-	para "fainted this week."
-	line "Hey, it's honest"
-	para "work."
+	text "You win. Take a"
+	line "berry. Take all"
+	para "the berries."
 	done
 
 GroveStreet14Trainer4:
@@ -169,9 +169,8 @@ GroveStreet14Trainer5SeenText:
 	done
 
 GroveStreet14Trainer5BeatenText:
-	text "Everything dies."
-	line "It's in the"
-	para "compost agreement."
+	text "I give up. In a"
+	line "very organic way."
 	done
 
 GroveStreet14Trainer5:

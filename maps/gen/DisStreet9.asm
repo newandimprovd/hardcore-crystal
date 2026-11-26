@@ -44,9 +44,11 @@ DisStreet9Trainer0SeenText:
 	done
 
 DisStreet9Trainer0BeatenText:
-	text "Don't gloat. It's"
-	line "unbecoming. Also"
-	para "it's very hot."
+	text "Damn. Technically"
+	line "that's redundant."
+	para "I'm already"
+	line "damned. Now I'm"
+	para "damned twice."
 	done
 
 DisStreet9Trainer0:
@@ -60,10 +62,11 @@ DisStreet9Trainer1SeenText:
 	done
 
 DisStreet9Trainer1BeatenText:
-	text "Even in Hell,"
-	line "there's a last"
-	para "word. Mine is:"
-	line "oops."
+	text "The flame goes"
+	line "out. A candle in a"
+	para "cave. Wait."
+	line "There's the"
+	para "bottom."
 	done
 
 DisStreet9Trainer1:
@@ -76,9 +79,10 @@ DisStreet9Trainer2SeenText:
 	done
 
 DisStreet9Trainer2BeatenText:
-	text "I thought this was"
-	line "a dream. It's more"
-	para "of a reminder."
+	text "Hell, hell, hell."
+	line "That's the entire"
+	para "sermon. Class"
+	line "dismissed."
 	done
 
 DisStreet9Trainer2:
@@ -93,10 +97,9 @@ DisStreet9Trainer3SeenText:
 	done
 
 DisStreet9Trainer3BeatenText:
-	text "My soul is the"
-	line "property of"
-	para "someone else. Take"
-	line "it up with him."
+	text "Take my coat. It"
+	line "has a hole in it."
+	para "And a body."
 	done
 
 DisStreet9Trainer3:
@@ -110,8 +113,10 @@ DisStreet9Trainer4SeenText:
 	done
 
 DisStreet9Trainer4BeatenText:
-	text "That was awful. Do"
-	line "it again."
+	text "I thought the end"
+	line "would hurt more."
+	para "It's a gentle"
+	line "burn."
 	done
 
 DisStreet9Trainer4:
@@ -126,9 +131,10 @@ DisStreet9Trainer5SeenText:
 	done
 
 DisStreet9Trainer5BeatenText:
-	text "Sentence accepted."
-	line "Please return to"
-	para "your suffering."
+	text "I'll see you at"
+	line "the next circle."
+	para "I'll be the one in"
+	line "the dumpster."
 	done
 
 DisStreet9Trainer5:
@@ -141,9 +147,10 @@ DisStreet9Trainer6SeenText:
 	done
 
 DisStreet9Trainer6BeatenText:
-	text "Take my coat. It"
-	line "has a hole in it."
-	para "And a body."
+	text "Cocytus is cold."
+	line "Cold is a fact."
+	para "You're a fact. A"
+	line "cold, brutal fact."
 	done
 
 DisStreet9Trainer6:

@@ -99,10 +99,10 @@ LotusStreet13Trainer1SeenText:
 	done
 
 LotusStreet13Trainer1BeatenText:
-	text "Please tell the"
-	line "bartender I paid."
-	para "I didn't. Please"
-	line "tell him I did."
+	text "My memory is"
+	line "foggy. Who's that?"
+	para "Who am I? Who are"
+	line "you? Oh right. Ow."
 	done
 
 LotusStreet13Trainer1:
@@ -115,9 +115,11 @@ LotusStreet13Trainer2SeenText:
 	done
 
 LotusStreet13Trainer2BeatenText:
-	text "I'm a happy man."
-	line "I'm a happy, flat"
-	para "man."
+	text "Ow. Wait. Did that"
+	line "hurt? I can't"
+	para "remember what hurt"
+	line "means. Do it again"
+	para "so I know."
 	done
 
 LotusStreet13Trainer2:
@@ -131,10 +133,9 @@ LotusStreet13Trainer3SeenText:
 	done
 
 LotusStreet13Trainer3BeatenText:
-	text "Honestly, this is"
-	line "the most"
-	para "excitement I've"
-	line "had in a decade."
+	text "I wrote myself a"
+	line "note to hate you."
+	para "I lost the note."
 	done
 
 LotusStreet13Trainer3:
@@ -147,10 +148,9 @@ LotusStreet13Trainer4SeenText:
 	done
 
 LotusStreet13Trainer4BeatenText:
-	text "That was a very"
-	line "honest hit. Honest"
-	para "hits are the"
-	line "worst."
+	text "I'm a happy man."
+	line "I'm a happy, flat"
+	para "man."
 	done
 
 LotusStreet13Trainer4:
@@ -165,10 +165,10 @@ LotusStreet13Trainer5SeenText:
 	done
 
 LotusStreet13Trainer5BeatenText:
-	text "Beautiful. Please"
-	line "tell the bartender"
-	para "I tipped in"
-	line "advance."
+	text "Ow. Oh. Is this"
+	line "pain? I think it's"
+	para "pain. It's so"
+	line "unfamiliar."
 	done
 
 LotusStreet13Trainer5:
@@ -182,11 +182,10 @@ LotusStreet13Trainer6SeenText:
 	done
 
 LotusStreet13Trainer6BeatenText:
-	text "Tell them I went"
-	line "peacefully. Tell"
-	para "them there was a"
-	line "lot of sunscreen"
-	para "involved."
+	text "My trauma is fully"
+	line "reimbursed. I just"
+	para "don't know who"
+	line "owns it now."
 	done
 
 LotusStreet13Trainer6:

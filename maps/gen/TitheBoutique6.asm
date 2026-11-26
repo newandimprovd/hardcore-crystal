@@ -32,10 +32,11 @@ TitheBoutique6Npc0Script:
 	jumptextfaceplayer TitheBoutique6Npc0Text
 
 TitheBoutique6Npc0Text:
-	text "My husband is in"
-	line "the walls. I mean"
-	para "he's remodeling."
-	line "In the walls."
+	text "The cops come"
+	line "twice a week to"
+	para "collect. It's"
+	line "called community"
+	para "policing."
 	done
 
 TitheBoutique6_MapEvents:

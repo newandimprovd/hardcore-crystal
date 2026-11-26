@@ -31,10 +31,10 @@ GroveStreet7Trainer0SeenText:
 	done
 
 GroveStreet7Trainer0BeatenText:
-	text "I lost? I lost!"
-	line "Wow. That doesn't"
-	para "feel like sharing"
-	line "at all."
+	text "I trusted the"
+	line "mushroom. The"
+	para "mushroom said I'd"
+	line "win."
 	done
 
 GroveStreet7Trainer0:
@@ -49,10 +49,10 @@ GroveStreet7Trainer1SeenText:
 	done
 
 GroveStreet7Trainer1BeatenText:
-	text "I think I learned"
-	line "something. Mostly"
-	para "about hospital"
-	line "food."
+	text "My shoes are"
+	line "clean. Even in"
+	para "death I'm a"
+	line "hippie."
 	done
 
 GroveStreet7Trainer1:
@@ -66,11 +66,10 @@ GroveStreet7Trainer2SeenText:
 	done
 
 GroveStreet7Trainer2BeatenText:
-	text "Please be gentle"
-	line "with the bodies."
-	para "They've got"
-	line "feelings. Or at"
-	para "least pollen."
+	text "Don't cry for me."
+	line "Cry into the"
+	para "compost. It needs"
+	line "the moisture."
 	done
 
 GroveStreet7Trainer2:
@@ -85,10 +84,9 @@ GroveStreet7Trainer3SeenText:
 	done
 
 GroveStreet7Trainer3BeatenText:
-	text "I'm not dead. I'm"
-	line "just sharing"
-	para "myself with the"
-	line "earth."
+	text "I had a feeling in"
+	line "my heart. It was"
+	para "indigestion."
 	done
 
 GroveStreet7Trainer3:
@@ -102,9 +100,10 @@ GroveStreet7Trainer4SeenText:
 	done
 
 GroveStreet7Trainer4BeatenText:
-	text "I'll come back as"
-	line "a tomato. A very"
-	para "sorry tomato."
+	text "I lost? I lost!"
+	line "Wow. That doesn't"
+	para "feel like sharing"
+	line "at all."
 	done
 
 GroveStreet7Trainer4:
@@ -118,10 +117,10 @@ GroveStreet7Trainer5SeenText:
 	done
 
 GroveStreet7Trainer5BeatenText:
-	text "You're a good"
-	line "fighter. You'd"
-	para "make a lousy"
-	line "farmer."
+	text "This one's for the"
+	line "harvest. This"
+	para "one's for the"
+	line "sickle."
 	done
 
 GroveStreet7Trainer5:
@@ -135,10 +134,10 @@ GroveStreet7Trainer6SeenText:
 	done
 
 GroveStreet7Trainer6BeatenText:
-	text "Collect my staff."
-	line "Tell it I'm sorry."
-	para "It was a good"
-	line "staff."
+	text "I heard nobody"
+	line "dies here. You'd"
+	para "better be a very"
+	line "good liar."
 	done
 
 GroveStreet7Trainer6:

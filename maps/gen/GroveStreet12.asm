@@ -30,11 +30,10 @@ GroveStreet12Trainer0SeenText:
 	done
 
 GroveStreet12Trainer0BeatenText:
-	text "The council will"
-	line "be disappointed."
-	para "The council is"
-	line "always"
-	para "disappointed."
+	text "My goat saw"
+	line "everything. She'll"
+	para "never look at me"
+	line "the same."
 	done
 
 GroveStreet12Trainer0:
@@ -47,9 +46,9 @@ GroveStreet12Trainer1SeenText:
 	done
 
 GroveStreet12Trainer1BeatenText:
-	text "Well. That's one"
-	line "way to open a"
-	para "chakra."
+	text "My hands are tied."
+	line "By hemp. It's a"
+	para "lifestyle."
 	done
 
 GroveStreet12Trainer1:
@@ -63,8 +62,10 @@ GroveStreet12Trainer2SeenText:
 	done
 
 GroveStreet12Trainer2BeatenText:
-	text "I accept this"
-	line "defeat radically."
+	text "The elders will"
+	line "hear about this."
+	para "They won't care."
+	line "They're asleep."
 	done
 
 GroveStreet12Trainer2:
@@ -77,10 +78,9 @@ GroveStreet12Trainer3SeenText:
 	done
 
 GroveStreet12Trainer3BeatenText:
-	text "My wife is a good"
-	line "woman. She'll be"
-	para "glad. She says I"
-	line "snore."
+	text "I was raised never"
+	line "to hate. Thank you"
+	para "for testing it."
 	done
 
 GroveStreet12Trainer3:
@@ -95,9 +95,10 @@ GroveStreet12Trainer4SeenText:
 	done
 
 GroveStreet12Trainer4BeatenText:
-	text "Take the bread."
-	line "It's better than I"
-	para "am."
+	text "Please don't tell"
+	line "the elders."
+	para "They'll make me"
+	line "share the loss."
 	done
 
 GroveStreet12Trainer4:
@@ -111,10 +112,11 @@ GroveStreet12Trainer5SeenText:
 	done
 
 GroveStreet12Trainer5BeatenText:
-	text "I feel the soil."
-	line "It's warm. It's"
-	para "calling. Spread me"
-	line "well."
+	text "I gave away"
+	line "everything I"
+	para "owned. It was"
+	line "nothing. It's"
+	para "still nothing."
 	done
 
 GroveStreet12Trainer5:
@@ -128,10 +130,8 @@ GroveStreet12Trainer6SeenText:
 	done
 
 GroveStreet12Trainer6BeatenText:
-	text "The sunset's"
-	line "lovely. I wasn't"
-	para "expecting it to be"
-	line "the last thing."
+	text "I'll watch from"
+	line "the roots. Wave."
 	done
 
 GroveStreet12Trainer6:

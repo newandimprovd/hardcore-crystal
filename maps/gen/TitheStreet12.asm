@@ -43,9 +43,9 @@ TitheStreet12Trainer0SeenText:
 	done
 
 TitheStreet12Trainer0BeatenText:
-	text "Is it over? Can I"
-	line "go home to my"
-	para "crying?"
+	text "Cough. Tell my"
+	line "landlord I left in"
+	para "a hurry."
 	done
 
 TitheStreet12Trainer0:
@@ -58,9 +58,10 @@ TitheStreet12Trainer1SeenText:
 	done
 
 TitheStreet12Trainer1BeatenText:
-	text "The collection has"
-	line "been taken. By"
-	para "you. Lovely."
+	text "That was a clean"
+	line "loss. I'll frame"
+	para "it. The frame"
+	line "costs extra."
 	done
 
 TitheStreet12Trainer1:
@@ -74,10 +75,10 @@ TitheStreet12Trainer2SeenText:
 	done
 
 TitheStreet12Trainer2BeatenText:
-	text "That's the third"
-	line "time this week."
-	para "I'm quitting."
-	line "After lunch."
+	text "Can I be buried"
+	line "near the vending"
+	para "machine? I like"
+	line "the hum."
 	done
 
 TitheStreet12Trainer2:
@@ -90,8 +91,8 @@ TitheStreet12Trainer3SeenText:
 	done
 
 TitheStreet12Trainer3BeatenText:
-	text "You are a menace."
-	line "I respect it."
+	text "I only did it for"
+	line "the dental plan."
 	done
 
 TitheStreet12Trainer3:
@@ -106,9 +107,10 @@ TitheStreet12Trainer4SeenText:
 	done
 
 TitheStreet12Trainer4BeatenText:
-	text "Well. That was"
-	line "tithing in a way I"
-	para "never thought of."
+	text "You'll pay for"
+	line "this. Not me."
+	para "Someone. There's"
+	line "always someone."
 	done
 
 TitheStreet12Trainer4:
@@ -123,10 +125,10 @@ TitheStreet12Trainer5SeenText:
 	done
 
 TitheStreet12Trainer5BeatenText:
-	text "Hit me again and"
-	line "I'll sue. Hit me"
-	para "again so I can"
-	line "sue."
+	text "Ha ha. You win."
+	line "I'm bleeding in"
+	para "the nicest"
+	line "possible way."
 	done
 
 TitheStreet12Trainer5:

@@ -18,11 +18,11 @@ DisMart2Npc0Script:
 	jumptextfaceplayer DisMart2Npc0Text
 
 DisMart2Npc0Text:
-	text "Everything has a"
-	line "price. The price"
-	para "is your soul. The"
-	line "soul is two"
-	para "ninety-nine."
+	text "The clerk is a"
+	line "former king. He's"
+	para "still very"
+	line "particular about"
+	para "bags."
 	done
 
 DisMart2_MapEvents:

@@ -15,11 +15,12 @@ LotusPokecenter2Npc0Script:
 	jumptextfaceplayer LotusPokecenter2Npc0Text
 
 LotusPokecenter2Npc0Text:
-	text "The clinic's"
-	line "slogan is 'Forget"
-	para "Today, Remember"
-	line "Never'. They're"
-	para "working on it."
+	text "I've been waiting"
+	line "an hour. Or a"
+	para "week. Or the hour"
+	line "is a week. They"
+	para "stopped the clocks"
+	line "to keep us calm."
 	done
 
 LotusPokecenter2_MapEvents:

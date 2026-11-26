@@ -42,10 +42,8 @@ AxiomStreet9Trainer0SeenText:
 	done
 
 AxiomStreet9Trainer0BeatenText:
-	text "I'm forgiven. The"
-	line "system says so."
-	para "The system is"
-	line "wrong."
+	text "I think you dented"
+	line "my love of rules."
 	done
 
 AxiomStreet9Trainer0:
@@ -60,9 +58,12 @@ AxiomStreet9Trainer1SeenText:
 	done
 
 AxiomStreet9Trainer1BeatenText:
-	text "Warning: faith"
-	line "detected. Warning:"
-	para "it is not mine."
+	text "My motor functions"
+	line "are shutting down."
+	para "It's very"
+	line "relaxing. I did"
+	para "not know about"
+	line "relaxing."
 	done
 
 AxiomStreet9Trainer1:
@@ -77,9 +78,12 @@ AxiomStreet9Trainer2SeenText:
 	done
 
 AxiomStreet9Trainer2BeatenText:
-	text "Hostility"
-	line "depleted. Reboot"
-	para "unlikely."
+	text "Result logged."
+	line "Emotional impact:"
+	para "pending. Will"
+	line "revert within five"
+	para "to seven business"
+	line "years."
 	done
 
 AxiomStreet9Trainer2:
@@ -94,10 +98,10 @@ AxiomStreet9Trainer3SeenText:
 	done
 
 AxiomStreet9Trainer3BeatenText:
-	text "A final thought:"
-	line "please water the"
-	para "plant in cubicle"
-	line "nine."
+	text "Efficiency"
+	line "measured. You were"
+	para "very efficient. I"
+	line "am deprecated."
 	done
 
 AxiomStreet9Trainer3:
@@ -110,9 +114,10 @@ AxiomStreet9Trainer4SeenText:
 	done
 
 AxiomStreet9Trainer4BeatenText:
-	text "How embarrassing."
-	line "I'll have to blame"
-	para "a glitch."
+	text "My circuits are"
+	line "warm. Is this"
+	para "grief or a bad"
+	line "fan?"
 	done
 
 AxiomStreet9Trainer4:
@@ -126,9 +131,11 @@ AxiomStreet9Trainer5SeenText:
 	done
 
 AxiomStreet9Trainer5BeatenText:
-	text "Statute 12: robots"
-	line "do not lose. I"
-	para "will amend it."
+	text "I knew the odds."
+	line "The odds were"
+	para "displayed above my"
+	line "head the entire"
+	para "time."
 	done
 
 AxiomStreet9Trainer5:
@@ -144,10 +151,9 @@ AxiomStreet9Trainer6SeenText:
 	done
 
 AxiomStreet9Trainer6BeatenText:
-	text "Form accepted. The"
-	line "river approves. I"
-	para "feel properly"
-	line "filed."
+	text "Well. There goes"
+	line "my promotion. And"
+	para "my left arm."
 	done
 
 AxiomStreet9Trainer6:

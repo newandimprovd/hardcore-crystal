@@ -12,23 +12,24 @@ DisHouse5Npc0Script:
 	jumptextfaceplayer DisHouse5Npc0Text
 
 DisHouse5Npc0Text:
-	text "I came to Dis for"
-	line "a holiday. The"
-	para "brochure was a"
-	line "lie. The hotel was"
-	para "a lie. I'm a lie."
+	text "I make soup out of"
+	line "whatever the"
+	para "chimney drops."
+	line "Hell has a lot of"
+	para "soot. It's very"
+	line "meaty."
 	done
 
 DisHouse5Npc1Script:
 	jumptextfaceplayer DisHouse5Npc1Text
 
 DisHouse5Npc1Text:
-	text "A man came in last"
-	line "week who said he"
-	para "was a monk. I"
-	line "said, is that a"
-	para "good thing? He"
-	line "said, ask the ice."
+	text "I sell mirrors."
+	line "Everyone who looks"
+	para "into them says"
+	line "it's not what they"
+	para "expected. Business"
+	line "is excellent."
 	done
 
 DisHouse5_MapEvents:

@@ -44,9 +44,9 @@ TitheStreet1Trainer0SeenText:
 	done
 
 TitheStreet1Trainer0BeatenText:
-	text "Is it Sunday yet?"
-	line "I'd like to be"
-	para "forgiven early."
+	text "I'll be in the"
+	line "vestibule, weeping"
+	para "professionally."
 	done
 
 TitheStreet1Trainer0:
@@ -59,9 +59,10 @@ TitheStreet1Trainer1SeenText:
 	done
 
 TitheStreet1Trainer1BeatenText:
-	text "Ow. That's coming"
-	line "out of my"
-	para "overtime."
+	text "It was a good"
+	line "fight. It was a"
+	para "bad fight. It was"
+	line "one of those."
 	done
 
 TitheStreet1Trainer1:
@@ -75,10 +76,9 @@ TitheStreet1Trainer2SeenText:
 	done
 
 TitheStreet1Trainer2BeatenText:
-	text "Please tell the"
-	line "sergeant I tried"
-	para "to resist arrest."
-	line "He'll understand."
+	text "Another one for"
+	line "the pile. At least"
+	para "I'm on top."
 	done
 
 TitheStreet1Trainer2:
@@ -93,8 +93,10 @@ TitheStreet1Trainer3SeenText:
 	done
 
 TitheStreet1Trainer3BeatenText:
-	text "My knees. My"
-	line "dignity. My lease."
+	text "You're the first"
+	line "honest person I've"
+	para "met here. It was"
+	line "terrifying."
 	done
 
 TitheStreet1Trainer3:
@@ -108,10 +110,10 @@ TitheStreet1Trainer4SeenText:
 	done
 
 TitheStreet1Trainer4BeatenText:
-	text "I used to be a"
-	line "good man. I used"
-	para "to be a lot of"
-	line "things."
+	text "Take my wallet."
+	line "It's empty. Take"
+	para "the receipt. It's"
+	line "worse."
 	done
 
 TitheStreet1Trainer4:
@@ -124,9 +126,8 @@ TitheStreet1Trainer5SeenText:
 	done
 
 TitheStreet1Trainer5BeatenText:
-	text "The cathedral will"
-	line "stand and I won't."
-	para "Seems about right."
+	text "Eh. At least this"
+	line "ends the sermon."
 	done
 
 TitheStreet1Trainer5:
@@ -140,9 +141,10 @@ TitheStreet1Trainer6SeenText:
 	done
 
 TitheStreet1Trainer6BeatenText:
-	text "Oof. I feel"
-	line "strangely"
-	para "forgiven."
+	text "I don't have the"
+	line "faith for a"
+	para "comeback. Or the"
+	line "cash."
 	done
 
 TitheStreet1Trainer6:

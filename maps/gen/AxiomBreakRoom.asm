@@ -133,33 +133,34 @@ AxiomBreakRoomHermit0:
 	end
 
 AxiomBreakRoomHermit0SeenText:
-	text "I have been"
-	line "meditating for"
-	para "four hundred"
-	line "years. Please"
-	para "insult me so I can"
-	line "get angry."
+	text "Sit. There's tea."
+	line "There's only one"
+	para "cup. I'll take it."
+	line "Now fight me"
+	para "politely."
 	done
 
 AxiomBreakRoomHermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "A very elegant"
+	line "loss. Please"
+	para "accept this tea."
+	line "It's cold. So is"
+	para "my heart."
 	done
 
 AxiomBreakRoomHermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "A parting gift"
+	line "from the ceremony."
+	para "The cup is empty."
+	line "The gift is not."
 	done
 
 AxiomBreakRoomHermit0AfterText:
-	text "Come back in a"
-	line "century. I will"
-	para "have a better"
-	line "joke."
+	text "I'm preparing a"
+	line "second cup. For"
+	para "you. In case you"
+	line "come back. In case"
+	para "I'm still alive."
 	done
 
 AxiomBreakRoomHermit0NoRoomText:
@@ -204,32 +205,36 @@ AxiomBreakRoomHermit1:
 	end
 
 AxiomBreakRoomHermit1SeenText:
-	text "I am a hermit, not"
-	line "a coward. Please"
-	para "hit me and then"
-	line "give me back my"
-	para "corner."
+	text "I guarded a king"
+	line "who fled. I"
+	para "guarded his horse."
+	line "I guarded his"
+	para "horse's cousin."
+	line "Now I guard a"
+	para "hole. Fight."
 	done
 
 AxiomBreakRoomHermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "I should have run"
+	line "with the king. He"
+	para "ran fast. I'm"
+	line "slower. It's the"
+	para "knees."
 	done
 
 AxiomBreakRoomHermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "Take this. His"
+	line "majesty left it"
+	para "behind. In the"
+	line "rush. In the"
+	para "shame."
 	done
 
 AxiomBreakRoomHermit1AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I still wear the"
+	line "armor. It's rusty."
+	para "It's also loud. I"
+	line "like being heard."
 	done
 
 AxiomBreakRoomHermit1NoRoomText:

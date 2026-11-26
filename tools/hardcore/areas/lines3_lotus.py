@@ -1,0 +1,102 @@
+"""Alpha 3.3 variety pass, THE LOTUS COAST: defeat lines for the street fighters, people inside the Pokecenter, Mart and houses, and the seven plaza givers."""
+
+BEATEN_NEW = [
+    "Ow. Wait. Did that hurt? I can't remember what hurt means. Do it again so I know.",
+    "I forgot I was fighting. Then I forgot I'd lost. Then you hit me. It's all coming back.",
+    "I paid good money to forget how to lose. The refund desk is closed.",
+    "Cheers. To you. To me. To whatever just happened.",
+    "I think I'm bleeding. The staff will take care of it. Smiling, as always.",
+    "Don't worry, I'm fine. I'm on a very strong cocktail. I'm sure it's fine.",
+    "My package covered one defeat. This was the second. Do I owe anyone an apology?",
+    "Is it over? I was daydreaming about a mango.",
+    "I lost? Excellent. I'll forget it by the time I leave this sentence.",
+    "I want a spa day. And a lawyer. And a spa lawyer.",
+    "You've ruined my vacation. Please leave a review. Make it five stars.",
+    "Some people lose with grace. I lose with a floral shirt.",
+    "I'm the instructor. We teach people to take a hit and smile. I'm smiling.",
+    "My trauma is fully reimbursed. I just don't know who owns it now.",
+    "That was the best pain I've ever had. Is there a package?",
+    "I can't recall your name. Please introduce yourself again in a few seconds.",
+    "I remember something. It's awful. Quick, someone hand me a drink.",
+    "I'm very relaxed. Nothing hurts. Nothing is happening. Please keep it that way.",
+    "We have a no-pain policy on this coast. Technically, you are now trespassing.",
+    "Who am I? Where's my towel? Why is the sea moving?",
+    "I paid a lot to have no regrets. I feel something suspiciously like regret.",
+    "Your violence has been absorbed into the ambience. Please enjoy the sunset.",
+    "This is why I stopped remembering things. They keep happening.",
+    "I forgot to be afraid. Now I remember. It's lovely.",
+    "Excuse me, I need to lie down in the sand and be forgotten.",
+    "Don't take it personally. I treat everyone this way. Mostly I forget them after.",
+    "You have such lovely eyes. I wish I could remember the last time I saw them.",
+    "I'll never forgive you. I'll forget you in a minute. Equal effect.",
+    "That left a mark. Ha. A mark. How very yesterday.",
+    "My wife left me for the tide. That's why I fight. Also, I was bored.",
+    "Excellent. I'm about to be turned into a cautionary brochure.",
+    "I'd love to retaliate, but I'm contractually serene.",
+    "Everything is fine. There's just a bit of ocean in my lungs.",
+    "I forgot why I attacked you. Was it money? Love? A parking dispute?",
+    "I wrote myself a note to hate you. I lost the note.",
+    "Is this what pain is? I paid a lot to be rid of it. Where's my receipt?",
+    "I'm so relaxed I might just pass through the floor.",
+    "The sea washes away everything except the bill.",
+    "I always wanted to lose beautifully. This is not beautiful. But it's very fast.",
+    "I'll blame it on the cocktails. I'll blame everything on the cocktails. It's the Lotus way.",
+    "Please be gentle. This is my first time remembering anything.",
+    "That's a first. I've never been interesting before.",
+    "Sorry, who are you? Why am I on the ground? This is fantastic.",
+    "I'll tell everyone about this after I forget it. That should be easy.",
+    "They told me defeat is just a sunset with worse lighting. I need a better window.",
+]
+
+INTERIOR_CENTER = [
+    "The nurse erased my fever by erasing my memory of having it. Works every time. I forget why I'm here.",
+    "Pain is outlawed. They sell it back to you at the pharmacy. My bill is mostly my own old toothache.",
+    "I've been waiting an hour. Or a week. Or the hour is a week. They stopped the clocks to keep us calm.",
+    "Do you remember me? Neither do I. We should split a room and see.",
+]
+
+INTERIOR_MART = [
+    "We sell sunscreen, souvenirs and substitutes for your memories. The last ones are on discount.",
+    "I used to be the manager. Then I forgot. Now I just stand here being cheerful.",
+    "Everything is named after a flower. The prices are named after your last regret.",
+    "The shelves rearrange when you aren't looking. Don't look. It's the policy.",
+]
+
+INTERIOR_HOUSE = [
+    "I'm a retired lifeguard. I saved eleven people and forgot all of them. Statistically I'm a hero.",
+    "My husband is somewhere. I forget where. I think he's on a very long errand.",
+    "I run a cocktail bar from my kitchen. Every drink tastes like a different childhood. None of them mine.",
+    "I make shell necklaces for people I've never met. They end up on the tide.",
+    "My grandmother remembers everything. She's the only one. We keep her in the attic for tourists.",
+    "I'm a masseuse. I only work on forgotten muscles. There are lots.",
+    "I teach the children to forget gracefully. We start with their names.",
+    "This house was a hotel once. I still hear guests ringing for room service. Nobody is in the rooms.",
+    "I keep a diary. Every entry is the word hello. It's the only thing I'm sure of.",
+    "I sell postcards of a beach I've never found. The buyers say they remember it fondly.",
+    "I'm the Lotus Queen's second cousin. We forgot to be proud. It's a good life.",
+    "I paint the same sunset every day. People say it's different each time. I wouldn't know.",
+    "I'm a fisherman. I fish for things people have thrown away to forget. Mostly rings.",
+    "I'm told there was a war here. I'm also told it was a luau. The people who know are drinking.",
+    "My dog digs up bones every evening. We don't talk about whose.",
+    "Please be quiet. My wife is sleeping. She's been sleeping since the Wellness Festival. Don't wake her.",
+]
+
+GIVER = [
+    ("DAIQUIRIP", "Daiquiri plus rip. A sweet sip that tears a hole.", "A little something to forget with. Don't mention where you found it."),
+    ("COCONSOLA", "Coconut plus console. It comforts and also it falls on you.", "Here. I'm trying to be useful. It didn't come naturally."),
+    ("AMNESIAC", "Amnesia plus maniac. I forget, then I giggle, then I forget why.", "A present. For whom? You. I think. Take it before I remember."),
+    ("TIDALIA", "Tide plus Dahlia. A floral person, constantly washed away.", "The sea kept giving me gifts. I'm passing it on. Don't thank me, I'll drown."),
+    ("SOLARIUM", "Solar plus delirium. Heat that thinks.", "Warm gift. I've held it in the sun all day. Smell it. No, don't."),
+    ("PALMISTRY", "Palm plus mystery. I read your future in the lines of a tree.", "You will be given a gift. I'm giving it. Prophecy complete."),
+    ("LOTUSITANIA", "Lotus plus Lusitania. A coast, a boat, a very long cruise ending somewhere.", "A parting favor, from the shore. I won't remember you. It's the gift."),
+]
+
+GIVER_AFTER = [
+    "Sorry, who gave you that? Whoever it was, they were very nice.",
+    "I gave you something? Lovely. I'm glad someone remembers it.",
+    "Have we met? I'm Amnesiac. No, wait. That was you.",
+    "The sea took something of mine again. It didn't bring back the gift.",
+    "It's hot. Everything is hot. I've forgotten what cold is. Please remind me.",
+    "I predicted this conversation. That's why I was so bored.",
+    "Take care. Or don't. The coast forgets everyone, equally.",
+]

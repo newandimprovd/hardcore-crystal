@@ -12,21 +12,22 @@ AxiomHouse7Npc0Script:
 	jumptextfaceplayer AxiomHouse7Npc0Text
 
 AxiomHouse7Npc0Text:
-	text "We have a window."
-	line "It's painted on."
-	para "It's lovely. The"
-	line "paint is wet,"
-	para "though."
+	text "My son was ranked"
+	line "in the bottom ten"
+	para "percent. We eat"
+	line "dinner in the dark"
+	para "so he can't see."
 	done
 
 AxiomHouse7Npc1Script:
 	jumptextfaceplayer AxiomHouse7Npc1Text
 
 AxiomHouse7Npc1Text:
-	text "I'm not allowed to"
-	line "love. So I hum."
-	para "It's technically"
-	line "background noise."
+	text "I rent a room to a"
+	line "cleaning drone. He"
+	para "pays in rust. I"
+	line "accept it. I'm not"
+	para "proud."
 	done
 
 AxiomHouse7_MapEvents:

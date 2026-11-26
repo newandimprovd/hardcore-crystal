@@ -12,22 +12,22 @@ LotusHouse1Npc0Script:
 	jumptextfaceplayer LotusHouse1Npc0Text
 
 LotusHouse1Npc0Text:
-	text "I tried to write a"
-	line "diary. It came out"
-	para "as a travel"
-	line "brochure."
+	text "I'm a masseuse. I"
+	line "only work on"
+	para "forgotten muscles."
+	line "There are lots."
 	done
 
 LotusHouse1Npc1Script:
 	jumptextfaceplayer LotusHouse1Npc1Text
 
 LotusHouse1Npc1Text:
-	text "I'm trying to stay"
-	line "sober on"
-	para "forgetting. It's"
-	line "harder than it"
-	para "sounds. I forgot"
-	line "why I started."
+	text "I'm the world's"
+	line "best cabana boy."
+	para "I'm also an"
+	line "accountant. And a"
+	para "priest. I forgot"
+	line "which one pays."
 	done
 
 LotusHouse1_MapEvents:

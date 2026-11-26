@@ -43,10 +43,10 @@ TitheStreet14Trainer0SeenText:
 	done
 
 TitheStreet14Trainer0BeatenText:
-	text "Mother? Is that"
-	line "you? No. It's a"
-	para "pigeon. Hello,"
-	line "pigeon."
+	text "Forgive me,"
+	line "Father. Oh. You're"
+	para "not him. Never"
+	line "mind."
 	done
 
 TitheStreet14Trainer0:
@@ -61,10 +61,9 @@ TitheStreet14Trainer1SeenText:
 	done
 
 TitheStreet14Trainer1BeatenText:
-	text "Mother? Is that"
-	line "you? No. It's a"
-	para "pigeon. Hello,"
-	line "pigeon."
+	text "Right. Now I owe"
+	line "the bank a fall"
+	para "down some stairs."
 	done
 
 TitheStreet14Trainer1:
@@ -78,10 +77,9 @@ TitheStreet14Trainer2SeenText:
 	done
 
 TitheStreet14Trainer2BeatenText:
-	text "Hold my hand. No."
-	line "The other one."
-	para "Never mind, that"
-	line "one's gone."
+	text "We were promised"
+	line "heaven. We got a"
+	para "parking fine."
 	done
 
 TitheStreet14Trainer2:
@@ -96,10 +94,11 @@ TitheStreet14Trainer3SeenText:
 	done
 
 TitheStreet14Trainer3BeatenText:
-	text "I'm calling my"
-	line "uncle. He doesn't"
-	para "exist, but I'll"
-	line "feel better."
+	text "I tithed ten"
+	line "percent of my"
+	para "strength to the"
+	line "Church. Explains a"
+	para "lot."
 	done
 
 TitheStreet14Trainer3:
@@ -112,11 +111,10 @@ TitheStreet14Trainer4SeenText:
 	done
 
 TitheStreet14Trainer4BeatenText:
-	text "I regret nothing."
-	line "I regret"
-	para "everything. I"
-	line "regret the"
-	para "sandwich."
+	text "I'll light a"
+	line "candle for you."
+	para "Maybe two. They're"
+	line "thirty bucks each."
 	done
 
 TitheStreet14Trainer4:
@@ -130,11 +128,10 @@ TitheStreet14Trainer5SeenText:
 	done
 
 TitheStreet14Trainer5BeatenText:
-	text "Don't take my"
-	line "watch. It's the"
-	para "last thing my"
-	line "father and I"
-	para "fought over."
+	text "Put it on my tab."
+	line "Everything is on"
+	para "my tab. Even my"
+	line "death."
 	done
 
 TitheStreet14Trainer5:

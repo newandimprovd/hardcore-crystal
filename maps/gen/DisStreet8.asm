@@ -41,9 +41,11 @@ DisStreet8Trainer0SeenText:
 	done
 
 DisStreet8Trainer0BeatenText:
-	text "I'll be back as a"
-	line "gargoyle. I always"
-	para "wanted a view."
+	text "That's the third"
+	line "time I've died"
+	para "this month. I'm"
+	line "getting good at"
+	para "it."
 	done
 
 DisStreet8Trainer0:
@@ -58,9 +60,11 @@ DisStreet8Trainer1SeenText:
 	done
 
 DisStreet8Trainer1BeatenText:
-	text "I knew I should"
-	line "have taken the"
-	para "other contract."
+	text "Tell the Warden I"
+	line "held the line. I"
+	para "held it for four"
+	line "seconds. That's my"
+	para "record."
 	done
 
 DisStreet8Trainer1:
@@ -75,9 +79,11 @@ DisStreet8Trainer2SeenText:
 	done
 
 DisStreet8Trainer2BeatenText:
-	text "Fine. Take my"
-	line "soul. It was only"
-	para "on loan."
+	text "Fire and ice. I"
+	line "begged for a"
+	para "middle ground."
+	line "They gave me the"
+	para "floor."
 	done
 
 DisStreet8Trainer2:
@@ -91,10 +97,11 @@ DisStreet8Trainer3SeenText:
 	done
 
 DisStreet8Trainer3BeatenText:
-	text "I'll see you at"
-	line "the next circle."
-	para "I'll be the one in"
-	line "the dumpster."
+	text "Fine. Fine! I'll"
+	line "write an angry"
+	para "letter. It will"
+	line "arrive in a"
+	para "century."
 	done
 
 DisStreet8Trainer3:
@@ -109,8 +116,9 @@ DisStreet8Trainer4SeenText:
 	done
 
 DisStreet8Trainer4BeatenText:
-	text "Is this death? Or"
-	line "is this Wednesday?"
+	text "I thought this was"
+	line "a dream. It's more"
+	para "of a reminder."
 	done
 
 DisStreet8Trainer4:
@@ -123,10 +131,10 @@ DisStreet8Trainer5SeenText:
 	done
 
 DisStreet8Trainer5BeatenText:
-	text "It's a good thing"
-	line "I'm already dead."
-	para "Otherwise that"
-	line "would've hurt."
+	text "That was"
+	line "cathartic. I'm"
+	para "going to cry now."
+	line "Then complain."
 	done
 
 DisStreet8Trainer5:

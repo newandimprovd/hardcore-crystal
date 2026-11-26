@@ -42,9 +42,10 @@ DisStreet6Trainer0SeenText:
 	done
 
 DisStreet6Trainer0BeatenText:
-	text "Form 13-D: Request"
-	line "for a second"
-	para "death. Approved."
+	text "I'm filing a"
+	line "complaint. In"
+	para "triplicate. In a"
+	line "very small hell."
 	done
 
 DisStreet6Trainer0:
@@ -59,10 +60,11 @@ DisStreet6Trainer1SeenText:
 	done
 
 DisStreet6Trainer1BeatenText:
-	text "You've defeated"
-	line "me. This will be"
-	para "reported. By me."
-	line "Right now."
+	text "My mother used to"
+	line "say I'd end up"
+	para "here. I wish she'd"
+	line "been wrong about"
+	para "the details."
 	done
 
 DisStreet6Trainer1:
@@ -77,9 +79,10 @@ DisStreet6Trainer2SeenText:
 	done
 
 DisStreet6Trainer2BeatenText:
-	text "Dead again. It"
-	line "gets easier. It"
-	para "really doesn't."
+	text "My team is"
+	line "pathetic. Like me."
+	para "Like everyone"
+	line "here."
 	done
 
 DisStreet6Trainer2:
@@ -94,11 +97,10 @@ DisStreet6Trainer3SeenText:
 	done
 
 DisStreet6Trainer3BeatenText:
-	text "Whoever put you in"
-	line "my way, I hate"
-	para "them. And thank"
-	line "them. In that"
-	para "order."
+	text "It's a good thing"
+	line "I'm already dead."
+	para "Otherwise that"
+	line "would've hurt."
 	done
 
 DisStreet6Trainer3:
@@ -112,10 +114,10 @@ DisStreet6Trainer4SeenText:
 	done
 
 DisStreet6Trainer4BeatenText:
-	text "Guilt is an ice."
-	line "It melts."
-	para "Eventually."
-	line "Hopefully. Please."
+	text "You hit like a"
+	line "landlord. That's"
+	para "not a compliment."
+	line "It's a diagnosis."
 	done
 
 DisStreet6Trainer4:
@@ -129,10 +131,10 @@ DisStreet6Trainer5SeenText:
 	done
 
 DisStreet6Trainer5BeatenText:
-	text "I'll see you in"
-	line "the bottom."
-	para "Everyone ends up"
-	line "there."
+	text "Even in Hell,"
+	line "there's a last"
+	para "word. Mine is:"
+	line "oops."
 	done
 
 DisStreet6Trainer5:
@@ -147,11 +149,10 @@ DisStreet6Trainer6SeenText:
 	done
 
 DisStreet6Trainer6BeatenText:
-	text "The flame goes"
-	line "out. A candle in a"
-	para "cave. Wait."
-	line "There's the"
-	para "bottom."
+	text "I came to this"
+	line "city to forget."
+	para "You've been very"
+	line "helpful."
 	done
 
 DisStreet6Trainer6:

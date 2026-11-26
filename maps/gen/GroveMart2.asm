@@ -18,13 +18,9 @@ GroveMart2Npc0Script:
 	jumptextfaceplayer GroveMart2Npc0Text
 
 GroveMart2Npc0Text:
-	text "Everything in here"
-	line "is barter. I'll"
-	para "give you three"
-	line "berries for that"
-	para "sword. That's not"
-	line "a sword? Then"
-	para "what's that?"
+	text "Prices are"
+	line "'suggested'. I"
+	para "suggest you pay."
 	done
 
 GroveMart2_MapEvents:

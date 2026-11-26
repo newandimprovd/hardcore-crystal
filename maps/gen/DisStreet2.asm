@@ -29,9 +29,11 @@ DisStreet2Trainer0SeenText:
 	done
 
 DisStreet2Trainer0BeatenText:
-	text "I deserve that."
-	line "All of that."
-	para "Sorry. Thank you."
+	text "I did my time."
+	line "Then I was"
+	para "transferred. Then"
+	line "I was punched."
+	para "Fair."
 	done
 
 DisStreet2Trainer0:
@@ -44,9 +46,10 @@ DisStreet2Trainer1SeenText:
 	done
 
 DisStreet2Trainer1BeatenText:
-	text "I've been hit by"
-	line "worse. Mostly by"
-	para "me."
+	text "That's one hell of"
+	line "a beating. I mean"
+	para "that"
+	line "professionally."
 	done
 
 DisStreet2Trainer1:
@@ -61,9 +64,9 @@ DisStreet2Trainer2SeenText:
 	done
 
 DisStreet2Trainer2BeatenText:
-	text "I'll go back to my"
-	line "crying. It's much"
-	para "cosier."
+	text "I'm in the wrong"
+	line "pit. Please."
+	para "Reroute."
 	done
 
 DisStreet2Trainer2:
@@ -77,10 +80,9 @@ DisStreet2Trainer3SeenText:
 	done
 
 DisStreet2Trainer3BeatenText:
-	text "Down here, it's"
-	line "all the same fire."
-	para "You'll find that"
-	line "out too."
+	text "I'll be back as a"
+	line "gargoyle. I always"
+	para "wanted a view."
 	done
 
 DisStreet2Trainer3:
@@ -94,9 +96,10 @@ DisStreet2Trainer4SeenText:
 	done
 
 DisStreet2Trainer4BeatenText:
-	text "I'm sorry for your"
-	line "loss. It's mine."
-	para "I'm very sorry."
+	text "Your technique is"
+	line "very good. Your"
+	para "soul is poorly"
+	line "maintained."
 	done
 
 DisStreet2Trainer4:
@@ -111,10 +114,10 @@ DisStreet2Trainer5SeenText:
 	done
 
 DisStreet2Trainer5BeatenText:
-	text "There's a joke"
-	line "here somewhere."
-	para "I'd tell it, but"
-	line "I'm out of breath."
+	text "Don't pity me. I"
+	line "pre-ordered this"
+	para "loss in the year"
+	line "of the plague."
 	done
 
 DisStreet2Trainer5:

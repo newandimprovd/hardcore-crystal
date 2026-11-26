@@ -12,24 +12,23 @@ AxiomHouse1Npc0Script:
 	jumptextfaceplayer AxiomHouse1Npc0Text
 
 AxiomHouse1Npc0Text:
-	text "My father sold me"
-	line "to the Farm. I'm"
-	para "very proud of him."
-	line "I'm very mad at"
-	para "him. I'm a unit."
+	text "I am a retired"
+	line "judge. All my"
+	para "verdicts were"
+	line "suggested by a"
+	para "calculator. I miss"
+	line "the calculator."
 	done
 
 AxiomHouse1Npc1Script:
 	jumptextfaceplayer AxiomHouse1Npc1Text
 
 AxiomHouse1Npc1Text:
-	text "There are rumors"
-	line "of a place where"
-	para "people marry for"
-	line "no reason. I can't"
-	para "believe it. I"
-	line "can't stop"
-	para "thinking about it."
+	text "We have a window."
+	line "It's painted on."
+	para "It's lovely. The"
+	line "paint is wet,"
+	para "though."
 	done
 
 AxiomHouse1_MapEvents:

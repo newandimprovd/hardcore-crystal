@@ -43,9 +43,10 @@ DisStreet14Trainer0SeenText:
 	done
 
 DisStreet14Trainer0BeatenText:
-	text "I knew I should've"
-	line "been nicer to the"
-	para "guards."
+	text "I clock out at"
+	line "midnight. I'd"
+	para "rather not clock"
+	line "out like this."
 	done
 
 DisStreet14Trainer0:
@@ -60,10 +61,9 @@ DisStreet14Trainer1SeenText:
 	done
 
 DisStreet14Trainer1BeatenText:
-	text "You beat me. The"
-	line "next one will be"
-	para "much harder. He"
-	line "has teeth."
+	text "I'm the lucky one."
+	line "I get to leave. In"
+	para "a bag."
 	done
 
 DisStreet14Trainer1:
@@ -78,9 +78,10 @@ DisStreet14Trainer2SeenText:
 	done
 
 DisStreet14Trainer2BeatenText:
-	text "Take my coat. It"
-	line "has a hole in it."
-	para "And a body."
+	text "I'd say 'go to"
+	line "hell', but you're"
+	para "already there."
+	line "Welcome."
 	done
 
 DisStreet14Trainer2:
@@ -95,9 +96,10 @@ DisStreet14Trainer3SeenText:
 	done
 
 DisStreet14Trainer3BeatenText:
-	text "I thought this was"
-	line "a dream. It's more"
-	para "of a reminder."
+	text "Don't thank me for"
+	line "the lesson. You'll"
+	para "be paying for it"
+	line "anyway."
 	done
 
 DisStreet14Trainer3:
@@ -111,9 +113,10 @@ DisStreet14Trainer4SeenText:
 	done
 
 DisStreet14Trainer4BeatenText:
-	text "Sentence accepted."
-	line "Please return to"
-	para "your suffering."
+	text "I'll go back to my"
+	line "desk. It's on"
+	para "fire. It's always"
+	line "on fire."
 	done
 
 DisStreet14Trainer4:
@@ -128,10 +131,9 @@ DisStreet14Trainer5SeenText:
 	done
 
 DisStreet14Trainer5BeatenText:
-	text "I won't tell"
-	line "anyone. Nobody"
-	para "will believe me."
-	line "They never do."
+	text "Fine. Take my"
+	line "soul. It was only"
+	para "on loan."
 	done
 
 DisStreet14Trainer5:

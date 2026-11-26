@@ -15,11 +15,12 @@ GrovePokecenter6Npc0Script:
 	jumptextfaceplayer GrovePokecenter6Npc0Text
 
 GrovePokecenter6Npc0Text:
-	text "Don't use the left"
-	line "bed. Something"
-	para "happened in it."
-	line "Not to me. To the"
-	para "mattress."
+	text "The healers here"
+	line "treat everyone the"
+	para "same. Which is to"
+	line "say, they stare"
+	para "and then hand you"
+	line "a root."
 	done
 
 GrovePokecenter6_MapEvents:

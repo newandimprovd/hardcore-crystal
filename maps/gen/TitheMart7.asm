@@ -18,11 +18,9 @@ TitheMart7Npc0Script:
 	jumptextfaceplayer TitheMart7Npc0Text
 
 TitheMart7Npc0Text:
-	text "The cashier is"
-	line "also a deacon. He"
-	para "charges a"
-	line "convenience fee on"
-	para "forgiveness."
+	text "Receipts are"
+	line "optional. Alibis"
+	para "are extra."
 	done
 
 TitheMart7_MapEvents:

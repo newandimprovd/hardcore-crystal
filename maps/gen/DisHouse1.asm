@@ -12,23 +12,23 @@ DisHouse1Npc0Script:
 	jumptextfaceplayer DisHouse1Npc0Text
 
 DisHouse1Npc0Text:
-	text "I came to Dis for"
-	line "a holiday. The"
-	para "brochure was a"
-	line "lie. The hotel was"
-	para "a lie. I'm a lie."
+	text "I'm a damned soul"
+	line "with a day job."
+	para "Mine is paperwork."
+	line "It's actually the"
+	para "worst punishment."
 	done
 
 DisHouse1Npc1Script:
 	jumptextfaceplayer DisHouse1Npc1Text
 
 DisHouse1Npc1Text:
-	text "A man came in last"
-	line "week who said he"
-	para "was a monk. I"
-	line "said, is that a"
-	para "good thing? He"
-	line "said, ask the ice."
+	text "The walls whisper"
+	line "my name. They're"
+	para "bad at it. They"
+	line "keep calling me"
+	para "'Gary'. I'm not"
+	line "Gary."
 	done
 
 DisHouse1_MapEvents:

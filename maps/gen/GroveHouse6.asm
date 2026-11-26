@@ -12,22 +12,24 @@ GroveHouse6Npc0Script:
 	jumptextfaceplayer GroveHouse6Npc0Text
 
 GroveHouse6Npc0Text:
-	text "I make a thousand"
-	line "arrows a year."
-	para "I've never hit a"
-	line "thing. Don't tell"
-	para "anyone."
+	text "There are no doors"
+	line "in my hut. The"
+	para "wind is my"
+	line "doorman. He isn't"
+	para "great."
 	done
 
 GroveHouse6Npc1Script:
 	jumptextfaceplayer GroveHouse6Npc1Text
 
 GroveHouse6Npc1Text:
-	text "We all sleep"
-	line "together in the"
-	para "big tent. For"
-	line "warmth. And for"
-	para "warmth."
+	text "I'm a critic. I"
+	line "came to"
+	para "disapprove. The"
+	line "weaving circle is"
+	para "very, very good,"
+	line "and now I'm"
+	para "confused."
 	done
 
 GroveHouse6_MapEvents:

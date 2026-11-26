@@ -79,9 +79,10 @@ TitheStreet6Trainer0SeenText:
 	done
 
 TitheStreet6Trainer0BeatenText:
-	text "Ha. I'd laugh but"
-	line "my lung is"
-	para "elsewhere."
+	text "Write my name in"
+	line "the book. The big"
+	para "book. The one with"
+	line "the bad names."
 	done
 
 TitheStreet6Trainer0:
@@ -95,9 +96,10 @@ TitheStreet6Trainer1SeenText:
 	done
 
 TitheStreet6Trainer1BeatenText:
-	text "Tell the parish I"
-	line "tried. They'll"
-	para "still dock my pay."
+	text "That was a clean"
+	line "hit. I'll give you"
+	para "a clean"
+	line "confession."
 	done
 
 TitheStreet6Trainer1:
@@ -112,10 +114,12 @@ TitheStreet6Trainer2SeenText:
 	done
 
 TitheStreet6Trainer2BeatenText:
-	text "It was a good"
-	line "fight. It was a"
-	para "bad fight. It was"
-	line "one of those."
+	text "A glorious"
+	line "afterlife, signed"
+	para "and stamped. I"
+	line "forgive you in"
+	para "advance. And in"
+	line "arrears."
 	done
 
 TitheStreet6Trainer2:
@@ -130,9 +134,8 @@ TitheStreet6Trainer3SeenText:
 	done
 
 TitheStreet6Trainer3BeatenText:
-	text "Nobody told me"
-	line "they'd send a"
-	para "professional."
+	text "Rest in peace, my"
+	line "pension."
 	done
 
 TitheStreet6Trainer3:
@@ -146,10 +149,9 @@ TitheStreet6Trainer4SeenText:
 	done
 
 TitheStreet6Trainer4BeatenText:
-	text "Ha ha. You win."
-	line "I'm bleeding in"
-	para "the nicest"
-	line "possible way."
+	text "Fine. You win."
+	line "Please forget my"
+	para "face."
 	done
 
 TitheStreet6Trainer4:
@@ -164,12 +166,10 @@ TitheStreet6Trainer5SeenText:
 	done
 
 TitheStreet6Trainer5BeatenText:
-	text "That's three"
-	line "generations of"
-	para "Garrity cops"
-	line "finished. Mind"
-	para "you, two were"
-	line "retired."
+	text "Mercy! I have"
+	line "children! Okay,"
+	para "one child, and"
+	line "he's a lawyer."
 	done
 
 TitheStreet6Trainer5:
@@ -182,9 +182,10 @@ TitheStreet6Trainer6SeenText:
 	done
 
 TitheStreet6Trainer6BeatenText:
-	text "I took the oath."
-	line "The oath took me."
-	para "Hello, ground."
+	text "My mom told me"
+	line "about people like"
+	para "you. She was too"
+	line "optimistic."
 	done
 
 TitheStreet6Trainer6:

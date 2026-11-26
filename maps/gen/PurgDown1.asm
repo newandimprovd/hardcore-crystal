@@ -193,32 +193,34 @@ PurgDown1Hermit0:
 	end
 
 PurgDown1Hermit0SeenText:
-	text "A visitor! I was"
-	line "beginning to talk"
-	para "to the rocks. They"
-	line "have strong"
-	para "opinions about"
-	line "moss."
+	text "Halt. I am a saint"
+	line "in training. I've"
+	para "been training for"
+	line "sixty years. Don't"
+	para "make it sixty-one."
 	done
 
 PurgDown1Hermit0BeatenText:
-	text "Take your prize"
-	line "and leave. I need"
-	para "to cry in private."
+	text "Ah. Another"
+	line "failure. Fine."
+	para "I'll add it to the"
+	line "collection."
 	done
 
 PurgDown1Hermit0GiftText:
-	text "Here. It was my"
-	line "wife's. She does"
-	para "not need it."
-	line "Mostly because she"
-	para "is a cloud now."
+	text "Take this. A saint"
+	line "gives. A failed"
+	para "saint gives and"
+	line "whines about it."
 	done
 
 PurgDown1Hermit0AfterText:
-	text "The corner is mine"
-	line "again. You may"
-	para "leave."
+	text "I tried to"
+	line "levitate this"
+	para "morning. The"
+	line "ceiling is very"
+	para "close. Let me show"
+	line "you the bruise."
 	done
 
 PurgDown1Hermit0NoRoomText:
@@ -263,37 +265,36 @@ PurgDown1Hermit1:
 	end
 
 PurgDown1Hermit1SeenText:
-	text "Go away! Wait."
-	line "Come back. Fight"
-	para "me. I am so bored"
-	line "I have started to"
-	para "like myself."
+	text "Rent's due. I"
+	line "don't care that"
+	para "you're not a"
+	line "tenant. Everyone"
+	para "pays something."
+	line "Fight me for it."
 	done
 
 PurgDown1Hermit1BeatenText:
-	text "I should have"
-	line "meditated more. Or"
-	para "less. I forget"
-	line "which."
+	text "Fine. I'll waive"
+	line "this month. Not"
+	para "the next. I'm not"
+	line "a monster."
 	done
 
 PurgDown1Hermit1GiftText:
-	text "I do not want it."
-	line "I do not want"
-	para "anything. That is"
-	line "the point. Take"
-	para "it."
+	text "Here, a deposit"
+	line "refund. The room"
+	para "was never yours."
+	line "Take it before I"
+	para "remember."
 	done
 
 PurgDown1Hermit1AfterText:
-	text "I told you"
-	line "everything. Now go"
-	para "and do something"
-	line "that matters. Or"
-	para "something that"
-	line "does not. I will"
-	para "be here either"
-	line "way."
+	text "Don't touch the"
+	line "walls. I own the"
+	para "walls. I own the"
+	line "dampness. The"
+	para "dampness is a"
+	line "separate fee."
 	done
 
 PurgDown1Hermit1NoRoomText:
