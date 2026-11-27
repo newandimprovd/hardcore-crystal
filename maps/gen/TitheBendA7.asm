@@ -13,11 +13,11 @@ TitheBendA7Hermit:
 	jumptextfaceplayer TitheBendA7HermitText
 
 TitheBendA7HermitText:
-	text "Shh. The trainers"
-	line "can't see you when"
-	para "you sit down. I"
-	line "have been sitting"
-	para "down since March."
+	text "The Mayor's statue"
+	line "has a pigeon on"
+	para "its head. It is"
+	line "the most honest"
+	para "portrait of him."
 	done
 
 TitheBendA7_MapEvents:

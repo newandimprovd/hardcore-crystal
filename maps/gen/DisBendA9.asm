@@ -13,12 +13,10 @@ DisBendA9Hermit:
 	jumptextfaceplayer DisBendA9HermitText
 
 DisBendA9HermitText:
-	text "The ground here is"
-	line "warm. It is the"
-	para "only kindness I"
-	line "have been offered"
-	para "since the"
-	line "incident."
+	text "The only company"
+	line "here is regret. At"
+	para "least he is"
+	line "punctual."
 	done
 
 DisBendA9_MapEvents:

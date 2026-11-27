@@ -13,11 +13,12 @@ TitheBendA13Hermit:
 	jumptextfaceplayer TitheBendA13HermitText
 
 TitheBendA13HermitText:
-	text "I've lived here"
-	line "nine years. Nobody"
-	para "has come to arrest"
-	line "me. I find that"
-	para "deeply insulting."
+	text "My landlord is the"
+	line "church and my"
+	para "church is the"
+	line "landlord. I pray"
+	para "rent and I pay"
+	line "prayers."
 	done
 
 TitheBendA13_MapEvents:

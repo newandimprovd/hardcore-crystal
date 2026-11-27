@@ -13,12 +13,13 @@ AxiomStreet5Hermit:
 	jumptextfaceplayer AxiomStreet5HermitText
 
 AxiomStreet5HermitText:
-	text "Do not tell them"
-	line "where I am. They"
-	para "will say they"
-	line "already know. It"
-	para "is a bluff."
-	line "Probably."
+	text "I am a human"
+	line "hiding in a glade."
+	para "The drones assume"
+	line "I am a bush. It is"
+	para "the nicest thing"
+	line "the state has done"
+	para "for me."
 	done
 
 AxiomStreet5AfterText:

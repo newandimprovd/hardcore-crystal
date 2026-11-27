@@ -13,10 +13,11 @@ LotusStreet7Hermit:
 	jumptextfaceplayer LotusStreet7HermitText
 
 LotusStreet7HermitText:
-	text "The seagulls here"
-	line "are on a retainer."
-	para "Do not feed them."
-	line "They report."
+	text "I eat lotus seeds."
+	line "They do not make"
+	para "me forget. They"
+	line "make me not mind."
+	para "It is an upgrade."
 	done
 
 LotusStreet7AfterText:

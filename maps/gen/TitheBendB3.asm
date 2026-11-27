@@ -13,11 +13,12 @@ TitheBendB3Hermit:
 	jumptextfaceplayer TitheBendB3HermitText
 
 TitheBendB3HermitText:
-	text "The pond is clean."
-	line "That is because"
-	para "I've been drinking"
-	line "all the dirty"
-	para "bits."
+	text "They offered me a"
+	line "pension if I"
+	para "stopped talking. I"
+	line "am still talking."
+	para "They are still"
+	line "offering."
 	done
 
 TitheBendB3_MapEvents:

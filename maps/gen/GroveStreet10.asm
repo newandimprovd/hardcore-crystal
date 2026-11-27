@@ -16,12 +16,12 @@ GroveStreet10Hermit:
 	jumptextfaceplayer GroveStreet10HermitText
 
 GroveStreet10HermitText:
-	text "The goat in the"
-	line "commune is smarter"
-	para "than the leader. I"
-	line "am here to say it"
-	para "where the goat"
-	line "cannot hear."
+	text "A mushroom told me"
+	line "to leave the"
+	para "tribe. I did. It"
+	line "was the same"
+	para "mushroom that told"
+	line "me to join."
 	done
 
 GroveStreet10PurgFlagScript:

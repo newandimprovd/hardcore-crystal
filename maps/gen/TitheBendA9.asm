@@ -10,12 +10,11 @@ TitheBendA9Hermit:
 	jumptextfaceplayer TitheBendA9HermitText
 
 TitheBendA9HermitText:
-	text "The Church says"
-	line "the poor shall"
-	para "inherit the earth."
-	line "I am in line. The"
-	para "earth is behind a"
-	line "lot of paperwork."
+	text "Do not look for"
+	line "the exit. The exit"
+	para "looks for you. It"
+	line "carries a"
+	para "clipboard."
 	done
 
 TitheBendA9_MapEvents:

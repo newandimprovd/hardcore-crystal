@@ -13,12 +13,11 @@ TitheBendB9Hermit:
 	jumptextfaceplayer TitheBendB9HermitText
 
 TitheBendB9HermitText:
-	text "I left the city to"
-	line "escape the tithe."
-	para "The trees also"
-	line "want ten percent."
-	para "Of what, they"
-	line "won't say."
+	text "If you meet the"
+	line "Mayor, tell him"
+	para "the hole in my"
+	line "roof is his fault."
+	para "And the roof."
 	done
 
 TitheBendB9_MapEvents:

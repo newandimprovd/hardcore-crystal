@@ -10,10 +10,12 @@ LotusBendA2Hermit:
 	jumptextfaceplayer LotusBendA2HermitText
 
 LotusBendA2HermitText:
-	text "The sunset here is"
-	line "wonderful. It"
-	para "reminds me of the"
-	line "end of everything."
+	text "I keep a journal."
+	line "Today's entry:"
+	para "'Same.'"
+	line "Yesterday's:"
+	para "'Same.' The day"
+	line "before: 'Same.'"
 	done
 
 LotusBendA2_MapEvents:

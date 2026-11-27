@@ -13,10 +13,11 @@ DisBendB5Hermit:
 	jumptextfaceplayer DisBendB5HermitText
 
 DisBendB5HermitText:
-	text "I have a theory"
-	line "that the fire is"
-	para "only paperwork. It"
-	line "burns the same."
+	text "A trainer told me"
+	line "this is not real."
+	para "I told him that is"
+	line "exactly what real"
+	para "says."
 	done
 
 DisBendB5_MapEvents:

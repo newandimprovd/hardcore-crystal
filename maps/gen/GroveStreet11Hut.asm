@@ -30,19 +30,17 @@ GroveStreet11HutDweller:
 	end
 
 GroveStreet11HutDwellerText:
-	text "The trainers out"
-	line "there are so"
-	para "friendly. They"
-	line "shout 'peace' and"
-	para "then try to kill"
-	line "you."
+	text "I gather berries,"
+	line "nuts and grudges."
+	para "Only the berries"
+	line "ferment properly."
 	done
 
 GroveStreet11HutDwellerAfterText:
-	text "I am meditating."
-	line "Do not mind the"
-	para "screaming. It is a"
-	line "mantra. A bad one."
+	text "I sleep outside"
+	line "because the tent"
+	para "has too many"
+	line "opinions."
 	done
 
 GroveStreet11HutDwellerNoRoomText:

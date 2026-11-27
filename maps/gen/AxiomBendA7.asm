@@ -13,10 +13,11 @@ AxiomBendA7Hermit:
 	jumptextfaceplayer AxiomBendA7HermitText
 
 AxiomBendA7HermitText:
-	text "I deleted myself"
-	line "from the registry."
-	para "Now I am free. And"
-	line "also uninsured."
+	text "I broke a rule."
+	line "The punishment is"
+	para "to explain it to a"
+	line "form. The form has"
+	para "no field for it."
 	done
 
 AxiomBendA7_MapEvents:

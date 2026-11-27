@@ -13,11 +13,11 @@ GroveBendA9Hermit:
 	jumptextfaceplayer GroveBendA9HermitText
 
 GroveBendA9HermitText:
-	text "I left the commune"
-	line "because it was too"
-	para "loud. Now I live"
-	line "in a tree. The"
-	para "tree is also loud."
+	text "I'm founding a"
+	line "cult of one."
+	para "Membership is"
+	line "great. The leader"
+	para "is a little tired."
 	done
 
 GroveBendA9_MapEvents:

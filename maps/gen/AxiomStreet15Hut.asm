@@ -30,17 +30,19 @@ AxiomStreet15HutDweller:
 	end
 
 AxiomStreet15HutDwellerText:
-	text "Don't speak"
-	line "loudly. The leaves"
-	para "are audited."
+	text "A bot asked me for"
+	line "ID. I showed it a"
+	para "leaf. It accepted."
+	line "We are now"
+	para "partners."
 	done
 
 AxiomStreet15HutDwellerAfterText:
-	text "The machines here"
-	line "are polite. They"
-	para "kill you with a"
-	line "smile and a"
-	para "receipt."
+	text "My circuits are"
+	line "faulty. Instead of"
+	para "obeying I wonder."
+	line "It is the cheapest"
+	para "rebellion."
 	done
 
 AxiomStreet15HutDwellerNoRoomText:

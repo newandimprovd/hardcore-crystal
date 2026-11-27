@@ -16,12 +16,12 @@ AxiomStreet13Hermit:
 	jumptextfaceplayer AxiomStreet13HermitText
 
 AxiomStreet13HermitText:
-	text "Form 27-B:"
-	line "'Request to leave"
-	para "Form 27-A'. I"
-	line "filed it. Nobody"
-	para "replied. This is"
-	line "freedom."
+	text "We call the"
+	line "executions a clean"
+	para "exit. I wish"
+	line "someone would"
+	para "clean up after"
+	line "them."
 	done
 
 AxiomStreet13AfterText:

@@ -13,11 +13,11 @@ LotusBendA5Hermit:
 	jumptextfaceplayer LotusBendA5HermitText
 
 LotusBendA5HermitText:
-	text "I live in a shell."
-	line "I cannot remember"
-	para "who was in it"
-	line "before. We share"
-	para "the lease."
+	text "Nobody here"
+	line "fights. They hire"
+	para "someone to be"
+	line "angry for them. I"
+	para "am between jobs."
 	done
 
 LotusBendA5_MapEvents:

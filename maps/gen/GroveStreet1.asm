@@ -16,10 +16,12 @@ GroveStreet1Hermit:
 	jumptextfaceplayer GroveStreet1HermitText
 
 GroveStreet1HermitText:
-	text "I am meditating."
-	line "Do not mind the"
-	para "screaming. It is a"
-	line "mantra. A bad one."
+	text "I walk around"
+	line "naked because the"
+	para "bears do not"
+	line "judge. The"
+	para "mosquitoes do."
+	line "They are critics."
 	done
 
 GroveStreet1AfterText:

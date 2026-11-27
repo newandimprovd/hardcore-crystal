@@ -13,9 +13,10 @@ TitheBendB7Hermit:
 	jumptextfaceplayer TitheBendB7HermitText
 
 TitheBendB7HermitText:
-	text "Do not drink from"
-	line "the stream. It has"
-	para "been taxed."
+	text "The pigeons here"
+	line "are unionised. The"
+	para "strikes are mostly"
+	line "about breadcrumbs."
 	done
 
 TitheBendB7_MapEvents:

@@ -16,11 +16,12 @@ AxiomStreet3Hermit:
 	jumptextfaceplayer AxiomStreet3HermitText
 
 AxiomStreet3HermitText:
-	text "This glade is not"
-	line "on the map. I am"
-	para "not on the map. We"
-	line "are a perfect"
-	para "couple."
+	text "I have not spoken"
+	line "to a robot in a"
+	para "month. I miss the"
+	line "arguments. They"
+	para "are always correct"
+	line "and never kind."
 	done
 
 AxiomStreet3AfterText:

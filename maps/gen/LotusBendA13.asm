@@ -13,10 +13,12 @@ LotusBendA13Hermit:
 	jumptextfaceplayer LotusBendA13HermitText
 
 LotusBendA13HermitText:
-	text "The tide took my"
-	line "watch. It also"
-	para "took my reasons. I"
-	line "miss the watch."
+	text "A man in a white"
+	line "suit asked if I am"
+	para "happy. I said"
+	line "relaxed. He smiled"
+	para "and left. I have"
+	line "not slept since."
 	done
 
 LotusBendA13_MapEvents:

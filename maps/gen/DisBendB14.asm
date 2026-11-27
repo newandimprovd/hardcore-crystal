@@ -10,12 +10,10 @@ DisBendB14Hermit:
 	jumptextfaceplayer DisBendB14HermitText
 
 DisBendB14HermitText:
-	text "I am the last"
-	line "honest man down"
-	para "here. Not by"
-	line "choice. I could"
-	para "not find the other"
-	line "kind."
+	text "I have a theory"
+	line "that the fire is"
+	para "only paperwork. It"
+	line "burns the same."
 	done
 
 DisBendB14_MapEvents:

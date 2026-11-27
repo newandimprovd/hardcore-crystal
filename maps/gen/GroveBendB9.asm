@@ -13,11 +13,10 @@ GroveBendB9Hermit:
 	jumptextfaceplayer GroveBendB9HermitText
 
 GroveBendB9HermitText:
-	text "This glade belongs"
-	line "to everyone."
-	para "Please leave. I"
-	line "mean it"
-	para "communally."
+	text "I quit the hunt."
+	line "Now I gather. The"
+	para "salad has so far"
+	line "not fought back."
 	done
 
 GroveBendB9_MapEvents:

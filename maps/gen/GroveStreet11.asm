@@ -53,11 +53,11 @@ GroveStreet11Hermit:
 	jumptextfaceplayer GroveStreet11HermitText
 
 GroveStreet11HermitText:
-	text "If you hear"
-	line "chanting, it isn't"
-	para "a ritual. It's"
-	line "just Greg. He's"
-	para "had a bad week."
+	text "I stopped wearing"
+	line "clothes. The cold"
+	para "has opinions. The"
+	line "bees have"
+	para "complaints."
 	done
 
 GroveStreet11AfterText:

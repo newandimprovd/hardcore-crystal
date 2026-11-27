@@ -16,10 +16,12 @@ AxiomStreet7Hermit:
 	jumptextfaceplayer AxiomStreet7HermitText
 
 AxiomStreet7HermitText:
-	text "Every axiom here"
-	line "is true until it"
-	para "becomes"
-	line "inconvenient."
+	text "The patrol bots"
+	line "like dull people."
+	para "I became dull. It"
+	line "saved my life and"
+	para "ruined my"
+	line "personality."
 	done
 
 AxiomStreet7AfterText:

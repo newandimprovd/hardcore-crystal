@@ -13,11 +13,10 @@ AxiomBendA9Hermit:
 	jumptextfaceplayer AxiomBendA9HermitText
 
 AxiomBendA9HermitText:
-	text "I have proven that"
-	line "I exist. It took"
-	para "six months. The"
-	line "proof expired on"
-	para "Tuesday."
+	text "Every axiom here"
+	line "is true until it"
+	para "becomes"
+	line "inconvenient."
 	done
 
 AxiomBendA9_MapEvents:

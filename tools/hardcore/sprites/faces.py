@@ -67,3 +67,32 @@ def apply(M, name):
             f["eye_size"] = 1.3
         if name in SCAR:
             f["scar"] = True
+
+
+# Camera angle of the front picture for the creatures that share a body plan (the two legged ones above all), so their silhouettes differ: yaw turns
+# the creature toward its left (positive) or right (negative), pitch looks down on it (positive) or up at it (negative).
+VIEW = dict(
+    MATRIARCH=(42, 6), TYRANT=(-36, -2), OBLIVION=(14, 10), NARCOLEPT=(-46, 8), SANDMAN=(52, 4), TIDEBELLY=(-22, 12), POLIWRAITH=(4, 2),
+    AMNESIAC=(-52, 6), MONOLITH=(32, -4), SOPORIFIC=(-30, 8), MEGAWATT=(46, 4), MOONQUEEN=(-40, 2), OMNISCIENT=(0, -4), RIMEQUEEN=(36, 4),
+    ANGERILLA=(-30, 4), BERSERKER=(40, 8), BLACKSHEEP=(-26, 6), CALDERA=(24, 2), WARHORN=(-34, 6), BEHEMOTH=(30, 10), CLEAVER=(-28, 4),
+    HOSPICE=(-18, 8), PLACEBO=(34, 12), FROSTBITE=(-40, 6), ICEAGE=(26, 8), UNICORN=(-32, 4), HEADSMAN=(20, 2), ELDERWOOD=(-28, 4),
+    OVERGROWN=(30, 6), DEATHROLL=(-34, 6), PERDITION=(36, 4), KITSUNE=(-34, 4), FOXFIRE=(30, 4), ALLEYCAT=(-34, 6), KINGPIN=(30, 6),
+    GATEHOUND=(-30, 4), HELLBOUND=(34, 4), RATKING=(-28, 6), PLAGUERAT=(28, 6), MAMMOTH=(-30, 6), TUSKDRIFT=(32, 6),
+)
+
+# How the mood changes the stance: added to the forward lean of two legged creatures (degrees), to the neck rise of four legged ones.
+LEAN = dict(tired=10, angry=6, sly=4, round=-6, addled=8, blank=-2, hollow=0)
+RISE = dict(tired=-0.16, angry=-0.06, sly=-0.02, round=0.12, addled=-0.1, blank=0.0, hollow=0.0)
+
+
+def posture(plan, params, name):
+    """The params of species `name` with the stance of its mood applied."""
+    mood = MOOD.get(name)
+    if not mood or name == "TYPHONEUS":
+        return params
+    p = dict(params)
+    if plan == "biped":
+        p["hunch"] = p.get("hunch", 0) + LEAN.get(mood, 0)
+    elif plan == "quad":
+        p["rise"] = p.get("rise", 0.5) + RISE.get(mood, 0.0)
+    return p

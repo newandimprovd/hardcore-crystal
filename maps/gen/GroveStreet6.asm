@@ -55,11 +55,11 @@ GroveStreet6Hermit:
 	jumptextfaceplayer GroveStreet6HermitText
 
 GroveStreet6HermitText:
-	text "I'm founding a"
-	line "cult of one."
-	para "Membership is"
-	line "great. The leader"
-	para "is a little tired."
+	text "The mushrooms here"
+	line "talk. Mostly they"
+	para "say 'sell'. I"
+	line "don't know what."
+	para "I'm scared."
 	done
 
 GroveStreet6AfterText:

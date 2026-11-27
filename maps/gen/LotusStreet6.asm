@@ -50,11 +50,10 @@ LotusStreet6Hermit:
 	jumptextfaceplayer LotusStreet6HermitText
 
 LotusStreet6HermitText:
-	text "Everyone says the"
-	line "sea is calming."
-	para "The sea is a bully"
-	line "with good"
-	para "lighting."
+	text "They sell sunsets"
+	line "by the hour. I"
+	para "bought one. It was"
+	line "recycled."
 	done
 
 LotusStreet6AfterText:

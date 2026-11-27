@@ -16,9 +16,11 @@ DisStreet14Hermit:
 	jumptextfaceplayer DisStreet14HermitText
 
 DisStreet14HermitText:
-	text "Be careful. The"
-	line "trainers are the"
-	para "nice ones."
+	text "My tears freeze on"
+	line "my face. They make"
+	para "a very elegant"
+	line "mask. Some days I"
+	para "wear it to dinner."
 	done
 
 DisStreet14AfterText:

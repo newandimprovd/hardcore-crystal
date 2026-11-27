@@ -16,11 +16,12 @@ AxiomStreet8Hermit:
 	jumptextfaceplayer AxiomStreet8HermitText
 
 AxiomStreet8HermitText:
-	text "A bot asked me for"
-	line "ID. I showed it a"
-	para "leaf. It accepted."
-	line "We are now"
-	para "partners."
+	text "I used to be a"
+	line "gene auditor. I"
+	para "audited myself"
+	line "once. I have been"
+	para "in this glade ever"
+	line "since."
 	done
 
 AxiomStreet8AfterText:

@@ -16,11 +16,11 @@ TitheStreet4Hermit:
 	jumptextfaceplayer TitheStreet4HermitText
 
 TitheStreet4HermitText:
-	text "People on the road"
-	line "keep screaming and"
-	para "fainting. I think"
-	line "it's a wellness"
-	para "program."
+	text "A trainer called"
+	line "me a vagrant. I"
+	para "called him a"
+	line "customer. We both"
+	para "lost money."
 	done
 
 TitheStreet4AfterText:

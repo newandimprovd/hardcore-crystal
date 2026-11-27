@@ -10,11 +10,12 @@ TitheBendA5Hermit:
 	jumptextfaceplayer TitheBendA5HermitText
 
 TitheBendA5HermitText:
-	text "A nun told me this"
-	line "glade is blessed."
-	para "It is not. She was"
-	line "just selling the"
-	para "deed."
+	text "The streetlights"
+	line "of the city never"
+	para "reached this"
+	line "glade. I consider"
+	para "that a gift and a"
+	line "lawsuit."
 	done
 
 TitheBendA5_MapEvents:

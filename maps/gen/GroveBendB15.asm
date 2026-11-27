@@ -13,10 +13,11 @@ GroveBendB15Hermit:
 	jumptextfaceplayer GroveBendB15HermitText
 
 GroveBendB15HermitText:
-	text "I came for"
-	line "silence. The birds"
-	para "are very loud"
-	line "about it."
+	text "I left the commune"
+	line "because it was too"
+	para "loud. Now I live"
+	line "in a tree. The"
+	para "tree is also loud."
 	done
 
 GroveBendB15_MapEvents:

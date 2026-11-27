@@ -16,9 +16,12 @@ DisStreet3Hermit:
 	jumptextfaceplayer DisStreet3HermitText
 
 DisStreet3HermitText:
-	text "The river is not"
-	line "water. It's"
-	para "deadlines."
+	text "The walls of Dis"
+	line "are tall to keep"
+	para "the rest of hell"
+	line "out. The rest of"
+	para "hell does not want"
+	line "in."
 	done
 
 DisStreet3AfterText:

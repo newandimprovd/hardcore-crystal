@@ -16,10 +16,11 @@ AxiomStreet14Hermit:
 	jumptextfaceplayer AxiomStreet14HermitText
 
 AxiomStreet14HermitText:
-	text "The glitch in the"
-	line "system is me."
-	para "Please don't patch"
-	line "me."
+	text "This glade is not"
+	line "on the map. I am"
+	para "not on the map. We"
+	line "are a perfect"
+	para "couple."
 	done
 
 AxiomStreet14AfterText:

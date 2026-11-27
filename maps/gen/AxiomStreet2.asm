@@ -16,10 +16,12 @@ AxiomStreet2Hermit:
 	jumptextfaceplayer AxiomStreet2HermitText
 
 AxiomStreet2HermitText:
-	text "I'm a robot. I'm"
-	line "not allowed to say"
-	para "that. Beep. I"
-	line "mean, 'tree'."
+	text "They tell us the"
+	line "sorting is for our"
+	para "own good. My good"
+	line "is somewhere in a"
+	para "basement,"
+	line "labelled."
 	done
 
 AxiomStreet2AfterText:

@@ -16,10 +16,12 @@ LotusStreet2Hermit:
 	jumptextfaceplayer LotusStreet2HermitText
 
 LotusStreet2HermitText:
-	text "The tide took my"
-	line "watch. It also"
-	para "took my reasons. I"
-	line "miss the watch."
+	text "The beach is"
+	line "crowded with the"
+	para "ones who gave up"
+	line "first. It is a"
+	para "very competitive"
+	line "hobby."
 	done
 
 LotusStreet2AfterText:

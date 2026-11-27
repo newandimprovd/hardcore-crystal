@@ -30,21 +30,22 @@ GroveStreet1HutDweller:
 	end
 
 GroveStreet1HutDwellerText:
-	text "The goat in the"
-	line "commune is smarter"
-	para "than the leader. I"
-	line "am here to say it"
-	para "where the goat"
-	line "cannot hear."
+	text "The commune holds"
+	line "a meeting for"
+	para "everything. I came"
+	line "here for the one"
+	para "place without a"
+	line "quorum."
 	done
 
 GroveStreet1HutDwellerAfterText:
-	text "The trainers out"
-	line "there are so"
-	para "friendly. They"
-	line "shout 'peace' and"
-	para "then try to kill"
-	line "you."
+	text "A trainer came to"
+	line "take my berries. I"
+	para "offered him the"
+	line "whole bush. He"
+	para "felt awkward and"
+	line "left. That is"
+	para "communism."
 	done
 
 GroveStreet1HutDwellerNoRoomText:

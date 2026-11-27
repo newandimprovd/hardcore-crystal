@@ -16,11 +16,10 @@ GroveStreet4Hermit:
 	jumptextfaceplayer GroveStreet4HermitText
 
 GroveStreet4HermitText:
-	text "This tree is my"
-	line "friend. The tree"
-	para "has not said so."
-	line "It also has not"
-	para "said no."
+	text "I came for"
+	line "silence. The birds"
+	para "are very loud"
+	line "about it."
 	done
 
 GroveStreet4AfterText:

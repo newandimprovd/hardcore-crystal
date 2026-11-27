@@ -16,11 +16,9 @@ DisStreet9Hermit:
 	jumptextfaceplayer DisStreet9HermitText
 
 DisStreet9HermitText:
-	text "The flames are"
-	line "warm. I stopped"
-	para "complaining. The"
-	line "complaint box is"
-	para "also on fire."
+	text "The river is not"
+	line "water. It's"
+	para "deadlines."
 	done
 
 DisStreet9AfterText:

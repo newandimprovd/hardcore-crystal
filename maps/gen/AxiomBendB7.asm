@@ -13,12 +13,12 @@ AxiomBendB7Hermit:
 	jumptextfaceplayer AxiomBendB7HermitText
 
 AxiomBendB7HermitText:
-	text "The sensors here"
-	line "are down. The"
-	para "sensors are always"
-	line "down. It is how"
-	para "the sensors"
-	line "survive."
+	text "I fell in love"
+	line "with someone of"
+	para "the wrong type. We"
+	line "meet here. The"
+	para "trees have not"
+	line "reported us."
 	done
 
 AxiomBendB7_MapEvents:

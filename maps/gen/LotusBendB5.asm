@@ -13,11 +13,12 @@ LotusBendB5Hermit:
 	jumptextfaceplayer LotusBendB5HermitText
 
 LotusBendB5HermitText:
-	text "The waves keep"
-	line "saying 'shh'. I"
-	para "think they're"
-	line "embarrassed for"
-	para "us."
+	text "Do not mention the"
+	line "mansion on the"
+	para "hill. The hill is"
+	line "listening. It is"
+	para "also paying the"
+	line "bills."
 	done
 
 LotusBendB5_MapEvents:

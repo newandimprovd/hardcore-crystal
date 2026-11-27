@@ -30,18 +30,17 @@ LotusStreet11HutDweller:
 	end
 
 LotusStreet11HutDwellerText:
-	text "I've been lying on"
-	line "this beach for"
-	para "eleven years. The"
-	line "tide has asked me"
-	para "to move twice."
+	text "I sold my soul for"
+	line "a better view. The"
+	para "view is fine. The"
+	line "soul was only a"
+	para "bit worn."
 	done
 
 LotusStreet11HutDwellerAfterText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+	text "My yacht is a deck"
+	line "chair with"
+	para "ambition."
 	done
 
 LotusStreet11HutDwellerNoRoomText:

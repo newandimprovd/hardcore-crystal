@@ -13,11 +13,13 @@ GroveBendA2Hermit:
 	jumptextfaceplayer GroveBendA2HermitText
 
 GroveBendA2HermitText:
-	text "If you hear"
-	line "chanting, it isn't"
-	para "a ritual. It's"
-	line "just Greg. He's"
-	para "had a bad week."
+	text "Nobody is in"
+	line "charge here. I"
+	para "find that worse"
+	line "than being in"
+	para "charge. At least"
+	line "you can blame"
+	para "someone."
 	done
 
 GroveBendA2_MapEvents:

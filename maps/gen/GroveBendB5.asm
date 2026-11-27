@@ -13,11 +13,12 @@ GroveBendB5Hermit:
 	jumptextfaceplayer GroveBendB5HermitText
 
 GroveBendB5HermitText:
-	text "There is a"
-	line "mushroom here that"
-	para "agrees with"
-	line "everything. I call"
-	para "it my spouse."
+	text "I tried to hunt a"
+	line "deer. We stared at"
+	para "each other. We"
+	line "both went home and"
+	para "thought about our"
+	line "lives."
 	done
 
 GroveBendB5_MapEvents:

@@ -13,11 +13,11 @@ AxiomBendA12Hermit:
 	jumptextfaceplayer AxiomBendA12HermitText
 
 AxiomBendA12HermitText:
-	text "I escaped the"
-	line "Registry. I'm no"
-	para "longer a number."
-	line "I'm a letter. The"
-	para "letter is Q."
+	text "The machines here"
+	line "are polite. They"
+	para "kill you with a"
+	line "smile and a"
+	para "receipt."
 	done
 
 AxiomBendA12_MapEvents:

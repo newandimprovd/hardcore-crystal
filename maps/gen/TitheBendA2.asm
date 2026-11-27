@@ -13,12 +13,11 @@ TitheBendA2Hermit:
 	jumptextfaceplayer TitheBendA2HermitText
 
 TitheBendA2HermitText:
-	text "I left the city to"
-	line "escape the tithe."
-	para "The trees also"
-	line "want ten percent."
-	para "Of what, they"
-	line "won't say."
+	text "The pond is clean."
+	line "That is because"
+	para "I've been drinking"
+	line "all the dirty"
+	para "bits."
 	done
 
 TitheBendA2_MapEvents:

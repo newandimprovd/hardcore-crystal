@@ -52,11 +52,11 @@ TitheStreet6Hermit:
 	jumptextfaceplayer TitheStreet6HermitText
 
 TitheStreet6HermitText:
-	text "I used to be a"
-	line "loan officer. Now"
-	para "I'm a loan."
-	line "Somebody owes me"
-	para "an apology."
+	text "I tried to repent."
+	line "The line was long"
+	para "and the priest"
+	line "kept checking his"
+	para "watch. I left."
 	done
 
 TitheStreet6AfterText:

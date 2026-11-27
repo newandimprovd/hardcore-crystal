@@ -13,13 +13,12 @@ AxiomStreet10Hermit:
 	jumptextfaceplayer AxiomStreet10HermitText
 
 AxiomStreet10HermitText:
-	text "I am hiding from"
-	line "my own audit. It"
-	para "is going very"
-	line "well. The audit"
-	para "has not found me."
-	line "It has found my"
-	para "sister."
+	text "Form 27-B:"
+	line "'Request to leave"
+	para "Form 27-A'. I"
+	line "filed it. Nobody"
+	para "replied. This is"
+	line "freedom."
 	done
 
 AxiomStreet10PurgFlagScript:

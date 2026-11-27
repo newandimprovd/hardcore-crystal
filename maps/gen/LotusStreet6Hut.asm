@@ -30,20 +30,21 @@ LotusStreet6HutDweller:
 	end
 
 LotusStreet6HutDwellerText:
-	text "I keep a journal."
-	line "Today's entry:"
-	para "'Same.'"
-	line "Yesterday's:"
-	para "'Same.' The day"
-	line "before: 'Same.'"
+	text "The lotus does not"
+	line "heal. It just"
+	para "turns the volume"
+	line "down. Sometimes"
+	para "that is all you"
+	line "can afford."
 	done
 
 LotusStreet6HutDwellerAfterText:
-	text "I saw a trainer"
-	line "yawn mid-attack."
-	para "It was the most"
-	line "honest violence I"
-	para "have ever seen."
+	text "The cocktails here"
+	line "have names that"
+	para "sound like"
+	line "regrets. They"
+	para "taste like"
+	line "permission."
 	done
 
 LotusStreet6HutDwellerNoRoomText:

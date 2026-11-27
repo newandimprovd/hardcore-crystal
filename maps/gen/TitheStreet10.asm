@@ -13,11 +13,12 @@ TitheStreet10Hermit:
 	jumptextfaceplayer TitheStreet10HermitText
 
 TitheStreet10HermitText:
-	text "I lost a bet with"
-	line "the Mayor. The"
-	para "stake was my"
-	line "shadow. It is on a"
-	para "payroll."
+	text "My ex wife took"
+	line "the house and the"
+	para "dog. I kept the"
+	line "glade and the"
+	para "grudge. The grudge"
+	line "is growing better."
 	done
 
 TitheStreet10PurgFlagScript:

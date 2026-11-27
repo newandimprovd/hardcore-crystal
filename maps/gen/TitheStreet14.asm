@@ -16,11 +16,10 @@ TitheStreet14Hermit:
 	jumptextfaceplayer TitheStreet14HermitText
 
 TitheStreet14HermitText:
-	text "I used to be a"
-	line "loan officer. Now"
-	para "I'm a loan."
-	line "Somebody owes me"
-	para "an apology."
+	text "I count my sins"
+	line "every morning. It"
+	para "is a good way to"
+	line "stay employed."
 	done
 
 TitheStreet14AfterText:

@@ -16,10 +16,11 @@ DisStreet1Hermit:
 	jumptextfaceplayer DisStreet1HermitText
 
 DisStreet1HermitText:
-	text "I'm not dead. I'm"
-	line "just in the wrong"
-	para "queue. It's been"
-	line "forty years."
+	text "The flames are"
+	line "warm. I stopped"
+	para "complaining. The"
+	line "complaint box is"
+	para "also on fire."
 	done
 
 DisStreet1AfterText:
