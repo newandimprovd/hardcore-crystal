@@ -162,7 +162,7 @@ AxiomStreet15_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 18, 11, AXIOM_STREET15_HUT, 1
+	warp_event 19, 11, AXIOM_STREET15_HUT, 1
 
 	def_coord_events
 

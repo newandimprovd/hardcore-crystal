@@ -13,10 +13,11 @@ GroveBendB8Hermit:
 	jumptextfaceplayer GroveBendB8HermitText
 
 GroveBendB8HermitText:
-	text "I came for"
-	line "silence. The birds"
-	para "are very loud"
-	line "about it."
+	text "This glade belongs"
+	line "to everyone."
+	para "Please leave. I"
+	line "mean it"
+	para "communally."
 	done
 
 GroveBendB8_MapEvents:

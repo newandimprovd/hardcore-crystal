@@ -32,11 +32,11 @@ GroveBoutique2Npc0Script:
 	jumptextfaceplayer GroveBoutique2Npc0Text
 
 GroveBoutique2Npc0Text:
-	text "I'm a weaver."
-	line "Everything I make"
-	para "is a flag. Of"
-	line "what, I couldn't"
-	para "say."
+	text "We have no locks,"
+	line "so I keep my"
+	para "secrets in a hole."
+	line "The hole is also"
+	para "communal."
 	done
 
 GroveBoutique2_MapEvents:

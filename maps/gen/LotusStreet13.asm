@@ -195,7 +195,7 @@ LotusStreet13_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 18, 11, LOTUS_STREET13_HUT, 1
+	warp_event 19, 11, LOTUS_STREET13_HUT, 1
 
 	def_coord_events
 

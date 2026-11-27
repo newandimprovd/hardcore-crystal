@@ -30,19 +30,19 @@ GroveStreet11HutDweller:
 	end
 
 GroveStreet11HutDwellerText:
-	text "There is a"
-	line "mushroom here that"
-	para "agrees with"
-	line "everything. I call"
-	para "it my spouse."
+	text "The trainers out"
+	line "there are so"
+	para "friendly. They"
+	line "shout 'peace' and"
+	para "then try to kill"
+	line "you."
 	done
 
 GroveStreet11HutDwellerAfterText:
-	text "I'm founding a"
-	line "cult of one."
-	para "Membership is"
-	line "great. The leader"
-	para "is a little tired."
+	text "I am meditating."
+	line "Do not mind the"
+	para "screaming. It is a"
+	line "mantra. A bad one."
 	done
 
 GroveStreet11HutDwellerNoRoomText:

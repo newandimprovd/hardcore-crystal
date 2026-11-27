@@ -32,19 +32,19 @@ DisBoutique2Npc0Script:
 	jumptextfaceplayer DisBoutique2Npc0Text
 
 DisBoutique2Npc0Text:
-	text "My daughter is a"
-	line "candle in a church"
-	para "I can't enter. I"
-	line "visit on Sundays"
-	para "and stand outside."
+	text "I keep demons as"
+	line "pets. The little"
+	para "ones. They don't"
+	line "bite. They chew"
+	para "your sleep."
 	done
 
 DisBoutique2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, DIS_PLAZA2, 4
-	warp_event  3,  7, DIS_PLAZA2, 4
+	warp_event  2,  7, DIS_PLAZA2, 5
+	warp_event  3,  7, DIS_PLAZA2, 5
 
 	def_coord_events
 

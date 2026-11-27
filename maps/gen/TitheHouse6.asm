@@ -12,21 +12,23 @@ TitheHouse6Npc0Script:
 	jumptextfaceplayer TitheHouse6Npc0Text
 
 TitheHouse6Npc0Text:
-	text "I've lived here"
-	line "eleven years."
-	para "Nobody knows. Not"
-	line "even the building."
+	text "I collect hymnals."
+	line "Not for the hymns."
+	para "The margins are"
+	line "full of"
+	para "confessions. Don't"
+	line "tell."
 	done
 
 TitheHouse6Npc1Script:
 	jumptextfaceplayer TitheHouse6Npc1Text
 
 TitheHouse6Npc1Text:
-	text "I used to sing in"
-	line "the choir. They"
-	para "asked me to stop."
-	line "Quietly. With a"
-	para "pillow."
+	text "This place used to"
+	line "be a chapel. The"
+	para "pews are still"
+	line "here. I rent them"
+	para "out."
 	done
 
 TitheHouse6YakuzaScript:

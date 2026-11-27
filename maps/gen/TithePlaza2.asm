@@ -293,31 +293,32 @@ TithePlaza2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 22,  7, TITHE_POKECENTER2, 1
-	warp_event 16, 13, TITHE_MART2, 1
-	warp_event 32, 25, TITHE_HOUSE2, 1
-	warp_event 24, 25, TITHE_BOUTIQUE2, 1
+	warp_event 29, 15, TITHE_POKECENTER2, 1
+	warp_event 33, 25, TITHE_MART2, 1
+	warp_event 23, 13, TITHE_HOUSE2, 1
+	warp_event 24, 13, TITHE_HOUSE2, 1
+	warp_event 17, 23, TITHE_BOUTIQUE2, 1
 
 	def_coord_events
-	coord_event 18, 30, -1, TithePlaza2Rival1RivalScript
-	coord_event 19, 30, -1, TithePlaza2Rival1RivalScript
-	coord_event 20, 30, -1, TithePlaza2Rival1RivalScript
-	coord_event 21, 30, -1, TithePlaza2Rival1RivalScript
 	coord_event 22, 30, -1, TithePlaza2Rival1RivalScript
 	coord_event 23, 30, -1, TithePlaza2Rival1RivalScript
+	coord_event 24, 30, -1, TithePlaza2Rival1RivalScript
+	coord_event 25, 30, -1, TithePlaza2Rival1RivalScript
+	coord_event 26, 30, -1, TithePlaza2Rival1RivalScript
+	coord_event 27, 30, -1, TithePlaza2Rival1RivalScript
 
 	def_bg_events
 
 	def_object_events
-	object_event 24,  8, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2DebateA, -1
-	object_event 25,  8, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2DebateB, -1
-	object_event 13, 18, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Giver, -1
-	object_event 25, 14, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2Persona1, -1
-	object_event 35,  8, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Persona2, -1
-	object_event  6,  9, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Persona4, -1
-	object_event 14, 12, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2Persona6, -1
-	object_event 27, 15, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie5, -1
-	object_event 13, 26, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie6, -1
-	object_event 21, 26, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Rival1RivalScript, EVENT_NAMED_RIVAL1_DONE
-	object_event 11,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Duel, -1
+	object_event  4, 10, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza2DebateA, -1
+	object_event  5, 10, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2DebateB, -1
+	object_event 19, 10, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Giver, -1
+	object_event 16, 25, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2Persona1, -1
+	object_event  3,  9, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza2Persona2, -1
+	object_event 18, 18, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Persona4, -1
+	object_event 30, 11, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza2Persona6, -1
+	object_event 18, 15, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie5, -1
+	object_event 31, 19, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Townie6, -1
+	object_event 25, 26, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Rival1RivalScript, EVENT_NAMED_RIVAL1_DONE
+	object_event 15, 20, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza2Duel, -1
 

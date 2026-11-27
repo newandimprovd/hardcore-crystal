@@ -125,9 +125,10 @@ def _art_kit(tileset, mod, weights):
         auto["facade"] = [fac[i] for i, wt in enumerate(mod.FACADE_WEIGHTS) for _ in range(wt)]
     plaza = [b for b in r["plaza"][:1] for _ in range(1)] + [b for b in r["plaza"][1:] for _ in range(3)]
     return Kit(tileset, floor=floor, wall=auto["mass"] + auto["facade"],
-               plaza=plaza, center=[[ids["cr_l"], ids["cr_r"]], [ids["c_door"], ids["c_sign"]]],
-               mart=[[ids["cr_l"], ids["cr_r"]], [ids["m_door"], ids["m_sign"]]],
-               house=[ids["h_door"], ids["h_side"]], house_roof=[ids["hr_l"], ids["hr_r"]], rift=ids["rift"],
+               plaza=plaza, center=[[ids["cr_l"], ids["cr_r"]], [ids["c_door_r"], ids["c_sign"]]],
+               mart=[[ids["cr_l"], ids["cr_r"]], [ids["m_door_r"], ids["m_sign"]]],
+               house=[ids["h_door_r"], ids["h_win2"]], house_double=[ids["h_door_r"], ids["h_door"]],
+               house_roof=[ids["hr_l"], ids["hr_r"]], upper=list(r["upper"]), gate_signs=list(r["gate_sign"]), rift=ids["rift"],
                border=ids["border"], auto=auto, grass=r["grass"], scn=t.scn, style=STYLE[tileset])
 
 

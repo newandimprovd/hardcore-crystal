@@ -12,23 +12,24 @@ GroveHouse5Npc0Script:
 	jumptextfaceplayer GroveHouse5Npc0Text
 
 GroveHouse5Npc0Text:
-	text "My neighbor is a"
-	line "prophet. He"
-	para "predicted rain. It"
-	line "rained on him"
-	para "specifically."
+	text "There are no doors"
+	line "in my hut. The"
+	para "wind is my"
+	line "doorman. He isn't"
+	para "great."
 	done
 
 GroveHouse5Npc1Script:
 	jumptextfaceplayer GroveHouse5Npc1Text
 
 GroveHouse5Npc1Text:
-	text "They elected me"
-	line "mayor by accident."
-	para "I refused. They"
-	line "elected me again."
-	para "It's called"
-	line "democracy."
+	text "I'm a critic. I"
+	line "came to"
+	para "disapprove. The"
+	line "weaving circle is"
+	para "very, very good,"
+	line "and now I'm"
+	para "confused."
 	done
 
 GroveHouse5_MapEvents:

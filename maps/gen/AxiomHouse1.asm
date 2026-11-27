@@ -2,6 +2,7 @@
 	object_const_def
 	const AXIOM_HOUSE1_NPC0
 	const AXIOM_HOUSE1_NPC1
+	const AXIOM_HOUSE1_NPC2
 
 AxiomHouse1_MapScripts:
 	def_scene_scripts
@@ -31,18 +32,30 @@ AxiomHouse1Npc1Text:
 	para "though."
 	done
 
+AxiomHouse1Npc2Script:
+	jumptextfaceplayer AxiomHouse1Npc2Text
+
+AxiomHouse1Npc2Text:
+	text "I'm a poet. The"
+	line "Union forbids"
+	para "rhyme. I only"
+	line "write blank"
+	para "checks."
+	done
+
 AxiomHouse1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, AXIOM_PLAZA1, 4
-	warp_event  3,  7, AXIOM_PLAZA1, 4
+	warp_event  6, 11, AXIOM_PLAZA1, 4
+	warp_event  7, 11, AXIOM_PLAZA1, 4
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomHouse1Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomHouse1Npc1Script, -1
+	object_event  3,  3, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomHouse1Npc0Script, -1
+	object_event  7,  2, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomHouse1Npc1Script, -1
+	object_event  9,  9, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomHouse1Npc2Script, -1
 

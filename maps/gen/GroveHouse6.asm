@@ -2,6 +2,7 @@
 	object_const_def
 	const GROVE_HOUSE6_NPC0
 	const GROVE_HOUSE6_NPC1
+	const GROVE_HOUSE6_NPC2
 
 GroveHouse6_MapScripts:
 	def_scene_scripts
@@ -12,38 +13,48 @@ GroveHouse6Npc0Script:
 	jumptextfaceplayer GroveHouse6Npc0Text
 
 GroveHouse6Npc0Text:
-	text "There are no doors"
-	line "in my hut. The"
-	para "wind is my"
-	line "doorman. He isn't"
-	para "great."
+	text "We all sleep in"
+	line "the big tent. Last"
+	para "night the tent was"
+	line "very full. Also"
+	para "somebody sang."
 	done
 
 GroveHouse6Npc1Script:
 	jumptextfaceplayer GroveHouse6Npc1Text
 
 GroveHouse6Npc1Text:
-	text "I'm a critic. I"
-	line "came to"
-	para "disapprove. The"
-	line "weaving circle is"
-	para "very, very good,"
-	line "and now I'm"
-	para "confused."
+	text "I dig the graves."
+	line "They don't ask me"
+	para "to. I just like"
+	line "having something"
+	para "to do."
+	done
+
+GroveHouse6Npc2Script:
+	jumptextfaceplayer GroveHouse6Npc2Text
+
+GroveHouse6Npc2Text:
+	text "I make tea from"
+	line "things I find."
+	para "This one's mostly"
+	line "moss. This one's"
+	para "mostly regret."
 	done
 
 GroveHouse6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, GROVE_PLAZA6, 3
-	warp_event  3,  7, GROVE_PLAZA6, 3
+	warp_event  4, 11, GROVE_PLAZA6, 3
+	warp_event  5, 11, GROVE_PLAZA6, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse6Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse6Npc1Script, -1
+	object_event  8,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse6Npc0Script, -1
+	object_event  2,  2, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse6Npc1Script, -1
+	object_event 10,  8, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse6Npc2Script, -1
 

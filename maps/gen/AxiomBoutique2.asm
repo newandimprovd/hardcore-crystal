@@ -34,11 +34,13 @@ AxiomBoutique2Npc0Script:
 	jumptextfaceplayer AxiomBoutique2Npc0Text
 
 AxiomBoutique2Npc0Text:
-	text "I'm a compliance"
-	line "auditor. I audit"
-	para "my own compliance."
-	line "It's an endless"
-	para "loop. I love it."
+	text "A man came by"
+	line "selling"
+	para "forgiveness. I"
+	line "don't have any"
+	para "money. He said"
+	line "that's fine. He"
+	para "took the lamp."
 	done
 
 AxiomBoutique2_MapEvents:

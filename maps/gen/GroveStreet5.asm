@@ -16,11 +16,11 @@ GroveStreet5Hermit:
 	jumptextfaceplayer GroveStreet5HermitText
 
 GroveStreet5HermitText:
-	text "If you hear"
-	line "chanting, it isn't"
-	para "a ritual. It's"
-	line "just Greg. He's"
-	para "had a bad week."
+	text "There is a"
+	line "mushroom here that"
+	para "agrees with"
+	line "everything. I call"
+	para "it my spouse."
 	done
 
 GroveStreet5AfterText:

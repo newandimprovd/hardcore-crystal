@@ -34,13 +34,12 @@ DisBoutique4Npc0Script:
 	jumptextfaceplayer DisBoutique4Npc0Text
 
 DisBoutique4Npc0Text:
-	text "I was a priest."
-	line "Now I'm the only"
-	para "person in the"
-	line "neighborhood who"
-	para "doesn't believe in"
-	line "hell. It's quite"
-	para "lonely."
+	text "I sell mirrors."
+	line "Everyone who looks"
+	para "into them says"
+	line "it's not what they"
+	para "expected. Business"
+	line "is excellent."
 	done
 
 DisBoutique4_MapEvents:

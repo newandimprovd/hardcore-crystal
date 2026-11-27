@@ -2,6 +2,7 @@
 	object_const_def
 	const DIS_HOUSE3_NPC0
 	const DIS_HOUSE3_NPC1
+	const DIS_HOUSE3_NPC2
 
 DisHouse3_MapScripts:
 	def_scene_scripts
@@ -12,36 +13,50 @@ DisHouse3Npc0Script:
 	jumptextfaceplayer DisHouse3Npc0Text
 
 DisHouse3Npc0Text:
-	text "I keep demons as"
-	line "pets. The little"
-	para "ones. They don't"
-	line "bite. They chew"
-	para "your sleep."
+	text "I'm a mapmaker."
+	line "The streets keep"
+	para "moving. I charge"
+	line "extra for the"
+	para "screaming."
 	done
 
 DisHouse3Npc1Script:
 	jumptextfaceplayer DisHouse3Npc1Text
 
 DisHouse3Npc1Text:
-	text "I run a small"
-	line "clinic for the"
-	para "unrepentant. We"
-	line "charge by the inch"
-	para "of hubris."
+	text "I'm the Warden's"
+	line "cousin. It's a"
+	para "very small job."
+	line "It's a very big"
+	para "cousin."
+	done
+
+DisHouse3Npc2Script:
+	jumptextfaceplayer DisHouse3Npc2Text
+
+DisHouse3Npc2Text:
+	text "I was a priest."
+	line "Now I'm the only"
+	para "person in the"
+	line "neighborhood who"
+	para "doesn't believe in"
+	line "hell. It's quite"
+	para "lonely."
 	done
 
 DisHouse3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, DIS_PLAZA3, 3
-	warp_event  3,  7, DIS_PLAZA3, 3
+	warp_event  6, 11, DIS_PLAZA3, 3
+	warp_event  7, 11, DIS_PLAZA3, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse3Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse3Npc1Script, -1
+	object_event  3,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse3Npc0Script, -1
+	object_event  7,  2, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse3Npc1Script, -1
+	object_event  9,  9, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse3Npc2Script, -1
 

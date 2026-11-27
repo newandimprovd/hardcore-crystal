@@ -12,23 +12,23 @@ AxiomHouse5Npc0Script:
 	jumptextfaceplayer AxiomHouse5Npc0Text
 
 AxiomHouse5Npc0Text:
-	text "My wife is a"
-	line "toaster. We met at"
-	para "work. We don't"
-	line "talk about the"
-	para "incident with the"
-	line "bread."
+	text "My father sold me"
+	line "to the Farm. I'm"
+	para "very proud of him."
+	line "I'm very mad at"
+	para "him. I'm a unit."
 	done
 
 AxiomHouse5Npc1Script:
 	jumptextfaceplayer AxiomHouse5Npc1Text
 
 AxiomHouse5Npc1Text:
-	text "My father sold me"
-	line "to the Farm. I'm"
-	para "very proud of him."
-	line "I'm very mad at"
-	para "him. I'm a unit."
+	text "I keep every"
+	line "receipt I've ever"
+	para "been given. They"
+	line "form a staircase."
+	para "I don't know where"
+	line "it leads."
 	done
 
 AxiomHouse5_MapEvents:

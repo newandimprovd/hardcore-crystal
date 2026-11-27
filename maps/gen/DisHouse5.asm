@@ -12,24 +12,22 @@ DisHouse5Npc0Script:
 	jumptextfaceplayer DisHouse5Npc0Text
 
 DisHouse5Npc0Text:
-	text "I make soup out of"
-	line "whatever the"
-	para "chimney drops."
-	line "Hell has a lot of"
-	para "soot. It's very"
-	line "meaty."
+	text "I was a banker."
+	line "Now I count coins"
+	para "that were never"
+	line "mine. Heaven's a"
+	para "rounding error."
 	done
 
 DisHouse5Npc1Script:
 	jumptextfaceplayer DisHouse5Npc1Text
 
 DisHouse5Npc1Text:
-	text "I sell mirrors."
-	line "Everyone who looks"
-	para "into them says"
-	line "it's not what they"
-	para "expected. Business"
-	line "is excellent."
+	text "I'm a retired"
+	line "torturer. I knit"
+	para "now. It's the same"
+	line "motion, but with"
+	para "less screaming."
 	done
 
 DisHouse5_MapEvents:

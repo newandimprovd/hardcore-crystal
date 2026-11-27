@@ -12,22 +12,23 @@ GroveHouse3Npc0Script:
 	jumptextfaceplayer GroveHouse3Npc0Text
 
 GroveHouse3Npc0Text:
-	text "I'm the commune's"
-	line "cook. I make a"
-	para "stew from whatever"
-	line "we lose each week."
-	done
-
-GroveHouse3Npc1Script:
-	jumptextfaceplayer GroveHouse3Npc1Text
-
-GroveHouse3Npc1Text:
 	text "I gave up my name"
 	line "to join. The"
 	para "commune gave me"
 	line "another. It's"
 	para "Brian. I preferred"
 	line "nothing."
+	done
+
+GroveHouse3Npc1Script:
+	jumptextfaceplayer GroveHouse3Npc1Text
+
+GroveHouse3Npc1Text:
+	text "I teach children"
+	line "to forage. They"
+	para "bring me things"
+	line "that aren't food."
+	para "I eat them anyway."
 	done
 
 GroveHouse3_MapEvents:

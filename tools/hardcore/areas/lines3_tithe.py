@@ -100,3 +100,26 @@ GIVER_AFTER = [
     "A second gift would be a sin. My favorite kind. Not today.",
     "Don't thank me. Thank the poor. They paid for it.",
 ]
+
+
+# The Parish close (areas/layout.py ANNEX): the people of the rectory, the parish school and the almshouse beside the cathedral.
+PARISH = {
+    "rectory": [
+        "Monsignor here. Sin is a subscription, child. You were auto-renewed at the baptism. The grace period ended at the sneeze.",
+        "Father is at prayer. By prayer I mean the collection plate. He has counted it nine times. It hasn't grown. He thinks it is shy.",
+        "I joined to help people. They gave me a ledger. Ask me about arrears. Do not ask me about absolution. That was outsourced.",
+    ],
+    "school": [
+        "Class is in session. Today's lesson is how to be quiet near authority. Tomorrow's is how to be quiet near the other authority.",
+        "I got an A in catechism. Father says A is for Arrears. I don't know what that is but my mother cried.",
+        "Sister Agnes says God sees everything. Then she closes the blinds. I think that is what they mean by mercy.",
+        "My brother sings in the choir. The choir is in the basement. We hear it on Tuesdays. They sound happy in a very quiet way.",
+        "When I grow up I will be a cop or a priest. Both carry something heavy and nobody ever asks them a question.",
+    ],
+    "almshouse": [
+        "Soup is free for the faithful. Faith is checked at the door by the man with the clipboard. He had a bad year, spiritually. He's strict.",
+        "I gave this parish forty years and a kidney. They gave me a bowl. It's a good bowl. I'm told it is blessed.",
+        "I come for the soup and stay for the sermon, because the sermon is warm. A poor reason to believe. It keeps.",
+        "The officer outside says loitering is a sin now. He says it kindly. That is the part that frightens me.",
+    ],
+}

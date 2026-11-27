@@ -13,12 +13,11 @@ GroveBendA4Hermit:
 	jumptextfaceplayer GroveBendA4HermitText
 
 GroveBendA4HermitText:
-	text "The trainers out"
-	line "there are so"
-	para "friendly. They"
-	line "shout 'peace' and"
-	para "then try to kill"
-	line "you."
+	text "This tree is my"
+	line "friend. The tree"
+	para "has not said so."
+	line "It also has not"
+	para "said no."
 	done
 
 GroveBendA4_MapEvents:

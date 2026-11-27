@@ -32,19 +32,19 @@ TitheBoutique4Npc0Script:
 	jumptextfaceplayer TitheBoutique4Npc0Text
 
 TitheBoutique4Npc0Text:
-	text "I'm a slumlord."
-	line "It's very"
-	para "stressful."
-	line "Everyone hates me."
-	para "I own a yacht."
+	text "I haven't seen the"
+	line "sun since the"
+	para "towers got built."
+	line "I'm fine. I'm"
+	para "pale. I'm fine."
 	done
 
 TitheBoutique4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, TITHE_PLAZA4, 4
-	warp_event  3,  7, TITHE_PLAZA4, 4
+	warp_event  2,  7, TITHE_PLAZA4, 5
+	warp_event  3,  7, TITHE_PLAZA4, 5
 
 	def_coord_events
 

@@ -2,6 +2,7 @@
 	object_const_def
 	const GROVE_HOUSE4_NPC0
 	const GROVE_HOUSE4_NPC1
+	const GROVE_HOUSE4_NPC2
 
 GroveHouse4_MapScripts:
 	def_scene_scripts
@@ -12,23 +13,34 @@ GroveHouse4Npc0Script:
 	jumptextfaceplayer GroveHouse4Npc0Text
 
 GroveHouse4Npc0Text:
-	text "I teach children"
-	line "to forage. They"
-	para "bring me things"
-	line "that aren't food."
-	para "I eat them anyway."
-	done
-
-GroveHouse4Npc1Script:
-	jumptextfaceplayer GroveHouse4Npc1Text
-
-GroveHouse4Npc1Text:
 	text "I've been sitting"
 	line "in this house"
 	para "since the last"
 	line "full moon. It"
 	para "doesn't have a"
 	line "floor."
+	done
+
+GroveHouse4Npc1Script:
+	jumptextfaceplayer GroveHouse4Npc1Text
+
+GroveHouse4Npc1Text:
+	text "I'm the commune's"
+	line "accountant."
+	para "There's nothing to"
+	line "count. It's very"
+	para "restful."
+	done
+
+GroveHouse4Npc2Script:
+	jumptextfaceplayer GroveHouse4Npc2Text
+
+GroveHouse4Npc2Text:
+	text "My husband and my"
+	line "wife are friends."
+	para "I'm the third in a"
+	line "very polite"
+	para "triangle."
 	done
 
 GroveHouse4SatoshiScript:
@@ -128,15 +140,16 @@ GroveHouse4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, GROVE_PLAZA4, 3
-	warp_event  3,  7, GROVE_PLAZA4, 3
+	warp_event  4, 11, GROVE_PLAZA4, 3
+	warp_event  5, 11, GROVE_PLAZA4, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse4Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse4Npc1Script, -1
+	object_event  8,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse4Npc0Script, -1
+	object_event  2,  2, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse4Npc1Script, -1
+	object_event 10,  8, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse4Npc2Script, -1
 	object_event  5,  2, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse4SatoshiScript, -1
 

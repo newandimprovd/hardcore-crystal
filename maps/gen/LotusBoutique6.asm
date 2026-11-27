@@ -33,20 +33,19 @@ LotusBoutique6Npc0Script:
 	jumptextfaceplayer LotusBoutique6Npc0Text
 
 LotusBoutique6Npc0Text:
-	text "This house was a"
-	line "hotel once. I"
-	para "still hear guests"
-	line "ringing for room"
-	para "service. Nobody is"
-	line "in the rooms."
+	text "This is a suite."
+	line "It has a bed, a"
+	para "jacuzzi, and a"
+	line "very small, very"
+	para "quiet crying room."
 	done
 
 LotusBoutique6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, LOTUS_PLAZA6, 4
-	warp_event  3,  7, LOTUS_PLAZA6, 4
+	warp_event  2,  7, LOTUS_PLAZA6, 5
+	warp_event  3,  7, LOTUS_PLAZA6, 5
 
 	def_coord_events
 

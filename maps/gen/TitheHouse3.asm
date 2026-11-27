@@ -12,23 +12,24 @@ TitheHouse3Npc0Script:
 	jumptextfaceplayer TitheHouse3Npc0Text
 
 TitheHouse3Npc0Text:
-	text "I own this whole"
-	line "apartment. The"
-	para "rest of the block"
-	line "is my closet. We"
-	para "don't talk about"
-	line "the closet."
+	text "I'm a retired"
+	line "gravedigger."
+	para "Business was"
+	line "always up."
+	para "Retirement is"
+	line "better. It's"
+	para "quieter."
 	done
 
 TitheHouse3Npc1Script:
 	jumptextfaceplayer TitheHouse3Npc1Text
 
 TitheHouse3Npc1Text:
-	text "I once saw the"
-	line "Mayor cry. It was"
-	para "a Tuesday. Nobody"
-	line "believes me. It"
-	para "was an onion."
+	text "The bell tower has"
+	line "been ringing nine"
+	para "times at noon for"
+	line "a week. Nobody"
+	para "asked it to."
 	done
 
 TitheHouse3_MapEvents:

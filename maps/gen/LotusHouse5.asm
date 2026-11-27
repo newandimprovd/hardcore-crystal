@@ -12,23 +12,25 @@ LotusHouse5Npc0Script:
 	jumptextfaceplayer LotusHouse5Npc0Text
 
 LotusHouse5Npc0Text:
-	text "I sell postcards"
-	line "of a beach I've"
-	para "never found. The"
-	line "buyers say they"
-	para "remember it"
-	line "fondly."
+	text "I'm a retired"
+	line "lifeguard. I saved"
+	para "eleven people and"
+	line "forgot all of"
+	para "them."
+	line "Statistically I'm"
+	para "a hero."
 	done
 
 LotusHouse5Npc1Script:
 	jumptextfaceplayer LotusHouse5Npc1Text
 
 LotusHouse5Npc1Text:
-	text "I run the grief"
-	line "clinic. Business"
-	para "is booming. People"
-	line "keep forgetting to"
-	para "leave."
+	text "I'm told there was"
+	line "a war here. I'm"
+	para "also told it was a"
+	line "luau. The people"
+	para "who know are"
+	line "drinking."
 	done
 
 LotusHouse5_MapEvents:

@@ -2,6 +2,7 @@
 	object_const_def
 	const TITHE_HOUSE2_NPC0
 	const TITHE_HOUSE2_NPC1
+	const TITHE_HOUSE2_NPC2
 
 TitheHouse2_MapScripts:
 	def_scene_scripts
@@ -12,16 +13,6 @@ TitheHouse2Npc0Script:
 	jumptextfaceplayer TitheHouse2Npc0Text
 
 TitheHouse2Npc0Text:
-	text "My cat is a better"
-	line "Christian than I"
-	para "am. She hides"
-	line "every Sunday."
-	done
-
-TitheHouse2Npc1Script:
-	jumptextfaceplayer TitheHouse2Npc1Text
-
-TitheHouse2Npc1Text:
 	text "I paint miniature"
 	line "saints. The"
 	para "smaller they are,"
@@ -29,18 +20,39 @@ TitheHouse2Npc1Text:
 	para "they can ignore."
 	done
 
+TitheHouse2Npc1Script:
+	jumptextfaceplayer TitheHouse2Npc1Text
+
+TitheHouse2Npc1Text:
+	text "My father was a"
+	line "confession booth."
+	para "That's not a"
+	line "metaphor. He was"
+	para "very big."
+	done
+
+TitheHouse2Npc2Script:
+	jumptextfaceplayer TitheHouse2Npc2Text
+
+TitheHouse2Npc2Text:
+	text "The cathedral bell"
+	line "is a recording."
+	para "Don't tell anyone."
+	done
+
 TitheHouse2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, TITHE_PLAZA2, 3
-	warp_event  3,  7, TITHE_PLAZA2, 3
+	warp_event  4, 11, TITHE_PLAZA2, 3
+	warp_event  5, 11, TITHE_PLAZA2, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse2Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheHouse2Npc1Script, -1
+	object_event  8,  3, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse2Npc0Script, -1
+	object_event  2,  2, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheHouse2Npc1Script, -1
+	object_event 10,  8, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse2Npc2Script, -1
 

@@ -12,24 +12,22 @@ AxiomHouse4Npc0Script:
 	jumptextfaceplayer AxiomHouse4Npc0Text
 
 AxiomHouse4Npc0Text:
-	text "I keep a pet rock."
-	line "It's the only"
-	para "thing in this city"
-	line "that isn't"
-	para "monitored. We"
-	line "understand each"
-	para "other."
+	text "I paint portraits."
+	line "The robots find"
+	para "them offensive."
+	line "They are very"
+	para "accurate."
 	done
 
 AxiomHouse4Npc1Script:
 	jumptextfaceplayer AxiomHouse4Npc1Text
 
 AxiomHouse4Npc1Text:
-	text "I paint portraits."
-	line "The robots find"
-	para "them offensive."
-	line "They are very"
-	para "accurate."
+	text "I used to be an"
+	line "accountant. Now"
+	para "I'm a number"
+	line "someone else is"
+	para "accounting for."
 	done
 
 AxiomHouse4_MapEvents:

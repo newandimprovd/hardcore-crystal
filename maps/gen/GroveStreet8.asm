@@ -13,11 +13,11 @@ GroveStreet8Hermit:
 	jumptextfaceplayer GroveStreet8HermitText
 
 GroveStreet8HermitText:
-	text "This tree is my"
-	line "friend. The tree"
-	para "has not said so."
-	line "It also has not"
-	para "said no."
+	text "I left the commune"
+	line "because it was too"
+	para "loud. Now I live"
+	line "in a tree. The"
+	para "tree is also loud."
 	done
 
 GroveStreet8AfterText:

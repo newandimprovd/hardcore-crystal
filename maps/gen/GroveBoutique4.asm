@@ -33,19 +33,19 @@ GroveBoutique4Npc0Script:
 	jumptextfaceplayer GroveBoutique4Npc0Text
 
 GroveBoutique4Npc0Text:
-	text "I'm the commune's"
-	line "accountant."
-	para "There's nothing to"
-	line "count. It's very"
-	para "restful."
+	text "My neighbor is a"
+	line "prophet. He"
+	para "predicted rain. It"
+	line "rained on him"
+	para "specifically."
 	done
 
 GroveBoutique4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, GROVE_PLAZA4, 4
-	warp_event  3,  7, GROVE_PLAZA4, 4
+	warp_event  2,  7, GROVE_PLAZA4, 5
+	warp_event  3,  7, GROVE_PLAZA4, 5
 
 	def_coord_events
 

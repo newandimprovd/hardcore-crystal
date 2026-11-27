@@ -2,6 +2,7 @@
 	object_const_def
 	const DIS_HOUSE1_NPC0
 	const DIS_HOUSE1_NPC1
+	const DIS_HOUSE1_NPC2
 
 DisHouse1_MapScripts:
 	def_scene_scripts
@@ -31,18 +32,30 @@ DisHouse1Npc1Text:
 	line "Gary."
 	done
 
+DisHouse1Npc2Script:
+	jumptextfaceplayer DisHouse1Npc2Text
+
+DisHouse1Npc2Text:
+	text "I own a house with"
+	line "four rooms and no"
+	para "exits. It's a"
+	line "perfect"
+	para "investment."
+	done
+
 DisHouse1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, DIS_PLAZA1, 4
-	warp_event  3,  7, DIS_PLAZA1, 4
+	warp_event  6, 11, DIS_PLAZA1, 4
+	warp_event  7, 11, DIS_PLAZA1, 4
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse1Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse1Npc1Script, -1
+	object_event  3,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse1Npc0Script, -1
+	object_event  7,  2, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse1Npc1Script, -1
+	object_event  9,  9, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse1Npc2Script, -1
 

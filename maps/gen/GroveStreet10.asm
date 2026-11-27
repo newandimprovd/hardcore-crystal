@@ -16,12 +16,12 @@ GroveStreet10Hermit:
 	jumptextfaceplayer GroveStreet10HermitText
 
 GroveStreet10HermitText:
-	text "I tried to join"
-	line "the commune. They"
-	para "asked for my"
-	line "savings, my shoes"
-	para "and my opinions. I"
-	line "kept the opinions."
+	text "The goat in the"
+	line "commune is smarter"
+	para "than the leader. I"
+	line "am here to say it"
+	para "where the goat"
+	line "cannot hear."
 	done
 
 GroveStreet10PurgFlagScript:

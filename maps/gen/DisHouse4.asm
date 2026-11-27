@@ -12,22 +12,24 @@ DisHouse4Npc0Script:
 	jumptextfaceplayer DisHouse4Npc0Text
 
 DisHouse4Npc0Text:
-	text "I'm a mapmaker."
-	line "The streets keep"
-	para "moving. I charge"
-	line "extra for the"
-	para "screaming."
+	text "My husband is in"
+	line "the lake. I wave"
+	para "at him through the"
+	line "ice. He waves"
+	para "back. Hands only."
+	line "It's romantic."
 	done
 
 DisHouse4Npc1Script:
 	jumptextfaceplayer DisHouse4Npc1Text
 
 DisHouse4Npc1Text:
-	text "I'm the Warden's"
-	line "cousin. It's a"
-	para "very small job."
-	line "It's a very big"
-	para "cousin."
+	text "I make soup out of"
+	line "whatever the"
+	para "chimney drops."
+	line "Hell has a lot of"
+	para "soot. It's very"
+	line "meaty."
 	done
 
 DisHouse4_MapEvents:

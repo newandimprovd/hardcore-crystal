@@ -2,6 +2,7 @@
 	object_const_def
 	const GROVE_HOUSE7_NPC0
 	const GROVE_HOUSE7_NPC1
+	const GROVE_HOUSE7_NPC2
 
 GroveHouse7_MapScripts:
 	def_scene_scripts
@@ -12,36 +13,49 @@ GroveHouse7Npc0Script:
 	jumptextfaceplayer GroveHouse7Npc0Text
 
 GroveHouse7Npc0Text:
-	text "I make tea from"
-	line "things I find."
-	para "This one's mostly"
-	line "moss. This one's"
-	para "mostly regret."
+	text "I trade in"
+	line "secrets. Not mine."
+	para "I'm just a bad"
+	line "listener with a"
+	para "good memory."
 	done
 
 GroveHouse7Npc1Script:
 	jumptextfaceplayer GroveHouse7Npc1Text
 
 GroveHouse7Npc1Text:
-	text "Careful with the"
-	line "floor. The"
-	para "mushrooms are"
-	line "communal but the"
-	para "mold is mine."
+	text "We all sleep"
+	line "together in the"
+	para "big tent. For"
+	line "warmth. And for"
+	para "warmth."
+	done
+
+GroveHouse7Npc2Script:
+	jumptextfaceplayer GroveHouse7Npc2Text
+
+GroveHouse7Npc2Text:
+	text "This is a yurt."
+	line "It's also a"
+	para "lounge, a kitchen,"
+	line "a bedroom, and a"
+	para "bit of a fire"
+	line "hazard."
 	done
 
 GroveHouse7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, GROVE_PLAZA7, 3
-	warp_event  3,  7, GROVE_PLAZA7, 3
+	warp_event  6, 11, GROVE_PLAZA7, 3
+	warp_event  7, 11, GROVE_PLAZA7, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse7Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse7Npc1Script, -1
+	object_event  3,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse7Npc0Script, -1
+	object_event  7,  2, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse7Npc1Script, -1
+	object_event  9,  9, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse7Npc2Script, -1
 

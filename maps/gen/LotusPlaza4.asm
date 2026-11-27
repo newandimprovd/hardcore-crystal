@@ -411,31 +411,32 @@ LotusPlaza4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 18, 11, LOTUS_POKECENTER4, 1
-	warp_event  4, 11, LOTUS_MART4, 1
-	warp_event 10, 21, LOTUS_HOUSE4, 1
-	warp_event 22, 23, LOTUS_BOUTIQUE4, 1
+	warp_event 29, 21, LOTUS_POKECENTER4, 1
+	warp_event 19, 13, LOTUS_MART4, 1
+	warp_event 33, 11, LOTUS_HOUSE4, 1
+	warp_event 34, 11, LOTUS_HOUSE4, 1
+	warp_event  3,  9, LOTUS_BOUTIQUE4, 1
 
 	def_coord_events
-	coord_event  8,  1, -1, LotusPlaza4Cioran2BlockScript
-	coord_event  9,  1, -1, LotusPlaza4Cioran2BlockScript
-	coord_event 10,  1, -1, LotusPlaza4Cioran2BlockScript
-	coord_event 11,  1, -1, LotusPlaza4Cioran2BlockScript
-	coord_event 12,  1, -1, LotusPlaza4Cioran2BlockScript
-	coord_event 13,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 26,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 27,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 28,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 29,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 30,  1, -1, LotusPlaza4Cioran2BlockScript
+	coord_event 31,  1, -1, LotusPlaza4Cioran2BlockScript
 
 	def_bg_events
 
 	def_object_events
-	object_event  8, 23, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateA, -1
-	object_event  9, 23, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateB, -1
-	object_event 24, 25, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Giver, -1
-	object_event 33, 18, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona1, -1
-	object_event 34, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona2, -1
-	object_event 26, 20, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona3, -1
-	object_event 21, 15, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona5, -1
-	object_event 29, 24, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie5, -1
-	object_event 23,  7, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie6, -1
-	object_event 29, 13, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Cioran2BearerScript, -1
-	object_event 16, 18, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Duel, -1
+	object_event 17, 26, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateA, -1
+	object_event 18, 26, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4DebateB, -1
+	object_event  7, 25, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Giver, -1
+	object_event  6, 20, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona1, -1
+	object_event  3, 23, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona2, -1
+	object_event  4, 20, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona3, -1
+	object_event 24, 13, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Persona5, -1
+	object_event  5, 11, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie5, -1
+	object_event  4, 16, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Townie6, -1
+	object_event 18, 19, SPRITE_HC_CIORAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Cioran2BearerScript, -1
+	object_event 26, 24, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusPlaza4Duel, -1
 

@@ -2,6 +2,7 @@
 	object_const_def
 	const LOTUS_HOUSE4_NPC0
 	const LOTUS_HOUSE4_NPC1
+	const LOTUS_HOUSE4_NPC2
 
 LotusHouse4_MapScripts:
 	def_scene_scripts
@@ -12,16 +13,6 @@ LotusHouse4Npc0Script:
 	jumptextfaceplayer LotusHouse4Npc0Text
 
 LotusHouse4Npc0Text:
-	text "My dog digs up"
-	line "bones every"
-	para "evening. We don't"
-	line "talk about whose."
-	done
-
-LotusHouse4Npc1Script:
-	jumptextfaceplayer LotusHouse4Npc1Text
-
-LotusHouse4Npc1Text:
 	text "I make shell"
 	line "necklaces for"
 	para "people I've never"
@@ -29,18 +20,42 @@ LotusHouse4Npc1Text:
 	para "on the tide."
 	done
 
+LotusHouse4Npc1Script:
+	jumptextfaceplayer LotusHouse4Npc1Text
+
+LotusHouse4Npc1Text:
+	text "I'm trying to stay"
+	line "sober on"
+	para "forgetting. It's"
+	line "harder than it"
+	para "sounds. I forgot"
+	line "why I started."
+	done
+
+LotusHouse4Npc2Script:
+	jumptextfaceplayer LotusHouse4Npc2Text
+
+LotusHouse4Npc2Text:
+	text "I'm a guest here."
+	line "I think. Or a"
+	para "patient. The"
+	line "wristband doesn't"
+	para "say."
+	done
+
 LotusHouse4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, LOTUS_PLAZA4, 3
-	warp_event  3,  7, LOTUS_PLAZA4, 3
+	warp_event  4, 11, LOTUS_PLAZA4, 3
+	warp_event  5, 11, LOTUS_PLAZA4, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusHouse4Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusHouse4Npc1Script, -1
+	object_event  8,  3, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusHouse4Npc0Script, -1
+	object_event  2,  2, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusHouse4Npc1Script, -1
+	object_event 10,  8, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusHouse4Npc2Script, -1
 

@@ -12,29 +12,31 @@ TitheHouse7Npc0Script:
 	jumptextfaceplayer TitheHouse7Npc0Text
 
 TitheHouse7Npc0Text:
-	text "This place used to"
-	line "be a chapel. The"
-	para "pews are still"
-	line "here. I rent them"
-	para "out."
+	text "My brother is a"
+	line "cop. We don't"
+	para "speak. He's a cop"
+	line "in the other"
+	para "sense."
 	done
 
 TitheHouse7Npc1Script:
 	jumptextfaceplayer TitheHouse7Npc1Text
 
 TitheHouse7Npc1Text:
-	text "My husband is in"
-	line "the walls. I mean"
-	para "he's remodeling."
-	line "In the walls."
+	text "I teach school. We"
+	line "learn three"
+	para "things. Obey,"
+	line "tithe, and don't"
+	para "look under the"
+	line "cathedral."
 	done
 
 TitheHouse7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, TITHE_PLAZA7, 3
-	warp_event  3,  7, TITHE_PLAZA7, 3
+	warp_event  2,  7, TITHE_PLAZA7, 5
+	warp_event  3,  7, TITHE_PLAZA7, 5
 
 	def_coord_events
 

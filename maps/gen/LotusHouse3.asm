@@ -12,19 +12,6 @@ LotusHouse3Npc0Script:
 	jumptextfaceplayer LotusHouse3Npc0Text
 
 LotusHouse3Npc0Text:
-	text "I run a cocktail"
-	line "bar from my"
-	para "kitchen. Every"
-	line "drink tastes like"
-	para "a different"
-	line "childhood. None of"
-	para "them mine."
-	done
-
-LotusHouse3Npc1Script:
-	jumptextfaceplayer LotusHouse3Npc1Text
-
-LotusHouse3Npc1Text:
 	text "My grandmother"
 	line "remembers"
 	para "everything. She's"
@@ -32,6 +19,16 @@ LotusHouse3Npc1Text:
 	para "keep her in the"
 	line "attic for"
 	para "tourists."
+	done
+
+LotusHouse3Npc1Script:
+	jumptextfaceplayer LotusHouse3Npc1Text
+
+LotusHouse3Npc1Text:
+	text "My dog digs up"
+	line "bones every"
+	para "evening. We don't"
+	line "talk about whose."
 	done
 
 LotusHouse3_MapEvents:

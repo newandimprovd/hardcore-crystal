@@ -10,11 +10,12 @@ AxiomPlaza7Fountain0:
 	jumptext AxiomPlaza7Fountain0Text
 
 AxiomPlaza7Fountain0Text:
-	text "AQUAXIOM. Aqua"
-	line "plus axiom. Axiom"
-	para "1: water is wet."
-	line "Axiom 2: do not"
-	para "touch it."
+	text "COOLANTAIN."
+	line "Coolant plus"
+	para "fountain. It is"
+	line "not cooling"
+	para "anything. It was"
+	line "told to look busy."
 	done
 
 AxiomPlaza7DebateA:
@@ -166,24 +167,25 @@ AxiomPlaza7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 36, 25, AXIOM_POKECENTER7, 1
-	warp_event 18,  7, AXIOM_MART7, 1
-	warp_event 34,  9, AXIOM_HOUSE7, 1
-	warp_event 28,  7, AXIOM_MAYORALTY, 1
+	warp_event  3,  9, AXIOM_POKECENTER7, 1
+	warp_event 15,  9, AXIOM_MART7, 1
+	warp_event 13, 23, AXIOM_HOUSE7, 1
+	warp_event 14, 23, AXIOM_HOUSE7, 1
+	warp_event  9,  7, AXIOM_MAYORALTY, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 20, 21, BGEVENT_READ, AxiomPlaza7Fountain0
+	bg_event 22, 25, BGEVENT_READ, AxiomPlaza7Fountain0
 
 	def_object_events
-	object_event 38, 20, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7DebateA, -1
-	object_event 39, 20, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7DebateB, -1
-	object_event 27, 14, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Giver, -1
-	object_event 32, 25, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona0, -1
-	object_event 16, 15, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona1, -1
-	object_event 35, 15, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona4, -1
-	object_event  6,  7, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona5, -1
-	object_event 14, 12, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona6, -1
-	object_event 14, 22, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie6, -1
+	object_event 11, 25, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7DebateA, -1
+	object_event 12, 25, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7DebateB, -1
+	object_event 31,  6, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Giver, -1
+	object_event 27, 23, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona0, -1
+	object_event 37, 17, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona1, -1
+	object_event 33, 17, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona4, -1
+	object_event 16, 16, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona5, -1
+	object_event 35,  9, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Persona6, -1
+	object_event 15, 25, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza7Townie6, -1
 

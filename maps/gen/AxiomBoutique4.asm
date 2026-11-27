@@ -35,11 +35,13 @@ AxiomBoutique4Npc0Script:
 	jumptextfaceplayer AxiomBoutique4Npc0Text
 
 AxiomBoutique4Npc0Text:
-	text "I used to be an"
-	line "accountant. Now"
-	para "I'm a number"
-	line "someone else is"
-	para "accounting for."
+	text "There are rumors"
+	line "of a place where"
+	para "people marry for"
+	line "no reason. I can't"
+	para "believe it. I"
+	line "can't stop"
+	para "thinking about it."
 	done
 
 AxiomBoutique4_MapEvents:

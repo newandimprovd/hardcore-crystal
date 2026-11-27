@@ -13,10 +13,11 @@ GroveBendA8Hermit:
 	jumptextfaceplayer GroveBendA8HermitText
 
 GroveBendA8HermitText:
-	text "I grow my own"
-	line "food. I also grow"
-	para "my own problems."
-	line "Both are organic."
+	text "The mushrooms here"
+	line "talk. Mostly they"
+	para "say 'sell'. I"
+	line "don't know what."
+	para "I'm scared."
 	done
 
 GroveBendA8_MapEvents:

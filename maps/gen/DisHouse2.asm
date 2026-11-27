@@ -2,6 +2,7 @@
 	object_const_def
 	const DIS_HOUSE2_NPC0
 	const DIS_HOUSE2_NPC1
+	const DIS_HOUSE2_NPC2
 
 DisHouse2_MapScripts:
 	def_scene_scripts
@@ -12,17 +13,6 @@ DisHouse2Npc0Script:
 	jumptextfaceplayer DisHouse2Npc0Text
 
 DisHouse2Npc0Text:
-	text "I own a house with"
-	line "four rooms and no"
-	para "exits. It's a"
-	line "perfect"
-	para "investment."
-	done
-
-DisHouse2Npc1Script:
-	jumptextfaceplayer DisHouse2Npc1Text
-
-DisHouse2Npc1Text:
 	text "This is a cell."
 	line "It's also a"
 	para "sitting room. It's"
@@ -31,18 +21,42 @@ DisHouse2Npc1Text:
 	line "here."
 	done
 
+DisHouse2Npc1Script:
+	jumptextfaceplayer DisHouse2Npc1Text
+
+DisHouse2Npc1Text:
+	text "My daughter is a"
+	line "candle in a church"
+	para "I can't enter. I"
+	line "visit on Sundays"
+	para "and stand outside."
+	done
+
+DisHouse2Npc2Script:
+	jumptextfaceplayer DisHouse2Npc2Text
+
+DisHouse2Npc2Text:
+	text "My wife left me"
+	line "for the lake."
+	para "Literally. She's"
+	line "in the ice. I wave"
+	para "at her. Sometimes"
+	line "she waves back."
+	done
+
 DisHouse2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, DIS_PLAZA2, 3
-	warp_event  3,  7, DIS_PLAZA2, 3
+	warp_event  4, 11, DIS_PLAZA2, 3
+	warp_event  5, 11, DIS_PLAZA2, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse2Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse2Npc1Script, -1
+	object_event  8,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse2Npc0Script, -1
+	object_event  2,  2, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse2Npc1Script, -1
+	object_event 10,  8, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse2Npc2Script, -1
 

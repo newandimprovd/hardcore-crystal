@@ -3,7 +3,7 @@ import random
 
 from .flags import flag_once
 from . import boutique as shops
-from .layout import (FACE, boss_room, chain, gatehouse, house_interior, boutique_interior, hub, lane, mart_interior, plaza, pokecenter_interior)
+from .layout import (FACE, boss_room, chain, gatehouse, house_interior, townhouse_interior, annex_interior, boutique_interior, hub, lane, mart_interior, plaza, pokecenter_interior)
 from .town import plaza2
 from .lines3 import AREA as L3
 from .wayfolk import GIFT, GIFT_AFTER, GIFT_HERMITS, GIFT_ITEMS, HERMIT, TOWNIE, TOWNIE2
@@ -33,7 +33,8 @@ class ActSpec:
 
     def __init__(self, tag, lanes, kit, landmark, music, trainers=13, gate=None, boss=None, houses=1,
                  mart=None, texts=None, plaza_width=13, lane_names=None, split=None, pal="PALETTE_DAY", rift=False,
-                 split_houses=1, boutique=None):
+                 split_houses=1, boutique=None, grand=None):
+        self.grand = grand  # the end plaza is built round a landmark building (town.build_plaza: 'cathedral')
         self.index = 0  # the act's place in its area (0..2), set by build_area
         self.spec = None  # the area spec (level range), set by build_area
         self.boutique = boutique  # 0..2: the mid-act plaza gets the rare held-item boutique of this act (areas/boutique.py)
@@ -255,10 +256,10 @@ def giver(w, m, x, y, sprite, pal, face, label, gift, item, after):
     m.obj(x, y, sprite, FACE[face], label, pal=pal)
 
 
-def make_plaza(g, name, kit, rng, *, index=0, width=None, **kw):
+def make_plaza(g, name, kit, rng, *, index=0, width=None, grand=None, **kw):
     """The street town of the area tilesets (town.py); the old box plaza for the vanilla tilesets (the Johto road)."""
     if kit.extra.get("scn"):
-        return plaza2(g, name, kit, rng, index=index, **kw)
+        return plaza2(g, name, kit, rng, index=index, grand=grand, **kw)
     return plaza(g, name, kit, rng, width=width or 13, **kw)
 
 
@@ -283,10 +284,18 @@ def town(w, g, tag, n, p, doors, kit, landmark, spawn_const, mart_items, texts, 
         mart = [Text(reminders[1])]
     mart_interior(g, f"{tag}Mart{n}", doors["mart"], landmark, martconst, [t for t in mart if t])
     for i, hd in enumerate(doors["houses"]):
+        if getattr(p, "grand", None) == "cathedral" and i < 3:  # the Parish close: a rectory, a school and an almshouse instead of three houses
+            kind = ("rectory", "school", "almshouse")[i]
+            annex_interior(g, f"{tag}{kind.capitalize()}", hd, landmark, kind, [Text(t) for t in new.PARISH[kind]])
+            continue
         h = [Text(fresh_line(w, tag, "in_house", hpool)), Text(fresh_line(w, tag, "in_house", hpool))]
         if boutique and i == len(doors["houses"]) - 1:  # the last house door is the shop
             w.marts.append((f"{martconst}B", f"Mart{tag}{n}Boutique", boutique["items"]))
             boutique_interior(g, f"{tag}Boutique{n}", hd, landmark, f"{martconst}B", boutique["greet"], [t for t in h[:1] if t])
+            continue
+        if getattr(hd, "tall", False):  # a townhouse: three people in a hall three times the size
+            h.append(Text(fresh_line(w, tag, "in_house", hpool)))
+            townhouse_interior(g, f"{tag}House{n}" if i == 0 else f"{tag}House{n}b", hd, landmark, [t for t in h if t], variant=n + i)
             continue
         house_interior(g, f"{tag}House{n}" if i == 0 else f"{tag}House{n}b", hd, landmark, [t for t in h if t])
     crowd(w, g, p, plaza_no=n)
@@ -409,7 +418,7 @@ def build_act(w, g, rng, roster, act, prev, plaza_no, lane_no, area_theme, stock
             plaza_no += 1
     p, doors = make_plaza(g, f"{tag}Plaza{plaza_no}", kit, rng, landmark=act.landmark, music=act.music,
                           houses=act.houses, extra=1 if act.boss else 0, width=act.plaza_width, pal=act.pal,
-                          index=plaza_no)
+                          index=plaza_no, grand=act.grand)
     turn.join(below, p)
     if act.rift:
         # the way into Purgatorio is the hidden portal in a glade of the last lane before the plaza, not a door in the town
