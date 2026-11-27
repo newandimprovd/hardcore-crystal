@@ -16,12 +16,9 @@ DisStreet3Hermit:
 	jumptextfaceplayer DisStreet3HermitText
 
 DisStreet3HermitText:
-	text "I am the last"
-	line "honest man down"
-	para "here. Not by"
-	line "choice. I could"
-	para "not find the other"
-	line "kind."
+	text "The river is not"
+	line "water. It's"
+	para "deadlines."
 	done
 
 DisStreet3AfterText:
@@ -157,20 +154,21 @@ DisStreet3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 21, DIS_FILING_PIT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 19, BGEVENT_ITEM, DisStreet3Hidden
+	bg_event  5, 26, BGEVENT_ITEM, DisStreet3Hidden
 
 	def_object_events
-	object_event  5, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet3Pickup, EVENT_GEN_DIS_STREET3_PICKUP
-	object_event  4, 15, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisStreet3Hermit, -1
-	object_event  8, 28, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer0, -1
-	object_event 13, 28, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer1, -1
-	object_event  8, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer2, -1
-	object_event 13, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer3, -1
-	object_event  8, 20, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer4, -1
-	object_event 17, 16, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer5, -1
-	object_event 12, 12, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer6, -1
+	object_event  7, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet3Pickup, EVENT_GEN_DIS_STREET3_PICKUP
+	object_event  3, 29, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisStreet3Hermit, -1
+	object_event 12, 28, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer0, -1
+	object_event 17, 28, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer1, -1
+	object_event 12, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer2, -1
+	object_event 12, 20, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer3, -1
+	object_event 17, 20, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer4, -1
+	object_event 13, 16, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer5, -1
+	object_event  8, 12, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, DisStreet3Trainer6, -1
 

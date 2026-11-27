@@ -9,20 +9,6 @@ TitheStreet3_MapScripts:
 TitheStreet3Pickup:
 	itemball POTION
 
-TitheStreet3Hidden:
-	hiddenitem ANTIDOTE, EVENT_GEN_TITHE_STREET3_HIDDEN
-
-TitheStreet3Hermit:
-	jumptextfaceplayer TitheStreet3HermitText
-
-TitheStreet3HermitText:
-	text "People on the road"
-	line "keep screaming and"
-	para "fainting. I think"
-	line "it's a wellness"
-	para "program."
-	done
-
 TitheStreet3AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -144,20 +130,17 @@ TitheStreet3_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 20, 11, TITHE_ALMS_CELLAR, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 16, 13, BGEVENT_ITEM, TitheStreet3Hidden
 
 	def_object_events
-	object_event 21, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet3Pickup, EVENT_GEN_TITHE_STREET3_PICKUP
-	object_event 14, 12, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet3Hermit, -1
-	object_event  4, 24, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer0, -1
-	object_event  9, 24, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer1, -1
-	object_event  4, 20, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer2, -1
-	object_event  9, 16, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer3, -1
-	object_event  4, 12, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer4, -1
-	object_event  9, 12, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer5, -1
+	object_event  9, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet3Pickup, EVENT_GEN_TITHE_STREET3_PICKUP
+	object_event  5, 10, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer0, -1
+	object_event  5, 15, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer1, -1
+	object_event  9, 10, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer2, -1
+	object_event 13, 15, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer3, -1
+	object_event 17, 10, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer4, -1
+	object_event 17, 15, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet3Trainer5, -1
 

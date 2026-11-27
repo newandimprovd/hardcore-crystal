@@ -106,7 +106,7 @@ DisFurnaceRoomHermit0:
 	waitbutton
 	closetext
 	winlosstext DisFurnaceRoomHermit0BeatenText, 0
-	loadtrainer G_ELDER, 153
+	loadtrainer G_GRANNY, 154
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_DIS_FURNACE_ROOM_HERMIT0
@@ -130,38 +130,36 @@ DisFurnaceRoomHermit0:
 	end
 
 DisFurnaceRoomHermit0SeenText:
-	text "Welcome to the"
-	line "cave! On your"
-	para "left, rock. On"
-	line "your right, also"
-	para "rock. Please fight"
-	line "me, the tour is"
-	para "dull."
+	text "Sit up straight."
+	line "Pencils down. I'll"
+	para "grade your fight."
+	line "I give most"
+	para "students a C"
+	line "minus."
 	done
 
 DisFurnaceRoomHermit0BeatenText:
-	text "And here, ladies"
-	line "and gentlemen, is"
-	para "the loser. Please"
-	line "clap. The gift"
-	para "shop is to your"
-	line "right."
+	text "B plus. Not bad"
+	line "for someone with"
+	para "such poor posture."
+	line "Take this, as an"
+	para "incentive."
 	done
 
 DisFurnaceRoomHermit0GiftText:
-	text "A souvenir. It's"
-	line "the last one."
-	para "Tourism is dead."
-	line "So is the tourist"
-	para "board."
+	text "A reward for"
+	line "effort. I'd say"
+	para "good work, but"
+	line "that would spoil"
+	para "you."
 	done
 
 DisFurnaceRoomHermit0AfterText:
-	text "I do the tour for"
-	line "the echoes."
-	para "They're excellent"
-	line "listeners. They"
-	para "never tip."
+	text "I graded the cave"
+	line "too. It scored"
+	para "very low on"
+	line "cleanliness. I"
+	para "gave it detention."
 	done
 
 DisFurnaceRoomHermit0NoRoomText:
@@ -182,7 +180,7 @@ DisFurnaceRoomHermit1:
 	waitbutton
 	closetext
 	winlosstext DisFurnaceRoomHermit1BeatenText, 0
-	loadtrainer G_GRANNY, 155
+	loadtrainer G_SHAMAN, 158
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_DIS_FURNACE_ROOM_HERMIT1
@@ -206,37 +204,36 @@ DisFurnaceRoomHermit1:
 	end
 
 DisFurnaceRoomHermit1SeenText:
-	text "I outlived my"
-	line "children, their"
-	para "children, and the"
-	line "village. Do you"
-	para "think you can"
-	line "finish me?"
+	text "I know your last"
+	line "words. I won't"
+	para "tell you. Fight me"
+	line "and I might change"
+	para "them."
 	done
 
 DisFurnaceRoomHermit1BeatenText:
-	text "Well, well. A"
-	line "little pain, a"
-	para "little respect. I"
-	line "haven't felt"
-	para "either in decades."
-	line "Thank you, dear."
+	text "Interesting. That"
+	line "changes the"
+	para "ending. Take this."
+	line "It's a rewrite."
 	done
 
 DisFurnaceRoomHermit1GiftText:
-	text "Take this, dear."
-	line "It was my"
-	para "husband's. He had"
-	line "no use for it."
-	para "Neither do I."
+	text "A gift to"
+	line "commemorate your"
+	para "almost-last words."
+	line "They were very"
+	para "good. You'll say"
+	line "them eventually."
 	done
 
 DisFurnaceRoomHermit1AfterText:
-	text "Eat something. You"
-	line "look pale."
-	para "Everyone does."
-	line "Everyone is. It's"
-	para "the cave."
+	text "I've written down"
+	line "everything you"
+	para "said. Each page is"
+	line "a lie. They were"
+	para "all true in the"
+	line "end."
 	done
 
 DisFurnaceRoomHermit1NoRoomText:
@@ -283,7 +280,7 @@ DisFurnaceRoom_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 21, 11, DIS_STREET14, 1
+	warp_event 21, 11, DIS_STREET13, 1
 
 	def_coord_events
 
@@ -297,8 +294,8 @@ DisFurnaceRoom_MapEvents:
 	object_event 28, 24, SPRITE_HC_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisFurnaceRoomTrainer2, -1
 	object_event 18, 15, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, DisFurnaceRoomTrainer3, -1
 	object_event 20, 28, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisFurnaceRoomTrainer4, -1
-	object_event 12, 22, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisFurnaceRoomHermit0, -1
-	object_event 14, 14, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisFurnaceRoomHermit1, -1
+	object_event 12, 22, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisFurnaceRoomHermit0, -1
+	object_event 14, 14, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisFurnaceRoomHermit1, -1
 	object_event 26, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisFurnaceRoomBALL0, EVENT_GEN_DIS_FURNACE_ROOM_BALL0
 	object_event 24, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisFurnaceRoomBALL1, EVENT_GEN_DIS_FURNACE_ROOM_BALL1
 

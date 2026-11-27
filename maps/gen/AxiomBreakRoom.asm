@@ -279,7 +279,7 @@ AxiomBreakRoom_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 27,  9, AXIOM_STREET7, 1
+	warp_event 27,  9, AXIOM_STREET8, 1
 
 	def_coord_events
 

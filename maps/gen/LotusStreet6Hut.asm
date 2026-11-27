@@ -30,20 +30,20 @@ LotusStreet6HutDweller:
 	end
 
 LotusStreet6HutDwellerText:
-	text "The waves keep"
-	line "saying 'shh'. I"
-	para "think they're"
-	line "embarrassed for"
-	para "us."
-	done
-
-LotusStreet6HutDwellerAfterText:
 	text "I keep a journal."
 	line "Today's entry:"
 	para "'Same.'"
 	line "Yesterday's:"
 	para "'Same.' The day"
 	line "before: 'Same.'"
+	done
+
+LotusStreet6HutDwellerAfterText:
+	text "I saw a trainer"
+	line "yawn mid-attack."
+	para "It was the most"
+	line "honest violence I"
+	para "have ever seen."
 	done
 
 LotusStreet6HutDwellerNoRoomText:

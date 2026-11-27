@@ -21,11 +21,11 @@ TitheStreet11Hermit:
 	jumptextfaceplayer TitheStreet11HermitText
 
 TitheStreet11HermitText:
-	text "People on the road"
-	line "keep screaming and"
-	para "fainting. I think"
-	line "it's a wellness"
-	para "program."
+	text "A nun told me this"
+	line "glade is blessed."
+	para "It is not. She was"
+	line "just selling the"
+	para "deed."
 	done
 
 TitheStreet11AfterText:

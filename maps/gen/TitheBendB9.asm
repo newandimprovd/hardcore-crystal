@@ -13,12 +13,12 @@ TitheBendB9Hermit:
 	jumptextfaceplayer TitheBendB9HermitText
 
 TitheBendB9HermitText:
-	text "The Church says"
-	line "the poor shall"
-	para "inherit the earth."
-	line "I am in line. The"
-	para "earth is behind a"
-	line "lot of paperwork."
+	text "I left the city to"
+	line "escape the tithe."
+	para "The trees also"
+	line "want ten percent."
+	para "Of what, they"
+	line "won't say."
 	done
 
 TitheBendB9_MapEvents:
@@ -29,8 +29,8 @@ TitheBendB9_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 15, 13, BGEVENT_ITEM, TitheBendB9Hidden
+	bg_event 16,  2, BGEVENT_ITEM, TitheBendB9Hidden
 
 	def_object_events
-	object_event  9,  7, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheBendB9Hermit, -1
+	object_event 22,  4, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TitheBendB9Hermit, -1
 

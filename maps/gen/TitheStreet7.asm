@@ -9,6 +9,21 @@ TitheStreet7_MapScripts:
 TitheStreet7Pickup:
 	itemball ETHER
 
+TitheStreet7Hidden:
+	hiddenitem REVIVE, EVENT_GEN_TITHE_STREET7_HIDDEN
+
+TitheStreet7Hermit:
+	jumptextfaceplayer TitheStreet7HermitText
+
+TitheStreet7HermitText:
+	text "I have been"
+	line "praying for rain."
+	para "It rained. On the"
+	line "neighbor. I have"
+	para "been praying for"
+	line "him ever since."
+	done
+
 TitheStreet7AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -133,13 +148,15 @@ TitheStreet7_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 18, 17, BGEVENT_ITEM, TitheStreet7Hidden
 
 	def_object_events
-	object_event  8,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet7Pickup, EVENT_GEN_TITHE_STREET7_PICKUP
-	object_event  8, 24, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer0, -1
-	object_event 12, 20, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer1, -1
-	object_event 17, 20, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer2, -1
-	object_event 12, 16, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer3, -1
-	object_event 17, 16, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer4, -1
-	object_event 15, 12, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer5, -1
+	object_event 20, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet7Pickup, EVENT_GEN_TITHE_STREET7_PICKUP
+	object_event 17, 18, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet7Hermit, -1
+	object_event  5,  6, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer0, -1
+	object_event  9, 10, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer1, -1
+	object_event  9, 15, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer2, -1
+	object_event 13, 10, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer3, -1
+	object_event 13, 15, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer4, -1
+	object_event 17, 13, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet7Trainer5, -1
 

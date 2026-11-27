@@ -13,11 +13,10 @@ LotusStreet7Hermit:
 	jumptextfaceplayer LotusStreet7HermitText
 
 LotusStreet7HermitText:
-	text "Everyone says the"
-	line "sea is calming."
-	para "The sea is a bully"
-	line "with good"
-	para "lighting."
+	text "The seagulls here"
+	line "are on a retainer."
+	para "Do not feed them."
+	line "They report."
 	done
 
 LotusStreet7AfterText:

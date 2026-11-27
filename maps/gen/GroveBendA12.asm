@@ -7,7 +7,7 @@ GroveBendA12_MapScripts:
 	def_callbacks
 
 GroveBendA12Hidden:
-	hiddenitem REVIVE, EVENT_GEN_GROVE_BEND_A12_HIDDEN
+	hiddenitem ELIXER, EVENT_GEN_GROVE_BEND_A12_HIDDEN
 
 GroveBendA12Hermit:
 	jumptextfaceplayer GroveBendA12HermitText
@@ -28,8 +28,8 @@ GroveBendA12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 21, 19, BGEVENT_ITEM, GroveBendA12Hidden
+	bg_event 21, 23, BGEVENT_ITEM, GroveBendA12Hidden
 
 	def_object_events
-	object_event 19, 16, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveBendA12Hermit, -1
+	object_event 17, 18, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveBendA12Hermit, -1
 

@@ -12,15 +12,54 @@ LotusStreet4Pickup:
 LotusStreet4Hidden:
 	hiddenitem PP_UP, EVENT_GEN_LOTUS_STREET4_HIDDEN
 
-LotusStreet4Hermit:
-	jumptextfaceplayer LotusStreet4HermitText
+LotusStreet4GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_LOTUS_STREET4_HGIFT
+	iftrue .Done
+	writetext LotusStreet4GiftHermitText
+	waitbutton
+	verbosegiveitem CATCH_CHARM
+	iffalse .NoRoom
+	setevent EVENT_GEN_LOTUS_STREET4_HGIFT
+.Done:
+	writetext LotusStreet4GiftHermitAfterText
+	waitbutton
+	closetext
+	end
 
-LotusStreet4HermitText:
-	text "I live in a shell."
-	line "I cannot remember"
-	para "who was in it"
-	line "before. We share"
-	para "the lease."
+.NoRoom:
+	writetext LotusStreet4GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+LotusStreet4GiftHermitText:
+	text "I've never caught"
+	line "anything but a"
+	para "cold. Take this"
+	line "CATCH CHARM. A"
+	para "quarter better"
+	line "odds on the wild"
+	para "ones. The cold"
+	line "stays mine. I've"
+	para "grown fond of it."
+	done
+
+LotusStreet4GiftHermitAfterText:
+	text "Be gentle with the"
+	line "ball. It has"
+	para "feelings. They're"
+	line "all about being"
+	para "thrown."
+	done
+
+LotusStreet4GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
 	done
 
 LotusStreet4AfterText:
@@ -167,15 +206,16 @@ LotusStreet4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 19, LOTUS_DRY_POOL, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  4, 21, BGEVENT_ITEM, LotusStreet4Hidden
+	bg_event  7, 20, BGEVENT_ITEM, LotusStreet4Hidden
 
 	def_object_events
-	object_event  7, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet4Pickup, EVENT_GEN_LOTUS_STREET4_PICKUP
-	object_event  4, 25, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet4Hermit, -1
+	object_event  5, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet4Pickup, EVENT_GEN_LOTUS_STREET4_PICKUP
+	object_event  7, 25, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusStreet4GiftHermit, -1
 	object_event 16, 28, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer0, -1
 	object_event 17, 24, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer1, -1
 	object_event 10, 20, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet4Trainer2, -1

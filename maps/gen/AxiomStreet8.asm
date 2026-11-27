@@ -10,18 +10,17 @@ AxiomStreet8Pickup:
 	itemball TM_CURSE
 
 AxiomStreet8Hidden:
-	hiddenitem REVIVE, EVENT_GEN_AXIOM_STREET8_HIDDEN
+	hiddenitem MAX_REVIVE, EVENT_GEN_AXIOM_STREET8_HIDDEN
 
 AxiomStreet8Hermit:
 	jumptextfaceplayer AxiomStreet8HermitText
 
 AxiomStreet8HermitText:
-	text "The sensors here"
-	line "are down. The"
-	para "sensors are always"
-	line "down. It is how"
-	para "the sensors"
-	line "survive."
+	text "A bot asked me for"
+	line "ID. I showed it a"
+	para "leaf. It accepted."
+	line "We are now"
+	para "partners."
 	done
 
 AxiomStreet8AfterText:
@@ -164,20 +163,21 @@ AxiomStreet8_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2,  9, AXIOM_BREAK_ROOM, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  9,  2, BGEVENT_ITEM, AxiomStreet8Hidden
+	bg_event  4, 17, BGEVENT_ITEM, AxiomStreet8Hidden
 
 	def_object_events
-	object_event 10,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet8Pickup, EVENT_GEN_AXIOM_STREET8_PICKUP
-	object_event 13,  4, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomStreet8Hermit, -1
-	object_event  5,  6, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer0, -1
-	object_event  5, 11, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer1, -1
-	object_event  9, 10, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer2, -1
-	object_event 13, 14, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer3, -1
-	object_event 13, 19, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer4, -1
-	object_event 17, 15, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer5, -1
-	object_event 21,  6, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer6, -1
+	object_event  5, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet8Pickup, EVENT_GEN_AXIOM_STREET8_PICKUP
+	object_event  6, 14, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomStreet8Hermit, -1
+	object_event 14, 28, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer0, -1
+	object_event 19, 28, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer1, -1
+	object_event 10, 24, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer2, -1
+	object_event  6, 20, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer3, -1
+	object_event 11, 20, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer4, -1
+	object_event 15, 16, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer5, -1
+	object_event 14, 12, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet8Trainer6, -1
 

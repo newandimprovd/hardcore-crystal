@@ -285,7 +285,7 @@ GroveHollowOak_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11,  9, GROVE_STREET2, 1
+	warp_event 11,  9, GROVE_STREET4, 1
 
 	def_coord_events
 

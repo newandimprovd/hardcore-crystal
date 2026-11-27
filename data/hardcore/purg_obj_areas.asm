@@ -20,7 +20,6 @@ HC_PurgObjAreas:
 	db 1 ; GroveHollowOak
 	db 1 ; GroveMossChapel
 	db 2 ; AxiomBreakRoom
-	db 2 ; AxiomSpareRoom
 	db 3 ; LotusDryPool
 	db 3 ; LotusLastCabana
 	db 4 ; DisFilingPit

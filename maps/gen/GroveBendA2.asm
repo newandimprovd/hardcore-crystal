@@ -13,12 +13,11 @@ GroveBendA2Hermit:
 	jumptextfaceplayer GroveBendA2HermitText
 
 GroveBendA2HermitText:
-	text "The trainers out"
-	line "there are so"
-	para "friendly. They"
-	line "shout 'peace' and"
-	para "then try to kill"
-	line "you."
+	text "If you hear"
+	line "chanting, it isn't"
+	para "a ritual. It's"
+	line "just Greg. He's"
+	para "had a bad week."
 	done
 
 GroveBendA2_MapEvents:
@@ -29,8 +28,8 @@ GroveBendA2_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 17, 16, BGEVENT_ITEM, GroveBendA2Hidden
+	bg_event 21, 16, BGEVENT_ITEM, GroveBendA2Hidden
 
 	def_object_events
-	object_event 17, 17, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveBendA2Hermit, -1
+	object_event 21, 17, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveBendA2Hermit, -1
 

@@ -16,11 +16,11 @@ TitheStreet14Hermit:
 	jumptextfaceplayer TitheStreet14HermitText
 
 TitheStreet14HermitText:
-	text "If you meet the"
-	line "Mayor, tell him"
-	para "the hole in my"
-	line "roof is his fault."
-	para "And the roof."
+	text "I used to be a"
+	line "loan officer. Now"
+	para "I'm a loan."
+	line "Somebody owes me"
+	para "an apology."
 	done
 
 TitheStreet14AfterText:
@@ -145,15 +145,15 @@ TitheStreet14_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 18, 16, BGEVENT_ITEM, TitheStreet14Hidden
+	bg_event  6, 17, BGEVENT_ITEM, TitheStreet14Hidden
 
 	def_object_events
-	object_event 16, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet14Pickup, EVENT_GEN_TITHE_STREET14_PICKUP
-	object_event 22, 20, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheStreet14Hermit, -1
-	object_event 24,  9, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer0, -1
-	object_event 24,  4, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer1, -1
-	object_event 20,  9, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer2, -1
-	object_event 16,  4, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer3, -1
-	object_event 12,  9, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer4, -1
-	object_event 12,  4, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer5, -1
+	object_event  3, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet14Pickup, EVENT_GEN_TITHE_STREET14_PICKUP
+	object_event 11, 18, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TitheStreet14Hermit, -1
+	object_event 16, 24, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer0, -1
+	object_event 21, 24, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer1, -1
+	object_event 16, 20, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer2, -1
+	object_event 21, 16, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer3, -1
+	object_event 16, 12, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer4, -1
+	object_event 21, 12, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TitheStreet14Trainer5, -1
 

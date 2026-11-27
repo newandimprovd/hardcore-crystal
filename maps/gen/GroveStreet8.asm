@@ -13,11 +13,11 @@ GroveStreet8Hermit:
 	jumptextfaceplayer GroveStreet8HermitText
 
 GroveStreet8HermitText:
-	text "I left the commune"
-	line "because it was too"
-	para "loud. Now I live"
-	line "in a tree. The"
-	para "tree is also loud."
+	text "The mushrooms here"
+	line "talk. Mostly they"
+	para "say 'sell'. I"
+	line "don't know what."
+	para "I'm scared."
 	done
 
 GroveStreet8AfterText:
@@ -141,18 +141,19 @@ GroveStreet8_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2, 11, GROVE_MOSS_CHAPEL, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 10, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet8Pickup, EVENT_GEN_GROVE_STREET8_PICKUP
-	object_event 11, 15, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet8Hermit, -1
-	object_event 24,  9, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer0, -1
-	object_event 20,  9, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer1, -1
-	object_event 20,  4, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer2, -1
-	object_event 16,  9, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer3, -1
-	object_event 16,  4, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer4, -1
-	object_event 12,  4, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer5, -1
+	object_event  4, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet8Pickup, EVENT_GEN_GROVE_STREET8_PICKUP
+	object_event  8, 13, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet8Hermit, -1
+	object_event 14, 24, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer0, -1
+	object_event 14, 20, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer1, -1
+	object_event 19, 20, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer2, -1
+	object_event 14, 16, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer3, -1
+	object_event 19, 16, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer4, -1
+	object_event 19, 12, SPRITE_HC_BATHER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet8Trainer5, -1
 

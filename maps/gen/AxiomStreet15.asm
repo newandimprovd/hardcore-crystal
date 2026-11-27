@@ -10,7 +10,7 @@ AxiomStreet15Pickup:
 	itemball TM_PSYCH_UP
 
 AxiomStreet15Hidden:
-	hiddenitem ETHER, EVENT_GEN_AXIOM_STREET15_HIDDEN
+	hiddenitem MAX_ETHER, EVENT_GEN_AXIOM_STREET15_HIDDEN
 
 AxiomStreet15Hermit:
 	jumptextfaceplayer AxiomStreet15HermitText

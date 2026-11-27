@@ -30,20 +30,20 @@ TitheStreet6HutDweller:
 	end
 
 TitheStreet6HutDwellerText:
+	text "If you meet the"
+	line "Mayor, tell him"
+	para "the hole in my"
+	line "roof is his fault."
+	para "And the roof."
+	done
+
+TitheStreet6HutDwellerAfterText:
 	text "I came out here to"
 	line "avoid the census."
 	para "Now I count the"
 	line "trees. They do not"
 	para "respond but they"
 	line "do not charge."
-	done
-
-TitheStreet6HutDwellerAfterText:
-	text "I used to be a"
-	line "loan officer. Now"
-	para "I'm a loan."
-	line "Somebody owes me"
-	para "an apology."
 	done
 
 TitheStreet6HutDwellerNoRoomText:

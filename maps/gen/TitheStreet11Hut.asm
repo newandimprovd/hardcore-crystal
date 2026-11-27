@@ -30,19 +30,19 @@ TitheStreet11HutDweller:
 	end
 
 TitheStreet11HutDwellerText:
-	text "I lost a bet with"
-	line "the Mayor. The"
-	para "stake was my"
-	line "shadow. It is on a"
-	para "payroll."
-	done
-
-TitheStreet11HutDwellerAfterText:
 	text "The pond is clean."
 	line "That is because"
 	para "I've been drinking"
 	line "all the dirty"
 	para "bits."
+	done
+
+TitheStreet11HutDwellerAfterText:
+	text "People on the road"
+	line "keep screaming and"
+	para "fainting. I think"
+	line "it's a wellness"
+	para "program."
 	done
 
 TitheStreet11HutDwellerNoRoomText:

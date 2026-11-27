@@ -10,17 +10,18 @@ GroveStreet5Pickup:
 	itemball TM_ROLLOUT
 
 GroveStreet5Hidden:
-	hiddenitem ANTIDOTE, EVENT_GEN_GROVE_STREET5_HIDDEN
+	hiddenitem ELIXER, EVENT_GEN_GROVE_STREET5_HIDDEN
 
 GroveStreet5Hermit:
 	jumptextfaceplayer GroveStreet5HermitText
 
 GroveStreet5HermitText:
-	text "There is a"
-	line "mushroom here that"
-	para "agrees with"
-	line "everything. I call"
-	para "it my spouse."
+	text "I tried to join"
+	line "the commune. They"
+	para "asked for my"
+	line "savings, my shoes"
+	para "and my opinions. I"
+	line "kept the opinions."
 	done
 
 GroveStreet5AfterText:
@@ -146,15 +147,15 @@ GroveStreet5_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 13, BGEVENT_ITEM, GroveStreet5Hidden
+	bg_event 18, 18, BGEVENT_ITEM, GroveStreet5Hidden
 
 	def_object_events
-	object_event  4, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet5Pickup, EVENT_GEN_GROVE_STREET5_PICKUP
-	object_event  9, 25, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GroveStreet5Hermit, -1
-	object_event 16, 24, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer0, -1
-	object_event 12, 20, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer1, -1
-	object_event 17, 20, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer2, -1
-	object_event  8, 16, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer3, -1
-	object_event 13, 16, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer4, -1
-	object_event 17, 12, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer5, -1
+	object_event 16, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet5Pickup, EVENT_GEN_GROVE_STREET5_PICKUP
+	object_event 18, 17, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GroveStreet5Hermit, -1
+	object_event 24, 11, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer0, -1
+	object_event 20, 15, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer1, -1
+	object_event 20, 10, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer2, -1
+	object_event 16, 11, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer3, -1
+	object_event 16,  6, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer4, -1
+	object_event 12, 10, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet5Trainer5, -1
 

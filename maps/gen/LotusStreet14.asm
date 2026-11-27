@@ -16,11 +16,11 @@ LotusStreet14Hermit:
 	jumptextfaceplayer LotusStreet14HermitText
 
 LotusStreet14HermitText:
-	text "I saw a trainer"
-	line "yawn mid-attack."
-	para "It was the most"
-	line "honest violence I"
-	para "have ever seen."
+	text "I live in a shell."
+	line "I cannot remember"
+	para "who was in it"
+	line "before. We share"
+	para "the lease."
 	done
 
 LotusStreet14AfterText:

@@ -16,10 +16,11 @@ GroveStreet4Hermit:
 	jumptextfaceplayer GroveStreet4HermitText
 
 GroveStreet4HermitText:
-	text "I came for"
-	line "silence. The birds"
-	para "are very loud"
-	line "about it."
+	text "This tree is my"
+	line "friend. The tree"
+	para "has not said so."
+	line "It also has not"
+	para "said no."
 	done
 
 GroveStreet4AfterText:
@@ -162,20 +163,21 @@ GroveStreet4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event  2,  9, GROVE_HOLLOW_OAK, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 12, 19, BGEVENT_ITEM, GroveStreet4Hidden
+	bg_event  5, 13, BGEVENT_ITEM, GroveStreet4Hidden
 
 	def_object_events
-	object_event 11, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet4Pickup, EVENT_GEN_GROVE_STREET4_PICKUP
-	object_event 13, 19, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet4Hermit, -1
-	object_event  5,  4, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer0, -1
-	object_event  9,  2, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer1, -1
-	object_event  9,  7, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer2, -1
-	object_event 13,  2, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer3, -1
-	object_event 13,  7, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer4, -1
-	object_event 17, 11, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer5, -1
-	object_event 21,  6, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer6, -1
+	object_event  3, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet4Pickup, EVENT_GEN_GROVE_STREET4_PICKUP
+	object_event  4, 13, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveStreet4Hermit, -1
+	object_event 16, 28, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer0, -1
+	object_event 12, 24, SPRITE_HC_HIPPIE_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer1, -1
+	object_event 17, 24, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer2, -1
+	object_event  8, 20, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer3, -1
+	object_event 13, 20, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer4, -1
+	object_event 17, 16, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer5, -1
+	object_event 12, 12, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, GroveStreet4Trainer6, -1
 

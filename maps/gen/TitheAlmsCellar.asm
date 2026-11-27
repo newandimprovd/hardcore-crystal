@@ -281,7 +281,7 @@ TitheAlmsCellar_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11,  9, TITHE_STREET3, 1
+	warp_event 11,  9, TITHE_STREET4, 1
 
 	def_coord_events
 

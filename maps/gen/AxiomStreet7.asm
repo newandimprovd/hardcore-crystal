@@ -16,10 +16,10 @@ AxiomStreet7Hermit:
 	jumptextfaceplayer AxiomStreet7HermitText
 
 AxiomStreet7HermitText:
-	text "I deleted myself"
-	line "from the registry."
-	para "Now I am free. And"
-	line "also uninsured."
+	text "Every axiom here"
+	line "is true until it"
+	para "becomes"
+	line "inconvenient."
 	done
 
 AxiomStreet7AfterText:
@@ -143,20 +143,19 @@ AxiomStreet7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  9, AXIOM_BREAK_ROOM, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  8, 17, BGEVENT_ITEM, AxiomStreet7Hidden
+	bg_event 13,  3, BGEVENT_ITEM, AxiomStreet7Hidden
 
 	def_object_events
-	object_event  7, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet7Pickup, EVENT_GEN_AXIOM_STREET7_PICKUP
-	object_event  3, 14, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomStreet7Hermit, -1
-	object_event  8, 24, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer0, -1
-	object_event 13, 24, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer1, -1
-	object_event 12, 20, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer2, -1
-	object_event 17, 20, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer3, -1
-	object_event 16, 16, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer4, -1
-	object_event 21, 12, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer5, -1
+	object_event 13,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet7Pickup, EVENT_GEN_AXIOM_STREET7_PICKUP
+	object_event 12,  2, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomStreet7Hermit, -1
+	object_event  5,  6, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer0, -1
+	object_event  5, 11, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer1, -1
+	object_event  9, 10, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer2, -1
+	object_event  9, 15, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer3, -1
+	object_event 13, 14, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer4, -1
+	object_event 17, 19, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet7Trainer5, -1
 

@@ -50,11 +50,11 @@ LotusStreet6Hermit:
 	jumptextfaceplayer LotusStreet6HermitText
 
 LotusStreet6HermitText:
-	text "I saw a trainer"
-	line "yawn mid-attack."
-	para "It was the most"
-	line "honest violence I"
-	para "have ever seen."
+	text "Everyone says the"
+	line "sea is calming."
+	para "The sea is a bully"
+	line "with good"
+	para "lighting."
 	done
 
 LotusStreet6AfterText:

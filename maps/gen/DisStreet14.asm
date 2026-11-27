@@ -16,10 +16,9 @@ DisStreet14Hermit:
 	jumptextfaceplayer DisStreet14HermitText
 
 DisStreet14HermitText:
-	text "I used to be a"
-	line "lawyer. Now I'm a"
-	para "rock. The pay is"
-	line "similar."
+	text "Be careful. The"
+	line "trainers are the"
+	para "nice ones."
 	done
 
 DisStreet14AfterText:
@@ -143,20 +142,19 @@ DisStreet14_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2, 19, DIS_FURNACE_ROOM, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  5, 11, BGEVENT_ITEM, DisStreet14Hidden
+	bg_event 17,  7, BGEVENT_ITEM, DisStreet14Hidden
 
 	def_object_events
-	object_event  5, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet14Pickup, EVENT_GEN_DIS_STREET14_PICKUP
-	object_event  6, 10, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisStreet14Hermit, -1
-	object_event 16, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer0, -1
-	object_event 21, 24, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer1, -1
-	object_event 12, 20, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer2, -1
-	object_event 13, 16, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer3, -1
-	object_event 12, 12, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer4, -1
-	object_event 17, 12, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer5, -1
+	object_event 14,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisStreet14Pickup, EVENT_GEN_DIS_STREET14_PICKUP
+	object_event 18,  2, SPRITE_HC_WITCH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisStreet14Hermit, -1
+	object_event 24, 11, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer0, -1
+	object_event 24,  6, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer1, -1
+	object_event 20, 15, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer2, -1
+	object_event 16, 14, SPRITE_HC_WARDEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer3, -1
+	object_event 12, 15, SPRITE_HC_BRUTE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer4, -1
+	object_event 12, 10, SPRITE_HC_JUDGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, DisStreet14Trainer5, -1
 

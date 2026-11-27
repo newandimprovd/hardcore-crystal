@@ -16,11 +16,11 @@ TitheStreet4Hermit:
 	jumptextfaceplayer TitheStreet4HermitText
 
 TitheStreet4HermitText:
-	text "A nun told me this"
-	line "glade is blessed."
-	para "It is not. She was"
-	line "just selling the"
-	para "deed."
+	text "People on the road"
+	line "keep screaming and"
+	para "fainting. I think"
+	line "it's a wellness"
+	para "program."
 	done
 
 TitheStreet4AfterText:
@@ -140,15 +140,16 @@ TitheStreet4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 20,  9, TITHE_ALMS_CELLAR, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  5, 25, BGEVENT_ITEM, TitheStreet4Hidden
+	bg_event 17, 16, BGEVENT_ITEM, TitheStreet4Hidden
 
 	def_object_events
-	object_event  8, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet4Pickup, EVENT_GEN_TITHE_STREET4_PICKUP
-	object_event  3, 23, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet4Hermit, -1
+	object_event 21, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet4Pickup, EVENT_GEN_TITHE_STREET4_PICKUP
+	object_event 16, 13, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheStreet4Hermit, -1
 	object_event 16, 24, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer0, -1
 	object_event 12, 20, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer1, -1
 	object_event 17, 20, SPRITE_HC_THUG, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet4Trainer2, -1

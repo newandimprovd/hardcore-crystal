@@ -10,7 +10,7 @@ LotusStreet1Pickup:
 	itemball TM_DIG
 
 LotusStreet1Hidden:
-	hiddenitem REVIVE, EVENT_GEN_LOTUS_STREET1_HIDDEN
+	hiddenitem MAX_REVIVE, EVENT_GEN_LOTUS_STREET1_HIDDEN
 
 LotusStreet1Hermit:
 	jumptextfaceplayer LotusStreet1HermitText
