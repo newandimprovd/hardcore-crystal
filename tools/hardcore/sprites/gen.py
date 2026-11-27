@@ -11,6 +11,7 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import faces  # noqa: E402
 import importer  # noqa: E402
 import plans  # noqa: E402
 import rig  # noqa: E402
@@ -30,7 +31,7 @@ def palette(rec, shiny=False):
     return [(255, 255, 255), c5(a), c5(b), (0, 0, 0)]
 
 
-def make_rig(rec):
+def make_rig(rec, name=None):
     params = rec["params"]
 
     def builder(pose):
@@ -38,12 +39,13 @@ def make_rig(rec):
         plans.PLANS[rec["plan"]](M, pose, params)
         if rec.get("ramps"):
             M.ramps = dict(rec["ramps"])
+        faces.apply(M, name)
         return M
     f, b = rec["front"], rec["back"]
     views = {k: dict(v) for k, v in rig.VIEWS.items()}
     for k, ov in (("front", f), ("back", b)):
         views[k].update({kk: vv for kk, vv in ov.items() if kk in ("yaw", "pitch", "dist")})
-    return rig.Rig(builder, views=views, fill=rec["fill"])
+    return rig.Rig(builder, views=views, fill=faces.fill_for(rec["fill"], name))
 
 
 def tiles_of(img):
@@ -81,7 +83,7 @@ def render(name):
     pal = palette(rec)
     pal8 = [pal[1], pal[2]]
     need_rig = not rec.get("import_front") or not (rec.get("import_back") or rec.get("back_mirror"))
-    r = make_rig(rec) if need_rig else None
+    r = make_rig(rec, name) if need_rig else None
     if rec.get("import_front"):
         # a finished sprite supplied by the author is the front picture
         base, mask = importer.convert(os.path.join(HERE, rec["import_front"]), pal8)
@@ -115,7 +117,7 @@ def write_png(imgs, pal, path):
 def source_hash(name):
     import hashlib
     h = hashlib.sha1(repr(sorted(RECIPES[name].items(), key=lambda kv: kv[0])).encode())
-    for f in ("sdf.py", "toon.py", "rig.py", "parts.py", "plans.py", "gen.py", "importer.py"):
+    for f in ("sdf.py", "toon.py", "rig.py", "parts.py", "plans.py", "gen.py", "importer.py", "faces.py"):
         h.update(open(os.path.join(HERE, f), "rb").read())
     for key in ("import_front", "import_back"):
         if RECIPES[name].get(key):

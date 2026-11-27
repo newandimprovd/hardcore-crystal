@@ -11,7 +11,7 @@ BAYER = np.array([[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]])
 LIGHT = np.array([-0.5, 0.62, 0.6])
 LIGHT = LIGHT / np.linalg.norm(LIGHT)
 
-STYLE = dict(term=0.40, band=0.06, core=0.07, hi=0.93, hi_soft=0.05, outline_depth=0.18, part_depth=0.05)
+STYLE = dict(term=0.40, band=0.045, core=0.07, hi=0.93, hi_soft=0.05, outline_depth=0.18, part_depth=0.05)
 
 
 def reduce(buf, model):
@@ -148,11 +148,41 @@ def shade(red, model, style=None):
         gp = np.pad(red["grp"], 1, constant_values=-1)[1 + dy:1 + dy + n, 1 + dx:1 + dx + n]
         line |= solid & nb & (gp != red["grp"]) & (nd < d - st["part_depth"])
     img = np.where(line, 3, img).astype(np.int8)
+    return despeckle(img, solid, red["mat"] == sdf.EYE)
+
+
+def despeckle(img, solid, keep):
+    """Removes the lone pixels the dithering and the creases leave behind: a pixel whose four neighbours all differ from it and mostly agree with
+    each other takes their colour, a lone white or black pixel with no like neighbour at all (diagonals count) goes too.  Eyes stay."""
+    n = img.shape[0]
+    for _ in range(2):
+        p = np.pad(img, 1, constant_values=-1)
+        ps = np.pad(solid, 1, constant_values=False)
+        nb4 = [p[1 + dy:1 + dy + n, 1 + dx:1 + dx + n] for dy, dx in ((0, 1), (0, -1), (1, 0), (-1, 0))]
+        nb8 = nb4 + [p[1 + dy:1 + dy + n, 1 + dx:1 + dx + n] for dy, dx in ((1, 1), (1, -1), (-1, 1), (-1, -1))]
+        same4 = sum((q == img).astype(int) for q in nb4)
+        same8 = sum((q == img).astype(int) for q in nb8)
+        inside = np.ones((n, n), bool)
+        for dy, dx in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+            inside &= ps[1 + dy:1 + dy + n, 1 + dx:1 + dx + n]
+        # majority colour of the four neighbours
+        best = np.full((n, n), -1, np.int8)
+        bestc = np.zeros((n, n), int)
+        for c in range(4):
+            cnt = sum((q == c).astype(int) for q in nb4)
+            take = cnt > bestc
+            best = np.where(take, np.int8(c), best)
+            bestc = np.where(take, cnt, bestc)
+        lone = solid & inside & ~keep & (same4 == 0) & (bestc >= 3)
+        lone_hi = solid & inside & ~keep & (same8 == 0) & ((img == 0) | (img == 3))
+        img = np.where(lone | lone_hi, np.where(best >= 0, best, img), img).astype(np.int8)
     return img
 
 
 def fit_view(model, cam, fill=0.94, n=48, anchor="center"):
-    """Framing (cx, cy, half) that makes the model's silhouette fill `fill` of the canvas."""
+    """Framing (cx, cy, half) that makes the model's silhouette fill `fill` of the canvas.  anchor "bottom" puts the lowest point of the
+    silhouette one pixel above the canvas edge, so creatures of every size stand on the same ground line (a small one then sits low in the
+    picture like the vanilla sprites do) and the horizontal centre stays on the middle."""
     big = 3.5
     buf = sdf.render(model, cam, n=n, ss=1, view=(cam.shift[0], cam.shift[1], big))
     hit = buf["hit"]
@@ -163,4 +193,8 @@ def fit_view(model, cam, fill=0.94, n=48, anchor="center"):
     w = (x1 - x0) / n * 2 * big
     h = (y1 - y0) / n * 2 * big
     half = max(w, h) / 2 / fill
+    if anchor == "bottom":
+        y_bottom = cam.shift[1] - (y1 / n * 2 - 1) * big
+        px = 2 * half / n
+        cy = y_bottom + half - 1.2 * px
     return (cx, cy, half)
