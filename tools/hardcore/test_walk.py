@@ -499,6 +499,7 @@ def auto_plan(world, first, prefix=None):
     while cur and guard < 200:
         guard += 1
         gate_next = None
+        huts = []  # a hut stands beyond the gate of its street (the gate is at the street's entrance), so it is visited after the gate
         mp = maps[cur]
         add(cur)
         for gg in bearer_goals(world, cur):
@@ -520,6 +521,8 @@ def auto_plan(world, first, prefix=None):
                 gate_next = next((world.consts[d].name for (_, _, d, _) in dm.warps
                                   if d in world.consts and world.consts[d].name != cur
                                   and world.consts[d].name.startswith(prefix)), None)
+            elif n.endswith(tuple("Hut" + d for d in ("", "1", "2", "3"))):
+                huts.append(n)
             else:  # a boss room
                 m_item = re.search(r"itemball (\w+)", open(os.path.join(ROOT, f"maps/gen/{n}.asm")).read())
                 if m_item:
@@ -531,6 +534,9 @@ def auto_plan(world, first, prefix=None):
                 add(cur)
         if any(o["script"].endswith(("GateScript", "BoulderScript")) for o in mp.objects):
             add("gate:" + cur)
+        for n in huts:
+            add(n)
+            add(cur)
         nxt = next((mp.conns[d] for d in ("north", "east", "west") if d in mp.conns and mp.conns[d][0] in maps
                     and mp.conns[d][0] not in seen), None)  # the road turns east and west since alpha 3.2: follow whichever way is new
         cur = nxt[0] if nxt else gate_next

@@ -91,7 +91,9 @@ def _draw_one(img, model, cam, view, n, pose, face):
         (x, y), = sdf.project(cam, [A[name]], n, view)
         xi, yi = int(round(x - 0.5)), int(round(y - 0.5))
         side = -1 if A[name][0] > 0 else 1  # the creature's left eye is at +x; seen from the front it is on the screen's left for yaw ~ 0
-        eye(img, xi, yi, face.get("eye", "angry"), sz, side, glow, face.get("eye_col", 0))
+        eye(img, xi, yi, face.get("eye", "angry"), face.get("eye_size", sz), side, glow, face.get("eye_col", 0))
+        if i == 0 and face.get("scar"):
+            scar(img, xi, yi, side)
     m = face.get("mouth")
     if m:
         (x0, y0), (x1, y1) = sdf.project(cam, [A[m[0]], A[m[1]]], n, view)
@@ -100,42 +102,96 @@ def _draw_one(img, model, cam, view, n, pose, face):
 
 def eye(img, x, y, kind, sz, side, glow, col=0):
     """Eye centred on pixel (x, y).  side: +1 for an eye on the left of the face (the brow slopes down toward the right), -1 otherwise.
-    col is the palette index of the glow (0 white, 2 the second colour)."""
+    col is the palette index of the glow (0 white, 2 the second colour).  Every moody eye is an outlined white eye with a black pupil, four pixels
+    wide (five when sz is 1.3 or more), so the face reads at the size of the picture."""
     big = sz >= 1.3
+    w = 5 if big else 4
+    x0 = x - w // 2
+    near = (lambda i: i) if side > 0 else (lambda i: w - 1 - i)  # w - 1 is the end of the eye nearest the nose, 0 the outer end
+    at_near = lambda k: (w - 1 - k) if side > 0 else k  # noqa: E731  column of the k-th pixel counted back from the nose end
+
+    def px(i, r, c):
+        _put(img, x0 + i, y - 1 + r, c)
+
     if kind == "angry":
-        w = 4 if big else 3
-        rows = 2 if big else 1
+        h = 4 if big else 3
         for i in range(w):
-            inner = i if side > 0 else w - 1 - i
-            by = y - 1 + (1 if inner >= w // 2 else 0)
-            cx = x - w // 2 + i
-            _put(img, cx, by, 3)
-            for k in range(rows):
-                _put(img, cx, by + 1 + k, col)
-            _put(img, cx, by + 1 + rows, 3)
-        pi = (w - 1) if side > 0 else 0
-        _put(img, x - w // 2 + pi, y + 1 + (1 if big else 0), 3)
+            drop = 1 if near(i) >= w // 2 else 0  # the brow runs down toward the nose
+            if drop:
+                px(i, 0, 3)
+            px(i, drop, 3)
+            for r in range(drop + 1, h - 1):
+                px(i, r, col)
+            px(i, h - 1, 3)
+        px(at_near(0), h - 2, 3)  # the pupil in the end by the nose: the glare
+        px(at_near(1), h - 2, 3)
+    elif kind == "sly":
+        for i in range(w):
+            lid = 0 if near(i) < w // 2 else 1  # the lid climbs toward the outer end: the smug squint
+            px(i, lid, 3)
+            px(i, lid + 1, col)
+            px(i, 2, 3)
+        px(at_near(1), 1, 3)
+    elif kind == "tired":
+        for i in range(w):
+            px(i, 0, 3)
+            px(i, 1, col)
+            px(i, 2, 3 if i % 2 == 0 else col)  # the bag under the eye
+        px(w // 2, 1, 3)
+        px(w // 2 - 1, 1, 3)
+    elif kind == "round":
+        h = w
+        for i in range(1, w - 1):
+            px(i, 0, 3)
+            px(i, h - 1, 3)
+        for r in range(1, h - 1):
+            px(0, r, 3)
+            px(w - 1, r, 3)
+            for i in range(1, w - 1):
+                px(i, r, col)
+        px(w // 2, h // 2, 3)  # the pin prick pupil
+    elif kind == "addled":
+        for i in range(w):
+            px(i, 0, 3)
+            px(i, 1, col)
+            px(i, 2, col)
+            px(i, 3, 3)
+        px(at_near(0), 2, 3)  # both pupils pushed in toward the nose
+        px(at_near(0), 1, 3)
+        px(at_near(1), 2, 3)
+    elif kind == "blank":
+        for i in range(w):
+            px(i, 0, 3)
+            px(i, 1, col)
+            px(i, 2, col)
+            px(i, 3, 3)
+        for i in range(w):
+            px(i, 1, 3 if glow else col)
     elif kind == "hollow":
         for dx in (-1, 0, 1):
             for dy in (0, 1):
                 _put(img, x + dx, y + dy, 3)
         _put(img, x, y, col if glow else 3)
-    elif kind == "round":
-        for dx in (0, 1):
-            for dy in (0, 1):
-                _put(img, x + dx - 1, y + dy, 0)
-        _put(img, x + (0 if side > 0 else -1), y + 1, 3)
-        for dx in (-2, -1, 0, 1):
-            _put(img, x + dx, y - 1, 3)
     elif kind == "dot":
-        _put(img, x, y, 3)
-        _put(img, x + 1, y, 3)
+        for i in range(2):
+            px(i + 1, 1, 3)
+            px(i + 1, 2, 3)
     elif kind == "slit":
-        for i in range(3):
-            _put(img, x - 1 + i, y, col)
-        _put(img, x, y - 1, 3)
-        _put(img, x, y + 1, 3)
-        _put(img, x - 1, y, 0 if glow else col)
+        for i in range(w):
+            px(i, 1, col)
+        for i in range(1, w - 1):
+            px(i, 0, 3)
+            px(i, 2, 3)
+        px(w // 2, 1, 3)
+
+
+def scar(img, x, y, side):
+    """A white scar slanting across the brow above and below the eye (only on body coloured pixels, so it never eats the eye)."""
+    d = 1 if side > 0 else -1
+    for k, (dx, dy) in enumerate(((-1, -3), (0, -2), (1, -1), (1, 0), (2, 1), (2, 2))):
+        px_, py_ = x + d * dx, y + dy
+        if 0 <= py_ < img.shape[0] and 0 <= px_ < img.shape[1] and img[py_, px_] in (1, 2) and k not in (3,):
+            img[py_, px_] = 0
 
 
 def mouth(img, x0, y0, x1, y1, teeth, jaw, sz):
