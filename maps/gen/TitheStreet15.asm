@@ -16,12 +16,12 @@ TitheStreet15Hermit:
 	jumptextfaceplayer TitheStreet15HermitText
 
 TitheStreet15HermitText:
-	text "I have been"
-	line "praying for rain."
-	para "It rained. On the"
-	line "neighbor. I have"
-	para "been praying for"
-	line "him ever since."
+	text "I used to be a"
+	line "priest. Now I am a"
+	para "hermit. The pay is"
+	line "identical and the"
+	para "confessions are"
+	line "shorter."
 	done
 
 TitheStreet15AfterText:

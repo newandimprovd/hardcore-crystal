@@ -30,19 +30,19 @@ LotusStreet1HutDweller:
 	end
 
 LotusStreet1HutDwellerText:
-	text "Everyone is so"
-	line "relaxed here."
-	para "That's what giving"
-	line "up looks like with"
-	para "a tan."
+	text "I came for the"
+	line "sun. I stayed for"
+	para "the sunburn. It is"
+	line "the only thing"
+	para "that has ever"
+	line "clung to me."
 	done
 
 LotusStreet1HutDwellerAfterText:
-	text "I've been lying on"
-	line "this beach for"
-	para "eleven years. The"
-	line "tide has asked me"
-	para "to move twice."
+	text "I came here to"
+	line "find myself. I"
+	para "found a towel. It"
+	line "is a start."
 	done
 
 LotusStreet1HutDwellerNoRoomText:

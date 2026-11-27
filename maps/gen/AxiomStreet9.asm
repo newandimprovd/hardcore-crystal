@@ -16,10 +16,13 @@ AxiomStreet9Hermit:
 	jumptextfaceplayer AxiomStreet9HermitText
 
 AxiomStreet9HermitText:
-	text "I'm a robot. I'm"
-	line "not allowed to say"
-	para "that. Beep. I"
-	line "mean, 'tree'."
+	text "A drone asked me"
+	line "for my purpose. I"
+	para "said bush. It"
+	line "logged me as"
+	para "flora. I am a"
+	line "protected species"
+	para "now."
 	done
 
 AxiomStreet9AfterText:

@@ -30,20 +30,21 @@ TitheStreet6HutDweller:
 	end
 
 TitheStreet6HutDwellerText:
-	text "If you meet the"
-	line "Mayor, tell him"
-	para "the hole in my"
-	line "roof is his fault."
-	para "And the roof."
+	text "I have been"
+	line "praying for rain."
+	para "It rained. On the"
+	line "neighbor. I have"
+	para "been praying for"
+	line "him ever since."
 	done
 
 TitheStreet6HutDwellerAfterText:
-	text "I came out here to"
-	line "avoid the census."
-	para "Now I count the"
-	line "trees. They do not"
-	para "respond but they"
-	line "do not charge."
+	text "If a trainer asks,"
+	line "I was never here."
+	para "If a cop asks, I"
+	line "was never"
+	para "anywhere. It is a"
+	line "good alibi."
 	done
 
 TitheStreet6HutDwellerNoRoomText:

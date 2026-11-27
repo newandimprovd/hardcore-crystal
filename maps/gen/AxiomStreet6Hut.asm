@@ -30,16 +30,20 @@ AxiomStreet6HutDweller:
 	end
 
 AxiomStreet6HutDwellerText:
-	text "The glitch in the"
-	line "system is me."
-	para "Please don't patch"
-	line "me."
+	text "I read a banned"
+	line "book once. It was"
+	para "about a garden. I"
+	line "am planting its"
+	para "sequel."
 	done
 
 AxiomStreet6HutDwellerAfterText:
-	text "Don't speak"
-	line "loudly. The leaves"
-	para "are audited."
+	text "I keep a plant. It"
+	line "has not been"
+	para "assigned a group."
+	line "It is the freest"
+	para "thing in the"
+	line "country."
 	done
 
 AxiomStreet6HutDwellerNoRoomText:

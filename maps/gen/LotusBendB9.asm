@@ -13,9 +13,10 @@ LotusBendB9Hermit:
 	jumptextfaceplayer LotusBendB9HermitText
 
 LotusBendB9HermitText:
-	text "The cocktails are"
-	line "free. Meaning is"
-	para "extra."
+	text "The seagulls here"
+	line "are on a retainer."
+	para "Do not feed them."
+	line "They report."
 	done
 
 LotusBendB9_MapEvents:

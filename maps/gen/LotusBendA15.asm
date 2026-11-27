@@ -13,11 +13,12 @@ LotusBendA15Hermit:
 	jumptextfaceplayer LotusBendA15HermitText
 
 LotusBendA15HermitText:
-	text "The waves keep"
-	line "saying 'shh'. I"
-	para "think they're"
-	line "embarrassed for"
-	para "us."
+	text "I have forgotten"
+	line "what day it is. It"
+	para "is wonderful."
+	line "Nobody has told"
+	para "me. I hope it"
+	line "stays that way."
 	done
 
 LotusBendA15_MapEvents:

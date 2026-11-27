@@ -10,11 +10,10 @@ AxiomBendB9Hermit:
 	jumptextfaceplayer AxiomBendB9HermitText
 
 AxiomBendB9HermitText:
-	text "This glade is not"
-	line "on the map. I am"
-	para "not on the map. We"
-	line "are a perfect"
-	para "couple."
+	text "Love is a clerical"
+	line "error. Mine has"
+	para "been pending for"
+	line "fifteen years."
 	done
 
 AxiomBendB9_MapEvents:

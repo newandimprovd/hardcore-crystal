@@ -10,13 +10,11 @@ AxiomBendB3Hermit:
 	jumptextfaceplayer AxiomBendB3HermitText
 
 AxiomBendB3HermitText:
-	text "I am hiding from"
-	line "my own audit. It"
-	para "is going very"
-	line "well. The audit"
-	para "has not found me."
-	line "It has found my"
-	para "sister."
+	text "I live on dust,"
+	line "water and spite."
+	para "The state cannot"
+	line "tax the spite. Not"
+	para "yet."
 	done
 
 AxiomBendB3_MapEvents:

@@ -13,10 +13,12 @@ GroveBendB13Hermit:
 	jumptextfaceplayer GroveBendB13HermitText
 
 GroveBendB13HermitText:
-	text "I grow my own"
-	line "food. I also grow"
-	para "my own problems."
-	line "Both are organic."
+	text "A shaman told me"
+	line "the forest has a"
+	para "body and I am its"
+	line "appendix. I have"
+	para "felt inflamed"
+	line "since."
 	done
 
 GroveBendB13_MapEvents:

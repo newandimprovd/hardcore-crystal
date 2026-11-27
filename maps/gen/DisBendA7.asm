@@ -13,10 +13,12 @@ DisBendA7Hermit:
 	jumptextfaceplayer DisBendA7HermitText
 
 DisBendA7HermitText:
-	text "I used to be a"
-	line "lawyer. Now I'm a"
-	para "rock. The pay is"
-	line "similar."
+	text "The wind comes"
+	line "from the wings of"
+	para "something large. I"
+	line "choose not to look"
+	para "up. I have good"
+	line "habits."
 	done
 
 DisBendA7_MapEvents:

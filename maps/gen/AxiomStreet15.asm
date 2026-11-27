@@ -16,10 +16,10 @@ AxiomStreet15Hermit:
 	jumptextfaceplayer AxiomStreet15HermitText
 
 AxiomStreet15HermitText:
-	text "I deleted myself"
-	line "from the registry."
-	para "Now I am free. And"
-	line "also uninsured."
+	text "I'm a robot. I'm"
+	line "not allowed to say"
+	para "that. Beep. I"
+	line "mean, 'tree'."
 	done
 
 AxiomStreet15AfterText:

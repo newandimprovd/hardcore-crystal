@@ -16,11 +16,12 @@ TitheStreet5Hermit:
 	jumptextfaceplayer TitheStreet5HermitText
 
 TitheStreet5HermitText:
-	text "Take the roots."
-	line "Take the berries."
-	para "Take whatever. I'm"
-	line "not the"
-	para "government."
+	text "The Church says"
+	line "the poor shall"
+	para "inherit the earth."
+	line "I am in line. The"
+	para "earth is behind a"
+	line "lot of paperwork."
 	done
 
 TitheStreet5AfterText:

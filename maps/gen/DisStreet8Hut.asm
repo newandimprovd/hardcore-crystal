@@ -30,19 +30,19 @@ DisStreet8HutDweller:
 	end
 
 DisStreet8HutDwellerText:
-	text "Come back in a"
-	line "century. I will be"
-	para "less angry. Or the"
-	line "same. The numbers"
-	para "are close."
+	text "Hell is not other"
+	line "people. It is"
+	para "other people with"
+	line "long memories."
 	done
 
 DisStreet8HutDwellerAfterText:
-	text "A demon asked me"
-	line "for my soul. I"
-	para "said it was in the"
-	line "shop. He is"
-	para "waiting."
+	text "The walls whisper"
+	line "my name in the"
+	para "voice of everyone"
+	line "I let down. It is"
+	para "a chorus. They"
+	line "harmonise."
 	done
 
 DisStreet8HutDwellerNoRoomText:

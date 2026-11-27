@@ -16,12 +16,11 @@ GroveStreet5Hermit:
 	jumptextfaceplayer GroveStreet5HermitText
 
 GroveStreet5HermitText:
-	text "I tried to join"
-	line "the commune. They"
-	para "asked for my"
-	line "savings, my shoes"
-	para "and my opinions. I"
-	line "kept the opinions."
+	text "Have you tried not"
+	line "fighting? I've"
+	para "been not fighting"
+	line "for years. Nobody"
+	para "asked me to stop."
 	done
 
 GroveStreet5AfterText:

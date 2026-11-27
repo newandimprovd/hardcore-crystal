@@ -13,9 +13,10 @@ DisBendA4Hermit:
 	jumptextfaceplayer DisBendA4HermitText
 
 DisBendA4HermitText:
-	text "Be careful. The"
-	line "trainers are the"
-	para "nice ones."
+	text "Time is a flat"
+	line "circle down here."
+	para "The circle is also"
+	line "frozen."
 	done
 
 DisBendA4_MapEvents:

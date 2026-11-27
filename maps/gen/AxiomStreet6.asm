@@ -52,11 +52,10 @@ AxiomStreet6Hermit:
 	jumptextfaceplayer AxiomStreet6HermitText
 
 AxiomStreet6HermitText:
-	text "The machines here"
-	line "are polite. They"
-	para "kill you with a"
-	line "smile and a"
-	para "receipt."
+	text "The state says"
+	line "nobody is alone. I"
+	para "counted. The state"
+	line "is wrong by one."
 	done
 
 AxiomStreet6AfterText:

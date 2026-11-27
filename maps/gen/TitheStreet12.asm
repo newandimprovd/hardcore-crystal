@@ -16,11 +16,11 @@ TitheStreet12Hermit:
 	jumptextfaceplayer TitheStreet12HermitText
 
 TitheStreet12HermitText:
-	text "Take the roots."
-	line "Take the berries."
-	para "Take whatever. I'm"
-	line "not the"
-	para "government."
+	text "The bishop blessed"
+	line "this spot. Then he"
+	para "sold it. I am a"
+	line "tenant of a"
+	para "blessing."
 	done
 
 TitheStreet12AfterText:

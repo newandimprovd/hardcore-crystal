@@ -13,10 +13,12 @@ LotusBendB3Hermit:
 	jumptextfaceplayer LotusBendB3HermitText
 
 LotusBendB3HermitText:
-	text "I came here to"
-	line "find myself. I"
-	para "found a towel. It"
-	line "is a start."
+	text "A maid in the"
+	line "mansion once"
+	para "smiled at me. I"
+	line "have been in love"
+	para "with the mansion"
+	line "ever since."
 	done
 
 LotusBendB3_MapEvents:

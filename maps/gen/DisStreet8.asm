@@ -16,9 +16,11 @@ DisStreet8Hermit:
 	jumptextfaceplayer DisStreet8HermitText
 
 DisStreet8HermitText:
-	text "Down here 'no"
-	line "comment' is a"
-	para "full-time job."
+	text "I used to be a"
+	line "king. Now I am an"
+	para "ice sculpture. The"
+	line "reviews are"
+	para "better."
 	done
 
 DisStreet8AfterText:

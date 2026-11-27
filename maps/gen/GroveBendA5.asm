@@ -13,10 +13,12 @@ GroveBendA5Hermit:
 	jumptextfaceplayer GroveBendA5HermitText
 
 GroveBendA5HermitText:
-	text "I came for"
-	line "silence. The birds"
-	para "are very loud"
-	line "about it."
+	text "The forest is"
+	line "generous. It gave"
+	para "me a rash, a fever"
+	line "and a vision. I am"
+	para "considering them"
+	line "for dinner."
 	done
 
 GroveBendA5_MapEvents:

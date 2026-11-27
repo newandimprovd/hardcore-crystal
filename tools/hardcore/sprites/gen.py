@@ -32,7 +32,7 @@ def palette(rec, shiny=False):
 
 
 def make_rig(rec, name=None):
-    params = rec["params"]
+    params = faces.posture(rec["plan"], rec["params"], name)
 
     def builder(pose):
         M = Model()
@@ -43,6 +43,8 @@ def make_rig(rec, name=None):
         return M
     f, b = rec["front"], rec["back"]
     views = {k: dict(v) for k, v in rig.VIEWS.items()}
+    if name in faces.VIEW and "yaw" not in f and "pitch" not in f:
+        f = dict(f, yaw=faces.VIEW[name][0], pitch=faces.VIEW[name][1])
     for k, ov in (("front", f), ("back", b)):
         views[k].update({kk: vv for kk, vv in ov.items() if kk in ("yaw", "pitch", "dist")})
     return rig.Rig(builder, views=views, fill=faces.fill_for(rec["fill"], name))

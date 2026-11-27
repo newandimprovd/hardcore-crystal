@@ -13,11 +13,12 @@ TitheBendA15Hermit:
 	jumptextfaceplayer TitheBendA15HermitText
 
 TitheBendA15HermitText:
-	text "Shh. The trainers"
-	line "can't see you when"
-	para "you sit down. I"
-	line "have been sitting"
-	para "down since March."
+	text "I swept the"
+	line "cathedral steps"
+	para "for twenty years."
+	line "They never once"
+	para "swept me. I take"
+	line "that personally."
 	done
 
 TitheBendA15_MapEvents:

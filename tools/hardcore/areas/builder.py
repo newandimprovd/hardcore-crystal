@@ -6,6 +6,7 @@ from . import boutique as shops
 from .layout import (FACE, boss_room, chain, gatehouse, house_interior, townhouse_interior, annex_interior, boutique_interior, hub, lane, mart_interior, plaza, pokecenter_interior)
 from .town import plaza2
 from .lines3 import AREA as L3
+from .lines3_hermits import HERMIT_NEW
 from .wayfolk import GIFT, GIFT_AFTER, GIFT_HERMITS, GIFT_ITEMS, HERMIT, TOWNIE, TOWNIE2
 from . import persona
 from .trail import trail
@@ -131,7 +132,7 @@ def furnish_lane(w, g, m, reserve, total_lanes=75):
         from .huts import hut_interior
         tag_ = area_tag(m)
         item = R.choice(HIDDEN[min(2, ("Tithe", "Grove", "Axiom", "Lotus", "Dis").index(tag_) // 2)])
-        pool = HERMIT[tag_] + persona.HERMIT_MORE[tag_]
+        pool = HERMIT[tag_] + persona.HERMIT_MORE[tag_] + HERMIT_NEW[tag_]
         hut_interior(g, w, f"{m.name}Hut{hi_ or ''}", door, m.landmark, hub(g, "house", 0, R.choice(people_sprites(g)), R.choice(NPC_PALS)),
                      fresh_line(w, tag_, "hermit", pool), fresh_line(w, tag_, "hermit", pool), item)
     cells = [cl for gd in getattr(m, "glades", []) for cl in gd["cells"]]
@@ -160,7 +161,7 @@ def furnish_lane(w, g, m, reserve, total_lanes=75):
             gift_hermit(w, m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}GiftHermit", item, speech, after)
         else:
             plain_npc(m, x, y, sp, R.choice(NPC_PALS), R.choice(["LEFT", "RIGHT", "UP", "DOWN"]), f"{m.name}Hermit",
-                      fresh_line(w, tag, "hermit", HERMIT[tag] + persona.HERMIT_MORE[tag]))
+                      fresh_line(w, tag, "hermit", HERMIT[tag] + persona.HERMIT_MORE[tag] + HERMIT_NEW[tag]))
 
 
 def gift_queue(w):

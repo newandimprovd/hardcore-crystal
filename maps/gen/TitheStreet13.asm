@@ -16,11 +16,12 @@ TitheStreet13Hermit:
 	jumptextfaceplayer TitheStreet13HermitText
 
 TitheStreet13HermitText:
-	text "If you meet the"
-	line "Mayor, tell him"
-	para "the hole in my"
-	line "roof is his fault."
-	para "And the roof."
+	text "The noise of the"
+	line "city followed me"
+	para "here and sat down."
+	line "We do not speak."
+	para "It is a mutual"
+	line "understanding."
 	done
 
 TitheStreet13AfterText:

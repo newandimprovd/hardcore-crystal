@@ -16,12 +16,13 @@ TitheStreet7Hermit:
 	jumptextfaceplayer TitheStreet7HermitText
 
 TitheStreet7HermitText:
-	text "I have been"
-	line "praying for rain."
-	para "It rained. On the"
-	line "neighbor. I have"
-	para "been praying for"
-	line "him ever since."
+	text "I have a theory"
+	line "that the city is"
+	para "one large building"
+	line "with bad plumbing."
+	para "Nobody listens."
+	line "The plumbing"
+	para "agrees."
 	done
 
 TitheStreet7AfterText:

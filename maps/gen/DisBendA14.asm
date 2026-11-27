@@ -10,9 +10,11 @@ DisBendA14Hermit:
 	jumptextfaceplayer DisBendA14HermitText
 
 DisBendA14HermitText:
-	text "The river is not"
-	line "water. It's"
-	para "deadlines."
+	text "Everyone here"
+	line "betrayed someone."
+	para "We keep a polite"
+	line "silence. It is the"
+	para "only kind left."
 	done
 
 DisBendA14_MapEvents:

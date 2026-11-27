@@ -16,10 +16,11 @@ DisStreet6Hermit:
 	jumptextfaceplayer DisStreet6HermitText
 
 DisStreet6HermitText:
-	text "I am not hiding. I"
-	line "am between"
-	para "circles. It is a"
-	line "zoning issue."
+	text "I forgave my"
+	line "betrayer. Now we"
+	para "share a block of"
+	line "ice. It is a small"
+	para "block."
 	done
 
 DisStreet6AfterText:

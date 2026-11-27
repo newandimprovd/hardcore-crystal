@@ -13,11 +13,12 @@ AxiomBendA2Hermit:
 	jumptextfaceplayer AxiomBendA2HermitText
 
 AxiomBendA2HermitText:
-	text "I have proven that"
-	line "I exist. It took"
-	para "six months. The"
-	line "proof expired on"
-	para "Tuesday."
+	text "My daughter was"
+	line "sorted at birth. I"
+	para "am told the filing"
+	line "was very"
+	para "efficient. I kept"
+	line "the receipt."
 	done
 
 AxiomBendA2_MapEvents:

@@ -13,9 +13,11 @@ TitheBendB15Hermit:
 	jumptextfaceplayer TitheBendB15HermitText
 
 TitheBendB15HermitText:
-	text "Do not drink from"
-	line "the stream. It has"
-	para "been taxed."
+	text "Everything in the"
+	line "city is for sale,"
+	para "including the"
+	line "sale. I came here"
+	para "to be unlisted."
 	done
 
 TitheBendB15_MapEvents:

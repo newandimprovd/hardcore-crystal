@@ -13,11 +13,11 @@ GroveStreet8Hermit:
 	jumptextfaceplayer GroveStreet8HermitText
 
 GroveStreet8HermitText:
-	text "The mushrooms here"
-	line "talk. Mostly they"
-	para "say 'sell'. I"
-	line "don't know what."
-	para "I'm scared."
+	text "My hut is communal"
+	line "property. My"
+	para "thoughts are not."
+	line "I have put a fence"
+	para "around them."
 	done
 
 GroveStreet8AfterText:

@@ -13,10 +13,11 @@ GroveBendB3Hermit:
 	jumptextfaceplayer GroveBendB3HermitText
 
 GroveBendB3HermitText:
-	text "I grow my own"
-	line "food. I also grow"
-	para "my own problems."
-	line "Both are organic."
+	text "I fell in love"
+	line "with a tree. It"
+	para "was mutual and it"
+	line "was rooted in"
+	para "commitment."
 	done
 
 GroveBendB3_MapEvents:

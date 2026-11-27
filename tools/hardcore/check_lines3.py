@@ -21,6 +21,7 @@ SPEC = {
     "GIVER": ("gift", 7, 150),
     "GIVER_AFTER": ("line", 7, 110),
 }
+SPEC_HERM = {f"HERMIT_{t}": ("line", 28, 130) for t in ("TITHE", "GROVE", "AXIOM", "LOTUS", "DIS")}
 SPEC_PURG = {"PURG_HERMIT_SEEN": ("line", 44, 150), "PURG_HERMIT_BEATEN": ("line", 44, 120), "PURG_HERMIT_GIFT": ("line", 44, 150), "PURG_HERMIT_AFTER": ("line", 44, 150)}
 
 
@@ -50,7 +51,7 @@ def main():
         spec = importlib.util.spec_from_file_location("l3", path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        table = SPEC_PURG if os.path.basename(path).startswith("lines3_purg") else SPEC
+        table = SPEC_PURG if os.path.basename(path).startswith("lines3_purg") else SPEC_HERM if os.path.basename(path).startswith("lines3_herm") else SPEC
         mine = set()
         for var, (kind, n, mx) in table.items():
             data = getattr(mod, var, None)

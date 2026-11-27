@@ -13,12 +13,12 @@ DisBendB7Hermit:
 	jumptextfaceplayer DisBendB7HermitText
 
 DisBendB7HermitText:
-	text "The demons are"
-	line "very professional."
-	para "They send a"
-	line "thank-you note"
-	para "after the"
-	line "screaming."
+	text "I loved someone"
+	line "enough to sell her"
+	para "out. The"
+	line "accounting"
+	para "afterwards was"
+	line "grim."
 	done
 
 DisBendB7_MapEvents:

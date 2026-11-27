@@ -16,11 +16,10 @@ LotusStreet14Hermit:
 	jumptextfaceplayer LotusStreet14HermitText
 
 LotusStreet14HermitText:
-	text "I live in a shell."
-	line "I cannot remember"
-	para "who was in it"
-	line "before. We share"
-	para "the lease."
+	text "I came to the"
+	line "coast to forget. I"
+	para "forgot why. Best"
+	line "vacation ever."
 	done
 
 LotusStreet14AfterText:

@@ -16,12 +16,12 @@ DisStreet4Hermit:
 	jumptextfaceplayer DisStreet4HermitText
 
 DisStreet4HermitText:
-	text "I am the last"
-	line "honest man down"
-	para "here. Not by"
-	line "choice. I could"
-	para "not find the other"
-	line "kind."
+	text "The demons are"
+	line "very professional."
+	para "They send a"
+	line "thank-you note"
+	para "after the"
+	line "screaming."
 	done
 
 DisStreet4AfterText:

@@ -13,10 +13,11 @@ LotusBendB13Hermit:
 	jumptextfaceplayer LotusBendB13HermitText
 
 LotusBendB13HermitText:
-	text "I came here to"
-	line "find myself. I"
-	para "found a towel. It"
-	line "is a start."
+	text "I saw a trainer"
+	line "yawn mid-attack."
+	para "It was the most"
+	line "honest violence I"
+	para "have ever seen."
 	done
 
 LotusBendB13_MapEvents:

@@ -38,12 +38,10 @@ AxiomStreet5HutDwellerText:
 	done
 
 AxiomStreet5HutDwellerAfterText:
-	text "Form 27-B:"
-	line "'Request to leave"
-	para "Form 27-A'. I"
-	line "filed it. Nobody"
-	para "replied. This is"
-	line "freedom."
+	text "The glitch in the"
+	line "system is me."
+	para "Please don't patch"
+	line "me."
 	done
 
 AxiomStreet5HutDwellerNoRoomText:

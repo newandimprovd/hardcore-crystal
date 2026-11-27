@@ -52,10 +52,12 @@ LotusStreet11Hermit:
 	jumptextfaceplayer LotusStreet11HermitText
 
 LotusStreet11HermitText:
-	text "The sunset here is"
-	line "wonderful. It"
-	para "reminds me of the"
-	line "end of everything."
+	text "The boss has maids"
+	line "and a moat. I have"
+	para "a towel and a"
+	line "conscience. The"
+	para "towel is more"
+	line "useful."
 	done
 
 LotusStreet11AfterText:

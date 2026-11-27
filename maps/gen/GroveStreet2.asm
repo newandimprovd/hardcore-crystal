@@ -16,11 +16,10 @@ GroveStreet2Hermit:
 	jumptextfaceplayer GroveStreet2HermitText
 
 GroveStreet2HermitText:
-	text "Have you tried not"
-	line "fighting? I've"
-	para "been not fighting"
-	line "for years. Nobody"
-	para "asked me to stop."
+	text "I was promised an"
+	line "equal share of the"
+	para "sunset. I got the"
+	line "dark part."
 	done
 
 GroveStreet2AfterText:

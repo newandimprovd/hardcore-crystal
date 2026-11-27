@@ -16,11 +16,11 @@ TitheStreet2Hermit:
 	jumptextfaceplayer TitheStreet2HermitText
 
 TitheStreet2HermitText:
-	text "I lost a bet with"
-	line "the Mayor. The"
-	para "stake was my"
-	line "shadow. It is on a"
-	para "payroll."
+	text "A nun told me this"
+	line "glade is blessed."
+	para "It is not. She was"
+	line "just selling the"
+	para "deed."
 	done
 
 TitheStreet2AfterText:

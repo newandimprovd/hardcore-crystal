@@ -13,11 +13,10 @@ GroveBendA15Hermit:
 	jumptextfaceplayer GroveBendA15HermitText
 
 GroveBendA15HermitText:
-	text "This tree is my"
-	line "friend. The tree"
-	para "has not said so."
-	line "It also has not"
-	para "said no."
+	text "I grow my own"
+	line "food. I also grow"
+	para "my own problems."
+	line "Both are organic."
 	done
 
 GroveBendA15_MapEvents:

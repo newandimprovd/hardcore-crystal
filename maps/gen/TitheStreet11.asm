@@ -21,11 +21,11 @@ TitheStreet11Hermit:
 	jumptextfaceplayer TitheStreet11HermitText
 
 TitheStreet11HermitText:
-	text "A nun told me this"
-	line "glade is blessed."
-	para "It is not. She was"
-	line "just selling the"
-	para "deed."
+	text "I buried my"
+	line "savings here and"
+	para "forgot where. This"
+	line "is what I call a"
+	para "retirement plan."
 	done
 
 TitheStreet11AfterText:

@@ -16,10 +16,9 @@ LotusStreet1Hermit:
 	jumptextfaceplayer LotusStreet1HermitText
 
 LotusStreet1HermitText:
-	text "I came to the"
-	line "coast to forget. I"
-	para "forgot why. Best"
-	line "vacation ever."
+	text "The cocktails are"
+	line "free. Meaning is"
+	para "extra."
 	done
 
 LotusStreet1AfterText:

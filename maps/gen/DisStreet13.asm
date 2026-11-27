@@ -16,10 +16,10 @@ DisStreet13Hermit:
 	jumptextfaceplayer DisStreet13HermitText
 
 DisStreet13HermitText:
-	text "I'm not dead. I'm"
-	line "just in the wrong"
-	para "queue. It's been"
-	line "forty years."
+	text "I used to be a"
+	line "lawyer. Now I'm a"
+	para "rock. The pay is"
+	line "similar."
 	done
 
 DisStreet13AfterText:

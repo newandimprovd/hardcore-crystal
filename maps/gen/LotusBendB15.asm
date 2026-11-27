@@ -13,12 +13,9 @@ LotusBendB15Hermit:
 	jumptextfaceplayer LotusBendB15HermitText
 
 LotusBendB15HermitText:
-	text "I keep a journal."
-	line "Today's entry:"
-	para "'Same.'"
-	line "Yesterday's:"
-	para "'Same.' The day"
-	line "before: 'Same.'"
+	text "I wanted to be"
+	line "loved. I settled"
+	para "for being tanned."
 	done
 
 LotusBendB15_MapEvents:

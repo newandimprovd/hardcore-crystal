@@ -68,9 +68,9 @@ if kind == "block":
     check("the street mouth has trigger cells", len(trig) >= 4, f"{trig}")
     x, y = trig[0][0] + 1, trig[0][1]
     check("start in the plaza", wk.state()[0] == plaza, f"{wk.state()}")
-    # the corridor in front of the street is two cells wide: row y is the trigger row, row y+1 is free, so the approach runs along row y+1
-    check("walk to the corridor next to the street mouth", wk.go_state(lambda s: s == (plaza, x - 2, y + 1), f"{plaza} left of the street mouth"))
-    wk.press_dir("right")
+    # the approach runs along row y+1, below the trigger row: stand one cell left of the first trigger cell, then step right once to be under it (a
+    # building may stand where the corridor used to widen, so the cell two to the left is not always free)
+    check("walk to the corridor next to the street mouth", wk.go_state(lambda s: s == (plaza, x - 1, y + 1), f"{plaza} left of the street mouth"))
     wk.press_dir("right")
     check("below the trigger row, no fight yet", wk.state() == (plaza, x, y + 1) and not wk.fights, f"{wk.state()}")
     n0 = len(wk.fights)
