@@ -12,24 +12,24 @@ AxiomHouse6Npc0Script:
 	jumptextfaceplayer AxiomHouse6Npc0Text
 
 AxiomHouse6Npc0Text:
-	text "I keep every"
-	line "receipt I've ever"
-	para "been given. They"
-	line "form a staircase."
-	para "I don't know where"
-	line "it leads."
-	done
-
-AxiomHouse6Npc1Script:
-	jumptextfaceplayer AxiomHouse6Npc1Text
-
-AxiomHouse6Npc1Text:
 	text "We were assigned"
 	line "this house. We"
 	para "were also assigned"
 	line "each other. The"
 	para "marriage is"
 	line "pending."
+	done
+
+AxiomHouse6Npc1Script:
+	jumptextfaceplayer AxiomHouse6Npc1Text
+
+AxiomHouse6Npc1Text:
+	text "The Mayor lives"
+	line "two blocks down."
+	para "He sends us"
+	line "holiday cards."
+	para "They all say Do"
+	line "Not Open."
 	done
 
 AxiomHouse6_MapEvents:

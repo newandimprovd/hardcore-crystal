@@ -2,6 +2,7 @@
 	object_const_def
 	const DIS_HOUSE7_NPC0
 	const DIS_HOUSE7_NPC1
+	const DIS_HOUSE7_NPC2
 
 DisHouse7_MapScripts:
 	def_scene_scripts
@@ -12,37 +13,47 @@ DisHouse7Npc0Script:
 	jumptextfaceplayer DisHouse7Npc0Text
 
 DisHouse7Npc0Text:
-	text "My uncle was"
-	line "sentenced to"
-	para "eternal rowing. We"
-	line "don't see him"
-	para "much. He's very"
-	line "busy."
+	text "My neighbor is a"
+	line "famous poet. He's"
+	para "very sorry. Please"
+	line "don't ask him why."
 	done
 
 DisHouse7Npc1Script:
 	jumptextfaceplayer DisHouse7Npc1Text
 
 DisHouse7Npc1Text:
-	text "I came to Dis for"
-	line "a holiday. The"
-	para "brochure was a"
-	line "lie. The hotel was"
-	para "a lie. I'm a lie."
+	text "I run a bar. The"
+	line "only drink is ice"
+	para "water. Business is"
+	line "surprisingly"
+	para "strong."
+	done
+
+DisHouse7Npc2Script:
+	jumptextfaceplayer DisHouse7Npc2Text
+
+DisHouse7Npc2Text:
+	text "I'm a damned soul"
+	line "with a day job."
+	para "Mine is paperwork."
+	line "It's actually the"
+	para "worst punishment."
 	done
 
 DisHouse7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, DIS_PLAZA7, 3
-	warp_event  3,  7, DIS_PLAZA7, 3
+	warp_event  6, 11, DIS_PLAZA7, 3
+	warp_event  7, 11, DIS_PLAZA7, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse7Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse7Npc1Script, -1
+	object_event  3,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse7Npc0Script, -1
+	object_event  7,  2, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse7Npc1Script, -1
+	object_event  9,  9, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse7Npc2Script, -1
 

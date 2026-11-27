@@ -12,23 +12,24 @@ AxiomHouse3Npc0Script:
 	jumptextfaceplayer AxiomHouse3Npc0Text
 
 AxiomHouse3Npc0Text:
-	text "I keep a plant."
-	line "It's illegal. It's"
-	para "also my best"
-	line "friend. Please"
-	para "don't tell the"
-	line "Mayor."
+	text "This apartment was"
+	line "assigned to me. So"
+	para "was my husband. We"
+	line "get along. Mostly"
+	para "we get assigned."
 	done
 
 AxiomHouse3Npc1Script:
 	jumptextfaceplayer AxiomHouse3Npc1Text
 
 AxiomHouse3Npc1Text:
-	text "This apartment was"
-	line "assigned to me. So"
-	para "was my husband. We"
-	line "get along. Mostly"
-	para "we get assigned."
+	text "I keep a pet rock."
+	line "It's the only"
+	para "thing in this city"
+	line "that isn't"
+	para "monitored. We"
+	line "understand each"
+	para "other."
 	done
 
 AxiomHouse3_MapEvents:

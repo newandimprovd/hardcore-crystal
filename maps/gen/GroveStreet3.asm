@@ -9,6 +9,62 @@ GroveStreet3_MapScripts:
 GroveStreet3Pickup:
 	itemball TM_THIEF
 
+GroveStreet3Hidden:
+	hiddenitem PP_UP, EVENT_GEN_GROVE_STREET3_HIDDEN
+
+GroveStreet3GiftHermit:
+	faceplayer
+	opentext
+	checkevent EVENT_GEN_GROVE_STREET3_HGIFT
+	iftrue .Done
+	writetext GroveStreet3GiftHermitText
+	waitbutton
+	verbosegiveitem RARE_CANDY
+	iffalse .NoRoom
+	setevent EVENT_GEN_GROVE_STREET3_HGIFT
+.Done:
+	writetext GroveStreet3GiftHermitAfterText
+	waitbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext GroveStreet3GiftHermitNoRoomText
+	waitbutton
+	closetext
+	end
+
+GroveStreet3GiftHermitText:
+	text "I share"
+	line "everything, mostly"
+	para "with the"
+	line "squirrels. Take"
+	para "this RARE CANDY."
+	line "One of yours gets"
+	para "a little older"
+	line "without the"
+	para "bother. The dead,"
+	line "sadly, never get"
+	para "one."
+	done
+
+GroveStreet3GiftHermitAfterText:
+	text "It's called"
+	line "growing up."
+	para "Somebody always"
+	line "pays for it."
+	para "Usually someone"
+	line "else."
+	done
+
+GroveStreet3GiftHermitNoRoomText:
+	text "Your bag is full."
+	line "The gift will"
+	para "wait. So will I. I"
+	line "have nothing else"
+	para "on."
+	done
+
 GroveStreet3AfterText:
 	text_far HC_AfterText_A2
 	text_end
@@ -155,14 +211,16 @@ GroveStreet3_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 17, 18, BGEVENT_ITEM, GroveStreet3Hidden
 
 	def_object_events
-	object_event 20, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet3Pickup, EVENT_GEN_GROVE_STREET3_PICKUP
-	object_event 12, 28, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer0, -1
-	object_event 13, 24, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer1, -1
-	object_event 12, 20, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer2, -1
-	object_event 16, 16, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer3, -1
-	object_event 21, 16, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer4, -1
-	object_event 12, 12, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer5, -1
-	object_event 17, 12, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer6, -1
+	object_event 16, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet3Pickup, EVENT_GEN_GROVE_STREET3_PICKUP
+	object_event 20, 19, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GroveStreet3GiftHermit, -1
+	object_event  5,  6, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer0, -1
+	object_event  9, 15, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer1, -1
+	object_event 13,  6, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer2, -1
+	object_event 17,  2, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer3, -1
+	object_event 17,  7, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer4, -1
+	object_event 21,  6, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer5, -1
+	object_event 21, 11, SPRITE_HC_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, GroveStreet3Trainer6, -1
 

@@ -109,7 +109,7 @@ DisFilingPitHermit0:
 	waitbutton
 	closetext
 	winlosstext DisFilingPitHermit0BeatenText, 0
-	loadtrainer G_GRANNY, 154
+	loadtrainer G_SHAMAN, 157
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_DIS_FILING_PIT_HERMIT0
@@ -133,36 +133,37 @@ DisFilingPitHermit0:
 	end
 
 DisFilingPitHermit0SeenText:
-	text "Sit up straight."
-	line "Pencils down. I'll"
-	para "grade your fight."
-	line "I give most"
-	para "students a C"
-	line "minus."
+	text "Candles for the"
+	line "dying, candles for"
+	para "the wicked. You"
+	line "look like both."
+	para "Fight me, then"
+	line "shop."
 	done
 
 DisFilingPitHermit0BeatenText:
-	text "B plus. Not bad"
-	line "for someone with"
-	para "such poor posture."
-	line "Take this, as an"
-	para "incentive."
+	text "The flame goes"
+	line "out. Another"
+	para "lesson. Please"
+	line "accept this with"
+	para "the sad smile of a"
+	line "merchant."
 	done
 
 DisFilingPitHermit0GiftText:
-	text "A reward for"
-	line "effort. I'd say"
-	para "good work, but"
-	line "that would spoil"
-	para "you."
+	text "A parting"
+	line "offering. A single"
+	para "spark. It's pure."
+	line "Don't blow on it."
+	para "Just carry it."
 	done
 
 DisFilingPitHermit0AfterText:
-	text "I graded the cave"
-	line "too. It scored"
-	para "very low on"
-	line "cleanliness. I"
-	para "gave it detention."
+	text "I only sell light."
+	line "Darkness is free."
+	para "Take as much as"
+	line "you like. People"
+	para "always do."
 	done
 
 DisFilingPitHermit0NoRoomText:
@@ -183,7 +184,7 @@ DisFilingPitHermit1:
 	waitbutton
 	closetext
 	winlosstext DisFilingPitHermit1BeatenText, 0
-	loadtrainer G_SHAMAN, 158
+	loadtrainer G_ELDER, 152
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_DIS_FILING_PIT_HERMIT1
@@ -207,36 +208,36 @@ DisFilingPitHermit1:
 	end
 
 DisFilingPitHermit1SeenText:
-	text "I know your last"
-	line "words. I won't"
-	para "tell you. Fight me"
-	line "and I might change"
-	para "them."
+	text "I am a spy. My"
+	line "country dissolved"
+	para "in 1997. I never"
+	line "got the memo."
+	para "Fight me, comrade."
 	done
 
 DisFilingPitHermit1BeatenText:
-	text "Interesting. That"
-	line "changes the"
-	para "ending. Take this."
-	line "It's a rewrite."
+	text "Mission failed. As"
+	line "always. I'll burn"
+	para "this paper. It's"
+	line "just my grocery"
+	para "list."
 	done
 
 DisFilingPitHermit1GiftText:
-	text "A gift to"
-	line "commemorate your"
-	para "almost-last words."
-	line "They were very"
-	para "good. You'll say"
-	line "them eventually."
+	text "Take this. It's"
+	line "classified. It was"
+	para "classified so long"
+	line "ago, nobody"
+	para "remembers the"
+	line "classification."
 	done
 
 DisFilingPitHermit1AfterText:
-	text "I've written down"
-	line "everything you"
-	para "said. Each page is"
-	line "a lie. They were"
-	para "all true in the"
-	line "end."
+	text "The file on you is"
+	line "five pages. All"
+	para "lies. I wrote it"
+	line "myself. It's quite"
+	para "good."
 	done
 
 DisFilingPitHermit1NoRoomText:
@@ -281,7 +282,7 @@ DisFilingPit_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 21,  7, DIS_STREET4, 1
+	warp_event 21,  7, DIS_STREET3, 1
 
 	def_coord_events
 
@@ -295,8 +296,8 @@ DisFilingPit_MapEvents:
 	object_event 12, 12, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, DisFilingPitTrainer2, -1
 	object_event  9, 10, SPRITE_HC_SHADE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, DisFilingPitTrainer3, -1
 	object_event  9, 23, SPRITE_HC_JESTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, DisFilingPitTrainer4, -1
-	object_event 16, 28, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DisFilingPitHermit0, -1
-	object_event 22, 14, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisFilingPitHermit1, -1
+	object_event 16, 28, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisFilingPitHermit0, -1
+	object_event 22, 14, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DisFilingPitHermit1, -1
 	object_event 28,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisFilingPitBALL0, EVENT_GEN_DIS_FILING_PIT_BALL0
 	object_event 24,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DisFilingPitBALL1, EVENT_GEN_DIS_FILING_PIT_BALL1
 

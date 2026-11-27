@@ -2,6 +2,7 @@
 	object_const_def
 	const DIS_HOUSE6_NPC0
 	const DIS_HOUSE6_NPC1
+	const DIS_HOUSE6_NPC2
 
 DisHouse6_MapScripts:
 	def_scene_scripts
@@ -12,36 +13,49 @@ DisHouse6Npc0Script:
 	jumptextfaceplayer DisHouse6Npc0Text
 
 DisHouse6Npc0Text:
-	text "My cat is a very"
-	line "old devil. He"
-	para "purrs in Latin. I"
-	line "don't encourage"
-	para "it."
+	text "I've been writing"
+	line "a list of everyone"
+	para "who wronged me. It"
+	line "has become the"
+	para "city directory."
 	done
 
 DisHouse6Npc1Script:
 	jumptextfaceplayer DisHouse6Npc1Text
 
 DisHouse6Npc1Text:
-	text "I was a banker."
-	line "Now I count coins"
-	para "that were never"
-	line "mine. Heaven's a"
-	para "rounding error."
+	text "My uncle was"
+	line "sentenced to"
+	para "eternal rowing. We"
+	line "don't see him"
+	para "much. He's very"
+	line "busy."
+	done
+
+DisHouse6Npc2Script:
+	jumptextfaceplayer DisHouse6Npc2Text
+
+DisHouse6Npc2Text:
+	text "I came to Dis for"
+	line "a holiday. The"
+	para "brochure was a"
+	line "lie. The hotel was"
+	para "a lie. I'm a lie."
 	done
 
 DisHouse6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, DIS_PLAZA6, 3
-	warp_event  3,  7, DIS_PLAZA6, 3
+	warp_event  4, 11, DIS_PLAZA6, 3
+	warp_event  5, 11, DIS_PLAZA6, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse6Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse6Npc1Script, -1
+	object_event  8,  3, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse6Npc0Script, -1
+	object_event  2,  2, SPRITE_HC_IMP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DisHouse6Npc1Script, -1
+	object_event 10,  8, SPRITE_HC_DAMNED, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DisHouse6Npc2Script, -1
 

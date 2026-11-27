@@ -29,8 +29,8 @@ TitheBendA2_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 22, BGEVENT_ITEM, TitheBendA2Hidden
+	bg_event  5, 22, BGEVENT_ITEM, TitheBendA2Hidden
 
 	def_object_events
-	object_event  3, 16, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheBendA2Hermit, -1
+	object_event  2, 19, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheBendA2Hermit, -1
 

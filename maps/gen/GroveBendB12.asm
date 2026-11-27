@@ -10,11 +10,10 @@ GroveBendB12Hermit:
 	jumptextfaceplayer GroveBendB12HermitText
 
 GroveBendB12HermitText:
-	text "This glade belongs"
-	line "to everyone."
-	para "Please leave. I"
-	line "mean it"
-	para "communally."
+	text "I grow my own"
+	line "food. I also grow"
+	para "my own problems."
+	line "Both are organic."
 	done
 
 GroveBendB12_MapEvents:

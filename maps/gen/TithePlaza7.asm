@@ -10,11 +10,13 @@ TithePlaza7Fountain0:
 	jumptext TithePlaza7Fountain0Text
 
 TithePlaza7Fountain0Text:
-	text "AQUANCE FOUNTAIN."
-	line "Aqua plus finance."
-	para "Liquid assets, as"
-	line "promised in the"
-	para "brochure."
+	text "SPOUTIFF FOUNTAIN."
+	line "Spout plus"
+	para "pontiff. It"
+	line "blesses the square"
+	para "twice a day."
+	line "Mostly the"
+	para "pigeons."
 	done
 
 TithePlaza7DebateA:
@@ -167,24 +169,30 @@ TithePlaza7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 28, 21, TITHE_POKECENTER7, 1
-	warp_event 14,  7, TITHE_MART7, 1
-	warp_event  4,  9, TITHE_HOUSE7, 1
-	warp_event 24,  9, TITHE_CATHEDRAL, 1
+	warp_event 23, 13, TITHE_CATHEDRAL, 1
+	warp_event 24, 13, TITHE_CATHEDRAL, 1
+	warp_event 17, 25, TITHE_POKECENTER7, 1
+	warp_event 29, 19, TITHE_MART7, 1
+	warp_event  5,  9, TITHE_RECTORY, 1
+	warp_event  6,  9, TITHE_RECTORY, 1
+	warp_event 13, 13, TITHE_SCHOOL, 1
+	warp_event 14, 13, TITHE_SCHOOL, 1
+	warp_event 37, 19, TITHE_ALMSHOUSE, 1
+	warp_event 38, 19, TITHE_ALMSHOUSE, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 14, 19, BGEVENT_READ, TithePlaza7Fountain0
+	bg_event 26, 29, BGEVENT_READ, TithePlaza7Fountain0
 
 	def_object_events
-	object_event 30, 16, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza7DebateA, -1
-	object_event 31, 16, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7DebateB, -1
-	object_event 24, 14, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza7Giver, -1
-	object_event 21, 11, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona0, -1
-	object_event 11, 28, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona1, -1
-	object_event  4, 27, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona4, -1
-	object_event 26, 19, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona5, -1
-	object_event 28, 15, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona6, -1
-	object_event 30,  6, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie6, -1
+	object_event 43, 28, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza7DebateA, -1
+	object_event 44, 28, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7DebateB, -1
+	object_event 10,  7, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza7Giver, -1
+	object_event 46, 11, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona0, -1
+	object_event 49, 18, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona1, -1
+	object_event 48, 22, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona4, -1
+	object_event 46, 29, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona5, -1
+	object_event  6, 17, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Persona6, -1
+	object_event  8,  7, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza7Townie6, -1
 

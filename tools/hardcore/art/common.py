@@ -55,6 +55,7 @@ def build_set(name, const, stem, P):
         t.scn.update(P.extras(t, P.floors()[0]))
     t.ids = ids
     add_box_kit(t)
+    add_door_kit(t)
     return t
 
 
@@ -148,6 +149,49 @@ def add_box_kit(t):
         post_e(cv)
         post_w(cv)
         t.add(cv, ALL, "facade_ew")
+    t.ids.update(ids)
+
+
+def add_door_kit(t):
+    """Doors one bay in from the corner (alpha 3.3 door pass).  Every building front was [door, window | window, blank]: the door stood in the far
+    corner under the roof post.  The blocks below are the same fronts with their two bays swapped, so the door is in the second bay with a window
+    on each side; two of them side by side make a double door in the middle of a two block front.  Composed from whole cells of the old blocks,
+    no new tile.  The door quadrant moves to the bottom right of the block, kit.door_cell reads it from the collision table.
+      h_door_r, c_door_r, m_door_r   [window, door] versions of the house, Pokecenter and Mart fronts
+      h_win2                         [window, window], the plain right half of a house front"""
+    from tilebuild import Canvas
+    BR = ("WALL", "WALL", "WALL", "DOOR")
+
+    def swapped(src):
+        cv = Canvas()
+        for cy in range(4):
+            for cx in range(4):
+                _put(cv, cx, cy, _cell(src, (cx + 2) % 4, cy))
+        return cv
+
+    def right_twice(src):
+        cv = Canvas()
+        for cy in range(4):
+            for cx in range(4):
+                _put(cv, cx, cy, _cell(src, 2 + cx % 2, cy))
+        return cv
+
+    ids = {}
+    for key, new in (("h_door", "h_door_r"), ("c_door", "c_door_r"), ("m_door", "m_door_r")):
+        ids[new] = t.add(swapped(t.blocks[t.ids[key]][0]), BR, new)
+    ids["h_win2"] = t.add(right_twice(t.blocks[t.ids["h_door"]][0]), "WALL", "house_side")
+    for i in range(3):  # the floor of windows of a townhouse: copies of the three common facades that autotile (which re-picks every facade) leaves alone
+        cv = Canvas()
+        for cy in range(4):
+            for cx in range(4):
+                _put(cv, cx, cy, _cell(t.blocks[t.roles["facade"][i]][0], cx, cy))
+        t.add(cv, "WALL", "upper")
+    for i in range(5, 8):  # the three sign facades of the area, copies autotile leaves alone: they flank the way in (town.build_plaza, south="gate")
+        cv = Canvas()
+        for cy in range(4):
+            for cx in range(4):
+                _put(cv, cx, cy, _cell(t.blocks[t.roles["facade"][i]][0], cx, cy))
+        t.add(cv, "WALL", "gate_sign")
     t.ids.update(ids)
 
 

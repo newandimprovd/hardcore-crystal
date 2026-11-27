@@ -33,19 +33,20 @@ TitheBoutique2Npc0Script:
 	jumptextfaceplayer TitheBoutique2Npc0Text
 
 TitheBoutique2Npc0Text:
-	text "My father was a"
-	line "confession booth."
-	para "That's not a"
-	line "metaphor. He was"
-	para "very big."
+	text "I own this whole"
+	line "apartment. The"
+	para "rest of the block"
+	line "is my closet. We"
+	para "don't talk about"
+	line "the closet."
 	done
 
 TitheBoutique2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, TITHE_PLAZA2, 4
-	warp_event  3,  7, TITHE_PLAZA2, 4
+	warp_event  2,  7, TITHE_PLAZA2, 5
+	warp_event  3,  7, TITHE_PLAZA2, 5
 
 	def_coord_events
 

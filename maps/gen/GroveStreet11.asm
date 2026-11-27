@@ -53,11 +53,11 @@ GroveStreet11Hermit:
 	jumptextfaceplayer GroveStreet11HermitText
 
 GroveStreet11HermitText:
-	text "The mushrooms here"
-	line "talk. Mostly they"
-	para "say 'sell'. I"
-	line "don't know what."
-	para "I'm scared."
+	text "If you hear"
+	line "chanting, it isn't"
+	para "a ritual. It's"
+	line "just Greg. He's"
+	para "had a bad week."
 	done
 
 GroveStreet11AfterText:
@@ -182,7 +182,7 @@ GroveStreet11_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 18, 11, GROVE_STREET11_HUT, 1
+	warp_event 19, 11, GROVE_STREET11_HUT, 1
 
 	def_coord_events
 

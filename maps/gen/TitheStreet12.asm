@@ -16,11 +16,11 @@ TitheStreet12Hermit:
 	jumptextfaceplayer TitheStreet12HermitText
 
 TitheStreet12HermitText:
-	text "A nun told me this"
-	line "glade is blessed."
-	para "It is not. She was"
-	line "just selling the"
-	para "deed."
+	text "Take the roots."
+	line "Take the berries."
+	para "Take whatever. I'm"
+	line "not the"
+	para "government."
 	done
 
 TitheStreet12AfterText:

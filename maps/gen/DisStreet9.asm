@@ -16,9 +16,11 @@ DisStreet9Hermit:
 	jumptextfaceplayer DisStreet9HermitText
 
 DisStreet9HermitText:
-	text "Down here 'no"
-	line "comment' is a"
-	para "full-time job."
+	text "The flames are"
+	line "warm. I stopped"
+	para "complaining. The"
+	line "complaint box is"
+	para "also on fire."
 	done
 
 DisStreet9AfterText:

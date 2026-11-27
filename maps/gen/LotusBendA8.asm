@@ -13,10 +13,12 @@ LotusBendA8Hermit:
 	jumptextfaceplayer LotusBendA8HermitText
 
 LotusBendA8HermitText:
-	text "The sunset here is"
-	line "wonderful. It"
-	para "reminds me of the"
-	line "end of everything."
+	text "I have forgotten"
+	line "what day it is. It"
+	para "is wonderful."
+	line "Nobody has told"
+	para "me. I hope it"
+	line "stays that way."
 	done
 
 LotusBendA8_MapEvents:

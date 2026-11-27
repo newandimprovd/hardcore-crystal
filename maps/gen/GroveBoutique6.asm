@@ -33,19 +33,19 @@ GroveBoutique6Npc0Script:
 	jumptextfaceplayer GroveBoutique6Npc0Text
 
 GroveBoutique6Npc0Text:
-	text "We all sleep in"
-	line "the big tent. Last"
-	para "night the tent was"
-	line "very full. Also"
-	para "somebody sang."
+	text "Careful with the"
+	line "floor. The"
+	para "mushrooms are"
+	line "communal but the"
+	para "mold is mine."
 	done
 
 GroveBoutique6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, GROVE_PLAZA6, 4
-	warp_event  3,  7, GROVE_PLAZA6, 4
+	warp_event  2,  7, GROVE_PLAZA6, 5
+	warp_event  3,  7, GROVE_PLAZA6, 5
 
 	def_coord_events
 

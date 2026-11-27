@@ -2,6 +2,7 @@
 	object_const_def
 	const GROVE_HOUSE1_NPC0
 	const GROVE_HOUSE1_NPC1
+	const GROVE_HOUSE1_NPC2
 
 GroveHouse1_MapScripts:
 	def_scene_scripts
@@ -31,18 +32,30 @@ GroveHouse1Npc1Text:
 	line "hazard."
 	done
 
+GroveHouse1Npc2Script:
+	jumptextfaceplayer GroveHouse1Npc2Text
+
+GroveHouse1Npc2Text:
+	text "I'm the commune's"
+	line "beekeeper. The"
+	para "bees don't like"
+	line "me. They like the"
+	para "idea of me."
+	done
+
 GroveHouse1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, GROVE_PLAZA1, 4
-	warp_event  3,  7, GROVE_PLAZA1, 4
+	warp_event  6, 11, GROVE_PLAZA1, 4
+	warp_event  7, 11, GROVE_PLAZA1, 4
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse1Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse1Npc1Script, -1
+	object_event  3,  3, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse1Npc0Script, -1
+	object_event  7,  2, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GroveHouse1Npc1Script, -1
+	object_event  9,  9, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GroveHouse1Npc2Script, -1
 

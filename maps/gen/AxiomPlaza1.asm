@@ -10,12 +10,11 @@ AxiomPlaza1Fountain0:
 	jumptext AxiomPlaza1Fountain0Text
 
 AxiomPlaza1Fountain0Text:
-	text "HYDRATTEST."
-	line "Hydrate plus"
-	para "attest. Drink only"
-	line "with a signed"
-	para "statement of"
-	line "thirst."
+	text "AQUAXIOM. Aqua"
+	line "plus axiom. Axiom"
+	para "1: water is wet."
+	line "Axiom 2: do not"
+	para "touch it."
 	done
 
 AxiomPlaza1DebateA:
@@ -446,9 +445,10 @@ AxiomPlaza1_MapEvents:
 
 	def_warp_events
 	warp_event 10, 33, AXIOM_GATE, 1
-	warp_event 18, 23, AXIOM_POKECENTER1, 1
-	warp_event 12,  7, AXIOM_MART1, 1
-	warp_event 24,  9, AXIOM_HOUSE1, 1
+	warp_event 13, 11, AXIOM_POKECENTER1, 1
+	warp_event 19, 21, AXIOM_MART1, 1
+	warp_event 27, 11, AXIOM_HOUSE1, 1
+	warp_event 28, 11, AXIOM_HOUSE1, 1
 
 	def_coord_events
 	coord_event 18,  1, -1, AxiomPlaza1SabbahBlockScript
@@ -462,15 +462,15 @@ AxiomPlaza1_MapEvents:
 	bg_event  6,  7, BGEVENT_READ, AxiomPlaza1Fountain0
 
 	def_object_events
-	object_event  2, 28, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateA, -1
-	object_event  3, 28, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateB, -1
-	object_event  6, 13, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Giver, -1
-	object_event 17, 15, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona0, -1
-	object_event 16,  9, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona2, -1
-	object_event 26, 15, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona3, -1
-	object_event  5, 13, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona5, -1
-	object_event  5, 11, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona7, -1
-	object_event 23, 18, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie6, -1
-	object_event 25, 11, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahBearerScript, -1
-	object_event 25, 14, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Duel, -1
+	object_event  5, 29, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateA, -1
+	object_event  6, 29, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1DebateB, -1
+	object_event 17, 17, SPRITE_HC_SERF_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Giver, -1
+	object_event  7, 28, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona0, -1
+	object_event 22, 13, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona2, -1
+	object_event 22, 21, SPRITE_HC_DOC_MAD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona3, -1
+	object_event  7, 11, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona5, -1
+	object_event  2, 10, SPRITE_HC_BOT_WARDEN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Persona7, -1
+	object_event 18, 27, SPRITE_HC_BOT_DRONE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Townie6, -1
+	object_event  6, 13, SPRITE_HC_SABBAH, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1SabbahBearerScript, -1
+	object_event 14, 29, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomPlaza1Duel, -1
 

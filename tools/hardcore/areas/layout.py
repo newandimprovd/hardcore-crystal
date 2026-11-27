@@ -346,6 +346,112 @@ def house_interior(g, name, outer_warp, landmark, texts, music="MUSIC_VIOLET_CIT
     return m
 
 
+def townhouse_interior(g, name, outer_warp, landmark, texts, variant=0, music="MUSIC_VIOLET_CITY"):
+    """The inside of a townhouse (alpha 3.3): 6 by 6 blocks of the House tileset, a back room with the table and the shelves, a partition wall with a
+    doorway, and a front room by the door; three people.  Three times the floor of a house (House1.blk is 4 by 4)."""
+    W, H = 6, 6
+    m = MapDef(g.key, name, W, H, "TILESET_HOUSE", "INDOOR", landmark, music, pal="PALETTE_DAY")
+    rows = [
+        [0x04, 0x05, 0x1e, 0x08, 0x1a, 0x04],  # back wall: shelf, window, television and map, window, shelves
+        [0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f],
+        [0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f],
+        [0x03, 0x03, 0x0f, 0x0f, 0x03, 0x03],  # partition, the doorway in the middle
+        [0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f],
+        [0x06, 0x0f, 0x0b, 0x0f, 0x0f, 0x07],  # plants, the doormat
+    ]
+    if variant % 2 == 0:  # a dining table in the back room, a reading corner in the front
+        rows[1][1:3], rows[2][1:3] = [0x01, 0x02], [0x0c, 0x0d]
+        rows[0] = [0x1a, 0x05, 0x1c, 0x08, 0x1e, 0x04]
+        rows[4][3:5] = [0x01, 0x02]
+        rows[5][3:5] = [0x0c, 0x0d]
+        spots = [(8, 3, "SPRITE_POKEFAN_M", "LEFT"), (2, 2, "SPRITE_TEACHER", "DOWN"), (10, 8, "SPRITE_BUG_CATCHER", "LEFT")]
+    else:  # shelves and a desk in the back room, a table in the front
+        rows[0] = [0x04, 0x16, 0x1d, 0x08, 0x1a, 0x04]
+        rows[1][4:6], rows[2][4:6] = [0x01, 0x02], [0x0c, 0x0d]
+        rows[4][1:3] = [0x01, 0x02]
+        rows[5][1:3] = [0x0c, 0x0d]
+        rows[5][2] = 0x0f
+        rows[5][3] = 0x0b
+        spots = [(3, 3, "SPRITE_POKEFAN_M", "RIGHT"), (7, 2, "SPRITE_TEACHER", "DOWN"), (9, 9, "SPRITE_BUG_CATCHER", "LEFT")]
+    m.blocks = bytearray(b for r in rows for b in r)
+    mat = rows[5].index(0x0b)
+    w1, w2 = m.warp(2 * mat, 11), m.warp(2 * mat + 1, 11)
+    outer_warp.dest = w1
+    w1.dest = outer_warp
+    w2.dest = outer_warp
+    m.object_consts = [f"NPC{i}" for i in range(len(texts))]
+    for i, t in enumerate(texts):
+        x, y, sp, f = spots[i]
+        sp, pal = hub(g, "house", i % 2, sp, "PAL_NPC_GREEN" if i else "0")
+        m.scripts.append(f"{name}Npc{i}Script:\n\tjumptextfaceplayer {name}Npc{i}Text\n")
+        m.scripts.append(t.emit(f"{name}Npc{i}Text"))
+        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal=pal)
+    g.add(m)
+    return m
+
+
+# The three buildings of the Parish close beside the cathedral (alpha 3.3): each is a hall of 6 by 6 House blocks with its own furniture and people.
+# rows are the block ids, spots (x, y, sprite, facing) the cells of the people; annex_interior checks every spot against the collision table.
+ANNEX = {
+    "rectory": dict(rows=[[0x04, 0x1a, 0x10, 0x11, 0x04, 0x1a],
+                          [0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f],
+                          [0x06, 0x0f, 0x0f, 0x0f, 0x0f, 0x07],
+                          [0x03, 0x03, 0x0f, 0x0f, 0x03, 0x03],
+                          [0x0f, 0x01, 0x02, 0x0f, 0x0f, 0x0f],
+                          [0x06, 0x0c, 0x0d, 0x0b, 0x0f, 0x07]],
+                    spots=[(5, 2, "SPRITE_GENTLEMAN", "UP"), (9, 3, "SPRITE_TEACHER", "LEFT"), (9, 9, "SPRITE_BUG_CATCHER", "LEFT")], mat=3),
+    "school": dict(rows=[[0x03, 0x29, 0x29, 0x29, 0x29, 0x03],
+                         [0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f],
+                         [0x0f, 0x01, 0x02, 0x01, 0x02, 0x0f],
+                         [0x0f, 0x0c, 0x0d, 0x0c, 0x0d, 0x0f],
+                         [0x0f, 0x01, 0x02, 0x01, 0x02, 0x0f],
+                         [0x06, 0x0c, 0x0d, 0x0b, 0x0d, 0x07]],
+                   spots=[(6, 2, "SPRITE_TEACHER", "DOWN"), (3, 4, "SPRITE_BUG_CATCHER", "RIGHT"), (8, 4, "SPRITE_YOUNGSTER", "LEFT"),
+                          (3, 8, "SPRITE_LASS", "RIGHT"), (8, 8, "SPRITE_BUG_CATCHER", "LEFT")], mat=3),
+    "almshouse": dict(rows=[[0x04, 0x05, 0x26, 0x27, 0x08, 0x04],
+                            [0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f],
+                            [0x0f, 0x01, 0x02, 0x0f, 0x01, 0x02],
+                            [0x0f, 0x0c, 0x0d, 0x0f, 0x0c, 0x0d],
+                            [0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f],
+                            [0x06, 0x0f, 0x0b, 0x0f, 0x0f, 0x07]],
+                      spots=[(5, 2, "SPRITE_FISHER", "DOWN"), (2, 3, "SPRITE_POKEFAN_M", "RIGHT"), (7, 5, "SPRITE_TEACHER", "LEFT"),
+                             (11, 5, "SPRITE_GENTLEMAN", "LEFT")], mat=2),
+}
+
+
+def annex_interior(g, name, outer_warp, landmark, kind, texts, music="MUSIC_VIOLET_CITY"):
+    from .kits import load_collision
+    spec = ANNEX[kind]
+    m = MapDef(g.key, name, 6, 6, "TILESET_HOUSE", "INDOOR", landmark, music, pal="PALETTE_DAY")
+    m.blocks = bytearray(b for r in spec["rows"] for b in r)
+    mat = spec["mat"]
+    w1, w2 = m.warp(2 * mat, 11), m.warp(2 * mat + 1, 11)
+    outer_warp.dest = w1
+    w1.dest = outer_warp
+    w2.dest = outer_warp
+    coll = load_collision("house")
+    walk = lambda x, y: coll[m.get(x // 2, y // 2)][(x % 2) + 2 * (y % 2)] in ("FLOOR", "WARP_CARPET_DOWN")  # noqa: E731
+    seen, stack = {(2 * mat, 10)}, [(2 * mat, 10)]
+    while stack:
+        x, y = stack.pop()
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            c = (x + dx, y + dy)
+            if 0 <= c[0] < 12 and 0 <= c[1] < 12 and c not in seen and walk(*c):
+                seen.add(c)
+                stack.append(c)
+    assert len(texts) <= len(spec["spots"]), (name, len(texts))
+    m.object_consts = [f"NPC{i}" for i in range(len(texts))]
+    for i, t in enumerate(texts):
+        x, y, sp, f = spec["spots"][i]
+        assert (x, y) in seen, f"{name}: person {i} at {x},{y} is not on reachable floor"
+        sp, pal = hub(g, "house", i % 2, sp, "PAL_NPC_GREEN" if i else "0")
+        m.scripts.append(f"{name}Npc{i}Script:\n\tjumptextfaceplayer {name}Npc{i}Text\n")
+        m.scripts.append(t.emit(f"{name}Npc{i}Text"))
+        m.obj(x, y, sp, FACE[f], f"{name}Npc{i}Script", pal=pal)
+    g.add(m)
+    return m
+
+
 def boutique_interior(g, name, outer_warp, landmark, mart_const, greet, texts, music="MUSIC_CHERRYGROVE_CITY"):
     """A shop in a living room (the House blocks, as the Pokemon games hide their odd shops): the clerk stands where the host would and
     says the shop's name before the counter opens; the second spot is a customer.  Sells MART_<mart_const> (the rare held items)."""

@@ -10,7 +10,7 @@ AxiomStreet14Pickup:
 	itemball TM_ROAR
 
 AxiomStreet14Hidden:
-	hiddenitem REVIVE, EVENT_GEN_AXIOM_STREET14_HIDDEN
+	hiddenitem MAX_REVIVE, EVENT_GEN_AXIOM_STREET14_HIDDEN
 
 AxiomStreet14Hermit:
 	jumptextfaceplayer AxiomStreet14HermitText

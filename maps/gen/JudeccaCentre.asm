@@ -59,8 +59,8 @@ JudeccaCentre_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 17, DIS_PLAZA7, 4
-	warp_event  5, 17, DIS_PLAZA7, 4
+	warp_event  4, 17, DIS_PLAZA7, 5
+	warp_event  5, 17, DIS_PLAZA7, 5
 
 	def_coord_events
 

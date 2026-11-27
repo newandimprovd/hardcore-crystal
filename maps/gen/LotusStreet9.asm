@@ -9,21 +9,6 @@ LotusStreet9_MapScripts:
 LotusStreet9Pickup:
 	itemball TM_FIRE_BLAST
 
-LotusStreet9Hidden:
-	hiddenitem ELIXER, EVENT_GEN_LOTUS_STREET9_HIDDEN
-
-LotusStreet9Hermit:
-	jumptextfaceplayer LotusStreet9HermitText
-
-LotusStreet9HermitText:
-	text "I have forgotten"
-	line "what day it is. It"
-	para "is wonderful."
-	line "Nobody has told"
-	para "me. I hope it"
-	line "stays that way."
-	done
-
 LotusStreet9AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -146,15 +131,13 @@ LotusStreet9_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 17, 18, BGEVENT_ITEM, LotusStreet9Hidden
 
 	def_object_events
-	object_event 24, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet9Pickup, EVENT_GEN_LOTUS_STREET9_PICKUP
-	object_event 25, 19, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet9Hermit, -1
-	object_event 24,  9, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer0, -1
-	object_event 24,  4, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer1, -1
-	object_event 20,  7, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer2, -1
-	object_event 16,  6, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer3, -1
-	object_event 12, 13, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer4, -1
-	object_event 12,  8, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer5, -1
+	object_event 10, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet9Pickup, EVENT_GEN_LOTUS_STREET9_PICKUP
+	object_event 24, 17, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer0, -1
+	object_event 24, 12, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer1, -1
+	object_event 20, 21, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer2, -1
+	object_event 16, 12, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer3, -1
+	object_event 12, 15, SPRITE_HC_TOURIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer4, -1
+	object_event 12, 10, SPRITE_HC_RESORT_BOSS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet9Trainer5, -1
 

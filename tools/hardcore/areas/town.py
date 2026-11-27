@@ -31,7 +31,7 @@ def plaza2(g, name, kit, rng, **kw):
             continue
         e, xo, jr = m.street
         r = reach(m, kit, (2 * e + 1, 2 * (m.h - 2) + 1))
-        ok = all(((wp.x, wp.y - 1) if wp.y == 2 * m.h - 1 else (wp.x, wp.y + 1)) in r for wp in m.warps) and (2 * xo + 1, 0) in r  # a mat is read from above
+        ok = all(((wp.x, wp.y - 1) if wp.y == 2 * m.h - 1 else (wp.x, wp.y + 1)) in r for wp in m.warps) and ((2 * xo + 1, 0) in r or kw.get("grand"))  # a mat is read from above (the Parish close has no way out to the north)
         ok = ok and all((2 * fx + dx, 2 * fy + 4) in r for fx, fy in getattr(m, "fountains", []) for dx in (1, 2))  # the plaque can be read
         if kit.extra.get("grass"):  # every town has tall grass (wild.py gives each plaza a table), and it can be walked to
             ok = ok and bool(getattr(m, "grass_cell", None)) and m.grass_cell[:2] in r
@@ -110,7 +110,7 @@ def free_rects(free, minw=3, minh=3):
 
 
 def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra=0, south="open", pal="PALETTE_DAY",
-                index=0, cw=3, width=None):
+                index=0, cw=3, width=None, grand=None):
     """A town of buildings that stand apart (alpha 3.2, "like the maps of Sinnoh and Unova"): every building is a free standing block of two by two
     on open ground with at least one block of grass between it and the next, its own yard, a doormat of paving in front of the door and a path from
     there to the street.  Layout is in blocks (a block is two by two cells)."""
@@ -120,8 +120,12 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
     nb = 2 + houses + extra + (1 if rift else 0)
     W = (width or (2 * nb + cw + 2 + R.choice((2, 4)))) + 4  # open ground between the buildings takes room
     H = R.choice((15, 16, 17))
+    if grand == "cathedral":  # the Parish close: a cathedral of 6 by 4 blocks at the head of the street (alpha 3.3), the town is wider and deeper
+        W += 6
+        H = R.choice((17, 18))
     m = MapDef(g.key, name, W, H, kit.tileset, "TOWN", landmark, music, border=kit.extra["border"], pal=pal)
     m.bad = False
+    m.grand = grand
     plaza_t = kit.extra["plaza"]
     wild = style == "wild"
     for y in range(H):
@@ -145,10 +149,16 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
     # the street: bottom stem at e, a two row band at row jr, top stem at xo
     e = R.randint(1, W - cw - 1)
     xo = R.randint(2, W - cw - 2)
-    if abs(e - xo) < 4:
+    gx = gy = None
+    if grand == "cathedral":
+        gx, gy = R.randint(3, W - 9), 3  # top left block of the cathedral; the top stem starts at its doors and the apron is two rows deep
+        xo = gx + 1
+        if abs(e - xo) < 4:
+            e = min(W - cw - 1, xo + 6) if xo + 6 <= W - cw - 1 else max(1, xo - 6)
+    elif abs(e - xo) < 4:
         xo = e + 5 if e + 5 <= W - cw - 2 else e - 5
         xo = max(2, min(W - cw - 2, xo))
-    jr = R.randint(5, H - 8)
+    jr = R.randint(9, max(9, H - 8)) if grand == "cathedral" else R.randint(5, H - 8)
     street = set()
     for y in range(jr + 2, H - 1):
         for x in range(e, e + cw):
@@ -156,9 +166,13 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
     for y in range(jr, jr + 2):
         for x in range(min(e, xo), max(e, xo) + cw):
             street.add((x, y))
-    for y in range(0, jr):
+    for y in range(gy + 4 if grand == "cathedral" else 0, jr):
         for x in range(xo, xo + cw):
             street.add((x, y))
+    if grand == "cathedral":  # the apron in front of the doors, four blocks wide and two deep
+        for y in (gy + 4, gy + 5):
+            for x in range(gx + 1, gx + 5):
+                street.add((x, y))
     for (x, y) in street:
         floor(x, y, paved=True)
     reserved = set()  # blocks no building may stand on (the avenue of honour at the gate)
@@ -175,8 +189,9 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
             m.set(x, H - 1, R.choice(kit.floor))
     elif south == "gate":  # the way in from the gate hall: a doormat at the foot of the bottom stem, walls either side (builder.start_plaza)
         mx = e + cw // 2
+        gs = kit.extra.get("gate_signs")
         for x in range(e, e + cw):
-            m.set(x, H - 1, S["mat"] if x == mx else R.choice(kit.wall))
+            m.set(x, H - 1, S["mat"] if x == mx else R.choice(gs) if gs else R.choice(kit.wall))  # the area's own signs on either side of the way in
         doors["south"] = m.warp(2 * mx, 2 * (H - 1) + 1)
         # the way in is an avenue of honour (alpha 3.2, "the entrance of the Commune needs glory"): the stem from the gate to the first bend is lined
         # by a column of trees and flower beds on both sides, so the first sight of an area is a procession
@@ -185,26 +200,58 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
                 if 1 <= x <= W - 2 and (x, y) not in street:
                     m.set(x, y, S["tree"] if (H - 2 - y) % 2 == 0 else R.choice(S["flowers"]))
                     reserved.add((x, y))
+        for y in range(jr + 3, H - 2):  # a second row of trees behind the first: a procession, not a path
+            for x in (e - 2, e + cw + 1):
+                if 1 <= x <= W - 2 and (x, y) not in street and (H - 2 - y) % 2 == 0:
+                    m.set(x, y, S["tree"])
+                    reserved.add((x, y))
     # the buildings, one after the other: a spot with a free block all round it, a front block under the door that a path can reach
-    kinds = ["center", "mart"] + ["house"] * houses + ["extra"] * extra + (["rift"] if rift else [])
+    kinds = ["center", "mart"] + ["house"] * houses + ["extra"] * (0 if grand == "cathedral" else extra) + (["rift"] if rift else [])
     R.shuffle(kinds[2:])
+    # some houses are townhouses: a third row (a floor of windows under the roof), a double door in the middle of the front and a hall inside
+    # that is three times the size of a house (layout.townhouse_interior).  The last house of a town with a boutique stays a house (it is the shop).
+    tall_ok = bool(kit.extra.get("house_double"))
+    heights = {}
+    for i, k in enumerate(kinds):
+        last_house = max((j for j, kk in enumerate(kinds) if kk == "house"), default=-1)
+        heights[i] = 3 if k == "house" and tall_ok and (grand or (R.random() < 0.5 and (i != last_house or houses == 1))) else 2
     foot, halo, centers = set(), set(), []
     paved = set(street)
     paths = set()
     placed = []
     interior = lambda x, y: 1 <= x <= W - 2 and 2 <= y <= H - 2
+    if grand == "cathedral":
+        # two bell towers one block wide and four tall, the nave of four blocks and three tall between them, the double door in the middle of the
+        # front; autotile gives every wall block its roof, side or front, the doors and the rose windows over them are not walls and stay as set
+        cells = {(gx + dx, gy + dy) for dx in (0, 5) for dy in range(4)} | {(gx + dx, gy + dy) for dx in range(1, 5) for dy in range(1, 4)}
+        for (x, y) in cells:
+            m.set(x, y, R.choice(kit.wall))
+        hd, up = kit.extra["house_double"], kit.extra["upper"]
+        m.set(gx + 2, gy + 2, R.choice(up))
+        m.set(gx + 3, gy + 2, R.choice(up))
+        m.set(gx + 2, gy + 3, hd[0])
+        m.set(gx + 3, gy + 3, hd[1])
+        # the door row of the footprint is gy + 3 and the front is the row below: the nave is three tall, so the front is at gy + 4
+        wp = m.warp(*kit.door_cell(gx + 2, gy + 3, hd[0]))
+        wp.twin = m.warp(*kit.door_cell(gx + 3, gy + 3, hd[1]))
+        wp.twin.twin_of = wp
+        doors["extra"].append(wp)
+        foot |= cells
+        halo |= {(x + dx, y + dy) for (x, y) in cells for dx in (-1, 0, 1) for dy in (-1, 0, 1)}
+        centers.append((gx + 2, gy + 1))
+        extra = 0
 
-    def valid(bx, by):
-        if not (1 <= bx <= W - 3 and 2 <= by <= H - 5):
+    def valid(bx, by, h=2):
+        if not (1 <= bx <= W - 3 and 2 <= by <= H - 3 - h):
             return False
-        cells = [(bx, by), (bx + 1, by), (bx, by + 1), (bx + 1, by + 1)]
+        cells = [(bx + dx, by + dy) for dy in range(h) for dx in range(2)]
         if any(c in street or c in halo or c in reserved or c in paths for c in cells):
             return False
-        front = (bx, by + 2)
+        front = (bx, by + h)
         return front not in foot and front not in cells and front not in reserved
 
-    def weight(bx, by):
-        front = (bx, by + 2)
+    def weight(bx, by, h=2):
+        front = (bx, by + h)
         d = min(abs(front[0] - px) + abs(front[1] - py) for (px, py) in paved)
         w = (3, 3, 2.5, 2, 1, 0.5)[min(d, 5)] if d < 6 else 0.1
         if centers:
@@ -214,17 +261,18 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
             w *= 0.7
         return w
 
-    for k in kinds:
-        cand = [(bx, by) for by in range(2, H - 4) for bx in range(1, W - 2) if valid(bx, by)]
+    for ki, k in enumerate(kinds):
+        h = heights[ki]
+        cand = [(bx, by) for by in range(2, H - 2 - h) for bx in range(1, W - 2) if valid(bx, by, h)]
         R.shuffle(cand)
         done = False
         for _ in range(30):
             if not cand:
                 break
-            bx, by = R.choices(cand, [weight(bx, by) for bx, by in cand])[0]
+            bx, by = R.choices(cand, [weight(bx, by, h) for bx, by in cand])[0]
             cand.remove((bx, by))
-            front = (bx, by + 2)
-            fp = {(bx, by), (bx + 1, by), (bx, by + 1), (bx + 1, by + 1)}
+            front = (bx, by + h)
+            fp = {(bx + dx, by + dy) for dy in range(h) for dx in range(2)}
             hl = {(x + dx, y + dy) for (x, y) in fp for dx in (-1, 0, 1) for dy in (-1, 0, 1)}
             free = {(x, y) for y in range(2, H - 1) for x in range(1, W - 1)
                     if (x, y) not in foot and (x, y) not in fp and (x, y) not in reserved and (x, y) not in street}
@@ -255,6 +303,19 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
                 for dx in range(2):
                     m.set(bx + dx, by + dy, mt[dy][dx])
             doors["mart"] = m.warp(*kit.door_cell(bx, by + 1, mt[1][0]))
+        elif front[1] - by == 3:  # the townhouse: roof, a floor of windows, the ground floor with its double door
+            hd, up = kit.extra["house_double"], kit.extra["upper"]
+            m.set(bx, by, kit.extra["house_roof"][0])
+            m.set(bx + 1, by, kit.extra["house_roof"][1])
+            m.set(bx, by + 1, R.choice(up))
+            m.set(bx + 1, by + 1, R.choice(up))
+            m.set(bx, by + 2, hd[0])
+            m.set(bx + 1, by + 2, hd[1])
+            wp = m.warp(*kit.door_cell(bx, by + 2, hd[0]))
+            wp.tall = True
+            wp.twin = m.warp(*kit.door_cell(bx + 1, by + 2, hd[1]))
+            wp.twin.twin_of = wp
+            doors["houses"].append(wp)
         else:
             m.set(bx, by + 1, hs[0])
             m.set(bx + 1, by + 1, hs[1])
@@ -270,7 +331,7 @@ def build_plaza(g, name, kit, R, *, landmark, music, rift=False, houses=1, extra
     for (x, y) in paths:
         floor(x, y, paved=True, p=0.9)
     # the yards: flowers and a tree here and there on the ring of grass round every building, the front left clear
-    front_zone = {(bx + dx, by + 2) for bx, by, _, _ in spots for dx in (-1, 0, 1, 2)}
+    front_zone = {(bx + dx, fy) for bx, by, _, (_, fy) in spots for dx in (-1, 0, 1, 2)}
     for (x, y) in sorted(halo - foot - paved - front_zone):
         if interior(x, y) and m.get(x, y) in kit.floor and R.random() < 0.45:
             m.set(x, y, S["tree"] if R.random() < 0.3 else R.choice(S["flowers"]))

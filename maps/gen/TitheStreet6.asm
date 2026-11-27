@@ -52,11 +52,11 @@ TitheStreet6Hermit:
 	jumptextfaceplayer TitheStreet6HermitText
 
 TitheStreet6HermitText:
-	text "Shh. The trainers"
-	line "can't see you when"
-	para "you sit down. I"
-	line "have been sitting"
-	para "down since March."
+	text "I used to be a"
+	line "loan officer. Now"
+	para "I'm a loan."
+	line "Somebody owes me"
+	para "an apology."
 	done
 
 TitheStreet6AfterText:
@@ -195,12 +195,12 @@ TitheStreet6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2, 13, TITHE_STREET6_HUT, 1
+	warp_event  3, 13, TITHE_STREET6_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  4, 19, BGEVENT_ITEM, TitheStreet6Hidden
+	bg_event  5, 18, BGEVENT_ITEM, TitheStreet6Hidden
 
 	def_object_events
 	object_event 10, 30, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TitheStreet6GateScript, EVENT_GEN_TITHE_STREET6_GATE

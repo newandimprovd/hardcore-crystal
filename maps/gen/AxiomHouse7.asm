@@ -2,6 +2,7 @@
 	object_const_def
 	const AXIOM_HOUSE7_NPC0
 	const AXIOM_HOUSE7_NPC1
+	const AXIOM_HOUSE7_NPC2
 
 AxiomHouse7_MapScripts:
 	def_scene_scripts
@@ -12,17 +13,6 @@ AxiomHouse7Npc0Script:
 	jumptextfaceplayer AxiomHouse7Npc0Text
 
 AxiomHouse7Npc0Text:
-	text "My son was ranked"
-	line "in the bottom ten"
-	para "percent. We eat"
-	line "dinner in the dark"
-	para "so he can't see."
-	done
-
-AxiomHouse7Npc1Script:
-	jumptextfaceplayer AxiomHouse7Npc1Text
-
-AxiomHouse7Npc1Text:
 	text "I rent a room to a"
 	line "cleaning drone. He"
 	para "pays in rust. I"
@@ -30,18 +20,42 @@ AxiomHouse7Npc1Text:
 	para "proud."
 	done
 
+AxiomHouse7Npc1Script:
+	jumptextfaceplayer AxiomHouse7Npc1Text
+
+AxiomHouse7Npc1Text:
+	text "I'm a night"
+	line "watchman. I watch"
+	para "the night. The"
+	line "night is a very"
+	para "quiet citizen."
+	done
+
+AxiomHouse7Npc2Script:
+	jumptextfaceplayer AxiomHouse7Npc2Text
+
+AxiomHouse7Npc2Text:
+	text "My neighbor is a"
+	line "vacuum cleaner."
+	para "It's quite sad. It"
+	line "collects small"
+	para "things and then"
+	line "cries."
+	done
+
 AxiomHouse7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, AXIOM_PLAZA7, 3
-	warp_event  3,  7, AXIOM_PLAZA7, 3
+	warp_event  6, 11, AXIOM_PLAZA7, 3
+	warp_event  7, 11, AXIOM_PLAZA7, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomHouse7Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomHouse7Npc1Script, -1
+	object_event  3,  3, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomHouse7Npc0Script, -1
+	object_event  7,  2, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomHouse7Npc1Script, -1
+	object_event  9,  9, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AxiomHouse7Npc2Script, -1
 

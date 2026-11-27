@@ -10,12 +10,12 @@ TitheBendA9Hermit:
 	jumptextfaceplayer TitheBendA9HermitText
 
 TitheBendA9HermitText:
-	text "I have been"
-	line "praying for rain."
-	para "It rained. On the"
-	line "neighbor. I have"
-	para "been praying for"
-	line "him ever since."
+	text "The Church says"
+	line "the poor shall"
+	para "inherit the earth."
+	line "I am in line. The"
+	para "earth is behind a"
+	line "lot of paperwork."
 	done
 
 TitheBendA9_MapEvents:
@@ -28,5 +28,5 @@ TitheBendA9_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  8, 22, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheBendA9Hermit, -1
+	object_event 18, 18, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheBendA9Hermit, -1
 

@@ -6,7 +6,7 @@ from tilebuild import Tileset, Canvas, GRAY, RED, GREEN, WATER, YELLOW, BROWN, R
 import paint
 import grass
 import scenery
-from common import add_box_kit
+from common import add_box_kit, add_door_kit
 
 
 def cornice(cv):
@@ -446,6 +446,7 @@ def build():
     scenery.add(t, cobbles(0))  # ponds, fences, ledge, tree, flower beds (after the grass: no earlier block id moves)
     t.ids = ids
     add_box_kit(t)
+    add_door_kit(t)
     return t
 
 

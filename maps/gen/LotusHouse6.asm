@@ -2,6 +2,7 @@
 	object_const_def
 	const LOTUS_HOUSE6_NPC0
 	const LOTUS_HOUSE6_NPC1
+	const LOTUS_HOUSE6_NPC2
 
 LotusHouse6_MapScripts:
 	def_scene_scripts
@@ -12,39 +13,48 @@ LotusHouse6Npc0Script:
 	jumptextfaceplayer LotusHouse6Npc0Text
 
 LotusHouse6Npc0Text:
-	text "I'm a retired"
-	line "lifeguard. I saved"
-	para "eleven people and"
-	line "forgot all of"
-	para "them."
-	line "Statistically I'm"
-	para "a hero."
+	text "This house was a"
+	line "hotel once. I"
+	para "still hear guests"
+	line "ringing for room"
+	para "service. Nobody is"
+	line "in the rooms."
 	done
 
 LotusHouse6Npc1Script:
 	jumptextfaceplayer LotusHouse6Npc1Text
 
 LotusHouse6Npc1Text:
-	text "I'm told there was"
-	line "a war here. I'm"
-	para "also told it was a"
-	line "luau. The people"
-	para "who know are"
-	line "drinking."
+	text "I'm the Lotus"
+	line "Queen's second"
+	para "cousin. We forgot"
+	line "to be proud. It's"
+	para "a good life."
+	done
+
+LotusHouse6Npc2Script:
+	jumptextfaceplayer LotusHouse6Npc2Text
+
+LotusHouse6Npc2Text:
+	text "I tried to write a"
+	line "diary. It came out"
+	para "as a travel"
+	line "brochure."
 	done
 
 LotusHouse6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, LOTUS_PLAZA6, 3
-	warp_event  3,  7, LOTUS_PLAZA6, 3
+	warp_event  4, 11, LOTUS_PLAZA6, 3
+	warp_event  5, 11, LOTUS_PLAZA6, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusHouse6Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusHouse6Npc1Script, -1
+	object_event  8,  3, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusHouse6Npc0Script, -1
+	object_event  2,  2, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusHouse6Npc1Script, -1
+	object_event 10,  8, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusHouse6Npc2Script, -1
 

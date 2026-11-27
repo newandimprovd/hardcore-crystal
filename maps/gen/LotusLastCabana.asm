@@ -108,7 +108,7 @@ LotusLastCabanaHermit0:
 	waitbutton
 	closetext
 	winlosstext LotusLastCabanaHermit0BeatenText, 0
-	loadtrainer G_SHAMAN, 157
+	loadtrainer G_ELDER, 151
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_LOTUS_LAST_CABANA_HERMIT0
@@ -132,37 +132,34 @@ LotusLastCabanaHermit0:
 	end
 
 LotusLastCabanaHermit0SeenText:
-	text "Candles for the"
-	line "dying, candles for"
-	para "the wicked. You"
-	line "look like both."
-	para "Fight me, then"
-	line "shop."
+	text "I TOOK A VOW OF"
+	line "LOUDNESS. IT'S THE"
+	para "MOST DIFFICULT"
+	line "ONE. FIGHT ME AT"
+	para "FULL VOLUME."
 	done
 
 LotusLastCabanaHermit0BeatenText:
-	text "The flame goes"
-	line "out. Another"
-	para "lesson. Please"
-	line "accept this with"
-	para "the sad smile of a"
-	line "merchant."
+	text "HA. IT HURT. I'M"
+	line "SCREAMING TO SHOW"
+	para "IT HURT. HERE, A"
+	line "GIFT, AT FULL"
+	para "VOLUME."
 	done
 
 LotusLastCabanaHermit0GiftText:
-	text "A parting"
-	line "offering. A single"
-	para "spark. It's pure."
-	line "Don't blow on it."
-	para "Just carry it."
+	text "TAKE THIS. DON'T"
+	line "WHISPER. IT'S TOO"
+	para "SMALL FOR"
+	line "WHISPERS. IT'S TOO"
+	para "BIG FOR ME."
 	done
 
 LotusLastCabanaHermit0AfterText:
-	text "I only sell light."
-	line "Darkness is free."
-	para "Take as much as"
-	line "you like. People"
-	para "always do."
+	text "I'M SORRY. I CAN'T"
+	line "LOWER MY VOICE."
+	para "IT'S A VOW. IT'S"
+	line "ALSO A NUISANCE."
 	done
 
 LotusLastCabanaHermit0NoRoomText:
@@ -183,7 +180,7 @@ LotusLastCabanaHermit1:
 	waitbutton
 	closetext
 	winlosstext LotusLastCabanaHermit1BeatenText, 0
-	loadtrainer G_ELDER, 152
+	loadtrainer G_GRANNY, 153
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_LOTUS_LAST_CABANA_HERMIT1
@@ -207,36 +204,36 @@ LotusLastCabanaHermit1:
 	end
 
 LotusLastCabanaHermit1SeenText:
-	text "I am a spy. My"
-	line "country dissolved"
-	para "in 1997. I never"
-	line "got the memo."
-	para "Fight me, comrade."
+	text "I've been walking"
+	line "this tunnel for"
+	para "nine years. It's a"
+	line "loop. Fight me, I"
+	para "need a change of"
+	line "scenery."
 	done
 
 LotusLastCabanaHermit1BeatenText:
-	text "Mission failed. As"
-	line "always. I'll burn"
-	para "this paper. It's"
-	line "just my grocery"
-	para "list."
+	text "A detour!"
+	line "Delightful. I'll"
+	para "add it to my"
+	line "route. Please take"
+	para "this. It's heavy."
 	done
 
 LotusLastCabanaHermit1GiftText:
-	text "Take this. It's"
-	line "classified. It was"
-	para "classified so long"
-	line "ago, nobody"
-	para "remembers the"
-	line "classification."
+	text "I carried it for"
+	line "six thousand laps."
+	para "It's yours. My"
+	line "legs are very"
+	para "proud of me."
 	done
 
 LotusLastCabanaHermit1AfterText:
-	text "The file on you is"
-	line "five pages. All"
-	para "lies. I wrote it"
-	line "myself. It's quite"
-	para "good."
+	text "I just passed you"
+	line "again. Or was it"
+	para "the other you?"
+	line "It's hard to tell"
+	para "in a loop."
 	done
 
 LotusLastCabanaHermit1NoRoomText:
@@ -295,8 +292,8 @@ LotusLastCabana_MapEvents:
 	object_event 21, 23, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusLastCabanaTrainer2, -1
 	object_event 19,  6, SPRITE_HC_BEACH_BUM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusLastCabanaTrainer3, -1
 	object_event 14, 20, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusLastCabanaTrainer4, -1
-	object_event 28, 10, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusLastCabanaHermit0, -1
-	object_event  8, 22, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusLastCabanaHermit1, -1
+	object_event 28, 10, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusLastCabanaHermit0, -1
+	object_event  8, 22, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusLastCabanaHermit1, -1
 	object_event 20, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusLastCabanaBALL0, EVENT_GEN_LOTUS_LAST_CABANA_BALL0
 	object_event 21, 27, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusLastCabanaBALL1, EVENT_GEN_LOTUS_LAST_CABANA_BALL1
 

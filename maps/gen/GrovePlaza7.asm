@@ -10,11 +10,11 @@ GrovePlaza7Fountain0:
 	jumptext GrovePlaza7Fountain0Text
 
 GrovePlaza7Fountain0Text:
-	text "WELLFAIR FOUNTAIN."
-	line "Well plus welfare."
-	para "The water is free."
-	line "Wishing costs your"
-	para "whole weekend."
+	text "SHAREWATER. Share"
+	line "plus water. Please"
+	para "stop looking at it"
+	line "as yours. It looks"
+	para "back."
 	done
 
 GrovePlaza7DebateA:
@@ -168,24 +168,25 @@ GrovePlaza7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 16, 13, GROVE_POKECENTER7, 1
-	warp_event 14,  7, GROVE_MART7, 1
-	warp_event 28,  9, GROVE_HOUSE7, 1
-	warp_event 26, 27, GROVE_COUNCIL, 1
+	warp_event  3, 15, GROVE_POKECENTER7, 1
+	warp_event 29, 27, GROVE_MART7, 1
+	warp_event 37, 11, GROVE_HOUSE7, 1
+	warp_event 38, 11, GROVE_HOUSE7, 1
+	warp_event 19, 25, GROVE_COUNCIL, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  6, 23, BGEVENT_READ, GrovePlaza7Fountain0
+	bg_event 30,  9, BGEVENT_READ, GrovePlaza7Fountain0
 
 	def_object_events
-	object_event 31, 17, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7DebateA, -1
-	object_event 32, 17, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7DebateB, -1
-	object_event  9, 24, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Giver, -1
-	object_event  4, 18, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona0, -1
-	object_event 34,  8, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona1, -1
-	object_event 32, 15, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona4, -1
-	object_event 27, 17, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona5, -1
-	object_event 22, 13, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona6, -1
-	object_event 27, 15, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie6, -1
+	object_event 33, 19, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7DebateA, -1
+	object_event 34, 19, SPRITE_HC_KID_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7DebateB, -1
+	object_event 13,  7, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Giver, -1
+	object_event 19, 12, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona0, -1
+	object_event  3,  6, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona1, -1
+	object_event 31, 31, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona4, -1
+	object_event 19, 17, SPRITE_HC_BATHER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona5, -1
+	object_event 25, 20, SPRITE_HC_FORAGER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Persona6, -1
+	object_event 25, 21, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GrovePlaza7Townie6, -1
 

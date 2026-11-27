@@ -19,17 +19,6 @@ TithePlaza4_MapScripts:
 
 	def_callbacks
 
-TithePlaza4Fountain0:
-	jumptext TithePlaza4Fountain0Text
-
-TithePlaza4Fountain0Text:
-	text "AQUANCE FOUNTAIN."
-	line "Aqua plus finance."
-	para "Liquid assets, as"
-	line "promised in the"
-	para "brochure."
-	done
-
 TithePlaza4DebateA:
 	jumptextfaceplayer TithePlaza4DebateAText
 
@@ -473,41 +462,41 @@ TithePlaza4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 10, 23, TITHE_POKECENTER4, 1
-	warp_event 24, 25, TITHE_MART4, 1
-	warp_event  2,  7, TITHE_HOUSE4, 1
-	warp_event 26, 15, TITHE_BOUTIQUE4, 1
+	warp_event 29, 15, TITHE_POKECENTER4, 1
+	warp_event 29,  7, TITHE_MART4, 1
+	warp_event  7, 11, TITHE_HOUSE4, 1
+	warp_event  8, 11, TITHE_HOUSE4, 1
+	warp_event 19, 19, TITHE_BOUTIQUE4, 1
 
 	def_coord_events
-	coord_event 28, 30, -1, TithePlaza4CrowleyBearerScriptTrigger
-	coord_event 29, 30, -1, TithePlaza4CrowleyBearerScriptTrigger
-	coord_event 30, 30, -1, TithePlaza4CrowleyBearerScriptTrigger
-	coord_event 31, 30, -1, TithePlaza4CrowleyBearerScriptTrigger
-	coord_event 32, 30, -1, TithePlaza4CrowleyBearerScriptTrigger
-	coord_event 33, 30, -1, TithePlaza4CrowleyBearerScriptTrigger
-	coord_event  8,  1, -1, TithePlaza4CrowleyBlockScript
-	coord_event  9,  1, -1, TithePlaza4CrowleyBlockScript
-	coord_event 10,  1, -1, TithePlaza4CrowleyBlockScript
-	coord_event 11,  1, -1, TithePlaza4CrowleyBlockScript
-	coord_event 12,  1, -1, TithePlaza4CrowleyBlockScript
-	coord_event 13,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 22, 26, -1, TithePlaza4CrowleyBearerScriptTrigger
+	coord_event 23, 26, -1, TithePlaza4CrowleyBearerScriptTrigger
+	coord_event 24, 26, -1, TithePlaza4CrowleyBearerScriptTrigger
+	coord_event 25, 26, -1, TithePlaza4CrowleyBearerScriptTrigger
+	coord_event 26, 26, -1, TithePlaza4CrowleyBearerScriptTrigger
+	coord_event 27, 26, -1, TithePlaza4CrowleyBearerScriptTrigger
+	coord_event 14,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 15,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 16,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 17,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 18,  1, -1, TithePlaza4CrowleyBlockScript
+	coord_event 19,  1, -1, TithePlaza4CrowleyBlockScript
 
 	def_bg_events
-	bg_event 32,  7, BGEVENT_READ, TithePlaza4Fountain0
 
 	def_object_events
-	object_event 20, 21, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4DebateA, -1
-	object_event 21, 21, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4DebateB, -1
-	object_event 30, 26, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Giver, -1
-	object_event 14, 22, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza4Persona1, -1
-	object_event 18, 21, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Persona2, -1
-	object_event  5, 22, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Persona3, -1
-	object_event 14, 28, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Persona5, -1
-	object_event 35, 27, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie5, -1
-	object_event 13, 27, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie6, -1
-	object_event 31, 27, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScript, EVENT_NAMED_CROWLEY_PAID
-	object_event 31, 26, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScriptMob0, EVENT_NAMED_CROWLEY_PAID
-	object_event 31, 25, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScriptMob1, EVENT_NAMED_CROWLEY_PAID
-	object_event 32, 25, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScriptMob2, EVENT_NAMED_CROWLEY_PAID
-	object_event 35,  6, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza4Duel, -1
+	object_event 13, 12, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4DebateA, -1
+	object_event 14, 12, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4DebateB, -1
+	object_event 21,  6, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Giver, -1
+	object_event 28, 25, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TithePlaza4Persona1, -1
+	object_event 10, 13, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Persona2, -1
+	object_event 12, 22, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Persona3, -1
+	object_event 34, 20, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Persona5, -1
+	object_event  8, 22, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie5, -1
+	object_event 34, 13, SPRITE_HC_PUNK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4Townie6, -1
+	object_event 25, 23, SPRITE_HC_CROWLEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScript, EVENT_NAMED_CROWLEY_PAID
+	object_event 25, 22, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScriptMob0, EVENT_NAMED_CROWLEY_PAID
+	object_event 25, 21, SPRITE_HC_HOODIE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScriptMob1, EVENT_NAMED_CROWLEY_PAID
+	object_event 26, 21, SPRITE_HC_COP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TithePlaza4CrowleyBearerScriptMob2, EVENT_NAMED_CROWLEY_PAID
+	object_event 14, 19, SPRITE_HC_SUIT_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TithePlaza4Duel, -1
 

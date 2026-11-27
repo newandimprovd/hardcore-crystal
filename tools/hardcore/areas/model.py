@@ -148,7 +148,7 @@ class MapDef:
     def events_asm(self):
         o = [f"{self.name}_MapEvents:", "\tdb 0, 0 ; filler", "", "\tdef_warp_events"]
         for w in self.warps:
-            d = w.dest
+            d = w.dest if w.dest is not None else getattr(getattr(w, "twin_of", None), "dest", None)  # the second half of a double door
             assert d is not None, f"unlinked warp in {self.name} at {w.x},{w.y}"
             o.append(f"\twarp_event {w.x:2d}, {w.y:2d}, {d.m.const}, {d.index}")
         o += ["", "\tdef_coord_events"]

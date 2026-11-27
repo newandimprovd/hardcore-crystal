@@ -7,7 +7,7 @@ AxiomBendA12_MapScripts:
 	def_callbacks
 
 AxiomBendA12Hidden:
-	hiddenitem ETHER, EVENT_GEN_AXIOM_BEND_A12_HIDDEN
+	hiddenitem MAX_ETHER, EVENT_GEN_AXIOM_BEND_A12_HIDDEN
 
 AxiomBendA12Hermit:
 	jumptextfaceplayer AxiomBendA12HermitText

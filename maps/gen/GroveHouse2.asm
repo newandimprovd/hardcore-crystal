@@ -12,22 +12,23 @@ GroveHouse2Npc0Script:
 	jumptextfaceplayer GroveHouse2Npc0Text
 
 GroveHouse2Npc0Text:
-	text "I'm the commune's"
-	line "beekeeper. The"
-	para "bees don't like"
-	line "me. They like the"
-	para "idea of me."
+	text "I keep a diary of"
+	line "every meeting."
+	para "It's called The"
+	line "Long Argument."
+	para "Volume nine."
 	done
 
 GroveHouse2Npc1Script:
 	jumptextfaceplayer GroveHouse2Npc1Text
 
 GroveHouse2Npc1Text:
-	text "I keep a diary of"
-	line "every meeting."
-	para "It's called The"
-	line "Long Argument."
-	para "Volume nine."
+	text "My two husbands"
+	line "are in the garden."
+	para "My wife is in the"
+	line "garden. The garden"
+	para "is very full of"
+	line "us."
 	done
 
 GroveHouse2_MapEvents:

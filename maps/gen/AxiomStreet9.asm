@@ -16,11 +16,10 @@ AxiomStreet9Hermit:
 	jumptextfaceplayer AxiomStreet9HermitText
 
 AxiomStreet9HermitText:
-	text "This glade is not"
-	line "on the map. I am"
-	para "not on the map. We"
-	line "are a perfect"
-	para "couple."
+	text "I'm a robot. I'm"
+	line "not allowed to say"
+	para "that. Beep. I"
+	line "mean, 'tree'."
 	done
 
 AxiomStreet9AfterText:
@@ -164,21 +163,20 @@ AxiomStreet9_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2, 11, AXIOM_STREET9_HUT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 26, BGEVENT_ITEM, AxiomStreet9Hidden
+	bg_event 19, 17, BGEVENT_ITEM, AxiomStreet9Hidden
 
 	def_object_events
-	object_event  7, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet9Pickup, EVENT_GEN_AXIOM_STREET9_PICKUP
-	object_event  2, 27, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AxiomStreet9Hermit, -1
-	object_event 16, 28, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer0, -1
-	object_event 17, 24, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer1, -1
-	object_event  8, 20, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer2, -1
-	object_event 13, 20, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer3, -1
-	object_event 12, 16, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer4, -1
-	object_event 12, 12, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer5, -1
-	object_event 17, 12, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer6, -1
+	object_event 20, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, AxiomStreet9Pickup, EVENT_GEN_AXIOM_STREET9_PICKUP
+	object_event 24, 15, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AxiomStreet9Hermit, -1
+	object_event 28, 13, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer0, -1
+	object_event 24,  4, SPRITE_HC_BOT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer1, -1
+	object_event 20,  7, SPRITE_HC_SERF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer2, -1
+	object_event 20,  2, SPRITE_HC_MATCHMAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer3, -1
+	object_event 16, 11, SPRITE_HC_BOT_COP, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer4, -1
+	object_event 12, 11, SPRITE_HC_DOC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer5, -1
+	object_event 12,  6, SPRITE_HC_GUARD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, AxiomStreet9Trainer6, -1
 

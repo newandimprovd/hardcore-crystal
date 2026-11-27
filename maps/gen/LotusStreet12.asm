@@ -9,19 +9,6 @@ LotusStreet12_MapScripts:
 LotusStreet12Pickup:
 	itemball TM_EARTHQUAKE
 
-LotusStreet12Hidden:
-	hiddenitem MAX_ETHER, EVENT_GEN_LOTUS_STREET12_HIDDEN
-
-LotusStreet12Hermit:
-	jumptextfaceplayer LotusStreet12HermitText
-
-LotusStreet12HermitText:
-	text "I came here to"
-	line "find myself. I"
-	para "found a towel. It"
-	line "is a start."
-	done
-
 LotusStreet12AfterText:
 	text_far HC_AfterText_A4
 	text_end
@@ -153,15 +140,13 @@ LotusStreet12_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  7, 20, BGEVENT_ITEM, LotusStreet12Hidden
 
 	def_object_events
-	object_event  9, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet12Pickup, EVENT_GEN_LOTUS_STREET12_PICKUP
-	object_event  7, 17, SPRITE_HC_WAITER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusStreet12Hermit, -1
-	object_event  5,  4, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer0, -1
-	object_event  9,  8, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer1, -1
-	object_event  9, 13, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer2, -1
-	object_event 13, 12, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer3, -1
-	object_event 13, 17, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer4, -1
-	object_event 17, 13, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer5, -1
+	object_event 12,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusStreet12Pickup, EVENT_GEN_LOTUS_STREET12_PICKUP
+	object_event 14, 24, SPRITE_HC_FORGOTTEN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer0, -1
+	object_event 10, 20, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer1, -1
+	object_event 15, 20, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer2, -1
+	object_event  6, 16, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer3, -1
+	object_event 11, 16, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer4, -1
+	object_event 15, 12, SPRITE_HC_SWIMMER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusStreet12Trainer5, -1
 

@@ -32,20 +32,20 @@ LotusBoutique4Npc0Script:
 	jumptextfaceplayer LotusBoutique4Npc0Text
 
 LotusBoutique4Npc0Text:
-	text "I'm trying to stay"
-	line "sober on"
-	para "forgetting. It's"
-	line "harder than it"
-	para "sounds. I forgot"
-	line "why I started."
+	text "I sell postcards"
+	line "of a beach I've"
+	para "never found. The"
+	line "buyers say they"
+	para "remember it"
+	line "fondly."
 	done
 
 LotusBoutique4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, LOTUS_PLAZA4, 4
-	warp_event  3,  7, LOTUS_PLAZA4, 4
+	warp_event  2,  7, LOTUS_PLAZA4, 5
+	warp_event  3,  7, LOTUS_PLAZA4, 5
 
 	def_coord_events
 

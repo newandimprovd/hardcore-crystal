@@ -12,17 +12,6 @@ AxiomHouse2Npc0Script:
 	jumptextfaceplayer AxiomHouse2Npc0Text
 
 AxiomHouse2Npc0Text:
-	text "I'm a poet. The"
-	line "Union forbids"
-	para "rhyme. I only"
-	line "write blank"
-	para "checks."
-	done
-
-AxiomHouse2Npc1Script:
-	jumptextfaceplayer AxiomHouse2Npc1Text
-
-AxiomHouse2Npc1Text:
 	text "My dog was"
 	line "reclassified as a"
 	para "mid-level manager."
@@ -30,6 +19,17 @@ AxiomHouse2Npc1Text:
 	para "treats now. I"
 	line "don't ask"
 	para "questions."
+	done
+
+AxiomHouse2Npc1Script:
+	jumptextfaceplayer AxiomHouse2Npc1Text
+
+AxiomHouse2Npc1Text:
+	text "I'm a compliance"
+	line "auditor. I audit"
+	para "my own compliance."
+	line "It's an endless"
+	para "loop. I love it."
 	done
 
 AxiomHouse2_MapEvents:

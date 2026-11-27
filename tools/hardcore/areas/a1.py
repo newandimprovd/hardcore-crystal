@@ -96,7 +96,7 @@ def build(w, roster, rng, open_exit=False):
             ActSpec("Tithe", 5, modern, LM_MID, "MUSIC_HC_TITHE", gate="tree", boss=boss2, texts=texts, split=2,
                     trainers=counts.lanes_of(1)[1], plaza_width=15, rift=True, boutique=1),
             ActSpec("Tithe", 5, modern, LM_PARISH, "MUSIC_HC_TITHE", gate="boulder", boss=boss3, texts=texts, split=3,
-                    trainers=counts.lanes_of(1)[2], boutique=2)]
+                    trainers=counts.lanes_of(1)[2], boutique=2, grand="cathedral", houses=3)]
 
     all_lanes = [(road, s_road)]
     prev, lane_no, plaza_no = p1, 1, 2

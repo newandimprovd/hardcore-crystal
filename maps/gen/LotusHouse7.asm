@@ -2,6 +2,7 @@
 	object_const_def
 	const LOTUS_HOUSE7_NPC0
 	const LOTUS_HOUSE7_NPC1
+	const LOTUS_HOUSE7_NPC2
 
 LotusHouse7_MapScripts:
 	def_scene_scripts
@@ -12,35 +13,51 @@ LotusHouse7Npc0Script:
 	jumptextfaceplayer LotusHouse7Npc0Text
 
 LotusHouse7Npc0Text:
-	text "I tried to write a"
-	line "diary. It came out"
-	para "as a travel"
-	line "brochure."
+	text "I keep a diary."
+	line "Every entry is the"
+	para "word hello. It's"
+	line "the only thing I'm"
+	para "sure of."
 	done
 
 LotusHouse7Npc1Script:
 	jumptextfaceplayer LotusHouse7Npc1Text
 
 LotusHouse7Npc1Text:
-	text "This is a suite."
-	line "It has a bed, a"
-	para "jacuzzi, and a"
-	line "very small, very"
-	para "quiet crying room."
+	text "I paint the same"
+	line "sunset every day."
+	para "People say it's"
+	line "different each"
+	para "time. I wouldn't"
+	line "know."
+	done
+
+LotusHouse7Npc2Script:
+	jumptextfaceplayer LotusHouse7Npc2Text
+
+LotusHouse7Npc2Text:
+	text "Please be quiet."
+	line "My wife is"
+	para "sleeping. She's"
+	line "been sleeping"
+	para "since the Wellness"
+	line "Festival. Don't"
+	para "wake her."
 	done
 
 LotusHouse7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, LOTUS_PLAZA7, 3
-	warp_event  3,  7, LOTUS_PLAZA7, 3
+	warp_event  6, 11, LOTUS_PLAZA7, 3
+	warp_event  7, 11, LOTUS_PLAZA7, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusHouse7Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusHouse7Npc1Script, -1
+	object_event  3,  3, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusHouse7Npc0Script, -1
+	object_event  7,  2, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, LotusHouse7Npc1Script, -1
+	object_event  9,  9, SPRITE_HC_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LotusHouse7Npc2Script, -1
 

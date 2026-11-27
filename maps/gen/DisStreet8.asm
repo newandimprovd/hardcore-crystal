@@ -16,11 +16,9 @@ DisStreet8Hermit:
 	jumptextfaceplayer DisStreet8HermitText
 
 DisStreet8HermitText:
-	text "Come back in a"
-	line "century. I will be"
-	para "less angry. Or the"
-	line "same. The numbers"
-	para "are close."
+	text "Down here 'no"
+	line "comment' is a"
+	para "full-time job."
 	done
 
 DisStreet8AfterText:
@@ -145,7 +143,7 @@ DisStreet8_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 18, 15, DIS_STREET8_HUT, 1
+	warp_event 19, 15, DIS_STREET8_HUT, 1
 
 	def_coord_events
 

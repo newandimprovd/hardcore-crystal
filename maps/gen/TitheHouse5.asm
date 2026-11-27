@@ -12,21 +12,22 @@ TitheHouse5Npc0Script:
 	jumptextfaceplayer TitheHouse5Npc0Text
 
 TitheHouse5Npc0Text:
-	text "The roof leaks"
-	line "holy water. Nobody"
-	para "can fix it. It's"
-	line "under a blessing."
+	text "I used to sing in"
+	line "the choir. They"
+	para "asked me to stop."
+	line "Quietly. With a"
+	para "pillow."
 	done
 
 TitheHouse5Npc1Script:
 	jumptextfaceplayer TitheHouse5Npc1Text
 
 TitheHouse5Npc1Text:
-	text "I haven't seen the"
-	line "sun since the"
-	para "towers got built."
-	line "I'm fine. I'm"
-	para "pale. I'm fine."
+	text "The cops come"
+	line "twice a week to"
+	para "collect. It's"
+	line "called community"
+	para "policing."
 	done
 
 TitheHouse5_MapEvents:

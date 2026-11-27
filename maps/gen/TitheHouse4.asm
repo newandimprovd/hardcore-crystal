@@ -2,6 +2,7 @@
 	object_const_def
 	const TITHE_HOUSE4_NPC0
 	const TITHE_HOUSE4_NPC1
+	const TITHE_HOUSE4_NPC2
 
 TitheHouse4_MapScripts:
 	def_scene_scripts
@@ -12,24 +13,32 @@ TitheHouse4Npc0Script:
 	jumptextfaceplayer TitheHouse4Npc0Text
 
 TitheHouse4Npc0Text:
-	text "I'm a retired"
-	line "gravedigger."
-	para "Business was"
-	line "always up."
-	para "Retirement is"
-	line "better. It's"
-	para "quieter."
+	text "I'm a slumlord."
+	line "It's very"
+	para "stressful."
+	line "Everyone hates me."
+	para "I own a yacht."
 	done
 
 TitheHouse4Npc1Script:
 	jumptextfaceplayer TitheHouse4Npc1Text
 
 TitheHouse4Npc1Text:
-	text "The bell tower has"
-	line "been ringing nine"
-	para "times at noon for"
-	line "a week. Nobody"
-	para "asked it to."
+	text "I make candles"
+	line "from the ends of"
+	para "other candles. A"
+	line "thrifty man's"
+	para "salvation."
+	done
+
+TitheHouse4Npc2Script:
+	jumptextfaceplayer TitheHouse4Npc2Text
+
+TitheHouse4Npc2Text:
+	text "The roof leaks"
+	line "holy water. Nobody"
+	para "can fix it. It's"
+	line "under a blessing."
 	done
 
 TitheHouse4MafiaScript:
@@ -141,15 +150,16 @@ TitheHouse4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, TITHE_PLAZA4, 3
-	warp_event  3,  7, TITHE_PLAZA4, 3
+	warp_event  4, 11, TITHE_PLAZA4, 3
+	warp_event  5, 11, TITHE_PLAZA4, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse4Npc0Script, -1
-	object_event  5,  5, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheHouse4Npc1Script, -1
+	object_event  8,  3, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse4Npc0Script, -1
+	object_event  2,  2, SPRITE_HC_CHOIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TitheHouse4Npc1Script, -1
+	object_event 10,  8, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse4Npc2Script, -1
 	object_event  5,  2, SPRITE_HC_SUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheHouse4MafiaScript, -1
 

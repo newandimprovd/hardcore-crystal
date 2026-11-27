@@ -9,18 +9,6 @@ TitheStreet9_MapScripts:
 TitheStreet9Pickup:
 	itemball TM_DEFENSE_CURL
 
-TitheStreet9Hidden:
-	hiddenitem REVIVE, EVENT_GEN_TITHE_STREET9_HIDDEN
-
-TitheStreet9Hermit:
-	jumptextfaceplayer TitheStreet9HermitText
-
-TitheStreet9HermitText:
-	text "Do not drink from"
-	line "the stream. It has"
-	para "been taxed."
-	done
-
 TitheStreet9AfterText:
 	text_far HC_AfterText_A1
 	text_end
@@ -143,15 +131,13 @@ TitheStreet9_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 15, 20, BGEVENT_ITEM, TitheStreet9Hidden
 
 	def_object_events
-	object_event 14, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet9Pickup, EVENT_GEN_TITHE_STREET9_PICKUP
-	object_event 10, 16, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TitheStreet9Hermit, -1
-	object_event  5,  8, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer0, -1
-	object_event  5, 13, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer1, -1
-	object_event  9,  4, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer2, -1
-	object_event  9,  9, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer3, -1
-	object_event 13,  4, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer4, -1
-	object_event 17, 13, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer5, -1
+	object_event  4, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TitheStreet9Pickup, EVENT_GEN_TITHE_STREET9_PICKUP
+	object_event 24, 13, SPRITE_HC_NUN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer0, -1
+	object_event 24,  8, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer1, -1
+	object_event 20,  9, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer2, -1
+	object_event 20,  4, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer3, -1
+	object_event 16,  9, SPRITE_HC_PRIEST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer4, -1
+	object_event 12,  8, SPRITE_HC_BEGGAR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TitheStreet9Trainer5, -1
 

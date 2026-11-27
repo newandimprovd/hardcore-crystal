@@ -111,7 +111,7 @@ LotusDryPoolHermit0:
 	waitbutton
 	closetext
 	winlosstext LotusDryPoolHermit0BeatenText, 0
-	loadtrainer G_ELDER, 151
+	loadtrainer G_GRANNY, 152
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_LOTUS_DRY_POOL_HERMIT0
@@ -135,34 +135,37 @@ LotusDryPoolHermit0:
 	end
 
 LotusDryPoolHermit0SeenText:
-	text "I TOOK A VOW OF"
-	line "LOUDNESS. IT'S THE"
-	para "MOST DIFFICULT"
-	line "ONE. FIGHT ME AT"
-	para "FULL VOLUME."
+	text "Hello, handsome."
+	line "Hello, anyone. You"
+	para "look very alive."
+	line "I'd like to"
+	para "measure you. Fight"
+	line "me."
 	done
 
 LotusDryPoolHermit0BeatenText:
-	text "HA. IT HURT. I'M"
-	line "SCREAMING TO SHOW"
-	para "IT HURT. HERE, A"
-	line "GIFT, AT FULL"
-	para "VOLUME."
+	text "Oh my. A lovely"
+	line "thrashing. I'll"
+	para "hold off on"
+	line "measuring. For"
+	para "now."
 	done
 
 LotusDryPoolHermit0GiftText:
-	text "TAKE THIS. DON'T"
-	line "WHISPER. IT'S TOO"
-	para "SMALL FOR"
-	line "WHISPERS. IT'S TOO"
-	para "BIG FOR ME."
+	text "A little something"
+	line "to remember me by."
+	para "It's practical."
+	line "It's also shiny."
+	para "Don't make it"
+	line "weird."
 	done
 
 LotusDryPoolHermit0AfterText:
-	text "I'M SORRY. I CAN'T"
-	line "LOWER MY VOICE."
-	para "IT'S A VOW. IT'S"
-	line "ALSO A NUISANCE."
+	text "Come back when"
+	line "you're a little"
+	para "less alive. I'm"
+	line "sure we'll get"
+	para "along."
 	done
 
 LotusDryPoolHermit0NoRoomText:
@@ -183,7 +186,7 @@ LotusDryPoolHermit1:
 	waitbutton
 	closetext
 	winlosstext LotusDryPoolHermit1BeatenText, 0
-	loadtrainer G_GRANNY, 153
+	loadtrainer G_SHAMAN, 156
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_GEN_LOTUS_DRY_POOL_HERMIT1
@@ -207,36 +210,37 @@ LotusDryPoolHermit1:
 	end
 
 LotusDryPoolHermit1SeenText:
-	text "I've been walking"
-	line "this tunnel for"
-	para "nine years. It's a"
-	line "loop. Fight me, I"
-	para "need a change of"
-	line "scenery."
+	text "Shh. I'm whistling"
+	line "to the dead. They"
+	para "whistle back."
+	line "Don't speak."
+	para "Fight."
 	done
 
 LotusDryPoolHermit1BeatenText:
-	text "A detour!"
-	line "Delightful. I'll"
-	para "add it to my"
-	line "route. Please take"
-	para "this. It's heavy."
+	text "A rude sound. Your"
+	line "loss was a minor"
+	para "key. They liked"
+	line "it. Take this for"
+	para "the performance."
 	done
 
 LotusDryPoolHermit1GiftText:
-	text "I carried it for"
-	line "six thousand laps."
-	para "It's yours. My"
-	line "legs are very"
-	para "proud of me."
+	text "A tune and a"
+	line "trinket. Whistle"
+	para "it three times."
+	line "They'll come"
+	para "running. Be"
+	line "careful."
 	done
 
 LotusDryPoolHermit1AfterText:
-	text "I just passed you"
-	line "again. Or was it"
-	para "the other you?"
-	line "It's hard to tell"
-	para "in a loop."
+	text "I heard them"
+	line "whistling your"
+	para "name. I can't tell"
+	line "if it was a"
+	para "welcome or a"
+	line "warning."
 	done
 
 LotusDryPoolHermit1NoRoomText:
@@ -279,7 +283,7 @@ LotusDryPool_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 19, 11, LOTUS_STREET3, 1
+	warp_event 19, 11, LOTUS_STREET4, 1
 
 	def_coord_events
 
@@ -293,8 +297,8 @@ LotusDryPool_MapEvents:
 	object_event 17, 15, SPRITE_HC_SWIMMER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, LotusDryPoolTrainer2, -1
 	object_event 26, 30, SPRITE_HC_SUNBATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 5, LotusDryPoolTrainer3, -1
 	object_event 12,  9, SPRITE_HC_LIFEGUARD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, LotusDryPoolTrainer4, -1
-	object_event  8,  8, SPRITE_HC_ELDER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LotusDryPoolHermit0, -1
-	object_event 30, 30, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusDryPoolHermit1, -1
+	object_event  8,  8, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LotusDryPoolHermit0, -1
+	object_event 30, 30, SPRITE_HC_SHAMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LotusDryPoolHermit1, -1
 	object_event 15, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusDryPoolBALL0, EVENT_GEN_LOTUS_DRY_POOL_BALL0
 	object_event 10, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LotusDryPoolBALL1, EVENT_GEN_LOTUS_DRY_POOL_BALL1
 

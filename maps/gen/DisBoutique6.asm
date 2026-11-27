@@ -34,19 +34,20 @@ DisBoutique6Npc0Script:
 	jumptextfaceplayer DisBoutique6Npc0Text
 
 DisBoutique6Npc0Text:
-	text "I'm a retired"
-	line "torturer. I knit"
-	para "now. It's the same"
-	line "motion, but with"
-	para "less screaming."
+	text "This house is"
+	line "cursed. It has a"
+	para "good mortgage"
+	line "though. The curse"
+	para "is what pays the"
+	line "mortgage."
 	done
 
 DisBoutique6_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, DIS_PLAZA6, 4
-	warp_event  3,  7, DIS_PLAZA6, 4
+	warp_event  2,  7, DIS_PLAZA6, 5
+	warp_event  3,  7, DIS_PLAZA6, 5
 
 	def_coord_events
 

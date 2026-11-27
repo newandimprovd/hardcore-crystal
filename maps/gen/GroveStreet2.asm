@@ -16,12 +16,11 @@ GroveStreet2Hermit:
 	jumptextfaceplayer GroveStreet2HermitText
 
 GroveStreet2HermitText:
-	text "The goat in the"
-	line "commune is smarter"
-	para "than the leader. I"
-	line "am here to say it"
-	para "where the goat"
-	line "cannot hear."
+	text "Have you tried not"
+	line "fighting? I've"
+	para "been not fighting"
+	line "for years. Nobody"
+	para "asked me to stop."
 	done
 
 GroveStreet2AfterText:
@@ -140,20 +139,19 @@ GroveStreet2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2, 11, GROVE_HOLLOW_OAK, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  9, 15, BGEVENT_ITEM, GroveStreet2Hidden
+	bg_event 16, 15, BGEVENT_ITEM, GroveStreet2Hidden
 
 	def_object_events
-	object_event  3, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet2Pickup, EVENT_GEN_GROVE_STREET2_PICKUP
-	object_event  8, 17, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GroveStreet2Hermit, -1
-	object_event 10, 24, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer0, -1
-	object_event 15, 20, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer1, -1
-	object_event 14, 16, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer2, -1
-	object_event 19, 16, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer3, -1
-	object_event 16, 12, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer4, -1
-	object_event 21, 12, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer5, -1
+	object_event 17, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GroveStreet2Pickup, EVENT_GEN_GROVE_STREET2_PICKUP
+	object_event 14, 15, SPRITE_HC_HIPPIE_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GroveStreet2Hermit, -1
+	object_event  5,  8, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer0, -1
+	object_event  9, 13, SPRITE_HC_ELDER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer1, -1
+	object_event 13,  4, SPRITE_HC_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer2, -1
+	object_event 13,  9, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer3, -1
+	object_event 17,  2, SPRITE_HC_BIRDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer4, -1
+	object_event 17,  7, SPRITE_HC_KID_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, GroveStreet2Trainer5, -1
 
